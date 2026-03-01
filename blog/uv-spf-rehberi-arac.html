@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV / SPF Rehberi — Kişisel Güneş Koruma Aracı | Derindenbilgi</title>
+    <meta name="description" content="Cilt tipinize, güneş maruziyetinize ve hassasiyet faktörlerinize göre kişisel SPF önerisi alın. UV indeks açıklaması, güneş kremi mitleri ve bilimsel rehber.">
+    <meta name="keywords" content="SPF rehberi, UV indeks, güneş kremi, Fitzpatrick cilt tipi, güneşten korunma, UVA UVB, PA++++, güneş kremi önerisi">
+    <meta property="og:title" content="UV / SPF Rehberi — Kişisel Güneş Koruma Aracı">
+    <meta property="og:description" content="Fitzpatrick cilt tipinize, güneş maruziyetinize ve hassasiyet faktörlerinize göre kişisel SPF önerisi alın.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(239,68,68,0.12));
+            color: #d97706;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== HIGHLIGHT / WARNING / DANGER BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ========================================== */
+        /* ===== INTERACTIVE TOOL CUSTOM STYLES ===== */
+        /* ========================================== */
+
+        /* Tool container */
+        .tool-container {
+            background: linear-gradient(135deg, rgba(245,158,11,0.04), rgba(239,68,68,0.04));
+            border: 1px solid rgba(245,158,11,0.15);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 0 0 2rem;
+        }
+        .tool-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .tool-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-s);
+            margin-bottom: 2rem;
+        }
+
+        /* Step progress */
+        .step-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .step-dot {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text-t);
+            transition: all 0.3s;
+        }
+        .step-dot.active {
+            border-color: #f59e0b;
+            background: #f59e0b;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        .step-dot.done {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+        .step-line {
+            width: 32px;
+            height: 2px;
+            background: var(--border);
+            transition: background 0.3s;
+        }
+        .step-line.done { background: var(--accent); }
+
+        /* Step panel */
+        .step-panel {
+            display: none;
+            animation: fadeInStep 0.4s ease;
+        }
+        .step-panel.active { display: block; }
+        @keyframes fadeInStep {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.35rem;
+            text-align: center;
+        }
+        .step-hint {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Fitzpatrick cards */
+        .fitz-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .fitz-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 12px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.25s;
+            background: var(--bg);
+        }
+        .fitz-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .fitz-card.selected {
+            border-color: #f59e0b;
+            background: rgba(245,158,11,0.06);
+            box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+        }
+        .fitz-swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 8px;
+            border: 2px solid rgba(0,0,0,0.08);
+        }
+        .fitz-label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+        .fitz-desc {
+            font-size: 0.72rem;
+            color: var(--text-s);
+            line-height: 1.4;
+        }
+
+        /* Option cards (generic) */
+        .opt-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .opt-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.25s;
+            background: var(--bg);
+        }
+        .opt-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .opt-card.selected {
+            border-color: #f59e0b;
+            background: rgba(245,158,11,0.06);
+            box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+        }
+        .opt-icon { font-size: 1.5rem; margin-bottom: 6px; }
+        .opt-label { font-size: 0.9rem; font-weight: 600; color: #0f172a; margin-bottom: 2px; }
+        .opt-desc { font-size: 0.75rem; color: var(--text-s); line-height: 1.4; }
+
+        /* Sensitivity checkboxes */
+        .sens-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sens-item {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            cursor: pointer;
+            transition: all 0.25s;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .sens-item:hover {
+            border-color: #f59e0b;
+        }
+        .sens-item.checked {
+            border-color: #ef4444;
+            background: rgba(239,68,68,0.04);
+        }
+        .sens-check {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: transparent;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+        .sens-item.checked .sens-check {
+            border-color: #ef4444;
+            background: #ef4444;
+            color: #fff;
+        }
+        .sens-text { font-size: 0.9rem; font-weight: 500; color: #334155; }
+        .sens-sub { font-size: 0.75rem; color: var(--text-t); }
+
+        /* City select */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .city-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.25s;
+            background: var(--bg);
+        }
+        .city-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-1px);
+        }
+        .city-card.selected {
+            border-color: #f59e0b;
+            background: rgba(245,158,11,0.06);
+            box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+        }
+        .city-name { font-size: 0.9rem; font-weight: 600; }
+        .city-uv { font-size: 0.75rem; color: var(--text-s); margin-top: 2px; }
+
+        .custom-uv-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: var(--bg-alt);
+            border-radius: var(--radius-sm);
+        }
+        .custom-uv-row label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-s);
+            white-space: nowrap;
+        }
+        .custom-uv-row input[type=range] {
+            flex: 1;
+            accent-color: #f59e0b;
+        }
+        .uv-val-display {
+            font-size: 1rem;
+            font-weight: 700;
+            min-width: 36px;
+            text-align: center;
+        }
+
+        /* Nav buttons */
+        .step-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        .btn-step {
+            padding: 10px 24px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .btn-step:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-back {
+            background: var(--bg-alt);
+            color: var(--text-s);
+            border: 1px solid var(--border);
+        }
+        .btn-back:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+        .btn-next {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #fff;
+        }
+        .btn-next:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(245,158,11,0.3); }
+
+        .step-counter {
+            font-size: 0.8rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+
+        /* ===== RESULT CARD ===== */
+        .result-card {
+            display: none;
+            animation: fadeInStep 0.5s ease;
+        }
+        .result-card.visible { display: block; }
+        .result-header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            border-radius: var(--radius-lg);
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        .result-spf-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: 3px solid rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+        }
+        .result-spf-val {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        .result-spf-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+        .result-summary {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 8px;
+            opacity: 0.95;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .result-item {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            border: 1px solid var(--border);
+        }
+        .result-item-icon { font-size: 1.3rem; margin-bottom: 6px; }
+        .result-item-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-t);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .result-item-value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0f172a;
+            line-height: 1.4;
+        }
+
+        .result-tips {
+            background: #f0fdfa;
+            border: 1px solid rgba(13,148,136,0.15);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .result-tips-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin-bottom: 0.75rem;
+        }
+        .result-tips ul {
+            list-style: none;
+            padding: 0;
+        }
+        .result-tips li {
+            padding: 0.4rem 0;
+            font-size: 0.88rem;
+            color: #134e4a;
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+        }
+        .result-tips li span { flex-shrink: 0; }
+
+        /* UV Scale */
+        .uv-scale {
+            margin: 1.5rem 0;
+        }
+        .uv-scale-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+        .uv-bar {
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 32px;
+            margin-bottom: 6px;
+        }
+        .uv-seg {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+        }
+        .uv-labels {
+            display: flex;
+            font-size: 0.68rem;
+            color: var(--text-t);
+        }
+        .uv-labels span { flex: 1; text-align: center; }
+        .uv-indicator {
+            position: absolute;
+            top: -8px;
+            font-size: 0.9rem;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .btn-reset {
+            display: block;
+            margin: 1rem auto 0;
+            padding: 10px 28px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text-s);
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .btn-reset:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Mini guide extras */
+        .spf-math {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .spf-math .big-num {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1.1;
+        }
+        .spf-math .math-label {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            margin-top: 4px;
+        }
+        .spf-compare {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 1rem;
+        }
+        .spf-compare-item {
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .spf-compare-item .val { font-size: 1.5rem; font-weight: 800; color: #0f172a; }
+        .spf-compare-item .pct { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+        .spf-compare-item .lbl { font-size: 0.72rem; color: var(--text-t); margin-top: 2px; }
+
+        /* PA rating */
+        .pa-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin: 1rem 0;
+        }
+        .pa-item {
+            background: var(--bg-alt);
+            border-radius: var(--radius-sm);
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .pa-item .pa-val {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .pa-item .pa-desc {
+            font-size: 0.68rem;
+            color: var(--text-s);
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+
+        /* Blog link card */
+        .blog-link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(245,158,11,0.06), rgba(239,68,68,0.06));
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            margin: 1.5rem 0;
+        }
+        .blog-link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-link-icon { font-size: 2rem; flex-shrink: 0; }
+        .blog-link-title { font-size: 1rem; font-weight: 600; color: #0f172a; }
+        .blog-link-desc { font-size: 0.82rem; color: var(--text-s); margin-top: 2px; }
+        .blog-link-arrow { margin-left: auto; font-size: 1.2rem; color: #f59e0b; flex-shrink: 0; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .tool-container { padding: 1.25rem; }
+            .fitz-grid { grid-template-columns: repeat(2, 1fr); }
+            .opt-grid { grid-template-columns: 1fr; }
+            .city-grid { grid-template-columns: 1fr; }
+            .result-grid { grid-template-columns: 1fr; }
+            .spf-compare { grid-template-columns: 1fr; }
+            .pa-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-nav { display: none; }
+            .myth-box { padding: 1rem 1.25rem; }
+            .step-progress { gap: 0.35rem; }
+            .step-dot { width: 30px; height: 30px; font-size: 0.7rem; }
+            .step-line { width: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">☀️ İnteraktif Araç</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ İnteraktif + 8 dk okuma</span>
+    </div>
+    <h1>☀️ UV / SPF Rehberi: Kişisel Güneş Koruma Aracı</h1>
+    <p class="article-subtitle">Cilt tipinize, güneş maruziyetinize ve hassasiyet faktörlerinize göre kişisel SPF önerisi alın. Aşağıda 5 soruya cevap verin, size özel güneş koruma planınızı çıkaralım! 🧴</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#arac">🧴 Kişisel SPF Öneri Aracı</a></li>
+            <li><a href="#uva-uvb">UV-A vs UV-B: Fark Ne?</a></li>
+            <li><a href="#spf-anlami">SPF Sayısının Gerçek Anlamı</a></li>
+            <li><a href="#pa-sistemi">PA++++ Sistemi Nedir?</a></li>
+            <li><a href="#mitler">Güneş Kremi Mitleri</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- ===== INTERACTIVE TOOL ===== -->
+    <div class="tool-container" id="arac">
+        <div class="tool-title">🧴 Kişisel SPF Öneri Aracı</div>
+        <div class="tool-subtitle">5 soruya cevap verin, size özel güneş koruma planınızı oluşturalım</div>
+
+        <!-- Progress dots -->
+        <div class="step-progress" id="stepProgress">
+            <div class="step-dot active" data-step="1">1</div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="2">2</div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="3">3</div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="4">4</div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="5">5</div>
+        </div>
+
+        <!-- STEP 1: Fitzpatrick -->
+        <div class="step-panel active" id="step1">
+            <div class="step-question">Fitzpatrick Cilt Tipiniz Nedir?</div>
+            <div class="step-hint">Güneşte nasıl tepki verdiğinize göre seçin</div>
+            <div class="fitz-grid">
+                <div class="fitz-card" onclick="selectFitz(this, 1)">
+                    <div class="fitz-swatch" style="background: #fce4c7"></div>
+                    <div class="fitz-label">Tip I</div>
+                    <div class="fitz-desc">Çok açık ten, çilli. Her zaman yanar, hiç bronzlaşmaz.</div>
+                </div>
+                <div class="fitz-card" onclick="selectFitz(this, 2)">
+                    <div class="fitz-swatch" style="background: #f5d5a8"></div>
+                    <div class="fitz-label">Tip II</div>
+                    <div class="fitz-desc">Açık ten. Kolay yanar, çok az bronzlaşır.</div>
+                </div>
+                <div class="fitz-card" onclick="selectFitz(this, 3)">
+                    <div class="fitz-swatch" style="background: #d4a574"></div>
+                    <div class="fitz-label">Tip III</div>
+                    <div class="fitz-desc">Orta ten. Bazen yanar, giderek bronzlaşır.</div>
+                </div>
+                <div class="fitz-card" onclick="selectFitz(this, 4)">
+                    <div class="fitz-swatch" style="background: #b07d56"></div>
+                    <div class="fitz-label">Tip IV</div>
+                    <div class="fitz-desc">Esmer ten. Nadiren yanar, kolay bronzlaşır.</div>
+                </div>
+                <div class="fitz-card" onclick="selectFitz(this, 5)">
+                    <div class="fitz-swatch" style="background: #7b5236"></div>
+                    <div class="fitz-label">Tip V</div>
+                    <div class="fitz-desc">Koyu esmer. Çok nadiren yanar, çok kolay bronzlaşır.</div>
+                </div>
+                <div class="fitz-card" onclick="selectFitz(this, 6)">
+                    <div class="fitz-swatch" style="background: #3d2b1f"></div>
+                    <div class="fitz-label">Tip VI</div>
+                    <div class="fitz-desc">Çok koyu ten. Asla yanmaz, her zaman koyu.</div>
+                </div>
+            </div>
+            <div class="step-nav">
+                <div></div>
+                <span class="step-counter">1 / 5</span>
+                <button class="btn-step btn-next" id="btn1" disabled onclick="goStep(2)">Devam →</button>
+            </div>
+        </div>
+
+        <!-- STEP 2: Exposure -->
+        <div class="step-panel" id="step2">
+            <div class="step-question">Günlük Güneş Maruziyetiniz Ne Düzeyde?</div>
+            <div class="step-hint">Tipik bir gününüzü düşünün</div>
+            <div class="opt-grid">
+                <div class="opt-card" onclick="selectExposure(this, 'indoor')">
+                    <div class="opt-icon">🏠</div>
+                    <div class="opt-label">İç Mekan</div>
+                    <div class="opt-desc">Çoğunlukla evde/ofiste. Pencere kenarı bile olabilir.</div>
+                </div>
+                <div class="opt-card" onclick="selectExposure(this, 'short')">
+                    <div class="opt-icon">🚶</div>
+                    <div class="opt-label">Kısa Dış Mekan</div>
+                    <div class="opt-desc">Günde 30-60 dk dışarı çıkıyorum (yürüyüş, alışveriş).</div>
+                </div>
+                <div class="opt-card" onclick="selectExposure(this, 'long')">
+                    <div class="opt-icon">🌳</div>
+                    <div class="opt-label">Uzun Dış Mekan</div>
+                    <div class="opt-desc">Günde 2+ saat dışarıdayım (park, bahçe, açık alan iş).</div>
+                </div>
+                <div class="opt-card" onclick="selectExposure(this, 'sport')">
+                    <div class="opt-icon">🏖️</div>
+                    <div class="opt-label">Plaj / Spor</div>
+                    <div class="opt-desc">Yüzme, plaj, koşu, dağ yürüyüşü — yoğun güneş maruziyeti.</div>
+                </div>
+            </div>
+            <div class="step-nav">
+                <button class="btn-step btn-back" onclick="goStep(1)">← Geri</button>
+                <span class="step-counter">2 / 5</span>
+                <button class="btn-step btn-next" id="btn2" disabled onclick="goStep(3)">Devam →</button>
+            </div>
+        </div>
+
+        <!-- STEP 3: Season -->
+        <div class="step-panel" id="step3">
+            <div class="step-question">Şu An Hangi Mevsimdesiniz?</div>
+            <div class="step-hint">UV yoğunluğu mevsime göre önemli ölçüde değişir</div>
+            <div class="opt-grid">
+                <div class="opt-card" onclick="selectSeason(this, 'winter')">
+                    <div class="opt-icon">❄️</div>
+                    <div class="opt-label">Kış</div>
+                    <div class="opt-desc">Aralık – Şubat. Düşük UV, kısa günler.</div>
+                </div>
+                <div class="opt-card" onclick="selectSeason(this, 'spring')">
+                    <div class="opt-icon">🌸</div>
+                    <div class="opt-label">İlkbahar</div>
+                    <div class="opt-desc">Mart – Mayıs. UV artmaya başlıyor.</div>
+                </div>
+                <div class="opt-card" onclick="selectSeason(this, 'summer')">
+                    <div class="opt-icon">☀️</div>
+                    <div class="opt-label">Yaz</div>
+                    <div class="opt-desc">Haziran – Ağustos. En yüksek UV.</div>
+                </div>
+                <div class="opt-card" onclick="selectSeason(this, 'autumn')">
+                    <div class="opt-icon">🍂</div>
+                    <div class="opt-label">Sonbahar</div>
+                    <div class="opt-desc">Eylül – Kasım. UV azalmaya başlıyor.</div>
+                </div>
+            </div>
+            <div class="step-nav">
+                <button class="btn-step btn-back" onclick="goStep(2)">← Geri</button>
+                <span class="step-counter">3 / 5</span>
+                <button class="btn-step btn-next" id="btn3" disabled onclick="goStep(4)">Devam →</button>
+            </div>
+        </div>
+
+        <!-- STEP 4: City / UV Index -->
+        <div class="step-panel" id="step4">
+            <div class="step-question">Hangi Şehirde / Bölgedesiniz?</div>
+            <div class="step-hint">Veya UV indeksini kendiniz ayarlayın</div>
+            <div class="city-grid">
+                <div class="city-card" onclick="selectCity(this, 'istanbul')">
+                    <div class="city-name">🏙️ İstanbul</div>
+                    <div class="city-uv">Yaz ortalaması UV: 7-9</div>
+                </div>
+                <div class="city-card" onclick="selectCity(this, 'ankara')">
+                    <div class="city-name">🏛️ Ankara</div>
+                    <div class="city-uv">Yaz ortalaması UV: 8-10</div>
+                </div>
+                <div class="city-card" onclick="selectCity(this, 'izmir')">
+                    <div class="city-name">🌊 İzmir</div>
+                    <div class="city-uv">Yaz ortalaması UV: 9-11</div>
+                </div>
+                <div class="city-card" onclick="selectCity(this, 'antalya')">
+                    <div class="city-name">🌴 Antalya</div>
+                    <div class="city-uv">Yaz ortalaması UV: 10-11+</div>
+                </div>
+            </div>
+            <div class="custom-uv-row">
+                <label>Veya UV indeksini ayarlayın:</label>
+                <input type="range" id="uvSlider" min="1" max="12" value="6" oninput="updateUVSlider()">
+                <div class="uv-val-display" id="uvValDisplay">6</div>
+            </div>
+            <div class="step-nav">
+                <button class="btn-step btn-back" onclick="goStep(3)">← Geri</button>
+                <span class="step-counter">4 / 5</span>
+                <button class="btn-step btn-next" id="btn4" onclick="goStep(5)">Devam →</button>
+            </div>
+        </div>
+
+        <!-- STEP 5: Sensitivity -->
+        <div class="step-panel" id="step5">
+            <div class="step-question">Hassasiyet Faktörleri</div>
+            <div class="step-hint">Varsa işaretleyin — yoksa doğrudan "Sonucu Gör" deyin</div>
+            <div class="sens-grid">
+                <div class="sens-item" onclick="toggleSens(this, 'melasma')">
+                    <div class="sens-check">✓</div>
+                    <div>
+                        <div class="sens-text">🎯 Melasma / hiperpigmentasyon sorunum var</div>
+                        <div class="sens-sub">Güneş lekeleri ve pigmentasyon artışı açısından ekstra koruma gerekir</div>
+                    </div>
+                </div>
+                <div class="sens-item" onclick="toggleSens(this, 'retinoid')">
+                    <div class="sens-check">✓</div>
+                    <div>
+                        <div class="sens-text">🧴 Retinoid / tretinoin kullanıyorum</div>
+                        <div class="sens-sub">Retinoidler cildi güneşe karşı daha hassas hale getirebilir</div>
+                    </div>
+                </div>
+                <div class="sens-item" onclick="toggleSens(this, 'postlaser')">
+                    <div class="sens-check">✓</div>
+                    <div>
+                        <div class="sens-text">⚡ Yakın zamanda lazer / peeling / microneedling oldum</div>
+                        <div class="sens-sub">İşlem sonrası cilt bariyeri zayıflamış, PIH riski yüksek</div>
+                    </div>
+                </div>
+                <div class="sens-item" onclick="toggleSens(this, 'photosens')">
+                    <div class="sens-check">✓</div>
+                    <div>
+                        <div class="sens-text">💊 Fotosensitif ilaç kullanıyorum</div>
+                        <div class="sens-sub">Doksisiklin, NSAİD, bazı diüretikler vb.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-nav">
+                <button class="btn-step btn-back" onclick="goStep(4)">← Geri</button>
+                <span class="step-counter">5 / 5</span>
+                <button class="btn-step btn-next" onclick="showResult()">☀️ Sonucu Gör</button>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="result-card" id="resultCard">
+            <div class="result-header">
+                <div class="result-spf-circle">
+                    <div>
+                        <div class="result-spf-label">SPF</div>
+                        <div class="result-spf-val" id="resSPF">50</div>
+                    </div>
+                </div>
+                <div class="result-summary" id="resSummary">Yüksek koruma öneriliyor</div>
+            </div>
+
+            <div class="result-grid" id="resGrid">
+                <!-- Filled by JS -->
+            </div>
+
+            <div class="result-tips" id="resTips">
+                <!-- Filled by JS -->
+            </div>
+
+            <!-- UV Scale -->
+            <div class="uv-scale" id="resUVScale">
+                <div class="uv-scale-title">📊 UV İndeks Ölçeğiniz</div>
+                <div class="uv-bar" id="uvBar">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="uv-labels">
+                    <span>1-2 Düşük</span>
+                    <span>3-5 Orta</span>
+                    <span>6-7 Yüksek</span>
+                    <span>8-10 Çok Yüksek</span>
+                    <span>11+ Aşırı</span>
+                </div>
+            </div>
+
+            <button class="btn-reset" onclick="resetTool()">🔄 Tekrar Hesapla</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MINI GUIDE SECTION -->
+    <!-- ============================================ -->
+
+    <h2 id="uva-uvb">🔬 UV-A vs UV-B: Fark Ne?</h2>
+
+    <p>Güneş ışığında cildinize ulaşan iki farklı ultraviyole dalga boyu var — ve ikisi çok farklı hasarlar yapar:</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>UV-A (320-400 nm)</th>
+                    <th>UV-B (280-320 nm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Takma adı</strong></td>
+                    <td>🕰️ "Aging" ışınları</td>
+                    <td>🔥 "Burning" ışınları</td>
+                </tr>
+                <tr>
+                    <td><strong>Penetrasyon</strong></td>
+                    <td>Dermise (derin katman) kadar iner</td>
+                    <td>Epidermiste (üst katman) kalır</td>
+                </tr>
+                <tr>
+                    <td><strong>Cam geçişi</strong></td>
+                    <td>✅ Camdan geçer!</td>
+                    <td>❌ Camdan geçmez</td>
+                </tr>
+                <tr>
+                    <td><strong>Mevsimsel değişim</strong></td>
+                    <td>Yıl boyunca neredeyse sabit</td>
+                    <td>Yazın çok yüksek, kışın düşük</td>
+                </tr>
+                <tr>
+                    <td><strong>Temel hasar</strong></td>
+                    <td>Kırışıklık, leke, fotoyaşlanma, DNA hasarı</td>
+                    <td>Güneş yanığı, eritem, cilt kanseri</td>
+                </tr>
+                <tr>
+                    <td><strong>SPF ölçer mi?</strong></td>
+                    <td>❌ SPF UV-A ölçmez!</td>
+                    <td>✅ SPF sadece UV-B korumayı ölçer</td>
+                </tr>
+                <tr>
+                    <td><strong>Koruma kriteri</strong></td>
+                    <td>PA++++, PPD, Boots Star Rating</td>
+                    <td>SPF değeri</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>UV-A yaşlandırır, UV-B yakar. SPF sadece UV-B'yi ölçer — o yüzden "geniş spektrumlu" (broad spectrum) güneş kremi şart. Her iki UV tipinden de korunmanız gerekiyor.</p>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Ofiste bile mi?</strong> Evet! UV-A camdan geçer. Pencere kenarında oturuyorsanız, kışın bile UV-A maruziyetiniz var. Melazma hastalarının %100'ü bundan etkilenir (Passeron T, et al., 2020).</p>
+    </div>
+
+
+    <h2 id="spf-anlami">🔢 SPF Sayısının Gerçek Anlamı</h2>
+
+    <p>SPF 50, SPF 30'un iki katı koruma sağlar mı? <strong>Hayır!</strong> SPF logaritmik bir ölçek kullanır — fark düşündüğünüzden çok daha küçüktür.</p>
+
+    <div class="spf-math">
+        <div class="spf-compare">
+            <div class="spf-compare-item">
+                <div class="val">SPF 15</div>
+                <div class="pct">%93.3</div>
+                <div class="lbl">UV-B filtreleme</div>
+            </div>
+            <div class="spf-compare-item">
+                <div class="val">SPF 30</div>
+                <div class="pct">%96.7</div>
+                <div class="lbl">UV-B filtreleme</div>
+            </div>
+            <div class="spf-compare-item">
+                <div class="val">SPF 50</div>
+                <div class="pct">%98.0</div>
+                <div class="lbl">UV-B filtreleme</div>
+            </div>
+        </div>
+        <div class="math-label" style="margin-top:12px">Formül: (1 − 1/SPF) × 100 · Kaynak: Lim HW, et al. J Am Acad Dermatol, 2017</div>
+    </div>
+
+    <p>SPF 30 ile SPF 50 arasındaki fark sadece <strong>%1.3</strong>! Ama önemli bir nüans var: bu hesap <strong>ideal uygulama koşullarında</strong> (2 mg/cm²) geçerli. Gerçek hayatta insanlar önerilen miktarın yarısını bile sürmüyor — bu durumda SPF 50 bir "güvenlik tamponu" sağlıyor (Autier P, et al., 2007).</p>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Pratik kural:</strong> SPF 30 minimum. SPF 50 ideal tampon. SPF 100? Ek fayda marjinal (%99 vs %98) — ama uygulama miktarı ve yeniden sürme sıklığı, SPF sayısından ÇOK daha önemli.</p>
+    </div>
+
+
+    <h2 id="pa-sistemi">🇯🇵 PA++++ Sistemi Nedir?</h2>
+
+    <p>SPF sadece UV-B korumayı ölçer. Peki UV-A? İşte burada <strong>PA (Protection Grade of UV-A)</strong> sistemi devreye giriyor. Japonya kökenli bu sistem, UV-A korumanın gücünü PPD (Persistent Pigment Darkening) değerine göre sınıflandırıyor:</p>
+
+    <div class="pa-grid">
+        <div class="pa-item">
+            <div class="pa-val">PA+</div>
+            <div class="pa-desc">PPD 2-3<br>Hafif UV-A koruması</div>
+        </div>
+        <div class="pa-item">
+            <div class="pa-val">PA++</div>
+            <div class="pa-desc">PPD 4-7<br>Orta UV-A koruması</div>
+        </div>
+        <div class="pa-item">
+            <div class="pa-val">PA+++</div>
+            <div class="pa-desc">PPD 8-15<br>Yüksek UV-A koruması</div>
+        </div>
+        <div class="pa-item" style="background: #f0fdfa; border-color: var(--accent-border)">
+            <div class="pa-val" style="color: var(--accent)">PA++++</div>
+            <div class="pa-desc">PPD 16+<br><strong>Çok yüksek</strong> ✓</div>
+        </div>
+    </div>
+
+    <p><strong>Hedef:</strong> Geniş spektrumlu, en az <strong>PA+++</strong> (ideal PA++++) güneş kremi seçin. Avrupa'da ise UVA daire sembolü (⭕) korumayı gösterir — SPF'nin en az 1/3'ü kadar PPD değeri gerektirir (EU Recommendation 2006/647/EC).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>SPF = UV-B koruma. PA++++ = UV-A koruma. İkisi birden gerekiyor. Etikette "broad spectrum / geniş spektrum" yazısını arayın.</p>
+    </div>
+
+
+    <h2 id="mitler">🔮 Güneş Kremi Mitleri</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Esmer tenliler güneş kremi kullanmasına gerek yok"</div>
+            <div class="myth-fact">YANLIŞ. Fitzpatrick IV-VI tipleri güneş yanığına daha dirençli olsa da UV-A hasarı (fotoyaşlanma, leke, DNA hasarı) herkes için geçerli. Koyu tenlilerde melanomu atlamak riski daha yüksek çünkü "bende olmaz" algısı var (Gloster HM, Neal K, J Am Acad Dermatol, 2006).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Güneş kremi D vitamini yapımını tamamen engeller"</div>
+            <div class="myth-fact">YANLIŞ. Gerçek hayat koşullarında güneş kremi D vitamini sentezini ciddi anlamda engellemez. Çalışmalar, SPF 30 kullanan kişilerde bile anlamlı D vitamini üretimi olduğunu göstermektedir (Neale RE, et al., Br J Dermatol, 2019). Gerekirse takviye alın — cildinizi yakmayın.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Sabah sürüyorum, gün boyu korur"</div>
+            <div class="myth-fact">YANLIŞ. Güneş kreminin koruması yaklaşık 2 saatte bir yeniden uygulama gerektirir — özellikle terleme, yüzme veya havluyla silme sonrası. AAD ve WHO yenilemeyi kesinlikle öneriyor (AAD, 2023).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Bulutlu havada güneş kremi gereksiz"</div>
+            <div class="myth-fact">YANLIŞ. Bulutlar UV radyasyonunun %80'ine kadarını geçirebilir. "Bulutlu gün" aldanması her yaz birçok güneş yanığının sebebi (WHO UV Index Guidelines, 2002).</div>
+        </div>
+    </div>
+
+
+    <!-- BLOG LINK -->
+    <a href="gunesten-korunma-rehberi.html" class="blog-link-card">
+        <div class="blog-link-icon">☀️</div>
+        <div>
+            <div class="blog-link-title">Güneşten Korunma Rehberi — Tam Versiyon</div>
+            <div class="blog-link-desc">Fiziksel vs kimyasal filtreler, uygulama miktarı, Fitzpatrick'e göre seçim, D vitamini paradoksu ve daha fazlası → 16 dk okuma</div>
+        </div>
+        <div class="blog-link-arrow">→</div>
+    </a>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu araç tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler ve araçlar eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Güneş koruması hakkında kişisel danışmanlık için dermatoloji uzmanınıza başvurun.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Fitzpatrick TB. The validity and practicality of sun-reactive skin types I through VI. <em>Arch Dermatol.</em> 1988;124(6):869–871.</li>
+            <li>Lim HW, Arellano-Mendoza MI, Stengel F. Current challenges in photoprotection. <em>J Am Acad Dermatol.</em> 2017;76(3S1):S91–S99.</li>
+            <li>Passeron T, Picardo M. Melasma, a photoaging disorder. <em>Pigment Cell Melanoma Res.</em> 2018;31(4):461–465.</li>
+            <li>Autier P, Boniol M, Doré JF. Sunscreen use and increased duration of intentional sun exposure: still a burning issue. <em>Int J Cancer.</em> 2007;121(1):1–5.</li>
+            <li>Neale RE, Khan SR, Lucas RM, et al. The effect of sunscreen on vitamin D: a review. <em>Br J Dermatol.</em> 2019;181(5):907–915.</li>
+            <li>Gloster HM Jr, Neal K. Skin cancer in skin of color. <em>J Am Acad Dermatol.</em> 2006;55(5):741–760.</li>
+            <li>World Health Organization. Global Solar UV Index: A Practical Guide. <em>WHO.</em> 2002.</li>
+            <li>American Academy of Dermatology. Sunscreen FAQs. <em>AAD Guidelines.</em> 2023.</li>
+            <li>European Commission Recommendation 2006/647/EC on the efficacy of sunscreen products and the claims made relating thereto. <em>Official Journal of the EU.</em> 2006.</li>
+            <li>Diffey BL. When should sunscreen be reapplied? <em>J Am Acad Dermatol.</em> 2001;45(6):882–885.</li>
+            <li>Gabros S, Nessel TA, Zito PM. Sunscreens and Photoprotection. <em>StatPearls.</em> 2024.</li>
+            <li>Passeron T, Bouillon R, Callender V, et al. Sunscreen photoprotection and vitamin D status. <em>Br J Dermatol.</em> 2019;181(5):916–931.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== READING PROGRESS =====
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+
+// ===== TOOL STATE =====
+let state = {
+    fitz: null,
+    exposure: null,
+    season: null,
+    city: null,
+    uvIndex: 6,
+    sensitivity: []
+};
+let currentStep = 1;
+
+// City UV data (summer peak / seasonal adjusted later)
+const cityData = {
+    istanbul: { name: 'İstanbul', summer: 8, winter: 2, spring: 5, autumn: 4 },
+    ankara:   { name: 'Ankara',   summer: 9, winter: 2, spring: 6, autumn: 4 },
+    izmir:    { name: 'İzmir',    summer: 10, winter: 3, spring: 6, autumn: 5 },
+    antalya:  { name: 'Antalya',  summer: 11, winter: 3, spring: 7, autumn: 5 }
+};
+
+// ===== STEP NAVIGATION =====
+function goStep(n) {
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('step' + n).classList.add('active');
+    currentStep = n;
+    updateProgress();
+}
+
+function updateProgress() {
+    document.querySelectorAll('.step-dot').forEach((dot, i) => {
+        const s = i + 1;
+        dot.classList.remove('active', 'done');
+        if (s < currentStep) dot.classList.add('done');
+        else if (s === currentStep) dot.classList.add('active');
+    });
+    document.querySelectorAll('.step-line').forEach((line, i) => {
+        line.classList.toggle('done', i < currentStep - 1);
+    });
+}
+
+// ===== FITZPATRICK =====
+function selectFitz(el, type) {
+    document.querySelectorAll('.fitz-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    state.fitz = type;
+    document.getElementById('btn1').disabled = false;
+}
+
+// ===== EXPOSURE =====
+function selectExposure(el, type) {
+    document.querySelectorAll('#step2 .opt-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    state.exposure = type;
+    document.getElementById('btn2').disabled = false;
+}
+
+// ===== SEASON =====
+function selectSeason(el, type) {
+    document.querySelectorAll('#step3 .opt-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    state.season = type;
+    document.getElementById('btn3').disabled = false;
+}
+
+// ===== CITY =====
+function selectCity(el, city) {
+    document.querySelectorAll('.city-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    state.city = city;
+    // Update UV slider to match city+season
+    const seasonKey = state.season || 'summer';
+    const data = cityData[city];
+    const uv = data[seasonKey] || data.summer;
+    document.getElementById('uvSlider').value = uv;
+    state.uvIndex = uv;
+    document.getElementById('uvValDisplay').textContent = uv;
+    colorUVDisplay(uv);
+}
+
+function updateUVSlider() {
+    const val = parseInt(document.getElementById('uvSlider').value);
+    state.uvIndex = val;
+    state.city = null;
+    document.querySelectorAll('.city-card').forEach(c => c.classList.remove('selected'));
+    document.getElementById('uvValDisplay').textContent = val;
+    colorUVDisplay(val);
+}
+
+function colorUVDisplay(uv) {
+    const el = document.getElementById('uvValDisplay');
+    if (uv <= 2) el.style.color = '#22c55e';
+    else if (uv <= 5) el.style.color = '#f59e0b';
+    else if (uv <= 7) el.style.color = '#f97316';
+    else if (uv <= 10) el.style.color = '#ef4444';
+    else el.style.color = '#7c3aed';
+}
+
+// ===== SENSITIVITY =====
+function toggleSens(el, type) {
+    el.classList.toggle('checked');
+    const idx = state.sensitivity.indexOf(type);
+    if (idx >= 0) state.sensitivity.splice(idx, 1);
+    else state.sensitivity.push(type);
+}
+
+// ===== RESULT GENERATION =====
+function showResult() {
+    // Hide steps, show result
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('stepProgress').style.display = 'none';
+
+    const card = document.getElementById('resultCard');
+    card.classList.add('visible');
+
+    // Calculate recommendation
+    const rec = calculate();
+
+    // SPF
+    document.getElementById('resSPF').textContent = rec.spf;
+    document.getElementById('resSummary').textContent = rec.summary;
+
+    // Grid items
+    document.getElementById('resGrid').innerHTML = `
+        <div class="result-item">
+            <div class="result-item-icon">🧴</div>
+            <div class="result-item-label">Filtre Tipi Önerisi</div>
+            <div class="result-item-value">${rec.filterType}</div>
+        </div>
+        <div class="result-item">
+            <div class="result-item-icon">⏰</div>
+            <div class="result-item-label">Yenileme Sıklığı</div>
+            <div class="result-item-value">${rec.reapply}</div>
+        </div>
+        <div class="result-item">
+            <div class="result-item-icon">💧</div>
+            <div class="result-item-label">Yüz İçin Miktar</div>
+            <div class="result-item-value">~1.25 ml (½ çay kaşığı)<br><span style="font-size:0.75rem;color:var(--text-s)">2 parmak kuralı</span></div>
+        </div>
+        <div class="result-item">
+            <div class="result-item-icon">🧍</div>
+            <div class="result-item-label">Tam Vücut</div>
+            <div class="result-item-value">~30 ml (1 shot bardağı)<br><span style="font-size:0.75rem;color:var(--text-s)">~6 çay kaşığı</span></div>
+        </div>
+    `;
+
+    // Tips
+    document.getElementById('resTips').innerHTML = `
+        <div class="result-tips-title">💡 Size Özel Koruma İpuçları</div>
+        <ul>
+            ${rec.tips.map(t => `<li><span>${t.icon}</span>${t.text}</li>`).join('')}
+        </ul>
+    `;
+
+    // UV Bar
+    renderUVBar(state.uvIndex);
+
+    // Scroll to result
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function calculate() {
+    const f = state.fitz || 3;
+    const e = state.exposure || 'short';
+    const s = state.season || 'summer';
+    const uv = state.uvIndex;
+    const sens = state.sensitivity;
+
+    // Base SPF by Fitzpatrick
+    let baseSPF = 30;
+    if (f <= 2) baseSPF = 50;
+    else if (f <= 3) baseSPF = 30;
+    else baseSPF = 30;
+
+    // Exposure modifier
+    if (e === 'sport') baseSPF = Math.max(baseSPF, 50);
+    else if (e === 'long') baseSPF = Math.max(baseSPF, 50);
+    else if (e === 'short') baseSPF = Math.max(baseSPF, 30);
+
+    // UV modifier
+    if (uv >= 8) baseSPF = Math.max(baseSPF, 50);
+    if (uv >= 11) baseSPF = 50; // 50+ territory
+
+    // Season modifier
+    if (s === 'summer' && uv >= 6) baseSPF = Math.max(baseSPF, 50);
+
+    // Sensitivity forces 50+
+    let hasSens = sens.length > 0;
+    if (hasSens) baseSPF = 50;
+
+    // Final SPF text
+    let spfText = baseSPF.toString();
+    let spfPlus = false;
+    if ((f <= 2 && (e === 'sport' || e === 'long') && uv >= 8) || (hasSens && uv >= 6) || uv >= 11) {
+        spfText = '50+';
+        spfPlus = true;
+    }
+
+    // Summary
+    let summary = '';
+    if (spfPlus || baseSPF >= 50) summary = 'Yüksek koruma öneriliyor — hassasiyet faktörleri veya yoğun UV nedeniyle';
+    else if (baseSPF >= 30) summary = 'Standart yüksek koruma — günlük kullanım için ideal';
+    else summary = 'Temel koruma';
+    if (hasSens) summary += '. Hassasiyet faktörleriniz nedeniyle ekstra dikkat gerekiyor!';
+
+    // Filter type
+    let filterType = '';
+    if (sens.includes('postlaser') || sens.includes('melasma') || f <= 2) {
+        filterType = 'Mineral (fiziksel) filtre önerilir — çinko oksit ve/veya titanyum dioksit. Hassas cilt için daha iyi tolere edilir.';
+    } else if (e === 'sport') {
+        filterType = 'Suya dayanıklı kimyasal veya kombine filtre. Spor ve terleme için daha pratik.';
+    } else {
+        filterType = 'Kimyasal veya kombine (mineral + kimyasal) filtre. Geniş spektrumlu ("broad spectrum") arayın.';
+    }
+
+    // Reapply
+    let reapply = '';
+    if (e === 'sport') reapply = 'Her 80 dakikada bir (suya dayanıklı ise). Terleme ve yüzme sonrası mutlaka yenileyin.';
+    else if (e === 'long') reapply = 'Her 2 saatte bir yeniden uygulayın. Terleme durumunda daha sık.';
+    else if (e === 'short') reapply = 'Çıkmadan 15 dk önce uygulayın. 2 saatten uzun dışarıdaysanız yenileyin.';
+    else reapply = 'Sabah bir kez uygulama yeterli. Dışarı çıkacaksanız 15 dk önce yenileyin.';
+
+    // Tips
+    let tips = [];
+    tips.push({ icon: '🧴', text: '<strong>2 parmak kuralı:</strong> İşaret ve orta parmağınızın tüm uzunluğu kadar güneş kremi yüzünüz için yeterli (~1.25 ml).' });
+
+    if (uv >= 6) {
+        tips.push({ icon: '🕐', text: '<strong>Gölge saatleri:</strong> 10:00-16:00 arası UV en yoğun. Mümkünse bu saatlerde gölgede kalın.' });
+    }
+    if (uv >= 8 || e === 'sport' || e === 'long') {
+        tips.push({ icon: '🧢', text: '<strong>Şapka:</strong> Geniş kenarlı (>7.5 cm) şapka yüz, kulak ve ensede %50+ UV azaltması sağlar.' });
+        tips.push({ icon: '🕶️', text: '<strong>Güneş gözlüğü:</strong> UV400 sertifikalı gözlük göz çevresi ve retinayı korur.' });
+    }
+    if (f <= 2) {
+        tips.push({ icon: '⚠️', text: '<strong>Tip I-II cilt:</strong> Güneş yanığı riskiniz çok yüksek. Mümkünse uzun kollu, UV koruyucu kıyafet giyin (UPF 50+).' });
+    }
+    if (sens.includes('melasma')) {
+        tips.push({ icon: '🎯', text: '<strong>Melazma:</strong> Görünür ışık da pigmentasyonu tetikleyebilir. Demir oksit içeren renkli (tinted) güneş kremi kullanın.' });
+    }
+    if (sens.includes('retinoid')) {
+        tips.push({ icon: '🧬', text: '<strong>Retinoid:</strong> Retinoidler cildi inceltip hassaslaştırır. Güneş kremi olmazsa olmaz — retinoid kullanırken SPF atlamak, ilacın faydasını sıfırlar.' });
+    }
+    if (sens.includes('postlaser')) {
+        tips.push({ icon: '⚡', text: '<strong>İşlem sonrası:</strong> Lazer/peeling sonrası en az 4-6 hafta titiz güneş koruması yapın. PIH (post-inflamatuar hiperpigmentasyon) riski çok yüksek.' });
+    }
+    if (sens.includes('photosens')) {
+        tips.push({ icon: '💊', text: '<strong>Fotosensitivite:</strong> İlacınız güneş hassasiyetini artırıyor. Mineral filtre + koruyucu kıyafet + gölge saatleri — üçlü savunma uygulayın.' });
+    }
+    if (s === 'winter' && uv <= 3) {
+        tips.push({ icon: '❄️', text: '<strong>Kış notu:</strong> UV düşük olsa da UV-A yıl boyu sabittir. Pencere kenarında çalışıyorsanız kışın bile güneş kremi kullanın.' });
+    }
+    if (e === 'indoor') {
+        tips.push({ icon: '🏠', text: '<strong>İç mekan notu:</strong> Pencere camı UV-B\'yi engeller ama UV-A geçer. Pencere kenarında oturuyorsanız SPF'yi atlamayın.' });
+    }
+
+    return { spf: spfText, summary, filterType, reapply, tips };
+}
+
+function renderUVBar(userUV) {
+    const segments = [
+        { range: '1-2', color: '#22c55e', min: 1, max: 2 },
+        { range: '3-5', color: '#f59e0b', min: 3, max: 5 },
+        { range: '6-7', color: '#f97316', min: 6, max: 7 },
+        { range: '8-10', color: '#ef4444', min: 8, max: 10 },
+        { range: '11+', color: '#7c3aed', min: 11, max: 12 }
+    ];
+
+    let html = '';
+    segments.forEach(seg => {
+        const isActive = userUV >= seg.min && userUV <= seg.max;
+        html += `<div class="uv-seg" style="background:${seg.color}">
+            ${seg.range}
+            ${isActive ? '<div class="uv-indicator">📍</div>' : ''}
+        </div>`;
+    });
+    document.getElementById('uvBar').innerHTML = html;
+}
+
+// ===== RESET =====
+function resetTool() {
+    state = { fitz: null, exposure: null, season: null, city: null, uvIndex: 6, sensitivity: [] };
+    currentStep = 1;
+
+    // Reset UI
+    document.getElementById('resultCard').classList.remove('visible');
+    document.getElementById('stepProgress').style.display = 'flex';
+    document.querySelectorAll('.fitz-card, .opt-card, .city-card').forEach(c => c.classList.remove('selected'));
+    document.querySelectorAll('.sens-item').forEach(c => c.classList.remove('checked'));
+    document.getElementById('uvSlider').value = 6;
+    document.getElementById('uvValDisplay').textContent = '6';
+    document.getElementById('uvValDisplay').style.color = '#f97316';
+    ['btn1', 'btn2', 'btn3'].forEach(id => document.getElementById(id).disabled = true);
+
+    goStep(1);
+    document.querySelector('.tool-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Initialize UV display color
+colorUVDisplay(6);
+</script>
+</body>
+</html>
