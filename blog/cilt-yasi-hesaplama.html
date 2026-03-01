@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilt Yaşı Hesaplama — Biyolojik Cilt Yaşınızı Öğrenin | Derindenbilgi</title>
+    <meta name="description" content="Yaşam alışkanlıklarınıza göre cildinizin biyolojik yaşını hesaplayın. Güneş kremi, sigara, uyku, stres ve daha fazlasının cildinize etkisini öğrenin.">
+    <meta name="keywords" content="cilt yaşı hesaplama, biyolojik cilt yaşı, cilt yaşlanması, skin age calculator, cilt bakım testi, dermatoloji">
+    <meta property="og:title" content="Cilt Yaşı Hesaplama — Biyolojik Cilt Yaşınızı Öğrenin">
+    <meta property="og:description" content="11 soruluk interaktif testle cildinizin gerçek biyolojik yaşını keşfedin. Hangi alışkanlıklarınız cildinizi yaşlandırıyor?">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== TOOL HERO ===== */
+        .tool-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        .tool-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(8,145,178,0.1));
+            color: var(--accent-dark);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        .tool-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .tool-hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-s);
+            line-height: 1.65;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== PROGRESS ===== */
+        .progress-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 1.5rem;
+        }
+        .progress-track {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 3px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-t);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* ===== QUIZ CONTAINER ===== */
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        /* ===== STEP CARD ===== */
+        .step-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            animation: fadeUp 0.5s ease;
+            display: none;
+        }
+        .step-card.active { display: block; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(13,148,136,0.3); }
+            50% { box-shadow: 0 0 20px 4px rgba(13,148,136,0.15); }
+        }
+        @keyframes needleBounce {
+            0% { transform: rotate(-90deg); }
+            60% { transform: rotate(var(--target-angle)); }
+            75% { transform: rotate(calc(var(--target-angle) - 5deg)); }
+            100% { transform: rotate(var(--target-angle)); }
+        }
+
+        .step-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 1.25rem;
+            background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(8,145,178,0.1));
+        }
+        .step-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .step-q {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.3px;
+        }
+        .step-hint {
+            font-size: 0.88rem;
+            color: var(--text-s);
+            text-align: center;
+            margin-bottom: 1.75rem;
+            line-height: 1.6;
+        }
+        .step-science {
+            font-size: 0.78rem;
+            color: var(--text-t);
+            text-align: center;
+            margin-top: 1.25rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .step-science a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* ===== AGE SLIDER ===== */
+        .age-input-wrap {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .age-display {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+        .age-display span {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-t);
+            letter-spacing: 0;
+        }
+        .age-slider {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(to right, var(--accent) 0%, var(--accent) 50%, var(--border) 50%);
+            outline: none;
+            cursor: pointer;
+        }
+        .age-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 4px solid #fff;
+            box-shadow: 0 2px 8px rgba(13,148,136,0.4);
+            cursor: pointer;
+            transition: transform 0.15s;
+        }
+        .age-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+        .age-slider::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 4px solid #fff;
+            box-shadow: 0 2px 8px rgba(13,148,136,0.4);
+            cursor: pointer;
+        }
+        .age-range-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 400px;
+            margin: 0.5rem auto 0;
+            font-size: 0.8rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+
+        /* ===== OPTION BUTTONS ===== */
+        .options-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .opt-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: left;
+        }
+        .opt-btn:hover {
+            border-color: var(--accent-light);
+            background: rgba(13,148,136,0.03);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+        .opt-btn.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.06);
+            box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
+        }
+        .opt-emoji {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
+        }
+        .opt-text {
+            flex: 1;
+        }
+        .opt-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .opt-desc {
+            font-size: 0.82rem;
+            color: var(--text-s);
+            margin-top: 0.15rem;
+        }
+        .opt-score {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            flex-shrink: 0;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .opt-btn.selected .opt-score { opacity: 1; }
+        .opt-score.good { background: #dcfce7; color: #166534; }
+        .opt-score.neutral { background: #fef9c3; color: #854d0e; }
+        .opt-score.bad { background: #fef2f2; color: #991b1b; }
+
+        /* ===== SUB-QUESTION (smoking years) ===== */
+        .sub-q {
+            margin-top: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            animation: slideDown 0.3s ease;
+        }
+        .sub-q label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .sub-q select, .sub-q input[type="number"] {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text);
+            background: var(--bg);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .sub-q select:focus, .sub-q input[type="number"]:focus {
+            border-color: var(--accent);
+        }
+
+        /* ===== NAV BUTTONS ===== */
+        .nav-btns {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.25s ease;
+        }
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(13,148,136,0.3);
+        }
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(13,148,136,0.35);
+        }
+        .btn-secondary {
+            background: var(--bg-alt);
+            color: var(--text-s);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover:not(:disabled) {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        /* ===== RESULT ===== */
+        .result-wrap {
+            display: none;
+            animation: scaleIn 0.6s ease;
+        }
+        .result-wrap.active { display: block; }
+
+        .result-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 1.5rem;
+        }
+        .result-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .result-header h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+        .result-header p {
+            color: var(--text-s);
+            font-size: 0.95rem;
+        }
+
+        /* GAUGE */
+        .gauge-wrap { text-align: center; margin: 2rem 0 1.5rem; }
+        .gauge {
+            position: relative;
+            width: 260px;
+            height: 140px;
+            margin: 0 auto;
+        }
+        .gauge-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 130px;
+            border-radius: 130px 130px 0 0;
+            background: conic-gradient(
+                from 0.75turn at 50% 100%,
+                #10b981 0deg,
+                #22c55e 36deg,
+                #84cc16 54deg,
+                #eab308 72deg,
+                #f59e0b 90deg,
+                #f97316 108deg,
+                #ef4444 135deg,
+                #dc2626 158deg,
+                #991b1b 180deg
+            );
+            overflow: hidden;
+        }
+        .gauge-mask {
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+            right: 12px;
+            height: 115px;
+            background: var(--bg);
+            border-radius: 115px 115px 0 0;
+        }
+        .gauge-needle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            height: 100px;
+            background: var(--text);
+            border-radius: 4px;
+            transform-origin: bottom center;
+            transform: rotate(-90deg);
+            margin-left: -2px;
+            transition: none;
+        }
+        .gauge-needle.animate {
+            animation: needleBounce 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        .gauge-center {
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--text);
+            border: 3px solid var(--bg);
+        }
+        .gauge-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.72rem;
+            color: var(--text-t);
+            font-weight: 600;
+            margin-top: 6px;
+            padding: 0 8px;
+        }
+
+        .skin-age-display {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .skin-age-number {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+        .skin-age-label {
+            font-size: 1rem;
+            color: var(--text-s);
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+        .skin-age-diff {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-top: 0.75rem;
+        }
+        .diff-younger { background: #dcfce7; color: #166534; }
+        .diff-same { background: #f0f9ff; color: #1e40af; }
+        .diff-older { background: #fef2f2; color: #991b1b; }
+
+        /* FACTORS */
+        .factors-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem 2.5rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+        }
+        .factors-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .factor-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .factor-item:last-child { border-bottom: none; }
+        .factor-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .factor-info { flex: 1; }
+        .factor-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .factor-detail {
+            font-size: 0.78rem;
+            color: var(--text-s);
+        }
+        .factor-score {
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.2rem 0.65rem;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+        .factor-score.pos { background: #dcfce7; color: #166534; }
+        .factor-score.neu { background: #f0f9ff; color: #1e40af; }
+        .factor-score.neg { background: #fef2f2; color: #991b1b; }
+
+        /* TIPS */
+        .tips-card {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border: 1px solid rgba(13,148,136,0.2);
+            border-radius: var(--radius-lg);
+            padding: 2rem 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tip-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(13,148,136,0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .tip-item:last-child { border-bottom: none; }
+        .tip-emoji {
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+        .tip-text {
+            font-size: 0.9rem;
+            color: #134e4a;
+            line-height: 1.6;
+        }
+        .tip-text strong { color: #0f766e; }
+
+        /* SHARE */
+        .share-row {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn-share {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            transition: all 0.2s;
+        }
+        .btn-share:hover {
+            background: var(--bg-alt);
+            border-color: var(--accent-border);
+        }
+        .btn-share.copied {
+            background: #dcfce7;
+            border-color: #bbf7d0;
+            color: #166534;
+        }
+
+        .btn-restart {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            color: var(--text-s);
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+        .btn-restart:hover {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.88rem;
+            color: #92400e;
+            margin: 1.5rem 0;
+            line-height: 1.6;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .tool-hero h1 { font-size: 1.65rem; }
+            .tool-hero { padding: 2rem 1.25rem 1.25rem; }
+            .quiz-container { padding: 0 1.25rem 2rem; }
+            .step-card { padding: 1.75rem 1.25rem; }
+            .result-card, .factors-card, .tips-card { padding: 1.5rem 1.25rem; }
+            .step-q { font-size: 1.15rem; }
+            .age-display { font-size: 3rem; }
+            .skin-age-number { font-size: 3.5rem; }
+            .gauge { width: 200px; height: 110px; }
+            .gauge-bg { width: 200px; height: 100px; border-radius: 100px 100px 0 0; }
+            .gauge-mask { height: 88px; }
+            .gauge-needle { height: 78px; }
+            .header-nav { display: none; }
+            .nav-btns { flex-direction: column; }
+            .nav-btns .btn { width: 100%; justify-content: center; }
+        }
+
+        /* FITZPATRICK GRID */
+        .fitz-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6rem;
+        }
+        .fitz-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.9rem 0.5rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+        }
+        .fitz-btn:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-1px);
+        }
+        .fitz-btn.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.06);
+            box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
+        }
+        .fitz-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.1);
+        }
+        .fitz-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .fitz-desc {
+            font-size: 0.68rem;
+            color: var(--text-s);
+            line-height: 1.3;
+        }
+        @media (max-width: 480px) {
+            .fitz-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Intro card extra */
+        .intro-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .intro-feat {
+            text-align: center;
+            padding: 1rem 0.5rem;
+        }
+        .intro-feat-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .intro-feat-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .intro-feat-desc {
+            font-size: 0.75rem;
+            color: var(--text-s);
+            margin-top: 0.15rem;
+        }
+        @media (max-width: 480px) {
+            .intro-features { grid-template-columns: 1fr; gap: 0.5rem; }
+            .intro-feat { display: flex; align-items: center; gap: 0.75rem; text-align: left; padding: 0.75rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="tool-hero">
+    <span class="tool-badge">⏳ İnteraktif Araç</span>
+    <h1>Cilt Yaşı Hesaplama</h1>
+    <p class="subtitle">11 soruluk bilimsel teste göre cildinizin biyolojik yaşını keşfedin. Hangi alışkanlıklarınız cildinizi genç tutuyor, hangisi yaşlandırıyor?</p>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label">
+        <span id="progressText">Soru 1 / 11</span>
+        <span id="progressPct">0%</span>
+    </div>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-container">
+
+    <!-- INTRO -->
+    <div class="step-card active" id="step-intro">
+        <div class="step-icon">🔬</div>
+        <div class="step-q">Cildiniz Kaç Yaşında?</div>
+        <div class="step-hint">Kronolojik yaşınız bir şey — ama cildinizin biyolojik yaşı bambaşka olabilir. Güneş, stres, sigara, uyku… her şey iz bırakır. Bu test, bilimsel verilere dayalı 11 faktörü değerlendirerek cildinizin tahmini biyolojik yaşını hesaplar.</div>
+
+        <div class="intro-features">
+            <div class="intro-feat">
+                <div class="intro-feat-icon">📊</div>
+                <div class="intro-feat-label">11 Faktör</div>
+                <div class="intro-feat-desc">Kapsamlı analiz</div>
+            </div>
+            <div class="intro-feat">
+                <div class="intro-feat-icon">🔬</div>
+                <div class="intro-feat-label">Bilimsel</div>
+                <div class="intro-feat-desc">Kanıta dayalı</div>
+            </div>
+            <div class="intro-feat">
+                <div class="intro-feat-icon">💡</div>
+                <div class="intro-feat-label">Kişisel İpuçları</div>
+                <div class="intro-feat-desc">Hedefe yönelik</div>
+            </div>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-primary" onclick="startQuiz()">Teste Başla →</button>
+        </div>
+
+        <div class="step-science">⏱ Yaklaşık 2 dakika sürer. Verileriniz kaydedilmez.</div>
+    </div>
+
+    <!-- Q1: GERÇEK YAŞ -->
+    <div class="step-card" id="step-1">
+        <div class="step-icon">🎂</div>
+        <div class="step-num">Soru 1 / 11</div>
+        <div class="step-q">Kronolojik yaşınız kaç?</div>
+        <div class="step-hint">Cildinizin biyolojik yaşını hesaplamak için önce gerçek yaşınızı bilmemiz gerekiyor.</div>
+
+        <div class="age-input-wrap">
+            <div class="age-display" id="ageDisplay">35 <span>yaş</span></div>
+            <input type="range" class="age-slider" id="ageSlider" min="18" max="80" value="35">
+            <div class="age-range-labels"><span>18</span><span>80</span></div>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()">Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q2: GÜNEŞ KREMİ -->
+    <div class="step-card" id="step-2">
+        <div class="step-icon">☀️</div>
+        <div class="step-num">Soru 2 / 11</div>
+        <div class="step-q">Güneş kremi kullanıyor musunuz?</div>
+        <div class="step-hint">UV radyasyonu cilt yaşlanmasının (fotoyaşlanma) 1 numaralı dış etkendir. SPF kullanımı cilt yaşını doğrudan etkiler.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(2, 0, this)" data-value="0">
+                <span class="opt-emoji">🛡️</span>
+                <div class="opt-text">
+                    <div class="opt-label">Her gün, yaz-kış</div>
+                    <div class="opt-desc">SPF 30+ düzenli kullanıyorum</div>
+                </div>
+                <span class="opt-score good">−2 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(2, 1, this)" data-value="1">
+                <span class="opt-emoji">⛅</span>
+                <div class="opt-text">
+                    <div class="opt-label">Bazen — sadece yazın</div>
+                    <div class="opt-desc">Güneşli günlerde hatırlarsam sürüyorum</div>
+                </div>
+                <span class="opt-score neutral">+1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(2, 2, this)" data-value="2">
+                <span class="opt-emoji">🚫</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hiç kullanmıyorum</div>
+                    <div class="opt-desc">Güneş kremiyle aram iyi değil</div>
+                </div>
+                <span class="opt-score bad">+4 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn2" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Hughes MCB et al. <em>Ann Intern Med</em>, 2013 — Günlük güneş kremi kullanımı cilt yaşlanmasını %24 yavaşlatıyor.</div>
+    </div>
+
+    <!-- Q3: SİGARA -->
+    <div class="step-card" id="step-3">
+        <div class="step-icon">🚬</div>
+        <div class="step-num">Soru 3 / 11</div>
+        <div class="step-q">Sigara kullanıyor musunuz?</div>
+        <div class="step-hint">Sigara dumanındaki 4.000+ kimyasal kolajen ve elastini doğrudan parçalar, dermal kan akışını azaltır.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(3, 0, this)" data-value="0">
+                <span class="opt-emoji">🌿</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hiç içmedim</div>
+                    <div class="opt-desc">Sigara hayatımda yok</div>
+                </div>
+                <span class="opt-score good">0 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(3, 1, this)" data-value="1">
+                <span class="opt-emoji">🚪</span>
+                <div class="opt-text">
+                    <div class="opt-label">Bıraktım</div>
+                    <div class="opt-desc">Eskiden içiyordum ama artık içmiyorum</div>
+                </div>
+                <span class="opt-score neutral">+2 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(3, 2, this)" data-value="2">
+                <span class="opt-emoji">🚬</span>
+                <div class="opt-text">
+                    <div class="opt-label">Aktif içiciyim</div>
+                    <div class="opt-desc">Hâlâ sigara kullanıyorum</div>
+                </div>
+                <span class="opt-score bad">+5 yıl</span>
+            </button>
+        </div>
+
+        <div class="sub-q" id="smokingYears" style="display:none">
+            <label>Kaç yıldır (veya kaç yıl) sigara kullandınız/kullanıyorsunuz?</label>
+            <select id="smokingDuration" onchange="updateSmokingScore()">
+                <option value="0">Seçiniz...</option>
+                <option value="5">5 yıldan az</option>
+                <option value="10">5–10 yıl</option>
+                <option value="15">10–20 yıl</option>
+                <option value="20">20 yıldan fazla</option>
+            </select>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn3" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Morita A. <em>J Dermatol Sci</em>, 2007 — Sigara matriks metalloproteinaz (MMP) aktivitesini artırarak kolajen yıkımını hızlandırır.</div>
+    </div>
+
+    <!-- Q4: SU TÜKETİMİ -->
+    <div class="step-card" id="step-4">
+        <div class="step-icon">💧</div>
+        <div class="step-num">Soru 4 / 11</div>
+        <div class="step-q">Günlük su tüketiminiz ne kadar?</div>
+        <div class="step-hint">Yeterli hidrasyon cilt elastikiyetini ve bariyer fonksiyonunu destekler. Kronik dehidrasyon transepidermal su kaybını artırır.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(4, 0, this)" data-value="0">
+                <span class="opt-emoji">🌊</span>
+                <div class="opt-text">
+                    <div class="opt-label">2 litreden fazla</div>
+                    <div class="opt-desc">Bol bol su içerim</div>
+                </div>
+                <span class="opt-score good">−1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(4, 1, this)" data-value="1">
+                <span class="opt-emoji">💧</span>
+                <div class="opt-text">
+                    <div class="opt-label">1–2 litre</div>
+                    <div class="opt-desc">Ortalama düzeyde su içiyorum</div>
+                </div>
+                <span class="opt-score neutral">0 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(4, 2, this)" data-value="2">
+                <span class="opt-emoji">🏜️</span>
+                <div class="opt-text">
+                    <div class="opt-label">1 litreden az</div>
+                    <div class="opt-desc">Su içmeyi pek hatırlamam</div>
+                </div>
+                <span class="opt-score bad">+1 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn4" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Palma L et al. <em>Clin Cosmet Investig Dermatol</em>, 2015 — Yüksek su tüketimi derin hidrasyon ve cilt fizyolojisini olumlu etkiler.</div>
+    </div>
+
+    <!-- Q5: UYKU -->
+    <div class="step-card" id="step-5">
+        <div class="step-icon">😴</div>
+        <div class="step-num">Soru 5 / 11</div>
+        <div class="step-q">Geceleri kaç saat uyuyorsunuz?</div>
+        <div class="step-hint">Uyku sırasında büyüme hormonu salgılanır, kolajen sentezi artar ve cilt onarımı hızlanır. Kronik uyku eksikliği bariyer fonksiyonunu zayıflatır.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(5, 0, this)" data-value="0">
+                <span class="opt-emoji">🌙</span>
+                <div class="opt-text">
+                    <div class="opt-label">7–9 saat</div>
+                    <div class="opt-desc">Güzellik uykumu alıyorum ✨</div>
+                </div>
+                <span class="opt-score good">−1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(5, 1, this)" data-value="1">
+                <span class="opt-emoji">⏰</span>
+                <div class="opt-text">
+                    <div class="opt-label">5–7 saat</div>
+                    <div class="opt-desc">İdare eder, ama ideal değil</div>
+                </div>
+                <span class="opt-score neutral">+1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(5, 2, this)" data-value="2">
+                <span class="opt-emoji">🦇</span>
+                <div class="opt-text">
+                    <div class="opt-label">5 saatten az</div>
+                    <div class="opt-desc">Uyku ve ben… ayrıyız</div>
+                </div>
+                <span class="opt-score bad">+3 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn5" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Oyetakin-White P et al. <em>Clin Exp Dermatol</em>, 2015 — Kronik kötü uyku kalitesi hızlanmış intrinsik yaşlanma ile ilişkili.</div>
+    </div>
+
+    <!-- Q6: STRES -->
+    <div class="step-card" id="step-6">
+        <div class="step-icon">🧠</div>
+        <div class="step-num">Soru 6 / 11</div>
+        <div class="step-q">Stres düzeyinizi nasıl değerlendirirsiniz?</div>
+        <div class="step-hint">Kronik stres kortizol seviyesini artırır → kolajen yıkımı hızlanır, cilt bariyeri zayıflar, inflamasyon artar.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(6, 0, this)" data-value="0">
+                <span class="opt-emoji">🧘</span>
+                <div class="opt-text">
+                    <div class="opt-label">Düşük</div>
+                    <div class="opt-desc">Genel olarak sakin ve dengeli hissediyorum</div>
+                </div>
+                <span class="opt-score good">−1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(6, 1, this)" data-value="1">
+                <span class="opt-emoji">😐</span>
+                <div class="opt-text">
+                    <div class="opt-label">Orta</div>
+                    <div class="opt-desc">Hayatın normal stresi — bazen çok, bazen az</div>
+                </div>
+                <span class="opt-score neutral">+1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(6, 2, this)" data-value="2">
+                <span class="opt-emoji">🤯</span>
+                <div class="opt-text">
+                    <div class="opt-label">Yüksek</div>
+                    <div class="opt-desc">Sürekli stres altındayım, rahat bir dönem zor hatırlıyorum</div>
+                </div>
+                <span class="opt-score bad">+3 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn6" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Chen Y, Lyga J. <em>Inflamm Allergy Drug Targets</em>, 2014 — Psikolojik stres cilt yaşlanmasını hızlandırır ve bariyer onarımını geciktirir.</div>
+    </div>
+
+    <!-- Q7: RETİNOİD -->
+    <div class="step-card" id="step-7">
+        <div class="step-icon">✨</div>
+        <div class="step-num">Soru 7 / 11</div>
+        <div class="step-q">Retinoid (A vitamini türevi) kullanıyor musunuz?</div>
+        <div class="step-hint">Retinoidler dermatolojide anti-aging için altın standart. Kolajen üretimini artırır, hücre döngüsünü hızlandırır, ince çizgileri azaltır.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(7, 0, this)" data-value="0">
+                <span class="opt-emoji">💎</span>
+                <div class="opt-text">
+                    <div class="opt-label">Evet, düzenli kullanıyorum</div>
+                    <div class="opt-desc">Retinol, tretinoin, adapalen gibi bir ürün kullanıyorum</div>
+                </div>
+                <span class="opt-score good">−2 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(7, 1, this)" data-value="1">
+                <span class="opt-emoji">🤷</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hayır, kullanmıyorum</div>
+                    <div class="opt-desc">Retinoid rutinimde yok</div>
+                </div>
+                <span class="opt-score neutral">0 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn7" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Mukherjee S et al. <em>Clin Interv Aging</em>, 2006 — Retinoidler fotoyaşlanma tedavisinde en güçlü kanıta sahip topikal ajan.</div>
+    </div>
+
+    <!-- Q8: ALKOL -->
+    <div class="step-card" id="step-8">
+        <div class="step-icon">🍷</div>
+        <div class="step-num">Soru 8 / 11</div>
+        <div class="step-q">Alkol tüketiminiz nasıl?</div>
+        <div class="step-hint">Alkol dehidrasyon, inflamasyon ve oksidatif stres yoluyla cilt yaşlanmasını hızlandırır. Ayrıca A vitamini metabolizmasını bozar.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(8, 0, this)" data-value="0">
+                <span class="opt-emoji">🫧</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hiç veya çok az</div>
+                    <div class="opt-desc">Ayda birkaç kez veya hiç</div>
+                </div>
+                <span class="opt-score good">0 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(8, 1, this)" data-value="1">
+                <span class="opt-emoji">🍺</span>
+                <div class="opt-text">
+                    <div class="opt-label">Orta düzeyde</div>
+                    <div class="opt-desc">Haftada 2–3 kez</div>
+                </div>
+                <span class="opt-score neutral">+1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(8, 2, this)" data-value="2">
+                <span class="opt-emoji">🥃</span>
+                <div class="opt-text">
+                    <div class="opt-label">Yüksek</div>
+                    <div class="opt-desc">Neredeyse her gün veya yoğun tüketim</div>
+                </div>
+                <span class="opt-score bad">+3 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn8" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Goodman GD et al. <em>J Clin Aesthet Dermatol</em>, 2019 — Yüksek alkol tüketimi üst yüz çizgileri ve periorbital şişlik ile ilişkili.</div>
+    </div>
+
+    <!-- Q9: EGZERSİZ -->
+    <div class="step-card" id="step-9">
+        <div class="step-icon">🏃</div>
+        <div class="step-num">Soru 9 / 11</div>
+        <div class="step-q">Düzenli egzersiz yapıyor musunuz?</div>
+        <div class="step-hint">Egzersiz kan dolaşımını artırır, hücresel atık temizleme mekanizmalarını aktive eder ve cilt kalınlığını korur.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(9, 0, this)" data-value="0">
+                <span class="opt-emoji">💪</span>
+                <div class="opt-text">
+                    <div class="opt-label">Düzenli — haftada 3+ kez</div>
+                    <div class="opt-desc">Koşu, yüzme, ağırlık, yoga… bir şeyler yapıyorum</div>
+                </div>
+                <span class="opt-score good">−1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(9, 1, this)" data-value="1">
+                <span class="opt-emoji">🚶</span>
+                <div class="opt-text">
+                    <div class="opt-label">Bazen — haftada 1–2 kez</div>
+                    <div class="opt-desc">Fırsat buldukça hareket ediyorum</div>
+                </div>
+                <span class="opt-score neutral">0 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(9, 2, this)" data-value="2">
+                <span class="opt-emoji">🛋️</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hiç yapmıyorum</div>
+                    <div class="opt-desc">Sedanter yaşam tarzı</div>
+                </div>
+                <span class="opt-score bad">+2 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn9" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Crane JD et al. <em>Aging Cell</em>, 2015 — Düzenli egzersiz yapan 40+ yaştakilerde cilt yapısı 20–30 yaş grubuna benzer bulunmuş.</div>
+    </div>
+
+    <!-- Q10: CİLT TİPİ -->
+    <div class="step-card" id="step-10">
+        <div class="step-icon">🧴</div>
+        <div class="step-num">Soru 10 / 11</div>
+        <div class="step-q">Cilt tipiniz hangisi?</div>
+        <div class="step-hint">Cilt tipi yaşlanma paternini etkiler. Yağlı ciltler genellikle daha geç kırışır (doğal sebum bariyeri), kuru ciltler ise daha erken ince çizgi gösterir.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(10, 0, this)" data-value="0">
+                <span class="opt-emoji">✅</span>
+                <div class="opt-text">
+                    <div class="opt-label">Normal</div>
+                    <div class="opt-desc">Ne çok yağlı ne çok kuru — dengeli</div>
+                </div>
+                <span class="opt-score good">0 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(10, 1, this)" data-value="1">
+                <span class="opt-emoji">🏜️</span>
+                <div class="opt-text">
+                    <div class="opt-label">Kuru</div>
+                    <div class="opt-desc">Sıkışma hissi, pullanma olabiliyor</div>
+                </div>
+                <span class="opt-score neutral">+1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(10, 2, this)" data-value="2">
+                <span class="opt-emoji">💦</span>
+                <div class="opt-text">
+                    <div class="opt-label">Yağlı</div>
+                    <div class="opt-desc">T-bölgesi parlıyor, gözenekler belirgin</div>
+                </div>
+                <span class="opt-score good">−1 yıl</span>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(10, 3, this)" data-value="3">
+                <span class="opt-emoji">🌹</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hassas</div>
+                    <div class="opt-desc">Kolayca kızarma, tahriş olma eğilimi</div>
+                </div>
+                <span class="opt-score neutral">+1 yıl</span>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn10" disabled>Devam →</button>
+        </div>
+        <div class="step-science">📚 Luebberding S et al. <em>Skin Res Technol</em>, 2013 — Yağlı cilt tipi kırışıklık oluşumuna karşı koruyucu etki gösteriyor.</div>
+    </div>
+
+    <!-- Q11: FITZPATRICK -->
+    <div class="step-card" id="step-11">
+        <div class="step-icon">🎨</div>
+        <div class="step-num">Soru 11 / 11</div>
+        <div class="step-q">Cilt renginiz / Fitzpatrick tipiniz hangisi?</div>
+        <div class="step-hint">Melanin doğal bir UV filtresidir. Koyu tenli kişilerde fotoyaşlanma daha yavaş seyreder — ama güneş koruması herkes için şart!</div>
+
+        <div class="fitz-grid">
+            <button class="fitz-btn" onclick="selectFitz(0, this)" data-value="0">
+                <div class="fitz-circle" style="background:#fde8d0"></div>
+                <div class="fitz-label">Tip I–II</div>
+                <div class="fitz-desc">Çok açık, kolay yanar</div>
+            </button>
+            <button class="fitz-btn" onclick="selectFitz(1, this)" data-value="1">
+                <div class="fitz-circle" style="background:#e0b896"></div>
+                <div class="fitz-label">Tip III</div>
+                <div class="fitz-desc">Orta, bazen yanar</div>
+            </button>
+            <button class="fitz-btn" onclick="selectFitz(2, this)" data-value="2">
+                <div class="fitz-circle" style="background:#c69c6d"></div>
+                <div class="fitz-label">Tip IV</div>
+                <div class="fitz-desc">Buğday, nadiren yanar</div>
+            </button>
+            <button class="fitz-btn" onclick="selectFitz(3, this)" data-value="3">
+                <div class="fitz-circle" style="background:#8d6e4c"></div>
+                <div class="fitz-label">Tip V</div>
+                <div class="fitz-desc">Koyu, çok nadiren yanar</div>
+            </button>
+            <button class="fitz-btn" onclick="selectFitz(4, this)" data-value="4">
+                <div class="fitz-circle" style="background:#4a3728"></div>
+                <div class="fitz-label">Tip VI</div>
+                <div class="fitz-desc">Çok koyu, hiç yanmaz</div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="calculateResult()" id="nextBtn11" disabled>Sonuçları Gör 🎯</button>
+        </div>
+        <div class="step-science">📚 Fitzpatrick TB. <em>Arch Dermatol</em>, 1988 — Yüksek melanin = daha güçlü doğal UV koruma = yavaş fotoyaşlanma.</div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-wrap" id="resultWrap">
+
+        <div class="result-card" id="resultMain">
+            <div class="result-header">
+                <h2>🔬 Cilt Yaşı Sonucunuz</h2>
+                <p>Yaşam alışkanlıklarınıza dayalı tahmini biyolojik cilt yaşı</p>
+            </div>
+
+            <div class="gauge-wrap">
+                <div class="gauge">
+                    <div class="gauge-bg"><div class="gauge-mask"></div></div>
+                    <div class="gauge-needle" id="gaugeNeedle"></div>
+                    <div class="gauge-center"></div>
+                </div>
+                <div class="gauge-labels">
+                    <span>Genç</span>
+                    <span>Yaşınız</span>
+                    <span>Yaşlı</span>
+                </div>
+            </div>
+
+            <div class="skin-age-display">
+                <div class="skin-age-number" id="skinAgeNum" style="color:var(--accent)">—</div>
+                <div class="skin-age-label">Tahmini Biyolojik Cilt Yaşı</div>
+                <div class="skin-age-diff" id="skinAgeDiff"></div>
+            </div>
+        </div>
+
+        <div class="factors-card" id="factorsCard">
+            <div class="factors-title">📊 Faktör Analizi</div>
+            <div id="factorsList"></div>
+        </div>
+
+        <div class="tips-card" id="tipsCard">
+            <div class="tips-title">💡 Kişisel İpuçları</div>
+            <div id="tipsList"></div>
+        </div>
+
+        <div class="disclaimer">
+            <span class="disclaimer-icon">⚠️</span>
+            <div><strong>Bu sonuç tıbbi teşhis değildir.</strong> Cilt yaşı hesaplama aracı bilimsel verilere dayalı bir tahmin sunar, ancak klinik değerlendirmenin yerini almaz. Gerçek cilt yaşı dermatolojik muayene, VISIA analizi veya biyopsi ile belirlenebilir. Ciddi endişeleriniz varsa bir dermatoloji uzmanına başvurun.</div>
+        </div>
+
+        <div style="text-align:center">
+            <div class="share-row">
+                <button class="btn-share" onclick="copyResult()">📋 Sonucu Kopyala</button>
+                <button class="btn-share" onclick="shareResult()">📤 Paylaş</button>
+            </div>
+            <button class="btn-restart" onclick="restartQuiz()">🔄 Testi Tekrarla</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== STATE =====
+let currentStep = 0; // 0 = intro, 1-11 = questions
+const totalSteps = 11;
+const answers = {};
+
+// ===== SCORING TABLES =====
+const scoring = {
+    2: [-2, 1, 4],      // Güneş kremi: her gün -2, bazen +1, hiç +4
+    3: [0, 2, 5],        // Sigara base: hiç 0, bıraktı +2, aktif +5 (adjusted by duration)
+    4: [-1, 0, 1],       // Su: >2L -1, 1-2L 0, <1L +1
+    5: [-1, 1, 3],       // Uyku: 7-9h -1, 5-7h +1, <5h +3
+    6: [-1, 1, 3],       // Stres: düşük -1, orta +1, yüksek +3
+    7: [-2, 0],           // Retinoid: evet -2, hayır 0
+    8: [0, 1, 3],        // Alkol: az 0, orta +1, yüksek +3
+    9: [-1, 0, 2],       // Egzersiz: düzenli -1, bazen 0, hiç +2
+    10: [0, 1, -1, 1],   // Cilt tipi: normal 0, kuru +1, yağlı -1, hassas +1
+    11: [2, 1, 0, -1, -2] // Fitzpatrick: I-II +2, III +1, IV 0, V -1, VI -2
+};
+
+const factorNames = {
+    2: { icon: '☀️', name: 'Güneş Kremi', labels: ['Her gün kullanım', 'Bazen kullanım', 'Hiç kullanmıyor'] },
+    3: { icon: '🚬', name: 'Sigara', labels: ['Hiç içmemiş', 'Bırakmış', 'Aktif içici'] },
+    4: { icon: '💧', name: 'Su Tüketimi', labels: ['2L+', '1-2L', '1L altı'] },
+    5: { icon: '😴', name: 'Uyku', labels: ['7-9 saat', '5-7 saat', '5 saatten az'] },
+    6: { icon: '🧠', name: 'Stres', labels: ['Düşük', 'Orta', 'Yüksek'] },
+    7: { icon: '✨', name: 'Retinoid', labels: ['Kullanıyor', 'Kullanmıyor'] },
+    8: { icon: '🍷', name: 'Alkol', labels: ['Az/Hiç', 'Orta', 'Yüksek'] },
+    9: { icon: '🏃', name: 'Egzersiz', labels: ['Düzenli', 'Bazen', 'Hiç'] },
+    10: { icon: '🧴', name: 'Cilt Tipi', labels: ['Normal', 'Kuru', 'Yağlı', 'Hassas'] },
+    11: { icon: '🎨', name: 'Fitzpatrick Tipi', labels: ['Tip I-II', 'Tip III', 'Tip IV', 'Tip V', 'Tip VI'] }
+};
+
+// ===== TIPS DATABASE =====
+const tipsDB = {
+    2: {
+        bad: '☀️ <strong>Güneş kremi acil!</strong> Fotoyaşlanmanın 1 numaralı silahı SPF 30+ günlük kullanım. Hava bulutlu bile olsa UVA ışınları cildinize ulaşıyor. Bugün başlayın — ciddi bir fark yaratır.',
+        neutral: '☀️ <strong>SPF\'i günlüğe çevirin.</strong> Sadece yazın değil, kış aylarında da SPF kullanmak cilt yaşlanmasını yavaşlatır. Geniş spektrumlu (UVA+UVB) bir ürün seçin.',
+        good: '☀️ Harika alışkanlık! Güneş kremi konusunda zaten doğru yoldasınız. Yeniden uygulama (2 saatte bir) ve yeterli miktar (1/4 çay kaşığı yüz için) konularına dikkat edin.'
+    },
+    3: {
+        bad: '🚬 <strong>Sigarayı bırakmak cildiniz için yapabileceğiniz en büyük iyilik.</strong> Bıraktıktan sonra kan dolaşımı hızla düzelir ve kolajen yıkımı yavaşlar. 1 yıl içinde gözle görülür fark olur.',
+        neutral: '🚬 Bırakmış olmanız harika! Eski hasar tamamen geri döndürülemese de, antioksidanlar (C vitamini serumu), retinoid ve SPF ile onarımı destekleyebilirsiniz.',
+        good: null
+    },
+    4: {
+        bad: '💧 <strong>Daha fazla su!</strong> Günde en az 1.5-2 litre su içmeye çalışın. Kafeinli içecekler (çay, kahve) diüretik etki yapabilir — su ile dengelemeyi unutmayın.',
+        neutral: null,
+        good: null
+    },
+    5: {
+        bad: '😴 <strong>Uyku cildinizin tamircisi.</strong> 5 saatten az uyku kronik kortizol yüksekliği yapar. "Güzellik uykusu" bir efsane değil — uyku sırasında büyüme hormonu salgılanır ve kolajen sentezi zirve yapar.',
+        neutral: '😴 Uykunuzu 7-8 saate çıkarmaya çalışın. Düzenli uyku saati ve karanlık oda büyük fark yaratır.',
+        good: null
+    },
+    6: {
+        bad: '🧠 <strong>Stres yönetimi = cilt bakımı.</strong> Meditasyon, nefes egzersizleri, doğa yürüyüşü — bunlar sadece "ruh sağlığı" değil, kortizol düşürücü etkileriyle doğrudan cildinizi korur.',
+        neutral: null,
+        good: null
+    },
+    7: {
+        neutral: '✨ <strong>Retinoid düşünün!</strong> Anti-aging için en güçlü kanıta sahip topikal ajan. Retinol (OTC) ile başlayıp, tolere ettikçe doza artırabilirsiniz. Başlangıçta düşük konsantrasyon, haftada 2-3 gece yeter.',
+        good: null
+    },
+    8: {
+        bad: '🍷 <strong>Alkolü azaltmak = daha iyi cilt.</strong> Alkol hem dehidrasyon yapar hem de A vitamini metabolizmasını bozar. Tüketimi azaltmak kısa sürede cilt parlaklığında fark yaratabilir.',
+        neutral: null,
+        good: null
+    },
+    9: {
+        bad: '🏃 <strong>Hareket edin!</strong> Haftada 3x30 dakika orta yoğunluklu egzersiz bile cilt kan dolaşımını artırır. Araştırmalar, düzenli egzersiz yapan 40 yaşındakilerin cilt yapısının 20-30 yaş grubuna benzediğini gösteriyor.',
+        neutral: '🏃 Egzersiz frekansını artırmaya çalışın. Haftada 3+ seans cilt kan akışı ve hücresel temizlik mekanizmaları için ideal.',
+        good: null
+    },
+    10: {
+        neutral_dry: '🧴 <strong>Kuru cilt = erken çizgi riski.</strong> Seramid ve hyalüronik asit içeren nemlendiricilerle bariyer fonksiyonunu güçlendirin. Nemlendirici, SPF\'den sonra en önemli anti-aging adımıdır.',
+        neutral_sensitive: '🧴 <strong>Hassas cilt = inflamasyon riski.</strong> Parfümsüz, minimal içerikli ürünler tercih edin. Niasinamid bariyer güçlendirici ve sakinleştirici olarak harika bir seçenek.'
+    }
+};
+
+// ===== FUNCTIONS =====
+
+function startQuiz() {
+    currentStep = 1;
+    showStep(1);
+    document.getElementById('progressWrap').style.display = 'block';
+    updateProgress();
+}
+
+function showStep(n) {
+    document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active'));
+    const card = document.getElementById('step-' + (n === 0 ? 'intro' : n));
+    if (card) {
+        card.classList.add('active');
+        card.style.animation = 'none';
+        card.offsetHeight; // trigger reflow
+        card.style.animation = 'fadeUp 0.5s ease';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateProgress() {
+    const pct = Math.round((currentStep / totalSteps) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `Soru ${currentStep} / ${totalSteps}`;
+    document.getElementById('progressPct').textContent = pct + '%';
+}
+
+function nextStep() {
+    if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+        updateProgress();
+    }
+}
+
+function prevStep() {
+    if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+        updateProgress();
+    } else if (currentStep === 1) {
+        currentStep = 0;
+        showStep(0);
+        document.getElementById('progressWrap').style.display = 'none';
+    }
+}
+
+function selectOpt(step, value, el) {
+    answers[step] = value;
+    // Deselect siblings
+    el.parentNode.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+
+    // Enable next button
+    const btn = document.getElementById('nextBtn' + step);
+    if (btn) btn.disabled = false;
+
+    // Special: smoking sub-question
+    if (step === 3) {
+        const subQ = document.getElementById('smokingYears');
+        if (value === 1 || value === 2) {
+            subQ.style.display = 'block';
+        } else {
+            subQ.style.display = 'none';
+            answers['3_duration'] = 0;
+        }
+    }
+}
+
+function selectFitz(value, el) {
+    answers[11] = value;
+    el.parentNode.querySelectorAll('.fitz-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    const btn = document.getElementById('nextBtn11');
+    if (btn) btn.disabled = false;
+}
+
+function updateSmokingScore() {
+    const sel = document.getElementById('smokingDuration');
+    answers['3_duration'] = parseInt(sel.value) || 0;
+}
+
+// ===== AGE SLIDER =====
+const ageSlider = document.getElementById('ageSlider');
+const ageDisplay = document.getElementById('ageDisplay');
+ageSlider.addEventListener('input', function() {
+    ageDisplay.innerHTML = this.value + ' <span>yaş</span>';
+    answers[1] = parseInt(this.value);
+    // Update slider gradient
+    const pct = ((this.value - 18) / (80 - 18)) * 100;
+    this.style.background = `linear-gradient(to right, var(--accent) 0%, var(--accent) ${pct}%, var(--border) ${pct}%)`;
+});
+// Initialize
+answers[1] = 35;
+ageSlider.dispatchEvent(new Event('input'));
+
+
+// ===== CALCULATE =====
+function calculateResult() {
+    const age = answers[1] || 35;
+    let delta = 0;
+    const factorScores = [];
+
+    // Process each factor
+    for (let q = 2; q <= 11; q++) {
+        const val = answers[q];
+        if (val === undefined) continue;
+        let score = scoring[q][val];
+
+        // Smoking adjustment based on duration
+        if (q === 3 && (val === 1 || val === 2)) {
+            const dur = answers['3_duration'] || 0;
+            if (val === 2) { // Active smoker
+                if (dur >= 20) score = 10;
+                else if (dur >= 15) score = 8;
+                else if (dur >= 10) score = 6;
+                else score = 5;
+            } else { // Quit
+                if (dur >= 20) score = 4;
+                else if (dur >= 15) score = 3;
+                else score = 2;
+            }
+        }
+
+        delta += score;
+        factorScores.push({
+            q: q,
+            ansIdx: val,
+            score: score,
+            info: factorNames[q]
+        });
+    }
+
+    const skinAge = age + delta;
+
+    // Sort factors: worst first (highest score), then best (lowest score)
+    factorScores.sort((a, b) => b.score - a.score);
+
+    showResult(age, skinAge, delta, factorScores);
+}
+
+function showResult(age, skinAge, delta, factors) {
+    // Hide quiz, show result
+    document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active'));
+    document.getElementById('progressWrap').style.display = 'none';
+
+    const wrap = document.getElementById('resultWrap');
+    wrap.classList.add('active');
+    wrap.style.animation = 'none';
+    wrap.offsetHeight;
+    wrap.style.animation = 'scaleIn 0.6s ease';
+
+    // Skin age number with color
+    const numEl = document.getElementById('skinAgeNum');
+    numEl.textContent = skinAge;
+    if (delta <= -3) numEl.style.color = '#10b981';
+    else if (delta <= 0) numEl.style.color = '#22c55e';
+    else if (delta <= 3) numEl.style.color = '#f59e0b';
+    else if (delta <= 6) numEl.style.color = '#f97316';
+    else numEl.style.color = '#ef4444';
+
+    // Diff badge
+    const diffEl = document.getElementById('skinAgeDiff');
+    if (delta < 0) {
+        diffEl.className = 'skin-age-diff diff-younger';
+        diffEl.innerHTML = `🎉 Kronolojik yaşınızdan <strong>${Math.abs(delta)} yıl genç!</strong>`;
+    } else if (delta === 0) {
+        diffEl.className = 'skin-age-diff diff-same';
+        diffEl.innerHTML = `⚖️ Kronolojik yaşınızla <strong>aynı</strong>`;
+    } else {
+        diffEl.className = 'skin-age-diff diff-older';
+        diffEl.innerHTML = `⚠️ Kronolojik yaşınızdan <strong>${delta} yıl yaşlı</strong>`;
+    }
+
+    // Gauge needle
+    // Map delta from -10 to +20 → -90deg to +90deg
+    const minDelta = -10, maxDelta = 20;
+    const clampedDelta = Math.max(minDelta, Math.min(maxDelta, delta));
+    const angle = -90 + ((clampedDelta - minDelta) / (maxDelta - minDelta)) * 180;
+
+    const needle = document.getElementById('gaugeNeedle');
+    needle.style.setProperty('--target-angle', angle + 'deg');
+    needle.classList.remove('animate');
+    needle.offsetHeight;
+    needle.classList.add('animate');
+
+    // Factors list
+    const factorsListEl = document.getElementById('factorsList');
+    factorsListEl.innerHTML = factors.map(f => {
+        let scoreClass = f.score < 0 ? 'pos' : f.score === 0 ? 'neu' : 'neg';
+        let scoreText = f.score > 0 ? `+${f.score}` : f.score === 0 ? '±0' : `${f.score}`;
+        let factorBg = f.score < 0 ? 'rgba(34,197,94,0.1)' : f.score === 0 ? 'rgba(99,102,241,0.1)' : 'rgba(239,68,68,0.1)';
+        let label = f.info.labels[f.ansIdx] || '';
+
+        return `<div class="factor-item">
+            <div class="factor-icon" style="background:${factorBg}">${f.info.icon}</div>
+            <div class="factor-info">
+                <div class="factor-name">${f.info.name}</div>
+                <div class="factor-detail">${label}</div>
+            </div>
+            <span class="factor-score ${scoreClass}">${scoreText} yıl</span>
+        </div>`;
+    }).join('');
+
+    // Tips
+    generateTips(factors);
+
+    // Scroll to result
+    setTimeout(() => {
+        wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+}
+
+function generateTips(factors) {
+    const tips = [];
+    const added = new Set();
+
+    // Process worst factors first for tips
+    factors.forEach(f => {
+        const q = f.q;
+        const score = f.score;
+        const db = tipsDB[q];
+        if (!db) return;
+
+        let tip = null;
+        if (score >= 3 && db.bad) tip = db.bad;
+        else if (score >= 1 && score < 3) {
+            if (q === 10) {
+                if (f.ansIdx === 1 && db.neutral_dry) tip = db.neutral_dry;
+                else if (f.ansIdx === 3 && db.neutral_sensitive) tip = db.neutral_sensitive;
+            } else if (db.neutral) {
+                tip = db.neutral;
+            }
+        } else if (score <= -1 && db.good) {
+            tip = db.good;
+        }
+
+        if (tip && !added.has(q)) {
+            tips.push(tip);
+            added.add(q);
+        }
+    });
+
+    // Always add retinoid tip if they're not using it
+    if (answers[7] === 1 && !added.has(7)) {
+        const retTip = tipsDB[7].neutral;
+        if (retTip) tips.push(retTip);
+    }
+
+    // Add universal tip
+    tips.push('🌟 <strong>Temel üçlü:</strong> SPF + Retinoid + Nemlendirici — dermatolojide kanıta dayalı anti-aging\'in temeli bu üç adımdır. Basit ama etkili.');
+
+    const tipsListEl = document.getElementById('tipsList');
+    tipsListEl.innerHTML = tips.map(t =>
+        `<div class="tip-item"><span class="tip-emoji"></span><div class="tip-text">${t}</div></div>`
+    ).join('');
+}
+
+// ===== SHARE / COPY =====
+function getResultText() {
+    const age = answers[1] || 35;
+    const skinAge = parseInt(document.getElementById('skinAgeNum').textContent);
+    const delta = skinAge - age;
+    let emoji = delta <= 0 ? '🎉' : '⚠️';
+    let msg = delta < 0
+        ? `${emoji} Cildiniz kronolojik yaşınızdan ${Math.abs(delta)} yıl genç!`
+        : delta === 0
+        ? `⚖️ Cilt yaşınız kronolojik yaşınızla aynı.`
+        : `${emoji} Cildiniz kronolojik yaşınızdan ${delta} yıl yaşlı!`;
+
+    return `🔬 Cilt Yaşı Hesaplama Sonucum\n\n👤 Yaşım: ${age}\n🧬 Biyolojik Cilt Yaşım: ${skinAge}\n${msg}\n\n📊 Derindenbilgi ile test et → derindenbilgi.com`;
+}
+
+function copyResult() {
+    const text = getResultText();
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target.closest('.btn-share');
+        btn.classList.add('copied');
+        btn.textContent = '✅ Kopyalandı!';
+        setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.textContent = '📋 Sonucu Kopyala';
+        }, 2000);
+    }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const btn = event.target.closest('.btn-share');
+        btn.classList.add('copied');
+        btn.textContent = '✅ Kopyalandı!';
+        setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.textContent = '📋 Sonucu Kopyala';
+        }, 2000);
+    });
+}
+
+function shareResult() {
+    const text = getResultText();
+    if (navigator.share) {
+        navigator.share({
+            title: 'Cilt Yaşı Hesaplama Sonucum',
+            text: text,
+            url: window.location.href
+        }).catch(() => {});
+    } else {
+        copyResult();
+    }
+}
+
+function restartQuiz() {
+    // Reset state
+    currentStep = 0;
+    Object.keys(answers).forEach(k => { if (k !== '1') delete answers[k]; });
+    answers[1] = 35;
+
+    // Reset UI
+    document.getElementById('resultWrap').classList.remove('active');
+    document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+    document.querySelectorAll('.fitz-btn').forEach(b => b.classList.remove('selected'));
+    document.querySelectorAll('[id^="nextBtn"]').forEach(b => b.disabled = true);
+    document.getElementById('smokingYears').style.display = 'none';
+    document.getElementById('smokingDuration').value = '0';
+    document.getElementById('ageSlider').value = 35;
+    document.getElementById('ageSlider').dispatchEvent(new Event('input'));
+
+    // Show intro
+    showStep(0);
+    document.getElementById('progressWrap').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
