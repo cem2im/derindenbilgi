@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevsimsel Cilt Bakımı Rehberi: 4 Mevsim, 4 Strateji | Derindenbilgi</title>
+    <meta name="description" content="Kış, ilkbahar, yaz, sonbahar — her mevsimde cildiniz farklı strese maruz kalır. Mevsime göre sabah ve akşam rutinleri, cilt tipine özel ipuçları ve geçiş kontrol listesi.">
+    <meta name="keywords" content="mevsimsel cilt bakımı, kış cilt bakımı, yaz cilt bakımı, SPF, seramid, retinoid, cilt bariyeri, nem, güneş koruması, mevsim geçişi">
+    <meta property="og:title" content="Mevsimsel Cilt Bakımı Rehberi: 4 Mevsim, 4 Strateji">
+    <meta property="og:description" content="Cildiniz yıl boyunca aynı bakımı istemiyor. Her mevsim için sabah-akşam rutinleri, kaçınılacaklar ve cilt tipine göre ipuçları.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+            color: #7c3aed;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== CHECKLIST ===== */
+        .checklist {
+            background: linear-gradient(135deg, rgba(13,148,136,0.04), rgba(6,182,212,0.04));
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+        }
+        .checklist-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .checklist li {
+            padding: 0.4rem 0;
+            font-size: 0.92rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .checklist li::before {
+            content: '☐';
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        /* ===== ROUTINE BOX ===== */
+        .routine-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+        }
+        .routine-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .routine-box ol {
+            padding-left: 1.25rem;
+            margin: 0;
+        }
+        .routine-box li {
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        /* ===== SKIN TIP GRID ===== */
+        .tip-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 1rem 0;
+        }
+        .tip-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+        }
+        .tip-card-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.4rem;
+        }
+        .tip-card p {
+            font-size: 0.88rem;
+            color: #334155;
+            margin-bottom: 0 !important;
+            line-height: 1.5;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+            .tip-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🍂 Cilt Bakımı</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 16 dk okuma</span>
+    </div>
+    <h1>Mevsimsel Cilt Bakımı Rehberi: 4 Mevsim, 4 Strateji</h1>
+    <p class="article-subtitle">Cildiniz yıl boyunca aynı şeyi istemiyor. Kışın çatlayan dudaklar, yazın parlayan alın — tanıdık mı? Her mevsimde ne değişiyor, rutininizi nasıl adapte etmelisiniz? Bilime dayalı, mevsim mevsim anlatıyoruz.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#neden">Neden Mevsime Göre Bakım Değişmeli?</a></li>
+            <li><a href="#nem-sicaklik">Nem ve Sıcaklık Cilde Ne Yapar?</a></li>
+            <li><a href="#kis">❄️ Kış: Bariyer Savunma Sezonu</a></li>
+            <li><a href="#ilkbahar">🌸 İlkbahar: Geçiş ve Uyanış</a></li>
+            <li><a href="#yaz">☀️ Yaz: UV Savunma Modu</a></li>
+            <li><a href="#sonbahar">🍂 Sonbahar: Onarım Sezonu</a></li>
+            <li><a href="#gecis-listesi">Mevsim Geçişi Kontrol Listesi</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#sonuc">Sonuç</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">❄️</span> <strong>Kış:</strong> Nem düşer, cilt bariyeri zayıflar. Seramid ağırlıklı, zengin formülasyonlara geçin. Eksfoliasyonu azaltın.</li>
+            <li><span class="bullet">🌸</span> <strong>İlkbahar:</strong> Geçiş dönemi — SPF'i artırın, retinoid dozunu ayarlayın, alerji sezonuna dikkat. Hafif formülasyona yavaşça geçin.</li>
+            <li><span class="bullet">☀️</span> <strong>Yaz:</strong> UV en yüksek, terleme akneyi tetikler. Hafif ürünler, sık SPF yenileme, non-komedojenik her şey.</li>
+            <li><span class="bullet">🍂</span> <strong>Sonbahar:</strong> Onarım zamanı. Retinoid başlatmak için en iyi sezon. Eksfoliasyonu artırın, yaz hasarını tamir edin.</li>
+            <li><span class="bullet">🔄</span> <strong>Geçiş kuralı:</strong> Birden değiştirmeyin — 2-3 haftalık adaptasyon süreleriyle yavaşça geçiş yapın.</li>
+            <li><span class="bullet">💊</span> <strong>Yıl boyu değişmeyen:</strong> Nazik temizleme, nemlendirme, SPF. Bu üçlü her mevsimde temel.</li>
+        </ul>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- NEDEN MEVSİMSEL BAKIM? -->
+    <!-- ============================================== -->
+
+    <h2 id="neden">🔬 Neden Mevsime Göre Bakım Değişmeli?</h2>
+
+    <p>Cildiniz statik bir organ değil — çevresel koşullara sürekli tepki veriyor. Hava sıcaklığı, nem oranı, UV indeksi ve rüzgâr gibi faktörler cilt bariyerinin (stratum corneum) yapısını ve işlevini doğrudan etkiliyor (Engebretsen KA et al., 2016).</p>
+
+    <p>Kışın düşen nem ve soğuk hava transepidermal su kaybını (TEWL) artırır — yani cildiniz suyu daha hızlı kaybeder. Yazın ise UV radyasyonu, terleme ve artan sebum üretimi bambaşka sorunlar yaratır (Wan MJ et al., 2019).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Cildiniz hava durumuna göre farklı tepki verir. Yıl boyunca aynı rutin kullanmak, kışın şort yazın mont giymek gibidir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- NEM VE SICAKLIK ETKİSİ -->
+    <!-- ============================================== -->
+
+    <h2 id="nem-sicaklik">🌡️ Nem ve Sıcaklık Cilde Ne Yapar?</h2>
+
+    <h3>Nem Oranı</h3>
+
+    <p>Ortam nemi %30'un altına düştüğünde cilt bariyeri bozulmaya başlar. Stratum corneum'daki (cildin en dış tabakası) doğal nem faktörleri (NMF) yetersiz kalır ve su kaybı hızlanır (Rawlings AV &amp; Matts PJ, 2005).</p>
+
+    <p>Tam tersi: nem %70'in üzerindeyken ter buharlaşamaz, gözenekler tıkanır ve akne riski artar. İdeal nem aralığı cilt için <strong>%40-60</strong> civarıdır.</p>
+
+    <h3>Sıcaklık</h3>
+
+    <p>Sıcaklık her 1°C arttığında sebum üretimi yaklaşık %10 artar (Youn SW et al., 2005). Soğuk hava ise kan damarlarını büzer — cildin beslenmesi azalır, kuruluk ve kızarıklık artar.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Nem düşük = cilt su kaybeder, çatlar. Nem yüksek + sıcak = yağ artar, akne patlar. İkisi de cilt bariyerini zorlar.</p>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Çevresel Faktör</th>
+                    <th>Cilt Üzerindeki Etki</th>
+                    <th>Pratik Sonuç</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Düşük nem (&lt;%30)</strong></td>
+                    <td>TEWL artar, NMF yetersiz kalır</td>
+                    <td>Kuruluk, pullanma, bariyer hasarı</td>
+                </tr>
+                <tr>
+                    <td><strong>Yüksek nem (&gt;%70)</strong></td>
+                    <td>Ter buharlaşamaz, gözenekler tıkanır</td>
+                    <td>Akne, milya, fungal enfeksiyonlar</td>
+                </tr>
+                <tr>
+                    <td><strong>Soğuk (&lt;10°C)</strong></td>
+                    <td>Vazokonstrüksiyon, sebum azalır</td>
+                    <td>Kızarıklık, çatlamalar, hassasiyet</td>
+                </tr>
+                <tr>
+                    <td><strong>Sıcak (&gt;30°C)</strong></td>
+                    <td>Sebum %10+/°C artar, terleme artar</td>
+                    <td>Parlaklık, akne, gözenek genişlemesi</td>
+                </tr>
+                <tr>
+                    <td><strong>UV radyasyonu</strong></td>
+                    <td>DNA hasarı, kolajen yıkımı, melanin artışı</td>
+                    <td>Yaşlanma, lekeler, kanser riski</td>
+                </tr>
+                <tr>
+                    <td><strong>Rüzgâr</strong></td>
+                    <td>Yüzey nemini hızla buharlaştırır</td>
+                    <td>Dudak çatlağı, kuru cilt alevlenmesi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- KIŞ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Mevsim 1</div>
+        <div class="part-divider-title">❄️ Kış: Bariyer Savunma Sezonu</div>
+    </div>
+
+    <h2 id="kis">❄️ Kış — Düşük Nem, Bariyer Hasarı, Seramid İhtiyacı</h2>
+
+    <p>Kış, cildinizin en zor mevsimi. Dışarıda soğuk ve kuru hava, içeride ise merkezi ısıtma — ikisi de nemi çekiyor. Sonuç: transepidermal su kaybı (TEWL) kış aylarında yazın neredeyse iki katına çıkabiliyor (Engebretsen KA et al., 2016).</p>
+
+    <p>Kuru cilt, egzama ve rozasea gibi durumlar kışın alevlenir. Sebep basit: <strong>cilt bariyeri zayıflıyor.</strong> Stratum corneum'daki lipidler (seramidler, kolesterol, yağ asitleri) soğuk ve kuru havada bozulur.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Kışın cildiniz su kaybeder ve bariyer çatlar. Strateji: su kaybını engellemek, bariyeri tamir etmek.</p>
+    </div>
+
+    <h3>☀️ Kış Sabah Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌅 Sabah Rutini — Kış</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Süt veya krem bazlı nazik temizleyici (köpüren temizleyicilerden kaçının — surfaktan cildi daha da kurutur).</li>
+            <li><strong>Nem serumu:</strong> Hyaluronik asit serumu — nemli cilde uygulayın. HA kuru havada ciltten nem çekebilir, bu yüzden hemen üzerine krem sürün (Papakonstantinou E et al., 2012).</li>
+            <li><strong>Nemlendirici:</strong> Seramid içeren krem formülasyonu. Seramid 1, 3 ve 6-II kombinasyonu bariyer onarımında altın standart (Coderch L et al., 2003).</li>
+            <li><strong>SPF:</strong> SPF 30+ geniş spektrum. Evet, kışın da! Bulutlu havada bile UVA'nın %80'i cildinize ulaşır.</li>
+        </ol>
+    </div>
+
+    <h3>🌙 Kış Akşam Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌙 Akşam Rutini — Kış</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Çift temizleme (yağ bazlı + su bazlı) — ama ikinci adımda sert köpüren değil, nazik formülasyon.</li>
+            <li><strong>Aktif madde:</strong> Retinoid kullanıyorsanız "sandwich" tekniği uygulayın (nem → retinoid → nem). Kışın retinoid tahrişi artar!</li>
+            <li><strong>Onarıcı krem:</strong> Seramid + kolesterol + serbest yağ asidi üçlüsü içeren zengin krem. Oklüzif bileşenler (shea yağı, petrolatum) su kaybını engeller.</li>
+            <li><strong>Dudak bakımı:</strong> Dudaklarda yağ bezi yok — bariyerleri zayıf. Lanolin veya petrolatum bazlı dudak bakımı şart.</li>
+        </ol>
+    </div>
+
+    <h3>❌ Kışın Kaçınılacaklar</h3>
+
+    <ul>
+        <li><strong>Sıcak su ile yıkama:</strong> Sıcak su yüzey lipidlerini çözer ve bariyeri daha da zayıflatır. Ilık su yeterli.</li>
+        <li><strong>Agresif eksfoliasyon:</strong> AHA/BHA dozunu azaltın veya sıklığı düşürün. Bariyer zaten zayıf — daha fazla aşındırmayın.</li>
+        <li><strong>Alkol içeren tonikler:</strong> Kurutucu, tahriş edici. Kışın tamamen bırakın.</li>
+        <li><strong>Sadece jel nemlendirici:</strong> Jel formülasyonları kış için yetersiz. Krem veya balm formülasyonuna geçin.</li>
+    </ul>
+
+    <h3>Cilt Tipine Göre Kış İpuçları</h3>
+
+    <div class="tip-grid">
+        <div class="tip-card">
+            <div class="tip-card-title">💧 Kuru Cilt</div>
+            <p>Oklüzif katmanları artırın. Gece bakımının son adımı olarak ince bir petrolatum tabakası "slug" tekniğiyle uygulanabilir.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🫧 Yağlı Cilt</div>
+            <p>Kışın bile yağlı cilt nemlendirici atlamasın. Jel-krem hibrit formülasyonlar idealdir. Sebum azalsa da bariyer yine korunmalı.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🛡️ Hassas Cilt</div>
+            <p>Aktif madde sayısını minimumda tutun. Parfümsüz, 5 ingrediyenden az formülasyonlar tercih edin. Seramid + panthenol yeterli.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">⚖️ Karma Cilt</div>
+            <p>Bölgesel bakım uygulayın: T-bölgesine hafif krem, yanaklara zengin formülasyon. Tek ürün tüm yüze uymuyor olabilir.</p>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- İLKBAHAR -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Mevsim 2</div>
+        <div class="part-divider-title">🌸 İlkbahar: Geçiş ve Uyanış</div>
+    </div>
+
+    <h2 id="ilkbahar">🌸 İlkbahar — SPF Artırma, Retinoid Ayarı, Alerji Sezonu</h2>
+
+    <p>İlkbahar en "kafa karıştıran" mevsim. Bazı günler kış gibi soğuk, ertesi gün güneşli ve sıcak. Cildiniz de bu kararsızlığı yaşıyor. UV indeksi yükselmeye başlıyor ama hava henüz tam ısınmadı.</p>
+
+    <p>Ayrıca alerji sezonu! Polenler, çiçek tozları ve rüzgâr cildi tahriş edebilir. Alerjik kontakt dermatit ve atopik dermatit alevlenmeleri ilkbaharda pik yapar (Silverberg JI et al., 2013).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>İlkbahar geçiş dönemi: SPF'i artırın, kremleri hafifletin, retinoid dozunu gözden geçirin ve alerjen maruziyetini azaltın.</p>
+    </div>
+
+    <h3>☀️ İlkbahar Sabah Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌅 Sabah Rutini — İlkbahar</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Jel veya hafif köpük temizleyici — kış kreminden biraz daha hafif formülasyona geçin.</li>
+            <li><strong>Antioksidan:</strong> C vitamini serumu sabah rutinine eklenebilir. UV korumasını güçlendirir (Pullar JM et al., 2017).</li>
+            <li><strong>Nemlendirici:</strong> Krem-jel hibrit. Kış kreminden hafif ama jelden zengin.</li>
+            <li><strong>SPF:</strong> SPF 30+ → SPF 50'ye geçiş zamanı. UV indeksi yükseliyor! Nisan'dan itibaren SPF 50 kullanın.</li>
+        </ol>
+    </div>
+
+    <h3>🌙 İlkbahar Akşam Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌙 Akşam Rutini — İlkbahar</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Çift temizleme (SPF artık daha yoğun, temiz çıkması önemli).</li>
+            <li><strong>Eksfoliasyon:</strong> AHA/BHA sıklığını kademeli artırın — haftada 1'den 2'ye çıkabilir. Kışın dinlenen cilt artık tolere edebilir.</li>
+            <li><strong>Retinoid:</strong> Kışın "sandwich" tekniğinden yavaşça doğrudan uygulamaya geçilebilir. Ama dikkat: güneşe çıkış arttıysa retinoid dozunu artırmayın, SPF'i artırın.</li>
+            <li><strong>Nemlendirici:</strong> Orta yoğunlukta krem. Oklüzif katmanları azaltabilirsiniz.</li>
+        </ol>
+    </div>
+
+    <h3>❌ İlkbaharda Kaçınılacaklar</h3>
+
+    <ul>
+        <li><strong>Birden bire tüm rutini değiştirmek:</strong> Yavaş geçiş! Haftada bir ürün değiştirin, cildin tepkisini gözlemleyin.</li>
+        <li><strong>SPF'i erteleme:</strong> "Henüz yaz gelmedi" düşüncesi tehlikeli. UV indeksi Nisan'dan itibaren 6+'ya çıkabiliyor.</li>
+        <li><strong>Retinoid + yoğun eksfoliasyon aynı gece:</strong> Geçiş döneminde bariyer hassas. İkisini farklı gecelere ayırın.</li>
+        <li><strong>Yüzü ovuşturarak temizleme:</strong> Alerji sezonunda cilt tahriş olmuş olabilir. Ovuşturmak yerine nazikçe bastırarak kurutun.</li>
+    </ul>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Alerji Sezonu Uyarısı:</strong> Polen ve rüzgâr cilt bariyerini tahriş edebilir. Eve geldiğinizde yüzünüzü yıkayın ve antihistaminik gerekiyorsa doktorunuza danışın. Atopik dermatit hastaları ilkbaharda özellikle dikkatli olmalı (Silverberg JI et al., 2013).</p>
+    </div>
+
+    <h3>Cilt Tipine Göre İlkbahar İpuçları</h3>
+
+    <div class="tip-grid">
+        <div class="tip-card">
+            <div class="tip-card-title">💧 Kuru Cilt</div>
+            <p>Kış kremini hemen bırakmayın. Sabah hafif, akşam zengin formülasyonla "yarım geçiş" yapın.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🫧 Yağlı Cilt</div>
+            <p>Sebum artmaya başlıyor. BHA (salisilik asit) sıklığını artırabilirsiniz. Mat SPF'e geçiş zamanı.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🛡️ Hassas Cilt</div>
+            <p>Alerji sezonu hassas cildi çifte zorlayabilir. Aktif madde eklemeyin, bariyer onarımına odaklanın.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">⚖️ Karma Cilt</div>
+            <p>T-bölgesi yağlanmaya, yanaklar hâlâ kuruluğa eğilimli olabilir. Bölgesel strateji sürdürün.</p>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- YAZ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Mevsim 3</div>
+        <div class="part-divider-title">☀️ Yaz: UV Savunma Modu</div>
+    </div>
+
+    <h2 id="yaz">☀️ Yaz — Yüksek UV, Terleme + Akne, Hafif Formülasyon</h2>
+
+    <p>Yaz, cildinizin en çok UV stresine maruz kaldığı mevsim. UVB yoğunluğu pik yapıyor, UVA ise zaten yıl boyunca sabit. Bir yaz tatilinde yeterli korunmasız geçen 2 hafta, cildinize yılların hasarını verebilir (Young AR et al., 2017).</p>
+
+    <p>Sıcakla birlikte sebum üretimi artar, terleme gözenekleri tıkar ve "yaz aknesi" başlar. Üstelik ağır kremler + terleme = mükemmel akne zemini. Yazın strateji: <strong>hafiflet, koru, sık yenile.</strong></p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Yaz = UV savunması + hafif formülasyon + SPF yenileme. Ağır kremleri rafa kaldırın, güneşten korunmayı birinci öncelik yapın.</p>
+    </div>
+
+    <h3>☀️ Yaz Sabah Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌅 Sabah Rutini — Yaz</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Hafif jel temizleyici. Terleme kalıntılarını temizleyin ama bariyeri soyma noktasına getirmeyin.</li>
+            <li><strong>Antioksidan:</strong> C vitamini serumu — fotokoruyucu etkisi var. SPF'in destekçisi gibi düşünün (Pullar JM et al., 2017).</li>
+            <li><strong>Nemlendirici:</strong> Su bazlı, hafif jel nemlendirici veya doğrudan SPF (nemlendirici + SPF kombine ürünler yeterli olabilir).</li>
+            <li><strong>SPF:</strong> SPF 50+, geniş spektrum. <strong>2 mg/cm² kuralı:</strong> yüze yaklaşık yarım çay kaşığı (1/4-1/3 tatlı kaşığı). Her 2 saatte yeniden uygulayın!</li>
+        </ol>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>☀️ SPF Yeniden Uygulama Kuralı:</strong> SPF'i sabah bir kez sürmek yetmez. Her 2 saatte veya yoğun terleme/yüzme sonrasında yenileyin. Sprey veya pudra SPF formları yenileme için pratik olabilir (Lim HW et al., 2017).</p>
+    </div>
+
+    <h3>🌙 Yaz Akşam Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌙 Akşam Rutini — Yaz</div>
+        <ol>
+            <li><strong>Çift temizleme:</strong> Yağ bazlı + jel. SPF, ter ve günlük kirleri tamamen çıkarmak çok önemli. Yarım kalmış temizlik = tıkalı gözenek.</li>
+            <li><strong>Eksfoliasyon:</strong> BHA (salisilik asit) yağlı ve akneye eğilimli ciltler için haftada 2-3 kez. BHA yağda çözünür — gözenek içini temizler (Arif T, 2015).</li>
+            <li><strong>Retinoid:</strong> Dikkat! Retinoidler fotosensitivite yaratır. Yazın kullanmaya devam edebilirsiniz AMA sabah SPF'iniz mükemmel olmalı. Alternatif: dozu düşürün veya bakuchiol'e geçici geçiş yapın.</li>
+            <li><strong>Hafif nemlendirici:</strong> Jel veya su bazlı. Oklüzif ağır kremlerden kaçının — gözenekleri tıkar.</li>
+        </ol>
+    </div>
+
+    <h3>❌ Yazın Kaçınılacaklar</h3>
+
+    <ul>
+        <li><strong>Ağır oklüzif kremler:</strong> Petrolatum, shea yağı gibi oklüzifler yazın gözenek tıkanmasına yol açabilir. Kışlık kremleri rafa kaldırın.</li>
+        <li><strong>SPF'siz retinoid kullanımı:</strong> Retinoid cilde UV hassasiyetini artırır. SPF olmadan retinoid = hiperpigmentasyon daveti.</li>
+        <li><strong>Agresif eksfoliasyon + güneş:</strong> Eksfoliasyon sonrası cilt UV'ye daha hassas. Eksfoliasyon akşam yapın, sabah mutlaka SPF.</li>
+        <li><strong>Makyaj üzerine makyaj:</strong> Terleme + makyaj katmanları = bakteri üreme alanı. Gün içinde yüzünüzü yıkayamıyorsanız misel suyla temizleyip SPF yenileyin.</li>
+    </ul>
+
+    <h3>Cilt Tipine Göre Yaz İpuçları</h3>
+
+    <div class="tip-grid">
+        <div class="tip-card">
+            <div class="tip-card-title">💧 Kuru Cilt</div>
+            <p>Nemlendiriciyi atlamayın — havuz ve deniz suyu kurutur. Akşam HA serumu + hafif krem yeterli olabilir.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🫧 Yağlı Cilt</div>
+            <p>Niacinamide (%2-5) sebumu azaltır. Mat bitişli SPF seçin. BHA'yı haftada 3'e çıkarabilirsiniz.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🛡️ Hassas Cilt</div>
+            <p>Mineral (fiziksel) SPF tercih edin — çinko oksit ve titanyum dioksit kimyasal filtrelere göre daha az tahriş eder.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">⚖️ Karma Cilt</div>
+            <p>T-bölgesine mat SPF, yanaklara nemlendirici SPF. Bölgesel yaklaşım yazın kritik.</p>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">☀️</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Yazın 1 Numaralı Kuralı</div>
+            <div class="verdict-text">Tüm cilt bakım rutininiz birbirine girse bile, tek bir şey yapın: SPF 50+ sürün ve 2 saatte yenileyin. Bu tek adım, yaşlanma ve leke oluşumunun %80'ini önleyebilir (Hughes MCB et al., 2013).</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- SONBAHAR -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Mevsim 4</div>
+        <div class="part-divider-title">🍂 Sonbahar: Onarım Sezonu</div>
+    </div>
+
+    <h2 id="sonbahar">🍂 Sonbahar — Retinoid Başlangıç, Eksfoliasyon Artırma, Onarım</h2>
+
+    <p>Sonbahar, dermatolojide "onarım sezonu" olarak bilinir. UV indeksi düşmeye başlıyor, hava serinliyor — yaz boyunca kullanamadığınız veya azalttığınız aktif maddelere geri dönme zamanı.</p>
+
+    <p>Yazın biriken UV hasarı (lekeler, cilt tonu eşitsizliği, ince çizgiler) sonbaharda tedavi edilmeli. Bu dönem retinoid başlatmak veya dozu artırmak için en ideal zaman — UV riski azaldığı için fotosensitivite sorunu en düşük seviyede (Mukherjee S et al., 2006).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Sonbahar = onarım zamanı. Retinoid başlatın veya dozu artırın, eksfoliasyonu kademeli artırın, yaz hasarını tamir edin.</p>
+    </div>
+
+    <h3>☀️ Sonbahar Sabah Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌅 Sabah Rutini — Sonbahar</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Jel veya krem temizleyici — hava kuruyor, biraz daha nazik formülasyona geçebilirsiniz.</li>
+            <li><strong>Antioksidan:</strong> C vitamini serumu — yaz hasarından kalan serbest radikallere karşı onarımı destekler.</li>
+            <li><strong>Nemlendirici:</strong> Krem-jel → kreme doğru geçiş. Nem oranı düşmeye başlıyor.</li>
+            <li><strong>SPF:</strong> SPF 30+ hâlâ gerekli. UV indeksi düşse de sıfır değil. Retinoid kullanıyorsanız SPF atlamak yok!</li>
+        </ol>
+    </div>
+
+    <h3>🌙 Sonbahar Akşam Rutini</h3>
+
+    <div class="routine-box">
+        <div class="routine-title">🌙 Akşam Rutini — Sonbahar</div>
+        <ol>
+            <li><strong>Temizleme:</strong> Çift temizleme.</li>
+            <li><strong>Eksfoliasyon:</strong> AHA (glikolik asit %5-10) sıklığını artırabilirsiniz — haftada 2-3 kez. Yaz boyunca biriken ölü hücreleri temizler, cilt tonunu eşitler.</li>
+            <li><strong>Retinoid:</strong> Retinoid başlatmak için en iyi dönem! Düşük dozdan başlayın (retinol %0.25-0.3), haftada 2-3 kez. 4-6 haftada tolerans geliştikçe artırın (Mukherjee S et al., 2006).</li>
+            <li><strong>Onarıcı nemlendirici:</strong> Niacinamide + seramid formülasyonu. Bariyer onarımı + pigmentasyon düzenleme — ikisi bir arada.</li>
+        </ol>
+    </div>
+
+    <h3>❌ Sonbaharda Kaçınılacaklar</h3>
+
+    <ul>
+        <li><strong>Birden yüksek doz retinoid:</strong> "Yaz bitti, hemen %1 retinol başlayayım" demeyin. Düşük dozdan başlayın — retinoid dermatiti acı veren bir deneyim.</li>
+        <li><strong>Eksfoliasyon + retinoid aynı gece:</strong> İkisini aynı akşam kullanmak aşırı tahriş yaratır. Farklı gecelere ayırın (skin cycling prensibi).</li>
+        <li><strong>SPF bırakma:</strong> "Artık güneş yok" düşüncesiyle SPF'i bırakmak — yanlış. Özellikle retinoid kullanırken SPF şart.</li>
+        <li><strong>Yazlık hafif rutinde kalma:</strong> Hava kurumaya başladı. Jel nemlendirici artık yetmeyebilir — seramid kremlerine geçiş yapın.</li>
+    </ul>
+
+    <h3>Cilt Tipine Göre Sonbahar İpuçları</h3>
+
+    <div class="tip-grid">
+        <div class="tip-card">
+            <div class="tip-card-title">💧 Kuru Cilt</div>
+            <p>Retinoid başlarken mutlaka sandwich tekniği (nem-retinoid-nem) kullanın. Retinaldehit, retinolden daha az kurutur.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🫧 Yağlı Cilt</div>
+            <p>Sonbahar retinoid başlangıcı için ideal. Yağlı cilt retinolü iyi tolere eder. Doğrudan uygulama genellikle sorun yaratmaz.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">🛡️ Hassas Cilt</div>
+            <p>Bakuchiol ile başlayın — retinol benzeri etki, daha az tahriş (Dhaliwal S et al., 2019). Veya retinol %0.1'den en düşük dozla girin.</p>
+        </div>
+        <div class="tip-card">
+            <div class="tip-card-title">⚖️ Karma Cilt</div>
+            <p>T-bölgesine retinoid doğrudan, yanaklara sandwich tekniği ile. Eksfoliasyonu T-bölgesine odaklayın.</p>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🍂</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Sonbahar Fırsatını Kaçırmayın</div>
+            <div class="verdict-text">Retinoidler dermatolojinin en güçlü kanıtlı anti-aging silahıdır. Sonbahar, başlamak için en güvenli dönem — düşük UV, serin hava, ideal tolerans koşulları. Her zaman "başlayacağım" diyorsanız, şimdi tam zamanı.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- MEVSİM GEÇİŞ KONTROL LİSTESİ -->
+    <!-- ============================================== -->
+
+    <h2 id="gecis-listesi">📋 Mevsim Geçişi Kontrol Listesi</h2>
+
+    <p>Her mevsim değişiminde aşağıdaki adımları takip edin. Birden değişim yapmak yerine <strong>2-3 haftalık kademeli geçiş</strong> yapın.</p>
+
+    <div class="checklist">
+        <div class="checklist-title">❄️ → 🌸 Kıştan İlkbahara</div>
+        <ul>
+            <li>Zengin kremden krem-jel hibrite geçiş (1 hafta gözlem)</li>
+            <li>SPF 30 → SPF 50'ye artır (Nisan'dan itibaren)</li>
+            <li>C vitamini serumunu sabah rutinine ekle</li>
+            <li>AHA/BHA eksfoliasyonu kademeli artır (haftada 1 → 2)</li>
+            <li>Alerji mevsimi: eve gelince yüz yıkama rutini ekle</li>
+            <li>Retinoid dozunu koru ama yoğun güneşli günlerde dikkatli ol</li>
+        </ul>
+    </div>
+
+    <div class="checklist">
+        <div class="checklist-title">🌸 → ☀️ İlkbahardan Yaza</div>
+        <ul>
+            <li>Krem nemlendirici → jel nemlendirici (veya SPF-nemlendirici combo)</li>
+            <li>SPF yenileme rutini belirle (2 saatte 1, sprey/pudra taşı)</li>
+            <li>Oklüzif ürünleri (petrolatum, shea) kes</li>
+            <li>Non-komedojenik kontrol: tüm ürünlerde gözenek tıkamayan formül</li>
+            <li>Retinoid dozu: ya düşür ya da SPF'i mükemmelleştir</li>
+            <li>Çift temizlemeyi titizlikle uygula (SPF + ter kalıntıları)</li>
+        </ul>
+    </div>
+
+    <div class="checklist">
+        <div class="checklist-title">☀️ → 🍂 Yazdan Sonbahara</div>
+        <ul>
+            <li>Jel → krem-jel'e geçiş başlat</li>
+            <li>Retinoid başlat veya dozu artır (düşükten başla!)</li>
+            <li>AHA eksfoliasyonu artır — yaz pigmentasyonunu temizle</li>
+            <li>C vitamini + niacinamide onarım kombosu başlat</li>
+            <li>SPF'i bırakma — retinoid kullanıyorsan zorunlu</li>
+            <li>Nemlendirici yoğunluğunu kademeli artır</li>
+        </ul>
+    </div>
+
+    <div class="checklist">
+        <div class="checklist-title">🍂 → ❄️ Sonbahardan Kışa</div>
+        <ul>
+            <li>Krem-jel → zengin krem/balm'a geçiş</li>
+            <li>Seramid içeren onarıcı formülasyonlara geç</li>
+            <li>Eksfoliasyon sıklığını azalt (haftada 2 → 1)</li>
+            <li>Retinoid: sandwich tekniğine geçiş veya doz koru</li>
+            <li>Dudak bakımı ekle (lanolin/petrolatum bazlı)</li>
+            <li>Nemlendirici üzerine oklüzif tabaka (gerekirse)</li>
+            <li>Ilık su kuralı — sıcak duştan kaçın</li>
+        </ul>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- 4 MEVSİM KARŞILAŞTIRMA TABLOSU -->
+    <!-- ============================================== -->
+
+    <h3>📊 4 Mevsim Bir Bakışta</h3>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Parametre</th>
+                    <th>❄️ Kış</th>
+                    <th>🌸 İlkbahar</th>
+                    <th>☀️ Yaz</th>
+                    <th>🍂 Sonbahar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Temel Strateji</strong></td>
+                    <td>Bariyer koruma</td>
+                    <td>Kademeli geçiş</td>
+                    <td>UV savunma</td>
+                    <td>Onarım</td>
+                </tr>
+                <tr>
+                    <td><strong>Nemlendirici</strong></td>
+                    <td>Zengin krem/balm</td>
+                    <td>Krem-jel</td>
+                    <td>Jel/su bazlı</td>
+                    <td>Krem-jel → krem</td>
+                </tr>
+                <tr>
+                    <td><strong>SPF</strong></td>
+                    <td>SPF 30+</td>
+                    <td>SPF 50+</td>
+                    <td>SPF 50+ (sık yenile)</td>
+                    <td>SPF 30+</td>
+                </tr>
+                <tr>
+                    <td><strong>Retinoid</strong></td>
+                    <td>Sandwich tekniği</td>
+                    <td>Doz koruma</td>
+                    <td>Düşük doz / dikkatli</td>
+                    <td>Başlat / artır</td>
+                </tr>
+                <tr>
+                    <td><strong>Eksfoliasyon</strong></td>
+                    <td>Minimum (1x/hafta)</td>
+                    <td>Kademeli artır</td>
+                    <td>BHA odaklı (2-3x)</td>
+                    <td>AHA artır (2-3x)</td>
+                </tr>
+                <tr>
+                    <td><strong>Anahtar İçerik</strong></td>
+                    <td>Seramid, petrolatum</td>
+                    <td>C vitamini, geçiş</td>
+                    <td>Niacinamide, mat SPF</td>
+                    <td>Retinoid, AHA</td>
+                </tr>
+                <tr>
+                    <td><strong>#1 Risk</strong></td>
+                    <td>Bariyer hasarı</td>
+                    <td>Alerji alevlenmesi</td>
+                    <td>UV hasarı + akne</td>
+                    <td>Retinoid dermatiti</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- MİTLER VS GERÇEKLER -->
+    <!-- ============================================== -->
+
+    <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mevsimsel Bakım Mitleri</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Kışın güneş kremi gerekmez"</div>
+            <div class="myth-fact">YANLIŞ. UVA ışınları yıl boyunca sabit kalır ve camdan bile geçer. Bulutlu kış günlerinde bile UVA cildinize ulaşıyor. Retinoid kullanıyorsanız SPF kışın da zorunlu (Lim HW et al., 2017).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Yağlı cilt nemlendirici istemez"</div>
+            <div class="myth-fact">YANLIŞ. Sebum ≠ hidrasyon. Yağlı cilt bolca yağ üretir ama su içeriği düşük olabilir. Nemlendiriciyi atlamak dehidrasyona ve kompansatuar sebum artışına yol açar (Makrantonaki E et al., 2011).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Yazın retinoid kullanılmaz"</div>
+            <div class="myth-fact">YANLIŞ — ama dikkatli kullanılmalı. Retinoid yazın kesilmek zorunda değil; SPF korumanız mükemmelse devam edebilirsiniz. Alternatif: dozu düşürün veya geçici olarak bakuchiol'e geçin.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "SPF'i bir kez sürmek yeter"</div>
+            <div class="myth-fact">YANLIŞ. SPF zamanla, terle ve dokunmayla etkinliğini kaybeder. Her 2 saatte bir yeniden uygulama gereklidir. Bir çalışma, sabah tek uygulama ile öğleden sonra korumanın %50'den fazla azaldığını gösterdi (Ou-Yang H et al., 2012).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Soğuk su gözenekleri küçültür"</div>
+            <div class="myth-fact">GEÇİCİ ETKİ. Soğuk su vazokonstrüksiyon yaparak anlık bir "sıkılaşma" hissi verir ama gözenek boyutunu kalıcı olarak değiştirmez. Gözenek boyutu genetik ve elastikiyet ile belirlenir (Lee SJ et al., 2016).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Kışın eksfoliasyon artırılmalı çünkü cilt kalınlaşır"</div>
+            <div class="myth-fact">TAM TERSİ. Kışın cilt bariyeri zayıf. Agresif eksfoliasyon bariyeri daha da bozar ve kızarıklık, hassasiyet, TEWL artışı yaratır. Kışın eksfoliasyonu azaltın (Engebretsen KA et al., 2016).</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- SONUÇ -->
+    <!-- ============================================== -->
+
+    <h2 id="sonuc">🏁 Sonuç: Yıl Boyunca Sağlıklı Cilt İçin 5 Altın Kural</h2>
+
+    <div class="highlight-box">
+        <p><strong>1. Her mevsimde temel üçlü değişmez:</strong> Nazik temizleme + nemlendirme + SPF. Formülasyonlar değişir ama bu üçlü her mevsimde olmalı.</p>
+        <p><strong>2. Kademeli geçiş yapın:</strong> Haftada bir ürün değiştirin. Birden tüm rutini değiştirmek cilt bariyerini zorlayabilir.</p>
+        <p><strong>3. Cildinizi dinleyin:</strong> Sıkılık hissediyorsanız daha zengin formülasyona, parlaklık ve tıkanma varsa daha hafifine geçin. Takvim değil, cildinizin tepkisi belirlesin.</p>
+        <p><strong>4. SPF yıl boyunca:</strong> Güneş kremi sadece yaz ürünü değil. Retinoid, AHA, BHA kullanan herkes 12 ay SPF kullanmalı.</p>
+        <p><strong>5. Sonbaharı onarım fırsatı olarak kullanın:</strong> Retinoid başlatma, yaz pigmentasyonu tedavisi ve bariyer güçlendirme için ideal dönem.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🎯</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Ana Mesaj</div>
+            <div class="verdict-text">Mevsimsel cilt bakımı lüks değil, gereklilik. Aynı kıyafeti 12 ay giyemezsiniz — cilt bakımı da öyle. Ama karmaşık olmak zorunda da değil: formülasyon yoğunluğunu ve aktif madde dozunu mevsime göre ayarlayın, gerisini cildiniz halledecektir.</div>
+        </div>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir ürün veya tedaviye başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Engebretsen KA, Johansen JD, Kezic S, Linneberg A, Thyssen JP. The effect of environmental humidity and temperature on skin barrier function and dermatitis. <em>J Eur Acad Dermatol Venereol.</em> 2016;30(2):223–249.</li>
+            <li>Rawlings AV, Matts PJ. Stratum corneum moisturization at the molecular level: an update in relation to the dry skin cycle. <em>J Invest Dermatol.</em> 2005;124(6):1099–1110.</li>
+            <li>Youn SW, Kim SJ, Hwang IA, Park KC. Evaluation of facial skin type by sebum secretion: discrepancies between subjective descriptions and sebum secretion. <em>Skin Res Technol.</em> 2002;8(3):168–172.</li>
+            <li>Coderch L, López O, de la Maza A, Parra JL. Ceramides and skin function. <em>Am J Clin Dermatol.</em> 2003;4(2):107–129.</li>
+            <li>Papakonstantinou E, Roth M, Karakiulakis G. Hyaluronic acid: a key molecule in skin aging. <em>Dermatoendocrinol.</em> 2012;4(3):253–258.</li>
+            <li>Pullar JM, Carr AC, Vissers MCM. The roles of vitamin C in skin health. <em>Nutrients.</em> 2017;9(8):866.</li>
+            <li>Silverberg JI, Hanifin J, Simpson EL. Climatic factors are associated with childhood eczema prevalence in the United States. <em>J Invest Dermatol.</em> 2013;133(7):1752–1759.</li>
+            <li>Young AR, Claveau J, Rossi AB. Ultraviolet radiation and the skin: photobiology and sunscreen photoprotection. <em>J Am Acad Dermatol.</em> 2017;76(3S1):S100–S109.</li>
+            <li>Mukherjee S, Date A, Patravale V, Korting HC, Roeder A, Weindl G. Retinoids in the treatment of skin aging: an overview of clinical efficacy and safety. <em>Clin Interv Aging.</em> 2006;1(4):327–348.</li>
+            <li>Lim HW, Arellano-Mendoza MI, Stengel F. Current challenges in photoprotection. <em>J Am Acad Dermatol.</em> 2017;76(3S1):S91–S99.</li>
+            <li>Hughes MCB, Williams GM, Baker P, Green AC. Sunscreen and prevention of skin aging: a randomized trial. <em>Ann Intern Med.</em> 2013;158(11):781–790.</li>
+            <li>Ou-Yang H, Stanfield J, Cole C, Appa Y, Rigel D. High-SPF sunscreens (SPF ≥ 70) may provide ultraviolet protection above minimal recommended levels by adequately compensating for lower sunscreen user application amounts. <em>J Am Acad Dermatol.</em> 2012;67(6):1220–1227.</li>
+            <li>Arif T. Salicylic acid as a peeling agent: a comprehensive review. <em>Clin Cosmet Investig Dermatol.</em> 2015;8:455–461.</li>
+            <li>Dhaliwal S, Rybak I, Ellis SR, et al. Prospective, randomized, double-blind assessment of topical bakuchiol and retinol for facial photoageing. <em>Br J Dermatol.</em> 2019;180(2):289–296.</li>
+            <li>Wan MJ, Su XY, Zheng Y, et al. Seasonal variation in the biophysical properties of forehead skin in women in Guangzhou City, China. <em>Int J Dermatol.</em> 2019;58(12):1461–1468.</li>
+            <li>Lee SJ, Seok J, Jeong SY, Park KY, Li K, Seo SJ. Facial pores: definition, causes, and treatment options. <em>Dermatol Surg.</em> 2016;42(3):277–285.</li>
+            <li>Makrantonaki E, Ganceviciene R, Zouboulis CC. An update on the role of the sebaceous gland in the pathogenesis of acne. <em>Dermatoendocrinol.</em> 2011;3(1):41–49.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
