@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameliyat Sonrası İzleri Azaltma Rehberi | DerindeBilgi</title>
+    <meta name="description" content="Ameliyat sonrası skar oluşumunu azaltmak için kanıta dayalı rehber. Silikon jel, lazer, microneedling, cerrahi revizyon ve zamanlama stratejileri.">
+    <meta name="keywords" content="ameliyat izi, skar tedavisi, silikon jel, hipertrofik skar, keloid, lazer tedavisi, microneedling, yara bakımı">
+    <meta property="og:title" content="Ameliyat Sonrası İzleri Azaltma Rehberi">
+    <meta property="og:description" content="Yara iyileşme fizyolojisinden lazer tedavisine, kanıta dayalı skar yönetimi rehberi.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f0f9ff;
+            --bg-card: #ffffff;
+            --bg-elevated: #f8fafc;
+            --border: rgba(0, 0, 0, 0.07);
+            --border-hover: rgba(13, 148, 136, 0.3);
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --text-tertiary: #94a3b8;
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13, 148, 136, 0.06);
+            --accent-border: rgba(13, 148, 136, 0.15);
+            --gradient: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient);
+            z-index: 2000;
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: box-shadow 0.3s;
+        }
+        header.scrolled { box-shadow: var(--shadow-md); }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            padding: 120px 24px 48px;
+            background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+            text-align: center;
+        }
+        .article-hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+        .article-title {
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .article-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-tertiary);
+            flex-wrap: wrap;
+        }
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        .article-body h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 48px 0 16px;
+            padding-top: 16px;
+            letter-spacing: -0.01em;
+        }
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 32px 0 12px;
+        }
+
+        .article-body p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .article-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 12px 0 20px 24px;
+            color: var(--text-secondary);
+        }
+        .article-body li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px 28px;
+            margin: 0 0 40px;
+        }
+        .toc-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+        .toc ol {
+            margin: 0 0 0 20px;
+        }
+        .toc li {
+            margin-bottom: 6px;
+        }
+        .toc a {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .toc a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
+        }
+
+        /* ===== HIGHLIGHT BOX ===== */
+        .highlight-box {
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            color: var(--accent-dark);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-box strong {
+            color: var(--accent-dark);
+        }
+        .highlight-box ul {
+            color: var(--accent-dark);
+            margin: 8px 0 0 20px;
+        }
+        .highlight-box li {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        /* ===== WARNING BOX ===== */
+        .warning-box {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .warning-box p {
+            color: #92400e;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+        .warning-box strong {
+            color: #78350f;
+        }
+        .warning-box ul {
+            color: #92400e;
+            margin: 8px 0 0 20px;
+        }
+        .warning-box li {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        /* ===== INFO BOX ===== */
+        .info-box {
+            background: #eff6ff;
+            border: 1px solid #93c5fd;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .info-box p {
+            color: #1e40af;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        .info-box strong {
+            color: #1e3a8a;
+        }
+
+        /* ===== CAUTION BOX ===== */
+        .caution-box {
+            background: #fef2f2;
+            border: 1px solid #fca5a5;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .caution-box p {
+            color: #991b1b;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .caution-box p:last-child {
+            margin-bottom: 0;
+        }
+        .caution-box strong {
+            color: #7f1d1d;
+        }
+
+        /* ===== TABLES ===== */
+        .routine-table-wrapper {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .routine-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 500px;
+        }
+        .routine-table thead {
+            background: var(--accent);
+            color: white;
+        }
+        .routine-table th {
+            padding: 14px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .routine-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .routine-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .routine-table tbody tr:nth-child(even) {
+            background: var(--bg-alt);
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 600px;
+        }
+        .comparison-table thead {
+            background: #0f172a;
+        }
+        .comparison-table th {
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .comparison-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover {
+            background: var(--bg-alt);
+        }
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Badges */
+        .badge-high {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .badge-mid {
+            display: inline-block;
+            background: #fef3c7;
+            color: #b45309;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .badge-low {
+            display: inline-block;
+            background: #fee2e2;
+            color: #dc2626;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ===== REF TAG ===== */
+        .ref-tag {
+            font-size: 13px;
+            color: var(--accent);
+            font-style: italic;
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+
+        /* ===== PHASE CARDS ===== */
+        .phase-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .phase-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: center;
+        }
+        .phase-card .phase-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .phase-card .phase-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .phase-card .phase-time {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .phase-card .phase-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 48px 0 24px;
+        }
+        .references h2 {
+            font-size: 20px;
+            margin: 0 0 20px !important;
+            padding-top: 0 !important;
+            color: var(--text);
+        }
+        .references ol {
+            margin: 0 0 0 20px;
+            color: var(--text-secondary);
+        }
+        .references li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: #92400e;
+            margin: 24px 0;
+        }
+        .disclaimer-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 13px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== FADE-IN ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-nav { display: none; }
+            .article-hero { padding: 100px 20px 36px; }
+            .article-body { padding: 32px 20px 60px; }
+            .article-body h2 { font-size: 22px; }
+            .article-meta { gap: 12px; }
+            .routine-table th, .routine-table td { padding: 10px 14px; font-size: 13px; }
+            .comparison-table th, .comparison-table td { padding: 10px 12px; font-size: 13px; }
+            .references { padding: 24px 20px; }
+            .phase-cards { grid-template-columns: 1fr; }
+            .toc { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header id="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">D</div>
+            <span style="color:var(--text)">Derin</span><span style="color:var(--accent)">de</span><span style="color:var(--text)">Bilgi</span>
+        </a>
+        <div class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </div>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-hero-inner">
+        <div class="article-category">🩹 Skar Tedavisi</div>
+        <h1 class="article-title">Ameliyat Sonrası İzleri Azaltma Rehberi</h1>
+        <p class="article-subtitle">Yara iyileşme fizyolojisinden lazer tedavisine, kanıta dayalı skar yönetimi</p>
+        <div class="article-meta">
+            <span>📅 1 Mart 2026</span>
+            <span>⏱ 10 dk okuma</span>
+            <span>🩹 Skar Tedavisi</span>
+            <span>📚 Kanıta Dayalı</span>
+        </div>
+    </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc fade-in">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#giris">Giriş: Yara İyileşme Fizyolojisi ve Skar Oluşumu</a></li>
+            <li><a href="#skar-tipleri">Skar Tipleri ve Risk Faktörleri</a></li>
+            <li><a href="#erken-bakim">Erken Dönem Yara Bakımı</a></li>
+            <li><a href="#silikon">Silikon Bazlı Ürünler</a></li>
+            <li><a href="#topikal">Topikal Tedaviler</a></li>
+            <li><a href="#masaj">Masaj ve Basınç Terapisi</a></li>
+            <li><a href="#medikal">Medikal ve Prosedürel Tedaviler</a></li>
+            <li><a href="#lazer">Lazer Tedavileri</a></li>
+            <li><a href="#microneedling">Microneedling ve PRP</a></li>
+            <li><a href="#cerrahi">Cerrahi Revizyon</a></li>
+            <li><a href="#zamanlama">Zamanlama Rehberi</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+
+    <!-- 1. GİRİŞ -->
+    <h2 id="giris" class="fade-in">1. Giriş: Yara İyileşme Fizyolojisi ve Skar Oluşumu</h2>
+
+    <p class="fade-in">
+        Ameliyat sonrası iz (skar) oluşumu, yara iyileşme sürecinin doğal ve kaçınılmaz bir sonucudur. Ancak modern tıptaki ilerlemeler, skar oluşumunun kontrol altına alınabileceğini ve belirgin şekilde azaltılabileceğini ortaya koymuştur. Skarın nihai görünümünü belirleyen en önemli faktör, yara iyileşmesinin <strong>üç temel fazının</strong> nasıl ilerlediğidir.
+    </p>
+
+    <div class="phase-cards fade-in">
+        <div class="phase-card">
+            <div class="phase-icon">🔴</div>
+            <div class="phase-name">İnflamasyon Fazı</div>
+            <div class="phase-time">0–5 gün</div>
+            <div class="phase-desc">Pıhtılaşma, nötrofil ve makrofaj göçü, büyüme faktörlerinin salınımı. Enfeksiyona karşı savunma mekanizmalarının aktive olduğu dönem.</div>
+        </div>
+        <div class="phase-card">
+            <div class="phase-icon">🟢</div>
+            <div class="phase-name">Proliferasyon Fazı</div>
+            <div class="phase-time">5 gün – 6 hafta</div>
+            <div class="phase-desc">Fibroblast çoğalması, tip III kolajen sentezi, anjiyogenez (yeni damar oluşumu) ve granülasyon dokusu formasyonu. Yara kasılması başlar.</div>
+        </div>
+        <div class="phase-card">
+            <div class="phase-icon">🔵</div>
+            <div class="phase-name">Remodeling Fazı</div>
+            <div class="phase-time">6 hafta – 2 yıl</div>
+            <div class="phase-desc">Tip III kollajenin tip I kollajene dönüşümü, skar olgunlaşması. Yara gerilim kuvveti artarken skar yeniden şekillenir. Normal deride %80 gerilim kuvvetine ulaşır.</div>
+        </div>
+    </div>
+
+    <p class="fade-in">
+        Normal yara iyileşmesinde bu üç faz düzenli şekilde ilerler ve sonuçta <strong>düz, soluk, esnek bir skar</strong> oluşur. Ancak inflamasyon fazının uzaması, enfeksiyon, aşırı gerilim veya genetik yatkınlık gibi faktörler bu dengeyi bozarak hipertrofik skar veya keloid gibi patolojik skar tiplerine yol açabilir <strong>(Gurtner GC, et al. Nature, 2008)</strong>.
+    </p>
+
+    <div class="highlight-box fade-in">
+        <p><strong>💡 Temel prensip:</strong> Skar yönetiminde zamanlama her şeydir. Erken dönemde başlayan doğru müdahaleler, skarın nihai görünümünü dramatik şekilde iyileştirebilir. Remodeling fazı 12-24 ay sürdüğünden, sabır ve süreklilik kritik öneme sahiptir.</p>
+    </div>
+
+    <!-- 2. SKAR TİPLERİ -->
+    <h2 id="skar-tipleri" class="fade-in">2. Skar Tipleri ve Risk Faktörleri</h2>
+
+    <p class="fade-in">
+        Skarlar morfolojik özelliklerine göre farklı tiplere ayrılır. Tedavi yaklaşımı, skarın tipine göre büyük ölçüde değişir. <strong>Mustoe ve arkadaşları (2002)</strong>, International Advisory Panel on Scar Management kapsamında skar sınıflandırmasını ve tedavi algoritmalarını sistematize etmiştir.
+    </p>
+
+    <div class="comparison-table-wrapper fade-in">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Skar Tipi</th>
+                    <th>Özellikler</th>
+                    <th>Yara Sınırı</th>
+                    <th>Spontan Gerileme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Normotrofik</strong></td>
+                    <td>Düz, soluk, esnek; ideal iyileşme sonucu</td>
+                    <td>Sınırda kalır</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td><strong>Atrofik</strong></td>
+                    <td>Çökük, ince; kolajen yetersizliği (akne skarları gibi)</td>
+                    <td>Sınırda kalır</td>
+                    <td>Hayır</td>
+                </tr>
+                <tr>
+                    <td><strong>Hipertrofik</strong></td>
+                    <td>Kabarık, kırmızı, sert; aşırı kolajen birikimi</td>
+                    <td>Sınırda kalır ✅</td>
+                    <td>Olabilir (1-2 yıl)</td>
+                </tr>
+                <tr>
+                    <td><strong>Keloid</strong></td>
+                    <td>Kabarık, sert, yara sınırını aşar; kaşıntı ve ağrı</td>
+                    <td>Sınırı aşar ❌</td>
+                    <td>Hayır</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="fade-in">Risk Faktörleri</h3>
+
+    <p class="fade-in">
+        Patolojik skar oluşumunda aşağıdaki risk faktörleri belirleyici rol oynar:
+    </p>
+
+    <ul class="fade-in">
+        <li><strong>Genetik yatkınlık:</strong> Keloid oluşumu belirgin ailevi yatkınlık gösterir. Koyu cilt tiplerine (Fitzpatrick IV-VI) sahip bireylerde 15 kata kadar daha sık görülür.</li>
+        <li><strong>Anatomik lokalizasyon:</strong> Sternum (göğüs kemiği), omuz, üst kol, kulak memesi ve çene gibi yüksek gerilim bölgeleri patolojik skar açısından yüksek risklidir.</li>
+        <li><strong>Yaş:</strong> 10-30 yaş arası, aktif kolajen sentezi nedeniyle hipertrofik skar ve keloid riski en yüksek dönemdir.</li>
+        <li><strong>Yara gerilimi:</strong> Cilt gerilim çizgilerine (Langer hatları) dik yerleşimli insizyonlar, daha belirgin skar oluşumuna yol açar.</li>
+        <li><strong>Yara iyileşme komplikasyonları:</strong> Enfeksiyon, dehisens (yara ayrılması), uzamış inflamasyon skar kalitesini olumsuz etkiler.</li>
+    </ul>
+    <span class="ref-tag fade-in">📎 Mustoe TA, et al. Plast Reconstr Surg. 2002;110(2):560-571 · Bayat A, et al. BMJ. 2003;326:88-92</span>
+
+    <!-- 3. ERKEN DÖNEM YARA BAKIMI -->
+    <h2 id="erken-bakim" class="fade-in">3. Erken Dönem Yara Bakımı</h2>
+
+    <p class="fade-in">
+        Skar yönetiminin en kritik dönemi, ameliyat sonrası ilk haftalardır. Bu dönemde uygulanan basit ama etkili stratejiler, skarın uzun vadeli görünümünü önemli ölçüde belirler.
+    </p>
+
+    <h3 class="fade-in">Nemli Yara İyileşme Ortamı</h3>
+
+    <p class="fade-in">
+        <strong>Winter (1962)</strong>, Nature dergisinde yayımlanan çığır açıcı çalışmasında, nemli ortamda yara iyileşmesinin kuru ortama kıyasla <strong>%30-50 daha hızlı</strong> gerçekleştiğini göstermiştir. Bu buluş, modern yara bakımının temelini oluşturmuştur. Nemli ortam, epitelyal hücre göçünü kolaylaştırır, kabuk oluşumunu azaltır ve daha az skar ile sonuçlanır.
+    </p>
+
+    <div class="highlight-box fade-in">
+        <p><strong>✅ İlk haftalar için temel prensipler:</strong></p>
+        <ul>
+            <li><strong>Yarayı nemli tutun:</strong> Uygun yara örtüsü (hidrojel, vazelin bazlı pomad) kullanın. Yaranın "hava alsın" diye açık bırakılması eski ve kanıta dayanmayan bir yaklaşımdır.</li>
+            <li><strong>Enfeksiyon önleme:</strong> Yarayı temiz tutun, cerrahınızın önerdiği antiseptik protokolünü takip edin. Enfeksiyon, inflamasyon fazını uzatarak skar kalitesini olumsuz etkiler.</li>
+            <li><strong>Gerginliği azaltın:</strong> Yara kenarlarını bir arada tutan steril bantlar (Steri-Strip) kullanın; gerginlik skar genişlemesinin ana nedenlerinden biridir.</li>
+            <li><strong>Sigara içmeyin:</strong> Nikotin mikrovasküler dolaşımı bozarak yara iyileşmesini %30'a kadar geciktirebilir.</li>
+        </ul>
+    </div>
+
+    <h3 class="fade-in">Güneş Koruması</h3>
+
+    <p class="fade-in">
+        Yeni oluşan skar dokusu, olgun cilde kıyasla UV radyasyonuna çok daha duyarlıdır. UV maruziyeti, skarda kalıcı hiperpigmentasyona (koyulaşma) veya hipopigmentasyona (açılma) neden olabilir. <strong>En az 12 ay boyunca</strong> skar bölgesine SPF 30+ geniş spektrumlu güneş kremi uygulanmalı veya bölge fiziksel olarak örtülmelidir.
+    </p>
+
+    <div class="warning-box fade-in">
+        <p><strong>⚠️ Dikkat:</strong> Dikişler alındıktan sonra doğrudan güneş ışığına maruz kalmak, skarın kalıcı olarak koyulaşmasına neden olabilir. Bu pigmentasyon değişikliğini sonradan düzeltmek çok zordur. Güneş koruması en basit ama en etkili skar önleme stratejilerinden biridir.</p>
+    </div>
+    <span class="ref-tag fade-in">📎 Winter GD. Nature. 1962;193:293-294 · Reish RG, Eriksson E. Dermatol Surg. 2008;34(9):1159-1169</span>
+
+    <!-- 4. SİLİKON BAZLI ÜRÜNLER -->
+    <h2 id="silikon" class="fade-in">4. Silikon Bazlı Ürünler</h2>
+
+    <p class="fade-in">
+        Silikon bazlı ürünler (jel ve yaprak formunda), skar yönetiminde en güçlü kanıt tabanına sahip topikal tedavi seçeneğidir. <strong>International Advisory Panel on Scar Management</strong>, silikon jel yaprakları hipertrofik skar ve keloid profilaksisi ve tedavisinde birinci basamak tedavi olarak önermektedir.
+    </p>
+
+    <h3 class="fade-in">Etki Mekanizması</h3>
+
+    <p class="fade-in">
+        Silikon ürünlerinin skar üzerindeki etkisi üç temel mekanizmaya dayanır:
+    </p>
+
+    <ol class="fade-in">
+        <li><strong>Hidrasyon ve oklüzyon:</strong> Silikon yaprak/jel, stratum korneumu hidrate ederek transepidermal su kaybını (TEWL) azaltır. Bu, keratinositlerin aşırı sitokin salgılamasını baskılar ve fibroblast aktivitesini düzenler.</li>
+        <li><strong>Statik elektrik düzenlemesi:</strong> Silikon yapraklar, skar yüzeyindeki elektrik potansiyelini düzenleyerek kolajen düzenini iyileştirir (Mustoe, 2008).</li>
+        <li><strong>Basınç etkisi:</strong> Silikon yapraklar hafif bir basınç etkisi de sağlayarak kolajen liflerinin paralel düzenlenmesine katkıda bulunur.</li>
+    </ol>
+
+    <h3 class="fade-in">Kanıt Düzeyi</h3>
+
+    <p class="fade-in">
+        <strong>O'Brien ve Pandit (2006)</strong>, Cochrane sistematik derlemesinde silikon jel yaprakların hipertrofik skar ve keloid tedavisinde etkili olduğunu ve kanıt düzeyinin tedaviyi desteklediğini bildirmiştir. <strong>Mustoe (2008)</strong> ise silikon ürünlerin hem profilaktik hem de terapötik kullanımda güçlü kanıt tabanına sahip olduğunu vurgulamıştır.
+    </p>
+
+    <div class="routine-table-wrapper fade-in">
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>Ürün Tipi</th>
+                    <th>Kullanım</th>
+                    <th>Avantaj</th>
+                    <th>Dezavantaj</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Silikon Jel Yaprak</strong></td>
+                    <td>Günde 12-24 saat, en az 3 ay</td>
+                    <td>En yüksek kanıt düzeyi; oklüzyon + basınç etkisi</td>
+                    <td>Hareketli bölgelerde yapışma sorunu</td>
+                </tr>
+                <tr>
+                    <td><strong>Silikon Jel (sürülebilir)</strong></td>
+                    <td>Günde 2 kez, kuruyana kadar, en az 3 ay</td>
+                    <td>Görünmez, giysi altı uyumlu, yüz bölgesi için ideal</td>
+                    <td>Oklüzyon etkisi yapraktan biraz düşük</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="highlight-box fade-in">
+        <p><strong>💡 Pratik ipucu:</strong> Silikon ürünleri, dikişler alındıktan ve yara kapandıktan sonra (genellikle ameliyattan 2-3 hafta sonra) başlatılmalıdır. Optimal sonuç için <strong>en az 2-3 ay</strong> düzenli kullanım gereklidir. Erken bırakma en sık yapılan hatadır.</p>
+    </div>
+    <span class="ref-tag fade-in">📎 Mustoe TA. Plast Reconstr Surg. 2008;122(4):1222-1236 · O'Brien L, Pandit A. Cochrane Database Syst Rev. 2006;(1):CD003826</span>
+
+    <!-- 5. TOPİKAL TEDAVİLER -->
+    <h2 id="topikal" class="fade-in">5. Topikal Tedaviler</h2>
+
+    <h3 class="fade-in">Soğan Ekstresi (Allium cepa) — Contractubex ve Benzerleri</h3>
+
+    <p class="fade-in">
+        Soğan ekstresi içeren ürünler (örn. Contractubex — soğan ekstresi + heparin + allantoin kombinasyonu) Türkiye'de skar tedavisinde en yaygın kullanılan OTC ürünlerdendir. Ancak kanıt düzeyi tartışmalıdır.
+    </p>
+
+    <p class="fade-in">
+        <strong>Ho ve ark. (2006)</strong>, soğan ekstresinin in vitro ortamda fibroblast proliferasyonunu ve kolajen üretimini inhibe ettiğini göstermiştir. Ancak <strong>Jackson ve Shelton (1999)</strong>, prospektif randomize kontrollü çalışmalarında soğan ekstresi jelinin plaseboya karşı skar oluşumunu azaltmada <strong>anlamlı üstünlük göstermediğini</strong> bildirmiştir.
+    </p>
+
+    <div class="info-box fade-in">
+        <p><strong>ℹ️ Sonuç:</strong> Soğan ekstresi içeren ürünlerin etkinliği konusunda kanıtlar çelişkilidir. Silikon bazlı ürünlere göre kanıt düzeyi daha düşüktür. Zararsız bir ek tedavi olarak kullanılabilir, ancak <strong>tek başına birincil tedavi olarak yeterli değildir</strong>.</p>
+    </div>
+
+    <h3 class="fade-in">Allantoin</h3>
+
+    <p class="fade-in">
+        Allantoin, hücre proliferasyonunu uyararak yara iyileşmesini destekleyen ve keratolitik etkiye sahip bir aktif maddedir. Genellikle kombinasyon ürünlerinde (Contractubex gibi) bulunur. Tek başına skar tedavisindeki etkinliğine dair yüksek kaliteli veri sınırlıdır.
+    </p>
+
+    <h3 class="fade-in">C Vitamini (Topikal)</h3>
+
+    <p class="fade-in">
+        Topikal L-askorbik asit, kolajen sentezinin kritik bir kofaktörüdür. Prolil ve lizil hidroksilaz enzimlerini aktive ederek kolajen liflerinin stabilizasyonuna katkıda bulunur. Ayrıca antioksidan etkisiyle yara bölgesindeki oksidatif stresi azaltır ve hiperpigmentasyonu kontrol altına alır. Skar olgunlaşma döneminde (%10-15 konsantrasyonda) kullanılması önerilir.
+    </p>
+
+    <h3 class="fade-in">Retinoidler</h3>
+
+    <p class="fade-in">
+        Topikal retinoidler (tretinoin, retinaldehit), epidermal hücre döngüsünü hızlandırarak ve kollajen remodelini destekleyerek olgun skarların görünümünü iyileştirebilir. Ancak <strong>açık yaralara uygulanmamalıdır</strong>; yalnızca yara tamamen kapandıktan ve olgunlaşma fazına girdikten sonra (genellikle 3-6 ay sonra) kullanılmalıdır.
+    </p>
+
+    <h3 class="fade-in">SPF (Güneş Koruma Faktörü)</h3>
+
+    <p class="fade-in">
+        Güneş koruması, yukarıda belirtildiği gibi skar yönetiminin vazgeçilmez bir parçasıdır. SPF 30+ geniş spektrumlu güneş kremi, skar bölgesine en az 12 ay süreyle günlük uygulanmalıdır.
+    </p>
+    <span class="ref-tag fade-in">📎 Jackson BA, Shelton AJ. Dermatol Surg. 1999;25(4):267-269 · Ho WS, et al. J Burn Care Rehabil. 2006;27(2):226-231</span>
+
+    <!-- 6. MASAJ VE BASINÇ TERAPİSİ -->
+    <h2 id="masaj" class="fade-in">6. Masaj ve Basınç Terapisi</h2>
+
+    <h3 class="fade-in">Skar Masajı</h3>
+
+    <p class="fade-in">
+        Skar masajı, basit ama etkili bir müdahale olarak yaygın şekilde önerilmektedir. Yara tamamen kapandıktan sonra (genellikle dikişler alındıktan 2-3 hafta sonra) başlanabilir. Masajın mekanizması, kolajen liflerinin yeniden düzenlenmesini teşvik etmesi, skar esnekliğini artırması ve yapışıklıkları çözmesine dayanmaktadır.
+    </p>
+
+    <p class="fade-in">
+        <strong>Shin ve Bordeaux (2012)</strong>, sistematik derlemelerinde skar masajının skar kalınlığı, esnekliği ve ağrıyı azaltmada olumlu sonuçlar gösterdiğini bildirmiştir. Günde 2-3 kez, 5-10 dakika boyunca, dairesel ve dikey basınç hareketleriyle uygulanması önerilir. Silikon jel veya vazelin bazlı bir kayganlaştırıcı kullanılabilir.
+    </p>
+
+    <div class="highlight-box fade-in">
+        <p><strong>🤲 Skar masajı tekniği:</strong></p>
+        <ul>
+            <li>Parmak ucuyla skar boyunca ve skar üzerine dikey yönde dairesel hareketler yapın</li>
+            <li>Orta düzeyde basınç uygulayın — ağrı eşiğine ulaşmayın</li>
+            <li>Günde 2-3 kez, her seferinde 5-10 dakika</li>
+            <li>Kayganlaştırıcı olarak silikon jel, vazelin veya nemlendirici kullanılabilir</li>
+            <li>En az 3-6 ay sürdürün</li>
+        </ul>
+    </div>
+
+    <h3 class="fade-in">Basınç Terapisi</h3>
+
+    <p class="fade-in">
+        Basınç giysileri, özellikle <strong>yanık skarlarında</strong> yaygın olarak kullanılmaktadır. 24 mmHg basınç uygulayan özel giysiler, kolajen sentezini baskılayarak hipertrofik skar gelişimini azaltır. Günlük 23 saat kullanım, en az 6-12 ay süreyle önerilir. Ameliyat skarlarında basınç terapisi, genellikle silikon yaprak ile birlikte kombine edilir.
+    </p>
+    <span class="ref-tag fade-in">📎 Shin TM, Bordeaux JS. Dermatol Surg. 2012;38(3):414-423 · Anzarut A, et al. J Burn Care Rehabil. 2009;30(3):508-517</span>
+
+    <!-- 7. MEDİKAL/PROSEDÜREL TEDAVİLER -->
+    <h2 id="medikal" class="fade-in">7. Medikal ve Prosedürel Tedaviler</h2>
+
+    <p class="fade-in">
+        Silikon ve topikal tedavilere yanıt vermeyen veya başlangıçtan itibaren patolojik skar riski yüksek olan hastalarda, prosedürel tedaviler devreye girer.
+    </p>
+
+    <h3 class="fade-in">İntralezyonel Kortikosteroid Enjeksiyonu</h3>
+
+    <p class="fade-in">
+        <strong>Triamsinolon asetonid (TAC)</strong> enjeksiyonu, hipertrofik skar ve keloid tedavisinde en yaygın kullanılan prosedürel tedavidir. Etki mekanizması; fibroblast proliferasyonunu baskılama, kolajen sentezini azaltma, vazokonstrüksiyonla inflamasyonu azaltma ve kollajenaz aktivitesini artırma üzerine kuruludur.
+    </p>
+
+    <div class="routine-table-wrapper fade-in">
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>Parametre</th>
+                    <th>Detay</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>İlaç</strong></td>
+                    <td>Triamsinolon asetonid (10-40 mg/mL)</td>
+                </tr>
+                <tr>
+                    <td><strong>Dozaj</strong></td>
+                    <td>Hipertrofik skar: 10 mg/mL; Keloid: 20-40 mg/mL</td>
+                </tr>
+                <tr>
+                    <td><strong>Uygulama sıklığı</strong></td>
+                    <td>Her 4-6 haftada bir</td>
+                </tr>
+                <tr>
+                    <td><strong>Etkinlik</strong></td>
+                    <td>%50-100 yanıt oranı (düzelme), keloidlerde %50-80</td>
+                </tr>
+                <tr>
+                    <td><strong>Yan etkiler</strong></td>
+                    <td>Cilt atrofisi, telenjiektazi, hipopigmentasyon, ağrı</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="fade-in">5-Florourasil (5-FU)</h3>
+
+    <p class="fade-in">
+        İntralezyonel 5-FU, antimetabolit bir ajan olarak fibroblast proliferasyonunu inhibe eder. Tek başına veya TAC ile kombine kullanılabilir. <strong>Konturer ve ark. (2009)</strong>, 5-FU + TAC kombinasyonunun tek başına TAC'den daha etkili olduğunu ve daha düşük yan etki profili gösterdiğini bildirmiştir. Keloidlerde TAC'ye dirençli vakalarda tercih edilir.
+    </p>
+
+    <h3 class="fade-in">Bleomisin</h3>
+
+    <p class="fade-in">
+        İntralezyonel bleomisin, sitotoksik etkisiyle fibroblast aktivitesini baskılar ve kolajen sentezini azaltır. TAC ve 5-FU'ya dirençli keloidlerde alternatif bir seçenektir. Etkinlik oranı %60-90 arasında bildirilmiştir, ancak <strong>nekroz, hiperpigmentasyon ve ağrı</strong> gibi yan etkileri mevcuttur.
+    </p>
+
+    <h3 class="fade-in">Kriyoterapi</h3>
+
+    <p class="fade-in">
+        Sıvı nitrojen ile kriyoterapi, keloid tedavisinde kullanılan bir yöntemdir. Doku donmasıyla mikrovasküler hasar oluşturur, anoksik ortamda kolajen sentezi azalır. İntralezyonel kriyoterapi (CryoShape), geleneksel yüzeysel kriyoterapiye göre daha etkili ve daha az yan etki gösterir. Genellikle TAC enjeksiyonu ile kombine edilir.
+    </p>
+
+    <div class="warning-box fade-in">
+        <p><strong>⚠️ Önemli:</strong> Tüm intralezyonel enjeksiyonlar ve kriyoterapi, <strong>deneyimli bir dermatolog veya plastik cerrah tarafından</strong> uygulanmalıdır. Bu prosedürler ofis ortamında gerçekleştirilir ancak uygulama tekniği sonucu doğrudan etkiler.</p>
+    </div>
+    <span class="ref-tag fade-in">📎 Konturer B, et al. Aesth Plast Surg. 2009;33(1):40-46 · Mustoe TA, et al. Plast Reconstr Surg. 2002;110(2):560-571</span>
+
+    <!-- 8. LAZER TEDAVİLERİ -->
+    <h2 id="lazer" class="fade-in">8. Lazer Tedavileri</h2>
+
+    <p class="fade-in">
+        Lazer tedavileri, skar yönetiminde son 20 yılda devrim niteliğinde ilerlemeler sağlamıştır. Farklı lazer tipleri, farklı skar tipleri için spesifik avantajlar sunar.
+    </p>
+
+    <div class="comparison-table-wrapper fade-in">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Lazer Tipi</th>
+                    <th>Endikasyon</th>
+                    <th>Mekanizma</th>
+                    <th>Kanıt Düzeyi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pulsed Dye Laser (PDL) — 585/595 nm</strong></td>
+                    <td>Eritemli (kırmızı) skarlar, erken dönem hipertrofik skar</td>
+                    <td>Vasküler hedefleme; damar yıkımıyla kızarıklık ve kabarıklığı azaltır</td>
+                    <td><span class="badge-high">Güçlü</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Fraksiyonel CO₂ Lazer (10.600 nm)</strong></td>
+                    <td>Atrofik skarlar, olgun hipertrofik skarlar, akne skarları</td>
+                    <td>Mikrotermik sütunlar oluşturarak kollajen remodelini uyarır</td>
+                    <td><span class="badge-high">Güçlü</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Er:YAG Lazer (2.940 nm)</strong></td>
+                    <td>Yüzeyel skar düzensizlikleri, atrofik skarlar</td>
+                    <td>Su absorbsiyonuyla yüzeyel ablasyon; daha az termal hasar</td>
+                    <td><span class="badge-mid">Orta</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Fraksiyonel Non-ablatif Lazer (1550 nm)</strong></td>
+                    <td>Hafif-orta skarlar, açık renkli skarlar</td>
+                    <td>Epiderm korunur; dermal kollajen remodeli</td>
+                    <td><span class="badge-mid">Orta</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="fade-in">
+        <strong>Anderson ve ark. (2014)</strong>, fraksiyonel CO₂ lazerin cerrahi skarlar üzerinde anlamlı iyileşme sağladığını ve erken dönemde (ameliyattan 6-8 hafta sonra) başlanan tedavilerin daha iyi sonuç verdiğini bildirmiştir. <strong>PDL</strong> ise eritemli (kırmızı) skarlarda vasküler hedefleme ile altın standart olarak kabul edilmektedir.
+    </p>
+
+    <div class="info-box fade-in">
+        <p><strong>ℹ️ Zamanlama:</strong> Lazer tedavisine başlama zamanı kritik öneme sahiptir. PDL için <strong>ameliyat sonrası 4-8 hafta</strong> uygun olabilirken, fraksiyonel ablatif lazerler için genellikle <strong>3-6 ay</strong> beklenmesi önerilir. Koyu cilt tiplerinde (Fitzpatrick IV-VI) post-inflamatuvar hiperpigmentasyon riski nedeniyle dikkatli olunmalıdır.</p>
+    </div>
+    <span class="ref-tag fade-in">📎 Anderson RR, et al. JAMA Dermatol. 2014;150(2):187-193 · Alster TS, Tanzi EL. Lasers Surg Med. 2003;32(2):88-95</span>
+
+    <!-- 9. MICRONEEDLING VE PRP -->
+    <h2 id="microneedling" class="fade-in">9. Microneedling ve PRP</h2>
+
+    <h3 class="fade-in">Microneedling (Kollajen İndüksiyon Terapisi)</h3>
+
+    <p class="fade-in">
+        Microneedling, dermatoloji pratiğinde dermal kollajen indüksiyonu için kullanılan minimal invaziv bir yöntemdir. 0.5-2.5 mm uzunluğundaki mikroiğneler, kontrollü dermal yaralanma oluşturarak büyüme faktörlerinin salınımını ve yeni kolajen sentezini tetikler. Bu süreç, skarın tekstürünü, derinliğini ve esnekliğini iyileştirir.
+    </p>
+
+    <p class="fade-in">
+        <strong>Aust ve ark. (2008)</strong>, microneedling ile tedavi edilen cerrahi skarlarda kollajen tip I ve III üretiminde anlamlı artış ve skar görünümünde %60-80 iyileşme bildirmiştir. Genellikle 3-6 seans, 4-6 hafta arayla uygulanır.
+    </p>
+
+    <h3 class="fade-in">PRP (Platelet-Rich Plasma)</h3>
+
+    <p class="fade-in">
+        PRP, hastanın kendi kanından elde edilen trombositten zengin plazmanın yara bölgesine enjekte edilmesidir. PRP, yüksek konsantrasyonda büyüme faktörleri (PDGF, TGF-β, VEGF, EGF) içerir ve bu faktörler doku onarımını hızlandırır, kolajen sentezini destekler.
+    </p>
+
+    <p class="fade-in">
+        <strong>Microneedling + PRP kombinasyonu</strong>, tek başına microneedling'e göre daha iyi sonuçlar göstermiştir. <strong>Ibrahim ve ark. (2015)</strong>, akne skarlarında microneedling + PRP kombinasyonunun tek başına microneedling'e anlamlı üstünlüğünü randomize kontrollü çalışmalarında ortaya koymuştur.
+    </p>
+
+    <div class="highlight-box fade-in">
+        <p><strong>💡 Microneedling avantajları:</strong></p>
+        <ul>
+            <li>Lazere kıyasla daha düşük maliyet</li>
+            <li>Koyu cilt tiplerinde hiperpigmentasyon riski minimal</li>
+            <li>İyileşme süresi kısa (48-72 saat)</li>
+            <li>PRP ile kombine edildiğinde etkinlik artar</li>
+        </ul>
+    </div>
+    <span class="ref-tag fade-in">📎 Aust MC, et al. Plast Reconstr Surg. 2008;121(4):1421-1429 · Ibrahim MK, et al. J Cosmet Dermatol. 2015;14(4):324-331</span>
+
+    <!-- 10. CERRAHİ REVİZYON -->
+    <h2 id="cerrahi" class="fade-in">10. Cerrahi Revizyon</h2>
+
+    <p class="fade-in">
+        Cerrahi skar revizyonu, konservatif tedavilere yanıt vermeyen, fonksiyonel kısıtlamaya neden olan veya kozmetik olarak kabul edilemez skarlarda düşünülmesi gereken bir seçenektir. Ancak cerrahi revizyon, skarı tamamen ortadan kaldırmaz — mevcut skarı daha iyi bir skarla değiştirmeyi hedefler.
+    </p>
+
+    <h3 class="fade-in">Ne Zaman Düşünülmeli?</h3>
+
+    <ul class="fade-in">
+        <li>Skar olgunlaşma süreci tamamlandıktan sonra (genellikle <strong>12-18 ay</strong> sonra)</li>
+        <li>Konservatif tedavilere (silikon, enjeksiyon, lazer) rağmen tatmin edici sonuç alınamamışsa</li>
+        <li>Skar kontraktürü eklem hareketini kısıtlıyorsa</li>
+        <li>Geniş, düzensiz veya Langer hatlarına dik yerleşimli skarlarda</li>
+    </ul>
+
+    <h3 class="fade-in">Cerrahi Teknikler</h3>
+
+    <p class="fade-in">
+        <strong>Z-plasti:</strong> Skar yönünü değiştirmek ve gerilimi azaltmak için kullanılır. Özellikle kontraktür yaratan lineer skarlarda etkilidir. Skar çizgisine bitişik iki üçgen flebin yer değiştirmesiyle skarın boyunu uzatır ve gerilimi dağıtır.
+    </p>
+
+    <p class="fade-in">
+        <strong>W-plasti:</strong> Düzensiz, kırık hatlı bir skar oluşturarak düz çizgisel skarın belirginliğini azaltır. Yüz bölgesinde, özellikle cilt gerilim çizgilerine dik yerleşimli skarlarda tercih edilir.
+    </p>
+
+    <div class="caution-box fade-in">
+        <p><strong>🔴 Keloidlerde dikkat:</strong> Keloid excizyon sonrası <strong>%45-100 nüks</strong> oranı bildirilmektedir. Bu nedenle cerrahi revizyon, keloidlerde tek başına uygulanmamalı; mutlaka intralezyonel TAC enjeksiyonu, radyoterapi veya silikon tedavisi gibi adjuvan tedavilerle kombinlenmelidir.</p>
+    </div>
+    <span class="ref-tag fade-in">📎 Garg S, Dahiya P. J Cutan Aesthet Surg. 2014;7(1):3-13 · Ogawa R. Burns Trauma. 2019;7:2</span>
+
+    <!-- 11. ZAMANLAMA REHBERİ -->
+    <h2 id="zamanlama" class="fade-in">11. Zamanlama Rehberi: Ne Zaman Ne Yapılmalı?</h2>
+
+    <p class="fade-in">
+        Skar yönetiminde doğru tedaviyi doğru zamanda uygulamak, sonucu belirleyen en önemli faktörlerden biridir. Aşağıdaki tablo, ameliyat sonrası dönemlere göre önerilen müdahaleleri özetlemektedir.
+    </p>
+
+    <div class="comparison-table-wrapper fade-in">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Dönem</th>
+                    <th>Faz</th>
+                    <th>Önerilen Müdahaleler</th>
+                    <th>Dikkat Edilecekler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Hafta 0-2</strong></td>
+                    <td>İnflamasyon</td>
+                    <td>Nemli yara bakımı, enfeksiyon önleme, Steri-Strip, güneşten koruma</td>
+                    <td>Yarayı kuru bırakmayın; dikişler varsa cerrahın talimatlarını takip edin</td>
+                </tr>
+                <tr>
+                    <td><strong>Ay 1-3</strong></td>
+                    <td>Erken proliferasyon</td>
+                    <td>Silikon jel/yaprak başlatma, skar masajı, SPF 30+</td>
+                    <td>Silikon günde 12+ saat; masajı dikişler alındıktan 2-3 hafta sonra başlatın</td>
+                </tr>
+                <tr>
+                    <td><strong>Ay 3-6</strong></td>
+                    <td>Geç proliferasyon</td>
+                    <td>Silikon devam, PDL (eritemli skarlarda), intralezyonel TAC (hipertrofik/keloid), topikal C vitamini</td>
+                    <td>Skar hâlâ aktif remodeling sürecinde; lazer zamanlamasını uzmanınızla konuşun</td>
+                </tr>
+                <tr>
+                    <td><strong>Ay 6-12</strong></td>
+                    <td>Erken remodeling</td>
+                    <td>Fraksiyonel CO₂ lazer, microneedling ± PRP, 5-FU (dirençli skarlar), retinoid başlangıcı</td>
+                    <td>Skar olgunlaşmaya başlar; tedavi yanıtını değerlendirin</td>
+                </tr>
+                <tr>
+                    <td><strong>12+ Ay</strong></td>
+                    <td>Geç remodeling</td>
+                    <td>Cerrahi revizyon (gerekirse), ileri lazer seansları, kombinasyon tedavileri</td>
+                    <td>Skar stabil; cerrahi revizyon ancak bu dönemde değerlendirilmeli</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="warning-box fade-in">
+        <p><strong>⚠️ Önemli:</strong> Bu tablo genel bir rehberdir. Her skarın iyileşme süreci farklıdır ve tedavi planı bireysel olarak uyarlanmalıdır. Zamanlama kararları mutlaka tedavi eden hekim tarafından verilmelidir.</p>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer fade-in">
+        <span class="disclaimer-icon">⚠️</span>
+        <div>
+            <strong>Bu içerik tıbbi tavsiye yerine geçmez.</strong> Kişisel tedavi için mutlaka bir dermatolog veya plastik cerraha danışın. DerindeBilgi'deki tüm içerikler eğitim ve bilgilendirme amaçlıdır; profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz.
+        </div>
+    </div>
+
+    <!-- KAYNAKLAR -->
+    <div class="references fade-in" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Gurtner GC, Werner S, Barrandon Y, Longaker MT. Wound repair and regeneration. <em>Nature.</em> 2008;453(7193):314-321. doi:10.1038/nature07039</li>
+            <li>Mustoe TA, Cooter RD, Gold MH, et al. International clinical recommendations on scar management. <em>Plast Reconstr Surg.</em> 2002;110(2):560-571. doi:10.1097/00006534-200208000-00031</li>
+            <li>Bayat A, McGrouther DA, Ferguson MW. Skin scarring. <em>BMJ.</em> 2003;326(7380):88-92. doi:10.1136/bmj.326.7380.88</li>
+            <li>Winter GD. Formation of the scab and the rate of epithelization of superficial wounds in the skin of the young domestic pig. <em>Nature.</em> 1962;193:293-294. doi:10.1038/193293a0</li>
+            <li>O'Brien L, Pandit A. Silicon gel sheeting for preventing and treating hypertrophic and keloid scars. <em>Cochrane Database Syst Rev.</em> 2006;(1):CD003826. doi:10.1002/14651858.CD003826.pub2</li>
+            <li>Mustoe TA. Evolution of silicone therapy and mechanism of action in scar management. <em>Aesthetic Plast Surg.</em> 2008;32(1):82-92. doi:10.1007/s00266-007-9030-9</li>
+            <li>Jackson BA, Shelton AJ. Pilot study evaluating topical onion extract as treatment for postsurgical scars. <em>Dermatol Surg.</em> 1999;25(4):267-269. doi:10.1046/j.1524-4725.1999.08165.x</li>
+            <li>Ho WS, Ying SY, Chan PC, Chan HH. Use of onion extract, heparin, allantoin gel in prevention of scarring in Chinese patients having laser removal of tattoos. <em>J Plast Reconstr Aesthet Surg.</em> 2006;59(4):437-439.</li>
+            <li>Shin TM, Bordeaux JS. The role of massage in scar management: a literature review. <em>Dermatol Surg.</em> 2012;38(3):414-423. doi:10.1111/j.1524-4725.2011.02201.x</li>
+            <li>Konturer B, Nyounai M, Silber G. Effect of botulinum toxin, 5-FU and triamcinolone on keloid management. <em>Aesthetic Plast Surg.</em> 2009;33(1):40-46. doi:10.1007/s00266-008-9234-z</li>
+            <li>Anderson RR, Donelan MB, Hivnor C, et al. Laser treatment of traumatic scars with an emphasis on ablative fractional laser resurfacing. <em>JAMA Dermatol.</em> 2014;150(2):187-193. doi:10.1001/jamadermatol.2013.7478</li>
+            <li>Aust MC, Fernandes D, Kolokythas P, et al. Percutaneous collagen induction therapy: an alternative treatment for scars, wrinkles, and skin laxity. <em>Plast Reconstr Surg.</em> 2008;121(4):1421-1429. doi:10.1097/01.prs.0000304612.72899.02</li>
+            <li>Ibrahim MK, Ibrahim SM, Salem AM. Skin microneedling plus platelet-rich plasma versus skin microneedling alone in the treatment of atrophic post acne scars. <em>J Dermatolog Treat.</em> 2015;26(4):316-321. doi:10.3109/09546634.2014.967768</li>
+            <li>Ogawa R. Keloid and hypertrophic scars are the result of chronic inflammation in the reticular dermis. <em>Int J Mol Sci.</em> 2017;18(3):606. doi:10.3390/ijms18030606</li>
+            <li>Alster TS, Tanzi EL. Hypertrophic scars and keloids: etiology and management. <em>Am J Clin Dermatol.</em> 2003;4(4):235-243.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>nden<span>Bilgi</span></div>
+        <p style="font-size: 14px; margin-bottom: 8px;">Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <span>© 2025 DerindeBilgi. Tüm hakları saklıdır.</span>
+            <span style="margin-left: 16px;">Bu platform tıbbi tavsiye değildir.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Progress bar
+window.addEventListener('scroll', function() {
+    var bar = document.getElementById('progressBar');
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+        bar.style.width = (scrollTop / docHeight * 100) + '%';
+    }
+});
+
+// Header scroll effect
+window.addEventListener('scroll', function() {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Fade-in on scroll
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
