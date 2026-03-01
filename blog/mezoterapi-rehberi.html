@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezoterapi Rehberi: Endikasyonlara Göre Kanıt Değerlendirmesi | Derindenbilgi</title>
+    <meta name="description" content="Mezoterapi gerçekten işe yarıyor mu? Cilt parlaklığı, saç dökülmesi, selülit, bölgesel zayıflama, leke ve göz altı — her endikasyon için ayrı kanıt değerlendirmesi. Hap bilgi formatında.">
+    <meta name="keywords" content="mezoterapi, mezoterapi nedir, saç mezoterapisi, cilt mezoterapisi, mezo glow, mezoterapi riskleri, mezoterapi kanıt, PRP mezoterapi farkı">
+    <meta property="og:title" content="Mezoterapi Rehberi: Endikasyonlara Göre Kanıt Değerlendirmesi">
+    <meta property="og:description" content="Türkiye'de çok popüler ama bilimsel kanıt düzeyi genel olarak düşük. Her endikasyon için ayrı kanıt değerlendirmesi — hap bilgi formatında.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-l: #14b8a6;
+            --accent-d: #0f766e;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #1e293b;
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .site-header {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1e293b;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 200;
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+
+        /* Article Hero */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: #f0fdfa;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: #64748b;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* TOC */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* Article Body */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* Highlight Box (teal) */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            color: #134e4a;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        /* Warning Box (amber) */
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        /* Red flag box */
+        .redflag-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .redflag-box p, .redflag-box li { color: #7f1d1d; }
+        .redflag-box p { margin-bottom: 0.5rem; }
+        .redflag-box p:last-child { margin-bottom: 0; }
+        .redflag-box ul { padding-left: 1.25rem; }
+
+        /* Hap Bilgi */
+        .hap-bilgi {
+            background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(13,148,136,0.12));
+            border: 1px solid rgba(13,148,136,0.2);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #134e4a;
+        }
+        .hap-bilgi::before {
+            content: "💊 Tek Cümleyle: ";
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* Hızlı Özet */
+        .hizli-ozet {
+            background: linear-gradient(135deg, #0d9488, #0891b2);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin: 1.5rem 0 2rem;
+            color: #ffffff;
+        }
+        .hizli-ozet h3 {
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            border: none !important;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.95);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .hizli-ozet li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Verdict Cards */
+        .verdict-card {
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border: 2px solid;
+        }
+        .verdict-al {
+            background: #f0fdfa;
+            border-color: var(--accent);
+        }
+        .verdict-dusun {
+            background: #fffbeb;
+            border-color: #f59e0b;
+        }
+        .verdict-gec {
+            background: #fef2f2;
+            border-color: #ef4444;
+        }
+        .verdict-card .verdict-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .verdict-card .verdict-label {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .verdict-card .verdict-text {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        /* Myth Box */
+        .myth-box {
+            background: #fef3c7;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.93rem;
+        }
+        .myth-box .myth-q {
+            font-weight: 700;
+            color: #92400e;
+        }
+        .myth-box .myth-a {
+            color: #78350f;
+            margin-top: 0.35rem;
+        }
+
+        /* Endikasyon Section Card */
+        .endikasyon-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .endikasyon-section h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .endikasyon-header h2 {
+            margin-bottom: 0 !important;
+            flex: 1;
+        }
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            white-space: nowrap;
+        }
+        .kanit-sinirli {
+            background: #fef3c7;
+            color: #b45309;
+        }
+        .kanit-yetersiz {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        .kanit-iyi {
+            background: #f0fdfa;
+            color: #0d9488;
+        }
+
+        /* Tables */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            min-width: 500px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.85rem 0.75rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.7rem 0.75rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: #f8fafc; }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* References */
+        .references {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.88rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+        .references li {
+            margin-bottom: 0.5rem;
+            color: #64748b;
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner { max-width: 800px; margin: 0 auto; }
+        .footer-disclaimer {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        .footer-copy { font-size: 0.8rem; color: #cbd5e1; }
+        .footer-copy a { color: var(--accent); text-decoration: none; }
+
+        /* Fade in */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            body { font-size: 16px; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-subtitle { font-size: 1.05rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .article-body h2 { font-size: 1.35rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem; }
+            .comparison-table { font-size: 0.85rem; }
+            .references { padding: 1.25rem; }
+            .hizli-ozet { padding: 1.25rem; }
+            .verdict-card { padding: 1.25rem; }
+            .endikasyon-section { padding: 1.25rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span><span style="color:var(--accent)">Deri</span>ndenbilgi</span></a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Article Hero -->
+<div class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">Kozmetik İşlemler</span>
+        <span class="read-time">📖 ~16 dk okuma</span>
+    </div>
+    <h1>Mezoterapi Rehberi: Her Endikasyon İçin Kanıt Ne Diyor?</h1>
+    <p class="article-subtitle">
+        Türkiye'de neredeyse her güzellik merkezinde sunulan mezoterapi gerçekten işe yarıyor mu? Cilt parlaklığından saç dökülmesine, selülitten bölgesel zayıflamaya — her kullanım alanını ayrı ayrı bilimsel kanıtlarla değerlendirdik.
+    </p>
+</div>
+
+<!-- Hızlı Özet -->
+<div class="article-body" style="padding-bottom:0;">
+    <div class="hizli-ozet fade-in">
+        <h3>⚡ 30 Saniyede Özet</h3>
+        <ul>
+            <li>Mezoterapi = cildin orta katmanına vitamin, mineral, hyaluronik asit gibi maddelerin ince iğnelerle enjeksiyonu</li>
+            <li>Türkiye'de çok popüler ama bilimsel kanıt düzeyi genel olarak düşük</li>
+            <li>Bazı alanlarda (cilt hidrasyonu, saç dökülmesi) umut verici — ama çoğu endikasyonda yetersiz kanıt</li>
+            <li>Standardizasyon yok: her klinik farklı "kokteyl" kullanıyor → çalışmalar birbiriyle karşılaştırılamıyor</li>
+            <li>Ciddi riskler: enfeksiyon, atipik mikobakteri salgınları (Türkiye'de vakalar bildirildi!), deri nekrozu</li>
+            <li>PRP, çoğu endikasyonda mezoterapi'den daha güçlü kanıt tabanına sahip</li>
+        </ul>
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📑 İçindekiler</div>
+        <ol>
+            <li><a href="#giris">Mezoterapi Nedir?</a></li>
+            <li><a href="#nasil">Nasıl Çalışır?</a></li>
+            <li><a href="#standart">Büyük Sorun: Standart Yok</a></li>
+            <li><a href="#end1">Endikasyon 1: Cilt Parlaklığı ve Hidrasyon (Mezo Glow)</a></li>
+            <li><a href="#end2">Endikasyon 2: Saç Dökülmesi</a></li>
+            <li><a href="#end3">Endikasyon 3: Selülit Tedavisi</a></li>
+            <li><a href="#end4">Endikasyon 4: Bölgesel Zayıflama (Lipoliz)</a></li>
+            <li><a href="#end5">Endikasyon 5: Pigmentasyon / Leke Tedavisi</a></li>
+            <li><a href="#end6">Endikasyon 6: Göz Altı Koyu Halkaları</a></li>
+            <li><a href="#ozet-tablo">Endikasyon Özet Tablosu</a></li>
+            <li><a href="#prp-karsilastirma">PRP vs Mezoterapi Karşılaştırması</a></li>
+            <li><a href="#riskler">Riskler — Ciddiye Alın</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#sonuc">Sonuç</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- Article Body -->
+<div class="article-body">
+
+    <!-- GİRİŞ -->
+    <h2 id="giris">Mezoterapi Nedir?</h2>
+
+    <p>
+        İsmi Yunanca'dan geliyor: <strong>mezo</strong> = orta, <strong>derma</strong> = deri. Yani cildin orta katmanına (dermis) vitamin, mineral, hyaluronik asit, aminoasit gibi maddelerin ince iğnelerle enjekte edilmesi demek.
+    </p>
+
+    <p>
+        1952'de Fransız doktor Michel Pistor tarafından geliştirildi. Pistor başlangıçta ağrı ve dolaşım bozuklukları için kullandı — kozmetik kullanımı çok daha sonra popülerleşti (Pistor, 1976).
+    </p>
+
+    <p>
+        Türkiye'de neredeyse her güzellik merkezinde, hatta bazı kuaförlerde bile mezoterapi yapılıyor. Peki bilim ne diyor? Spoiler: her endikasyon için cevap farklı.
+    </p>
+
+    <div class="hap-bilgi">Cildin orta katmanına aktif madde enjeksiyonu. 70 yıllık bir teknik ama kozmetik kullanımda hâlâ sınırlı kanıt var.</div>
+
+    <!-- NASIL ÇALIŞIR -->
+    <h2 id="nasil">Mezoterapi Nasıl Çalışır?</h2>
+
+    <p>
+        Mantık aslında basit: cildinize sürdüğünüz kremlerin çoğu derinin bariyerini (stratum corneum) geçemiyor. Bu bariyer, dışarıdan gelen maddelerin büyük bölümünü engeller — bu iyi bir şey, çünkü cildinizi korur.
+    </p>
+
+    <p>
+        Mezoterapi bu bariyeri atlayıp aktif maddeleri doğrudan cildin orta-alt katmanlarına enjekte ediyor. 1-4 mm derinliğe, çok ince iğnelerle (27-32G) veya mezoterapi tabancasıyla yapılır.
+    </p>
+
+    <p>
+        <strong>Mantık sağlam görünüyor — ama şeytan ayrıntıda.</strong> Çünkü "doğru maddeyi doğru yere doğru miktarda vermek" teoride kolay, pratikte hiç standardize edilmemiş.
+    </p>
+
+    <div class="hap-bilgi">Krem olarak verdiğinizde cilde giremeyeni, iğneyle doğrudan cildin içine enjekte etmek. Mantık iyi ama standardizasyon eksik.</div>
+
+    <!-- STANDART YOK -->
+    <h2 id="standart">⚠️ Büyük Sorun: Standart Yok</h2>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Bu, mezoterapinin en büyük bilimsel sorunu:</strong></p>
+        <p>Mezoterapi "kokteylleri" klinikten kliniğe değişiyor. Neyin ne kadar karıştırıldığı, hangi derinliğe enjekte edildiği, kaç seans yapılacağı — hepsi uygulayıcıya bağlı.</p>
+    </div>
+
+    <p>
+        Bu ne demek? Bir çalışmada kullanılan karışımla bir başka çalışmadaki aynı bile değil. Dolayısıyla "mezoterapi çalışıyor" ya da "çalışmıyor" demek çok zor — çünkü herkes farklı bir şey yapıyor (Atiyeh et al., 2008).
+    </p>
+
+    <p>
+        Ayrıca mezoterapide kullanılan "kokteyller" çoğu ülkede <strong>ilaç onay sürecinden geçmiyor</strong>. FDA veya EMA onaylı bir "mezoterapi kokteyli" yok. Bu önemli bir güvenlik ve etkinlik boşluğu.
+    </p>
+
+    <div class="hap-bilgi">Her kliniğin kendi tarifi var. Bu yüzden bilimsel çalışmalar birbirleriyle kıyaslanamıyor ve güçlü kanıt üretilemiyor.</div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- ENDİKASYONLAR -->
+    <!-- ═══════════════════════════════════ -->
+
+    <!-- ENDİKASYON 1: CİLT PARLAKLIĞI -->
+    <div class="endikasyon-section fade-in" id="end1">
+        <div class="endikasyon-header">
+            <h2 style="border-top:none;margin-top:0;padding-top:0;">✨ Endikasyon 1: Cilt Parlaklığı ve Hidrasyon (Mezo Glow)</h2>
+            <span class="kanit-badge kanit-sinirli">🤔 Kanıt: Sınırlı</span>
+        </div>
+
+        <p>
+            Bu en popüler mezoterapi uygulaması. Hyaluronik asit, vitaminler (C, E), aminoasitler ve antioksidanlar içeren karışımlar cildin parlak ve nemli görünmesi için enjekte ediliyor.
+        </p>
+
+        <p>
+            Birkaç küçük çalışma kısa vadeli hidrasyon ve parlaklık artışı göstermiş (El-Domyati et al., 2012). <strong>Ama sorun şu:</strong> bu çalışmaların çoğu kontrol grupsuz, az katılımcılı ve kısa süreli.
+        </p>
+
+        <h3>Plasebo Etkisi Meselesi</h3>
+
+        <p>
+            Burada önemli bir nokta var: <strong>iğne travmasının kendisi bile kolajen üretimini uyarabilir</strong>. Yani "microneedling etkisi" dediğimiz şey — aktif madde enjekte etmeseniz bile iğnelerin yarattığı mikro hasar cildi yenilemeye teşvik ediyor (Aust et al., 2008).
+        </p>
+
+        <p>
+            Dolayısıyla mezoterapi sonrası cildinizin daha iyi görünmesi, enjekte edilen maddeler mi yoksa iğne travması mı diye sormak lazım. Bunu ayırt eden güçlü çalışma yok.
+        </p>
+
+        <div class="verdict-card verdict-dusun">
+            <div class="verdict-emoji">🤔</div>
+            <div class="verdict-label">Verdict: Düşün</div>
+            <div class="verdict-text">Kısa vadeli parlaklık artışı olabilir ama plasebo etkisi ayrıştırılamamış. Hyaluronik asit enjeksiyonu mantıklı görünüyor ama kanıt düzeyi düşük. Topikal hyaluronik asit ve iyi bir nemlendirici çok daha ucuz ve güvenli bir alternatif.</div>
+        </div>
+    </div>
+
+    <!-- ENDİKASYON 2: SAÇ DÖKÜLMESİ -->
+    <div class="endikasyon-section fade-in" id="end2">
+        <div class="endikasyon-header">
+            <h2 style="border-top:none;margin-top:0;padding-top:0;">💇 Endikasyon 2: Saç Dökülmesi (Saç Mezoterapisi)</h2>
+            <span class="kanit-badge kanit-sinirli">🤔 Kanıt: Sınırlı</span>
+        </div>
+
+        <p>
+            Türkiye'de son derece yaygın. Saç derisine vitaminler, mineraller, aminoasitler, biotin, dexpanthenol gibi maddeler enjekte edilerek saç dökülmesinin yavaşlatılması ve yeni saç çıkışının teşvik edilmesi amaçlanıyor.
+        </p>
+
+        <p>
+            Birkaç küçük çalışma olumlu sonuçlar bildirmiş — saç kalınlığında ve yoğunluğunda artış gibi. Ama bu çalışmaların büyük çoğunluğu düşük kaliteli: az katılımcılı, kontrol grupsuz ve kısa takip süreli (Sivagnanam, 2010).
+        </p>
+
+        <h3>PRP ile Karşılaştırma</h3>
+
+        <p>
+            Burada önemli bir nokta: <strong>PRP (platelet-rich plasma = trombositten zengin plazma) saç dökülmesinde mezoterapiden çok daha güçlü kanıt tabanına sahip.</strong> Sistematik derlemeler ve meta-analizler PRP'nin androgenetik alopeside saç yoğunluğunu artırdığını destekliyor (Gentile et al., 2015).
+        </p>
+
+        <p>
+            Mezoterapi ile PRP'yi doğrudan karşılaştıran birkaç çalışmada PRP genellikle üstün bulunmuş. Dolayısıyla eğer cebi yakar bir tercihiniz olacaksa, PRP daha mantıklı duruyor.
+        </p>
+
+        <div class="verdict-card verdict-dusun">
+            <div class="verdict-emoji">🤔</div>
+            <div class="verdict-label">Verdict: Düşün — Ama PRP'yi Tercih Et</div>
+            <div class="verdict-text">Saç mezoterapisi tamamen etkisiz olmayabilir ama kanıt zayıf. PRP'ye erişiminiz varsa onu tercih edin — daha iyi çalışılmış ve kanıt düzeyi daha yüksek. Minoxidil + finasterid hâlâ altın standart.</div>
+        </div>
+    </div>
+
+    <!-- ENDİKASYON 3: SELÜLİT -->
+    <div class="endikasyon-section fade-in" id="end3">
+        <div class="endikasyon-header">
+            <h2 style="border-top:none;margin-top:0;padding-top:0;">🍊 Endikasyon 3: Selülit Tedavisi</h2>
+            <span class="kanit-badge kanit-yetersiz">❌ Kanıt: Yetersiz</span>
+        </div>
+
+        <p>
+            Selülit tedavisi için mezoterapi oldukça popüler — fosfatidilkolin, L-karnitin, aminofilin gibi maddeler enjekte edilerek yağ hücreleri üzerinde etki yaratılmaya çalışılıyor.
+        </p>
+
+        <p>
+            <strong>Ama kanıtlar hayal kırıklığı:</strong> Randomize kontrollü çalışmaların (RCT) sistematik derlemesi selülitte mezoterapi için yeterli kanıt olmadığını gösteriyor (Atiyeh et al., 2008). Var olan birkaç çalışma da metodolojik açıdan zayıf.
+        </p>
+
+        <p>
+            Selülit zaten dermatolojinin en inatçı sorunlarından biri. Dermal yapının bir özelliği — "tedavi" etmek çok zor. Mezoterapi de dahil hiçbir yöntem kalıcı çözüm sunmuyor.
+        </p>
+
+        <div class="verdict-card verdict-gec">
+            <div class="verdict-emoji">❌</div>
+            <div class="verdict-label">Verdict: Geç</div>
+            <div class="verdict-text">Selülitte mezoterapi için güvenilir kanıt yok. Paranızı başka şeylere harcayın. Egzersiz ve dengeli beslenme en azından genel sağlık açısından faydalı — mezoterapi değil.</div>
+        </div>
+    </div>
+
+    <!-- ENDİKASYON 4: BÖLGESEL ZAYIFLAMA -->
+    <div class="endikasyon-section fade-in" id="end4">
+        <div class="endikasyon-header">
+            <h2 style="border-top:none;margin-top:0;padding-top:0;">⚖️ Endikasyon 4: Bölgesel Zayıflama (Lipoliz Mezoterapisi)</h2>
+            <span class="kanit-badge kanit-yetersiz">❌ Kanıt: Yetersiz</span>
+        </div>
+
+        <p>
+            "Enjeksiyon lipoliz" ya da "mezo-lipoliz" olarak da biliniyor. Fosfatidilkolin ve deoksikolic asit gibi maddeler yağ hücrelerini parçalamak amacıyla enjekte ediliyor. Türkiye'de "iğneyle yağ eritme" olarak pazarlanıyor.
+        </p>
+
+        <p>
+            <strong>Kanıtlar yetersiz.</strong> Küçük çalışmalarda sınırlı yağ azalması gösterilmiş ama sonuçlar tutarsız. Uzun vadeli güvenlik verileri yetersiz. Ciddi yan etkiler (deri nekrozu, nodül, enfeksiyon) bildirilmiş (Rotunda & Kolodney, 2006).
+        </p>
+
+        <h3>Önemli Ayrım: Deoksikolic Asit ≠ Mezoterapi</h3>
+
+        <div class="highlight-box">
+            <p><strong>Karıştırmayın:</strong> Sentetik deoksikolic asit enjeksiyonu çene altı yağlanması (submental yağ) için FDA onaylı bir ilaçtır. Ama bu "mezoterapi" değil — spesifik bir bölgeye, spesifik bir ilacın, kontrollü dozda uygulanmasıdır.</p>
+            <p>Güzellik merkezlerinde yapılan "lipoliz mezoterapisi" ile bu FDA onaylı tedavi aynı şey değil.</p>
+        </div>
+
+        <div class="verdict-card verdict-gec">
+            <div class="verdict-emoji">❌</div>
+            <div class="verdict-label">Verdict: Geç</div>
+            <div class="verdict-text">Bölgesel zayıflama için mezoterapi kanıt yok. Ciddi komplikasyon riski var. Bölgesel yağlanma sorununuz varsa bir plastik cerrah veya dermatologla konuşun — mezoterapi değil, onaylı tıbbi seçenekleri değerlendirin.</div>
+        </div>
+    </div>
+
+    <!-- ENDİKASYON 5: PİGMENTASYON -->
+    <div class="endikasyon-section fade-in" id="end5">
+        <div class="endikasyon-header">
+            <h2 style="border-top:none;margin-top:0;padding-top:0;">🎯 Endikasyon 5: Pigmentasyon / Leke Tedavisi</h2>
+            <span class="kanit-badge kanit-yetersiz">❌ Kanıt: Yetersiz</span>
+        </div>
+
+        <p>
+            Glutatyon, C vitamini, traneksamik asit gibi depigmenting (leke açıcı) ajanlar mezoterapi yoluyla cildin içine enjekte ediliyor. Özellikle melazma tedavisinde gündeme geliyor.
+        </p>
+
+        <p>
+            Traneksamik asitin mezoterapi yoluyla verilmesi konusunda birkaç küçük çalışma var ve bazıları umut verici sonuçlar bildirmiş. <strong>Ama önemli bir nokta:</strong> traneksamik asidin oral formunun melazma'da etkinliğini gösteren çok daha güçlü kanıtlar mevcut (Del Rosario et al., 2018).
+        </p>
+
+        <p>
+            Glutatyon enjeksiyonları için ise kanıtlar çok zayıf. IV glutatyon güvenlik endişeleri taşıyor ve "cilt beyazlatma" amacıyla kullanımını birçok dermatoloji derneği kınıyor.
+        </p>
+
+        <div class="verdict-card verdict-gec">
+            <div class="verdict-emoji">❌</div>
+            <div class="verdict-label">Verdict: Geç</div>
+            <div class="verdict-text">Leke tedavisinde oral/topikal seçenekler çok daha iyi çalışılmış. Topikal hidrokinon, azelaik asit, oral traneksamik asit, topikal retinoidler — bunların hepsinin kanıt düzeyi mezoterapi'den yüksek. İğneye gerek yok.</div>
+        </div>
+    </div>
+
+    <!-- ENDİKASYON 6: GÖZ ALTI -->
+    <div class="endikasyon-section fade-in" id="end6">
+        <div class="endikasyon-header">
+            <h2 style="border-top:none;margin-top:0;padding-top:0;">👁️ Endikasyon 6: Göz Altı Koyu Halkaları</h2>
+            <span class="kanit-badge kanit-yetersiz">❌ Kanıt: Yetersiz</span>
+        </div>
+
+        <p>
+            Göz altı koyu halkalar için vitamin C, hyaluronik asit, peptid içeren mezoterapi uygulamaları yapılıyor. İnternette "before-after" fotoğrafları bol — ama bilimsel çalışma neredeyse yok.
+        </p>
+
+        <p>
+            Göz altı morluğunun nedenleri çok çeşitli: vasküler (damarsal), pigmenter, yapısal (gözyaşı oluğu) veya bunların kombinasyonu olabilir. <strong>Nedenini bilmeden mezoterapi uygulamak mantıklı değil.</strong>
+        </p>
+
+        <p>
+            Üstelik göz çevresi çok hassas bir bölge — enjeksiyon komplikasyonları (ödem, nodül, renk değişikliği) burada daha riskli.
+        </p>
+
+        <div class="verdict-card verdict-gec">
+            <div class="verdict-emoji">❌</div>
+            <div class="verdict-label">Verdict: Geç</div>
+            <div class="verdict-text">Göz altı koyu halkaları için mezoterapi'yi destekleyen güvenilir kanıt yok. Göz altı sorununuzun nedenini bir dermatologla değerlendirin — neden vasküler mi, pigmenter mi, yapısal mı? Tedavi buna göre planlanmalı.</div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- ENDİKASYON ÖZET TABLOSU -->
+    <!-- ═══════════════════════════════════ -->
+
+    <h2 id="ozet-tablo">📊 Endikasyon Özet Tablosu</h2>
+
+    <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Endikasyon</th>
+                    <th>Kanıt Düzeyi</th>
+                    <th>Verdict</th>
+                    <th>Daha İyi Alternatif?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>✨ Cilt Parlaklığı / Hidrasyon</td>
+                    <td>🤔 Sınırlı</td>
+                    <td style="color:#b45309;font-weight:600;">Düşün</td>
+                    <td>Topikal HA, iyi nemlendirici</td>
+                </tr>
+                <tr>
+                    <td>💇 Saç Dökülmesi</td>
+                    <td>🤔 Sınırlı</td>
+                    <td style="color:#b45309;font-weight:600;">Düşün (PRP tercih et)</td>
+                    <td>PRP, Minoxidil, Finasterid</td>
+                </tr>
+                <tr>
+                    <td>🍊 Selülit</td>
+                    <td>❌ Yetersiz</td>
+                    <td style="color:#dc2626;font-weight:600;">Geç</td>
+                    <td>Egzersiz, beslenme</td>
+                </tr>
+                <tr>
+                    <td>⚖️ Bölgesel Zayıflama</td>
+                    <td>❌ Yetersiz</td>
+                    <td style="color:#dc2626;font-weight:600;">Geç</td>
+                    <td>Dermatolog/cerrah değerlendirmesi</td>
+                </tr>
+                <tr>
+                    <td>🎯 Pigmentasyon / Leke</td>
+                    <td>❌ Yetersiz</td>
+                    <td style="color:#dc2626;font-weight:600;">Geç</td>
+                    <td>Topikal/oral depigmenting ajanlar</td>
+                </tr>
+                <tr>
+                    <td>👁️ Göz Altı Koyu Halka</td>
+                    <td>❌ Yetersiz</td>
+                    <td style="color:#dc2626;font-weight:600;">Geç</td>
+                    <td>Neden araştırması + hedefe yönelik tedavi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">6 endikasyonun 4'ünde kanıt yetersiz. Kalan 2'sinde ise sınırlı — yani "belki" düzeyinde.</div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PRP vs MEZOTERAPİ -->
+    <!-- ═══════════════════════════════════ -->
+
+    <h2 id="prp-karsilastirma">🩸 PRP vs Mezoterapi: Hangisi Daha İyi?</h2>
+
+    <p>
+        PRP (platelet-rich plasma) = kendi kanınızdan elde edilen trombositten zengin plazma. Büyüme faktörleri içerir. Mezoterapi'den farklı olarak <strong>kendi vücudunuzdan gelen</strong> bir madde kullanılıyor.
+    </p>
+
+    <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>🩸 PRP</th>
+                    <th>💉 Mezoterapi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Kaynak</strong></td>
+                    <td>Kendi kanınız</td>
+                    <td>Dışarıdan vitamin/mineral karışımı</td>
+                </tr>
+                <tr>
+                    <td><strong>Standardizasyon</strong></td>
+                    <td>Hazırlama protokolü var ama değişkenlik yüksek</td>
+                    <td>Hiç standardize değil</td>
+                </tr>
+                <tr>
+                    <td><strong>Saç dökülmesinde kanıt</strong></td>
+                    <td>🤔 Sınırlı–Orta (meta-analizler pozitif)</td>
+                    <td>🤔 Sınırlı (zayıf çalışmalar)</td>
+                </tr>
+                <tr>
+                    <td><strong>Cilt gençleştirmede kanıt</strong></td>
+                    <td>🤔 Sınırlı ama artan</td>
+                    <td>🤔 Sınırlı</td>
+                </tr>
+                <tr>
+                    <td><strong>Alerji riski</strong></td>
+                    <td>Çok düşük (kendi kanınız)</td>
+                    <td>Var (dış madde enjeksiyonu)</td>
+                </tr>
+                <tr>
+                    <td><strong>Enfeksiyon riski</strong></td>
+                    <td>Düşük</td>
+                    <td>Daha yüksek (kontamine kokteyller)</td>
+                </tr>
+                <tr>
+                    <td><strong>Maliyet</strong></td>
+                    <td>Orta-Yüksek</td>
+                    <td>Orta</td>
+                </tr>
+                <tr>
+                    <td><strong>Genel değerlendirme</strong></td>
+                    <td style="color:var(--accent);font-weight:600;">Daha güçlü kanıt tabanı</td>
+                    <td style="color:#b45309;font-weight:600;">Zayıf kanıt, standardizasyon eksik</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">İkisi de altın standart değil ama PRP'nin kanıt tabanı mezoterapiden daha güçlü. İkisi arasında seçim yapacaksanız PRP mantıklı.</div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- RİSKLER -->
+    <!-- ═══════════════════════════════════ -->
+
+    <h2 id="riskler">🚨 Riskler — Ciddiye Alın</h2>
+
+    <div class="redflag-box">
+        <p><strong>🚨 UYARI: Mezoterapi ciddi komplikasyonlara yol açabilir. Bunlar "nadir" değil.</strong></p>
+        <ul>
+            <li><strong>Enfeksiyon:</strong> Steril olmayan ortamda yapılan enjeksiyonlar bakteriyel enfeksiyona yol açabilir</li>
+            <li><strong>Atipik mikobakteri salgınları:</strong> Türkiye dahil birçok ülkede mezoterapi sonrası <em>Mycobacterium</em> salgınları bildirilmiştir. Bu enfeksiyonlar tedavisi çok zor, aylarca antibiyotik gerektirebilir (Sivagnanam & Ventrapragada, 2010)</li>
+            <li><strong>Alerjik reaksiyon:</strong> Kokteyl içindeki herhangi bir maddeye alerji gelişebilir</li>
+            <li><strong>Granülom ve nodüller:</strong> Cilt altında sert, ağrılı nodüller oluşabilir</li>
+            <li><strong>Deri nekrozu:</strong> Yanlış enjeksiyon tekniği veya kontamine madde ile doku ölümü</li>
+            <li><strong>Hiperpigmentasyon:</strong> İğne travması veya inflamasyon sonrası kalıcı leke bırakabilir — özellikle koyu cilt tonlarında</li>
+        </ul>
+    </div>
+
+    <h3>Türkiye'ye Özel Uyarı</h3>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Güzellik merkezinde eğitimsiz personel tarafından yapılan mezoterapi CİDDİ risk taşır.</strong></p>
+        <p>Türkiye'de mezoterapi uygulayan kişilerin önemli bir kısmı tıp eğitimi almamış estetisyenlerdir. Sterilizasyon koşulları, iğne derinliği, ürün kalitesi — tüm bunlar denetim dışı olabilir.</p>
+        <p>Mezoterapi yaptıracaksanız mutlaka <strong>dermatolog veya plastik cerrah</strong> tarafından, <strong>klinik ortamında</strong> yapılmalıdır.</p>
+    </div>
+
+    <p>
+        Mammucari ve arkadaşlarının 2011 derlemesinde, mezoterapi komplikasyonlarının büyük çoğunluğunun eğitimsiz uygulayıcılar ve steril olmayan ortamlardan kaynaklandığı vurgulanmıştır.
+    </p>
+
+    <div class="hap-bilgi">Mezoterapi "zararsız" değil. Enfeksiyon, nodül, nekroz ve atipik mikobakteri riski gerçek. Eğitimsiz kişilere asla yaptırmayın.</div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- MİTLER vs GERÇEKLER -->
+    <!-- ═══════════════════════════════════ -->
+
+    <h2 id="mitler">🔍 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-q">❌ Mit: "Mezoterapi tamamen doğal, hiçbir yan etkisi yok."</div>
+        <div class="myth-a">✅ Gerçek: "Doğal" olması güvenli olduğu anlamına gelmez. Enfeksiyon, alerjik reaksiyon, nodül ve deri nekrozu gibi ciddi komplikasyonlar bildirilmiştir. Atipik mikobakteri salgınları da dahil (Sivagnanam, 2010).</div>
+    </div>
+
+    <div class="myth-box">
+        <div class="myth-q">❌ Mit: "Mezoterapi ile bölgesel yağ eritebilirsiniz."</div>
+        <div class="myth-a">✅ Gerçek: Bölgesel yağ eritme için mezoterapi'yi destekleyen güvenilir klinik kanıt yok. Bilimsel derlemeler yetersiz kanıt olduğunu gösteriyor (Atiyeh et al., 2008). FDA onaylı deoksikolic asit enjeksiyonu ise sadece çene altı için ve bu "mezoterapi" değil, spesifik bir tedavi.</div>
+    </div>
+
+    <div class="myth-box">
+        <div class="myth-q">❌ Mit: "Saç mezoterapisi saç ekimine alternatif."</div>
+        <div class="myth-a">✅ Gerçek: Mezoterapi ve saç ekimi tamamen farklı işlemler. Mezoterapi mevcut saçları desteklemeyi amaçlar (sınırlı kanıtla), saç ekimi ise folikül transferidir. Birinin yerine diğeri kullanılamaz.</div>
+    </div>
+
+    <div class="myth-box">
+        <div class="myth-q">❌ Mit: "Mezo glow yaptırırsanız krem kullanmanıza gerek kalmaz."</div>
+        <div class="myth-a">✅ Gerçek: Mezoterapi tek seferlik bir çözüm değil — etki geçicidir. Günlük cilt bakımı (temizlik, nemlendirme, güneş koruması) hayat boyu devam etmesi gereken temel bakımdır ve hiçbir enjeksiyon bunun yerini almaz.</div>
+    </div>
+
+    <div class="myth-box">
+        <div class="myth-q">❌ Mit: "Mezoterapi her yerde aynı şey."</div>
+        <div class="myth-a">✅ Gerçek: Standardizasyon yok. Her klinik farklı "kokteyl" kullanıyor, farklı derinliğe enjekte ediyor, farklı seans sayısı öneriyor. Bir klinikte aldığınız sonuç bir başkasında tekrarlanamayabilir. Bu, bilimsel çalışmaların en büyük sorunu.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- SONUÇ -->
+    <!-- ═══════════════════════════════════ -->
+
+    <h2 id="sonuc">📋 Sonuç</h2>
+
+    <div class="verdict-card verdict-dusun">
+        <div class="verdict-emoji">🤔</div>
+        <div class="verdict-label">Genel Verdict: Şüpheli — Çoğu Endikasyonda Kanıt Yetersiz</div>
+        <div class="verdict-text">
+            Mezoterapi 70 yıllık bir teknik ama hâlâ güçlü kanıtlardan yoksun. 6 popüler endikasyonun 4'ünde kanıt yetersiz, 2'sinde sınırlı. Standart bir protokol bile yok. Ciddi komplikasyonlar bildirilmiş. Paranızı ve cildinizi riske atmadan önce bir dermatologla konuşun.
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>✅ Ne yapmalı?</strong></p>
+        <p>Mezoterapi yaptırmadan önce kendinize şu soruları sorun:</p>
+        <p>1. Bu endikasyon için <strong>kanıtlanmış bir alternatif</strong> var mı? (Çoğu zaman evet.)</p>
+        <p>2. Uygulayıcı <strong>dermatolog veya plastik cerrah</strong> mı?</p>
+        <p>3. Ortam <strong>steril klinik</strong> mi yoksa güzellik merkezi mi?</p>
+        <p>4. Size sunulan "kokteyl"in <strong>içeriği ve kaynağı</strong> net mi?</p>
+        <p>Bu sorulardan herhangi birine olumsuz cevap veriyorsanız, yaptırmayın.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- KAYNAKLAR -->
+    <!-- ═══════════════════════════════════ -->
+
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Pistor M. What is mesotherapy? <em>Le Chir Dent Fr.</em> 1976;46(288):59-60.</li>
+            <li>Mammucari M, Gatti A, Maggiori S, et al. Mesotherapy, definition, rationale and clinical role: a consensus report from the Italian Society of Mesotherapy. <em>Eur Rev Med Pharmacol Sci.</em> 2011;15(6):682-694.</li>
+            <li>El-Domyati M, El-Ammawi TS, Moawad O, et al. Efficacy of mesotherapy in facial rejuvenation: a histological and immunohistochemical evaluation. <em>Int J Dermatol.</em> 2012;51(8):913-919.</li>
+            <li>Sivagnanam G. Mesotherapy — The French Connection. <em>J Pharmacol Pharmacother.</em> 2010;1(1):4-8.</li>
+            <li>Atiyeh BS, Ibrahim AE, Dibo SA. Cosmetic mesotherapy: between scientific evidence, science fiction, and lucrative business. <em>Aesthetic Plast Surg.</em> 2008;32(6):842-849.</li>
+            <li>Aust MC, Fernandes D, Kolokber P, et al. Percutaneous collagen induction therapy: an alternative treatment for scars, wrinkles, and skin laxity. <em>Plast Reconstr Surg.</em> 2008;121(4):1421-1429.</li>
+            <li>Gentile P, Garcovich S, Bielli A, et al. The effect of platelet-rich plasma in hair regrowth: a randomized placebo-controlled trial. <em>Stem Cells Transl Med.</em> 2015;4(11):1317-1323.</li>
+            <li>Rotunda AM, Kolodney MS. Mesotherapy and phosphatidylcholine injections: historical clarification and review. <em>Dermatol Surg.</em> 2006;32(4):465-480.</li>
+            <li>Del Rosario E, Florez-Pollack S, Engelman L, et al. Randomized, placebo-controlled, double-blind study of oral tranexamic acid in the treatment of moderate-to-severe melasma. <em>J Am Acad Dermatol.</em> 2018;78(2):363-369.</li>
+            <li>Kutlubay Z, Kӧroğlu A, Engin B, et al. Mesotherapy practice in Turkey: a report of adverse effects. <em>J Cosmet Dermatol.</em> 2015;14(2):168-171.</li>
+            <li>Kadry R, Hamadah I, Al-Issa A, et al. Multifocal scalp abscess with subcutaneous fat necrosis and scarring alopecia as a complication of scalp mesotherapy. <em>J Drugs Dermatol.</em> 2008;7(1):72-73.</li>
+            <li>Savoia A, Landi S, Baldi A. Mesotherapy for cellulite treatment: a review. <em>J Cosmet Laser Ther.</em> 2013;15(5):278-282.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- Disclaimer -->
+<div style="max-width:800px;margin:0 auto;padding:0 1.5rem 2rem;">
+    <div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:12px;padding:1rem 1.25rem;display:flex;align-items:flex-start;gap:0.75rem;font-size:0.88rem;color:#92400e;">
+        <span style="font-size:1.25rem;flex-shrink:0;">⚠️</span>
+        <div><strong>Bu içerik tıbbi tavsiye değildir.</strong> Derindenbilgi'deki bilgiler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Mezoterapi veya herhangi bir kozmetik işlem hakkında kararlarınızı bir dermatoloji uzmanıyla görüşerek verin.</div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-disclaimer">
+            Derindenbilgi — Kanıta dayalı dermatoloji bilgisi. Tüm içerikler bilimsel kaynaklara dayandırılmaktadır.<br>
+            Bu platform tıbbi tavsiye, teşhis veya tedavi yerine geçmez.
+        </p>
+        <p class="footer-copy">
+            © 2025 <a href="../index.html"><span style="color:var(--accent)">Deri</span>ndenbilgi</a>. Tüm hakları saklıdır.
+        </p>
+    </div>
+</footer>
+
+<script>
+// Progress bar
+window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('progressBar').style.width = pct + '%';
+});
+
+// Fade-in observer
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
