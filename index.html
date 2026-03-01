@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DerindeBilgi | Cildinizi Derinden Anlıyoruz</title>
+    <meta name="description" content="Kanıta dayalı dermatoloji ve cilt bakımı rehberi. Ücretsiz araçlar, rehberler ve bilimsel içeriklerle cildinizi tanıyın.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f0f9ff;
+            --bg-warm: #fefce8;
+            --bg-card: #ffffff;
+            --bg-elevated: #f8fafc;
+            --border: rgba(0, 0, 0, 0.07);
+            --border-hover: rgba(13, 148, 136, 0.3);
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --text-tertiary: #94a3b8;
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13, 148, 136, 0.06);
+            --accent-border: rgba(13, 148, 136, 0.15);
+            --gradient: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+            --gradient-warm: linear-gradient(135deg, #0d9488 0%, #6366f1 100%);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            font-size: 15px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: box-shadow 0.3s;
+        }
+        header.scrolled { box-shadow: var(--shadow-md); }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+        .logo span { color: var(--accent); }
+
+        nav { display: flex; align-items: center; gap: 32px; }
+        nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+        }
+        nav a:hover { color: var(--accent); }
+
+        .nav-cta {
+            padding: 10px 22px;
+            background: var(--gradient);
+            color: white !important;
+            border-radius: var(--radius-md);
+            font-weight: 500 !important;
+            transition: transform 0.2s, box-shadow 0.3s !important;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+        }
+
+        .hero-bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(13, 148, 136, 0.03) 0%, transparent 50%);
+            animation: heroBgMove 20s ease-in-out infinite;
+        }
+        @keyframes heroBgMove {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 28px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.15s forwards;
+            opacity: 0;
+        }
+        .hero h1 .accent { color: var(--accent); }
+
+        .hero p {
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.45s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            margin-top: 64px;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .hero-stat-label {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            margin-top: 4px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+        .btn-primary:hover { box-shadow: 0 8px 25px rgba(13, 148, 136, 0.3); }
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 24px;
+        }
+        .section-alt { background: var(--bg-alt); }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .section-desc {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ===== CARDS GRID ===== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .cards-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .card-tag {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ===== INTERACTIVE TEST ===== */
+        .test-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+        }
+        .test-progress {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+        .test-progress-bar {
+            flex: 1;
+            height: 4px;
+            background: var(--bg-elevated);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .test-progress-bar.active {
+            background: var(--accent);
+        }
+        .test-progress-bar.done {
+            background: var(--accent);
+        }
+
+        .test-question {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .test-question-sub {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+        }
+
+        .test-options { display: flex; flex-direction: column; gap: 12px; }
+        .test-option {
+            padding: 16px 20px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 15px;
+            color: var(--text);
+            transition: all 0.2s;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .test-option:hover {
+            border-color: var(--accent);
+            background: var(--accent-bg);
+        }
+        .test-option.selected {
+            border-color: var(--accent);
+            background: var(--accent-bg);
+            color: var(--accent-dark);
+            font-weight: 500;
+        }
+        .test-option-letter {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--bg-elevated);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            flex-shrink: 0;
+        }
+        .test-option.selected .test-option-letter {
+            background: var(--accent);
+            color: white;
+        }
+
+        .test-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+        }
+
+        .test-result {
+            text-align: center;
+            display: none;
+        }
+        .test-result-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 24px;
+        }
+        .test-result-type {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .test-result-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+        .test-result-tips {
+            text-align: left;
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .test-result-tips h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        .test-result-tips li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+
+        /* ===== BLOG ===== */
+        .blog-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .blog-card-img {
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        .blog-card-body { padding: 24px; }
+        .blog-card-category {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .blog-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .blog-card-excerpt {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 0;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--text);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            transition: color 0.2s;
+        }
+        .faq-question:hover { color: var(--accent); }
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--bg-elevated);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--text-tertiary);
+            transition: transform 0.3s, background 0.3s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            background: var(--accent);
+            color: white;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 0 auto;
+            max-width: 800px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: #92400e;
+        }
+        .disclaimer-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 64px 24px 32px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        .footer-brand {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .footer-heading {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--accent-light); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .cards-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            nav.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-lg);
+            }
+            .hamburger { display: flex; }
+            .cards-grid, .cards-grid-2 { grid-template-columns: 1fr; }
+            section { padding: 80px 20px; }
+            .hero { padding: 100px 20px 60px; }
+            .hero-stats { flex-direction: column; gap: 24px; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .test-container { padding: 28px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+    <div class="header-inner">
+        <a href="#" class="logo">
+            <div class="logo-icon">D</div>
+            Derinden<span>Bilgi</span>
+        </a>
+        <nav id="nav">
+            <a href="#araclar">Araçlar</a>
+            <a href="#rehberler">Rehberler</a>
+            <a href="#test">Cilt Testi</a>
+            <a href="#blog">Blog</a>
+            <a href="#sss">SSS</a>
+            <a href="#test" class="nav-cta">Cilt Tipini Öğren →</a>
+        </nav>
+        <button class="hamburger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+        <div class="hero-badge">Kanıta Dayalı Dermatoloji</div>
+        <h1>Cildinizi <span class="accent">Derinden</span> Anlıyoruz</h1>
+        <p>Bilimsel kaynaklara dayalı cilt bakımı rehberleri, ücretsiz araçlar ve uzman içeriklerle cildinizi tanıyın. Dermatoloji bilgisi artık herkes için erişilebilir.</p>
+        <div class="hero-buttons">
+            <a href="#test" class="btn btn-primary">🧪 Cilt Tipini Öğren</a>
+            <a href="#rehberler" class="btn btn-secondary">📚 Ücretsiz Rehberler</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-number">6+</div>
+                <div class="hero-stat-label">Ücretsiz Araç</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">6+</div>
+                <div class="hero-stat-label">Kapsamlı Rehber</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">%100</div>
+                <div class="hero-stat-label">Bilimsel Kaynak</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ÜCRETSIZ ARAÇLAR -->
+<section id="araclar">
+    <div class="container reveal">
+        <div class="section-header">
+            <div class="section-label">Ücretsiz Araçlar</div>
+            <h2 class="section-title">Cildinizi Tanıyın</h2>
+            <p class="section-desc">Dermatoloji uzmanları tarafından hazırlanan interaktif araçlarla cildiniz hakkında bilgi edinin.</p>
+        </div>
+        <div class="cards-grid">
+            <a href="#test" class="card">
+                <div class="card-icon">🧪</div>
+                <div class="card-title">Cilt Tipi Testi</div>
+                <div class="card-desc">Kuru, yağlı, karma, hassas? 2 dakikada cilt tipinizi öğrenin ve size özel bakım önerilerine ulaşın.</div>
+                <span class="card-tag">→ Teste Başla</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">📊</div>
+                <div class="card-title">Cilt Yaşı Hesaplama</div>
+                <div class="card-desc">Yaşam alışkanlıklarınıza göre cildinizin biyolojik yaşını hesaplayın. Gerçek yaşınızla karşılaştırın.</div>
+                <span class="card-tag">Yakında →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">☀️</div>
+                <div class="card-title">UV / SPF Rehberi</div>
+                <div class="card-desc">Bugün ne kadar güneş koruması gerekiyor? Cilt tipinize ve mevsime göre SPF önerisi alın.</div>
+                <span class="card-tag">Yakında →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">🔴</div>
+                <div class="card-title">Akne Şiddeti Değerlendirmesi</div>
+                <div class="card-desc">Akneniz hafif mi, orta mı, şiddetli mi? Değerlendirin ve tedavi yönelimlerinizi öğrenin.</div>
+                <span class="card-tag">Yakında →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">🧴</div>
+                <div class="card-title">Cilt Bakım Rutini Oluşturucu</div>
+                <div class="card-desc">Cilt tipinize, yaşınıza ve hedeflerinize göre kişiselleştirilmiş sabah ve akşam rutini oluşturun.</div>
+                <span class="card-tag">Yakında →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">💇</div>
+                <div class="card-title">Saç Dökülmesi Risk Testi</div>
+                <div class="card-desc">Genetik, yaşam tarzı ve beslenme alışkanlıklarınıza göre saç dökülmesi riskinizi değerlendirin.</div>
+                <span class="card-tag">Yakında →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ÜCRETSIZ REHBERLER -->
+<section id="rehberler" class="section-alt">
+    <div class="container reveal">
+        <div class="section-header">
+            <div class="section-label">Ücretsiz Rehberler</div>
+            <h2 class="section-title">Bilimsel, Anlaşılır, Ücretsiz</h2>
+            <p class="section-desc">Her rehber bilimsel kaynaklara dayalı, uzman denetiminden geçmiş ve herkesin anlayabileceği dilde hazırlanmıştır.</p>
+        </div>
+        <div class="cards-grid cards-grid-2">
+            <a href="#" class="card">
+                <div class="card-icon">📖</div>
+                <div class="card-title">Akne A'dan Z'ye — Tedavi Rehberi</div>
+                <div class="card-desc">Akne neden oluşur? Hangi tedaviler işe yarar? Ev bakımından reçeteli tedavilere kadar bilmeniz gereken her şey.</div>
+                <span class="card-tag">12 dakika okuma →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">⏳</div>
+                <div class="card-title">Anti-Aging Başlangıç Rehberi</div>
+                <div class="card-desc">Ne zaman başlamalı? Retinol, peptid, antioksidan... Yaşlanma karşıtı bakıma bilimsel yaklaşım.</div>
+                <span class="card-tag">10 dakika okuma →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">☀️</div>
+                <div class="card-title">Güneşten Korunma Rehberi</div>
+                <div class="card-desc">SPF mitlerini yıkıyoruz. Kimyasal mı, fiziksel mi? Ne kadar sürmeliyiz? Bilimin söyledikleri.</div>
+                <span class="card-tag">8 dakika okuma →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">💉</div>
+                <div class="card-title">Kozmetik İşlemler Rehberi</div>
+                <div class="card-desc">Botoks, dolgu, lazer, PRP, mezoterapi... Hangisi ne işe yarar? Riskleri ve beklentileri gerçekçi bir şekilde anlatıyoruz.</div>
+                <span class="card-tag">15 dakika okuma →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">🔬</div>
+                <div class="card-title">Cilt Bakım İçerikleri Sözlüğü</div>
+                <div class="card-desc">Retinol, niacinamide, AHA, BHA, vitamin C, hyaluronik asit... Her aktif maddeyi anlaşılır dilde açıklıyoruz.</div>
+                <span class="card-tag">Referans rehber →</span>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">🍂</div>
+                <div class="card-title">Mevsimsel Cilt Bakımı Rehberi</div>
+                <div class="card-desc">Yaz vs kış — cildiniz neye ihtiyaç duyuyor? Mevsime göre rutin ve ürün önerileri.</div>
+                <span class="card-tag">7 dakika okuma →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CİLT TİPİ TESTİ -->
+<section id="test">
+    <div class="container reveal">
+        <div class="section-header">
+            <div class="section-label">İnteraktif Test</div>
+            <h2 class="section-title">Cilt Tipini Öğren</h2>
+            <p class="section-desc">5 soruda cilt tipinizi belirleyin, size özel bakım önerileri alın.</p>
+        </div>
+        <div class="test-container" id="testContainer">
+            <!-- Progress -->
+            <div class="test-progress" id="testProgress">
+                <div class="test-progress-bar active"></div>
+                <div class="test-progress-bar"></div>
+                <div class="test-progress-bar"></div>
+                <div class="test-progress-bar"></div>
+                <div class="test-progress-bar"></div>
+            </div>
+
+            <!-- Questions (dynamic) -->
+            <div id="testQuestions"></div>
+
+            <!-- Result -->
+            <div class="test-result" id="testResult">
+                <div class="test-result-icon" id="resultIcon">✨</div>
+                <div class="test-result-type" id="resultType"></div>
+                <div class="test-result-desc" id="resultDesc"></div>
+                <div class="test-result-tips" id="resultTips"></div>
+                <button class="btn btn-primary" onclick="resetTest()">Testi Tekrarla</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="section-alt">
+    <div class="container reveal">
+        <div class="section-header">
+            <div class="section-label">Blog</div>
+            <h2 class="section-title">Güncel Yazılar</h2>
+            <p class="section-desc">Cilt sağlığı, bakım rutinleri ve dermatoloji dünyasından bilimsel içerikler.</p>
+        </div>
+        <div class="cards-grid">
+            <a href="#" class="blog-card">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #0d9488, #06b6d4);">☀️</div>
+                <div class="blog-card-body">
+                    <div class="blog-card-category">Güneş Korunma</div>
+                    <div class="blog-card-title">SPF 30 mu 50 mi? Bilimin Cevabı Sizi Şaşırtabilir</div>
+                    <div class="blog-card-excerpt">SPF değerleri arasındaki gerçek fark sanıldığı kadar büyük değil. İşte rakamlar ve dermatologların önerisi...</div>
+                    <div class="blog-card-meta">
+                        <span>📅 Yakında</span>
+                        <span>⏱ 5 dk okuma</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="blog-card">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">🧴</div>
+                <div class="blog-card-body">
+                    <div class="blog-card-category">Cilt Bakımı</div>
+                    <div class="blog-card-title">Retinol Rehberi: Ne Zaman, Nasıl, Ne Kadar?</div>
+                    <div class="blog-card-excerpt">Retinol cilt bakımının altın standardı — ama doğru kullanmak şart. Başlangıçtan ileri seviyeye her şey...</div>
+                    <div class="blog-card-meta">
+                        <span>📅 Yakında</span>
+                        <span>⏱ 8 dk okuma</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="blog-card">
+                <div class="blog-card-img" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">🔴</div>
+                <div class="blog-card-body">
+                    <div class="blog-card-category">Akne</div>
+                    <div class="blog-card-title">Diş Macunu Sivilceyi Kurutur mu? 5 Mit, 5 Gerçek</div>
+                    <div class="blog-card-excerpt">İnternetteki akne tedavisi mitlerini tek tek bilimsel verilerle değerlendiriyoruz...</div>
+                    <div class="blog-card-meta">
+                        <span>📅 Yakında</span>
+                        <span>⏱ 6 dk okuma</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SSS (FAQ) -->
+<section id="sss">
+    <div class="container reveal">
+        <div class="section-header">
+            <div class="section-label">Sıkça Sorulan Sorular</div>
+            <h2 class="section-title">Merak Edilenler</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>DerindeBilgi nedir?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>DerindeBilgi, kanıta dayalı dermatoloji bilgisi sunan ücretsiz bir platformdur. Tüm içeriklerimiz bilimsel kaynaklara dayalıdır ve dermatoloji uzmanları tarafından hazırlanmıştır. Amacımız, cilt sağlığı hakkında güvenilir ve anlaşılır bilgiyi herkese ulaştırmaktır.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>İçerikler ücretsiz mi?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Evet! Tüm araçlarımız, rehberlerimiz ve blog yazılarımız tamamen ücretsizdir. Sağlık bilgisine erişimin herkes için eşit olması gerektiğine inanıyoruz.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Bu platform tıbbi tavsiye yerine geçer mi?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Hayır. DerindeBilgi eğitim amaçlıdır ve tıbbi tavsiye, teşhis veya tedavi yerine geçmez. Cilt sağlığınızla ilgili endişeleriniz için mutlaka bir dermatoloji uzmanına başvurun. İçeriklerimiz bilgi edinmenizi kolaylaştırmak içindir, doktor muayenesinin yerini almaz.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>İçerikleri kim hazırlıyor?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tüm içerikler dermatoloji alanında uzman hekimler tarafından hazırlanmakta ve bilimsel literatüre dayandırılmaktadır. Her içerikte kullanılan kaynaklar şeffaf bir şekilde belirtilmektedir.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Cilt tipi testi ne kadar güvenilir?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cilt tipi testimiz dermatolojik kriterlere dayalı bir ön değerlendirme aracıdır. Genel bir yönlendirme sağlar ancak kesin tanı için dermatolog muayenesi gereklidir. Testimiz size bakım rutininizi oluştururken bir başlangıç noktası sunar.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Hangi konularda içerik bulabilirim?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Akne, anti-aging, güneş koruması, cilt bakım rutinleri, kozmetik işlemler (botoks, dolgu, lazer, PRP), saç sağlığı, cilt bakım ürün içerikleri ve mevsimsel bakım gibi geniş bir yelpazede içerik sunuyoruz. Yeni konular sürekli eklenmektedir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section style="padding: 40px 24px;">
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div>
+            <strong>Bu platform tıbbi tavsiye değildir.</strong> DerindeBilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Sağlık sorunlarınız için mutlaka bir sağlık uzmanına başvurun.
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Derinden<span>Bilgi</span></div>
+                <p class="footer-desc">Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Araçlar</div>
+                <ul class="footer-links">
+                    <li><a href="#test">Cilt Tipi Testi</a></li>
+                    <li><a href="#">Cilt Yaşı Hesaplama</a></li>
+                    <li><a href="#">UV / SPF Rehberi</a></li>
+                    <li><a href="#">Akne Değerlendirmesi</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Rehberler</div>
+                <ul class="footer-links">
+                    <li><a href="#">Akne Rehberi</a></li>
+                    <li><a href="#">Anti-Aging</a></li>
+                    <li><a href="#">Güneş Korunma</a></li>
+                    <li><a href="#">Kozmetik İşlemler</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Platform</div>
+                <ul class="footer-links">
+                    <li><a href="#sss">SSS</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 DerindeBilgi. Tüm hakları saklıdır.</span>
+            <span>Bu platform tıbbi tavsiye değildir.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== HEADER SCROLL =====
+window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ===== FAQ ACCORDION =====
+document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    });
+});
+
+// ===== SKIN TYPE TEST =====
+const questions = [
+    {
+        q: "Yüzünüzü yıkadıktan 30 dakika sonra cildiniz nasıl hissediyor?",
+        sub: "Hiçbir ürün uygulamadan bekleyin",
+        options: [
+            { text: "Gergin, sıkı ve kuru hissediyorum", letter: "A", type: "kuru" },
+            { text: "Rahat ve dengeli hissediyorum", letter: "B", type: "normal" },
+            { text: "Her tarafı parlak ve yağlı", letter: "C", type: "yagli" },
+            { text: "T-bölgesi yağlı, yanaklar kuru", letter: "D", type: "karma" }
+        ]
+    },
+    {
+        q: "Gözenekleriniz nasıl görünüyor?",
+        sub: "Aynada yakından bakın",
+        options: [
+            { text: "Neredeyse görünmez, çok küçük", letter: "A", type: "kuru" },
+            { text: "Küçük ve düzgün dağılmış", letter: "B", type: "normal" },
+            { text: "Geniş ve belirgin, özellikle burun ve yanaklarda", letter: "C", type: "yagli" },
+            { text: "Burun ve alında geniş, yanaklarda küçük", letter: "D", type: "karma" }
+        ]
+    },
+    {
+        q: "Gün ortasında (öğleden sonra) cildiniz nasıl?",
+        sub: "Tipik bir iş gününde",
+        options: [
+            { text: "Kuru, bazen pul pul dökülüyor", letter: "A", type: "kuru" },
+            { text: "Sabahki gibi, pek değişmiyor", letter: "B", type: "normal" },
+            { text: "Parlak ve yağlı, makyaj kayıyor", letter: "C", type: "yagli" },
+            { text: "Alın ve burun parlıyor, yanaklar normal", letter: "D", type: "karma" }
+        ]
+    },
+    {
+        q: "Yeni bir ürün denediğinizde cildiniz nasıl tepki verir?",
+        sub: "Genel deneyiminizi düşünün",
+        options: [
+            { text: "Sıklıkla kızarıklık, batma veya tahriş olur", letter: "A", type: "hassas" },
+            { text: "Genellikle sorun yaşamam", letter: "B", type: "normal" },
+            { text: "Nadiren tepki verir, dayanıklıdır", letter: "C", type: "yagli" },
+            { text: "Bazı bölgelerde tepki verir, diğerleri iyi", letter: "D", type: "karma" }
+        ]
+    },
+    {
+        q: "Nemlendirici uyguladığınızda cildiniz nasıl hissediyor?",
+        sub: "Normal bir nemlendirici düşünün",
+        options: [
+            { text: "Hemen emiyor, daha fazlası lazım", letter: "A", type: "kuru" },
+            { text: "Dengeli, yeterli geliyor", letter: "B", type: "normal" },
+            { text: "Ağır geliyor, yağlı hissettiriyor", letter: "C", type: "yagli" },
+            { text: "Bazı bölgelerde iyi, bazılarında fazla", letter: "D", type: "karma" }
+        ]
+    }
+];
+
+const results = {
+    kuru: {
+        icon: "💧",
+        type: "Kuru Cilt",
+        desc: "Cildiniz yeterli nem üretmekte zorlanıyor. Kuruluk, gerginlik ve bazen pullanma yaşayabilirsiniz. Doğru nemlendirme ve nazik ürünlerle cildiniz çok daha iyi hissedebilir.",
+        tips: [
+            "Sabah ve akşam hyaluronik asit içeren bir serum kullanın",
+            "Kremlerde seramid ve shea yağı arayın",
+            "Sıcak su yerine ılık suyla yüzünüzü yıkayın",
+            "Köpüren temizleyicilerden kaçının, süt veya krem bazlı temizleyiciler tercih edin",
+            "Haftada 1-2 kez nazik bir AHA peeling uygulayın"
+        ]
+    },
+    normal: {
+        icon: "✨",
+        type: "Normal Cilt",
+        desc: "Tebrikler! Cildiniz dengeli ve sağlıklı. Yağ-nem dengesi iyi durumda. Temel bakım rutiniyle bu dengeyi korumak önemli.",
+        tips: [
+            "Günde iki kez nazik bir temizleyici kullanın",
+            "SPF 30+ güneş kremi asla atlmayın",
+            "Antioksidan bir serum (vitamin C) sabah rutinine ekleyin",
+            "Geceleri hafif bir nemlendirici yeterli olacaktır",
+            "Mevcut dengeyi bozmamak için aşırı ürün kullanımından kaçının"
+        ]
+    },
+    yagli: {
+        icon: "🫧",
+        type: "Yağlı Cilt",
+        desc: "Cildiniz fazla sebum üretiyor. Gözenekler belirgin olabilir ve parlaklık gün boyu devam edebilir. Ama iyi haber: yağlı ciltler daha geç kırışır!",
+        tips: [
+            "Jel bazlı, yağsız (oil-free) nemlendirici kullanın",
+            "Niacinamide içeren ürünler yağ kontrolünde etkilidir",
+            "BHA (salisilik asit) bazlı temizleyici deneyin",
+            "Güneş kremi olarak mat bitişli formüller tercih edin",
+            "Cildi kurutmaya çalışmayın — bu daha fazla yağ üretimine neden olur"
+        ]
+    },
+    karma: {
+        icon: "⚖️",
+        type: "Karma Cilt",
+        desc: "Cildinizde birden fazla özellik var: T-bölgesi (alın, burun, çene) yağlı iken yanaklar kuru veya normal. Bölgesel bakım stratejisi en iyi sonucu verir.",
+        tips: [
+            "T-bölgesine hafif, yanaklara daha zengin nemlendirici uygulayın",
+            "Nazik, pH dengeli bir temizleyici kullanın",
+            "BHA'yı sadece yağlı bölgelere, AHA'yı kuru bölgelere uygulayın",
+            "Hafif, jel-krem kıvamında ürünler genelde en uygunudur",
+            "Multi-masking deneyin: farklı bölgelere farklı maskeler"
+        ]
+    },
+    hassas: {
+        icon: "🛡️",
+        type: "Hassas Cilt",
+        desc: "Cildiniz dış etkenlere karşı aşırı duyarlı. Kızarıklık, batma ve tahriş sık yaşanabilir. Nazik ve az içerikli ürünlerle harika sonuçlar alabilirsiniz.",
+        tips: [
+            "Parfümsüz ve hipoalerjenik ürünler seçin",
+            "Yeni ürünleri kulak arkasında 48 saat test edin",
+            "Seramid ve aloe vera gibi yatıştırıcı bileşenler arayın",
+            "Fiziksel (mineral) güneş kremleri genelde daha iyi tolere edilir",
+            "Aynı anda birden fazla yeni ürün eklemeyin — tek tek deneyin"
+        ]
+    }
+};
+
+let currentQuestion = 0;
+let answers = [];
+
+function renderQuestion() {
+    const q = questions[currentQuestion];
+    const bars = document.querySelectorAll('.test-progress-bar');
+    bars.forEach((bar, i) => {
+        bar.classList.toggle('done', i < currentQuestion);
+        bar.classList.toggle('active', i === currentQuestion);
+    });
+
+    const container = document.getElementById('testQuestions');
+    container.innerHTML = `
+        <div class="test-question">${q.q}</div>
+        <div class="test-question-sub">${q.sub}</div>
+        <div class="test-options">
+            ${q.options.map((opt, i) => `
+                <div class="test-option" onclick="selectOption(${i}, '${opt.type}')">
+                    <span class="test-option-letter">${opt.letter}</span>
+                    <span>${opt.text}</span>
+                </div>
+            `).join('')}
+        </div>
+        <div class="test-nav">
+            ${currentQuestion > 0 ? '<button class="btn btn-secondary" onclick="prevQuestion()">← Geri</button>' : '<div></div>'}
+            <span style="font-size: 14px; color: var(--text-tertiary); align-self: center;">${currentQuestion + 1} / ${questions.length}</span>
+            <div></div>
+        </div>
+    `;
+}
+
+function selectOption(index, type) {
+    answers[currentQuestion] = type;
+    document.querySelectorAll('.test-option').forEach((opt, i) => {
+        opt.classList.toggle('selected', i === index);
+    });
+    setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+            currentQuestion++;
+            renderQuestion();
+        } else {
+            showResult();
+        }
+    }, 400);
+}
+
+function prevQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        renderQuestion();
+    }
+}
+
+function showResult() {
+    const counts = {};
+    answers.forEach(a => { counts[a] = (counts[a] || 0) + 1; });
+    const skinType = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+    const result = results[skinType];
+
+    document.getElementById('testQuestions').style.display = 'none';
+    document.querySelector('.test-progress').style.display = 'none';
+    const resultEl = document.getElementById('testResult');
+    resultEl.style.display = 'block';
+
+    document.getElementById('resultIcon').textContent = result.icon;
+    document.getElementById('resultType').textContent = result.type;
+    document.getElementById('resultDesc').textContent = result.desc;
+    document.getElementById('resultTips').innerHTML = `
+        <h4>💡 Size Özel Bakım Önerileri</h4>
+        <ul>${result.tips.map(t => `<li>${t}</li>`).join('')}</ul>
+    `;
+}
+
+function resetTest() {
+    currentQuestion = 0;
+    answers = [];
+    document.getElementById('testQuestions').style.display = 'block';
+    document.querySelector('.test-progress').style.display = 'flex';
+    document.getElementById('testResult').style.display = 'none';
+    renderQuestion();
+}
+
+// Init test
+renderQuestion();
+
+// ===== MOBILE NAV CLOSE ON LINK CLICK =====
+document.querySelectorAll('#nav a').forEach(a => {
+    a.addEventListener('click', () => {
+        document.getElementById('nav').classList.remove('open');
+    });
+});
+</script>
+
+</body>
+</html>
