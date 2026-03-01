@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRP Tedavisi Rehberi: Endikasyonlara Göre Kanıt Değerlendirmesi | Derindenbilgi</title>
+    <meta name="description" content="PRP (Platelet-Rich Plasma) tedavisi hakkında endikasyonlara göre kanıta dayalı rehber. Saç dökülmesi, cilt gençleştirme, akne skarları, göz altı koyu halkaları ve daha fazlası.">
+    <meta name="keywords" content="PRP tedavisi, platelet rich plasma, saç dökülmesi PRP, vampir yüz bakımı, PRP saç, PRP cilt, akne skarları PRP, göz altı PRP">
+    <meta property="og:title" content="PRP Tedavisi Rehberi: Endikasyonlara Göre Kanıt Değerlendirmesi">
+    <meta property="og:description" content="PRP gerçekten işe yarıyor mu? Saçta güçlü kanıt, ciltte sınırlı, göz altında yetersiz. Endikasyon endikasyon kanıta dayalı değerlendirme.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: #f0fdfa;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET (FAST SUMMARY) ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(8,145,178,0.06));
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(13,148,136,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== INFO / WARNING / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PROTOCOL STEPS ===== */
+        .protocol-steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+        .protocol-steps li {
+            counter-increment: step;
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 1.25rem;
+            min-height: 2.5rem;
+        }
+        .protocol-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.25rem;
+            height: 2.25rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .protocol-steps li strong {
+            display: block;
+            color: #0f172a;
+            margin-bottom: 0.15rem;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            min-width: 650px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🩸 Kozmetik İşlemler</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 12 dk okuma</span>
+    </div>
+    <h1>PRP Tedavisi Rehberi: Endikasyonlara Göre Kanıt Değerlendirmesi</h1>
+    <p class="article-subtitle">Kendi kanınızdan elde edilen "iyileştirici kokteyl" gerçekten işe yarıyor mu? Saç dökülmesinden cilt gençleştirmeye, akne skarlarından göz altı halkalarına — her endikasyon için ayrı ayrı bilime bakıyoruz.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#giris">PRP Nedir?</a></li>
+            <li><a href="#nasil">PRP Nasıl Hazırlanır?</a></li>
+            <li><a href="#standardizasyon">PRP'nin En Büyük Sorunu: Standardizasyon</a></li>
+            <li><a href="#sac">Endikasyon 1: Saç Dökülmesi</a></li>
+            <li><a href="#cilt">Endikasyon 2: Cilt Gençleştirme</a></li>
+            <li><a href="#skar">Endikasyon 3: Akne Skarları</a></li>
+            <li><a href="#gozalti">Endikasyon 4: Göz Altı Koyu Halkaları</a></li>
+            <li><a href="#stria">Endikasyon 5: Çatlaklar (Stria)</a></li>
+            <li><a href="#yara">Endikasyon 6: Yara İyileşmesi</a></li>
+            <li><a href="#ozet-tablo">Endikasyon Özet Tablosu</a></li>
+            <li><a href="#riskler">Riskler ve Yan Etkiler</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">✅</span> PRP, <strong>saç dökülmesinde</strong> (androgenetik alopesi) en güçlü kanıta sahip — meta-analizlerle destekleniyor.</li>
+            <li><span class="bullet">🤔</span> <strong>Cilt gençleştirmede</strong> mantıklı mekanizma var ama büyük klinik çalışma yok — kanıt sınırlı.</li>
+            <li><span class="bullet">🤔</span> <strong>Akne skarlarında</strong> microneedling ile kombine umut verici, ama tek başına yetersiz.</li>
+            <li><span class="bullet">❌</span> <strong>Göz altı koyu halkalarında</strong> kanıt çok zayıf — paranızı başka yere harcayın.</li>
+            <li><span class="bullet">⚠️</span> Her klinikte <strong>farklı protokol</strong> uygulanıyor — bu standardizasyon sorunu çalışma sonuçlarını karşılaştırmayı zorlaştırıyor.</li>
+            <li><span class="bullet">💰</span> Ucuz bir tedavi değil. Birden fazla seans gerekiyor ve <strong>sonuçlar yavaş</strong> geliyor.</li>
+        </ul>
+    </div>
+
+    <!-- GİRİŞ -->
+    <h2 id="giris">🩸 PRP Nedir?</h2>
+
+    <p>PRP, "Platelet-Rich Plasma" yani <strong>"trombositten zengin plazma"</strong> demek. Türkçesi biraz ağız kalabalığı, ama aslında çok basit: kendi kanınızdan elde edilen bir "iyileştirici kokteyl."</p>
+
+    <p>"Vampir tedavisi" olarak da biliniyor 🧛 — çünkü kendi kanınız alınıp işleniyor ve tekrar size enjekte ediliyor. Kulağa biraz film senaryosu gibi geliyor, ama arkasında gerçek bir biyoloji var.</p>
+
+    <p>Trombositler (kan pulcukları) sadece kanama durdurmaz. İçlerinde <strong>büyüme faktörleri</strong> denen küçük protein sinyalleri taşırlar. Bu sinyaller doku onarımını tetikler, yeni kan damarı oluşumunu destekler ve hücre büyümesini hızlandırır.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PRP = kendi kanınızın "onarım ekibi" olan trombositlerini yoğunlaştırıp, iyileşmesini istediğiniz bölgeye geri enjekte etmek.</p>
+    </div>
+
+    <!-- NASIL HAZIRLANIYOR -->
+    <h2 id="nasil">🧪 PRP Nasıl Hazırlanır?</h2>
+
+    <p>İşlem düşündüğünüz kadar karmaşık değil. Dört adımda tamamlanıyor:</p>
+
+    <ol class="protocol-steps">
+        <li>
+            <strong>Kan Alımı</strong>
+            Kolunuzdan 10-60 ml kan alınır — normal bir kan testi gibi.
+        </li>
+        <li>
+            <strong>Santrifüj</strong>
+            Kan, özel bir santrifüj cihazında yüksek hızda döndürülür. Bu sayede kanın farklı bileşenleri ağırlıklarına göre ayrışır.
+        </li>
+        <li>
+            <strong>Ayrıştırma</strong>
+            Trombositlerden zengin kısım (PRP) pipetlenip ayrı bir şırıngaya alınır. Kırmızı kan hücreleri ve plazma atılır.
+        </li>
+        <li>
+            <strong>Enjeksiyon</strong>
+            Elde edilen PRP, hedef bölgeye (kafa derisi, yüz vb.) ince iğnelerle enjekte edilir.
+        </li>
+    </ol>
+
+    <p>Telefonun pil bölmesini açıp sadece pili çıkarmak gibi düşünün — kanın "güç kaynağı" olan büyüme faktörlerini ayırıyoruz, gerisini bırakıyoruz.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Kan alınır → döndürülür → trombosit-zengin kısım ayrılır → hedefe enjekte edilir. Toplam süre: yaklaşık 30-60 dakika.</p>
+    </div>
+
+    <!-- STANDARDIZASYON -->
+    <h2 id="standardizasyon">⚠️ PRP'nin En Büyük Sorunu: Standardizasyon</h2>
+
+    <p>PRP'nin en büyük sorununu baştan söyleyelim: <strong>her klinikte aldığınız PRP aynı şey değil.</strong> Ve bu gerçekten büyük bir problem.</p>
+
+    <p>Neden mi? Her klinikte farklı santrifüj cihazı, farklı dönüş hızı (RPM), farklı süre, farklı aktivasyon yöntemi kullanılıyor. Sonuç: trombosit konsantrasyonu bir yerde 2 kat artarken, başka bir yerde 8 kat artıyor.</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Bu neden önemli?</strong> Bir klinikte aldığınız PRP ile diğerinde aldığınız PRP aynı şey DEĞİL olabilir. Bu yüzden bilimsel çalışma sonuçları da birbirine benzemiyor. Bir çalışma "PRP işe yarıyor" diyor, diğeri "hayır" — çünkü farklı PRP'leri karşılaştırıyorlar.</p>
+    </div>
+
+    <p>Magalon ve arkadaşları (2016) bu sorunu detaylıca analiz etti: sadece santrifüj protokolü değiştiğinde bile, elde edilen PRP'deki trombosit sayısı ve büyüme faktörü konsantrasyonu <strong>dramatik farklılıklar</strong> gösteriyordu.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PRP'de standart bir "reçete" yok. Bu yüzden "PRP işe yarıyor mu?" sorusunun cevabı her zaman "hangi PRP?" olmalı.</p>
+    </div>
+
+    <!-- ==================== -->
+    <!-- ENDIKASYONLAR        -->
+    <!-- ==================== -->
+
+    <!-- ENDIKASYON 1: SAÇ DÖKÜLMESİ -->
+    <div class="endikasyon-header" id="sac">
+        <div class="endikasyon-icon" style="background:#dcfce7;">💇</div>
+        <div>
+            <div class="endikasyon-title">Endikasyon 1: Saç Dökülmesi</div>
+            <div class="endikasyon-subtitle">Androgenetik Alopesi (AGA)</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü</span>
+
+    <p>Saç dökülmesi, PRP'nin <strong>en güçlü kanıta sahip olduğu</strong> alan. Burada meta-analizlerden (yani birçok çalışmanın birleştirilmiş sonuçlarından) bahsedebiliyoruz — bu dermatolojide altın standart.</p>
+
+    <h3>Bilim ne diyor?</h3>
+
+    <p>Giordano ve arkadaşları (2017), mevcut çalışmaları sistematik olarak inceledi ve PRP'nin AGA'da saç yoğunluğunu <strong>anlamlı düzeyde artırdığını</strong> buldu. Gentile ve ekibi (2015) ise PRP ile tedavi edilen bölgelerde saç sayısının kontrol bölgelerine kıyasla belirgin şekilde arttığını gösterdi.</p>
+
+    <p>Evans ve arkadaşları (2020) daha geniş bir meta-analizde, PRP'nin hem erkeklerde hem kadınlarda saç yoğunluğu ve kalınlığı üzerinde <strong>pozitif etki</strong> gösterdiğini doğruladı.</p>
+
+    <h3>Nasıl çalışıyor?</h3>
+
+    <p>PRP'deki büyüme faktörleri (PDGF, VEGF, EGF, IGF-1) saç köklerine birkaç şekilde yardım ediyor:</p>
+
+    <ul>
+        <li><strong>Foliküler kan akımı artışı:</strong> VEGF yeni damar oluşumunu tetikler, saç kökleri daha iyi beslenir.</li>
+        <li><strong>Anagen faz uzaması:</strong> Saçın büyüme dönemi uzar, dökülme yavaşlar.</li>
+        <li><strong>Dermal papilla hücresi aktivasyonu:</strong> Saç köküne "büyü!" sinyali gönderilir.</li>
+    </ul>
+
+    <h3>Protokol nasıl?</h3>
+
+    <p>Genelde <strong>3-4 seans</strong> şeklinde, aralarında 4 hafta bırakılarak uygulanıyor. Ardından 3-6 ayda bir idame seansları öneriliyor. Yani bu bir kerelik bir şey değil — devam tedavisi gerektiriyor.</p>
+
+    <h3>Ne beklemeli?</h3>
+
+    <p>Gerçekçi olalım: PRP saç dökülmesinde <strong>kalınlaşma ve dökülme hızında yavaşlama</strong> sağlıyor. Yepyeni saç çıkışı sınırlı. En iyi sonuçlar, minoxidil ve finasterid gibi kanıtlanmış tedavilerle kombine edildiğinde görülüyor.</p>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Karar: Saç Dökülmesi</div>
+            <div class="verdict-text">PRP'nin en güçlü kanıtı saç dökülmesinde. Meta-analizler destekliyor. Ama tek başına mucize beklemeyin — minoxidil ve finasterid ile kombine en iyi sonuç. Erken başlamak kritik.</div>
+        </div>
+    </div>
+
+    <!-- ENDIKASYON 2: CİLT GENÇLEŞTİRME -->
+    <div class="endikasyon-header" id="cilt">
+        <div class="endikasyon-icon" style="background:#fef9c3;">✨</div>
+        <div>
+            <div class="endikasyon-title">Endikasyon 2: Cilt Gençleştirme</div>
+            <div class="endikasyon-subtitle">Vampir Yüz Bakımı / Yüz PRP</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Sınırlı</span>
+
+    <p>Ünlülerin Instagram'da paylaştığı, yüzü kana bulanmış fotoğrafları hatırlıyor musunuz? İşte bu "vampir yüz bakımı" — yani yüze uygulanan PRP. Sosyal medyada çok popüler, ama bilim ne diyor?</p>
+
+    <h3>Bilim ne diyor?</h3>
+
+    <p>Hausauer ve Humphrey (2018) PRP'nin cilt tekstürü ve parlaklığı üzerindeki etkisini inceledi. Küçük çalışmalarda <strong>hidrasyon artışı ve parlaklık iyileşmesi</strong> raporlandı. Ama büyük, iyi tasarlanmış randomize kontrollü çalışmalar (RKÇ) hâlâ yok.</p>
+
+    <p>En büyük sorun şu: PRP genelde <strong>microneedling ile birlikte</strong> uygulanıyor. Microneedling'in kendisi zaten cilt tekstürünü iyileştiriyor. PRP'nin ek katkısını ayrıştırmak çok zor.</p>
+
+    <p>Leo ve arkadaşları (2015), PRP'nin fibroblast aktivasyonu ve kolajen sentezi üzerindeki in-vitro etkilerini gösterdi. Mekanizma mantıklı — ama laboratuvar sonuçları her zaman klinik sonuçlara dönüşmüyor.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Mekanizma mantıklı, küçük çalışmalar pozitif, ama "PRP mi yoksa microneedling mi işe yarıyor?" sorusuna net cevap yok.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Karar: Cilt Gençleştirme</div>
+            <div class="verdict-text">Zararsız ve mekanizma mantıklı. Ama tek başına güçlü kanıt yok. Microneedling ile kombine uygulanıyorsa, katkısını ayrıştırmak zor. "Yapılabilir, ama mucize beklemeyin."</div>
+        </div>
+    </div>
+
+    <!-- ENDIKASYON 3: AKNE SKARLARI -->
+    <div class="endikasyon-header" id="skar">
+        <div class="endikasyon-icon" style="background:#fef9c3;">🩹</div>
+        <div>
+            <div class="endikasyon-title">Endikasyon 3: Akne Skarları</div>
+            <div class="endikasyon-subtitle">Akne İzleri / Skar Tedavisi</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Sınırlı ama Umut Verici</span>
+
+    <p>Akne skarları hayat kalitesini ciddi şekilde etkileyen bir sorun. PRP burada da gündeme geliyor — özellikle microneedling ile kombine olarak.</p>
+
+    <h3>Bilim ne diyor?</h3>
+
+    <p>Asif ve arkadaşları (2016), yüzün bir yarısına <strong>microneedling + PRP</strong>, diğer yarısına <strong>sadece microneedling</strong> uyguladı (split-face çalışma). Sonuç: PRP eklenen tarafta anlamlı düzeyde daha iyi skar iyileşmesi görüldü.</p>
+
+    <p>Chawla (2014) de benzer sonuçlar raporladı. Kombine tedavi, skar derinliğini ve cilt tekstürünü tek başına microneedling'den daha fazla iyileştirdi.</p>
+
+    <p>Ama dikkat: yine aynı sorun var. PRP'nin <strong>kendi başına katkısını</strong> net olarak ayrıştırmak zor. Microneedling zaten güçlü bir tedavi — PRP ne kadar ekleme yapıyor?</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Microneedling'e PRP eklemek skarları daha iyi iyileştirebilir. Ama PRP tek başına skar tedavisi olarak yeterli değil.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Karar: Akne Skarları</div>
+            <div class="verdict-text">Microneedling'e ek olarak fayda sağlayabilir — split-face çalışmalar bunu destekliyor. Ama tek başına skar tedavisi olarak yeterli değil. "Yardımcı oyuncu, başrol değil."</div>
+        </div>
+    </div>
+
+    <!-- ENDIKASYON 4: GÖZ ALTI -->
+    <div class="endikasyon-header" id="gozalti">
+        <div class="endikasyon-icon" style="background:#fef2f2;">👁️</div>
+        <div>
+            <div class="endikasyon-title">Endikasyon 4: Göz Altı Koyu Halkaları</div>
+            <div class="endikasyon-subtitle">Periorbital Hiperpigmentasyon</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-yetersiz">❌ Kanıt Düzeyi: Yetersiz</span>
+
+    <p>Göz altı morlukları/koyu halkalar için PRP'ye yönelen çok kişi var. Ama bilim burada oldukça sessiz.</p>
+
+    <h3>Bilim ne diyor?</h3>
+
+    <p>Çok az çalışma var, örneklem boyutları küçük ve kontrol grupları sorunlu. Mevcut verilerin çoğu vaka serileri veya pilot çalışma düzeyinde — yani en düşük kanıt seviyesi.</p>
+
+    <p>Daha da önemlisi: göz altı koyu halkalarının <strong>birçok farklı nedeni</strong> var. Vasküler (damarsal), pigmenter (melanin artışı), yapısal (çukurluk) veya bunların kombinasyonu olabilir. PRP hepsine çözüm olamaz.</p>
+
+    <div class="danger-box">
+        <p><strong>❌ Neden çalışmıyor?</strong> Koyu halkanın nedeni damarsal ise PRP'nin melanin üzerindeki etkisi işe yaramaz. Nedeni yapısal çukurluk ise büyüme faktörleri hacim kazandırmaz. Doğru tedavi için önce <strong>nedenin belirlenmesi</strong> gerekir.</p>
+    </div>
+
+    <div class="verdict-card verdict-negative">
+        <div class="verdict-icon">❌</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Karar: Göz Altı Koyu Halkaları</div>
+            <div class="verdict-text">Kanıt çok zayıf. Koyu halkaların birçok nedeni var ve PRP hepsine çözüm değil. Paranızı başka yere harcayın — önce bir dermatologla koyu halkanın nedenini belirleyin.</div>
+        </div>
+    </div>
+
+    <!-- ENDIKASYON 5: STRIA -->
+    <div class="endikasyon-header" id="stria">
+        <div class="endikasyon-icon" style="background:#fef9c3;">🦵</div>
+        <div>
+            <div class="endikasyon-title">Endikasyon 5: Çatlaklar (Stria)</div>
+            <div class="endikasyon-subtitle">Stria Distensae / Gerilme Çatlakları</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Sınırlı</span>
+
+    <p>Hamilelik, hızlı kilo değişimi veya ergenlikte oluşan çatlaklar — hemen herkesi ilgilendiren bir konu. PRP burada ne vaat ediyor?</p>
+
+    <h3>Bilim ne diyor?</h3>
+
+    <p>Birkaç pilot çalışma (Alves 2018 ve benzerleri) <strong>microneedling + PRP</strong> kombinasyonunu çatlaklarda test etti. Sonuçlar mütevazı: doku kalitesinde hafif iyileşme raporlandı, ama dramatik değişim yok.</p>
+
+    <p>Çatlaklar dermis tabakasında oluşan <strong>yapısal bir hasar</strong>. Büyüme faktörleri kolajen üretimini artırabilir, ama hasarlı elastin liflerini tamamen yenilemek çok zor. Özellikle beyaz/gümüşi çatlaklar (stria alba) çok dirençli.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Kırmızı-mor yeni çatlaklarda (stria rubra) daha umut verici, eski beyaz çatlaklarda etkisi sınırlı. Microneedling olmadan tek başına yetersiz.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Karar: Çatlaklar</div>
+            <div class="verdict-text">Microneedling + PRP kombinasyonu yeni çatlaklarda hafif iyileşme sağlayabilir. Ama mucize beklemeyin — çatlak tedavisi genel olarak zor bir alan ve hiçbir yöntem tam sonuç vermiyor.</div>
+        </div>
+    </div>
+
+    <!-- ENDIKASYON 6: YARA İYİLEŞMESİ -->
+    <div class="endikasyon-header" id="yara">
+        <div class="endikasyon-icon" style="background:#dcfce7;">🩸</div>
+        <div>
+            <div class="endikasyon-title">Endikasyon 6: Yara İyileşmesi / Cerrahi Sonrası</div>
+            <div class="endikasyon-subtitle">Kronik Yaralar ve Post-operatif İyileşme</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü (ama alanlar arası fark var)</span>
+
+    <p>PRP aslında tıpta ilk olarak <strong>yara iyileşmesi</strong> için kullanılmaya başlandı — dermatolojiden çok önce. Ortopedi ve spor hekimliği bu konuda oldukça ileri.</p>
+
+    <h3>Bilim ne diyor?</h3>
+
+    <p>Ortopedi ve spor hekimliği alanında güçlü veriler var: tendon yaralanmaları, kas hasarı ve cerrahi sonrası iyileşmede PRP'nin hızlandırıcı etkisi gösterilmiş. Büyüme faktörlerinin doku onarımını hızlandırması mantıklı ve kanıtlanmış bir mekanizma.</p>
+
+    <p>Dermatolojide ise veriler daha sınırlı. Kronik yaralar (diyabetik ülserler gibi) ve cerrahi sonrası iyileşmede umut verici sonuçlar var, ama büyük RKÇ'ler eksik.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PRP'nin yara iyileştirici etkisi güçlü bir biyolojik temele dayanıyor. Ortopedide kanıtlanmış, dermatolojide umut verici ama daha fazla çalışma gerekiyor.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Karar: Yara İyileşmesi</div>
+            <div class="verdict-text">Ortopedi ve spor hekimliğinde güçlü kanıt. Dermatolojide sınırlı ama mantıklı. Kronik yarası olanlar için dermatolog değerlendirmesiyle birlikte düşünülebilir.</div>
+        </div>
+    </div>
+
+    <!-- ÖZET TABLOSU -->
+    <h2 id="ozet-tablo">📊 Endikasyon Özet Tablosu</h2>
+
+    <p>Tüm endikasyonları tek bakışta karşılaştırmak için:</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Alan</th>
+                    <th>Kanıt Düzeyi</th>
+                    <th>Seans</th>
+                    <th>Beklenen Sonuç</th>
+                    <th>Karar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>💇 Saç Dökülmesi</strong></td>
+                    <td><span class="kanit-badge kanit-guclu">✅ Güçlü</span></td>
+                    <td>3-4 + idame</td>
+                    <td>Kalınlaşma, dökülme yavaşlaması</td>
+                    <td>✅ Önerilir</td>
+                </tr>
+                <tr>
+                    <td><strong>✨ Cilt Gençleştirme</strong></td>
+                    <td><span class="kanit-badge kanit-sinirli">🤔 Sınırlı</span></td>
+                    <td>3-6</td>
+                    <td>Parlaklık, hidrasyon artışı</td>
+                    <td>🤔 Belirsiz</td>
+                </tr>
+                <tr>
+                    <td><strong>🩹 Akne Skarları</strong></td>
+                    <td><span class="kanit-badge kanit-sinirli">🤔 Sınırlı</span></td>
+                    <td>3-4</td>
+                    <td>Skar derinliğinde azalma (kombine)</td>
+                    <td>🤔 Yardımcı</td>
+                </tr>
+                <tr>
+                    <td><strong>👁️ Göz Altı Koyu</strong></td>
+                    <td><span class="kanit-badge kanit-yetersiz">❌ Yetersiz</span></td>
+                    <td>3-4</td>
+                    <td>Kanıtlanmamış</td>
+                    <td>❌ Önerilmez</td>
+                </tr>
+                <tr>
+                    <td><strong>🦵 Çatlaklar</strong></td>
+                    <td><span class="kanit-badge kanit-sinirli">🤔 Sınırlı</span></td>
+                    <td>3-6</td>
+                    <td>Hafif doku iyileşmesi</td>
+                    <td>🤔 Belirsiz</td>
+                </tr>
+                <tr>
+                    <td><strong>🩸 Yara İyileşmesi</strong></td>
+                    <td><span class="kanit-badge kanit-guclu">✅ Güçlü*</span></td>
+                    <td>Duruma göre</td>
+                    <td>Hızlanmış iyileşme</td>
+                    <td>✅ Umut verici</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 0.82rem; color: var(--text-t); font-style: italic;">* Ortopedi/spor hekimliğinde güçlü, dermatolojide sınırlı çalışma.</p>
+
+    <!-- RİSKLER -->
+    <h2 id="riskler">⚡ Riskler ve Yan Etkiler</h2>
+
+    <p>"Kendi kanım, ne riski olabilir ki?" diye düşünebilirsiniz. Haklısınız, ciddi riskler düşük — ama sıfır değil.</p>
+
+    <ul>
+        <li><strong>Enjeksiyon yeri ağrısı:</strong> En yaygın yan etki. İğne giriyorsa ağrı olacak — bu kaçınılmaz.</li>
+        <li><strong>Morluk ve şişlik:</strong> Enjeksiyon bölgesinde birkaç gün sürebilir. Özellikle yüzde dikkat çekici olabilir.</li>
+        <li><strong>Enfeksiyon:</strong> Nadir ama mümkün. İğne giriyorsa enfeksiyon riski var — steril ortam şart.</li>
+        <li><strong>Alerjik reaksiyon:</strong> Çok nadir — kendi kanınız, ama kullanılan antikoagülan veya aktivatörlere reaksiyon olabilir.</li>
+        <li><strong>Sinir hasarı:</strong> Çok nadir. Deneyimli ellerde minimal risk.</li>
+    </ul>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PRP genel olarak güvenli — ama "kendi kanınız = sıfır risk" demek değil. Steril ortam ve deneyimli uygulayıcı şart.</p>
+    </div>
+
+    <!-- MİTLER -->
+    <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🧛 Mit Kıran</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Kendi kanım, yüzde yüz güvenli!"</div>
+            <div class="myth-fact">→ İğne giriyorsa enfeksiyon riski var. Sterilizasyon kritik. Ayrıca kullanılan antikoagülan veya aktivasyon maddelerine reaksiyon mümkün.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Herkes için işe yarar!"</div>
+            <div class="myth-fact">→ Her klinikte farklı protokol uygulanıyor. Aldığınız PRP'nin kalitesi, konsantrasyonu ve uygulaması sonucu doğrudan etkiliyor. Standardizasyon sorunu çözülmemiş.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Bir seansta farkı görürsünüz!"</div>
+            <div class="myth-fact">→ Minimum 3-4 seans gerekiyor ve sonuçlar yavaş geliyor. Saç dökülmesinde bile belirgin fark 3-6 ayda ortaya çıkıyor. Sabır gerekiyor.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "PRP gençlik iksiri, her şeye iyi gelir!"</div>
+            <div class="myth-fact">→ Saçta güçlü kanıt var. Ciltte sınırlı. Göz altında yetersiz. Her endikasyonun kanıt düzeyi farklı — hepsini aynı kefeye koymayın.</div>
+        </div>
+    </div>
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Giordano S, Romeo M, Lankinen P. Platelet-rich plasma for androgenetic alopecia: A systematic review. <em>J Cosmet Dermatol.</em> 2017;16(3):374-381.</li>
+            <li>Gentile P, Garcovich S, Bielli A, et al. The effect of platelet-rich plasma in hair regrowth: a randomized placebo-controlled trial. <em>Stem Cells Transl Med.</em> 2015;4(11):1317-1323.</li>
+            <li>Evans AG, Mwangi JM, Pope RW, et al. Platelet-rich plasma as a therapy for androgenic alopecia: a systematic review and meta-analysis. <em>J Dermatolog Treat.</em> 2020;33(1):498-511.</li>
+            <li>Asif M, Kanodia S, Singh K. Combined autologous platelet-rich plasma with microneedling verses microneedling with distilled water in the treatment of atrophic acne scars. <em>J Cosmet Dermatol.</em> 2016;15(4):434-439.</li>
+            <li>Chawla S. Split face comparative study of microneedling with PRP versus microneedling with vitamin C in treating atrophic post acne scars. <em>J Cutan Aesthet Surg.</em> 2014;7(4):209-212.</li>
+            <li>Alves R, Grimalt R. A review of platelet-rich plasma: history, biology, mechanism of action, and classification. <em>Skin Appendage Disord.</em> 2018;4(1):18-24.</li>
+            <li>Leo MS, Kumar AS, Kirit R, et al. Systematic review of the use of platelet-rich plasma in aesthetic dermatology. <em>J Cosmet Dermatol.</em> 2015;14(4):315-323.</li>
+            <li>Hausauer AK, Humphrey S. The use of platelet-rich plasma for skin rejuvenation. <em>Dermatol Surg.</em> 2018;44(Suppl 1):S67-S72.</li>
+            <li>Magalon J, Chateau AL, Bertrand B, et al. DEPA classification: a proposal for standardising PRP use and a retrospective evaluation of 244 patients. <em>BMJ Open Sport Exerc Med.</em> 2016;2(1):e000060.</li>
+            <li>Dhurat R, Sukesh MS. Principles and methods of preparation of platelet-rich plasma: a review and author's perspective. <em>J Cutan Aesthet Surg.</em> 2014;7(4):189-197.</li>
+            <li>Cervelli V, Garcovich S, Bielli A, et al. The effect of autologous activated platelet-rich plasma (AA-PRP) injection on pattern hair loss. <em>Biomed Res Int.</em> 2014;2014:760709.</li>
+            <li>Maria-Angeliki G, Alexandros-Efstratios K, Dimitris R, Konstantinos K. Platelet-rich plasma as a potential treatment for noncicatricial alopecias. <em>Int J Trichology.</em> 2015;7(2):54-63.</li>
+            <li>Elnehrawy NY, Ibrahim ZA, Eltoukhy AM, Nagy HM. Assessment of the efficacy and safety of single platelet-rich plasma injection on different types and causes of dark eye circles. <em>J Cosmet Dermatol.</em> 2020;19(10):2580-2587.</li>
+        </ol>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div>
+            <strong>Bu içerik tıbbi tavsiye değildir.</strong> Derindenbilgi'deki bilgiler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. PRP tedavisi düşünüyorsanız mutlaka bir dermatoloji uzmanına danışın.
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p style="font-size: 0.85rem;">Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <span>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrollTop = h.scrollTop || document.body.scrollTop;
+    const scrollHeight = h.scrollHeight - h.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progressBar').style.width = progress + '%';
+});
+
+// Smooth reveal on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+const fadeObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => fadeObs.observe(el));
+</script>
+
+</body>
+</html>
