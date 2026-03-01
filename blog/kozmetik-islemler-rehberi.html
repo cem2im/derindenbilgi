@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kozmetik İşlemler Rehberi: Genel Bakış | Derindenbilgi</title>
+    <meta name="description" content="Botulinum toksin, dolgu, lazer, PRP, mezoterapi, kimyasal peeling, microneedling, RF, HIFU — tüm kozmetik işlemler tek sayfada. Kanıta dayalı karşılaştırma ve verdiler.">
+    <meta name="keywords" content="kozmetik işlemler, botox, dolgu, lazer tedavisi, PRP, mezoterapi, kimyasal peeling, microneedling, dermapen, RF tedavisi, HIFU, sıvı yüz germe, eksozom, PDRN">
+    <meta property="og:title" content="Kozmetik İşlemler Rehberi: Genel Bakış">
+    <meta property="og:description" content="11 kozmetik işlemi tek sayfada karşılaştırın — invazivlik, iyileşme süresi, maliyet ve kanıt düzeyi tablosuyla.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+            color: #7c3aed;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== LINK CARD ===== */
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .link-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+        .link-card-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .link-card-text {
+            flex: 1;
+        }
+        .link-card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+        }
+        .link-card-desc {
+            font-size: 0.82rem;
+            color: var(--text-s);
+            margin-top: 2px;
+        }
+        .link-card-arrow {
+            font-size: 1.1rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        /* ===== KIME UYGUN BOX ===== */
+        .uygunluk-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+        .uygun-col {
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+        }
+        .uygun-col.evet {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .uygun-col.hayir {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .uygun-col h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .uygun-col.evet h4 { color: #166534; }
+        .uygun-col.hayir h4 { color: #991b1b; }
+        .uygun-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .uygun-col li {
+            font-size: 0.85rem;
+            padding: 0.25rem 0;
+            line-height: 1.5;
+        }
+        .uygun-col.evet li { color: #14532d; }
+        .uygun-col.hayir li { color: #7f1d1d; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+            .uygunluk-box { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">💉 Kozmetik İşlemler</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 22 dk okuma</span>
+    </div>
+    <h1>Kozmetik İşlemler Rehberi: 11 İşlem, Tek Sayfa</h1>
+    <p class="article-subtitle">Botulinum toksin, dolgu, lazer, PRP, mezoterapi, kimyasal peeling, microneedling, RF, HIFU ve daha fazlası — her işlemin kanıt düzeyini, kime uygun olduğunu ve risklerini tek sayfada karşılaştırın.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#botulinum">Botulinum Toksin</a></li>
+            <li><a href="#dolgu">Dermal Dolgu</a></li>
+            <li><a href="#lazer">Lazer Tedavileri</a></li>
+            <li><a href="#prp">PRP Tedavisi</a></li>
+            <li><a href="#mezoterapi">Mezoterapi</a></li>
+            <li><a href="#sivi-yuz-germe">Sıvı Yüz Germe</a></li>
+            <li><a href="#eksozom-pdrn">Eksozom & PDRN</a></li>
+            <li><a href="#kimyasal-peeling">Kimyasal Peeling (AHA, BHA, TCA, Jessner)</a></li>
+            <li><a href="#microneedling">Microneedling / Dermapen</a></li>
+            <li><a href="#rf">Radyofrekans (RF) Cihazları</a></li>
+            <li><a href="#hifu">HIFU (Yüksek Yoğunluklu Odaklanmış Ultrason)</a></li>
+            <li><a href="#karsilastirma">Büyük Karşılaştırma Tablosu</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#sonuc">Sonuç: Nasıl Seçmeliyim?</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">💉</span> <strong>Botulinum toksin</strong> ve <strong>dermal dolgu</strong> en çok çalışılmış, en güçlü kanıta sahip iki kozmetik işlem.</li>
+            <li><span class="bullet">⚡</span> <strong>Lazer</strong> çok geniş bir şemsiye — doğru endikasyonda doğru lazer kullanılırsa çok etkili, yanlışta zarar verebilir.</li>
+            <li><span class="bullet">🩸</span> <strong>PRP</strong> saç dökülmesinde güçlü kanıt, ciltte sınırlı. <strong>Mezoterapi</strong> popüler ama kanıtı zayıf.</li>
+            <li><span class="bullet">🧪</span> <strong>Kimyasal peeling</strong> düzgün uygulandığında mükemmel fiyat-performans sunan, yıllardır kanıtlanmış bir yöntem.</li>
+            <li><span class="bullet">🔧</span> <strong>Microneedling</strong> akne skarlarında ve cilt gençleştirmede iyi kanıta sahip. Evde değil, klinikte uygulanmalı.</li>
+            <li><span class="bullet">📡</span> <strong>RF</strong> ve <strong>HIFU</strong> "ameliyatsız sıkılaştırma" vaadinde — RF'de sınırlı kanıt, HIFU'da daha umut verici sonuçlar var ama beklentiyi gerçekçi tutmak şart.</li>
+            <li><span class="bullet">💰</span> En pahalı = en iyi <strong>DEĞİL.</strong> Kanıt düzeyine bakın, fiyata değil.</li>
+        </ul>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 1: LİNKLİ ÖZETLER -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 1</div>
+        <div class="part-divider-title">💉 Enjeksiyon Bazlı İşlemler</div>
+    </div>
+
+
+    <!-- BOTULINUM TOKSİN -->
+    <h2 id="botulinum">💉 Botulinum Toksin</h2>
+
+    <p><strong>Ne yapar?</strong> Kas-sinir bağlantısını geçici olarak bloke eder. Kas kasılamaz → mimik kırışıklıkları azalır. Etki 3–6 ay sürer, sonra tekrar gerekir.</p>
+
+    <p><strong>Kanıt düzeyi?</strong> Kozmetik dermatolojide en güçlü kanıta sahip işlemlerden biri. Yüzlerce randomize kontrollü çalışma (RKÇ) mevcut. FDA onaylı endikasyonları var (Small R, 2014).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Mimik kırışıklıkları için altın standart — 30 yılı aşkın klinik deneyim ve güçlü kanıt.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Botulinum Toksin</div>
+            <div class="verdict-text">Mimik kırışıklıklarında kanıtı çok güçlü. Deneyimli ellerde güvenli. Ama "her kırışıklığa botulinum toksin" yaklaşımı yanlış — sadece dinamik (hareketle oluşan) çizgilerde etkili.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Kaş arası, alın, kaz ayağı çizgileri</li>
+                <li>✔ Mimikle oluşan dinamik kırışıklıklar</li>
+                <li>✔ Aşırı terleme (hiperhidroz)</li>
+                <li>✔ Gerçekçi beklentileri olan hastalar</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Hamilelik ve emzirme dönemi</li>
+                <li>✘ Nöromüsküler hastalıklar</li>
+                <li>✘ Yerçekimi kaynaklı sarkma (bunun tedavisi farklı)</li>
+                <li>✘ Gerçekçi olmayan beklentiler</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="botulinum-toksin-rehberi.html" class="link-card">
+        <span class="link-card-icon">💉</span>
+        <div class="link-card-text">
+            <div class="link-card-title">Botulinum Toksin Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">Toksin tipleri, uygulama alanları, yan etkiler, mitler vs gerçekler</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- DERMAL DOLGU -->
+    <h2 id="dolgu">💋 Dermal Dolgu</h2>
+
+    <p><strong>Ne yapar?</strong> Deri altına enjekte edilen jel kıvamlı maddelerle hacim kazandırır, derin kırışıklıkları doldurur ve yüz konturlarını şekillendirir. Hyaluronik asit (HA) bazlı dolgular en yaygın ve en güvenli olanları — çünkü geri çözülebilir (Sundaram H et al., 2010).</p>
+
+    <p><strong>Kanıt düzeyi?</strong> HA dolgular için güçlü kanıt mevcut. Nasolabial kıvrımlar, dudak dolgusu, çene ve elmacık kemikleri gibi alanlarda onlarca RKÇ var.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Hacim kaybı ve derin kırışıklıklarda etkili — ama vasküler oklüzyon (damar tıkanıklığı) riski ciddi, deneyimli el şart.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Dermal Dolgu</div>
+            <div class="verdict-text">Hacim kaybında kanıtı güçlü. HA dolgular geri çözülebilir olması büyük avantaj. Ama vasküler oklüzyon riski sıfır değil — anatomi bilgisi kritik.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Nasolabial kıvrım, marjonet çizgileri</li>
+                <li>✔ Dudak, çene, elmacık hacim kaybı</li>
+                <li>✔ Göz altı çukurluğu (dikkatli uygulama ile)</li>
+                <li>✔ Yaşla bağlantılı yüz hacim kaybı</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Aktif cilt enfeksiyonu olan bölgeler</li>
+                <li>✘ Otoimmün hastalıklar (göreceli kontrendikasyon)</li>
+                <li>✘ "Doğal olmayan" düzeyde hacim isteyenler</li>
+                <li>✘ Kalıcı dolgu isteyenler (kalıcı dolgulardan kaçının!)</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="dermal-dolgu-rehberi.html" class="link-card">
+        <span class="link-card-icon">💋</span>
+        <div class="link-card-text">
+            <div class="link-card-title">Dermal Dolgu Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">HA, CaHA, PLLA karşılaştırması, vasküler oklüzyon, uygulama alanları</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- PRP -->
+    <h2 id="prp">🩸 PRP (Trombositten Zengin Plazma)</h2>
+
+    <p><strong>Ne yapar?</strong> Kendi kanınızdan alınan trombositler yoğunlaştırılıp enjekte ediliyor. Trombositler büyüme faktörleri salgılayarak doku onarımını tetikliyor. "Kendi kanınız" olması en büyük avantajı — alerjik reaksiyon riski minimal.</p>
+
+    <p><strong>Kanıt düzeyi?</strong> Saç dökülmesinde (androgenetik alopesi) meta-analizlerle desteklenen güçlü kanıt var (Gentile P & Garcovich S, 2020). Cilt gençleştirmede sınırlı, göz altında yetersiz.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Saçta güçlü, ciltte "belki", göz altında "hayır" — endikasyona göre kanıt düzeyi çok değişiyor.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — PRP</div>
+            <div class="verdict-text">Saç dökülmesinde güçlü kanıt, makul fiyat ve düşük risk profili. Ciltte henüz kesin değil. "Vampir yüz bakımı" gibi popüler uygulamalar bilimin önüne geçmiş durumda.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Androgenetik alopesi (saç dökülmesi)</li>
+                <li>✔ Yara iyileşmesi desteği</li>
+                <li>✔ Akne skarları (microneedling ile birlikte)</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Trombosit bozuklukları, kan hastalıkları</li>
+                <li>✘ Antikoagülan kullananlar</li>
+                <li>✘ Aktif enfeksiyon veya kanser</li>
+                <li>✘ Sadece "cilt parlaklığı" için (kanıt yetersiz)</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="prp-tedavisi-rehberi.html" class="link-card">
+        <span class="link-card-icon">🩸</span>
+        <div class="link-card-text">
+            <div class="link-card-title">PRP Tedavisi Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">Endikasyonlara göre kanıt değerlendirmesi, kit farkları, seans protokolleri</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- MEZOTERAPİ -->
+    <h2 id="mezoterapi">💧 Mezoterapi</h2>
+
+    <p><strong>Ne yapar?</strong> Vitamin, mineral, hyaluronik asit gibi "kokteylleri" deri içine çok sayıda mikro enjeksiyonla uygulamak. Deriye nemlendirme ve parlaklık vermeyi amaçlıyor. Türkiye'de çok popüler — ama bilim ne kadar destekliyor?</p>
+
+    <p><strong>Kanıt düzeyi?</strong> Cilt gençleştirmede sınırlı kanıt, saç dökülmesinde sınırlı, selülitte sınırlı, bölgesel zayıflamada kanıt yok. Birçok endikasyonda pazarlama bilimin çok önünde (Amin SP et al., 2006).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Türkiye'de popüler ama kanıtı zayıf. "Her derde deva" pazarlamasına inanmayın — endikasyona göre değerlendirin.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Mezoterapi</div>
+            <div class="verdict-text">Kısa süreli nemlendirme ve parlaklık sağlayabilir, ama uzun vadeli kanıt zayıf. Bölgesel zayıflama için mesoterapinin bilimsel karşılığı yok. Saçta PRP daha kanıtlı bir seçenek.</div>
+        </div>
+    </div>
+
+    <a href="mezoterapi-rehberi.html" class="link-card">
+        <span class="link-card-icon">💧</span>
+        <div class="link-card-text">
+            <div class="link-card-title">Mezoterapi Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">6 endikasyon için kanıt değerlendirmesi</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- SIVI YÜZ GERME -->
+    <h2 id="sivi-yuz-germe">💆 Sıvı Yüz Germe</h2>
+
+    <p><strong>Ne yapar?</strong> Dermal dolgu + botulinum toksin (bazen iplik de ekleniyor) kombinasyonuyla ameliyatsız yüz gençleştirme. Hacim kaybını dolgu ile, kasları toksinle gevşetip bütünsel bir "kaldırma" etkisi yaratmayı hedefliyor.</p>
+
+    <p><strong>Kanıt düzeyi?</strong> Bireysel bileşenler (dolgu ve toksin) güçlü kanıta sahip ama "kombinasyon protokolü" olarak standardize değil. Sonuç büyük ölçüde uygulayıcının deneyimine bağlı.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Ameliyatsız gençleştirme vaadi — bileşenleri kanıtlı ama "sıvı yüz germe" adı altında standardize bir protokol yok.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Sıvı Yüz Germe</div>
+            <div class="verdict-text">Deneyimli ellerde iyi sonuçlar verebilir ama cerrahinin yerini almaz. Orta düzey hacim kaybı ve gevşemede seçenek olabilir. İleri düzey sarkmada cerrahi yüz germe daha etkili.</div>
+        </div>
+    </div>
+
+    <a href="sivi-yuz-germe-rehberi.html" class="link-card">
+        <span class="link-card-icon">💆</span>
+        <div class="link-card-text">
+            <div class="link-card-title">Sıvı Yüz Germe Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">Dolgu + toksin + iplik kombinasyonu, kime uygun, riskler</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- EKSOZOM & PDRN -->
+    <h2 id="eksozom-pdrn">🧬 Eksozom & PDRN (Somon DNA)</h2>
+
+    <p><strong>Ne yapar?</strong> Eksozom = hücreler arası kargo paketleri, büyüme faktörleri taşıyor. PDRN = somon DNA'sından elde edilen parçacıklar, A2A reseptörü üzerinden doku onarımını tetikliyor. İkisi de "rejeneratif tıp" şemsiyesi altında pazarlanıyor.</p>
+
+    <p><strong>Kanıt düzeyi?</strong> PDRN yara iyileşmesinde gerçek kanıt taşıyor. Eksozom standardizasyon ve düzenleme açısından ciddi sorunlu. Cilt gençleştirmede her ikisi de henüz erken aşamada (Squadrito F et al., 2017).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Hype trenin çok önünde koşuyor. Bilim yetiştiğinde devrimci olabilir — ama henüz o noktada değiliz.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Eksozom & PDRN</div>
+            <div class="verdict-text">PDRN'nin yara iyileşmesinde kanıtı var. Kozmetik kullanımda ikisi de erken aşamada. Eksozomda standardizasyon sorunu ciddi — FDA uyarısını ciddiye alın. Retinoid + SPF hâlâ çok daha kanıtlı.</div>
+        </div>
+    </div>
+
+    <a href="eksozom-pdrn-somon-dna.html" class="link-card">
+        <span class="link-card-icon">🧬</span>
+        <div class="link-card-text">
+            <div class="link-card-title">Eksozom ve PDRN Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">Hype mı bilim mi? Endikasyonlara göre kanıt değerlendirmesi</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 2: ENERJİ VE CİHAZ BAZLI İŞLEMLER -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 2</div>
+        <div class="part-divider-title">⚡ Enerji ve Cihaz Bazlı İşlemler</div>
+    </div>
+
+
+    <!-- LAZER -->
+    <h2 id="lazer">⚡ Lazer Tedavileri</h2>
+
+    <p><strong>Ne yapar?</strong> Lazer = belirli bir dalga boyunda yoğunlaştırılmış ışık. Farklı dalga boyları farklı hedeflere (melanin, hemoglobin, su) etki eder. Doğru lazer → doğru endikasyon kombinasyonu çok önemli.</p>
+
+    <p><strong>Lazer çeşitleri çok geniş:</strong> Fraksiyonel CO₂, Er:YAG (ablatif), fraksiyonel non-ablatif, IPL (aslında lazer değil — yoğun atımlı ışık), PDL (damar lazeri), pikosaniye lazer (pigment), Nd:YAG ve daha fazlası.</p>
+
+    <p><strong>Kanıt düzeyi?</strong> Endikasyona göre değişiyor. Akne skarlarında ablatif fraksiyonel lazer güçlü kanıta sahip. Lazer epilasyonda çok güçlü. Cilt gençleştirmede non-ablatif lazerlerin kanıtı daha sınırlı (Wat H et al., 2014).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>"Lazer" tek bir şey değil — onlarca farklı cihaz ve endikasyon var. Doğru lazeri, doğru soruna, doğru cilt tipinde uygulamak şart.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Lazer Tedavileri</div>
+            <div class="verdict-text">Doğru endikasyonda çok etkili ve güçlü kanıtlı. Ama "lazer her şeyi çözer" değil. Koyu cilt tiplerinde (Fitzpatrick IV-VI) dikkatli olmak gerekiyor — hiperpigmentasyon riski var.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Akne skarları (ablatif fraksiyonel)</li>
+                <li>✔ Güneş lekeleri, vasküler lezyonlar</li>
+                <li>✔ Lazer epilasyon (koyu kıl + açık ten)</li>
+                <li>✔ Fotorejüvenasyon (güneş hasarlı cilt)</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Aktif güneş yanığı veya tan</li>
+                <li>✘ İzotretinoin kullanımı (son 6 ay)</li>
+                <li>✘ Aktif herpes enfeksiyonu (profilaksi şart)</li>
+                <li>✘ Koyu cilt tipleri — bazı lazerlerle (dikkat!)</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="lazer-tedavileri-rehberi.html" class="link-card">
+        <span class="link-card-icon">⚡</span>
+        <div class="link-card-text">
+            <div class="link-card-title">Lazer Tedavileri Rehberi — Detaylı Yazı</div>
+            <div class="link-card-desc">CO₂, fraksiyonel, IPL, PDL, pikosaniye — her lazer tipi ve lazer epilasyon</div>
+        </div>
+        <span class="link-card-arrow">→</span>
+    </a>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 3: DETAYLI İŞLEMLER (AYRI YAZISI OLMAYAN) -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 3</div>
+        <div class="part-divider-title">🧪 Detaylı İşlem Rehberleri</div>
+    </div>
+
+
+    <!-- KİMYASAL PEELİNG -->
+    <h2 id="kimyasal-peeling">🧪 Kimyasal Peeling</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.2)">🧪</div>
+        <div>
+            <div class="endikasyon-title">Kimyasal Peeling</div>
+            <div class="endikasyon-subtitle">AHA, BHA, TCA, Jessner — cildin kontrollü yenilenmesi</div>
+        </div>
+    </div>
+
+    <p><strong>Kimyasal peeling ne yapar?</strong> Cildin üst katmanlarını kontrollü bir şekilde "soyarak" alttan yeni, daha düzgün cilt ortaya çıkmasını sağlar. Derinliğe göre <strong>yüzeyel, orta</strong> ve <strong>derin</strong> peeling olmak üzere üçe ayrılır.</p>
+
+    <p>Dermatolojide onlarca yıldır kullanılan, kanıtı güçlü ve maliyeti düşük bir yöntem. "Eski" olması "etkisiz" demek değil — tam tersi.</p>
+
+    <h3>AHA (Alfa Hidroksi Asitler)</h3>
+    <p><strong>Glikolik asit, laktik asit, mandelik asit</strong> bu grubun en bilinenleri. Suda çözünürler — yani cildin yüzeyinde çalışırlar. Glikolik asit en küçük molekül, en derin penetre eden. Laktik asit daha nazif (Kornhauser A et al., 2010).</p>
+
+    <p><strong>Ne yapar?</strong> Stratum korneumdaki (ölü deri tabakası) hücreler arası bağları zayıflatarak soyulmayı tetikler. Düşük konsantrasyonda (%5–10) nemlendirici etki, yüksekte (%30–70) peeling etkisi.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>AHA = yüzeyel peeling. Glikolik en agresif, laktik en nazif. Parlaklık, ince çizgiler ve hiperpigmentasyonda etkili.</p>
+    </div>
+
+    <h3>BHA (Beta Hidroksi Asit — Salisilik Asit)</h3>
+    <p><strong>Salisilik asit</strong> yağda çözünür — bu yüzden sebumun (yağ) içinden geçip gözenek içini temizleyebilir. AHA'lar bunu yapamaz. Aknede altın standart eksfoliant (Arif T, 2015).</p>
+
+    <p><strong>Peeling konsantrasyonları:</strong> %20–30 salisilik asit peeling, inflamatuvar ve komedonal aknede etkili. Anti-inflamatuvar özelliği de var — AHA'dan farkı bu.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>BHA = gözenek içi temizlik. Akne ve yağlı ciltte AHA'dan daha uygun. Anti-inflamatuvar bonus etkisi var.</p>
+    </div>
+
+    <h3>TCA (Triklorasetik Asit)</h3>
+    <p><strong>Orta-derin peeling ajanı.</strong> %15–20 yüzeyel, %25–35 orta, %50+ derin peeling yapar. Protein denatürasyonu ile çalışır — derinin üst katmanlarını "yakarak" soyar ve alt katmanlarda kolajen remodeling tetikler (Lee HJ & Kim YJ, 2018).</p>
+
+    <p>Akne skarları, kırışıklıklar ve hiperpigmentasyonda etkili. Ama daha agresif = daha fazla iyileşme süresi ve risk. Koyu cilt tiplerinde (%35+) hiperpigmentasyon riski artar.</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ TCA %35 ve üzeri sadece deneyimli dermatologlarca uygulanmalı.</strong> Derin TCA peelingi ciddi yan etkilere (skar, enfeksiyon, kalıcı pigment değişikliği) yol açabilir.</p>
+    </div>
+
+    <h3>Jessner Solüsyonu</h3>
+    <p><strong>Laktik asit + salisilik asit + rezorsinol</strong> kombinasyonu. Tek başına yüzeyel-orta peeling yapar. Sıklıkla TCA ile kombinasyon halinde kullanılır — Jessner önce uygulanıp TCA'nın daha homojen penetre etmesi sağlanır.</p>
+
+    <p>Melazma tedavisinde Jessner + TCA kombinasyonu iyi çalışılmış bir protokoldür.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Jessner = üç asidin kombinasyonu. TCA ile birlikte kullanıldığında melazma ve akne skarlarında iyi sonuçlar verebilir.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Kimyasal Peeling</div>
+            <div class="verdict-text">Onlarca yıllık kanıt, düşük maliyet, geniş endikasyon yelpazesi. Akne, hiperpigmentasyon, ince çizgiler ve fotorejüvenasyonda etkili. Doğru konsantrasyon ve cilt tipine uygun ajan seçimi kritik.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Akne ve akne skarları (BHA, TCA)</li>
+                <li>✔ Hiperpigmentasyon / melazma (glikolik, Jessner+TCA)</li>
+                <li>✔ İnce çizgiler, mat cilt (AHA)</li>
+                <li>✔ Fotorejüvenasyon</li>
+                <li>✔ Bütçe dostu seçenek arayanlar</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Aktif herpes enfeksiyonu</li>
+                <li>✘ Açık yaralar veya aktif egzama</li>
+                <li>✘ Son 6 ayda izotretinoin kullananlar</li>
+                <li>✘ Koyu cilt tipleri + derin peeling (hiperpigmentasyon riski)</li>
+                <li>✘ Güneşe yoğun maruziyet dönemlerinde</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- MICRONEEDLING -->
+    <h2 id="microneedling">🔧 Microneedling / Dermapen</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.2)">🔧</div>
+        <div>
+            <div class="endikasyon-title">Microneedling (Dermapen / Dermaroller)</div>
+            <div class="endikasyon-subtitle">Kontrollü mikro yaralanma ile kolajen üretimini tetikleme</div>
+        </div>
+    </div>
+
+    <p><strong>Ne yapar?</strong> İnce iğnelerle (0.5–2.5 mm) ciltte binlerce mikro kanal açıyor. Vücut bu "yaraları" onarmaya çalışırken yeni kolajen ve elastin üretiyor. Buna <strong>kollajen indüksiyon tedavisi (KİT)</strong> deniyor (Fernandes D, 2005).</p>
+
+    <p><strong>Dermapen vs Dermaroller:</strong> Dermapen motorlu ve dikey iğne hareketi yapar — daha kontrollü, daha az travma. Dermaroller yatay hareketle cildi daha çok yırtar. Klinik uygulamada dermapen tercih edilir.</p>
+
+    <h3>Endikasyonlar ve Kanıt</h3>
+    <p><strong>Akne skarları:</strong> En güçlü kanıt burada. Bir meta-analizde microneedlingin atrofik akne skarlarında anlamlı iyileşme sağladığı gösterilmiş (Iriarte C et al., 2017). Fraksiyonel lazerle karşılaştırılabilir sonuçlar — daha düşük maliyetle.</p>
+
+    <p><strong>Cilt gençleştirme:</strong> Orta düzey kanıt. İnce çizgiler, cilt dokusu ve parlaklıkta iyileşme bildiren çalışmalar var. Ama "dramatik gençleşme" beklentisi gerçekçi değil.</p>
+
+    <p><strong>Stria (çatlak):</strong> Sınırlı kanıt. Bazı çalışmalar olumlu, ama büyük RKÇ eksik.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Akne skarlarında güçlü kanıt, cilt gençleştirmede orta. Lazerden daha ucuz, daha az iyileşme süresi. Ama evde dermaroller kullanmak riskli — klinikte yaptırın.</p>
+    </div>
+
+    <div class="danger-box">
+        <div class="danger-box-title">🚨 Evde Microneedling Riski</div>
+        <p>İnternet'te satılan dermarollerlerle evde uygulama <strong>enfeksiyon, skar ve hiperpigmentasyon</strong> riski taşır. İğne sterilizasyonu ve derinlik kontrolü kritik — bu ancak klinik ortamda güvenli bir şekilde yapılabilir.</p>
+        <p>0.25 mm'lik kozmetik dermarollerler ürün penetrasyonu için nispeten güvenli olabilir — ama 0.5 mm ve üzeri klinik ortam gerektirir.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Microneedling</div>
+            <div class="verdict-text">Akne skarlarında güçlü kanıt, cilt gençleştirmede makul. Fiyat-performansı iyi. PRP ile kombinasyonu giderek daha popüler. Ama evde değil, klinikte yaptırın.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Atrofik akne skarları</li>
+                <li>✔ İnce çizgiler ve cilt dokusu bozukluğu</li>
+                <li>✔ Stria (çatlaklar) — sınırlı kanıtla</li>
+                <li>✔ PRP veya eksozom ile kombine tedaviler</li>
+                <li>✔ Koyu cilt tipleri (lazerden daha güvenli)</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Aktif akne veya enfeksiyon</li>
+                <li>✘ Keloid oluşum öyküsü</li>
+                <li>✘ Antikoagülan kullananlar</li>
+                <li>✘ Aktif herpes</li>
+                <li>✘ Evde derin iğne kullanımı (risk!)</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- RADYOFREKANS (RF) -->
+    <h2 id="rf">📡 Radyofrekans (RF) Cihazları</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(251,146,60,0.1); border:1px solid rgba(251,146,60,0.2)">📡</div>
+        <div>
+            <div class="endikasyon-title">Radyofrekans (RF)</div>
+            <div class="endikasyon-subtitle">Elektromanyetik enerji ile doku ısıtma ve sıkılaştırma</div>
+        </div>
+    </div>
+
+    <p><strong>Ne yapar?</strong> Radyofrekans dalgaları (elektromanyetik enerji) deri altı dokularda ısı üretir. Bu kontrollü ısınma kolajen liflerini büzer (anlık sıkılaşma) ve ardından yeni kolajen üretimini tetikler (uzun vadeli etki). Düşünün: kolajen ısıyla büzülüyor, sonra vücut yenisini üretiyor.</p>
+
+    <p><strong>Cihaz tipleri:</strong> Monopolar, bipolar ve fraksiyonel RF olmak üzere üç temel tip var. Monopolar RF daha derin dokulara ulaşır, fraksiyonel RF mikro iğneler aracılığıyla deriye hem mekanik hem termal hasar vererek kolajen üretimini iki yoldan tetikler (Lolis MS & Goldberg DJ, 2012).</p>
+
+    <h3>Kanıt Durumu</h3>
+
+    <p><strong>Cilt sıkılaştırma:</strong> Sınırlı kanıt. Çalışmalar "hafif-orta düzeyde iyileşme" bildiriyor ama büyük RKÇ'ler az. Hasta memnuniyeti değişken. Cerrahi yüz germe ile karşılaştırılamaz — beklentiyi düşük tutun.</p>
+
+    <p><strong>Selülit:</strong> Bazı çalışmalar kısa vadeli iyileşme gösteriyor ama uzun vadeli etkinlik belirsiz.</p>
+
+    <p><strong>Fraksiyonel RF (mikro-iğneli):</strong> Akne skarlarında daha güçlü kanıt var. Microneedling + RF kombinasyonu tek başına microneedlingden daha etkili olabilir (Cho SI et al., 2012).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>RF "ameliyatsız sıkılaştırma" vadediyor — hafif gevşemede fayda görebilirsiniz ama cerrahi gerektiren sarkma için çözüm değil.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Radyofrekans (RF)</div>
+            <div class="verdict-text">Hafif-orta gevşemede sınırlı fayda sağlayabilir. Fraksiyonel RF (mikro-iğneli) akne skarlarında daha umut verici. Ama "ameliyatsız yüz germe" pazarlaması abartılı. Cerrahinin yerini almaz.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Hafif-orta cilt gevşemesi</li>
+                <li>✔ Akne skarları (fraksiyonel RF)</li>
+                <li>✔ Cerrahi istemeyen / uygun olmayan hastalar</li>
+                <li>✔ Koyu cilt tipleri (lazerden daha güvenli)</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ Kalp pili veya metal implant taşıyanlar</li>
+                <li>✘ İleri düzey sarkma (cerrahi gerekir)</li>
+                <li>✘ Hamilelik</li>
+                <li>✘ Çok yüksek beklentiler</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- HIFU -->
+    <h2 id="hifu">🔊 HIFU (Yüksek Yoğunluklu Odaklanmış Ultrason)</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2)">🔊</div>
+        <div>
+            <div class="endikasyon-title">HIFU</div>
+            <div class="endikasyon-subtitle">Ultrason enerjisi ile derin doku sıkılaştırma — ameliyatsız kaldırma vaadi</div>
+        </div>
+    </div>
+
+    <p><strong>Ne yapar?</strong> Odaklanmış ultrason dalgaları derinin derinliklerindeki (SMAS tabakası — 3–4.5 mm) belirli noktalarda yoğun ısı (60–70°C) oluşturur. Bu termal hasar noktalarında vücut onarım sürecini başlatır → yeni kolajen ve elastin üretimi.</p>
+
+    <p><strong>RF'den farkı:</strong> HIFU çok daha derin dokulara ulaşabilir — SMAS tabakasına kadar. Bu tabaka normalde sadece cerrahi yüz germede manipüle edilebilen katmandır. Teoride "ameliyatsız cerrahiye en yakın işlem" — ama pratikte beklentiyi gerçekçi tutmak şart (Alam M et al., 2018).</p>
+
+    <h3>Kanıt Durumu</h3>
+
+    <p><strong>Yüz ve boyun sıkılaştırma:</strong> RF'ye kıyasla daha güçlü kanıt var. Birçok RKÇ, HIFU sonrası "anlamlı cilt sıkılaşması ve kaldırma etkisi" bildiriyor. Kaş kaldırma ve çene hattı konturlamasında FDA onayı mevcut (Fabi SG, 2015).</p>
+
+    <p><strong>Vücut sıkılaştırma:</strong> Sınırlı kanıt. Kollar, iç bacak ve karın gibi alanlarda bazı çalışmalar olumlu — ama yüzdeki kadar güçlü veri yok.</p>
+
+    <p><strong>Ama:</strong> Sonuçlar genellikle "hafif-orta" düzeyde. Cerrahi yüz germenin yerini almıyor. Ağrı (işlem sırasında) ve sinir hasarı (geçici) gibi riskleri var.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Ameliyatsız sıkılaştırma seçenekleri arasında en derin etki eden — ama cerrahi sonucu beklemeyin. Hafif-orta gevşemede en mantıklı.</p>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>⚠️ HIFU ağrılı olabilir.</strong> İşlem sırasında batıcı-yanıcı bir ağrı hissedilmesi yaygın. Bazı cihazlarda anestezi gerekebilir. Ayrıca <strong>yüzeysel sinir hasarı</strong> (geçici uyuşma, karıncalanma) bildirilmiş vakalarda var — genellikle 2–6 haftada düzelir ama ciddi komplikasyon olarak bilinmeli.</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — HIFU</div>
+            <div class="verdict-text">Ameliyatsız seçenekler arasında en derin etkili. Yüz ve boyun sıkılaştırmada RF'den daha güçlü kanıt. Ama sonuçlar "hafif-orta" düzeyde, ağrılı olabilir ve cerrahi yüz germenin yerini almaz. Hafif-orta gevşemede ve cerrahiye uygun olmayan hastalarda iyi bir seçenek.</div>
+        </div>
+    </div>
+
+    <div class="uygunluk-box">
+        <div class="uygun-col evet">
+            <h4>✅ Kime Uygun?</h4>
+            <ul>
+                <li>✔ Hafif-orta yüz ve boyun gevşemesi</li>
+                <li>✔ Kaş düşüklüğü, çene hattı belirsizleşmesi</li>
+                <li>✔ Cerrahiye uygun olmayan veya istemeyen hastalar</li>
+                <li>✔ 35–65 yaş arası, "bakım" amaçlı</li>
+            </ul>
+        </div>
+        <div class="uygun-col hayir">
+            <h4>❌ Kime Uygun Değil?</h4>
+            <ul>
+                <li>✘ İleri düzey sarkma (cerrahi gerekir)</li>
+                <li>✘ Çok ince cilt altı yağ dokusu</li>
+                <li>✘ Metal implant bölgesi</li>
+                <li>✘ Ağrı toleransı çok düşük olanlar</li>
+                <li>✘ Hamilelik</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 4: KARŞILAŞTIRMA VE SONUÇ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 4</div>
+        <div class="part-divider-title">📊 Büyük Karşılaştırma</div>
+    </div>
+
+
+    <h2 id="karsilastirma">📊 11 İşlem Karşılaştırma Tablosu</h2>
+
+    <p>Tüm kozmetik işlemleri yan yana koyduğumuzda tablo netleşiyor. Dikkat: "kanıt düzeyi" ve "maliyet" arasında doğrusal ilişki yok — pahalı olan daha etkili anlamına gelmiyor.</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>İşlem</th>
+                    <th>İnvazivlik</th>
+                    <th>İyileşme</th>
+                    <th>Maliyet</th>
+                    <th>Kanıt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>💉 Botulinum Toksin</strong></td>
+                    <td>Düşük (enjeksiyon)</td>
+                    <td>0–1 gün</td>
+                    <td>💰💰</td>
+                    <td>✅ Güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>💋 Dermal Dolgu</strong></td>
+                    <td>Düşük-Orta</td>
+                    <td>1–3 gün</td>
+                    <td>💰💰💰</td>
+                    <td>✅ Güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>⚡ Lazer (Ablatif)</strong></td>
+                    <td>Orta-Yüksek</td>
+                    <td>5–14 gün</td>
+                    <td>💰💰💰</td>
+                    <td>✅ Güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>⚡ Lazer (Non-ablatif)</strong></td>
+                    <td>Düşük-Orta</td>
+                    <td>1–3 gün</td>
+                    <td>💰💰</td>
+                    <td>🤔 Sınırlı</td>
+                </tr>
+                <tr>
+                    <td><strong>🩸 PRP</strong></td>
+                    <td>Düşük (enjeksiyon)</td>
+                    <td>0–1 gün</td>
+                    <td>💰💰</td>
+                    <td>✅ Saçta güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>💧 Mezoterapi</strong></td>
+                    <td>Düşük (enjeksiyon)</td>
+                    <td>0–1 gün</td>
+                    <td>💰💰</td>
+                    <td>🤔 Sınırlı</td>
+                </tr>
+                <tr>
+                    <td><strong>🧪 Kimyasal Peeling</strong></td>
+                    <td>Düşük (yüzeyel) → Orta (TCA)</td>
+                    <td>1–7 gün</td>
+                    <td>💰</td>
+                    <td>✅ Güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>🔧 Microneedling</strong></td>
+                    <td>Düşük-Orta</td>
+                    <td>1–3 gün</td>
+                    <td>💰💰</td>
+                    <td>✅ Skarda güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>📡 RF</strong></td>
+                    <td>Düşük (non-invaziv)</td>
+                    <td>0 gün</td>
+                    <td>💰💰💰</td>
+                    <td>🤔 Sınırlı</td>
+                </tr>
+                <tr>
+                    <td><strong>🔊 HIFU</strong></td>
+                    <td>Düşük (non-invaziv)</td>
+                    <td>0–1 gün</td>
+                    <td>💰💰💰</td>
+                    <td>🤔 Orta</td>
+                </tr>
+                <tr>
+                    <td><strong>🧬 Eksozom / PDRN</strong></td>
+                    <td>Düşük (enjeksiyon)</td>
+                    <td>0–1 gün</td>
+                    <td>💰💰💰💰</td>
+                    <td>🤔 Erken aşama</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>En ucuz seçeneklerden biri olan kimyasal peeling, kanıt düzeyinde en pahalı seçeneklerle aynı ligde. Fiyat ≠ etkinlik.</p>
+    </div>
+
+
+    <!-- MİTLER -->
+    <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Botulinum toksin yüzü donduruyor"</div>
+            <div class="myth-fact">YANLIŞ. Doğru dozda ve doğru bölgelere uygulandığında mimikler korunur. "Donuk yüz" aşırı doz veya yanlış uygulama sonucudur.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Lazer her cilt tipine aynı şekilde uygulanır"</div>
+            <div class="myth-fact">TEHLİKELİ yanlış. Koyu cilt tiplerinde bazı lazerler hiperpigmentasyona veya yanığa neden olabilir. Cilt tipi değerlendirmesi şart.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Mezoterapi ile bölgesel zayıflanır"</div>
+            <div class="myth-fact">BİLİMSEL KARŞILIĞI YOK. Mesoterapiyle lokal yağ yakımı kanıtlanmamış. Bölgesel zayıflama fizyolojik olarak tartışmalı bir kavram.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "RF ve HIFU cerrahinin yerini alır"</div>
+            <div class="myth-fact">ABARTILI. Hafif-orta gevşemede fayda sağlayabilir ama ileri sarkma için cerrahi yüz germe hâlâ altın standart. "Ameliyatsız yüz germe" pazarlaması beklentiyi şişiriyor.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Evde dermaroller lazere eşdeğer"</div>
+            <div class="myth-fact">YANLIŞ ve TEHLİKELİ. Evde derin iğneli dermaroller enfeksiyon, skar ve hiperpigmentasyon riski taşır. Klinik ortamda uygulanan dermapen ile ev uygulaması karşılaştırılamaz.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "En pahalı işlem en iyisidir"</div>
+            <div class="myth-fact">KESİNLİKLE YANLIŞ. Kimyasal peeling en ucuz seçeneklerden biri — ama kanıt düzeyi en güçlüler arasında. Eksozom en pahalılardan biri — kanıt düzeyi en zayıf.</div>
+        </div>
+    </div>
+
+
+    <!-- SONUÇ -->
+    <h2 id="sonuc">🏁 Sonuç: Nasıl Seçmeliyim?</h2>
+
+    <div class="highlight-box">
+        <p><strong>📌 Adım 1: Sorununuzu net tanımlayın.</strong> "Gençleşmek istiyorum" çok genel. Mimik kırışıklıkları mı? Hacim kaybı mı? Sarkma mı? Leke mi? Her soruna farklı çözüm.</p>
+        <p><strong>📌 Adım 2: Kanıt düzeyine bakın.</strong> Bu tablodaki verdilere dikkat edin. "Yeni" ve "popüler" her zaman "etkili" demek değil.</p>
+        <p><strong>📌 Adım 3: Bütçenizi planlayın.</strong> Çoğu işlem tek seans değil — bakım seansları gerekir. Toplam maliyeti hesaplayın.</p>
+        <p><strong>📌 Adım 4: Uygulayıcıyı araştırın.</strong> İşlemin kendisi kadar kimin uyguladığı da önemli. Dermatolog veya plastik cerrah tercih edin.</p>
+        <p><strong>📌 Ve her zaman:</strong> Retinoid + SPF + sağlıklı yaşam → hiçbir kozmetik işlemin yerini almaz. Temel bakımınız doğruysa, kozmetik işlemler onu "tamamlar."</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🎯</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Genel Tavsiye</div>
+            <div class="verdict-text">Kanıta bakın, hype'a değil. "En yeni = en iyi" değil. Uygulamayı kimin yaptığı en az ne uygulandığı kadar önemli. Ve hiçbir kozmetik işlem temel cilt bakımının (retinoid + SPF) yerini almaz.</div>
+        </div>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir kozmetik işleme başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Small R. Botulinum toxin injection for facial wrinkles. <em>Am Fam Physician.</em> 2014;90(3):168–175.</li>
+            <li>Sundaram H, Voigts B, Beer K, Meland M. Comparison of the rheological properties of viscosity and elasticity in two categories of soft tissue fillers. <em>Dermatol Surg.</em> 2010;36(Suppl 3):1859–1865.</li>
+            <li>Gentile P, Garcovich S. Systematic review of platelet-rich plasma use in androgenetic alopecia compared with minoxidil and finasteride. <em>Dermatol Surg.</em> 2020;46(12):1592–1603.</li>
+            <li>Amin SP, Phelps RG, Goldberg DJ. Mesotherapy for facial skin rejuvenation: a clinical, histologic, and electron microscopic evaluation. <em>Dermatol Surg.</em> 2006;32(12):1467–1472.</li>
+            <li>Squadrito F, Bitto A, Irrera N, et al. Pharmacological activity and clinical use of PDRN. <em>Front Pharmacol.</em> 2017;8:224.</li>
+            <li>Kornhauser A, Coelho SG, Hearing VJ. Applications of hydroxy acids: classification, mechanisms, and photoactivity. <em>Clin Cosmet Investig Dermatol.</em> 2010;3:135–142.</li>
+            <li>Arif T. Salicylic acid as a peeling agent: a comprehensive review. <em>Clin Cosmet Investig Dermatol.</em> 2015;8:455–461.</li>
+            <li>Lee HJ, Kim YJ. Chemical peeling for acne treatment and skin rejuvenation. <em>Arch Plast Surg.</em> 2018;45(6):509–515.</li>
+            <li>Fernandes D. Minimally invasive percutaneous collagen induction. <em>Oral Maxillofac Surg Clin North Am.</em> 2005;17(1):51–63.</li>
+            <li>Iriarte C, Awosika O, Rengifo-Pardo M, Ehrlich A. Review of applications of microneedling in dermatology. <em>Clin Cosmet Investig Dermatol.</em> 2017;10:289–298.</li>
+            <li>Cho SI, Chung BY, Choi MG, et al. Evaluation of the clinical efficacy of fractional radiofrequency microneedle treatment in acne scars and large facial pores. <em>Dermatol Surg.</em> 2012;38(7 Pt 1):1017–1024.</li>
+            <li>Lolis MS, Goldberg DJ. Radiofrequency in cosmetic dermatology: a review. <em>Dermatol Surg.</em> 2012;38(11):1765–1776.</li>
+            <li>Alam M, White LE, Martin N, Witherspoon J, Yoo S, West DP. Ultrasound tightening of facial and neck skin: a rater-blinded prospective cohort study. <em>J Am Acad Dermatol.</em> 2010;62(2):262–269.</li>
+            <li>Fabi SG. Noninvasive skin tightening: focus on new ultrasound techniques. <em>Clin Cosmet Investig Dermatol.</em> 2015;8:47–52.</li>
+            <li>Wat H, Wu DC, Rao J, Goldman MP. Application of intense pulsed light in the treatment of dermatologic disease: a systematic review. <em>Dermatol Surg.</em> 2014;40(4):359–377.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
