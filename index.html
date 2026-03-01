@@ -271,6 +271,19 @@
         .section-wave svg{display:block;width:100%;height:clamp(50px,7vw,80px)}
         .wave-to-alt{background:#fff}
         .wave-to-white{background:#e6f7f5}
+
+        /* ===== GRID PREVIEW — TIDY HOMEPAGE ===== */
+        .grid-peek-4 > :nth-child(n+5){display:none}
+        .grid-peek-6 > :nth-child(n+7){display:none}
+        .grid-peek-3 > :nth-child(n+4){display:none}
+        .grid-expanded > *{display:block!important}
+        .grid-expanded.g3 > *{display:block!important}
+        .grid-expanded.g2 > *{display:block!important}
+        .show-more{display:flex;justify-content:center;margin-top:28px}
+        .show-more-btn{background:var(--bg-card);border:1.5px solid var(--border);border-radius:100px;padding:11px 32px;font-size:13px;font-weight:600;color:var(--text-s);cursor:pointer;transition:all .3s;font-family:inherit;display:inline-flex;align-items:center;gap:6px}
+        .show-more-btn:hover{border-color:var(--accent);color:var(--accent);box-shadow:var(--sh-m);transform:translateY(-2px)}
+        .show-more-btn .arrow{transition:transform .3s}
+        .show-more-btn.expanded .arrow{transform:rotate(180deg)}
     </style>
 </head>
 <body>
@@ -424,7 +437,7 @@
             <button class="pill" onclick="filterGuides('beslenme')">Beslenme</button>
         </div>
 
-        <div class="grid g2" id="guidesGrid">
+        <div class="grid g2 grid-peek-6" id="guidesGrid">
             <a href="blog/akne-rehberi.html" class="card guide-card" data-cat="cilt"><div class="card-i">📖</div><div class="card-t">Akne A'dan Z'ye — Tedavi Rehberi</div><div class="card-d">Akne patogenezi, kanıt düzeyine göre tedavi seçenekleri. AAD ve EADV kılavuzları referans alınmıştır.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/anti-aging-rehberi.html" class="card guide-card" data-cat="aging"><div class="card-i">⏳</div><div class="card-t">Anti-Aging Başlangıç Rehberi</div><div class="card-d">Retinoidler, peptidler, antioksidanlar: kanıt düzeyine göre anti-aging aktif maddeler ve başlangıç protokolleri.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/gunesten-korunma-rehberi.html" class="card guide-card" data-cat="cilt"><div class="card-i">☀️</div><div class="card-t">Güneşten Korunma Rehberi</div><div class="card-d">Kimyasal vs. fiziksel filtreler, uygulama miktarı ve tekrar sürme sıklığı — AAD ve WHO önerilerine göre.</div><span class="card-tag">✨ Yeni →</span></a>
@@ -436,6 +449,7 @@
             <a href="blog/cyspera-leke-tedavisi.html" class="card guide-card" data-cat="leke"><div class="card-i">✨</div><div class="card-t">Cyspera (Sisteamin) ve Leke Tedavisi</div><div class="card-d">Sisteamin %5: etki mekanizması, klinik veriler, hidrokinon karşılaştırması, uygulama protokolü.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/hiperpigmentasyon-rehberi.html" class="card guide-card" data-cat="leke"><div class="card-i">🎯</div><div class="card-t">Hiperpigmentasyon A'dan Z'ye</div><div class="card-d">Melazma, PIH, solar lentigo, periorbital: ayırıcı tanı, tedavi algoritması ve depigmentasyon ajanları.</div><span class="card-tag">✨ Yeni →</span></a>
         </div>
+        <div class="show-more"><button class="show-more-btn" data-label="Tüm Rehberler (+4)" onclick="toggleGrid(this)">Tüm Rehberler (+4) <span class="arrow">↓</span></button></div>
     </div>
 </section>
 
@@ -443,7 +457,7 @@
 <section id="kozmetik">
     <div class="container reveal">
         <div class="s-head"><div class="s-label">Kozmetik İşlemler</div><h2 class="s-title">Kozmetik Dermatoloji</h2><p class="s-desc">Botulinum toksin, dolgu, lazer ve daha fazlası — her işlem kanıta dayalı, hap bilgi formatında.</p></div>
-        <div class="grid g3">
+        <div class="grid g3 grid-peek-3">
             <a href="blog/botulinum-toksin-rehberi.html" class="card"><div class="card-i">💉</div><div class="card-t">Botulinum Toksin (Botox) Rehberi</div><div class="card-d">Nasıl çalışır, toksin tipleri (Bocouture dahil), mitler vs gerçekler — hap bilgi formatında.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/dermal-dolgu-rehberi.html" class="card"><div class="card-i">💋</div><div class="card-t">Dermal Dolgu Rehberi</div><div class="card-d">HA, CaHA, PLLA — dolgu tipleri, uygulama alanları, vasküler oklüzyon riski ve mitler.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/lazer-tedavileri-rehberi.html" class="card"><div class="card-i">⚡</div><div class="card-t">Lazer Tedavileri Rehberi</div><div class="card-d">CO₂, fraksiyonel, IPL, PDL, picosecond — her lazer tipi ve lazer epilasyon rehberi.</div><span class="card-tag">✨ Yeni →</span></a>
@@ -452,6 +466,7 @@
             <a href="blog/mezoterapi-rehberi.html" class="card"><div class="card-i">💧</div><div class="card-t">Mezoterapi Rehberi</div><div class="card-d">6 endikasyon için kanıt değerlendirmesi — Türkiye'de popüler ama bilim ne diyor?</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/ameliyat-sonrasi-iz-azaltma.html" class="card"><div class="card-i">🩹</div><div class="card-t">Ameliyat Sonrası İz Azaltma</div><div class="card-d">Silikon, lazer, microneedling, cerrahi revizyon — zamanlama rehberi ile.</div><span class="card-tag">Rehber →</span></a>
         </div>
+        <div class="show-more"><button class="show-more-btn" data-label="Tüm Kozmetik İşlemler (+4)" onclick="toggleGrid(this)">Tüm Kozmetik İşlemler (+4) <span class="arrow">↓</span></button></div>
     </div>
 </section>
 
@@ -460,7 +475,7 @@
 <section id="ciltbakim" class="s-alt">
     <div class="container reveal">
         <div class="s-head"><div class="s-label">Cilt Bakımı</div><h2 class="s-title">Yaşa Göre Cilt Bakımı ve Aktif Maddeler</h2><p class="s-desc">Her yaş için kanıta dayalı bakım rutinleri ve aktif madde rehberleri.</p></div>
-        <div class="grid g3">
+        <div class="grid g3 grid-peek-4">
             <a href="blog/20li-yaslarda-cilt-bakimi.html" class="card"><div class="card-i">🌱</div><div class="card-t">20'li Yaşlarda Cilt Bakımı</div><div class="card-d">Önlemenin altın çağı — güneş koruması, temizleme, nemlendirme ve retinoid başlangıcı.</div><span class="card-tag">Rehber →</span></a>
             <a href="blog/30lu-yaslarda-kolajen-kaybi.html" class="card"><div class="card-i">⏳</div><div class="card-t">30'lu Yaşlarda Kolajen Kaybı</div><div class="card-d">Yılda %1 kolajen kaybı — retinoidler ne zaman devreye girmeli?</div><span class="card-tag">Rehber →</span></a>
             <a href="blog/40-yas-ustu-hormon-degisimi.html" class="card"><div class="card-i">🔄</div><div class="card-t">40+ Hormonal Değişimler</div><div class="card-d">Perimenopoz, östrojen düşüşü ve cilt — kanıta dayalı çözümler.</div><span class="card-tag">Rehber →</span></a>
@@ -470,6 +485,7 @@
             <a href="blog/hamilelikte-cilt-bakimi.html" class="card"><div class="card-i">🤰</div><div class="card-t">Hamilelikte Cilt Bakımı</div><div class="card-d">Güvenli ve tehlikeli ingrediyenler — kırmızı/yeşil/sarı güvenlik kodları.</div><span class="card-tag">Rehber →</span></a>
             <a href="blog/eksozom-pdrn-somon-dna.html" class="card"><div class="card-i">🐟</div><div class="card-t">Somon DNA (PDRN) ve Eksozom</div><div class="card-d">Yeni nesil cilt gençleştirme trendleri — hype mı bilim mi? Kanıta dayalı analiz.</div><span class="card-tag">🔥 Trend →</span></a>
         </div>
+        <div class="show-more"><button class="show-more-btn" data-label="Tüm Cilt Bakımı (+4)" onclick="toggleGrid(this)">Tüm Cilt Bakımı (+4) <span class="arrow">↓</span></button></div>
     </div>
 </section>
 
@@ -491,7 +507,7 @@
 <section id="sac" class="s-alt">
     <div class="container reveal">
         <div class="s-head"><div class="s-label">Saç Sağlığı</div><h2 class="s-title">Saç Dökülmesi ve Tedavi</h2><p class="s-desc">Androgenetik alopesiden telogen effluviuma, kanıta dayalı saç dökülmesi bilgisi ve güncel tedavi yaklaşımları.</p></div>
-        <div class="grid g3">
+        <div class="grid g3 grid-peek-3">
             <a href="blog/sac-dokulmesi-interaktif.html" class="card"><div class="card-i">💇</div><div class="card-t">Saç Dökülmesi Değerlendirme Aracı</div><div class="card-d">AGA, telogen effluvium, alopesi areata — 3 aşamalı interaktif değerlendirme, tedavi ve risk skoru.</div><span class="card-tag">✨ Yeni — Başla →</span></a>
             <a href="blog/minoxidil-rehberi.html" class="card"><div class="card-i">💊</div><div class="card-t">Minoxidil Rehberi</div><div class="card-d">%2 vs %5, köpük vs solüsyon: dozaj, etkinlik verileri ve yan etki profili.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/tretinoin-minoxidil-kombine.html" class="card"><div class="card-i">🔬</div><div class="card-t">Tretinoin + Minoxidil Kombine</div><div class="card-d">Topikal tretinoin minoxidilin etkinliğini nasıl artırıyor? Mekanizma ve klinik veriler.</div><span class="card-tag">🔥 Gündem →</span></a>
@@ -499,6 +515,7 @@
             <a href="blog/prp-tedavisi-rehberi.html" class="card"><div class="card-i">🩸</div><div class="card-t">PRP Tedavisi Rehberi</div><div class="card-d">PRP'nin saç dökülmesi, cilt gençleştirme, akne skarları ve daha fazlasındaki kanıt düzeyi — endikasyonlara göre değerlendirme.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/kadinlarda-sac-dokulmesi.html" class="card"><div class="card-i">👩</div><div class="card-t">Kadınlarda Saç Dökülmesi</div><div class="card-d">FPHL, hormonal nedenler, demir eksikliği, tiroid: kadına özgü tedavi yaklaşımları.</div><span class="card-tag">✨ Yeni →</span></a>
         </div>
+        <div class="show-more"><button class="show-more-btn" data-label="Tüm Saç Rehberleri (+3)" onclick="toggleGrid(this)">Tüm Saç Rehberleri (+3) <span class="arrow">↓</span></button></div>
     </div>
 </section>
 
@@ -507,7 +524,7 @@
 <section id="blog">
     <div class="container reveal">
         <div class="s-head"><div class="s-label">Blog</div><h2 class="s-title">Güncel Yazılar</h2><p class="s-desc">Cilt sağlığı, bakım rutinleri ve dermatoloji dünyasından bilimsel içerikler.</p></div>
-        <div class="grid g3">
+        <div class="grid g3 grid-peek-6">
             <a href="blog/cyspera-leke-tedavisi.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#0d9488,#8b5cf6)">✨</div><div class="blog-body"><div class="blog-cat">Pigmentasyon</div><div class="blog-t">Sisteamin %5 ve Leke Tedavisi: Kapsamlı Rehber</div><div class="blog-ex">Melazma, PIH, güneş lekeleri — sisteamin %5, hidrokinon, traneksamik asit ve diğer depigmentasyon ajanlarını kanıta dayalı karşılaştırıyoruz.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 16 dk</span><span>✨ Yeni</span></div></div></a>
             <a href="blog/akne-rehberi.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#ef4444,#f59e0b)">🔴</div><div class="blog-body"><div class="blog-cat">Akne Rehberi</div><div class="blog-t">Akne A'dan Z'ye — Tedavi Rehberi</div><div class="blog-ex">Akne nedir, tipleri, şiddet dereceleri ve kanıta dayalı tedavi algoritması. Retinoidlerden izotretinoine, diyet ilişkisinden mitlere kadar kapsamlı rehber.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 18 dk</span><span>✨ Yeni</span></div></div></a>
             <a href="blog/anti-aging-rehberi.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#0d9488,#8b5cf6)">⏳</div><div class="blog-body"><div class="blog-cat">Anti-Aging</div><div class="blog-t">Anti-Aging Başlangıç Rehberi: Neye Para Verin, Neyden Kaçının?</div><div class="blog-ex">Retinoidler, C vitamini, peptidler, güneş kremi — her aktif madde kanıt düzeyine göre değerlendiriliyor. Yaşa göre başlangıç protokolleri.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 16 dk</span><span>✨ Yeni</span></div></div></a>
@@ -533,11 +550,10 @@
             <a href="blog/hamilelikte-cilt-bakimi.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#f472b6,#a855f7)">🤰</div><div class="blog-body"><div class="blog-cat">Hamilelik</div><div class="blog-t">Hamilelikte Cilt Bakımı ve Kozmetik Güvenliği</div><div class="blog-ex">Retinoidler, hidrokinon, azelaik asit, mineral SPF — hamilelikte güvenli ve tehlikeli ingrediyenlerin kanıta dayalı rehberi.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 12 dk</span></div></div></a>
             <a href="blog/mevsimsel-cilt-bakimi.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#0d9488,#f59e0b)">🍂</div><div class="blog-body"><div class="blog-cat">Cilt Bakımı</div><div class="blog-t">Mevsimsel Cilt Bakımı Rehberi: 4 Mevsim, 4 Strateji</div><div class="blog-ex">Kış, ilkbahar, yaz, sonbahar — her mevsimde cildiniz farklı strese maruz kalır. Mevsime göre sabah-akşam rutinleri, cilt tipine özel ipuçları ve geçiş kontrol listesi.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 16 dk</span><span>✨ Yeni</span></div></div></a>
             <a href="blog/cilt-bakim-icerikleri-sozlugu.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#0d9488,#06b6d4)">🔬</div><div class="blog-body"><div class="blog-cat">Aktif Maddeler</div><div class="blog-t">Cilt Bakım İçerikleri Sözlüğü: Aktif Madde Rehberi</div><div class="blog-ex">Retinol, niacinamide, AHA, BHA, vitamin C, hyaluronik asit ve 12 aktif madde daha — etki mekanizması, kanıt düzeyi, konsantrasyon önerisi ve kombinasyon rehberi.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 22 dk</span><span>✨ Yeni</span></div></div></a>
-            <a href="#" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#0d9488,#06b6d4)">☀️</div><div class="blog-body"><div class="blog-cat">Güneş Korunma</div><div class="blog-t">SPF 30 mu 50 mi? Klinik Veriler Ne Diyor?</div><div class="blog-ex">SPF 30 UVB'nin %96.7'sini, SPF 50 ise %98'ini filtre eder. Güncel kılavuzlar ne öneriyor?</div><div class="blog-meta"><span>📅 Yakında</span><span>⏱ 5 dk</span></div></div></a>
-            <a href="#" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">🔴</div><div class="blog-body"><div class="blog-cat">Akne</div><div class="blog-t">Akne Mitleri vs. Kanıtlar: 5 Yaygın İnanış</div><div class="blog-ex">Diş macunu, limon suyu, güneşte kurulma... İddiaları hakemli literatür ışığında değerlendiriyoruz.</div><div class="blog-meta"><span>📅 Yakında</span><span>⏱ 6 dk</span></div></div></a>
             <a href="blog/ameliyat-sonrasi-iz-azaltma.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">🩹</div><div class="blog-body"><div class="blog-cat">Skar Tedavisi</div><div class="blog-t">Ameliyat Sonrası İzleri Azaltma Rehberi</div><div class="blog-ex">Yara iyileşme fizyolojisinden lazer tedavisine, silikon jelden microneedling'e — kanıta dayalı skar yönetimi rehberi.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ 10 dk</span></div></div></a>
             <a href="blog/sac-dokulmesi-interaktif.html" class="blog-c"><div class="blog-img" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">💇‍♂️</div><div class="blog-body"><div class="blog-cat">İnteraktif Araç</div><div class="blog-t">Saç Dökülmesi Değerlendirme Aracı</div><div class="blog-ex">Saç dökülmesi tipinizi belirleyin, kişisel tedavi planı alın ve risk skorunuzu hesaplayın.</div><div class="blog-meta"><span>📅 1 Mart 2026</span><span>⏱ İnteraktif</span></div></div></a>
         </div>
+        <div class="show-more"><button class="show-more-btn" data-label="Tüm Yazılar (+18)" onclick="toggleGrid(this)">Tüm Yazılar (+18) <span class="arrow">↓</span></button></div>
     </div>
 </section>
 
@@ -586,6 +602,9 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!open)item.classList.add('open')})});
 // Nav close
 document.querySelectorAll('#nav a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('nav').classList.remove('open')})});
+
+// SHOW MORE TOGGLE
+function toggleGrid(btn){const grid=btn.closest('.show-more').previousElementSibling;const expanded=grid.classList.toggle('grid-expanded');const label=btn.dataset.label||'Daha Fazla';btn.innerHTML=expanded?'Daha Az Göster <span class="arrow" style="transform:rotate(180deg)">↓</span>':label+' <span class="arrow">↓</span>';btn.classList.toggle('expanded',expanded);grid.scrollIntoView&&!expanded&&grid.scrollIntoView({behavior:'smooth',block:'start'})}
 
 // TOOL TABS
 function switchTool(id){
