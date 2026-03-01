@@ -716,6 +716,7 @@
         }
 
         @media (max-width: 768px) {
+            #scResult [style*="grid-template-columns: repeat(2"] { grid-template-columns: 1fr !important; }
             nav { display: none; }
             nav.open {
                 display: flex;
@@ -828,11 +829,11 @@
                 <div class="card-desc">Akneniz hafif mi, orta mı, şiddetli mi? Değerlendirin ve tedavi yönelimlerinizi öğrenin.</div>
                 <span class="card-tag">Yakında →</span>
             </a>
-            <a href="#" class="card">
-                <div class="card-icon">🧴</div>
-                <div class="card-title">Cilt Bakım Rutini Oluşturucu</div>
-                <div class="card-desc">Cilt tipinize, yaşınıza ve hedeflerinize göre kişiselleştirilmiş sabah ve akşam rutini oluşturun.</div>
-                <span class="card-tag">Yakında →</span>
+            <a href="#skincycling" class="card">
+                <div class="card-icon">🔄</div>
+                <div class="card-title">Skin Cycling Planlayıcı</div>
+                <div class="card-desc">Cilt tipinize göre kişiselleştirilmiş 4 günlük skin cycling takvimi oluşturun. Eksfoliasyon, retinoid ve iyileşme gecelerini planlayın.</div>
+                <span class="card-tag">→ Planla</span>
             </a>
             <a href="#" class="card">
                 <div class="card-icon">💇</div>
@@ -1044,6 +1045,46 @@
                 <div class="test-result-tips" id="resultTips"></div>
                 <button class="btn btn-primary" onclick="resetTest()">Testi Tekrarla</button>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKIN CYCLING PLANLAYICI -->
+<section id="skincycling" class="section-alt">
+    <div class="container reveal">
+        <div class="section-header">
+            <div class="section-label">İnteraktif Araç</div>
+            <h2 class="section-title">Skin Cycling Planlayıcı</h2>
+            <p class="section-desc">Cilt tipinize göre kişiselleştirilmiş 4 günlük skin cycling takvimi oluşturun. <br><small style="color: var(--text-tertiary);">Whitney Bowe MD, Dermatol Ther, 2022 · AAD Skin Cycling Guidelines</small></p>
+        </div>
+        <div class="test-container" id="scContainer">
+            <div id="scForm">
+                <div class="test-question">Cilt tipinizi seçin</div>
+                <div class="test-question-sub">Skin cycling programınız cilt tipinize göre uyarlanacaktır</div>
+                <div class="test-options" id="scSkinType">
+                    <div class="test-option" onclick="scSelectSkin(this, 'kuru')">
+                        <span class="test-option-letter">💧</span>
+                        <span>Kuru Cilt</span>
+                    </div>
+                    <div class="test-option" onclick="scSelectSkin(this, 'normal')">
+                        <span class="test-option-letter">✨</span>
+                        <span>Normal Cilt</span>
+                    </div>
+                    <div class="test-option" onclick="scSelectSkin(this, 'yagli')">
+                        <span class="test-option-letter">🫧</span>
+                        <span>Yağlı Cilt</span>
+                    </div>
+                    <div class="test-option" onclick="scSelectSkin(this, 'karma')">
+                        <span class="test-option-letter">⚖️</span>
+                        <span>Karma Cilt</span>
+                    </div>
+                    <div class="test-option" onclick="scSelectSkin(this, 'hassas')">
+                        <span class="test-option-letter">🛡️</span>
+                        <span>Hassas Cilt</span>
+                    </div>
+                </div>
+            </div>
+            <div id="scResult" style="display: none;"></div>
         </div>
     </div>
 </section>
@@ -1452,6 +1493,354 @@ function resetTest() {
 
 // Init test
 renderQuestion();
+
+// ===== SKIN CYCLING PLANLAYICI =====
+const scPlans = {
+    kuru: {
+        title: "Kuru Cilt İçin Skin Cycling Planı",
+        days: [
+            {
+                day: "Gece 1",
+                title: "Eksfoliasyon Gecesi",
+                icon: "🧪",
+                color: "#6366f1",
+                steps: [
+                    "Nazik temizleyici (süt/krem bazlı)",
+                    "Düşük konsantrasyonlu AHA (%5-8 laktik asit) — glikolik asitten daha az tahriş edici (Kornhauser A, et al. J Dermatol Sci, 2010)",
+                    "10 dakika bekleyin",
+                    "Seramid içeren zengin nemlendirici"
+                ],
+                note: "Kuru ciltte mandelic veya laktik asit, glikolik aside tercih edilmelidir — daha büyük molekül yapısı nedeniyle daha naziftir."
+            },
+            {
+                day: "Gece 2",
+                title: "Retinoid Gecesi",
+                icon: "⚗️",
+                color: "#0d9488",
+                steps: [
+                    "Nazik temizleyici",
+                    "Nemlendirici (tampon olarak önce uygulayın — 'sandwich' tekniği)",
+                    "Düşük konsantrasyonlu retinol (%0.25-0.3) veya retinaldehit",
+                    "Üzerine tekrar nemlendirici"
+                ],
+                note: "Kuru ciltte 'sandwich' tekniği (nemlendirici → retinoid → nemlendirici) tahrişi azaltır (Mukherjee S, et al. Clin Cosmet Investig Dermatol, 2006)."
+            },
+            {
+                day: "Gece 3",
+                title: "İyileşme Gecesi 1",
+                icon: "💧",
+                color: "#0891b2",
+                steps: [
+                    "Nazik temizleyici",
+                    "Hyaluronik asit serum (nemli cilde uygulayın)",
+                    "Seramid + shea yağı içeren onarıcı krem",
+                    "Opsiyonel: Panthenol (B5) ekleyin"
+                ],
+                note: "İyileşme gecelerinde aktif madde kullanılmaz. Cilt bariyerinin onarımı için seramid 1, 3, 6-II kombinasyonu idealdir (Coderch L, et al. Am J Clin Dermatol, 2003)."
+            },
+            {
+                day: "Gece 4",
+                title: "İyileşme Gecesi 2",
+                icon: "🌙",
+                color: "#8b5cf6",
+                steps: [
+                    "Nazik temizleyici",
+                    "Niacinamide %5 serum (bariyer güçlendirici)",
+                    "Zengin nemlendirici veya gece maskesi (sleeping mask)",
+                    "Dudak ve göz çevresi için özel nemlendirici"
+                ],
+                note: "İkinci iyileşme gecesi, kuru cildin tam toparlanması için kritiktir. Niacinamide seramid sentezini artırarak bariyer onarımına katkıda bulunur (Gehring W. J Dtsch Dermatol Ges, 2004)."
+            }
+        ],
+        morning: "Her sabah: Nazik temizleyici veya sadece su → Hyaluronik asit serum → Nemlendirici krem → SPF 30+ geniş spektrum güneş kremi",
+        warning: "Kuru ciltte skin cycling'e yavaş başlayın. İlk 2 hafta eksfoliasyon gecesini atlayıp sadece retinoid + 3 iyileşme gecesi deneyin."
+    },
+    normal: {
+        title: "Normal Cilt İçin Skin Cycling Planı",
+        days: [
+            {
+                day: "Gece 1",
+                title: "Eksfoliasyon Gecesi",
+                icon: "🧪",
+                color: "#6366f1",
+                steps: [
+                    "Nazik jel temizleyici",
+                    "AHA (%8-10 glikolik asit) veya BHA (%1-2 salisilik asit)",
+                    "5-10 dakika bekleyin",
+                    "Hafif nemlendirici"
+                ],
+                note: "Normal cilt genellikle glikolik asidi iyi tolere eder. Serum veya tonik formunda kullanılabilir."
+            },
+            {
+                day: "Gece 2",
+                title: "Retinoid Gecesi",
+                icon: "⚗️",
+                color: "#0d9488",
+                steps: [
+                    "Nazik temizleyici",
+                    "Retinol %0.3-0.5 serum (temiz, kuru cilde)",
+                    "5 dakika kurumayı bekleyin",
+                    "Hafif nemlendirici"
+                ],
+                note: "Normal cilt retinolü doğrudan uygulayabilir. Tolerans arttıkça konsantrasyon yükseltilebilir (Mukherjee S, et al. 2006)."
+            },
+            {
+                day: "Gece 3",
+                title: "İyileşme Gecesi 1",
+                icon: "💧",
+                color: "#0891b2",
+                steps: [
+                    "Nazik temizleyici",
+                    "Hyaluronik asit veya niacinamide %5 serum",
+                    "Hafif nemlendirici",
+                    "Opsiyonel: Peptid serumu"
+                ],
+                note: "Aktif madde yok. Cildin dinlenmesi ve onarımı için."
+            },
+            {
+                day: "Gece 4",
+                title: "İyileşme Gecesi 2",
+                icon: "🌙",
+                color: "#8b5cf6",
+                steps: [
+                    "Nazik temizleyici",
+                    "Antioksidan serum (vitamin C veya E)",
+                    "Nemlendirici",
+                    "Opsiyonel: Gece maskesi"
+                ],
+                note: "Normal ciltte 4 hafta sonra 3 günlük döngüye (eksfoliasyon → retinoid → 1 iyileşme) geçilebilir."
+            }
+        ],
+        morning: "Her sabah: Nazik temizleyici → Vitamin C serum → Hafif nemlendirici → SPF 30+ güneş kremi",
+        warning: "Normal cilt skin cycling'e en kolay adapte olan tiptir. Yine de ilk hafta cildinizin tepkisini gözlemleyin."
+    },
+    yagli: {
+        title: "Yağlı Cilt İçin Skin Cycling Planı",
+        days: [
+            {
+                day: "Gece 1",
+                title: "Eksfoliasyon Gecesi",
+                icon: "🧪",
+                color: "#6366f1",
+                steps: [
+                    "Jel veya köpük temizleyici",
+                    "BHA (%2 salisilik asit) — gözeneklerin içini temizler",
+                    "10 dakika bekleyin",
+                    "Yağsız (oil-free) jel nemlendirici"
+                ],
+                note: "BHA yağda çözünürdür ve gözenek içini temizleyebildiği için yağlı ciltte AHA'dan daha etkilidir (Arif T. Clin Cosmet Investig Dermatol, 2015)."
+            },
+            {
+                day: "Gece 2",
+                title: "Retinoid Gecesi",
+                icon: "⚗️",
+                color: "#0d9488",
+                steps: [
+                    "Jel temizleyici",
+                    "Retinol %0.5 serum (temiz, kuru cilde)",
+                    "Bekleyin",
+                    "Oil-free jel nemlendirici"
+                ],
+                note: "Yağlı cilt retinolü daha iyi tolere eder. Retinoidler sebum üretimini de düzenleyebilir (Leyden J, et al. J Am Acad Dermatol, 2017)."
+            },
+            {
+                day: "Gece 3",
+                title: "İyileşme Gecesi 1",
+                icon: "💧",
+                color: "#0891b2",
+                steps: [
+                    "Jel temizleyici",
+                    "Niacinamide %5 serum (sebum kontrolü + bariyer)",
+                    "Oil-free nemlendirici",
+                    ""
+                ],
+                note: "Niacinamide yağlı ciltte çift etki: sebum azaltma + bariyer onarımı (Draelos ZD, et al. Dermatol Ther, 2006)."
+            },
+            {
+                day: "Gece 4",
+                title: "İyileşme Gecesi 2",
+                icon: "🌙",
+                color: "#8b5cf6",
+                steps: [
+                    "Jel temizleyici",
+                    "Hafif hyaluronik asit serum",
+                    "Jel nemlendirici",
+                    "Opsiyonel: Çinko içerikli bakım"
+                ],
+                note: "Yağlı ciltte tolerans hızlı gelişir. 3-4 hafta sonra 3 günlük döngüye geçilebilir."
+            }
+        ],
+        morning: "Her sabah: Jel temizleyici → Niacinamide veya Vitamin C serum → Oil-free nemlendirici → Mat bitişli SPF 30+ güneş kremi",
+        warning: "Yağlı ciltte nemlendiriciyi atlamayın — dehidrasyon kompansatuar yağ üretimine neden olabilir."
+    },
+    karma: {
+        title: "Karma Cilt İçin Skin Cycling Planı",
+        days: [
+            {
+                day: "Gece 1",
+                title: "Eksfoliasyon Gecesi",
+                icon: "🧪",
+                color: "#6366f1",
+                steps: [
+                    "Nazik jel temizleyici",
+                    "T-bölgesine BHA (%2), yanaklara AHA (%5-8 laktik asit) — bölgesel uygulama",
+                    "5-10 dakika bekleyin",
+                    "Hafif jel-krem nemlendirici"
+                ],
+                note: "Karma ciltte bölgesel yaklaşım (multi-exfoliation) en etkili sonucu verir."
+            },
+            {
+                day: "Gece 2",
+                title: "Retinoid Gecesi",
+                icon: "⚗️",
+                color: "#0d9488",
+                steps: [
+                    "Nazik temizleyici",
+                    "Yanaklara önce ince bir kat nemlendirici (tampon)",
+                    "Retinol %0.3 tüm yüze",
+                    "Hafif nemlendirici"
+                ],
+                note: "Kuru bölgelere tampon tekniği, yağlı bölgelere doğrudan uygulama yapılabilir."
+            },
+            {
+                day: "Gece 3",
+                title: "İyileşme Gecesi 1",
+                icon: "💧",
+                color: "#0891b2",
+                steps: [
+                    "Nazik temizleyici",
+                    "Hyaluronik asit serum (tüm yüz)",
+                    "Yanaklara biraz daha zengin, T-bölgesine hafif nemlendirici",
+                    ""
+                ],
+                note: "Bölgesel nemlendirme stratejisi karma cilt için idealdir."
+            },
+            {
+                day: "Gece 4",
+                title: "İyileşme Gecesi 2",
+                icon: "🌙",
+                color: "#8b5cf6",
+                steps: [
+                    "Nazik temizleyici",
+                    "Niacinamide %5 serum",
+                    "Jel-krem nemlendirici",
+                    "Opsiyonel: Gece maskesi sadece yanaklara"
+                ],
+                note: "Karma ciltte döngü süresi standart 4 gün kalabilir — bölgesel farklılıklar nedeniyle kısaltmayın."
+            }
+        ],
+        morning: "Her sabah: Nazik temizleyici → Vitamin C veya Niacinamide → Jel-krem nemlendirici → SPF 30+ güneş kremi",
+        warning: "Karma ciltte her bölge farklı tepki verebilir — eksfoliasyon ve retinoid gecelerinde yanaklarınızı dikkatle gözlemleyin."
+    },
+    hassas: {
+        title: "Hassas Cilt İçin Skin Cycling Planı",
+        days: [
+            {
+                day: "Gece 1",
+                title: "Nazik Eksfoliasyon Gecesi",
+                icon: "🧪",
+                color: "#6366f1",
+                steps: [
+                    "Parfümsüz, misel su veya süt bazlı temizleyici",
+                    "PHA (%3-4 gluconolactone) — en nazik kimyasal eksfoliant",
+                    "5 dakika, tahriş varsa hemen yıkayın",
+                    "Seramid + panthenol içeren onarıcı krem"
+                ],
+                note: "Hassas ciltte AHA/BHA yerine PHA tercih edilir — daha büyük molekül yapısı, daha az penetrasyon ve tahriş (Grimes PE, et al. Cutis, 2004)."
+            },
+            {
+                day: "Gece 2",
+                title: "Retinoid Gecesi",
+                icon: "⚗️",
+                color: "#0d9488",
+                steps: [
+                    "Nazik temizleyici",
+                    "Zengin nemlendirici (tampon — mutlaka önce)",
+                    "Bakuchiol %0.5-1 VEYA retinol %0.1-0.25 (çok düşük doz)",
+                    "Üzerine tekrar onarıcı nemlendirici"
+                ],
+                note: "Bakuchiol, retinole benzer etki gösterip daha az tahriş yapar — hassas cilt için alternatif (Dhaliwal S, et al. Br J Dermatol, 2019)."
+            },
+            {
+                day: "Gece 3",
+                title: "İyileşme Gecesi 1",
+                icon: "💧",
+                color: "#0891b2",
+                steps: [
+                    "Sadece misel su ile temizleme",
+                    "Aloe vera veya centella asiatica (cica) serum",
+                    "Seramid ağırlıklı onarıcı krem",
+                    "Opsiyonel: Termal su spreyi"
+                ],
+                note: "Centella asiatica (madecassoside) anti-inflamatuar ve bariyer onarıcı etkisi gösterilmiştir (Bylka W, et al. Postepy Dermatol Alergol, 2014)."
+            },
+            {
+                day: "Gece 4",
+                title: "İyileşme Gecesi 2",
+                icon: "🌙",
+                color: "#8b5cf6",
+                steps: [
+                    "Nazik temizleyici",
+                    "Panthenol (B5) serum",
+                    "Onarıcı krem / Bariyer kremi",
+                    "Hiçbir aktif madde eklemeyin"
+                ],
+                note: "Hassas ciltte 3. iyileşme gecesi de eklenebilir (5 günlük döngü). Cildinizin sinyallerini dinleyin."
+            }
+        ],
+        morning: "Her sabah: Sadece su veya misel su → Seramid nemlendirici → Mineral (fiziksel) SPF 30+ güneş kremi (parfümsüz)",
+        warning: "⚠️ Hassas ciltte skin cycling'e çok yavaş başlayın. İlk 2 hafta sadece iyileşme geceleri + retinoid deneyin, eksfoliasyonu sonra ekleyin. Herhangi bir tahriş durumunda döngüyü durdurun."
+    }
+};
+
+function scSelectSkin(el, type) {
+    document.querySelectorAll('#scSkinType .test-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    setTimeout(() => {
+        document.getElementById('scForm').style.display = 'none';
+        const plan = scPlans[type];
+        const resultEl = document.getElementById('scResult');
+        resultEl.style.display = 'block';
+        resultEl.innerHTML = `
+            <h3 style="font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 24px; text-align: center;">${plan.title}</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px;">
+                ${plan.days.map(d => `
+                    <div style="background: var(--bg-alt); border-radius: var(--radius-md); padding: 20px; border-left: 4px solid ${d.color};">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <span style="font-size: 20px;">${d.icon}</span>
+                            <div>
+                                <div style="font-size: 12px; font-weight: 600; color: ${d.color}; text-transform: uppercase; letter-spacing: 0.08em;">${d.day}</div>
+                                <div style="font-size: 16px; font-weight: 600; color: var(--text);">${d.title}</div>
+                            </div>
+                        </div>
+                        <ol style="margin-left: 18px; margin-bottom: 12px;">
+                            ${d.steps.filter(s => s).map(s => `<li style="font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; line-height: 1.5;">${s}</li>`).join('')}
+                        </ol>
+                        <div style="font-size: 12px; color: var(--text-tertiary); font-style: italic; line-height: 1.5; border-top: 1px solid var(--border); padding-top: 10px;">💡 ${d.note}</div>
+                    </div>
+                `).join('')}
+            </div>
+            <div style="background: var(--accent-bg); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px;">
+                <div style="font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 6px;">☀️ Sabah Rutini (Her Gün)</div>
+                <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">${plan.morning}</div>
+            </div>
+            <div style="background: #fef3c7; border: 1px solid #fbbf24; border-radius: var(--radius-md); padding: 14px; margin-bottom: 20px;">
+                <div style="font-size: 13px; color: #92400e; line-height: 1.6;">⚠️ ${plan.warning}</div>
+            </div>
+            <p style="font-size: 12px; color: var(--text-tertiary); text-align: center; margin-bottom: 16px; font-style: italic;">Kaynak: Whitney Bowe MD, Skin Cycling Method · AAD Guidelines · İlgili referanslar her adımda belirtilmiştir.</p>
+            <p style="font-size: 13px; color: #92400e; background: #fef3c7; padding: 10px 14px; border-radius: 8px; text-align: center;">Bu plan genel bilgi amaçlıdır ve tıbbi tavsiye niteliği taşımaz. Kişiye özel değerlendirme için bir dermatoloji uzmanına başvurunuz.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="scReset()">← Farklı Cilt Tipi Seç</button>
+            </div>
+        `;
+    }, 300);
+}
+
+function scReset() {
+    document.getElementById('scForm').style.display = 'block';
+    document.getElementById('scResult').style.display = 'none';
+    document.querySelectorAll('#scSkinType .test-option').forEach(o => o.classList.remove('selected'));
+}
 
 // ===== MOBILE NAV CLOSE ON LINK CLICK =====
 document.querySelectorAll('#nav a').forEach(a => {
