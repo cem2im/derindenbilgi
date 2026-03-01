@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilt Bakım İçerikleri Sözlüğü: Aktif Madde Rehberi | Derindenbilgi</title>
+    <meta name="description" content="Retinol, niacinamide, AHA, BHA, vitamin C, hyaluronik asit ve daha fazlası — her aktif maddenin etki mekanizması, kanıt düzeyi, konsantrasyon önerisi ve kombinasyon rehberi.">
+    <meta name="keywords" content="cilt bakım içerikleri, retinol, niacinamide, hyaluronik asit, AHA, BHA, vitamin C, seramid, peptid, azelaic acid, aktif madde rehberi">
+    <meta property="og:title" content="Cilt Bakım İçerikleri Sözlüğü: Aktif Madde Rehberi">
+    <meta property="og:description" content="18 aktif madde, kanıta dayalı değerlendirme. Her ingrediyen için ne işe yarar, nasıl çalışır, kiminle kombinlenir?">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+            color: #7c3aed;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== INGREDIENT CARD ===== */
+        .ingredient-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+        }
+        .ingredient-card h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-dark);
+            margin-bottom: 0.5rem;
+        }
+        .ingredient-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .ingredient-card li {
+            font-size: 0.9rem;
+            color: #334155;
+            padding: 0.35rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .ingredient-card li:last-child { border-bottom: none; }
+        .ingredient-card .ic-label {
+            font-weight: 600;
+            color: var(--text);
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+            .ingredient-card li { flex-direction: column; gap: 0.15rem; }
+            .ingredient-card .ic-label { min-width: unset; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🔬 Referans Rehber</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 22 dk okuma</span>
+    </div>
+    <h1>Cilt Bakım İçerikleri Sözlüğü: Aktif Madde Rehberi</h1>
+    <p class="article-subtitle">Retinol, niacinamide, AHA, vitamin C, hyaluronik asit… Ürün etiketlerinde gördüğünüz 18 aktif madde — her biri için ne işe yarar, nasıl çalışır, kimin cildine uyar ve hangisiyle kesinlikle karıştırılmaz? Hap bilgi formatında, kanıta dayalı sözlük.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#asitler">Asitler & Eksfoliantlar (AHA · BHA · PHA)</a></li>
+            <li><a href="#alfa-arbutin">Alfa-Arbutin</a></li>
+            <li><a href="#azelaic-acid">Azelaik Asit</a></li>
+            <li><a href="#bakuchiol">Bakuchiol</a></li>
+            <li><a href="#centella">Centella Asiatica (Cica)</a></li>
+            <li><a href="#cinko">Çinko</a></li>
+            <li><a href="#hyaluronik-asit">Hyaluronik Asit</a></li>
+            <li><a href="#kojic-acid">Kojik Asit</a></li>
+            <li><a href="#niacinamide">Niacinamide (Vitamin B3)</a></li>
+            <li><a href="#panthenol">Panthenol (Provitamin B5)</a></li>
+            <li><a href="#peptidler">Peptidler (Matrixyl · Bakır Peptid · Argireline)</a></li>
+            <li><a href="#retinol">Retinol / Retinoidler</a></li>
+            <li><a href="#seramidler">Seramidler</a></li>
+            <li><a href="#sulfur">Sülfür</a></li>
+            <li><a href="#tranexamic-acid">Traneksamik Asit</a></li>
+            <li><a href="#vitamin-c">Vitamin C (L-Askorbik Asit · MAP · SAP)</a></li>
+            <li><a href="#kombinasyon-tablosu">Kombinasyon Tablosu</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">🏆</span> <strong>En güçlü kanıt:</strong> Retinoidler, güneş kremi ve L-askorbik asit (vitamin C). Anti-aging'de altın standart bu üçlüdür.</li>
+            <li><span class="bullet">🧴</span> <strong>Bariyer onarımı:</strong> Seramidler + hyaluronik asit + panthenol. Bu üçlü neredeyse her cilt tipine uyar.</li>
+            <li><span class="bullet">🎯</span> <strong>Leke tedavisi:</strong> Azelaik asit, alfa-arbutin, traneksamik asit — her biri farklı mekanizmadan çalışır, kombine edilebilir.</li>
+            <li><span class="bullet">⚗️</span> <strong>Eksfoliasyon:</strong> AHA yüzeysel, BHA gözenek içi, PHA hassas cilt dostu. Hepsini aynı gece kullanmayın.</li>
+            <li><span class="bullet">🤝</span> <strong>Altın kombinasyon:</strong> Niacinamide hemen hemen her şeyle iyi geçinir. Retinol + vitamin C aynı gece tahriş edebilir — sabah/akşam ayırın.</li>
+            <li><span class="bullet">⚠️</span> <strong>Konsantrasyon önemli:</strong> "Daha fazla = daha iyi" değil. Çoğu aktif madde düşük konsantrasyonda da işe yarar ve daha az tahriş eder.</li>
+        </ul>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 1: ASİTLER & EKSFOLİANTLAR -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 1</div>
+        <div class="part-divider-title">⚗️ Eksfoliantlar & Asitler</div>
+    </div>
+
+    <h2 id="asitler">⚗️ AHA · BHA · PHA — Kimyasal Eksfoliantlar</h2>
+
+    <p>Kimyasal eksfoliant = cilt yüzeyindeki ölü hücreleri fiziksel sürtünme yerine <strong>asitle çözen</strong> aktif maddeler. Üç ana aile var: AHA, BHA ve PHA. Her birinin hedefi ve gücü farklı.</p>
+
+    <h3>AHA (Alfa Hidroksi Asitler)</h3>
+
+    <p><strong>Glikolik asit, laktik asit, mandelik asit</strong> — hepsi bu aileden. Suda çözünürler, yani cilt <em>yüzeyinde</em> çalışırlar. Corneocyte'ler (ölü deri hücreleri) arasındaki "tutkalı" çözerek yüzeyi yeniler (Tang SC &amp; Yang JH, 2018).</p>
+
+    <p><strong>Glikolik asit</strong> en küçük molekül — en derin nüfuz eder ama en çok da tahriş eder. <strong>Laktik asit</strong> daha nazif ve nemlendirir. <strong>Mandelik asit</strong> en büyük molekül — en yavaş nüfuz eder, koyu ciltlerde post-inflamatuar hiperpigmentasyon (PIH) riski en düşük olan budur.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 AHA Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> Günlük %5–10, peeling %20–70 (profesyonel)</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — fotoaging, hiperpigmentasyon, akne skarı</li>
+            <li><span class="ic-label">Uygun cilt:</span> Normal, kuru, olgun cilt. Hassas ciltler laktik/mandelik tercih etmeli</li>
+            <li><span class="ic-label">Kombinlenir:</span> Niacinamide, hyaluronik asit, seramidler</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Retinol (aynı gece), vitamin C (düşük pH çatışması), BHA (aşırı eksfoliasyon)</li>
+        </ul>
+    </div>
+
+    <h3>BHA (Beta Hidroksi Asit — Salisilik Asit)</h3>
+
+    <p>BHA'nın pratikte tek temsilcisi <strong>salisilik asit</strong>. AHA'dan farklı olarak <strong>yağda çözünür</strong> — bu da gözenek <em>içine</em> girebilmesi demek. Sebum ile dolu gözenekleri açar, komedolitik (siyah nokta/beyaz nokta çözücü) ve anti-inflamatuardır (Arif T, 2015).</p>
+
+    <div class="ingredient-card">
+        <h4>📋 BHA (Salisilik Asit) Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %0.5–2 günlük, %2 en yaygın</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — akne, siyah nokta, gözenek tıkanıklığı</li>
+            <li><span class="ic-label">Uygun cilt:</span> Yağlı, akneye yatkın, karma cilt. Kuru ciltlerde kurutucu olabilir</li>
+            <li><span class="ic-label">Kombinlenir:</span> Niacinamide, hyaluronik asit, çinko</li>
+            <li><span class="ic-label">Kombinlenmez:</span> AHA (aynı gece), retinol (yeni başlayanlar), benzoil peroksit (birlikte fazla kurutur)</li>
+        </ul>
+    </div>
+
+    <h3>PHA (Polihidroksi Asitler — Gluconolactone)</h3>
+
+    <p><strong>Gluconolactone ve lactobionic acid</strong> bu grubun üyeleri. Molekülleri çok büyük olduğu için cilt yüzeyinde kalır — AHA kadar derin nüfuz edemez ama bu yüzden çok daha az tahriş eder. Ayrıca nemlendirir ve antioksidan etki gösterir (Grimes PE et al., 2004).</p>
+
+    <div class="ingredient-card">
+        <h4>📋 PHA Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %3–15</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — eksfoliasyon ve nemlendirme</li>
+            <li><span class="ic-label">Uygun cilt:</span> Hassas, rozasea, kuru, her cilt tipi</li>
+            <li><span class="ic-label">Kombinlenir:</span> Hemen hemen her şeyle uyumlu</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Ciddi bir uyumsuzluğu yok — ama yine de tek seferde birden fazla eksfoliant kullanmayın</li>
+        </ul>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>AHA = yüzey yenileme (kuru/olgun cilt), BHA = gözenek temizliği (yağlı/akneli cilt), PHA = hassas ciltlerin dostu.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- ALFA-ARBUTİN -->
+    <!-- ============================================== -->
+
+    <h2 id="alfa-arbutin">🎯 Alfa-Arbutin</h2>
+
+    <p>Hidrokinonun "nazik kuzeni." Ayı üzümü bitkisinden (bearberry) türetilen alfa-arbutin, melanin üreten tirozinaz enzimini yavaşlatır — ama hidrokinon gibi agresif değildir. Yani lekeyi açar ama cildi fazla tahriş etmez (Boo YC, 2021).</p>
+
+    <p>Hidrokinon doğrudan melanositi zehirler. Alfa-arbutin ise tirozinaz aktivitesini <em>kısmen</em> bloke eder — daha yavaş ama daha güvenli bir etki.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Alfa-Arbutin Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %1–2</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — PIH ve güneş lekelerinde in vivo çalışmalar mevcut</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri, koyu tenler dahil</li>
+            <li><span class="ic-label">Kombinlenir:</span> Vitamin C, niacinamide, AHA (dikkatli)</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Önemli bir uyumsuzluğu yok</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Alfa-Arbutin</div>
+            <div class="verdict-text">Hidrokinon kadar güçlü değil ama güvenlik profili çok daha iyi. Uzun vadeli kullanım için iyi bir depigmentasyon seçeneği. Koyu cilt tonlarında PIH riski düşük.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- AZELAİK ASİT -->
+    <!-- ============================================== -->
+
+    <h2 id="azelaic-acid">🔬 Azelaik Asit</h2>
+
+    <p>Azelaik asit dermatolojinin "çok yönlü oyuncusu." Buğday ve arpada doğal olarak bulunan bu dikarboksilik asit <strong>üç farklı işi aynı anda</strong> yapar: anti-inflamatuar (iltihap azaltır), anti-bakteriyel (akne bakterisini öldürür) ve anti-tirozinaz (lekeyi açar).</p>
+
+    <p>Rozaseada FDA onaylı, aknede etkili, melazmada güçlü kanıtı var. Üstelik hamilelikte güvenli sayılan nadir aktif maddelerden biri (Fitton A &amp; Goa KL, 1991).</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Azelaik Asit Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> Reçetesiz %10, reçeteli %15–20</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — akne, rozasea, melazma, PIH</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri (hassas dahil), koyu ciltler, hamilelikte kullanılabilir</li>
+            <li><span class="ic-label">Kombinlenir:</span> Retinoidler, niacinamide, vitamin C, BHA</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Ciddi bir uyumsuzluğu yok — çok tolere edilebilir</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Azelaik Asit</div>
+            <div class="verdict-text">En az konuşulan ama en çok yönlü aktif maddelerden biri. Akne + leke + rozasea üçlüsünde tek başına iş görebilir. Hamilelikte güvenli. Düşük tahriş profili.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BAKUCHİOL -->
+    <!-- ============================================== -->
+
+    <h2 id="bakuchiol">🌿 Bakuchiol</h2>
+
+    <p>Retinol'ün bitkisel alternatifi olarak pazarlanan bakuchiol, <em>Psoralea corylifolia</em> bitkisinden elde ediliyor. Kimyasal olarak retinol'e benzemiyor — ama benzer gen ekspresyonlarını aktive ediyor: kolajen üretimini artırır, ince çizgileri azaltır (Dhaliwal S et al., 2019).</p>
+
+    <p>Dhaliwal ve arkadaşlarının 2019 çalışmasında bakuchiol %0.5, retinol %0.5 ile 12 hafta boyunca karşılaştırıldı. Kırışıklık ve pigmentasyon azalmasında benzer sonuçlar bulundu — <strong>ama bakuchiol grubunda tahriş çok daha azdı.</strong></p>
+
+    <div class="ingredient-card">
+        <h4>📋 Bakuchiol Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %0.5–2</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — küçük çalışmalar, uzun vadeli veri sınırlı</li>
+            <li><span class="ic-label">Uygun cilt:</span> Hassas, retinol tolere edemeyen, hamile/emziren</li>
+            <li><span class="ic-label">Kombinlenir:</span> Vitamin C, niacinamide, hyaluronik asit, retinol (bile!)</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Bilinen ciddi uyumsuzluk yok</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Bakuchiol</div>
+            <div class="verdict-text">Retinol tolere edemeyen hassas ciltler için umut verici bir alternatif. Ama retinol'ün onlarca yıllık kanıt dağının yanında bakuchiol henüz birkaç çalışma ile destekleniyor. "Retinolün birebir yedeği" demek erken.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- CENTELLA ASİATİCA -->
+    <!-- ============================================== -->
+
+    <h2 id="centella">🌱 Centella Asiatica (Cica)</h2>
+
+    <p>K-beauty dünyasının sevgilisi "Cica" kremlerin arkasındaki aktif: <strong>Centella Asiatica</strong> (Gotu kola). İçindeki dört temel bileşen — asiaticoside, madecassoside, asiatik asit ve madesik asit — <strong>anti-inflamatuar</strong> ve <strong>kolajen sentezini uyarıcı</strong> etki gösterir (Bylka W et al., 2014).</p>
+
+    <p>Geleneksel tıpta yüzyıllardır kullanılıyor. Modern dermatolojide özellikle yara iyileşmesi, bariyer onarımı ve hassas cilt yatıştırmasında araştırılıyor.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Centella Asiatica Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> Ekstraktlar değişken — TECA (titreli Centella ekstresi) formülasyonları tercih edilmeli</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — yara iyileşmesi ve bariyer onarımında güçlü, anti-aging'de sınırlı</li>
+            <li><span class="ic-label">Uygun cilt:</span> Hassas, tahriş olmuş, kızarık, bariyer hasarlı — tüm tiplere uyar</li>
+            <li><span class="ic-label">Kombinlenir:</span> Hemen her şeyle — niacinamide, HA, seramid, retinol sonrası yatıştırıcı</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Bilinen uyumsuzluk yok</li>
+        </ul>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Centella Asiatica = cildin "ilk yardım çantası." Tahriş, kızarıklık ve bariyer hasarında yatıştırıcı olarak güvenle kullanılabilir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- ÇİNKO -->
+    <!-- ============================================== -->
+
+    <h2 id="cinko">⚙️ Çinko</h2>
+
+    <p>Çinko (zinc), vücutta 300'den fazla enzim reaksiyonunda rol alan esansiyel bir mineraldir. Dermatolojide iki farklı şekilde kullanılır: <strong>topikal</strong> (çinko oksit — güneş kremlerinde fiziksel filtre) ve <strong>oral</strong> (çinko takviyesi — akne ve yara iyileşmesinde).</p>
+
+    <p>Çinko oksit, geniş spektrumlu UV koruması sağlar ve hassas ciltlerde iyi tolere edilir. Oral çinko ise anti-inflamatuar ve anti-bakteriyel etki gösterir — özellikle akne vulgaris çalışmalarında olumlu sonuçlar bildirilmiştir (Gupta M et al., 2014).</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Çinko Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Topikal:</span> Çinko oksit %10–25 (güneş kremlerinde), çinko PCA %0.5–1 (sebum düzenleme)</li>
+            <li><span class="ic-label">Oral:</span> 30–50 mg/gün elementel çinko (akne için, hekim gözetiminde)</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — UV koruma; 🤔 Orta — oral çinko ve akne</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri, hassas cilt, bebekler</li>
+            <li><span class="ic-label">Not:</span> Uzun süreli yüksek doz oral çinko bakır eksikliğine neden olabilir</li>
+        </ul>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- HYALURONİK ASİT -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 2</div>
+        <div class="part-divider-title">💧 Nemlendirme & Bariyer</div>
+    </div>
+
+    <h2 id="hyaluronik-asit">💧 Hyaluronik Asit (HA)</h2>
+
+    <p>Hyaluronik asit (HA) cildinizde zaten doğal olarak bulunan bir polisakkarit — yani bir şeker zinciri. Ağırlığının <strong>1000 katı kadar su tutabilir</strong>, bu yüzden "nemlendirme kralı" deniyor. Ama bu, cilde dışarıdan HA sürdüğünüzde aynı etkiyi alacağınız anlamına gelmiyor (Papakonstantinou E et al., 2012).</p>
+
+    <p>Kritik nokta: <strong>molekül boyutu.</strong> Düşük molekül ağırlıklı HA (< 50 kDa) deri bariyerini geçebilir, yüksek molekül ağırlıklı HA (> 1000 kDa) yüzeyde film oluşturarak su kaybını azaltır. İdeal formülasyon ikisini birden içerir.</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Kuru iklimde dikkat:</strong> Çok kuru ortamlarda HA, havadan su çekemeyince cildin <em>alt katmanlarından</em> su çekebilir — bu da cildi daha kuru bırakabilir. Üzerine mutlaka oklüzif (kapatıcı) bir nemlendirici sürün.</p>
+    </div>
+
+    <div class="ingredient-card">
+        <h4>📋 Hyaluronik Asit Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %0.1–2 (serumlarda), daha fazlası yapışkan his verir</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — hidrasyon ve cilt bariyeri desteği</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri — evrensel</li>
+            <li><span class="ic-label">Kombinlenir:</span> Her şeyle — retinol, vitamin C, niacinamide, AHA/BHA sonrası</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Bilinen uyumsuzluk yok. Tek kural: üstüne oklüzif sürün</li>
+        </ul>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>HA = cildin süngeri. Suyu çeker ve tutar — ama kuru havada üzerine krem sürmezseniz cildinizi daha da kurutabilir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- SERAMİDLER -->
+    <!-- ============================================== -->
+
+    <h2 id="seramidler">🧱 Seramidler</h2>
+
+    <p>Cilt bariyerini bir tuğla duvar gibi düşünün: corneocyte'ler (ölü deri hücreleri) tuğlalar, seramidler ise tuğlaları bir arada tutan <strong>harç</strong>. Cilt bariyerindeki lipidlerin yaklaşık <strong>%50'si seramidlerden</strong> oluşuyor (Coderch L et al., 2003).</p>
+
+    <p>Bariyer hasar gördüğünde (aşırı temizlik, retinol tahrişi, soğuk hava, egzama) seramid kaybı olur. Dışarıdan seramid takviyesi, bariyeri onarır ve transepidermal su kaybını (TEWL) azaltır.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Seramidler Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> Formülasyon bağımlı — seramid 1, 3, 6-II kombinasyonları ideal</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — bariyer onarımı, egzama, kuru cilt</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri — özellikle kuru, hassas, bariyeri hasarlı</li>
+            <li><span class="ic-label">Kombinlenir:</span> HA, panthenol, niacinamide (seramid üretimini artırır!), retinol sonrası onarım</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Bilinen uyumsuzluk yok — seramid bir "onarıcı" aktif</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Seramidler</div>
+            <div class="verdict-text">Cilt bakımının "temel taşı." Heyecan verici değil ama son derece işlevsel. Retinol veya eksfoliant kullanan herkesin nemlendiricide seramid araması lazım. Sıkıcı ama vazgeçilmez.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PANTHENOL -->
+    <!-- ============================================== -->
+
+    <h2 id="panthenol">💦 Panthenol (Provitamin B5)</h2>
+
+    <p>Panthenol, cilde uygulandığında <strong>pantotenik aside (vitamin B5)</strong> dönüşür. İki temel işi var: nemlendirme ve yara iyileşmesini hızlandırma. Ciltte doğal nem faktörlerine (NMF) katkıda bulunur ve epidermal bariyeri güçlendirir (Proksch E &amp; Nissen HP, 2002).</p>
+
+    <p>Yanık, güneş yanığı, bebek bezi döküntüsü — panthenol yıllardır bu alanlarda kullanılıyor. Tahriş potansiyeli neredeyse sıfır.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Panthenol Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %1–5 (kozmetik), %5+ (medikal)</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — nemlendirme, bariyer onarımı, yara iyileşmesi</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri — bebekler dahil</li>
+            <li><span class="ic-label">Kombinlenir:</span> Seramidler, HA, Centella, niacinamide — her şeyle</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Bilinen uyumsuzluk yok</li>
+        </ul>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Panthenol = cildin nemlendiricisi ve yatıştırıcısı. Bebek bezinden güneş yanığına, retinol sonrası onarımdan günlük nemlendirmeye — her yere uyar.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 3: ANTI-AGING -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 3</div>
+        <div class="part-divider-title">⏳ Anti-Aging Aktif Maddeler</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- RETİNOL -->
+    <!-- ============================================== -->
+
+    <h2 id="retinol">🧬 Retinol / Retinoidler</h2>
+
+    <p>Dermatolojinin tartışmasız <strong>en güçlü kanıta sahip</strong> anti-aging aktif maddesi. Retinoidler, A vitamini türevlerinin genel adı. Cilde uygulandığında retinal ve ardından retinoik aside dönüşerek hücre yenilenmesini hızlandırır, kolajen üretimini artırır ve melanin dağılımını düzenler (Mukherjee S et al., 2006).</p>
+
+    <p>Güç sıralaması: <strong>tretinoin (retinoik asit)</strong> > adapalene > retinal (retinaldehit) > retinol > retinol esterleri. Tretinoin reçeteli, retinol reçetesiz. Güçlü olan daha etkili ama daha çok tahriş eder.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Retinol / Retinoidler Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> Retinol %0.25–1, retinal %0.05, tretinoin %0.025–0.1 (reçeteli)</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Çok güçlü — kırışıklık, ince çizgi, fotoaging, akne, hiperpigmentasyon</li>
+            <li><span class="ic-label">Uygun cilt:</span> Hemen hemen herkes — ama hassas ciltler düşük dozla ve yavaş başlamalı</li>
+            <li><span class="ic-label">Kombinlenir:</span> Niacinamide, HA, seramidler, azelaik asit, peptidler</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Vitamin C (aynı gece tahriş riski — sabah C, akşam retinol ayırın), AHA/BHA (aynı gece, yeni başlayanlar)</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Başlangıç kuralları:</strong> Düşük konsantrasyonla başlayın (%0.25 retinol). Haftada 2–3 gece kullanın, tolerans oluştukça artırın. "Retinizasyon" dönemi (kızarıklık, soyulma, kurulik) 2–6 hafta sürebilir — normal. Hamilelik ve emzirmede <strong>KESİNLİKLE</strong> kullanmayın.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🏆</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Retinoidler</div>
+            <div class="verdict-text">Anti-aging'in altın standardı. 40+ yıllık araştırma, sayısız RKÇ. Cilt bakımında yalnızca bir aktif madde seçebilseydiniz, bu retinoid olurdu (güneş kreminden sonra). Sabırlı olun, yavaş başlayın, sonuçları göreceksiniz.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PEPTİDLER -->
+    <!-- ============================================== -->
+
+    <h2 id="peptidler">🧪 Peptidler</h2>
+
+    <p>Peptidler = <strong>kısa amino asit zincirleri</strong>. Proteinlerin yapı taşları — kolajen de bir protein. Cilde sinyal göndererek "kolajen üret" veya "kası gevşet" gibi mesajlar iletiyorlar. Ama düzinelerce farklı peptid var ve hepsinin kanıt düzeyi aynı değil.</p>
+
+    <h3>Matrixyl (Palmitoyl Pentapeptide-4)</h3>
+
+    <p>En çok çalışılmış kozmetik peptid. Kolajen I ve III üretimini artırdığı gösterilmiş. Bir çalışmada 4 ay kullanımda kırışıklık derinliğinde %36'ya varan azalma bildirildi (Robinson LR et al., 2005). Retinol kadar güçlü mü? Hayır. Ama retinol tolere edemeyenler için iyi bir yardımcı.</p>
+
+    <h3>Bakır Peptid (GHK-Cu)</h3>
+
+    <p>Bakır-tripeptid kompleksi. Yara iyileşmesi, kolajen üretimi ve antioksidan savunmayı desteklediği in vitro gösterilmiş. Kozmekotik (kozmetik + farmasötik) ürünlerde giderek yaygınlaşıyor ama büyük klinik çalışmalar sınırlı (Pickart L et al., 2015).</p>
+
+    <h3>Argireline (Acetyl Hexapeptide-3)</h3>
+
+    <p>"Topikal botoks" olarak pazarlanıyor — ama bu çok abartılı bir iddia. Nöromüsküler bileşkede SNARE kompleksini kısmen engelleyerek kas kasılmasını azalttığı ileri sürülüyor. Botulinum toksin gibi kası felç etmiyor — etkisi çok daha hafif ve yüzeye sınırlı (Blanes-Mira C et al., 2002).</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Peptidler Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> Formülasyona göre değişir — genellikle %1–10 peptid karışımı</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — Matrixyl en iyi çalışılmış; diğerleri sınırlı</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri — tahriş riski çok düşük</li>
+            <li><span class="ic-label">Kombinlenir:</span> HA, niacinamide, retinol (yardımcı olarak), vitamin C</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Doğrudan AHA/BHA ile — düşük pH peptidleri denature edebilir (parçalayabilir)</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Peptidler</div>
+            <div class="verdict-text">Retinol'ün yanında "yardımcı oyuncu." Tek başına mucize beklemeyin ama tahriş riski düşük, tolere edilebilir. "Topikal botoks" iddiasına inanmayın — argireline botulinum toksininin yerini tutmaz.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- VİTAMİN C -->
+    <!-- ============================================== -->
+
+    <h2 id="vitamin-c">🍊 Vitamin C (L-Askorbik Asit · MAP · SAP)</h2>
+
+    <p>Vitamin C = <strong>antioksidan koruma</strong> + kolajen sentezi desteği + hafif depigmentasyon. Güneş kremine ek olarak fotoproksiyona katkıda bulunur — UV hasarını tek başına önlemez ama SPF'in koruyuculuğunu güçlendirir (Pullar JM et al., 2017).</p>
+
+    <p>Ama tüm vitamin C'ler eşit değil:</p>
+
+    <ul>
+        <li><strong>L-Askorbik Asit (LAA):</strong> En etkili form. pH 3.5'in altında ve %10–20 konsantrasyonda çalışır. Ama çok kararsız — ışık, hava ve ısıyla bozulur. Formülasyon kalitesi kritik.</li>
+        <li><strong>MAP (Magnesium Ascorbyl Phosphate):</strong> Daha kararlı, nötr pH'da çalışır. LAA kadar güçlü değil ama hassas ciltler için daha uygun. %5–10 konsantrasyon önerilir.</li>
+        <li><strong>SAP (Sodium Ascorbyl Phosphate):</strong> Kararlı, akne üzerinde ek anti-bakteriyel etkisi olan form. %5 konsantrasyonda akne lezyonlarını azalttığı gösterilmiş.</li>
+    </ul>
+
+    <div class="ingredient-card">
+        <h4>📋 Vitamin C Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> LAA %10–20, MAP %5–10, SAP %5–10</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — antioksidan koruma, kolajen sentezi, hafif depigmentasyon</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri — hassas ciltler MAP/SAP tercih etmeli</li>
+            <li><span class="ic-label">Kombinlenir:</span> Vitamin E + ferülik asit (LAA'nın stabilitesini ve etkinliğini artırır), niacinamide, SPF</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Retinol (aynı gece — pH farklılıkları; sabah C, akşam retinol ayırın), bakır peptid (oksidasyonu hızlandırabilir)</li>
+        </ul>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Sabah güneş kreminden önce vitamin C serumu — anti-aging'in ikinci altın kuralı (birincisi SPF). LAA en güçlü ama en kaprisli; hassas ciltler MAP/SAP'a yönelsin.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 4: DEPİGMENTASYON -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 4</div>
+        <div class="part-divider-title">🎯 Depigmentasyon & Leke Tedavisi</div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- KOJİK ASİT -->
+    <!-- ============================================== -->
+
+    <h2 id="kojic-acid">🍄 Kojik Asit</h2>
+
+    <p>Kojik asit, pirinç fermantasyonundan (sake üretimi) elde edilen bir mantar metaboliti. Tirozinaz enziminin bakır bağlama bölgesini kelatlayarak (bağlayarak) melanin üretimini azaltır. Yani enzimin çalışması için gereken bakırı "çalar" (Saeedi M et al., 2019).</p>
+
+    <p>Etkili bir depigmentasyon ajanı — ama iki önemli sorunu var: <strong>kontakt dermatit (alerjik reaksiyon)</strong> riski ve <strong>formülasyonda kararsızlık</strong> (oksidasyonla kahverengileşir). Kojik asit dipalmitat (ester formu) daha kararlı ama etkisi daha yavaş.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Kojik Asit Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %1–4</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — melazma ve PIH'de çalışmalar var ama kalitesi değişken</li>
+            <li><span class="ic-label">Uygun cilt:</span> Normal, yağlı. Hassas ciltlerde kontakt dermatit riski yüksek</li>
+            <li><span class="ic-label">Kombinlenir:</span> Glikolik asit, vitamin C, hidrokinon (dermatolog gözetiminde)</li>
+            <li><span class="ic-label">Kombinlenmez:</strong></span> Benzoil peroksit (oksidasyonu hızlandırır)</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Kojik Asit</div>
+            <div class="verdict-text">İşe yarar ama tahriş riski ve kararsızlık sorunları var. Alfa-arbutin veya azelaik asit daha güvenilir alternatifler. Kombinasyon tedavisinde yardımcı olarak düşünülebilir.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- NİASİNAMİD -->
+    <!-- ============================================== -->
+
+    <h2 id="niacinamide">🌟 Niacinamide (Vitamin B3)</h2>
+
+    <p>Niacinamide cilt bakımının "İsviçre çakısı." <strong>Seramid üretimini artırır</strong> (bariyer onarımı), <strong>melanozom transferini azaltır</strong> (leke açar), <strong>sebum üretimini düzenler</strong> (gözenekleri küçültür) ve <strong>anti-inflamatuar</strong> etki gösterir — tüm bunları aynı anda yapar (Gehring W, 2004).</p>
+
+    <p>Ve en güzel tarafı: hemen hemen <strong>her şeyle kombinlenebilir</strong>. pH bağımsız çalışır, tahriş riski çok düşüktür, hamilelikte güvenlidir.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Niacinamide Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %2–5 (yeterli), %10 (maksimum — üstü tahriş edebilir)</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — bariyer onarımı, sebum kontrolü, hiperpigmentasyon, anti-aging</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri — gerçekten evrensel</li>
+            <li><span class="ic-label">Kombinlenir:</span> Her şeyle! Retinol, vitamin C, AHA/BHA, HA, seramid, azelaik asit</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Ciddi uyumsuzluğu yok. Eski "vitamin C ile kullanılmaz" miti çürütüldü</li>
+        </ul>
+    </div>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mit vs Gerçek</div>
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Niacinamide + Vitamin C birlikte kullanılmaz"</div>
+            <div class="myth-fact">YANLIŞ. Bu mit, 1960'larda yapılan ve yüksek sıcaklıkta saf formların reaksiyona girdiğini gösteren eski bir çalışmadan gelir. Modern formülasyonlarda bu sorun yoktur. Gayet rahatlıkla birlikte kullanılabilir.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Niacinamide</div>
+            <div class="verdict-text">Her rutinde olması gereken aktif madde. Bariyer onarımı, leke, sebum, anti-aging — hepsinde etkili, herkesle uyumlu, tahriş etmiyor. %5 konsantrasyon yeterli — daha fazlası genellikle gereksiz.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- TRANEKSAMİK ASİT -->
+    <!-- ============================================== -->
+
+    <h2 id="tranexamic-acid">💎 Traneksamik Asit</h2>
+
+    <p>Traneksamik asit (TXA), aslında bir <strong>kanama durdurucu ilaç</strong> — ama dermatolojide son yıllarda leke tedavisinde yıldızı parlıyor. Plazminojen aktivasyonunu inhibe ederek melanosit-keratinosit etkileşimini azaltıyor. Yani leke oluşum mekanizmasının farklı bir noktasında çalışıyor (Kim SJ et al., 2016).</p>
+
+    <p>Melazmada özellikle etkili — hem topikal (%2–5) hem oral (250 mg × 2/gün) formları çalışılmış. Topikal kullanımda tahriş riski çok düşük.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Traneksamik Asit Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Topikal:</span> %2–5</li>
+            <li><span class="ic-label">Oral:</span> 250 mg × 2/gün (reçeteli, hekim gözetiminde)</li>
+            <li><span class="ic-label">Kanıt:</span> ✅ Güçlü — özellikle melazmada (topikal ve oral)</li>
+            <li><span class="ic-label">Uygun cilt:</span> Tüm cilt tipleri, koyu tenler dahil</li>
+            <li><span class="ic-label">Kombinlenir:</span> Niacinamide, vitamin C, azelaik asit, retinoidler</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Ciddi topikal uyumsuzluk yok. Oral form: tromboz öyküsü varsa KESİNLİKLE kullanılmamalı</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Traneksamik Asit</div>
+            <div class="verdict-text">Melazma tedavisinin yükselen yıldızı. Topikal formda güvenli, etkili ve iyi tolere edilen bir seçenek. Oral form daha güçlü ama hekim gözetimi şart — pıhtılaşma riski olan kişilerde kontrendike.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 5: MİNERALLER & BOTANİKLER -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 5</div>
+        <div class="part-divider-title">🧪 Mineraller & Özel Aktifler</div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- SÜLFÜR -->
+    <!-- ============================================== -->
+
+    <h2 id="sulfur">🔥 Sülfür</h2>
+
+    <p>Sülfür (kükürt), dermatolojinin en eski aktif maddelerinden biri — antik çağlardan beri cilt hastalıklarında kullanılıyor. <strong>Keratolitik</strong> (ölü deriyi döker), <strong>anti-fungal</strong> (mantarı öldürür) ve <strong>anti-bakteriyel</strong> etki gösterir. Seboreik dermatit, akne ve rozaseada kullanılıyor (Gupta AK &amp; Nicol K, 2004).</p>
+
+    <p>Kokusu hoş değil (çürük yumurta hatırlatır) ve cildi kurutabilir — ama doğru formülasyonda etkili bir araçtır.</p>
+
+    <div class="ingredient-card">
+        <h4>📋 Sülfür Kartı</h4>
+        <ul>
+            <li><span class="ic-label">Konsantrasyon:</span> %2–10 (topikal yıkama/maske)</li>
+            <li><span class="ic-label">Kanıt:</span> 🤔 Orta — akne, seboreik dermatit, rozaseada uzun klinik geçmiş</li>
+            <li><span class="ic-label">Uygun cilt:</span> Yağlı, akneye yatkın, seboreik dermatitli. Kuru ciltlerde dikkatli</li>
+            <li><span class="ic-label">Kombinlenir:</span> Niacinamide, çinko, nazik nemlendirici</li>
+            <li><span class="ic-label">Kombinlenmez:</span> Benzoil peroksit (aşırı kurutma riski), retinol (aynı gece)</li>
+        </ul>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Sülfür = akne ve seboreik dermatit için eski ama etkili bir çözüm. Kokusu kötü, cildi kurutur — ama işe yarar.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- KOMBİNASYON TABLOSU -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Referans</div>
+        <div class="part-divider-title">📊 Kombinasyon Tablosu</div>
+    </div>
+
+    <h2 id="kombinasyon-tablosu">📊 Hangi Aktif + Hangi Aktif?</h2>
+
+    <p>En sık sorulan soru: "Bunları birlikte kullanabilir miyim?" İşte hızlı referans tablonuz:</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Kombinasyon</th>
+                    <th>Uyum</th>
+                    <th>Not</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Retinol + Niacinamide</strong></td>
+                    <td>✅ Harika</td>
+                    <td>Niacinamide retinol tahrişini azaltır</td>
+                </tr>
+                <tr>
+                    <td><strong>Retinol + Vitamin C</strong></td>
+                    <td>⚠️ Dikkatli</td>
+                    <td>Sabah C, akşam retinol olarak ayırın</td>
+                </tr>
+                <tr>
+                    <td><strong>Retinol + AHA/BHA</strong></td>
+                    <td>⚠️ Dikkatli</td>
+                    <td>Yeni başlayanlar aynı gece kullanmasın — alternatif gece</td>
+                </tr>
+                <tr>
+                    <td><strong>Vitamin C + SPF</strong></td>
+                    <td>✅ Harika</td>
+                    <td>Vitamin C, SPF'in fotokoruyucu etkisini güçlendirir</td>
+                </tr>
+                <tr>
+                    <td><strong>Niacinamide + Vitamin C</strong></td>
+                    <td>✅ Uyumlu</td>
+                    <td>Eski "uyumsuz" miti çürütüldü</td>
+                </tr>
+                <tr>
+                    <td><strong>AHA + BHA</strong></td>
+                    <td>❌ Aşırı</td>
+                    <td>Aynı gece ikisini birden kullanmayın — aşırı eksfoliasyon</td>
+                </tr>
+                <tr>
+                    <td><strong>Vitamin C + Bakır Peptid</strong></td>
+                    <td>❌ Kaçının</td>
+                    <td>Bakır, C vitamininin oksidasyonunu hızlandırabilir</td>
+                </tr>
+                <tr>
+                    <td><strong>HA + Her şey</strong></td>
+                    <td>✅ Evrensel</td>
+                    <td>HA hiçbir aktif maddeyle çelişmez</td>
+                </tr>
+                <tr>
+                    <td><strong>Azelaik Asit + Retinol</strong></td>
+                    <td>✅ Harika</td>
+                    <td>İkisi de akne ve lekede etkili — sinerjik</td>
+                </tr>
+                <tr>
+                    <td><strong>Peptidler + AHA/BHA</strong></td>
+                    <td>⚠️ Dikkatli</td>
+                    <td>Düşük pH peptidleri parçalayabilir — farklı adımlarda uygulayın</td>
+                </tr>
+                <tr>
+                    <td><strong>Seramid + Retinol</strong></td>
+                    <td>✅ Harika</td>
+                    <td>Seramid retinol tahrişini yatıştırır, bariyeri onarır</td>
+                </tr>
+                <tr>
+                    <td><strong>Traneksamik Asit + Niacinamide</strong></td>
+                    <td>✅ Harika</td>
+                    <td>Farklı mekanizmalardan leke açma — sinerjik</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Temel kural:</strong> "Sabah = koruma (antioksidan + SPF), akşam = onarım (retinol/eksfoliant)." Bu kadar basit. Şüphe duyduğunuzda aktif maddeleri sabah/akşam veya alternatif gecelere ayırın.</p>
+        <p>Ve her zaman: <strong>daha az = daha çok.</strong> 10 farklı aktif maddeyi üst üste koymak cildinizi iyileştirmez — tahriş eder. Birkaç iyi seçilmiş aktif, düzinelerce ürün katmanından daha etkilidir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- MİTLER -->
+    <!-- ============================================== -->
+
+    <h2>🔮 Yaygın Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Yüksek konsantrasyon = daha iyi sonuç"</div>
+            <div class="myth-fact">YANLIŞ. Niacinamide %5, %10 ile aynı etkiyi gösterir — ama daha az tahriş eder. Retinol %0.25 bile uzun vadede fark yaratır. Daha fazla = daha fazla tahriş, daha fazla etki DEĞİL.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Hyaluronik asit cildi dolgunlaştırır"</div>
+            <div class="myth-fact">Topikal HA cildi nemlendirip geçici dolgunluk hissi verir — ama enjeksiyon gibi yapısal dolgunluk sağlamaz. Cilde su çekmesi ≠ kolajen üretmesi.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Retinol cildi inceltir"</div>
+            <div class="myth-fact">Tam tersi. Retinol epidermisi (üst katman) kalınlaştırır ve kolajen üretimini artırır. İlk dönemdeki soyulma "incelme" hissi yaratır ama bu geçicidir.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Doğal ingrediyenler her zaman güvenlidir"</div>
+            <div class="myth-fact">"Doğal" ≠ "güvenli." Limon suyu (sitrik asit) cildi yakabilir, terebentin yağı kontakt dermatit yapabilir. Güvenlik, kaynağa değil konsantrasyona ve formülasyona bağlıdır.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Gözenekler açılır ve kapanır"</div>
+            <div class="myth-fact">Gözeneklerin kası yoktur — açılıp kapanmazlar. BHA ve niacinamide gözenek çapını azaltabilir ama bu, gözenekteki tıkanıklığı çözerek ve sebumu azaltarak olur — fiziksel daraltma değil.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- SONUÇ -->
+    <!-- ============================================== -->
+
+    <h2>🏁 Sonuç: Nereden Başlamalı?</h2>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Minimum etkili rutin (herkes için):</strong></p>
+        <p>1️⃣ <strong>Nazik temizleyici</strong> (pH 5–5.5)</p>
+        <p>2️⃣ <strong>Nemlendirici</strong> (HA + seramid + niacinamide içeren)</p>
+        <p>3️⃣ <strong>SPF 30+</strong> geniş spektrum (her gün, her mevsim)</p>
+        <p>Bu üçlü, dermatologların %90'ının önerdiği temeli oluşturur. Aktif maddeler bu temel <em>üzerine</em> eklenir — onun <em>yerine</em> değil.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">📋</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Aktif Madde Ekleme Sırası (Yeni Başlayanlar İçin)</div>
+            <div class="verdict-text">1. Niacinamide (sabah veya akşam — en güvenli başlangıç) → 2. Vitamin C (sabah, SPF öncesi) → 3. Retinol (akşam, düşük dozla) → 4. Eksfoliant (AHA veya BHA, haftada 1–2) → 5. Hedefli aktifler (azelaik asit, traneksamik asit vb.) Her yeni aktifi en az 2 hafta tek başına deneyin.</div>
+        </div>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir tedaviye başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Tang SC, Yang JH. Dual effects of alpha-hydroxy acids on the skin. <em>Molecules.</em> 2018;23(4):863.</li>
+            <li>Arif T. Salicylic acid as a peeling agent: a comprehensive review. <em>Clin Cosmet Investig Dermatol.</em> 2015;8:455–461.</li>
+            <li>Grimes PE, Green BA, Wildnauer RH, Edison BL. Evaluation of inherent differences between PHA and AHA skin exfoliants. <em>Dermatol Surg.</em> 2004;30(11):1473–1481.</li>
+            <li>Mukherjee S, Date A, Patravale V, et al. Retinoids in the treatment of skin aging. <em>Clin Interv Aging.</em> 2006;1(4):327–348.</li>
+            <li>Papakonstantinou E, Roth M, Karakiulakis G. Hyaluronic acid: a key molecule in skin aging. <em>Dermatoendocrinol.</em> 2012;4(3):253–258.</li>
+            <li>Coderch L, López O, de la Maza A, Parra JL. Ceramides and skin function. <em>Am J Clin Dermatol.</em> 2003;4(2):107–129.</li>
+            <li>Gehring W. Nicotinic acid/niacinamide and the skin. <em>J Cosmet Dermatol.</em> 2004;3(2):88–93.</li>
+            <li>Pullar JM, Carr AC, Vissers MCM. The roles of vitamin C in skin health. <em>Nutrients.</em> 2017;9(8):866.</li>
+            <li>Dhaliwal S, Rybak I, Ellis SR, et al. Prospective, randomized, double-blind assessment of topical bakuchiol and retinol for facial photoageing. <em>Br J Dermatol.</em> 2019;180(2):289–296.</li>
+            <li>Proksch E, Nissen HP. Dexpanthenol enhances skin barrier repair. <em>J Dermatolog Treat.</em> 2002;13(4):173–178.</li>
+            <li>Fitton A, Goa KL. Azelaic acid: a review of its pharmacological properties and therapeutic efficacy in acne and hyperpigmentary skin disorders. <em>Drugs.</em> 1991;41(5):780–798.</li>
+            <li>Kim SJ, Park JY, Shibata T, et al. Efficacy of topical tranexamic acid in melasma treatment. <em>Ann Dermatol.</em> 2016;28(4):480–484.</li>
+            <li>Boo YC. Arbutin as a skin depigmenting agent with antioxidant properties. <em>Antioxidants.</em> 2021;10(7):1129.</li>
+            <li>Robinson LR, Fitzgerald NC, Phan DG, et al. Topical palmitoyl pentapeptide provides improvement in photoaged human facial skin. <em>Int J Cosmet Sci.</em> 2005;27(3):155–160.</li>
+            <li>Pickart L, Vasquez-Soltero JM, Margolina A. GHK peptide as a natural modulator of multiple cellular pathways in skin regeneration. <em>Biomed Res Int.</em> 2015;2015:648108.</li>
+            <li>Bylka W, Znajdek-Awiżeń P, Studzińska-Sroka E, Brzezińska M. Centella asiatica in cosmetology. <em>Postepy Dermatol Alergol.</em> 2013;30(1):46–49.</li>
+            <li>Gupta M, Mahajan VK, Mehta KS, Chauhan PS. Zinc therapy in dermatology: a review. <em>Dermatol Res Pract.</em> 2014;2014:709152.</li>
+            <li>Saeedi M, Eslamifar M, Khezri K. Kojic acid applications in cosmetic and pharmaceutical preparations. <em>Biomed Pharmacother.</em> 2019;110:582–593.</li>
+            <li>Gupta AK, Nicol K. The use of sulfur in dermatology. <em>J Drugs Dermatol.</em> 2004;3(4):427–431.</li>
+            <li>Blanes-Mira C, Clemente J, Jodas G, et al. A synthetic hexapeptide (Argireline) with antiwrinkle activity. <em>Int J Cosmet Sci.</em> 2002;24(5):303–310.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
