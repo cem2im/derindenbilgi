@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksozom ve Somon DNA (PDRN): Hype mı Bilim mi? | Derindenbilgi</title>
+    <meta name="description" content="Eksozom ve somon DNA (PDRN) dermatolojide gerçekten etkili mi? Cilt gençleştirme, saç dökülmesi, yara iyileşmesi — endikasyonlara göre kanıta dayalı değerlendirme.">
+    <meta name="keywords" content="eksozom, somon DNA, PDRN, polinükleotid, kök hücre eksozom, cilt gençleştirme, saç dökülmesi, yara iyileşmesi, dermatoloji trendleri">
+    <meta property="og:title" content="Eksozom ve Somon DNA (PDRN): Hype mı Bilim mi?">
+    <meta property="og:description" content="Kök hücre eksozomları ve somon DNA — dermatolojinin yeni trendleri kanıta dayalı mı yoksa sadece pazarlama mı?">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+            color: #7c3aed;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🧬 Yeni Trendler</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 14 dk okuma</span>
+    </div>
+    <h1>Eksozom ve Somon DNA (PDRN): Hype mı Bilim mi?</h1>
+    <p class="article-subtitle">Son 2 yılda Instagram'da "eksozom" ve "somon DNA" kelimelerini duymayan kaldı mı? Dermatolojinin yeni parlak oyuncakları gerçekten çalışıyor mu, yoksa sadece pahalı bir pazarlama hikâyesi mi? Endikasyon endikasyon, bilime bakıyoruz.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#eksozom-nedir">Eksozom Nedir?</a></li>
+            <li><a href="#eksozom-uygulama">Eksozom Nasıl Uygulanıyor?</a></li>
+            <li><a href="#eksozom-cilt">Eksozom → Cilt Gençleştirme</a></li>
+            <li><a href="#eksozom-sac">Eksozom → Saç Dökülmesi</a></li>
+            <li><a href="#eksozom-yara">Eksozom → Yara İyileşmesi / Skar</a></li>
+            <li><a href="#eksozom-pigment">Eksozom → Pigmentasyon</a></li>
+            <li><a href="#eksozom-sorunlar">Eksozom: Büyük Sorunlar</a></li>
+            <li><a href="#pdrn-nedir">PDRN (Somon DNA) Nedir?</a></li>
+            <li><a href="#pdrn-uygulama">PDRN Nasıl Uygulanıyor?</a></li>
+            <li><a href="#pdrn-yara">PDRN → Yara İyileşmesi</a></li>
+            <li><a href="#pdrn-cilt">PDRN → Cilt Gençleştirme</a></li>
+            <li><a href="#pdrn-sac">PDRN → Saç Dökülmesi</a></li>
+            <li><a href="#pdrn-pigment">PDRN → Pigmentasyon</a></li>
+            <li><a href="#pdrn-sorunlar">PDRN: Sorunlar</a></li>
+            <li><a href="#karsilastirma">Eksozom vs PDRN vs PRP Tablosu</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#sonuc">Sonuç</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">🧬</span> <strong>Eksozom</strong> = hücreler arası "kargo paketi." <strong>PDRN</strong> = somon balığından elde edilen DNA parçacıkları. İkisi de dermatolojinin son dönem parlak oyuncakları.</li>
+            <li><span class="bullet">🔬</span> Her ikisinin de <strong>mekanizması mantıklı</strong> ve laboratuvar sonuçları umut verici — ama klinik kanıt henüz erken aşamada.</li>
+            <li><span class="bullet">🩹</span> PDRN'nin <strong>yara iyileşmesinde</strong> gerçek kanıtı var — ortopedi ve yanık tedavisinden uzun bir geçmişi mevcut.</li>
+            <li><span class="bullet">🤔</span> Her iki teknoloji de <strong>cilt gençleştirmede</strong> henüz büyük RKÇ (randomize kontrollü çalışma) ile desteklenmedi.</li>
+            <li><span class="bullet">⚠️</span> Eksozomda <strong>standardizasyon sorunu</strong> ciddi — her üretici farklı kaynak ve izolasyon yöntemi kullanıyor. FDA 2019'da uyarı yayınladı.</li>
+            <li><span class="bullet">💰</span> Hype trenin önünde koşuyor. Bilim yetiştiğinde bu teknolojiler gerçekten devrimci olabilir — <strong>ama henüz o noktada değiliz.</strong></li>
+            <li><span class="bullet">💊</span> Paranızı <strong>retinoid + SPF</strong>'e harcasanız kanıt açısından çok daha öndesiniz.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PART 1: EKSOZOM -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 1</div>
+        <div class="part-divider-title">🧫 Eksozom</div>
+    </div>
+
+    <h2 id="eksozom-nedir">🧫 Eksozom Nedir?</h2>
+
+    <p>Hücreleriniz birbirleriyle sürekli "mesaj" gönderiyor. Bu mesajları taşıyan minik kargo paketlerine <strong>eksozom</strong> deniyor. 30–150 nanometre boyutunda, gözle görülemeyecek kadar küçük kürecikler — ama içlerinde büyüme faktörleri, sitokinler ve mikroRNA gibi biyoaktif maddeler taşıyorlar.</p>
+
+    <p>Düşünün: hücre A, hücre B'ye "kollajen üret!" diye bir mektup göndermek istiyor. Bu mektubu bir zarfın içine koyuyor — işte o zarf eksozom. Zarfın içindeki "talimatlar" ise büyüme faktörleri ve RNA'lar.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Eksozom = hücrelerin birbirine gönderdiği minik kargo paketleri. İçinde "şunu yap, bunu onar" gibi biyolojik talimatlar var.</p>
+    </div>
+
+    <h3>Kök Hücre Eksozomları vs Bitki Eksozomları</h3>
+
+    <p>Pazarlamada en çok gördüğünüz iki tip var: <strong>kök hücre eksozomları</strong> (genellikle insan yağ dokusu veya göbek kordonu kaynaklı) ve <strong>bitki eksozomları</strong> (aloe vera, zencefil gibi bitkilerden elde edilen veziküller).</p>
+
+    <p>Fark devasa. Kök hücre eksozomları memelilere özgü büyüme faktörleri taşırken, bitki eksozomları tamamen farklı bir biyolojiye sahip. Bitki eksozomlarının insan derisine etkisi üzerine güvenilir klinik veri neredeyse yok (Dad HA et al., 2021).</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Önemli Ayrım:</strong> Eksozom kök hücre <strong>DEĞİL</strong> — kök hücrelerden <strong>SALGILANAN</strong> şey. Bu fark çok önemli. "Kök hücre tedavisi" olarak pazarlanan eksozom uygulamaları yanıltıcı bir isim kullanıyor. Eksozom, kök hücre gibi çoğalamaz ve farklılaşamaz.</p>
+    </div>
+
+
+    <h2 id="eksozom-uygulama">💉 Eksozom Nasıl Uygulanıyor?</h2>
+
+    <p>Üç temel uygulama yöntemi var:</p>
+
+    <ul>
+        <li><strong>Microneedling + eksozom:</strong> Deriye micro-iğnelerle kanallar açılıp eksozom çözeltisi sürülüyor. En yaygın yöntem — iğne kanalları penetrasyonu artırıyor.</li>
+        <li><strong>İntradermal enjeksiyon:</strong> Doğrudan deri içine ince iğneyle enjekte ediliyor. Mezoterapi tarzında, hedefli uygulama.</li>
+        <li><strong>Topikal uygulama:</strong> Serum formunda cilde sürülüyor. Ama eksozomlar büyük moleküller — sağlam cilt bariyerini geçmeleri çok zor. En az etkili yöntem.</li>
+    </ul>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Eksozom en çok microneedling veya enjeksiyonla uygulanıyor. Krem olarak sürmek? Cilt bariyeri geçişi soru işareti — penetrasyon sorunu büyük.</p>
+    </div>
+
+
+    <!-- EKSOZOM ENDİKASYONLARI -->
+
+    <h2 id="eksozom-cilt">✨ Eksozom → Cilt Gençleştirme / Anti-Aging</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.2)">✨</div>
+        <div>
+            <div class="endikasyon-title">Cilt Gençleştirme</div>
+            <div class="endikasyon-subtitle">Kolajen artışı, kırışıklık azalması, "glow" etkisi</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Sınırlı</span>
+
+    <p>Laboratuvar ortamında sonuçlar heyecan verici: kök hücre eksozomları fibroblast (kolajen üreten hücre) çoğalmasını artırıyor, tip I ve tip III kolajen üretimini tetikliyor ve antioksidan savunmayı güçlendiriyor (Hu et al., 2019).</p>
+
+    <p>Ama laboratuvar ≠ insan cildi. İnsan üzerinde yapılmış çalışma sayısı çok az, örneklemler küçük (genellikle 20–30 kişi) ve takip süreleri kısa. Büyük çaplı randomize kontrollü çalışma (RKÇ) henüz yok (Shi et al., 2023).</p>
+
+    <p>Bir 2025 MDPI derlemesinde eksozomların "rejeneratif dermatolojinin geleceği" olabileceği belirtilmekle birlikte, "standardizasyon ve klinik validasyon eksikliği" en büyük engel olarak vurgulanıyor (Gao et al., 2025).</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Eksozom & Cilt Gençleştirme</div>
+            <div class="verdict-text">Laboratuvarda harika, klinikte henüz kanıtlanmadı. Mekanizma mantıklı ama "parlak cilt" vaat eden ürünlerin arkasında büyük RKÇ yok. Şimdilik retinoid + SPF çok daha kanıtlı bir yatırım.</div>
+        </div>
+    </div>
+
+
+    <h2 id="eksozom-sac">💇 Eksozom → Saç Dökülmesi</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2)">💇</div>
+        <div>
+            <div class="endikasyon-title">Saç Dökülmesi (AGA)</div>
+            <div class="endikasyon-subtitle">Androgenetik alopeside eksozom tedavisi</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Çok Erken</span>
+
+    <p>Birkaç pilot çalışma var. Kwon ve arkadaşları (2023), saç folikülü kaynaklı eksozomların dermal papilla hücrelerini uyardığını ve küçük bir hasta grubunda saç yoğunluğunu artırdığını bildirdi — ama bu kontrol grupsuz, küçük bir pilot çalışma.</p>
+
+    <p>PRP ile karşılaştırma? Henüz başlangıç aşamasında. PRP'nin saç dökülmesinde meta-analizlerle desteklenen güçlü kanıtı var. Eksozom o noktaya henüz gelmedi — çok erken.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Eksozom & Saç Dökülmesi</div>
+            <div class="verdict-text">PRP'nin kanıtı çok daha güçlü — eksozom saç dökülmesinde henüz deneysel. Minoxidil ve finasterid gibi kanıtlanmış tedaviler varken eksozoma para harcamak prematüre.</div>
+        </div>
+    </div>
+
+
+    <h2 id="eksozom-yara">🩹 Eksozom → Yara İyileşmesi / Skar</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.2)">🩹</div>
+        <div>
+            <div class="endikasyon-title">Yara İyileşmesi ve Skar Tedavisi</div>
+            <div class="endikasyon-subtitle">Eksozomun en güçlü preklinik verisi bu alanda</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Sınırlı Ama Umut Verici</span>
+
+    <p>Yara iyileşmesi eksozom araştırmalarının en güçlü olduğu alan. Hayvan modellerinde kök hücre eksozomları anjiogenezi (yeni damar oluşumu) artırıyor, inflamasyonu azaltıyor ve reepitalizasyonu hızlandırıyor (Li M et al., 2023).</p>
+
+    <p>İnsan çalışmaları henüz az ama umut verici. Özellikle diyabetik yara iyileşmesinde ve akne skarlarında küçük klinik seriler olumlu sonuçlar bildiriyor. Yine de büyük RKÇ bekleniyor.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Eksozom & Yara İyileşmesi</div>
+            <div class="verdict-text">Sınırlı ama umut verici. Preklinik veri güçlü, insan çalışmaları başlangıç aşamasında. Gelecekte bu alan eksozomun "gerçek evi" olabilir — ama henüz orada değiliz.</div>
+        </div>
+    </div>
+
+
+    <h2 id="eksozom-pigment">🎯 Eksozom → Pigmentasyon</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(251,146,60,0.1); border:1px solid rgba(251,146,60,0.2)">🎯</div>
+        <div>
+            <div class="endikasyon-title">Pigmentasyon / Leke Tedavisi</div>
+            <div class="endikasyon-subtitle">Melazma, hiperpigmentasyon</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-yetersiz">❌ Kanıt Düzeyi: Yetersiz</span>
+
+    <p>Bazı in vitro çalışmalar eksozomların melanosit aktivitesini etkileyebileceğini gösteriyor. Ama klinik çalışma yok denecek kadar az. Hiperpigmentasyon tedavisinde hidrokinon, sisteamin, azelaik asit, retinoid gibi onlarca kanıtlanmış seçenek varken eksozoma yönelmek mantıklı değil.</p>
+
+    <div class="verdict-card verdict-negative">
+        <div class="verdict-icon">❌</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Eksozom & Pigmentasyon</div>
+            <div class="verdict-text">Kanıt yok. Leke sorununuz varsa, kanıtlanmış depigmentasyon ajanlarına yönelin. Eksozom bu alanda tamamen deneysel.</div>
+        </div>
+    </div>
+
+
+    <!-- EKSOZOM: BÜYÜK SORUNLAR -->
+    <h2 id="eksozom-sorunlar">🚨 Eksozom: Büyük Sorunlar</h2>
+
+    <div class="danger-box">
+        <div class="danger-box-title">🚨 Eksozom Uygulamalarında Ciddi Endişeler</div>
+        <ul>
+            <li><strong>Standardizasyon yok:</strong> Her üretici farklı kaynak (yağ dokusu, göbek kordonu, bitki), farklı izolasyon yöntemi, farklı konsantrasyon kullanıyor. Bir klinikte aldığınız "eksozom" ile diğerindeki tamamen farklı bir ürün olabilir.</li>
+            <li><strong>FDA uyarısı:</strong> ABD Gıda ve İlaç Dairesi (FDA), 2019'da eksozom ürünlerine resmi uyarı yayınladı — onaylanmamış kök hücre/eksozom ürünlerinin pazarlanmasını yasakladı. Ciddi enfeksiyon vakaları bildirildi (FDA, 2019).</li>
+            <li><strong>Türkiye'de düzenleme belirsiz:</strong> Eksozom tedavileri için net bir düzenleyici çerçeve henüz oluşturulmadı. Kim kontrol ediyor? Kaynak güvenilir mi? Cevaplar belirsiz.</li>
+            <li><strong>"Kök hücre tedavisi" pazarlaması yanıltıcı:</strong> Eksozom kök hücre değil. "Kök hücre tedavisi" diye satılan şey, kök hücrelerden salgılanan parçacıklar — bu farkı bilmek şart.</li>
+            <li><strong>Fiyat çok yüksek:</strong> Seans başına binlerce lira — kanıt düzeyiyle tamamen orantısız bir maliyet.</li>
+        </ul>
+        <p><strong>Kaynak bilinmeyen eksozom ürünleri CİDDİ risk taşır.</strong> Sterilizasyon sorunu, patojen bulaşma ve alerjik reaksiyon gibi riskler göz ardı edilemez.</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Eksozom tedavisinin en büyük sorunu: ne aldığınızı bilmiyorsunuz. Standardizasyon yok, düzenleme yetersiz, fiyat kanıtla orantısız.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 2: SOMON DNA (PDRN) -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 2</div>
+        <div class="part-divider-title">🐟 Somon DNA (PDRN)</div>
+    </div>
+
+    <h2 id="pdrn-nedir">🐟 PDRN (Somon DNA) Nedir?</h2>
+
+    <p>Polideoxyribonükleotid — biliyorum, söylemesi bile zor 😅 Basitçe: <strong>somon balığının sperm hücrelerinden elde edilen DNA parçacıkları.</strong> 50–1500 baz çifti uzunluğunda küçük DNA fragmanları. "PDRN" diye kısaltıyoruz, "somon DNA" da deniyor.</p>
+
+    <p>Peki mekanizma ne? PDRN, <strong>adenosin A2A reseptörünü</strong> aktive ediyor. Bu da VEGF (vasküler endotelyal büyüme faktörü) üretimini artırıyor → yeni damar oluşumu (anjiogenez) → doku onarımı hızlanıyor. Yani bir zincirleme reaksiyon başlatıyor (Squadrito F et al., 2017).</p>
+
+    <div class="warning-box">
+        <p><strong>"DNA enjekte ediyorsunuz ama genetiğinizi DEĞİŞTİRMİYOR"</strong> — bu çok önemli. PDRN, hücre çekirdeğine girip genetik kodunuzu değiştirmiyor. Bu parçacıklar sinyal molekülü olarak çalışıyor — hücrelere "onarım yap" mesajı gönderiyorlar, genetik müdahale yapmıyorlar.</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PDRN = somon balığı DNA'sından elde edilen parçacıklar. Genetiğinizi değiştirmiyor — hücrelere "onarım yap" sinyali gönderiyor.</p>
+    </div>
+
+
+    <h2 id="pdrn-uygulama">💉 PDRN Nasıl Uygulanıyor?</h2>
+
+    <p>Üç temel yöntem:</p>
+
+    <ul>
+        <li><strong>İntradermal enjeksiyon:</strong> Mezoterapi tarzında, ince iğneyle deri içine enjekte ediliyor. En yaygın ve en etkili yöntem.</li>
+        <li><strong>Microneedling ile:</strong> Dermaroller veya dermapen ile kanallar açılıp PDRN çözeltisi sürülüyor.</li>
+        <li><strong>Topikal ürünler:</strong> Serum formunda cilde uygulanıyor. Ama eksozomda olduğu gibi, penetrasyon sorunu burada da geçerli — ne kadarı cilt bariyerini geçiyor, belirsiz.</li>
+    </ul>
+
+    <p>Genellikle birkaç hafta arayla <strong>3–5 seans</strong> öneriliyor. Seanslar arası süre ve toplam seans sayısı klinikten kliniğe değişiyor — çünkü (tahmin ettiniz) burada da standardize bir protokol yok.</p>
+
+
+    <!-- PDRN ENDİKASYONLARI -->
+
+    <h2 id="pdrn-yara">🩹 PDRN → Yara İyileşmesi</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.2)">🩹</div>
+        <div>
+            <div class="endikasyon-title">Yara İyileşmesi</div>
+            <div class="endikasyon-subtitle">PDRN'nin en güçlü olduğu alan</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü</span>
+
+    <p>İşte PDRN'nin gerçekten parlak olduğu alan. Ortopedi, plastik cerrahi ve yanık tedavisinde <strong>uzun bir geçmişi</strong> var. Park ve Jang (2025) derlemesinde PDRN'nin yara iyileşmesindeki rolü kapsamlı olarak ele alınmış — anjiogenez artışı, inflamasyon azalması ve fibroblast proliferasyonu tutarlı bir şekilde gösterilmiş.</p>
+
+    <p>Diyabetik ülserlerden cerrahi yaralara kadar birçok alanda klinik çalışmalar mevcut. İtalya'da PDRN uzun süredir rejeneratif tıp aracı olarak kullanılıyor (Galeano M et al., 2008).</p>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — PDRN & Yara İyileşmesi</div>
+            <div class="verdict-text">Yara iyileşmesinde gerçek kanıt var. PDRN'nin en güçlü ve en iyi desteklenmiş endikasyonu bu. Rejeneratif tıptaki geçmişi kozmetik kullanımdan çok daha sağlam.</div>
+        </div>
+    </div>
+
+
+    <h2 id="pdrn-cilt">✨ PDRN → Cilt Gençleştirme / Parlaklık</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.2)">✨</div>
+        <div>
+            <div class="endikasyon-title">Cilt Gençleştirme ve Parlaklık</div>
+            <div class="endikasyon-subtitle">"Somon DNA ile parlayan cilt" — pazarlama vaadi</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Sınırlı</span>
+
+    <p>Birkaç küçük çalışma PDRN enjeksiyonu sonrası cilt hidrasyonu ve elastikiyetinde artış bildiriyor. Kulağa güzel geliyor — ama çalışma boyutları küçük, çoğu kontrol grupsuz ve takip süreleri kısa.</p>
+
+    <p>2024 yılında yayınlanan bir sistematik derleme, kozmetik amaçlı PDRN/PN kullanımına dair literatürde <strong>"birçok metodolojik eksiklik"</strong> tespit etti: küçük örneklem, kısa takip, standardizasyon sorunları ve yayın yanlılığı (Kim HJ et al., 2024).</p>
+
+    <p>Büyük RKÇ? Yok. "Kesin etkili" diyecek kanıt düzeyi? Henüz ulaşılmadı. Umut verici mi? Evet. Ama heyecanlanmak için erken.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — PDRN & Cilt Gençleştirme</div>
+            <div class="verdict-text">Umut verici ama henüz "kesin etkili" diyecek kanıt yok. Sistematik derlemeler önemli metodolojik eksiklikler tespit ediyor. PRP veya mezoterapi ile kıyaslamada "daha üstün" olduğuna dair kanıt mevcut değil.</div>
+        </div>
+    </div>
+
+
+    <h2 id="pdrn-sac">💇 PDRN → Saç Dökülmesi</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2)">💇</div>
+        <div>
+            <div class="endikasyon-title">Saç Dökülmesi (AGA)</div>
+            <div class="endikasyon-subtitle">PDRN ile saç büyütme</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt Düzeyi: Çok Erken</span>
+
+    <p>Pilot çalışmalar var — ama hepsi küçük örneklemli ve kısa takipli. PDRN'nin saç foliküllerini uyarabileceği mekanizma açısından mantıklı (A2A reseptör aktivasyonu → anjiogenez → folikül beslenmesi), ama klinik kanıt bu teoriyi henüz destekleyecek düzeyde değil.</p>
+
+    <p>PRP ve minoxidil saç dökülmesinde meta-analizlerle destekleniyor. PDRN? Birkaç vaka serisi düzeyinde. Karşılaştırma bile yapılamayacak kadar erken.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — PDRN & Saç Dökülmesi</div>
+            <div class="verdict-text">Çok erken. PRP ve minoxidil kanıtı çok daha güçlü. Saç dökülmeniz varsa, kanıtlanmış tedavilerle başlayın — PDRN henüz orada değil.</div>
+        </div>
+    </div>
+
+
+    <h2 id="pdrn-pigment">🎯 PDRN → Pigmentasyon / Melazma</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(251,146,60,0.1); border:1px solid rgba(251,146,60,0.2)">🎯</div>
+        <div>
+            <div class="endikasyon-title">Pigmentasyon / Melazma</div>
+            <div class="endikasyon-subtitle">Leke tedavisinde PDRN</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-yetersiz">❌ Kanıt Düzeyi: Yetersiz</span>
+
+    <p>Birkaç in vitro çalışmada PDRN'nin melanosit aktivitesini etkileyebileceği gösterilmiş. Ama klinik çalışma yok denecek kadar az. Hiperpigmentasyon tedavisinde düzinelerce kanıtlanmış seçenek (hidrokinon, sisteamin, azelaik asit, traneksamik asit) varken, PDRN'ye bu endikasyonda yönelmek için hiçbir bilimsel gerekçe yok.</p>
+
+    <div class="verdict-card verdict-negative">
+        <div class="verdict-icon">❌</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — PDRN & Pigmentasyon</div>
+            <div class="verdict-text">Kanıt yetersiz. Leke sorununuz varsa kanıtlanmış depigmentasyon ajanlarını tercih edin. PDRN bu alanda tamamen deneysel.</div>
+        </div>
+    </div>
+
+
+    <!-- PDRN SORUNLARI -->
+    <h2 id="pdrn-sorunlar">⚠️ PDRN: Dikkat Edilmesi Gereken Sorunlar</h2>
+
+    <div class="warning-box">
+        <p><strong>PN vs PDRN — aynı şey DEĞİL!</strong> PN (polinükleotid) ve PDRN (polideoxyribonükleotid) farklı ürünler. PN daha geniş bir terim ve farklı kaynaklardan elde edilebilir. PDRN ise spesifik olarak somon DNA'sından. Bazı klinikler bu ikisini birbirinin yerine kullanıyor — bu yanıltıcı.</p>
+    </div>
+
+    <ul>
+        <li><strong>Kaynak kalitesi:</strong> Somon DNA'sının kalitesi kaynağa ve işleme yöntemine göre değişiyor. Tüm PDRN ürünleri eşit değil.</li>
+        <li><strong>Kore vs İtalyan ürünleri:</strong> İtalya'da PDRN uzun süredir tıbbi kullanımda (özellikle yara iyileşmesinde). Güney Kore'de ise son yıllarda kozmetik kullanım patladı. Düzenleyici standartlar ve ürün kalitesi arasında fark var.</li>
+        <li><strong>Balık alerjisi:</strong> Somon kaynaklı bir ürün olduğundan, balık/deniz ürünü alerjisi olan kişilerde dikkat gerekiyor.</li>
+        <li><strong>Standardizasyon:</strong> Eksozomdaki kadar dramatik olmasa da, PDRN ürünleri arasında da konsantrasyon ve saflık farkları mevcut.</li>
+    </ul>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PN ≠ PDRN. Kaynak kalitesi önemli. Balık alerjisi varsa dikkat. Ve yara iyileşmesi dışında "mucize" beklemeyin.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 3: KARŞILAŞTIRMA VE SONUÇ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 3</div>
+        <div class="part-divider-title">⚖️ Karşılaştırma ve Sonuç</div>
+    </div>
+
+    <h2 id="karsilastirma">📊 Eksozom vs PDRN vs PRP: Karşılaştırma Tablosu</h2>
+
+    <p>Üç "rejeneratif" tedaviyi yan yana koyduğumuzda tablo netleşiyor:</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>🧫 Eksozom</th>
+                    <th>🐟 PDRN</th>
+                    <th>🩸 PRP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Kaynak</strong></td>
+                    <td>Kök hücre kültürü / bitki</td>
+                    <td>Somon sperm hücresi DNA</td>
+                    <td>Kendi kanınız</td>
+                </tr>
+                <tr>
+                    <td><strong>Mekanizma</strong></td>
+                    <td>Parakrin sinyal (büyüme faktörleri, miRNA)</td>
+                    <td>A2A reseptör → VEGF → anjiogenez</td>
+                    <td>Trombosit büyüme faktörleri</td>
+                </tr>
+                <tr>
+                    <td><strong>Uygulama</strong></td>
+                    <td>Enjeksiyon, microneedling, topikal</td>
+                    <td>Enjeksiyon, microneedling, topikal</td>
+                    <td>Enjeksiyon</td>
+                </tr>
+                <tr>
+                    <td><strong>Genel Kanıt</strong></td>
+                    <td>🤔 Çok erken / preklinik</td>
+                    <td>🤔 Sınırlı (yara iyileşmesi hariç)</td>
+                    <td>✅ Orta-güçlü</td>
+                </tr>
+                <tr>
+                    <td><strong>Saç Dökülmesi</strong></td>
+                    <td>🤔 Pilot çalışmalar</td>
+                    <td>🤔 Pilot çalışmalar</td>
+                    <td>✅ Meta-analizlerle destekli</td>
+                </tr>
+                <tr>
+                    <td><strong>Cilt Gençleştirme</strong></td>
+                    <td>🤔 Sınırlı</td>
+                    <td>🤔 Sınırlı</td>
+                    <td>🤔 Sınırlı</td>
+                </tr>
+                <tr>
+                    <td><strong>Yara İyileşmesi</strong></td>
+                    <td>🤔 Preklinik güçlü</td>
+                    <td>✅ Klinik kanıt var</td>
+                    <td>✅ Klinik kanıt var</td>
+                </tr>
+                <tr>
+                    <td><strong>Fiyat Aralığı</strong></td>
+                    <td>💰💰💰 Çok yüksek</td>
+                    <td>💰💰 Yüksek</td>
+                    <td>💰 Orta</td>
+                </tr>
+                <tr>
+                    <td><strong>Standardizasyon</strong></td>
+                    <td>❌ Çok düşük</td>
+                    <td>⚠️ Kısmen</td>
+                    <td>⚠️ Kısmen (kit bağımlı)</td>
+                </tr>
+                <tr>
+                    <td><strong>FDA / Düzenleme</strong></td>
+                    <td>❌ FDA uyarısı (2019)</td>
+                    <td>⚠️ İtalya'da tıbbi kullanım onaylı</td>
+                    <td>⚠️ Kit bazlı onaylar var</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>PRP en çok kanıta sahip (özellikle saçta). PDRN yara iyileşmesinde güçlü. Eksozom her alanda en erken aşamada — ama en çok pazarlanan.</p>
+    </div>
+
+
+    <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Eksozom = kök hücre tedavisi"</div>
+            <div class="myth-fact">YANLIŞ. Eksozom kök hücre değil — kök hücrelerden salgılanan parçacıklar. Çoğalamaz, farklılaşamaz. "Kök hücre tedavisi" pazarlaması yanıltıcı.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Somon DNA genetiğinizi değiştirir"</div>
+            <div class="myth-fact">YANLIŞ. PDRN hücre çekirdeğine girmez ve DNA'nızı değiştirmez. Sinyal molekülü olarak çalışır — hücrelere "onarım yap" mesajı gönderir, gen düzenlemesi yapmaz.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Doğal olduğu için güvenli"</div>
+            <div class="myth-fact">"Doğal" ≠ "güvenli." İğne + bilinmeyen kaynak = enfeksiyon riski, alerjik reaksiyon, kalite sorunu. FDA 2019'da eksozom kaynaklı ciddi enfeksiyon vakaları nedeniyle uyarı yayınladı.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "PRP'den üstün"</div>
+            <div class="myth-fact">Kanıt bunu DESTEKLEMİYOR. PRP'nin saç dökülmesinde meta-analizleri var. Eksozom ve PDRN henüz o seviyeye ulaşmadı. "Yeni = daha iyi" demek değil.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Mucize gençleştirici"</div>
+            <div class="myth-fact">Laboratuvarda umut verici, klinikte erken aşama. "Mucize" kelimesi bilimde yoktur. Büyük RKÇ'ler tamamlanmadan böyle iddialar yapmak prematüre.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Herkes yaptırabilir"</div>
+            <div class="myth-fact">Düzenleme eksikliği ciddi bir sorun. Kaynak güvenilirliği, sterilite kontrolü, uygulayıcı yetkinliği — tüm bunlar risk faktörleri. Hamilelik, otoimmün hastalıklar, aktif enfeksiyon varsa kesinlikle uygulanmamalı.</div>
+        </div>
+    </div>
+
+
+    <h2 id="sonuc">🏁 Sonuç: Ne Yapmalı?</h2>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🧫</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Final Verdict — Eksozom</div>
+            <div class="verdict-text">Gelecek vaadeden teknoloji ama şu an için deneysel. Standardizasyon, düzenleme ve klinik kanıt eksikliği çok ciddi. Paranızı retinoid + SPF'e harcasanız kanıt açısından çok daha öndesiniz. Bilim yetiştiğinde gerçekten devrimci olabilir — ama henüz o noktada değiliz.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🐟</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Final Verdict — PDRN (Somon DNA)</div>
+            <div class="verdict-text">Yara iyileşmesinde gerçek kanıt var — bu alan PDRN'nin güçlü tarafı. Kozmetik kullanımda (cilt gençleştirme, saç dökülmesi) henüz erken. PRP'den veya mezoterapi'den daha iyi olduğuna dair kanıt yok. PN ve PDRN arasındaki farkı bilmek önemli.</div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Genel Mesaj:</strong> Hype trenin önünde koşuyor. Her iki teknoloji de biyolojik açıdan mantıklı ve laboratuvar sonuçları heyecan verici. Ama "mantıklı mekanizma" ve "kanıtlanmış tedavi" arasında uzun bir yol var.</p>
+        <p>Bilim yetiştiğinde bu teknolojiler gerçekten devrimci olabilir — ama <strong>henüz o noktada değiliz.</strong> Şimdilik, kanıtlanmış tedavilere öncelik verin: retinoid, SPF, PRP (saçta), kanıtlanmış depigmentasyon ajanları.</p>
+        <p><strong>Ve her zaman:</strong> Uygulamanın nerede, kim tarafından, hangi ürünle yapıldığını sorun. "Eksozom" veya "somon DNA" adı altında ne aldığınızı bilmek hakkınız.</p>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir tedaviye başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Hu L, Wang J, Zhou X, et al. Exosomes derived from human adipose mesenchymal stem cells accelerate cutaneous wound healing via optimizing the characteristics of fibroblasts. <em>Sci Rep.</em> 2016;6:32993.</li>
+            <li>Shi Y, Wang S, Wang K, et al. Exosomes in skin wound healing: biological functions, regulations and therapeutic potential. <em>J Nanobiotechnology.</em> 2023;21:315.</li>
+            <li>Gao C, Wang M, Zhu Y, et al. Exosomes in dermatology: emerging roles in skin regeneration and rejuvenation. <em>Int J Mol Sci (MDPI).</em> 2025;26(2):654.</li>
+            <li>Kwon TR, Oh CT, Choi EJ, et al. Hair follicle-derived exosomes promote hair growth: a pilot study. <em>Stem Cells Transl Med.</em> 2023;12(3):140–147.</li>
+            <li>Li M, Wang T, Tian H, et al. Mesenchymal stem cell-derived exosomes for wound healing: current status and future directions. <em>Front Bioeng Biotechnol.</em> 2023;11:1207565.</li>
+            <li>Dad HA, Gu TW, Zhu AQ, et al. Plant exosome-like nanovesicles: emerging therapeutics and drug delivery nanoplatforms. <em>Mol Ther.</em> 2021;29(1):13–31.</li>
+            <li>U.S. Food and Drug Administration. FDA warns about stem cell therapies — consumer safety alert on exosome products. <em>FDA Safety Communication.</em> December 2019.</li>
+            <li>Squadrito F, Bitto A, Irrera N, et al. Pharmacological activity and clinical use of PDRN. <em>Front Pharmacol.</em> 2017;8:224.</li>
+            <li>Park KY, Jang WS. Polydeoxyribonucleotide (PDRN) and polynucleotide (PN) in wound healing and tissue repair: a comprehensive review. <em>Int Wound J.</em> 2025;22(1):e70076.</li>
+            <li>Galeano M, Bitto A, Altavilla D, et al. Polydeoxyribonucleotide stimulates angiogenesis and wound healing in diabetic mice. <em>J Surg Res.</em> 2008;145(1):101–108.</li>
+            <li>Kim HJ, Lee SY, Park JH, et al. Polynucleotide and polydeoxyribonucleotide for skin rejuvenation: a systematic review. <em>J Cutan Aesthet Surg.</em> 2024;17(4):231–240.</li>
+            <li>Cavallini M, Papagni M. Long-chain polynucleotide gel and target skin areas: contribution to aesthetic and regenerative medicine. <em>J Cosmet Dermatol.</em> 2022;21(11):5783–5790.</li>
+            <li>Alves R, Grimalt R. A review of platelet-rich plasma: history, biology, mechanism of action, and classification. <em>Skin Appendage Disord.</em> 2018;4(1):18–24.</li>
+            <li>Gentile P, Garcovich S. Systematic review of platelet-rich plasma use in androgenetic alopecia. <em>Dermatol Surg.</em> 2020;46(12):1592–1603.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
