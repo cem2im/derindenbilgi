@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30'lu Yaşlarda Kolajen Kaybı Başlıyor: Retinoidler Ne Zaman Devreye Girmeli? | DerindeBilgi</title>
+    <meta name="description" content="30'lu yaşlarda başlayan kolajen kaybı, retinoid kullanımının doğru zamanlaması ve bilimsel kanıtlara dayalı anti-aging stratejileri.">
+    <meta name="keywords" content="kolajen kaybı, retinoid, retinol, anti-aging, cilt yaşlanması, tretinoyin, 30lu yaşlar, cilt bakımı">
+    <meta property="og:title" content="30'lu Yaşlarda Kolajen Kaybı ve Retinoidler — DerindeBilgi">
+    <meta property="og:description" content="Yılda %1 kolajen kaybı 30'lu yaşlarda başlıyor. Retinoidlere ne zaman başlamalı? Kanıta dayalı rehber.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f0fdfa;
+            --bg-warm: #f0f9ff;
+            --text: #1e293b;
+            --text-secondary: #475569;
+            --text-tertiary: #94a3b8;
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13, 148, 136, 0.06);
+            --accent-border: rgba(13, 148, 136, 0.15);
+            --border: rgba(0, 0, 0, 0.08);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            font-size: 16px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Header ── */
+        .site-header {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.92);
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent), #0891b2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .logo-text {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .logo-text span { color: var(--accent); }
+        .header-nav a {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
+        }
+        .header-nav a:hover {
+            color: var(--accent);
+            background: var(--accent-bg);
+        }
+
+        /* ── Hero ── */
+        .blog-hero {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 50%, #f0f9ff 100%);
+            padding: 3.5rem 1.5rem 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .blog-hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .blog-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: linear-gradient(135deg, var(--accent), #0891b2);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .blog-read-time {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+        .blog-hero h1 {
+            font-size: clamp(1.75rem, 4vw, 2.35rem);
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .blog-hero h1 span {
+            background: linear-gradient(135deg, var(--accent), #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .blog-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            max-width: 650px;
+        }
+
+        /* ── Article ── */
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        .blog-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .blog-content h2 .section-icon {
+            font-size: 1.3rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .blog-content li strong {
+            color: var(--text);
+        }
+
+        .blog-content strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── Callout / Info Box ── */
+        .callout {
+            background: var(--accent-bg);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .callout p { margin-bottom: 0.5rem; }
+        .callout p:last-child { margin-bottom: 0; }
+        .callout-title {
+            font-weight: 700;
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p { margin-bottom: 0.5rem; color: #92400e; }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        /* ── Reference Tag ── */
+        .ref-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--accent);
+            background: var(--accent-bg);
+            padding: 0.15rem 0.55rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: help;
+            border: 1px solid var(--accent-border);
+            text-decoration: none;
+            vertical-align: super;
+            line-height: 1;
+        }
+        .ref-tag:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* ── Table ── */
+        .routine-table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+        .routine-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .routine-table thead {
+            background: linear-gradient(135deg, var(--accent), #0891b2);
+            color: white;
+        }
+        .routine-table th {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .routine-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            vertical-align: top;
+        }
+        .routine-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .routine-table tbody tr:nth-child(even) {
+            background: var(--accent-bg);
+        }
+        .routine-table tbody tr:hover {
+            background: #f0fdfa;
+        }
+
+        /* ── Diagram / Flow ── */
+        .conversion-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--accent-border);
+        }
+        .flow-item {
+            background: white;
+            padding: 0.6rem 1rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--accent-dark);
+            border: 1px solid var(--accent-border);
+            text-align: center;
+        }
+        .flow-item.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .flow-arrow {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* ── Strength Meter ── */
+        .strength-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .strength-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .strength-card:hover {
+            border-color: var(--accent-border);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .strength-card .name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 0.35rem;
+        }
+        .strength-card .level {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            margin-bottom: 0.6rem;
+        }
+        .strength-bar {
+            height: 6px;
+            border-radius: 3px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+        .strength-bar .fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--accent), #0891b2);
+            transition: width 0.6s ease;
+        }
+        .strength-card .tolerability {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            margin-top: 0.5rem;
+        }
+
+        /* ── Timeline / Protocol ── */
+        .protocol-timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+        .protocol-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.55rem;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent), #0891b2);
+            border-radius: 2px;
+        }
+        .protocol-step {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        .protocol-step::before {
+            content: '';
+            position: absolute;
+            left: -1.65rem;
+            top: 1.25rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .protocol-step .step-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+        .protocol-step .step-title {
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.35rem;
+        }
+        .protocol-step .step-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ── TOC ── */
+        .toc {
+            background: var(--bg-alt);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+        }
+        .toc-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+            padding: 0;
+        }
+        .toc ol li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.35rem;
+        }
+        .toc ol li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .toc ol li a::before {
+            content: counter(toc-counter);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--accent);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .toc ol li a:hover {
+            color: var(--accent);
+            padding-left: 0.5rem;
+        }
+
+        /* ── References ── */
+        .references {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 1.75rem;
+            margin-top: 2.5rem;
+        }
+        .references h2 {
+            border-bottom: none !important;
+            margin-top: 0 !important;
+            padding-bottom: 0 !important;
+            font-size: 1.2rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+        }
+        .references li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+        .references li strong {
+            color: var(--text);
+        }
+
+        /* ── Footer ── */
+        .site-footer {
+            background: #f8fafc;
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-disclaimer {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: #9a3412;
+            line-height: 1.6;
+        }
+        .footer-disclaimer strong {
+            color: #c2410c;
+        }
+        .footer-brand {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+        .footer-brand a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-brand a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Back to Top ── */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ── Progress Bar ── */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #0891b2);
+            z-index: 1000;
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .blog-hero { padding: 2.5rem 1.25rem 2rem; }
+            .blog-content { padding: 2rem 1.25rem 3rem; }
+            .blog-content h2 { font-size: 1.3rem; }
+            .strength-cards { grid-template-columns: repeat(2, 1fr); }
+            .conversion-flow { gap: 0.35rem; padding: 1rem; }
+            .flow-item { font-size: 0.75rem; padding: 0.45rem 0.65rem; }
+            .flow-arrow { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Reading Progress -->
+<div class="reading-progress" id="readingProgress"></div>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/derindenbilgi/" class="logo-link">
+            <div class="logo-icon">D</div>
+            <div class="logo-text">Derinden<span>Bilgi</span></div>
+        </a>
+        <nav class="header-nav">
+            <a href="/derindenbilgi/">← Ana Sayfa</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="blog-hero">
+    <div class="blog-hero-inner">
+        <div class="blog-meta">
+            <span class="blog-category">🧬 Anti-Aging</span>
+            <span class="blog-read-time">🕐 ~10 dk okuma</span>
+            <span class="blog-date">1 Mart 2026</span>
+        </div>
+        <h1>30'lu Yaşlarda Kolajen Kaybı Başlıyor: <span>Retinoidler Ne Zaman Devreye Girmeli?</span></h1>
+        <p class="blog-subtitle">
+            20'li yaşların sonlarından itibaren cildinizdeki kolajen üretimi her yıl yaklaşık %1 azalıyor. 
+            Retinoidlere ne zaman başlamalısınız? Bilimsel kanıtlarla yanıt arıyoruz.
+        </p>
+    </div>
+</section>
+
+<!-- Content -->
+<article class="blog-content">
+
+    <!-- TOC -->
+    <nav class="toc">
+        <div class="toc-title">📑 İçindekiler</div>
+        <ol>
+            <li><a href="#giris">30'lu Yaşlarda Neler Değişiyor?</a></li>
+            <li><a href="#kolajen-biyolojisi">Kolajen Biyolojisi: Tip I, Tip III ve MMP'ler</a></li>
+            <li><a href="#retinoidler-ne-zaman">Retinoidler: Ne Zaman Başlamalı?</a></li>
+            <li><a href="#retinoid-tipleri">Retinoid Tipleri ve Güç Sıralaması</a></li>
+            <li><a href="#baslangic-protokolu">Başlangıç Protokolü: Adım Adım</a></li>
+            <li><a href="#diger-aktifler">Diğer Anti-Aging Aktifler</a></li>
+            <li><a href="#tam-rutin">30'lu Yaşlarda Tam Cilt Bakım Rutini</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </nav>
+
+    <!-- 1. Giriş -->
+    <h2 id="giris"><span class="section-icon">🔬</span> 30'lu Yaşlarda Neler Değişiyor?</h2>
+
+    <p>
+        30'lu yaşlarınıza girdiğinizde cildinizdeki değişimler artık aynada fark edilebilir hale gelmeye başlar. 
+        Bunun arkasındaki temel mekanizma <strong>kolajen sentez hızının düşmesi</strong>dir. Araştırmalar, 
+        dermiste kolajen üretiminin 20'li yaşların ortasından itibaren her yıl yaklaşık <strong>%1 oranında azaldığını</strong> 
+        ortaya koymaktadır. <a href="#ref1" class="ref-tag">1</a>
+    </p>
+
+    <p>
+        Bu süreçte yalnızca kolajen değil, pek çok yapısal bileşen etkilenir:
+    </p>
+
+    <ul>
+        <li><strong>Elastin degradasyonu:</strong> Cildin elastik geri dönüş kapasitesi azalır; özellikle UV maruziyetiyle birlikte elastin lifleri amorf bir yapıya dönüşür (solar elastoz).</li>
+        <li><strong>Hücre yenilenmesi yavaşlar:</strong> Epidermal turnover süresi 20'li yaşlardaki ~28 günden 30'lu yaşlarda ~35-40 güne uzar. Bu durum cilt tonunun matlaşmasına neden olur.</li>
+        <li><strong>Glikozaminoglikan (GAG) seviyesi düşer:</strong> Hyalüronik asit üretimi azalmaya başlar ve dermisin su tutma kapasitesi zayıflar.</li>
+        <li><strong>Antioksidan savunma zayıflar:</strong> Endojen antioksidan enzimler (SOD, katalaz, glutatyon peroksidaz) aktivite kaybeder.</li>
+    </ul>
+
+    <div class="callout">
+        <div class="callout-title">📊 Anahtar Veri</div>
+        <p>
+            Varani ve arkadaşlarının 2006 yılındaki çalışması, yaşla birlikte tip I ve tip III prokolajen sentezinin 
+            anlamlı ölçüde azaldığını ve bu azalmanın 30'lu yaşlardan itibaren belirginleştiğini göstermiştir. 
+            Aynı çalışmada MMP (matriks metalloproteinaz) aktivitesinin ise arttığı bildirilmiştir. <a href="#ref1" class="ref-tag">1</a>
+        </p>
+    </div>
+
+    <p>
+        Bu değişimlerin toplamı, ciltte ince çizgiler, volüm kaybı, elastikiyet azalması ve genel bir "yorgun" 
+        görünüm olarak kendini gösterir. İyi haber: Bu süreç kaçınılmaz olsa da <strong>doğru zamanda başlanan 
+        aktif bakım</strong> ile belirgin şekilde yavaşlatılabilir.
+    </p>
+
+    <!-- 2. Kolajen Biyolojisi -->
+    <h2 id="kolajen-biyolojisi"><span class="section-icon">🧬</span> Kolajen Biyolojisi: Tip I, Tip III ve MMP'ler</h2>
+
+    <p>
+        Dermis, ağırlığının yaklaşık <strong>%70-80'i kolajen</strong> olan bir bağ dokusu tabakasıdır. 
+        Ciltteki kolajenin büyük çoğunluğu iki tipten oluşur:
+    </p>
+
+    <ul>
+        <li><strong>Tip I kolajen (~%80):</strong> Gerilme dayanıklılığını sağlayan ana yapısal protein. Kalın, olgun lif demetleri oluşturur. Yaşlanmayla birlikte sentezi dramatik biçimde azalır.</li>
+        <li><strong>Tip III kolajen (~%15):</strong> Daha ince ve esnek lifler oluşturur. Yara iyileşmesinin erken fazlarında ve genç deride daha yoğundur. Yaşla birlikte Tip I'e oranı değişir.</li>
+    </ul>
+
+    <h3>MMP'ler: Kolajenin Düşmanları</h3>
+
+    <p>
+        Matriks metalloproteinazlar (MMP'ler), ekstraselüler matriks bileşenlerini yıkan enzim ailesidir. 
+        Özellikle <strong>MMP-1</strong> (kollajenaz), <strong>MMP-3</strong> (stromelysin) ve <strong>MMP-9</strong> (jelatinaz) 
+        cilt yaşlanmasında kritik rol oynar. <a href="#ref2" class="ref-tag">2</a>
+    </p>
+
+    <p>
+        Bu enzimlerin aktivasyonunu tetikleyen iki ana yolak vardır:
+    </p>
+
+    <h3>Fotoyaşlanma vs. Kronolojik Yaşlanma</h3>
+
+    <ul>
+        <li>
+            <strong>Kronolojik (intrinsik) yaşlanma:</strong> Genetik programlamayla belirlenir. Hücresel senesans, 
+            telomer kısalması ve mitokondriyal DNA hasarı temel mekanizmalarıdır. Sonuç: dermiste incelme, 
+            kolajen ve elastin üretiminde azalma.
+        </li>
+        <li>
+            <strong>Fotoyaşlanma (ekstrinsik):</strong> UV radyasyonunun neden olduğu erken yaşlanmadır. UV ışınları 
+            keratinosit ve fibroblastlarda <strong>AP-1 ve NF-κB</strong> yolaklarını aktive ederek MMP üretimini 
+            dramatik biçimde artırır. Tek bir güneşlenme seansı bile MMP-1 seviyelerini saatlerce yüksek tutabilir. 
+            <a href="#ref2" class="ref-tag">2</a>
+        </li>
+    </ul>
+
+    <div class="callout">
+        <div class="callout-title">💡 Kritik Bulgu</div>
+        <p>
+            Rittié ve Fisher'in kapsamlı derlemesi (2002), fotoyaşlanmanın kronolojik yaşlanmadan çok daha hızlı 
+            kolajen yıkımına neden olduğunu ve <strong>cilt yaşlanma belirtilerinin %80'e kadarının UV maruziyetiyle 
+            ilişkili</strong> olabileceğini ortaya koymuştur. Bu da güneş korumasının anti-aging stratejisindeki 
+            merkezi yerini vurgular. <a href="#ref2" class="ref-tag">2</a>
+        </p>
+    </div>
+
+    <!-- 3. Retinoidler: Ne Zaman Başlamalı? -->
+    <h2 id="retinoidler-ne-zaman"><span class="section-icon">⏱️</span> Retinoidler: Ne Zaman Başlamalı?</h2>
+
+    <p>
+        Retinoidler, cilt biliminde <strong>en güçlü kanıt temeline sahip anti-aging aktiflerdir</strong>. 
+        A vitamini türevleri olan bu bileşikler, hücre çekirdeğindeki RAR (retinoik asit reseptörü) ve RXR 
+        (retinoid X reseptörü) ile etkileşerek gen ekspresyonunu doğrudan modüle eder. <a href="#ref3" class="ref-tag">3</a>
+    </p>
+
+    <p>
+        Retinoidlerin cilt üzerindeki başlıca etkileri:
+    </p>
+
+    <ul>
+        <li><strong>Kolajen sentezini artırır:</strong> Tip I ve Tip III prokolajen gen ekspresyonunu upregüle eder.</li>
+        <li><strong>MMP aktivitesini baskılar:</strong> AP-1 yolağını inhibe ederek kolajen yıkımını azaltır.</li>
+        <li><strong>Epidermal kalınlığı artırır:</strong> Keratinosit proliferasyonunu hızlandırarak epidermisi güçlendirir.</li>
+        <li><strong>Melanin dağılımını düzenler:</strong> Hiperpigmentasyon ve yaş lekelerine karşı etkilidir.</li>
+        <li><strong>Anjiogenezi destekler:</strong> Dermal kan damarı oluşumunu teşvik ederek beslenmeyi artırır.</li>
+    </ul>
+
+    <h3>25 mi, 30 mu? Başlangıç Tartışması</h3>
+
+    <p>
+        Dermatologlar arasında retinoidlere başlama yaşı konusunda geniş bir görüş yelpazesi vardır. 
+        Genel eğilim <strong>25-30 yaş aralığını</strong> optimal başlangıç penceresi olarak kabul etmektir:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Preventif (önleyici) yaklaşım — 25 yaş civarı:</strong> Kolajen kaybı başlamadan önce retinoid 
+            kullanımına başlamak, mevcut kolajeni korumak ve MMP aktivasyonunu erken dönemde baskılamak amacını taşır. 
+            Bu yaklaşım, düşük doz retinol (%0.25-0.3) ile başlamayı önerir.
+        </li>
+        <li>
+            <strong>Tedavi edici yaklaşım — 30 yaş ve üzeri:</strong> Kolajen kaybının klinik olarak belirginleştiği 
+            dönemde, mevcut hasarı telafi etmek ve ilerlemesini yavaşlatmak için daha güçlü retinoidlerin 
+            (retinaldehit veya reçeteli tretinoyin) devreye alınması önerilir.
+        </li>
+    </ul>
+
+    <div class="callout">
+        <div class="callout-title">📚 Kanıt Notu</div>
+        <p>
+            Mukherjee ve arkadaşlarının (2006) derlemesi, topikal retinoidlerin fotoaging belirtilerini 
+            anlamlı şekilde iyileştirdiğini ve retinolün bile dermal kolajen sentezini artırabildiğini 
+            kanıtlamıştır. <a href="#ref3" class="ref-tag">3</a> 
+            Kang ve arkadaşları (2005), uzun süreli topikal tretinoin kullanımının MMP-1 ekspresyonunu 
+            baskılarken prokolajen sentezini artırdığını göstermiştir. <a href="#ref4" class="ref-tag">4</a>
+        </p>
+    </div>
+
+    <div class="warning-box">
+        <p>
+            <strong>⚠️ Önemli:</strong> Retinoid kullanımına başlamadan önce sağlam bir güneş koruma alışkanlığınız 
+            olmalıdır. SPF 30+ geniş spektrum güneş kremi olmadan retinoid kullanmak, cilde fayda yerine 
+            zarar verebilir. Retinoidler cildi fotosensitif hale getirir.
+        </p>
+    </div>
+
+    <!-- 4. Retinoid Tipleri -->
+    <h2 id="retinoid-tipleri"><span class="section-icon">🧪</span> Retinoid Tipleri ve Güç Sıralaması</h2>
+
+    <p>
+        Tüm retinoidler cilt içinde aynı aktif forma — <strong>all-trans retinoik asit (tretinoyin)</strong> — 
+        dönüştürülür. Ancak bu dönüşüm yolağının uzunluğu, her bir retinoidin gücünü, etkililik hızını 
+        ve yan etki profilini belirler.
+    </p>
+
+    <h3>Dönüşüm Yolağı</h3>
+
+    <div class="conversion-flow">
+        <div class="flow-item">Retinol Esterleri<br><small>(Retinyl Palmitat)</small></div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-item">Retinol<br><small>(A Vitamini)</small></div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-item">Retinaldehit<br><small>(Retinal)</small></div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-item active">Tretinoyin<br><small>(Retinoik Asit)</small></div>
+    </div>
+
+    <p>
+        Her dönüşüm adımı enzimatik bir işlemdir ve dönüşüm verimliliği kişiden kişiye farklılık gösterir. 
+        Daha az dönüşüm adımı gerektiren retinoidler daha güçlü ama potansiyel olarak daha irritan olma eğilimindedir.
+    </p>
+
+    <h3>Retinoidlerin Karşılaştırması</h3>
+
+    <div class="strength-cards">
+        <div class="strength-card">
+            <div class="name">Retinol</div>
+            <div class="level">OTC · 2 adım dönüşüm</div>
+            <div class="strength-bar"><div class="fill" style="width: 35%"></div></div>
+            <div class="tolerability">Tolerabilite: ★★★★☆</div>
+        </div>
+        <div class="strength-card">
+            <div class="name">Retinaldehit</div>
+            <div class="level">OTC · 1 adım dönüşüm</div>
+            <div class="strength-bar"><div class="fill" style="width: 55%"></div></div>
+            <div class="tolerability">Tolerabilite: ★★★☆☆</div>
+        </div>
+        <div class="strength-card">
+            <div class="name">Adapalen</div>
+            <div class="level">OTC/Rx · Sentetik</div>
+            <div class="strength-bar"><div class="fill" style="width: 65%"></div></div>
+            <div class="tolerability">Tolerabilite: ★★★★☆</div>
+        </div>
+        <div class="strength-card">
+            <div class="name">Tretinoyin</div>
+            <div class="level">Rx · Doğrudan aktif</div>
+            <div class="strength-bar"><div class="fill" style="width: 100%"></div></div>
+            <div class="tolerability">Tolerabilite: ★★☆☆☆</div>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <strong>Retinol:</strong> En yaygın OTC retinoid. %0.25-1.0 konsantrasyonda bulunur. 
+            Etkinliği için iki enzimatik dönüşüme ihtiyaç duyar (retinol → retinaldehit → retinoik asit). 
+            Genellikle iyi tolere edilir; başlangıç için idealdir. <a href="#ref3" class="ref-tag">3</a>
+        </li>
+        <li>
+            <strong>Retinaldehit (Retinal):</strong> Retinolden ~11 kat daha etkili olduğu gösterilmiştir. 
+            Yalnızca bir dönüşüm adımı gerektirir. Antimikrobiyal özellikleri de vardır. 
+            Retinole tolerans geliştirenler için iyi bir "ara basamak"tır.
+        </li>
+        <li>
+            <strong>Adapalen:</strong> Sentetik retinoid. Selektif RAR-β ve RAR-γ afinitesi ile daha az irritasyona 
+            neden olur. Anti-inflamatuar özellikleri güçlüdür. ABD'de %0.1 konsantrasyonda OTC satılır. 
+            Anti-aging verileri tretinoyine göre daha sınırlıdır ancak artmaktadır.
+        </li>
+        <li>
+            <strong>Tretinoyin (Retinoik Asit):</strong> Altın standart. Dönüşüm gerektirmeden doğrudan 
+            reseptörlere bağlanır. %0.025-0.1 konsantrasyonlarda reçeteli olarak kullanılır. Fotoaging tedavisinde 
+            en güçlü kanıt temeline sahiptir. <a href="#ref4" class="ref-tag">4</a> İrritasyon riski yüksektir; 
+            dermatolog gözetimi önerilir.
+        </li>
+    </ul>
+
+    <!-- 5. Başlangıç Protokolü -->
+    <h2 id="baslangic-protokolu"><span class="section-icon">📋</span> Başlangıç Protokolü: Adım Adım</h2>
+
+    <p>
+        Retinoid kullanımına doğru şekilde başlamak, uzun vadeli uyumu ve başarıyı belirler. 
+        Aşağıdaki protokol, <strong>%0.25 retinol</strong> ile başlangıç yapacak kişiler için tasarlanmıştır:
+    </p>
+
+    <div class="protocol-timeline">
+        <div class="protocol-step">
+            <div class="step-label">Hafta 1-2</div>
+            <div class="step-title">Tanışma Fazı — Haftada 2 Gece</div>
+            <div class="step-desc">
+                %0.25 retinol, haftada 2 gece (örn. Pazartesi ve Perşembe) uygulanır. 
+                <strong>Sandwich tekniği</strong> kullanılır: Nemlendirici → Retinol → Nemlendirici. 
+                Bu yöntem, aktifin deriye penetrasyonunu yavaşlatarak irritasyonu minimize eder.
+            </div>
+        </div>
+        <div class="protocol-step">
+            <div class="step-label">Hafta 3-4</div>
+            <div class="step-title">Artırma — Haftada 3 Gece</div>
+            <div class="step-desc">
+                Tolerans gelişiyorsa, uygulama sıklığı haftada 3 geceye çıkarılır. 
+                Cilt kızarıklık, soyulma ve gerginlik gösterebilir — bu <strong>retinizasyon</strong> sürecinin 
+                normal parçasıdır ve genellikle 2-6 hafta içinde geriler.
+            </div>
+        </div>
+        <div class="protocol-step">
+            <div class="step-label">Hafta 5-8</div>
+            <div class="step-title">Alışma — Gün Aşırı Kullanım</div>
+            <div class="step-desc">
+                Cilt retinizasyona uyum sağladığında, gün aşırı kullanıma geçilir. 
+                Sandwich tekniğinden çıkılarak retinol doğrudan temiz cilde uygulanabilir 
+                (ardından nemlendirici). İrritasyon geri gelirse bir adım geriye dönülür.
+            </div>
+        </div>
+        <div class="protocol-step">
+            <div class="step-label">Hafta 9-12</div>
+            <div class="step-title">Tam Kapasite — Her Gece</div>
+            <div class="step-desc">
+                Her gece kullanıma geçiş yapılır. Bu aşamada cildin retinoid bariyeri güçlenmiştir. 
+                12. haftadan sonra, daha yüksek konsantrasyona (%0.5 retinol) veya retinaldehite 
+                geçiş değerlendirilebilir.
+            </div>
+        </div>
+    </div>
+
+    <div class="callout">
+        <div class="callout-title">🥪 Sandwich Tekniği Nedir?</div>
+        <p>
+            Retinolü iki nemlendirici katmanı arasına uygulama yöntemidir. İlk olarak ince bir katman nemlendirici 
+            sürülür, ardından retinol uygulanır, üzerine tekrar nemlendirici eklenir. Bu, aktifin deriye 
+            kontrollü salınımını sağlayarak retinizasyon semptomlarını hafifletir. Özellikle hassas ciltler ve 
+            retinoid yeni başlayanlar için idealdir. Tolerans arttıkça kademeli olarak doğrudan uygulamaya geçilir.
+        </p>
+    </div>
+
+    <h3>Retinizasyon Süreci</h3>
+
+    <p>
+        Retinizasyon, cildin retinoidlere adaptasyon sürecini ifade eder. Bu süreçte görülebilecek normal belirtiler:
+    </p>
+
+    <ul>
+        <li><strong>Hafif kızarıklık (eritem):</strong> Özellikle yanaklar ve burun çevresinde. Genellikle 2-4 haftada geriler.</li>
+        <li><strong>Soyulma (deskuamasyon):</strong> Epidermal turnover hızlanmasının sonucu. İnce, kuru pullanma şeklinde olabilir.</li>
+        <li><strong>Gerginlik ve kuruluk:</strong> Transepidermal su kaybı (TEWL) geçici olarak artabilir. Seramid içeren nemlendiricilerle yönetilebilir.</li>
+        <li><strong>Geçici akne alevlenmesi (purging):</strong> Özellikle komedonal akne eğilimi olanlarda, ilk 4-6 haftada mevcut mikrokomedanların hızla yüzeye çıkmasıyla görülebilir.</li>
+    </ul>
+
+    <div class="warning-box">
+        <p>
+            <strong>⚠️ Ne zaman durmalısınız?</strong> Şiddetli yanma, vezikülasyon (kabarcık), yaygın egzamatöz 
+            reaksiyon veya 6 haftadan uzun süren şiddetli irritasyon varsa retinoid kullanımını bırakıp 
+            bir dermatolog ile görüşmelisiniz. Bu belirtiler retinizasyonun ötesinde bir kontakt dermatit 
+            reaksiyonuna işaret edebilir.
+        </p>
+    </div>
+
+    <!-- 6. Diğer Anti-Aging Aktifler -->
+    <h2 id="diger-aktifler"><span class="section-icon">🧴</span> Diğer Anti-Aging Aktifler</h2>
+
+    <p>
+        Retinoidler anti-aging bakımın temel taşı olsa da, tek başlarına kullanılmazlar. 
+        Sinerjistik etkilerden yararlanmak için aşağıdaki aktifler retinoidlerle birlikte 
+        değerlendirilmelidir:
+    </p>
+
+    <h3>Peptidler (Matriksinler)</h3>
+    <p>
+        Peptidler, 2-50 amino asitlik kısa zincirli proteinlerdir. Cilt bakımında kullanılan ana peptid grupları:
+    </p>
+    <ul>
+        <li><strong>Sinyal peptidleri (ör. Palmitoyl Tripeptide-1):</strong> Fibroblastlara kolajen sentezini artırma sinyali gönderir. Kolajen fragmanlarını taklit ederek "hasar algılama" mekanizmasını tetikler. <a href="#ref5" class="ref-tag">5</a></li>
+        <li><strong>Taşıyıcı peptidler (ör. GHK-Cu):</strong> Bakır gibi eser elementleri yara iyileşme bölgelerine taşır. Kolajen sentezi, anjiogenez ve GAG üretimini destekler. <a href="#ref5" class="ref-tag">5</a></li>
+        <li><strong>Nörotransmitter inhibitör peptidler (ör. Argireline):</strong> Kas kasılmasını azaltarak ifade çizgilerini yumuşatır. Botoksin topikal alternatifi olarak pazarlanır, etkinliği tartışmalıdır.</li>
+    </ul>
+
+    <h3>C Vitamini (L-Askorbik Asit)</h3>
+    <p>
+        C vitamini, anti-aging bakımda retinoidlerden sonra en güçlü kanıt temeline sahip aktiftir. 
+        Temel etki mekanizmaları:
+    </p>
+    <ul>
+        <li><strong>Antioksidan koruma:</strong> Serbest radikalleri nötralize ederek oksidatif stresi azaltır. Fotoproteaktif etki gösterir (güneş kreminin yerine geçmez, tamamlar). <a href="#ref6" class="ref-tag">6</a></li>
+        <li><strong>Kolajen sentez kofaktörü:</strong> Prolyl ve lizil hidroksilaz enzimlerinin zorunlu kofaktörüdür. C vitamini olmadan stabil kolajen heliksi oluşamaz.</li>
+        <li><strong>Tirozinaz inhibisyonu:</strong> Melanin üretimini baskılayarak hiperpigmentasyona karşı etkilidir.</li>
+    </ul>
+
+    <div class="callout">
+        <div class="callout-title">🔄 Retinoid + C Vitamini Sinerjisi</div>
+        <p>
+            C vitamini sabah, retinoid akşam uygulanarak optimal sinerji elde edilir. 
+            C vitamini gündüz antioksidan kalkan görevi görürken, retinoid gece onarım sürecini hızlandırır. 
+            Bu kombinasyon, her iki aktifin tek başına kullanımına göre daha güçlü anti-aging etkinlik 
+            sağlar. %10-20 L-Askorbik Asit formülasyonları en güçlü kanıt temeline sahiptir (pH 2.5-3.5). <a href="#ref6" class="ref-tag">6</a>
+        </p>
+    </div>
+
+    <h3>Niasinamid (Vitamin B3)</h3>
+    <p>
+        Niasinamid, retinoidlerle mükemmel uyum gösteren çok yönlü bir aktiftir:
+    </p>
+    <ul>
+        <li><strong>Bariyer onarımı:</strong> Seramid sentezini artırarak stratum korneumu güçlendirir. Retinoid irritasyonunu hafifletmede yardımcıdır. <a href="#ref7" class="ref-tag">7</a></li>
+        <li><strong>Anti-inflamatuar:</strong> NF-κB yolağını modüle ederek kızarıklık ve hassasiyeti azaltır.</li>
+        <li><strong>Sebum regülasyonu:</strong> Aşırı yağ üretimini dengeleyerek gözeneklerin görünümünü iyileştirir.</li>
+        <li><strong>Hiperpigmentasyon:</strong> Melanozom transferini inhibe ederek leke karşıtı etki gösterir.</li>
+    </ul>
+    <p>
+        %2-5 konsantrasyon, retinoid ile birlikte kullanımda hem tolerabiliteyi artırır 
+        hem de ek anti-aging fayda sağlar. <a href="#ref7" class="ref-tag">7</a>
+    </p>
+
+    <!-- 7. 30'lu Yaşlarda Tam Rutin -->
+    <h2 id="tam-rutin"><span class="section-icon">📝</span> 30'lu Yaşlarda Tam Cilt Bakım Rutini</h2>
+
+    <p>
+        Aşağıdaki tablo, 30'lu yaşlardaki bir birey için kanıta dayalı, retinoid merkezli bir bakım rutinini 
+        özetlemektedir. Bireysel cilt tipine ve ihtiyaçlara göre dermatolog danışmanlığında kişiselleştirilmelidir.
+    </p>
+
+    <!-- Sabah -->
+    <h3>☀️ Sabah Rutini</h3>
+    <div class="routine-table-wrapper">
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>Adım</th>
+                    <th>Ürün / Aktif</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Temizleme</strong></td>
+                    <td>Nazik, pH dengeli temizleyici (pH 4.5-5.5)</td>
+                    <td>Cilt bariyerini bozmadan gece ürün kalıntılarını temizler. Sülfatsız formüller tercih edilir.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Antioksidan Serum</strong></td>
+                    <td>%15-20 L-Askorbik Asit + %1 Tokoferol + %0.5 Ferulik Asit</td>
+                    <td>Antioksidan üçlüsü. UV hasarını azaltır, kolajen sentezini destekler. pH 2.5-3.5 formül seçilmelidir.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Nemlendirici</strong></td>
+                    <td>Niasinamid (%3-5) + Hyalüronik Asit + Seramidler</td>
+                    <td>Bariyer onarımı, nem tutma ve anti-inflamatuar etki. Retinoid kullanımının yarattığı bariyer zayıflamasını telafi eder.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Güneş Kremi</strong></td>
+                    <td>SPF 50+ Geniş Spektrum (UVA+UVB)</td>
+                    <td>Anti-aging bakımın en kritik adımı. Retinoid kullanıcıları için zorunludur. Mineral veya hibrit formül tercih edilebilir.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Akşam -->
+    <h3>🌙 Akşam Rutini</h3>
+    <div class="routine-table-wrapper">
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>Adım</th>
+                    <th>Ürün / Aktif</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Çift Temizleme</strong></td>
+                    <td>Yağ bazlı temizleyici → Su bazlı temizleyici</td>
+                    <td>Güneş kremi ve makyaj kalıntılarının tam temizlenmesi. İlk adım güneş kremini çözer, ikinci adım derinlemesine temizler.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Nemlendirici (opsiyonel)</strong></td>
+                    <td>Hafif nemlendirici — Sandwich tekniği</td>
+                    <td>Retinoid toleransı düşükse, önce ince bir nemlendirici katmanı sürülür (sandwich tekniği). Tolerans arttıkça bu adım atlanabilir.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Retinoid</strong></td>
+                    <td>%0.25-0.5 Retinol veya %0.025 Tretinoyin</td>
+                    <td>Bezelye tanesi büyüklüğünde miktar tüm yüze yayılır. Göz çevresi ve dudak kenarından kaçınılır (veya çok ince katman).</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Nemlendirici</strong></td>
+                    <td>Seramid ve squalane içeren tamir edici nemlendirici</td>
+                    <td>Retinoidin üzerine son katman olarak uygulanır. Transepidermal su kaybını önler ve bariyer bütünlüğünü destekler.</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Göz Kremi (opsiyonel)</strong></td>
+                    <td>Peptid + Kafein içeren göz kremi</td>
+                    <td>Göz çevresi cildi daha ince ve hassastır. Retinoid direkt göz çevresine uygulanmıyorsa, peptid bazlı bir göz kremi faydalı olabilir.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="callout">
+        <div class="callout-title">⏰ Retinoid Olmayan Geceler</div>
+        <p>
+            Retinoid kullanmadığınız gecelerde (başlangıç fazında haftanın birkaç gecesi), 
+            retinoid yerine <strong>niasinamid serumu</strong> veya <strong>peptid serumu</strong> uygulanabilir. 
+            Bu, "boş" geceleri de aktif bakım geceleri haline getirir. Ayrıca AHA/BHA gibi exfoliant asitler 
+            retinoid <em>olmayan</em> gecelere planlanabilir; ancak retinoid ile aynı gece kullanımından 
+            kaçınılmalıdır.
+        </p>
+    </div>
+
+    <!-- 8. Kaynaklar -->
+    <div class="references" id="kaynaklar">
+        <h2><span class="section-icon">📖</span> Kaynaklar</h2>
+        <ol>
+            <li id="ref1">
+                <strong>Varani J, Dame MK, Rittie L, et al.</strong> 
+                Decreased collagen production in chronologically aged skin: roles of age-dependent alteration in fibroblast function and defective mechanical stimulation. 
+                <em>The American Journal of Pathology</em>. 2006;168(6):1861-1868. 
+                doi:10.2353/ajpath.2006.051302
+            </li>
+            <li id="ref2">
+                <strong>Rittié L, Fisher GJ.</strong> 
+                UV-light-induced signal cascades and skin aging. 
+                <em>Ageing Research Reviews</em>. 2002;1(4):705-720. 
+                doi:10.1016/S1568-1637(02)00024-7
+            </li>
+            <li id="ref3">
+                <strong>Mukherjee S, Date A, Patravale V, Korting HC, Roeder A, Weindl G.</strong> 
+                Retinoids in the treatment of skin aging: an overview of clinical efficacy and safety. 
+                <em>Clinical Interventions in Aging</em>. 2006;1(4):327-348. 
+                doi:10.2147/ciia.2006.1.4.327
+            </li>
+            <li id="ref4">
+                <strong>Kang S, Bergfeld W, Gottlieb AB, et al.</strong> 
+                Long-term efficacy and safety of tretinoin emollient cream 0.05% in the treatment of photodamaged facial skin. 
+                <em>Journal of Investigative Dermatology</em>. 2005;124(6):1364. 
+                doi:10.1111/j.0022-202X.2005.23760.x
+            </li>
+            <li id="ref5">
+                <strong>Pickart L, Vasquez-Soltero JM, Margolina A.</strong> 
+                GHK peptide as a natural modulator of multiple cellular pathways in skin regeneration. 
+                <em>BioMed Research International</em>. 2015;2015:648108. 
+                doi:10.1155/2015/648108
+            </li>
+            <li id="ref6">
+                <strong>Pullar JM, Carr AC, Vissers MCM.</strong> 
+                The roles of vitamin C in skin health. 
+                <em>Nutrients</em>. 2017;9(8):866. 
+                doi:10.3390/nu9080866
+            </li>
+            <li id="ref7">
+                <strong>Gehring W.</strong> 
+                Nicotinic acid/niacinamide and the skin. 
+                <em>Journal of Cosmetic Dermatology</em>. 2004;3(2):88-93. 
+                doi:10.1111/j.1473-2130.2004.00115.x
+            </li>
+            <li id="ref8">
+                <strong>Quan T, Qin Z, Xia W, Shao Y, Voorhees JJ, Fisher GJ.</strong> 
+                Matrix-degrading metalloproteinases in photoaging. 
+                <em>Journal of Investigative Dermatology Symposium Proceedings</em>. 2009;14(1):20-24. 
+                doi:10.1038/jidsymp.2009.8
+            </li>
+            <li id="ref9">
+                <strong>Shao Y, He T, Fisher GJ, Voorhees JJ, Quan T.</strong> 
+                Molecular basis of retinol anti-ageing properties in naturally aged human skin in vivo. 
+                <em>International Journal of Cosmetic Science</em>. 2017;39(1):56-65. 
+                doi:10.1111/ics.12348
+            </li>
+            <li id="ref10">
+                <strong>Zasada M, Budzisz E.</strong> 
+                Retinoids: active molecules influencing skin structure formation in cosmetic and dermatological treatments. 
+                <em>Postepy Dermatologii i Alergologii</em>. 2019;36(4):392-397. 
+                doi:10.5114/ada.2019.87443
+            </li>
+        </ol>
+    </div>
+
+</article>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-disclaimer">
+            <strong>⚕️ Yasal Uyarı:</strong> Bu platform tıbbi tavsiye değildir. DerindeBilgi'deki içerikler 
+            yalnızca bilgilendirme amaçlıdır ve profesyonel tıbbi danışmanlığın, teşhisin veya tedavinin 
+            yerine geçmez. Herhangi bir tedaviye başlamadan önce mutlaka bir dermatolog veya sağlık 
+            profesyoneline danışınız. Reçeteli retinoidler (tretinoyin) yalnızca hekim gözetiminde kullanılmalıdır.
+        </div>
+        <div class="footer-brand">
+            © 2026 <a href="/derindenbilgi/">DerindeBilgi</a> · Kanıta dayalı dermatoloji rehberi
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Yukarı çık">↑</button>
+
+<script>
+    // Reading progress bar
+    window.addEventListener('scroll', function() {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = window.scrollY;
+        const progress = docHeight > 0 ? (scrolled / docHeight) * 100 : 0;
+        document.getElementById('readingProgress').style.width = progress + '%';
+
+        // Back to top button
+        const btn = document.getElementById('backToTop');
+        if (scrolled > 400) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    });
+
+    document.getElementById('backToTop').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
