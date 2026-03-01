@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güneşten Korunma Rehberi: SPF, UV ve Güneş Kremi Bilimi | Derindenbilgi</title>
+    <meta name="description" content="UV-A vs UV-B, SPF ne demek, fiziksel vs kimyasal filtreler, uygulama miktarı, Fitzpatrick cilt tipine göre SPF seçimi, güneş kremi mitleri ve D vitamini paradoksu — kanıta dayalı rehber.">
+    <meta name="keywords" content="güneşten korunma, SPF, UV-A, UV-B, güneş kremi, fiziksel filtre, kimyasal filtre, çinko oksit, avobenzone, Fitzpatrick, D vitamini, dermatoloji">
+    <meta property="og:title" content="Güneşten Korunma Rehberi: SPF, UV ve Güneş Kremi Bilimi">
+    <meta property="og:description" content="SPF ne demek, fiziksel mi kimyasal mı, ne kadar sürmeliyiz? Güneş korumasının A'dan Z'sine kanıta dayalı rehber.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(239,68,68,0.1));
+            color: #d97706;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(245,158,11,0.06), rgba(239,68,68,0.06));
+            border: 1px solid rgba(245,158,11,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #b45309;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(245,158,11,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 500px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 400px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">☀️ Güneş Korunma</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 16 dk okuma</span>
+    </div>
+    <h1>Güneşten Korunma Rehberi: SPF, UV Işınları ve Güneş Kremi Bilimi</h1>
+    <p class="article-subtitle">SPF 30 mu 50 mi? Fiziksel mi kimyasal mı? Ne kadar sürmeliyim? Cam arkasında UV var mı? Koyu tenli insanlar güneş kremi kullanmalı mı? Güneşten korunmanın A'dan Z'sine kanıta dayalı rehber.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#uv-nedir">UV Işınları: UV-A vs UV-B</a></li>
+            <li><a href="#spf-nedir">SPF Ne Demek?</a></li>
+            <li><a href="#genis-spektrum">Geniş Spektrum Neden Önemli?</a></li>
+            <li><a href="#fiziksel-kimyasal">Fiziksel vs Kimyasal Filtreler</a></li>
+            <li><a href="#ne-kadar">Ne Kadar Sürmeli? (2 mg/cm²)</a></li>
+            <li><a href="#yeniden-uygulama">Yeniden Uygulama Kuralları</a></li>
+            <li><a href="#fitzpatrick">Cilt Tipine Göre SPF Seçimi</a></li>
+            <li><a href="#cocuklar">Çocuklarda Güneşten Korunma</a></li>
+            <li><a href="#d-vitamini">D Vitamini Paradoksu</a></li>
+            <li><a href="#mitler">Güneş Kremi Mitleri</a></li>
+            <li><a href="#sonuc">Sonuç</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">☀️</span> <strong>UV-B</strong> yakıyor, <strong>UV-A</strong> yaşlandırıyor. İkisinden de korunmak şart — yani "geniş spektrum" yazmalı.</li>
+            <li><span class="bullet">🔢</span> SPF 30, UV-B'nin <strong>%96,7'sini</strong> bloke eder. SPF 50 ise <strong>%98'ini</strong>. Aradaki fark düşündüğünüz kadar büyük değil.</li>
+            <li><span class="bullet">🧴</span> Yüze tam koruma için <strong>1 çay kaşığı</strong> (yaklaşık 1,25 ml) güneş kremi gerekiyor. Çoğu kişi bunun <strong>yarısını bile sürmüyor.</strong></li>
+            <li><span class="bullet">🔄</span> Her <strong>2 saatte</strong> yeniden uygulamak zorunlu. Yüzme veya terleme sonrası hemen tekrar.</li>
+            <li><span class="bullet">🛡️</span> Fiziksel filtreler (çinko oksit) geniş spektrum, <strong>hassas ciltlere uygun</strong>. Kimyasal filtreler kozmetik açıdan daha şık ama hassasiyet riski taşıyor.</li>
+            <li><span class="bullet">👶</span> 6 aydan küçük bebeklere güneş kremi <strong>önerilmez</strong> — gölge + fiziksel bariyer (şapka, kıyafet) temel koruma.</li>
+            <li><span class="bullet">☀️</span> D vitamini eksikliği korkusuyla güneşe "kontrolsüz" çıkmak <strong>mantıksız</strong> — takviye çok daha güvenli bir yol.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 1: UV IŞINLARI -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 1</div>
+        <div class="part-divider-title">☀️ UV Işınlarını Tanıyalım</div>
+    </div>
+
+    <h2 id="uv-nedir">☀️ UV Işınları: UV-A vs UV-B</h2>
+
+    <p>Güneş ışığının gözle göremediğimiz iki zararlı bileşeni var: <strong>UV-A</strong> ve <strong>UV-B</strong>. İkisi de cildinize zarar veriyor ama farklı şekillerde.</p>
+
+    <h3>UV-B: "Yakıcı Işın"</h3>
+
+    <p><strong>UV-B (280–315 nm)</strong> cildin üst katmanını (epidermis) hedef alır. Güneş yanığının asıl sorumlusudur. Dalga boyu kısa ama enerjisi yüksektir — DNA'ya doğrudan hasar verir (Young AR et al., <em>J Invest Dermatol</em>, 1998).</p>
+
+    <p>Cam arkasından büyük ölçüde filtrelenir. Yaz aylarında ve öğle saatlerinde (10:00–16:00) en yoğundur.</p>
+
+    <h3>UV-A: "Yaşlandıran Işın"</h3>
+
+    <p><strong>UV-A (315–400 nm)</strong> derinin daha derin katmanlarına (dermis) ulaşır. Kolajen ve elastin liflerine hasar verir → kırışıklık, leke ve fotoaging (erken yaşlanma). Yıl boyunca, hava kapalı bile olsa, sabahtan akşama neredeyse sabit yoğunluktadır (Diffey BL, <em>Methods</em>, 2002).</p>
+
+    <p>En kritik fark: <strong>UV-A camdan geçer.</strong> Araba sürerken, ofiste pencere kenarında — UV-A sizi buluyor.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>UV-B yakıyor, UV-A yaşlandırıyor. İkisinden de korunmak şart. UV-A camdan geçer, bulutlu havada da gelir.</p>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>UV-B</th>
+                    <th>UV-A</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Dalga boyu</strong></td>
+                    <td>280–315 nm</td>
+                    <td>315–400 nm</td>
+                </tr>
+                <tr>
+                    <td><strong>Derinlik</strong></td>
+                    <td>Epidermis (üst katman)</td>
+                    <td>Dermis (derin katman)</td>
+                </tr>
+                <tr>
+                    <td><strong>Ana etki</strong></td>
+                    <td>Güneş yanığı, DNA hasarı</td>
+                    <td>Fotoaging, pigmentasyon</td>
+                </tr>
+                <tr>
+                    <td><strong>Camdan geçer mi?</strong></td>
+                    <td>❌ Büyük ölçüde hayır</td>
+                    <td>✅ Evet</td>
+                </tr>
+                <tr>
+                    <td><strong>Mevsim/saat</strong></td>
+                    <td>Yaz + öğle saatleri yoğun</td>
+                    <td>Yıl boyunca, gün boyu</td>
+                </tr>
+                <tr>
+                    <td><strong>Kanser riski</strong></td>
+                    <td>✅ Doğrudan DNA mutasyonu</td>
+                    <td>✅ İndirekt oksidatif hasar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 2: SPF -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 2</div>
+        <div class="part-divider-title">🔢 SPF Bilimi</div>
+    </div>
+
+    <h2 id="spf-nedir">🔢 SPF Ne Demek?</h2>
+
+    <p><strong>SPF (Sun Protection Factor)</strong> = güneş koruma faktörü. Ama dikkat: SPF sadece <strong>UV-B'ye</strong> karşı korumayı ölçer. UV-A koruması için ayrı bir parametre gerekir.</p>
+
+    <h3>Hesaplama Basit</h3>
+
+    <p>SPF, cildinizin güneş kremi <strong>ile</strong> yanma süresini, kremi <strong>olmadan</strong> yanma süresine bölüyor. SPF 30 demek, cildiniz 10 dakikada yanıyorsa, güneş kreminden sonra teorik olarak 300 dakika (5 saat) yanmaz — demek (Lautenschlager S et al., <em>Lancet</em>, 2007).</p>
+
+    <p>Ama bu <strong>laboratuvar koşullarında</strong> geçerli bir hesap. Gerçek hayatta terliyor, suya giriyorsunuz, yetersiz sürüyorsunuz. Yani asla "SPF 50 sürdüm, 8 saat güvendeyim" diye düşünmeyin.</p>
+
+    <h3>SPF 30 vs SPF 50: Fark Düşündüğünüz Kadar Büyük Değil</h3>
+
+    <ul>
+        <li><strong>SPF 15:</strong> UV-B'nin %93,3'ünü bloke eder</li>
+        <li><strong>SPF 30:</strong> UV-B'nin %96,7'sini bloke eder</li>
+        <li><strong>SPF 50:</strong> UV-B'nin %98'ini bloke eder</li>
+        <li><strong>SPF 100:</strong> UV-B'nin %99'unu bloke eder</li>
+    </ul>
+
+    <p>SPF 30 ile 50 arasındaki fark <strong>sadece %1,3</strong>. Ama insanlar SPF 50 sürdüğünde kendilerini daha güvende hissedip <strong>daha az yeniden sürüyorlar</strong> — bu yanlış güven hissini "SPF paradoksu" olarak tanımlıyor Autier ve arkadaşları (<em>J Natl Cancer Inst</em>, 2007).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>SPF 30 zaten UV-B'nin %96,7'sini engelliyor. Asıl mesele SPF rakamı değil, yeterli miktarda sürüp düzenli yenilemek.</p>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>⚠️ SPF sadece UV-B'yi ölçer!</strong> UV-A koruması için ürünün etiketinde "geniş spektrum" (broad spectrum), PA++++, veya UV-A çemberi sembolü arayın. SPF 50 yazan ama UV-A koruması olmayan ürün, güneş yanığını engeller ama cildinizi yaşlanmadan korumaz.</p>
+    </div>
+
+
+    <h2 id="genis-spektrum">🌈 Geniş Spektrum Neden Önemli?</h2>
+
+    <p>Güneş kreminizin hem UV-B hem UV-A'ya karşı koruması varsa buna <strong>"geniş spektrum"</strong> (broad spectrum) deniyor. ABD'de FDA bu etiket için kritik dalga boyunun ≥370 nm olmasını zorunlu kılıyor (FDA Final Rule, 2011).</p>
+
+    <p>Avrupa'da ise UV-A korumasının UV-B korumasının en az <strong>1/3'ü</strong> kadar olması gerekiyor. Daire içinde "UVA" logosu bu standardı karşıladığını gösterir (Osterwalder U &amp; Herzog B, <em>Photochem Photobiol Sci</em>, 2010).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Her güneş kreminde "geniş spektrum" veya "UVA + UVB koruması" ibaresi arayın. SPF tek başına yetmez.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 3: FİLTRELER -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 3</div>
+        <div class="part-divider-title">🛡️ Fiziksel vs Kimyasal Filtreler</div>
+    </div>
+
+    <h2 id="fiziksel-kimyasal">🛡️ Fiziksel vs Kimyasal Filtreler</h2>
+
+    <p>Güneş kremlerindeki filtreler iki ana gruba ayrılır. İkisi de UV'yi engelliyor ama mekanizmaları farklı.</p>
+
+    <h3>Fiziksel (Mineral) Filtreler</h3>
+
+    <p>İki aktif madde: <strong>çinko oksit (zinc oxide)</strong> ve <strong>titanyum dioksit (titanium dioxide)</strong>. Cildin üzerinde fiziksel bir bariyer oluşturarak UV ışınlarını yansıtır ve emer. "Ayna" gibi düşünün — ışığı geri çeviriyor (Smijs TG &amp; Pavel S, <em>Nanotechnology</em>, 2011).</p>
+
+    <p>Çinko oksit tek başına <strong>geniş spektrum</strong> koruma sağlayabilen tek filtredir — hem UV-A hem UV-B'yi bloke eder. Titanyum dioksit ise UV-B'de güçlü ama UV-A koruması sınırlıdır.</p>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Çinko Oksit</div>
+            <div class="verdict-text">Geniş spektrum korumanın şampiyonu. Hassas ciltler, çocuklar ve hamilelikte ilk tercih. Dezavantajı: beyaz iz bırakabilir ve kozmetik şıklığı düşük. Mikronize/nano formlar bu sorunu kısmen çözdü.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Titanyum Dioksit</div>
+            <div class="verdict-text">UV-B korumasında güçlü, UV-A'da zayıf. Tek başına geniş spektrum sağlamaz, çinko oksitle kombine edilmeli. Çinko okside göre daha şeffaf uygulanır.</div>
+        </div>
+    </div>
+
+    <h3>Kimyasal (Organik) Filtreler</h3>
+
+    <p>Bu filtreler UV ışınlarını <strong>absorbe eder</strong> ve ısı enerjisine çevirir. Her biri belirli bir dalga boyu aralığında etkilidir. Bu yüzden genellikle geniş spektrum sağlamak için birkaç kimyasal filtre <strong>kombine</strong> edilir.</p>
+
+    <p>Yaygın kullanılanlar: <strong>avobenzone</strong> (UV-A koruması), <strong>octinoxate</strong> (UV-B koruması), <strong>octocrylene</strong> (UV-B + avobenzone stabilizatörü), ve Avrupa'da çok popüler olan <strong>Tinosorb S ve Tinosorb M</strong> (geniş spektrum).</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Avobenzone</div>
+            <div class="verdict-text">UV-A korumasında en yaygın kimyasal filtre. Ama ışıkla bozunabilir (fotounstabil) — octocrylene veya Tinosorb ile stabilize edilmesi gerekiyor. Hassas ciltlerde bazen tahriş yapabilir.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Yeni Nesil Filtreler (Tinosorb S/M, Mexoryl)</div>
+            <div class="verdict-text">Geniş spektrum, fotostabil, daha az tahriş riski. Avrupa formülasyonlarında yaygın. ABD FDA onay süreci yavaş olduğu için ABD ürünlerinde henüz nadirler. Bulabiliyorsanız en iyi seçeneklerden.</div>
+        </div>
+    </div>
+
+    <h3>Karşılaştırma Tablosu</h3>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Fiziksel (Mineral)</th>
+                    <th>Kimyasal (Organik)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Mekanizma</strong></td>
+                    <td>UV'yi yansıtır + emer</td>
+                    <td>UV'yi absorbe eder → ısıya çevirir</td>
+                </tr>
+                <tr>
+                    <td><strong>Etki başlangıcı</strong></td>
+                    <td>Hemen</td>
+                    <td>~15–20 dk (emilim gerekir)</td>
+                </tr>
+                <tr>
+                    <td><strong>Kozmetik şıklık</strong></td>
+                    <td>Beyaz iz bırakabilir</td>
+                    <td>Şeffaf, hafif</td>
+                </tr>
+                <tr>
+                    <td><strong>Hassasiyet riski</strong></td>
+                    <td>Çok düşük</td>
+                    <td>Bazı filtrelerde orta</td>
+                </tr>
+                <tr>
+                    <td><strong>Fotostabilite</strong></td>
+                    <td>✅ Kararlı</td>
+                    <td>Filtreye bağlı (avobenzone zayıf)</td>
+                </tr>
+                <tr>
+                    <td><strong>Geniş spektrum</strong></td>
+                    <td>✅ Çinko oksit tek başına yeterli</td>
+                    <td>Kombinasyon gerekir</td>
+                </tr>
+                <tr>
+                    <td><strong>Hamilelik / bebek</strong></td>
+                    <td>✅ İlk tercih</td>
+                    <td>🤔 Bazı filtreler tartışmalı</td>
+                </tr>
+                <tr>
+                    <td><strong>Çevresel etki</strong></td>
+                    <td>Nano boyut tartışmalı</td>
+                    <td>Oxybenzone mercan resiflerine zararlı</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Hassas cilt, çocuk, hamilelik → mineral (çinko oksit). Kozmetik şıklık istiyorsanız → iyi formüle edilmiş kimyasal veya kombine ürün. En iyi güneş kremi: sürmeye devam edeceğiniz güneş kremi.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 4: UYGULAMA -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 4</div>
+        <div class="part-divider-title">🧴 Doğru Uygulama</div>
+    </div>
+
+    <h2 id="ne-kadar">🧴 Ne Kadar Sürmeli? (2 mg/cm² Kuralı)</h2>
+
+    <p>SPF testleri laboratuvarda <strong>2 mg/cm²</strong> yoğunlukta yapılıyor. Bu, güneş kreminin etiketindeki korumayı sağlaması için gereken miktar. Pratikte bu ne demek?</p>
+
+    <ul>
+        <li><strong>Yüz + boyun:</strong> Yaklaşık 1 çay kaşığı (~1,25 ml)</li>
+        <li><strong>Tüm vücut:</strong> Yaklaşık 30–35 ml (bir shot bardağı)</li>
+    </ul>
+
+    <p>Ama araştırmalar gösteriyor ki insanlar ortalama <strong>0,5–1 mg/cm²</strong> sürüyor — yani gereken miktarın yarısını bile (Faurschou A &amp; Wulf HC, <em>Photodermatol Photoimmunol Photomed</em>, 2007). Bu durumda SPF 50 yazan üründen gerçekte SPF 15–25 arası koruma alırsınız.</p>
+
+    <div class="danger-box">
+        <div class="danger-box-title">🚨 Yetersiz Uygulama = Düşük Koruma</div>
+        <p>SPF 50 yazan kreminizi yarı miktarda sürerseniz, elde ettiğiniz koruma SPF 50'nin yarısı DEĞİL, çok daha düşük. SPF logaritmik ölçekte çalışır — az sürmek korunmayı dramatik şekilde düşürür.</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Yüzünüze 1 çay kaşığı sürün. Az sürmek = güneş kreminin SPF'ini dramatik olarak düşürmek.</p>
+    </div>
+
+
+    <h2 id="yeniden-uygulama">🔄 Yeniden Uygulama Kuralları</h2>
+
+    <p>Güneş kremi bir kere sürüp unutulacak bir şey değil. <strong>AAD (American Academy of Dermatology)</strong> ve <strong>WHO</strong> önerisi net:</p>
+
+    <ul>
+        <li>Her <strong>2 saatte bir</strong> yeniden uygulayın</li>
+        <li>Yüzme veya terleme sonrası <strong>hemen</strong> tekrarlayın</li>
+        <li>Havluyla kurulandıktan sonra mutlaka yeniden sürün</li>
+    </ul>
+
+    <p>Neden? Çünkü güneş kremi zamanla cilt yüzeyinden kayboluyor — ter, yağ, sürtünme ve bazı kimyasal filtrelerin fotodegradasyonu (ışıkla bozunması) koruyu azaltıyor (Diffey BL, <em>J Am Acad Dermatol</em>, 2001).</p>
+
+    <div class="highlight-box">
+        <p><strong>💡 İpucu:</strong> Makyaj üzerine yeniden uygulamak zor mu? SPF içeren pudra veya sprey formülasyonlar, günlük yenileme için pratik bir çözüm olabilir. Ama bunlar <strong>ana güneş kreminizin yerini almaz</strong> — ek koruma olarak düşünün.</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Her 2 saatte yeniden sürün. Ter, su, sürtünme koruyu eritir. "Sabah sürdüm, gün boyu güvendeyim" yanlış.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 5: CİLT TİPİ VE SPF -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 5</div>
+        <div class="part-divider-title">👤 Cilt Tipine Göre Koruma</div>
+    </div>
+
+    <h2 id="fitzpatrick">👤 Cilt Tipine Göre SPF Seçimi (Fitzpatrick Sınıflaması)</h2>
+
+    <p>Dermatolojide cilt tiplerini sınıflandırmak için <strong>Fitzpatrick skalası</strong> kullanılır. Thomas Fitzpatrick bu sistemi 1975'te geliştirdi. Cildin güneşe tepkisini 6 tipe ayırır (Fitzpatrick TB, <em>Arch Dermatol</em>, 1988).</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Tip</th>
+                    <th>Özellik</th>
+                    <th>Güneş Tepkisi</th>
+                    <th>Önerilen SPF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Tip I</strong></td>
+                    <td>Çok açık ten, kızıl/sarı saç</td>
+                    <td>Her zaman yanar, asla bronzlaşmaz</td>
+                    <td>SPF 50+</td>
+                </tr>
+                <tr>
+                    <td><strong>Tip II</strong></td>
+                    <td>Açık ten, sarı/kumral saç</td>
+                    <td>Kolay yanar, hafif bronzlaşır</td>
+                    <td>SPF 50+</td>
+                </tr>
+                <tr>
+                    <td><strong>Tip III</strong></td>
+                    <td>Orta ten, koyu kumral/kahverengi saç</td>
+                    <td>Bazen yanar, kademeli bronzlaşır</td>
+                    <td>SPF 30–50</td>
+                </tr>
+                <tr>
+                    <td><strong>Tip IV</strong></td>
+                    <td>Esmer ten, koyu saç</td>
+                    <td>Nadiren yanar, kolay bronzlaşır</td>
+                    <td>SPF 30+</td>
+                </tr>
+                <tr>
+                    <td><strong>Tip V</strong></td>
+                    <td>Koyu esmer ten</td>
+                    <td>Çok nadiren yanar</td>
+                    <td>SPF 30+</td>
+                </tr>
+                <tr>
+                    <td><strong>Tip VI</strong></td>
+                    <td>Çok koyu / siyah ten</td>
+                    <td>Yanmaz</td>
+                    <td>SPF 15–30+</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Koyu tenli = güneş kremi gerekmez diye bir kural YOK.</strong> Koyu ten daha fazla melanin içerir ve UV-B'ye karşı doğal koruma sağlar — ama UV-A hasarı, hiperpigmentasyon ve cilt kanseri riski sıfır değildir. Tip V-VI ciltlerde melanom tanısı daha geç konur ve prognoz daha kötüdür (Gloster HM &amp; Neal K, <em>J Am Acad Dermatol</em>, 2006).</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Herkese minimum SPF 30 geniş spektrum. Açık tenliler SPF 50+. Koyu tenli olmak güneş kremini atlama sebebi değil.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 6: ÇOCUKLAR -->
+    <!-- ============================================== -->
+
+    <h2 id="cocuklar">👶 Çocuklarda Güneşten Korunma</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(236,72,153,0.1); border:1px solid rgba(236,72,153,0.2)">👶</div>
+        <div>
+            <div class="endikasyon-title">Çocuklarda Güneşten Korunma</div>
+            <div class="endikasyon-subtitle">Bebek ve çocuklara özel kurallar</div>
+        </div>
+    </div>
+
+    <p>Çocukluk dönemindeki güneş maruziyeti, ilerideki melanom riskini <strong>önemli ölçüde artırır</strong>. Özellikle ağır güneş yanıkları (büllöz/kabarcıklı) melanom riskini 2 kata kadar yükseltebilir (Whiteman DC et al., <em>J Natl Cancer Inst</em>, 2001).</p>
+
+    <h3>6 Aydan Küçük Bebekler</h3>
+
+    <p>AAD ve FDA güneş kremini <strong>6 aydan küçük bebeklerde önermez.</strong> Cilt bariyeri henüz olgunlaşmamıştır ve kimyasal emilim riski yüksektir. Koruma yöntemi: gölge, şapka, uzun kollu hafif kıyafet, bebek arabası güneşliği.</p>
+
+    <h3>6 Ay – 2 Yaş</h3>
+
+    <p>Mineral filtreler (çinko oksit, titanyum dioksit) tercih edilmelidir. SPF 30+ geniş spektrum. Mümkün olduğunca <strong>fiziksel koruma</strong> (kıyafet + şapka) öncelikli olmalı (AAD, 2023).</p>
+
+    <h3>2 Yaş Üstü Çocuklar</h3>
+
+    <p>Mineral veya yeni nesil kimyasal filtreli SPF 30+ geniş spektrum ürünler uygundur. Her 2 saatte yeniden uygulama kuralı çocuklar için de geçerlidir. Özellikle yüzme ve oyun sonrası yenileme çok önemlidir.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>6 aydan küçük: güneş kremi değil, gölge + kıyafet. Daha büyükler: mineral SPF 30+. Çocukluk güneş yanıkları yıllarca sonra melanoma dönüşebilir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 7: D VİTAMİNİ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 7</div>
+        <div class="part-divider-title">☀️ D Vitamini Paradoksu</div>
+    </div>
+
+    <h2 id="d-vitamini">☀️ D Vitamini Paradoksu</h2>
+
+    <p>"Güneş kremi sürersem D vitamini yapamam" — bu çok yaygın bir endişe. Mekanizma doğru: ciltteki 7-dehidrokolesterol, UV-B ışığıyla D vitaminine dönüşür. Ama pratik sonuç düşündüğünüz gibi değil.</p>
+
+    <h3>Bilim Ne Diyor?</h3>
+
+    <p>Birden fazla çalışma gösteriyor ki <strong>günlük güneş kremi kullanan insanlarda D vitamini düzeyleri klinik olarak anlamlı biçimde düşmüyor</strong> (Marks R et al., <em>J Am Acad Dermatol</em>, 1995). Neden? Çünkü kimse güneş kremini mükemmel şekilde uygulamıyor — kaçırdığınız yerler, yetersiz miktar ve yenileme atlama zaten yeterli UV-B'nin geçmesine izin veriyor.</p>
+
+    <p>Ayrıca D vitamini üretimi için gereken UV-B maruziyeti <strong>çok kısa</strong>: açık tenlilerde günde 10–15 dakika el ve yüze güneş değmesi yeterli olabilir. Ama bu "güneşlenerek D vitamini yapayım" demek değil — kasıtlı güneşe çıkmak UV hasarını artırır (Holick MF, <em>N Engl J Med</em>, 2007).</p>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Çözüm basit:</strong> D vitamini eksikliğiniz varsa, <strong>oral takviye</strong> alın (günlük 800–2000 IU, doktorunuzun önerisiyle). Bu, güneşe kontrolsüz maruz kalmaktan hem daha güvenli hem daha etkilidir.</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Güneş kremi D vitamini üretimini tamamen engellemez. Eksiklik endişeniz varsa takviye alın — cilt kanserini riske atmaya değmez.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 8: MİTLER -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 8</div>
+        <div class="part-divider-title">🔮 Mitler vs Gerçekler</div>
+    </div>
+
+    <h2 id="mitler">🔮 Güneş Kremi Mitleri</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Koyu tenliyim, güneş kremi kullanmama gerek yok"</div>
+            <div class="myth-fact">YANLIŞ. Koyu ten UV-B'ye karşı daha fazla doğal koruma sağlar — ama UV-A hasarı, hiperpigmentasyon ve kanser riski devam eder. Tip V-VI ciltlerde melanom teşhisi sıklıkla geç konur ve sağkalım oranları daha düşüktür (Gloster HM &amp; Neal K, 2006).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Cam arkasında güneşten korunurum"</div>
+            <div class="myth-fact">YANLIŞ. Normal cam UV-B'yi filtreler ama <strong>UV-A'nın büyük kısmını geçirir</strong>. Ofiste pencere kenarında veya arabada sol tarafınız UV-A'ya maruz kalır. Araba sürücülerinin sol yanağında daha fazla fotoaging görülmesi tesadüf değil (Butler ST &amp; Fosko SW, <em>J Am Acad Dermatol</em>, 2010).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Bulutlu havada güneş kremi gerekmez"</div>
+            <div class="myth-fact">YANLIŞ. Bulutlar UV-B'nin bir kısmını filtreleyebilir ama UV-A'nın %80'e kadarı bulutlardan geçer (WHO, 2002). "Dışarısı kapalı" diye güneş kremini atlamak fotoaging ve hiperpigmentasyon riskini artırır.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Güneş kremi kimyasalları kansere neden olur"</div>
+            <div class="myth-fact">BAĞLAMINA BAKALI. Bazı kimyasal filtrelerin (oxybenzone gibi) kanda tespit edilmesi endişe yarattı — ama bu "kansere neden olur" demek değil. Mevcut kanıtlar güneş kreminin koruma-risk dengesinin <strong>kesinlikle koruma lehine</strong> olduğunu gösteriyor (Matta MK et al., <em>JAMA</em>, 2019). Endişeleniyorsanız mineral filtre seçin.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "SPF 100 SPF 50'den çok daha iyi korur"</div>
+            <div class="myth-fact">ABARTILI. SPF 50 UV-B'nin %98'ini, SPF 100 ise %99'unu filtre eder — aradaki fark sadece %1. Yüksek SPF yanlış güvenlik hissi vererek daha az yeniden uygulama ve daha uzun güneşte kalma eğilimi yaratabilir (Autier P et al., 2007).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Güneş kremi bir kere sürülür, gün boyu korur"</div>
+            <div class="myth-fact">YANLIŞ. Güneş kreminin etkisi zamanla azalır — ter, sürtünme ve fotodegradasyonla. Her 2 saatte yeniden uygulama şart. "Sabah sürdüm, akşama kadar güvendeyim" tamamen yanlış (AAD, 2023).</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 9: SONUÇ -->
+    <!-- ============================================== -->
+
+    <h2 id="sonuc">🏁 Sonuç: Güneşten Korunmanın Altın Kuralları</h2>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">☀️</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Altın Kurallar</div>
+            <div class="verdict-text">SPF 30+ geniş spektrum, her gün, yeterli miktarda (1 çay kaşığı yüze), her 2 saatte yenileme. Güneş koruması dermatolojide en güçlü kanıta sahip anti-aging stratejisidir.</div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Koruma sadece güneş kreminden ibaret değil.</strong> Güneş koruması bir "paket" olarak düşünülmeli:</p>
+        <p>1. <strong>Güneş kremi:</strong> SPF 30+ geniş spektrum, yeterli miktar, düzenli yenileme.</p>
+        <p>2. <strong>Gölge:</strong> 10:00–16:00 arası direkt güneşten kaçının.</p>
+        <p>3. <strong>Kıyafet:</strong> Şapka (geniş kenarlı), güneş gözlüğü, UPF 50+ kıyafetler.</p>
+        <p>4. <strong>Alışkanlık:</strong> Bronzlaşma güneş hasarıdır. "Sağlıklı bronzlaşma" diye bir şey yoktur.</p>
+    </div>
+
+    <p>Güneşten korunma, cilt sağlığınız için yapabileceğiniz <strong>en yüksek kanıt düzeyine sahip</strong>, en ucuz ve en etkili yatırımdır. Hiçbir krem, serum veya kozmetik işlem, düzenli güneş korumasının yerini tutamaz (Green AC et al., <em>Ann Intern Med</em>, 2011).</p>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir tedaviye başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Young AR, Chadwick CA, Harrison GI, et al. The similarity of action spectra for thymine dimers in human epidermis and erythema suggests that DNA is the chromophore for erythema. <em>J Invest Dermatol.</em> 1998;111(6):982–988.</li>
+            <li>Diffey BL. Sources and measurement of ultraviolet radiation. <em>Methods.</em> 2002;28(1):4–13.</li>
+            <li>Lautenschlager S, Wulf HC, Pittelkow MR. Photoprotection. <em>Lancet.</em> 2007;370(9586):528–537.</li>
+            <li>Autier P, Boniol M, Doré JF. Sunscreen use and increased duration of intentional sun exposure: still a burning issue. <em>Int J Cancer.</em> 2007;121(1):1–5.</li>
+            <li>Osterwalder U, Herzog B. Sun protection factors: world-wide confusion. <em>Br J Dermatol.</em> 2009;161(Suppl 3):13–24.</li>
+            <li>Faurschou A, Wulf HC. The relation between sun protection factor and amount of sunscreen applied in vivo. <em>Br J Dermatol.</em> 2007;156(4):716–719.</li>
+            <li>Smijs TG, Pavel S. Titanium dioxide and zinc oxide nanoparticles in sunscreens: focus on their safety and effectiveness. <em>Nanotechnol Sci Appl.</em> 2011;4:95–112.</li>
+            <li>Fitzpatrick TB. The validity and practicality of sun-reactive skin types I through VI. <em>Arch Dermatol.</em> 1988;124(6):869–871.</li>
+            <li>Gloster HM Jr, Neal K. Skin cancer in skin of color. <em>J Am Acad Dermatol.</em> 2006;55(5):741–760.</li>
+            <li>Whiteman DC, Whiteman CA, Green AC. Childhood sun exposure as a risk factor for melanoma: a systematic review of epidemiologic studies. <em>Cancer Causes Control.</em> 2001;12(1):69–82.</li>
+            <li>Holick MF. Vitamin D deficiency. <em>N Engl J Med.</em> 2007;357(3):266–281.</li>
+            <li>Marks R, Foley PA, Jolley D, et al. The effect of regular sunscreen use on vitamin D levels in an Australian population. <em>Arch Dermatol.</em> 1995;131(4):415–421.</li>
+            <li>Butler ST, Fosko SW. Increased prevalence of left-sided skin cancers. <em>J Am Acad Dermatol.</em> 2010;63(6):1006–1010.</li>
+            <li>Matta MK, Zusterzeel R, Pilli NR, et al. Effect of sunscreen application under maximal use conditions on plasma concentration of sunscreen active ingredients. <em>JAMA.</em> 2019;321(21):2082–2091.</li>
+            <li>Green AC, Williams GM, Logan V, Strutton GM. Reduced melanoma after regular sunscreen use: randomized trial follow-up. <em>J Clin Oncol.</em> 2011;29(3):257–263.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
