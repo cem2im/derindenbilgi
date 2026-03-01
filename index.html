@@ -175,6 +175,83 @@
             .tabs{width:100%;overflow-x:auto}
             #scResult [style*="grid-template-columns"]{grid-template-columns:1fr!important}
         }
+
+        /* ===== 1. HERO MESH GRADIENT + FLOATING BLOBS ===== */
+        .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#f0fdfa 0%,#ecfeff 35%,#eff6ff 65%,#fff 100%)}
+        .hero::before{content:'';position:absolute;inset:-50%;width:200%;height:200%;background:
+            radial-gradient(circle at 25% 40%,rgba(13,148,136,.08) 0%,transparent 50%),
+            radial-gradient(circle at 75% 25%,rgba(99,102,241,.06) 0%,transparent 45%),
+            radial-gradient(circle at 50% 80%,rgba(6,182,212,.07) 0%,transparent 50%);
+            animation:meshDrift 25s ease-in-out infinite;z-index:0}
+        @keyframes meshDrift{0%,100%{transform:translate(0,0) rotate(0deg) scale(1)}33%{transform:translate(2%,-2%) rotate(.5deg) scale(1.02)}66%{transform:translate(-1.5%,1%) rotate(-.5deg) scale(.98)}}
+        .hero-c{position:relative;z-index:1}
+        .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+        .hero-blob-1{width:420px;height:420px;background:rgba(13,148,136,.12);top:-120px;right:-80px;animation:blobA 18s ease-in-out infinite}
+        .hero-blob-2{width:320px;height:320px;background:rgba(99,102,241,.09);bottom:-100px;left:-60px;animation:blobA 22s ease-in-out infinite reverse}
+        .hero-blob-3{width:220px;height:220px;background:rgba(6,182,212,.08);top:45%;left:55%;animation:blobA 15s ease-in-out infinite 3s}
+        @keyframes blobA{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-25px) scale(1.06)}50%{transform:translate(-20px,20px) scale(.94)}75%{transform:translate(15px,30px) scale(1.03)}}
+
+        /* ===== 2. STATS BAR ===== */
+        .stats-bar{padding:0 24px;margin-top:-44px;position:relative;z-index:2}
+        .stats-inner{max-width:880px;margin:0 auto;background:rgba(255,255,255,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(13,148,136,.12);border-radius:20px;padding:28px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;box-shadow:0 8px 40px rgba(13,148,136,.08)}
+        .stat-item{text-align:center;position:relative}
+        .stat-item:not(:last-child)::after{content:'';position:absolute;right:-10px;top:15%;height:70%;width:1px;background:var(--border)}
+        .stat-num{font-size:clamp(28px,4vw,36px);font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+        .stat-label{font-size:13px;color:var(--text-s);margin-top:4px;font-weight:500}
+        @media(max-width:768px){.stats-inner{grid-template-columns:repeat(2,1fr);gap:16px;padding:20px 24px}.stat-item:nth-child(2)::after{display:none}}
+
+        /* ===== 3. BENTO FEATURED ===== */
+        .bento-feat{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:16px}
+        .bento-feat .feat-main{grid-row:span 2;padding:32px;background:linear-gradient(145deg,rgba(13,148,136,.05),rgba(99,102,241,.05));border:1px solid var(--accent-br);border-radius:var(--r-xl);position:relative;overflow:hidden}
+        .bento-feat .feat-main::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(13,148,136,.08),transparent 70%);border-radius:50%}
+        .bento-feat .feat-side{padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-xl);transition:transform .3s,box-shadow .3s}
+        .bento-feat .feat-side:hover{transform:translateY(-3px);box-shadow:var(--sh-l)}
+        @media(max-width:768px){.bento-feat{grid-template-columns:1fr}.bento-feat .feat-main{grid-row:span 1}}
+
+        /* ===== 4. SECTION CATEGORY COLORS ===== */
+        #kozmetik .card-i{background:rgba(139,92,246,.08);border-color:rgba(139,92,246,.18)}
+        #kozmetik .card:hover{border-color:#8b5cf6}
+        #kozmetik .card-tag{color:#8b5cf6}
+        #kozmetik .s-label{color:#8b5cf6}
+
+        #sac .card-i{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.18)}
+        #sac .card:hover{border-color:#3b82f6}
+        #sac .card-tag{color:#3b82f6}
+        #sac .s-label{color:#3b82f6}
+
+        #cihazlar .card-i{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.18)}
+        #cihazlar .card:hover{border-color:#ef4444}
+        #cihazlar .card-tag{color:#ef4444}
+        #cihazlar .s-label{color:#ef4444}
+
+        /* Rehberler pills per-category override */
+        .guide-card[data-cat="leke"] .card-i{background:rgba(236,72,153,.08);border-color:rgba(236,72,153,.18)}
+        .guide-card[data-cat="leke"]:hover{border-color:#ec4899}
+        .guide-card[data-cat="leke"] .card-tag{color:#ec4899}
+        .guide-card[data-cat="beslenme"] .card-i{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.18)}
+        .guide-card[data-cat="beslenme"]:hover{border-color:#22c55e}
+        .guide-card[data-cat="beslenme"] .card-tag{color:#22c55e}
+        .guide-card[data-cat="aging"] .card-i{background:rgba(139,92,246,.08);border-color:rgba(139,92,246,.18)}
+        .guide-card[data-cat="aging"]:hover{border-color:#8b5cf6}
+        .guide-card[data-cat="aging"] .card-tag{color:#8b5cf6}
+        .guide-card[data-cat="islem"] .card-i{background:rgba(99,102,241,.08);border-color:rgba(99,102,241,.18)}
+        .guide-card[data-cat="islem"]:hover{border-color:#6366f1}
+        .guide-card[data-cat="islem"] .card-tag{color:#6366f1}
+
+        /* ===== 5. BLOG IMAGE PATTERNS ===== */
+        .blog-img{position:relative;overflow:hidden}
+        .blog-img::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.12) 1px,transparent 1px);background-size:24px 24px;z-index:1}
+        .blog-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.08) 100%);z-index:1}
+        .blog-c:hover .blog-img{transform:scale(1.03);transition:transform .5s ease}
+        .blog-img{transition:transform .5s ease}
+
+        /* ===== ENHANCED CARD GLOW ON HOVER ===== */
+        .card{position:relative}
+        .card::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:var(--grad);opacity:0;transition:opacity .3s;z-index:-1}
+        .card:hover::before{opacity:.08}
+        .cat-card{position:relative;overflow:hidden}
+        .cat-card::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(13,148,136,.06),transparent 60%);opacity:0;transition:opacity .4s}
+        .cat-card:hover::after{opacity:1}
     </style>
 </head>
 <body>
@@ -200,6 +277,9 @@
 
 <!-- HERO -->
 <section class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
     <div class="hero-c">
         <div class="badge">Kanıta Dayalı Dermatoloji</div>
         <h1>Cildinizi <span class="hl">Derinden</span> Anlıyoruz</h1>
@@ -216,23 +296,40 @@
     </div>
 </section>
 
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item"><div class="stat-num">35+</div><div class="stat-label">Rehber & Araç</div></div>
+        <div class="stat-item"><div class="stat-num">300+</div><div class="stat-label">Bilimsel Kaynak</div></div>
+        <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">İnteraktif Araç</div></div>
+        <div class="stat-item"><div class="stat-num">%100</div><div class="stat-label">Ücretsiz</div></div>
+    </div>
+</div>
+
 <!-- 🔥 GÜNDEMDE -->
 <section style="padding:48px 24px">
     <div class="container reveal">
         <div class="s-head"><div class="s-label">🔥 Gündemde</div><h2 class="s-title">Öne Çıkan Konular</h2></div>
-        <div class="feat">
-            <div class="feat-card">
+        <div class="bento-feat">
+            <a href="blog/cyspera-leke-tedavisi.html" class="feat-main" style="text-decoration:none;color:inherit">
                 <div class="feat-badge feat-badge-p">✨ Yeni Tedavi</div>
-                <div class="feat-title">Cyspera (Sisteamin %5): Yeni Nesil Depigmentasyon</div>
-                <div class="feat-desc">Melazma ve PIH tedavisinde hidrokinona eşdeğer/üstün etkinlik — steroid ve HQ riskleri olmadan. Tirozinaz + peroksidaz inhibisyonu, çoklu melanin sentez blokajı. Hastaların %96'sında anlamlı pigmentasyon azalması.</div>
-                <div class="feat-ref">Arch Derm Res. 2024;317:117 · J Clin Med. 2024;13(23):7483 · Dermatology Times, 2025</div>
-            </div>
-            <div class="feat-card">
+                <div style="font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:12px;line-height:1.25;letter-spacing:-.02em">Cyspera (Sisteamin %5): Yeni Nesil Depigmentasyon</div>
+                <div class="feat-desc" style="font-size:14px;margin-bottom:16px">Melazma ve PIH tedavisinde hidrokinona eşdeğer/üstün etkinlik — steroid ve HQ riskleri olmadan. Tirozinaz + peroksidaz inhibisyonu, çoklu melanin sentez blokajı. Hastaların %96'sında anlamlı pigmentasyon azalması.</div>
+                <div class="feat-ref">Arch Derm Res. 2024;317:117 · J Clin Med. 2024;13(23):7483</div>
+                <div style="margin-top:16px;font-size:13px;font-weight:600;color:var(--accent)">Rehberi Oku →</div>
+            </a>
+            <a href="blog/tretinoin-minoxidil-kombine.html" class="feat-side" style="text-decoration:none;color:inherit">
                 <div class="feat-badge feat-badge-r">🔥 Gündem</div>
-                <div class="feat-title">Tretinoin + Minoxidil Köpük: Saç Dökülmesinde Kombinasyon</div>
-                <div class="feat-desc">Topikal tretinoin (%0.01-0.05), minoxidilin perkütanöz absorpsiyonunu ve sülfotransferaz aktivasyonunu artırarak etkinliğini güçlendiriyor. RCT verileri kombinasyonun tek başına minoxidile anlamlı üstünlüğünü göstermektedir.</div>
-                <div class="feat-ref">Ferry JJ, et al. Clin Pharmacol Ther. 1990 · Shin HS, et al. J Am Acad Dermatol. 2007</div>
-            </div>
+                <div class="feat-title">Tretinoin + Minoxidil Kombine</div>
+                <div class="feat-desc">Topikal tretinoin, sülfotransferaz aktivasyonunu artırarak minoxidilin etkinliğini güçlendiriyor.</div>
+                <div class="feat-ref" style="margin-top:8px">Shin HS, et al. JAAD. 2007</div>
+            </a>
+            <a href="blog/eksozom-pdrn-somon-dna.html" class="feat-side" style="text-decoration:none;color:inherit;border-color:rgba(6,182,212,.2);background:linear-gradient(135deg,rgba(6,182,212,.03),rgba(139,92,246,.03))">
+                <div class="feat-badge" style="background:rgba(6,182,212,.1);color:#0891b2">🧬 Trend</div>
+                <div class="feat-title">Eksozom & Somon DNA (PDRN)</div>
+                <div class="feat-desc">Dermatolojinin yeni trendleri — hype mı bilim mi? Kanıta dayalı değerlendirme.</div>
+                <div class="feat-ref" style="margin-top:8px">FDA Warning 2024 · JCA 2026</div>
+            </a>
         </div>
     </div>
 </section>
