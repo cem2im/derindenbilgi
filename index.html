@@ -252,6 +252,20 @@
         .cat-card{position:relative;overflow:hidden}
         .cat-card::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(13,148,136,.06),transparent 60%);opacity:0;transition:opacity .4s}
         .cat-card:hover::after{opacity:1}
+
+        /* ===== 6. GLASSMORPHISM ===== */
+        .cat-card{background:rgba(255,255,255,.55)!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+        .cat-card:hover{background:rgba(255,255,255,.85)!important}
+        .s-alt .card{background:rgba(255,255,255,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+        .s-alt .test-box{background:rgba(255,255,255,.7)!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:rgba(255,255,255,.3)}
+        .bento-feat .feat-side{background:rgba(255,255,255,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+        .stats-inner{background:rgba(255,255,255,.65)}
+
+        /* ===== 7. WAVE SECTION DIVIDERS ===== */
+        .section-wave{line-height:0;overflow:hidden;position:relative;z-index:2}
+        .section-wave svg{display:block;width:100%;height:clamp(35px,5vw,55px)}
+        .wave-to-alt{background:#fff}
+        .wave-to-white{background:var(--bg-alt)}
     </style>
 </head>
 <body>
@@ -334,6 +348,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-alt"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 720,0 1080,25 C1260,40 1380,10 1440,25 L1440,50 L0,50 Z" fill="#f0f9ff"/></svg></div>
 <!-- ARAÇLAR & TESTLER -->
 <section id="araclar" class="s-alt">
     <div class="container reveal">
@@ -389,6 +404,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-white"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,20 C240,45 480,5 720,30 C960,55 1200,5 1440,20 L1440,50 L0,50 Z" fill="#ffffff"/></svg></div>
 <!-- REHBERLER -->
 <section id="rehberler">
     <div class="container reveal">
@@ -434,6 +450,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-alt"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,30 C200,50 400,10 600,30 C800,50 1000,10 1200,30 C1350,45 1420,15 1440,30 L1440,50 L0,50 Z" fill="#f0f9ff"/></svg></div>
 <!-- CİLT BAKIMI -->
 <section id="ciltbakim" class="s-alt">
     <div class="container reveal">
@@ -451,6 +468,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-white"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,20 C240,45 480,5 720,30 C960,55 1200,5 1440,20 L1440,50 L0,50 Z" fill="#ffffff"/></svg></div>
 <!-- CİHAZLAR & TRENDLER -->
 <section id="cihazlar">
     <div class="container reveal">
@@ -463,6 +481,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-alt"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 720,0 1080,25 C1260,40 1380,10 1440,25 L1440,50 L0,50 Z" fill="#f0f9ff"/></svg></div>
 <!-- SAÇ SAĞLIĞI -->
 <section id="sac" class="s-alt">
     <div class="container reveal">
@@ -478,6 +497,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-white"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,30 C200,50 400,10 600,30 C800,50 1000,10 1200,30 C1350,45 1420,15 1440,30 L1440,50 L0,50 Z" fill="#ffffff"/></svg></div>
 <!-- BLOG -->
 <section id="blog">
     <div class="container reveal">
@@ -516,6 +536,7 @@
     </div>
 </section>
 
+<div class="section-wave wave-to-alt"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,20 C240,45 480,5 720,30 C960,55 1200,5 1440,20 L1440,50 L0,50 Z" fill="#f0f9ff"/></svg></div>
 <!-- SSS -->
 <section id="sss" class="s-alt">
     <div class="container reveal">
