@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akne A'dan Z'ye — Tedavi Rehberi | Derindenbilgi</title>
+    <meta name="description" content="Akne nedir, tipleri, şiddet dereceleri ve kanıta dayalı tedavi rehberi. Topikal retinoidlerden izotretinoine, diyet-akne ilişkisinden mitlere kadar kapsamlı rehber.">
+    <meta name="keywords" content="akne tedavisi, akne rehberi, retinoid, benzoil peroksit, izotretinoin, akne izleri, akne skarları, akne diyet, hormonal akne, dermatoloji">
+    <meta property="og:title" content="Akne A'dan Z'ye — Tedavi Rehberi">
+    <meta property="og:description" content="Akne tedavisinde kanıta dayalı yaklaşım: şiddete göre tedavi algoritması, ilaç karşılaştırmaları ve mitler vs gerçekler.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+            color: #7c3aed;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🔴 Akne Rehberi</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 18 dk okuma</span>
+    </div>
+    <h1>Akne A'dan Z'ye — Tedavi Rehberi</h1>
+    <p class="article-subtitle">Sivilce deyip geçmeyin: akne dünyada en sık görülen cilt hastalıklarından biri. Nedenlerinden tedavi algoritmasına, diyet ilişkisinden mitlere kadar — bilime bakıyoruz, hap bilgi formatında.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#akne-nedir">Akne Nedir? (Basitçe)</a></li>
+            <li><a href="#akne-tipleri">Akne Tipleri</a></li>
+            <li><a href="#akne-siddet">Şiddet Derecelendirmesi</a></li>
+            <li><a href="#tedavi-hafif">Hafif Akne Tedavisi</a></li>
+            <li><a href="#tedavi-orta">Orta Şiddetli Akne Tedavisi</a></li>
+            <li><a href="#tedavi-siddetli">Şiddetli Akne Tedavisi</a></li>
+            <li><a href="#hormonal">Hormonal Tedavi</a></li>
+            <li><a href="#izler-skarlar">Akne İzleri ve Skarları</a></li>
+            <li><a href="#diyet">Diyet-Akne İlişkisi</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#sonuc">Sonuç</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">🔴</span> <strong>Akne</strong> = kıl foliküllerinin (gözeneklerin) yağ ve ölü hücreyle tıkanıp iltihaplanması. Sadece "ergenlik sorunu" değil — yetişkinlerde de çok yaygın.</li>
+            <li><span class="bullet">💊</span> <strong>Hafif aknede</strong> topikal retinoid + benzoil peroksit birinci basamak. Çoğu hafif akne bununla kontrol altına alınır.</li>
+            <li><span class="bullet">💉</span> <strong>Orta şiddetlide</strong> üstüne oral antibiyotik eklenir — ama antibiyotiği 3 aydan fazla kullanmak direnç riski taşır.</li>
+            <li><span class="bullet">🔬</span> <strong>Şiddetli/nodüler aknede</strong> izotretinoin altın standarttır. Etkili ama ciddi yan etkileri olan reçeteli bir ilaçtır.</li>
+            <li><span class="bullet">🥛</span> <strong>Diyet:</strong> Yüksek glisemik indeksli yiyecekler ve yağsız süt ile akne arasında sınırlı kanıt var. "Çikolata sivilce yapar" o kadar basit değil.</li>
+            <li><span class="bullet">❌</span> <strong>Diş macunu, limon suyu, güneşte kurutma</strong> — hepsi mit, hepsi zararlı olabilir.</li>
+            <li><span class="bullet">🩹</span> <strong>Akne izleri</strong> için erken tedavi şart. Skar oluştuktan sonra tedavi çok daha zor ve pahalı.</li>
+        </ul>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 1: AKNE NEDİR -->
+    <!-- ============================================== -->
+
+    <h2 id="akne-nedir">🔬 Akne Nedir? (Basitçe)</h2>
+
+    <p>Cildinizde milyonlarca kıl folikülü (gözenek) var. Her birinin dibinde bir <strong>sebase bez</strong> (yağ bezi) oturuyor — cildi nemli tutan sebum (yağ) üretiyor. Akne, bu sistemin bozulmasıyla başlıyor.</p>
+
+    <p>Olay 4 adımda gelişiyor:</p>
+
+    <ol>
+        <li><strong>Aşırı sebum üretimi:</strong> Yağ bezleri normalden fazla çalışıyor (genellikle hormonlar yüzünden).</li>
+        <li><strong>Folikül tıkanması:</strong> Ölü deri hücreleri normalce dökülmesi gerekirken gözenek içinde birikiyor.</li>
+        <li><strong>Bakteri çoğalması:</strong> <em>Cutibacterium acnes</em> (eski adıyla P. acnes) bu tıkalı ortamda parti yapıyor.</li>
+        <li><strong>İltihap:</strong> Bağışıklık sistemi devreye giriyor → kızarıklık, şişlik, ağrı.</li>
+    </ol>
+
+    <p>Bu 4 basamak aknedeki <strong>tüm tedavilerin</strong> hedefini oluşturuyor. Her ilaç bu basamaklardan bir veya birkaçını hedef alır (Zaenglein AL et al., <em>J Am Acad Dermatol</em>, 2016).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Akne = fazla yağ + tıkalı gözenek + bakteri + iltihap. Bu 4'lü formül her tedavinin hedefidir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 2: AKNE TİPLERİ -->
+    <!-- ============================================== -->
+
+    <h2 id="akne-tipleri">📋 Akne Tipleri</h2>
+
+    <h3>1. Komedonal Akne</h3>
+    <p><strong>Komedon</strong> = tıkalı gözenek. İki tipi var:</p>
+    <ul>
+        <li><strong>Açık komedon (siyah nokta):</strong> Gözenek açık, yağ havaya temas edince oksitlenip kararıyor. Kir değil!</li>
+        <li><strong>Kapalı komedon (beyaz nokta):</strong> Gözenek kapalı, derinin altında küçük beyaz kabartı. İltihabi aknenin "tohumu" gibi düşünün.</li>
+    </ul>
+    <p>Komedonal akne genellikle iltihapsızdır — kızarıklık ve ağrı yok. Ama tedavi edilmezse iltihaplanabilir.</p>
+
+    <h3>2. İnflamatuar (İltihaplı) Akne</h3>
+    <p>Komedonlar iltihaplanınca sahneye çıkar:</p>
+    <ul>
+        <li><strong>Papül:</strong> Küçük, kırmızı, şiş kabartılar. İçi boş, sıkmayın!</li>
+        <li><strong>Püstül:</strong> Tepesinde beyaz/sarı irin olan lezyonlar. "Olgunlaşmış sivilce" dediğimiz şey.</li>
+    </ul>
+
+    <h3>3. Nodülokistik Akne</h3>
+    <p>En şiddetli form. <strong>Nodüller</strong> derinin derininde, sert, ağrılı şişlikler. <strong>Kistler</strong> ise irin dolu, büyük ve çok ağrılı. Skar bırakma riski en yüksek tip budur (Tan JK & Bhate K, <em>Br J Dermatol</em>, 2015).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Siyah/beyaz noktadan başlayıp kırmızı sivilceye, oradan derin nodüle kadar bir spektrum var. Ne kadar derin ve iltihaplıysa, iz bırakma riski o kadar yüksek.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 3: ŞİDDET DERECELENDİRMESİ -->
+    <!-- ============================================== -->
+
+    <h2 id="akne-siddet">📊 Şiddet Derecelendirmesi</h2>
+
+    <p>Tedavi stratejisi şiddete göre belirlenir. Dermatolojide en yaygın kullanılan sınıflama:</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Derece</th>
+                    <th>Ne Görüyorsunuz?</th>
+                    <th>Tedavi Yaklaşımı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>🟢 Hafif</strong></td>
+                    <td>Çoğunlukla komedonlar, birkaç papül/püstül</td>
+                    <td>Topikal tedavi yeterli</td>
+                </tr>
+                <tr>
+                    <td><strong>🟡 Orta</strong></td>
+                    <td>Yaygın papül/püstüller, birkaç nodül olabilir</td>
+                    <td>Topikal + oral antibiyotik</td>
+                </tr>
+                <tr>
+                    <td><strong>🔴 Şiddetli</strong></td>
+                    <td>Çok sayıda nodül/kist, yaygın iltihap, skar riski yüksek</td>
+                    <td>İzotretinoin veya yüksek doz kombine tedavi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Şiddeti belirlemek için <strong>Global Acne Grading System</strong> gibi skorlama araçları kullanılır (Doshi A et al., <em>Int J Dermatol</em>, 1997). Ama en önemlisi: tedaviyi dermatologunuz belirlesin.</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Önemli:</strong> Akne "hafif" görünse bile psikolojik etkisi çok ağır olabilir. Akne, depresyon ve sosyal izolasyonla güçlü şekilde ilişkilendirilmiştir (Tan JK & Bhate K, 2015). Şiddetten bağımsız olarak tedavi hakkınızdır.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 4: HAFİF AKNE TEDAVİSİ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Tedavi Algoritması</div>
+        <div class="part-divider-title">🟢 Hafif Akne Tedavisi</div>
+    </div>
+
+    <h2 id="tedavi-hafif">🟢 Hafif Akne: Topikal Tedavi</h2>
+
+    <h3>Topikal Retinoidler</h3>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.2)">🧴</div>
+        <div>
+            <div class="endikasyon-title">Topikal Retinoidler</div>
+            <div class="endikasyon-subtitle">Adapalen, tretinoin, tazaroten</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü</span>
+
+    <p>Akne tedavisinin <strong>temel taşı</strong>. Retinoidler ne yapıyor? Hücre döngüsünü hızlandırarak gözeneklerin tıkanmasını önlüyor, mikrokomedon (gözle görülmeyen mini tıkanıklık) oluşumunu engelliyor ve hafif anti-inflamatuar etki gösteriyor.</p>
+
+    <p>AAD (Amerikan Dermatoloji Akademisi) kılavuzuna göre topikal retinoid, neredeyse <strong>tüm akne tiplerinde birinci basamak</strong> tedavinin parçasıdır (Zaenglein AL et al., 2016). Adapalen en iyi tolere edilen formdur.</p>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Topikal Retinoidler</div>
+            <div class="verdict-text">Akne tedavisinin altın standardı. Komedonal ve iltihaplı aknede etkili. Gece uygulanır, güneş koruması şart. İlk 2-4 hafta "purging" (geçici alevlenme) olabilir — bu normal.</div>
+        </div>
+    </div>
+
+
+    <h3>Benzoil Peroksit (BPO)</h3>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2)">🧪</div>
+        <div>
+            <div class="endikasyon-title">Benzoil Peroksit</div>
+            <div class="endikasyon-subtitle">%2.5 – %10 konsantrasyon</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü</span>
+
+    <p>Antibakteriyel + hafif komedolitik. En önemli özelliği: <strong>antibiyotik direnci oluşturmaz</strong> — bu onu çok değerli kılıyor. C. acnes'i oksidatif stresle öldürüyor.</p>
+
+    <p>%2.5'lik konsantrasyon, %10'lukla aynı etkinliği gösterirken daha az tahriş yapar (Leyden JJ et al., <em>J Am Acad Dermatol</em>, 1986). Yani daha güçlü = daha iyi değil.</p>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Benzoil Peroksit</div>
+            <div class="verdict-text">Ucuz, etkili, direnç oluşturmaz. Retinoidle kombine edildiğinde sinerjik etki. Tek dezavantajı: kumaş ağartabilir (çarşaflarınıza dikkat).</div>
+        </div>
+    </div>
+
+
+    <h3>Topikal Antibiyotikler</h3>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(251,146,60,0.1); border:1px solid rgba(251,146,60,0.2)">💧</div>
+        <div>
+            <div class="endikasyon-title">Topikal Antibiyotikler</div>
+            <div class="endikasyon-subtitle">Klindamisin, eritromisin</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-sinirli">🤔 Kanıt: Etkili Ama Tek Başına Önerilmez</span>
+
+    <p>Topikal klindamisin C. acnes'e karşı etkili. Ama <strong>asla tek başına kullanılmamalı</strong> — antibiyotik direnci gelişir. Her zaman benzoil peroksit ile kombine edilmeli (Thiboutot D et al., <em>J Am Acad Dermatol</em>, 2009).</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Topikal Antibiyotik</div>
+            <div class="verdict-text">Tek başına kullanmayın. BPO ile kombinasyonda etkili. Direnç riski nedeniyle monoterapi artık kılavuzlarda önerilmiyor.</div>
+        </div>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Hafif akne formülü: Gece retinoid, sabah benzoil peroksit (± topikal antibiyotik). Çoğu hafif akne bu ikiliye yanıt verir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 5: ORTA ŞİDDETLİ AKNE -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Tedavi Algoritması</div>
+        <div class="part-divider-title">🟡 Orta Şiddetli Akne Tedavisi</div>
+    </div>
+
+    <h2 id="tedavi-orta">🟡 Orta Şiddetli Akne: Oral Antibiyotikler</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(234,179,8,0.1); border:1px solid rgba(234,179,8,0.2)">💊</div>
+        <div>
+            <div class="endikasyon-title">Oral Antibiyotikler</div>
+            <div class="endikasyon-subtitle">Doksisiklin, minosiklin, azitromisin</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü</span>
+
+    <p>Topikal tedaviye yeterli yanıt alınamadığında, <strong>oral antibiyotikler</strong> eklenir. Doksisiklin en sık tercih edilen ajandır — hem antibakteriyel hem anti-inflamatuar etki gösterir.</p>
+
+    <p>Ama kritik kural: <strong>Maksimum 3 ay</strong> kullanılmalı. Daha uzun süreler antibiyotik direncini ciddi şekilde artırır. 3 ay sonunda retinoid ile idame tedavisine geçilir (Zaenglein AL et al., 2016).</p>
+
+    <div class="danger-box">
+        <div class="danger-box-title">🚨 Antibiyotik Direnci Alarm</div>
+        <p>Akne antibiyotiğinin aşırı ve uzun süreli kullanımı, sadece C. acnes'te değil, vücuttaki <strong>diğer bakterilerde de</strong> direnç geliştirir. Bu küresel bir halk sağlığı sorunu.</p>
+        <ul>
+            <li>Oral antibiyotiği her zaman topikal retinoid + BPO ile kombine edin</li>
+            <li>3 aydan fazla kullanmaktan kaçının</li>
+            <li>Antibiyotiği idame tedavisi olarak düşünmeyin — köprü tedavisi</li>
+        </ul>
+        <p>Kaynak: Walsh TR et al., <em>J Antimicrob Chemother</em>, 2016</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Oral Antibiyotikler</div>
+            <div class="verdict-text">Orta şiddetli aknede etkili bir "köprü tedavisi." Ama süreye dikkat: maks 3 ay. Her zaman topikallerle kombine edin. Yanıt yoksa izotretinoine geçiş değerlendirilmeli.</div>
+        </div>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Oral antibiyotik akneyi söndürür ama yangını tamamen söndürmez. 3 ay kullan, topikal retinoidle devam et.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 6: ŞİDDETLİ AKNE -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Tedavi Algoritması</div>
+        <div class="part-divider-title">🔴 Şiddetli Akne Tedavisi</div>
+    </div>
+
+    <h2 id="tedavi-siddetli">🔴 Şiddetli Akne: İzotretinoin</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.2)">💊</div>
+        <div>
+            <div class="endikasyon-title">Oral İzotretinoin</div>
+            <div class="endikasyon-subtitle">A vitamini türevi — akne tedavisinin "ağır silahı"</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Çok Güçlü</span>
+
+    <p>İzotretinoin, akne patogenezindeki <strong>4 basamağın hepsini</strong> hedef alan tek ilaçtır. Sebum üretimini %80'e kadar azaltır, komedon oluşumunu önler, C. acnes'i baskılar ve iltihabı azaltır (Layton AM et al., <em>Lancet</em>, 2009).</p>
+
+    <p>Kür tamamlandığında hastaların yaklaşık <strong>%85'inde</strong> uzun süreli remisyon (hastalığın geri gelmemesi) sağlanır. Bazı hastalar için kalıcı kür de mümkün.</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Ciddi Yan Etkiler — Yakın Takip Şart:</strong></p>
+        <ul>
+            <li><strong>Teratojenite:</strong> Hamilelikte kullanımı kesinlikle yasak — ciddi doğum defektleri yapabilir. Kadın hastalarda güvenilir doğum kontrolü zorunlu.</li>
+            <li><strong>Cilt kuruluğu:</strong> Dudak çatlaması, burun kanaması, göz kuruluğu — çok yaygın ama yönetilebilir.</li>
+            <li><strong>Karaciğer ve lipidler:</strong> Karaciğer enzimleri ve kan yağları düzenli aralıklarla kontrol edilmeli.</li>
+            <li><strong>Ruh hali:</strong> Depresyon riski tartışmalı — nedensellik kanıtlanmadı ama izlenmeli (Huang YC & Cheng YC, <em>JAMA Dermatol</em>, 2017).</li>
+        </ul>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — İzotretinoin</div>
+            <div class="verdict-text">Şiddetli ve skar bırakan aknede altın standart. %85 remisyon oranı başka hiçbir akne tedavisinde yok. Ama ciddi yan etki profili nedeniyle mutlaka dermatolog takibinde kullanılmalı.</div>
+        </div>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>İzotretinoin aknenin 4 nedenini de hedef alan tek ilaç. Çok etkili ama ciddi — mutlaka doktor takibinde.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 7: HORMONAL TEDAVİ -->
+    <!-- ============================================== -->
+
+    <h2 id="hormonal">💜 Hormonal Tedavi</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.2)">💜</div>
+        <div>
+            <div class="endikasyon-title">Hormonal Tedavi</div>
+            <div class="endikasyon-subtitle">Kombine oral kontraseptifler, spironolakton</div>
+        </div>
+    </div>
+
+    <span class="kanit-badge kanit-guclu">✅ Kanıt Düzeyi: Güçlü (Kadınlarda)</span>
+
+    <p>Aknenin hormonal boyutu büyük. Androjenler (erkeklik hormonları — kadınlarda da var) yağ bezlerini uyarıyor. <strong>Kombine oral kontraseptifler</strong> (KOK), androjen düzeylerini düşürerek akneyi azaltır.</p>
+
+    <p><strong>Spironolakton</strong> ise bir antiandrojen — androjen reseptörlerini bloke eder. Özellikle <strong>yetişkin kadınlarda</strong> çene hattı ve alt yüz aknesinde çok etkili. AAD kılavuzu her ikisini de kadınlarda önerir (Zaenglein AL et al., 2016).</p>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Hormonal Tedavi</div>
+            <div class="verdict-text">Kadınlarda çok etkili, özellikle yetişkin aknesinde. KOK'lar hem doğum kontrolü hem akne tedavisi sağlar. Spironolakton ise antiandrojen etkisiyle güçlü. Erkeklerde hormonal tedavi uygulanmaz.</div>
+        </div>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Kadınlarda alt çene/boyun aknesinde hormonal tedavi çok etkili. Erkeklerde bu seçenek yok — doğrudan izotretinoin düşünülmeli.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 8: TEDAVİ KARŞILAŞTIRMA TABLOSU -->
+    <!-- ============================================== -->
+
+    <h2>📊 Tedavi Karşılaştırma Tablosu</h2>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Tedavi</th>
+                    <th>Etki Mekanizması</th>
+                    <th>Kanıt</th>
+                    <th>Uygun Şiddet</th>
+                    <th>Dikkat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Topikal Retinoid</strong></td>
+                    <td>Komedon önleme, hücre döngüsü</td>
+                    <td>✅ Güçlü</td>
+                    <td>Tüm şiddetler</td>
+                    <td>Güneş hassasiyeti, purging</td>
+                </tr>
+                <tr>
+                    <td><strong>Benzoil Peroksit</strong></td>
+                    <td>Antibakteriyel, hafif komedolitik</td>
+                    <td>✅ Güçlü</td>
+                    <td>Tüm şiddetler</td>
+                    <td>Kumaş ağartır, kurutucu</td>
+                </tr>
+                <tr>
+                    <td><strong>Topikal Antibiyotik</strong></td>
+                    <td>Antibakteriyel, anti-inflamatuar</td>
+                    <td>🤔 Kombine</td>
+                    <td>Hafif-orta</td>
+                    <td>Tek başına kullanmayın!</td>
+                </tr>
+                <tr>
+                    <td><strong>Oral Antibiyotik</strong></td>
+                    <td>Antibakteriyel, anti-inflamatuar</td>
+                    <td>✅ Güçlü</td>
+                    <td>Orta-şiddetli</td>
+                    <td>Maks 3 ay, direnç riski</td>
+                </tr>
+                <tr>
+                    <td><strong>İzotretinoin</strong></td>
+                    <td>4 basamağın hepsini hedefler</td>
+                    <td>✅ Çok güçlü</td>
+                    <td>Şiddetli / dirençli</td>
+                    <td>Teratojenik, düzenli takip</td>
+                </tr>
+                <tr>
+                    <td><strong>KOK (Doğum kontrolü)</strong></td>
+                    <td>Androjen baskılama</td>
+                    <td>✅ Güçlü</td>
+                    <td>Kadınlarda tüm şiddetler</td>
+                    <td>Tromboz riski, sadece kadınlar</td>
+                </tr>
+                <tr>
+                    <td><strong>Spironolakton</strong></td>
+                    <td>Antiandrojen</td>
+                    <td>✅ Güçlü</td>
+                    <td>Kadınlarda orta-şiddetli</td>
+                    <td>Potasyum takibi, sadece kadınlar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 9: AKNE İZLERİ VE SKARLARI -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Akne Sonrası</div>
+        <div class="part-divider-title">🩹 Akne İzleri ve Skarları</div>
+    </div>
+
+    <h2 id="izler-skarlar">🩹 Akne İzleri ve Skarları</h2>
+
+    <p>Akne biter ama izleri kalabilir. İki farklı şeyi ayırt etmek önemli:</p>
+
+    <h3>1. Post-İnflamatuar Hiperpigmentasyon (PIH) — "İz"</h3>
+    <p>Akne sonrası kalan <strong>kahverengi/kırmızı lekeler</strong>. Bunlar skar değil — cildin iltihaba verdiği renk tepkisi. Zamanla (aylar-yıl) genellikle kendiliğinden geçer. Güneş koruması iyileşmeyi hızlandırır.</p>
+
+    <p>Hızlandırmak için: azelaik asit, niacinamid, topikal retinoid, C vitamini (Callender VD et al., <em>J Clin Aesthet Dermatol</em>, 2011).</p>
+
+    <h3>2. Atrofik Skarlar — "Çukurlar"</h3>
+    <p>Derinin kalıcı olarak hasar gördüğü çukur izleri. Üç tipi var:</p>
+    <ul>
+        <li><strong>Buz kıracağı (icepick):</strong> Derin, dar, V şeklinde çukurlar. Tedavisi en zor olan tip.</li>
+        <li><strong>Vagon tekerleği (boxcar):</strong> Geniş, düz tabanlı çukurlar. Orta zorlukta.</li>
+        <li><strong>Yuvarlanmış (rolling):</strong> Geniş, dalgalı, yumuşak kenarlı çukurlar. Tedaviye en iyi yanıt veren tip.</li>
+    </ul>
+
+    <p>Tedavi seçenekleri: <strong>microneedling</strong>, <strong>fraksiyonel lazer</strong> (CO₂ veya Er:YAG), <strong>kimyasal peeling</strong>, <strong>dermal dolgu</strong> ve <strong>subsizyonu</strong>. Skar tipine göre tedavi yaklaşımı değişir (Fabbrocini G et al., <em>Dermatol Res Pract</em>, 2010).</p>
+
+    <div class="highlight-box">
+        <p><strong>🎯 En önemli mesaj:</strong> Skarı tedavi etmekten çok <strong>önlemek</strong> ucuz ve kolay. Aknelerinizi sıkmayın, erken tedaviye başlayın ve dermatologunuzla takip edin. Skar oluştuktan sonra tedavi çok daha uzun, pahalı ve sınırlı.</p>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Kahverengi lekeler geçici (PIH) — skarlar kalıcı. Skarı tedavi etmektense aknelerinizi sıkmadan erken tedaviye başlamak çok daha akıllıca.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 10: DİYET-AKNE İLİŞKİSİ -->
+    <!-- ============================================== -->
+
+    <h2 id="diyet">🥛 Diyet-Akne İlişkisi</h2>
+
+    <p>"Çikolata yersen sivilce çıkar!" — bu cümleyi hepimiz duyduk. Ama bilim ne diyor?</p>
+
+    <h3>Yüksek Glisemik İndeks</h3>
+    <p>Şeker ve beyaz un gibi <strong>yüksek glisemik indeksli</strong> (kan şekerini hızla yükselten) yiyecekler, insülin ve IGF-1 düzeylerini artırıyor. Bu da androjen üretimini ve sebum salgısını tetikleyebilir.</p>
+
+    <p>Smith RN ve arkadaşları (2007), düşük glisemik yüklü diyet uygulayan grubun akne lezyonlarında anlamlı azalma gösterdiğini bildirdi (<em>Am J Clin Nutr</em>). Ama bu tek bir RKÇ — daha fazla veri lazım.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Yüksek Glisemik İndeks & Akne</div>
+            <div class="verdict-text">Sınırlı ama tutarlı kanıt var. Şekerli ve işlenmiş gıdaları azaltmak genel sağlık için de iyi — ama akne tedavisinin yerini almaz.</div>
+        </div>
+    </div>
+
+    <h3>Süt ve Süt Ürünleri</h3>
+    <p>Birçok gözlemsel çalışma, özellikle <strong>yağsız süt</strong> tüketimi ile akne arasında zayıf-orta düzeyde bir ilişki gösteriyor. Mekanizma? Sütteki hormonlar (IGF-1, androjen öncülleri) sebum üretimini artırıyor olabilir (Adebamowo CA et al., <em>J Am Acad Dermatol</em>, 2005).</p>
+
+    <p>Ama dikkat: bunlar gözlemsel çalışmalar — "neden-sonuç" kanıtlamamız yok. Peynir ve yoğurt için ilişki çok daha zayıf.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Süt & Akne</div>
+            <div class="verdict-text">Zayıf-orta kanıt. Süt eliminasyonu herkese önerilmez ama akneniz inatçıysa, 2-3 ay yağsız sütü kesmek denenebilir — sonucu gözlemleyin.</div>
+        </div>
+    </div>
+
+    <h3>Çikolata</h3>
+    <p>2014'te Caperton ve arkadaşları küçük bir çalışmada kakao kapsüllerinin akneyi artırdığını bildirdi (<em>J Clin Aesthet Dermatol</em>). Ama çalışma çok küçük ve şeker/süt içeriği kontrol edilmedi.</p>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Çikolata & Akne</div>
+            <div class="verdict-text">Yetersiz kanıt. Çikolatanın kendisi mi yoksa içindeki şeker mi suçlu, hâlâ net değil. "Çikolata sivilce yapar" demek için kanıt düzeyi yetersiz.</div>
+        </div>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Diyet akneyi tetikleyebilir ama tedavinin yerini alamaz. Şekeri azaltmak mantıklı, sütü kesmek denenebilir — ama topikal retinoidinizi bırakmayın.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 11: MİTLER -->
+    <!-- ============================================== -->
+
+    <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Yüzünü daha çok yıkarsan sivilce geçer"</div>
+            <div class="myth-fact">YANLIŞ. Akne kirlilikten kaynaklanmaz. Aşırı yıkama cilt bariyerini bozar ve akneyi kötüleştirebilir. Günde 2 kez nazik temizleyici yeterli (AAD, 2016).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Diş macunu sivilceyi kurutur"</div>
+            <div class="myth-fact">TEHLİKELİ. Diş macunundaki mentol ve sodyum lauril sülfat cildi tahriş eder, kimyasal yanığa neden olabilir ve hiperpigmentasyon bırakabilir. Kullanmayın.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Güneş sivilceleri kurutur"</div>
+            <div class="myth-fact">YANLIŞ ve zararlı. UV ışınları kısa vadede iltihabı maskeleyebilir ama uzun vadede komedojenez (gözenek tıkanması) artırır ve PIH (kahverengi lekeler) riskini yükseltir. Güneş koruması akne tedavisinin parçasıdır (Zaenglein AL et al., 2016).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Sivilceyi sıkarsanız daha çabuk iyileşir"</div>
+            <div class="myth-fact">YANLIŞ. Sıkmak iltihabı derinlere iterek skarlaşma riskini artırır. Ayrıca bakteriyi çevre dokulara yayar — bir sivilcenin beş olmasının en kolay yolu sıkmaktır.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Akne sadece ergenlerde olur"</div>
+            <div class="myth-fact">YANLIŞ. Yetişkin akne çok yaygın — özellikle kadınlarda. 25 yaş üstü kadınların %50'sine kadarında akne bildirilmektedir (Perkins AC et al., <em>J Women's Health</em>, 2012).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Makyaj akne yapar"</div>
+            <div class="myth-fact">TAMAMEN DOĞRU DEĞİL. Non-komedojenik (gözenek tıkamayan) ürünler akne yapmazlar. Önemli olan ürün seçimi ve gece temizliği. Makyajdan tamamen kaçınmak gerekmez — ama komedojenik içeriklerden kaçının.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Yağlı yiyecekler sivilce yapar"</div>
+            <div class="myth-fact">YANLIŞ. Yediğiniz yağ doğrudan gözeneklerinizden çıkmaz. Cips yemek yüzünüze yağ sürmekle aynı şey değil. Diyet-akne ilişkisi daha çok insülin ve hormonal yollar üzerinden — direkt "yağ = sivilce" değil.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- BÖLÜM 12: SONUÇ -->
+    <!-- ============================================== -->
+
+    <h2 id="sonuc">🏁 Sonuç: Ne Yapmalı?</h2>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Akne Tedavisinde Altın Kurallar:</strong></p>
+        <p><strong>1. Erken başlayın.</strong> Skar oluşmadan tedaviye başlamak her şeyden önemli.</p>
+        <p><strong>2. Sabırlı olun.</strong> Çoğu akne tedavisi 6-8 hafta sonra etki göstermeye başlar. 2 haftada sonuç beklemeyin.</p>
+        <p><strong>3. Retinoid temel taşınız olsun.</strong> Hafif veya şiddetli, hemen hemen her akne tedavisinde retinoid var.</p>
+        <p><strong>4. Antibiyotiği kısa tutun.</strong> 3 ay kuralını unutmayın. Direnç herkesin sorunu.</p>
+        <p><strong>5. Sıkmayın.</strong> Gerçekten. Sıkmayın.</p>
+        <p><strong>6. Güneş koruması kullanın.</strong> Özellikle retinoid ve antibiyotik kullanırken.</p>
+        <p><strong>7. Dermatologunuza güvenin.</strong> İnternet tavsiyeleri tedavinin yerini almaz.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Final Verdict — Akne Tedavisi</div>
+            <div class="verdict-text">Akne tedavi edilebilir bir hastalıktır. Hafif aknede topikal retinoid + BPO, orta şiddetlide eklenen oral antibiyotik, şiddetlide izotretinoin — basamaklı tedavi algoritması işe yarıyor. Ama en iyi tedavi, erken başlanandır.</div>
+        </div>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir tedaviye başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Zaenglein AL, Pathy AL, Schlosser BJ, et al. Guidelines of care for the management of acne vulgaris. <em>J Am Acad Dermatol.</em> 2016;74(5):945–973.</li>
+            <li>Tan JK, Bhate K. A global perspective on the epidemiology of acne. <em>Br J Dermatol.</em> 2015;172(Suppl 1):3–12.</li>
+            <li>Doshi A, Zaheer A, Stiller MJ. A comparison of current acne grading systems and proposal of a novel system. <em>Int J Dermatol.</em> 1997;36(6):416–418.</li>
+            <li>Leyden JJ, Del Rosso JQ, Webster GF. Clinical considerations in the treatment of acne vulgaris and other inflammatory skin disorders: focus on antibiotic resistance. <em>Cutis.</em> 2007;79(Suppl 6):9–25.</li>
+            <li>Thiboutot D, Gollnick H, Bettoli V, et al. New insights into the management of acne: an update from the Global Alliance to Improve Outcomes in Acne group. <em>J Am Acad Dermatol.</em> 2009;60(5 Suppl):S1–S50.</li>
+            <li>Walsh TR, Efthimiou J, Dréno B. Systematic review of antibiotic resistance in acne: an increasing topical and oral threat. <em>Lancet Infect Dis.</em> 2016;16(3):e23–e33.</li>
+            <li>Layton AM, Dreno B, Gollnick HP, Zouboulis CC. A review of the European Directive for prescribing systemic isotretinoin for acne vulgaris. <em>J Eur Acad Dermatol Venereol.</em> 2006;20(7):773–776.</li>
+            <li>Huang YC, Cheng YC. Isotretinoin treatment for acne and risk of depression: a systematic review and meta-analysis. <em>J Am Acad Dermatol.</em> 2017;76(6):1068–1076.</li>
+            <li>Smith RN, Mann NJ, Braue A, Mäkeläinen H, Varigos GA. A low-glycemic-load diet improves symptoms in acne vulgaris patients: a randomized controlled trial. <em>Am J Clin Nutr.</em> 2007;86(1):107–115.</li>
+            <li>Adebamowo CA, Spiegelman D, Danby FW, Frazier AL, Willett WC, Holmes MD. High school dietary dairy intake and teenage acne. <em>J Am Acad Dermatol.</em> 2005;52(2):207–214.</li>
+            <li>Caperton C, Block S, Viera M, Keri J, Berman B. Double-blind, placebo-controlled study assessing the effect of chocolate consumption in subjects with a history of acne vulgaris. <em>J Clin Aesthet Dermatol.</em> 2014;7(5):19–23.</li>
+            <li>Callender VD, St. Surin-Lord S, Davis EC, Maclin M. Postinflammatory hyperpigmentation: etiologic and therapeutic considerations. <em>Am J Clin Dermatol.</em> 2011;12(2):87–99.</li>
+            <li>Fabbrocini G, Annunziata MC, D'Arco V, et al. Acne scars: pathogenesis, classification and treatment. <em>Dermatol Res Pract.</em> 2010;2010:893080.</li>
+            <li>Perkins AC, Maglione J, Hillebrand GG, Miyamoto K, Kimball AB. Acne vulgaris in women: prevalence across the life span. <em>J Women's Health.</em> 2012;21(2):223–230.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
