@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilelikte Cilt Bakımı ve Kozmetik Güvenliği | DerindeBilgi</title>
+    <meta name="description" content="Hamilelikte güvenli ve tehlikeli kozmetik ingrediyenler: retinoidler, azelaik asit, güneş koruyucular ve daha fazlası — kanıta dayalı rehber.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #f0f9ff;
+            --bg-card: #ffffff;
+            --bg-elevated: #f8fafc;
+            --border: rgba(0, 0, 0, 0.07);
+            --border-hover: rgba(13, 148, 136, 0.3);
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --text-tertiary: #94a3b8;
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13, 148, 136, 0.06);
+            --accent-border: rgba(13, 148, 136, 0.15);
+            --gradient: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== READING PROGRESS BAR ===== */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient);
+            z-index: 1100;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: box-shadow 0.3s;
+        }
+        header.scrolled { box-shadow: var(--shadow-md); }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+        .logo .logo-deri { color: var(--accent); }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .header-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE ===== */
+        .article-hero {
+            padding: 120px 24px 48px;
+            background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+            text-align: center;
+        }
+        .article-hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+        .article-title {
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .article-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-tertiary);
+            flex-wrap: wrap;
+        }
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        .article-body h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 48px 0 16px;
+            padding-top: 16px;
+            letter-spacing: -0.01em;
+        }
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 32px 0 12px;
+        }
+
+        .article-body p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .article-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 12px 0 20px 24px;
+            color: var(--text-secondary);
+        }
+        .article-body li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* ===== HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .highlight-box p {
+            color: var(--accent-dark);
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .highlight-box strong {
+            color: var(--accent-dark);
+        }
+
+        /* DANGER BOX (RED) */
+        .danger-box {
+            background: #fef2f2;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #dc2626;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .danger-box .box-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .danger-box p, .danger-box li {
+            color: #7f1d1d;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .danger-box ul {
+            margin: 8px 0 4px 20px;
+        }
+        .danger-box strong { color: #991b1b; }
+
+        /* SAFE BOX (GREEN) */
+        .safe-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-left: 4px solid #16a34a;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .safe-box .box-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .safe-box p, .safe-box li {
+            color: #14532d;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .safe-box ul {
+            margin: 8px 0 4px 20px;
+        }
+        .safe-box strong { color: #166534; }
+
+        /* CAUTION BOX (YELLOW) */
+        .caution-box {
+            background: #fffbeb;
+            border: 1px solid #fbbf24;
+            border-left: 4px solid #d97706;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .caution-box .box-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .caution-box p, .caution-box li {
+            color: #78350f;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .caution-box ul {
+            margin: 8px 0 4px 20px;
+        }
+        .caution-box strong { color: #92400e; }
+
+        .ref-tag {
+            font-size: 13px;
+            color: var(--accent);
+            font-style: italic;
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+
+        /* ===== SAFETY TABLE ===== */
+        .routine-table-wrapper {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .routine-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .routine-table thead {
+            background: var(--accent);
+            color: white;
+        }
+        .routine-table th {
+            padding: 14px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .routine-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .routine-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .routine-table tbody tr:nth-child(even) {
+            background: var(--bg-alt);
+        }
+        .badge-safe {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            background: #dcfce7;
+            color: #166534;
+        }
+        .badge-danger {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            background: #fef2f2;
+            color: #991b1b;
+        }
+        .badge-caution {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            background: #fffbeb;
+            color: #92400e;
+        }
+
+        /* ===== SECTION DIVIDER ===== */
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 3px;
+            margin: 48px 0 32px;
+        }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 48px 0 24px;
+        }
+        .references h2 {
+            font-size: 20px;
+            margin: 0 0 20px !important;
+            padding-top: 0 !important;
+            color: var(--text);
+        }
+        .references ol {
+            margin: 0 0 0 20px;
+            color: var(--text-secondary);
+        }
+        .references li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: #92400e;
+            margin: 24px 0;
+        }
+        .disclaimer-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+        /* ===== CTA ===== */
+        .article-cta {
+            text-align: center;
+            padding: 48px 24px;
+            background: var(--bg-alt);
+            border-radius: var(--radius-xl);
+            margin: 48px 0 0;
+        }
+        .article-cta h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        .article-cta p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+        .btn-primary:hover { box-shadow: 0 8px 25px rgba(13, 148, 136, 0.3); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 13px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px 28px;
+            margin: 0 0 40px;
+        }
+        .toc-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+        .toc ol {
+            margin: 0 0 0 20px;
+        }
+        .toc li {
+            margin-bottom: 6px;
+        }
+        .toc a {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .toc a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
+        }
+
+        /* ===== FADE-IN ANIMATION ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-nav { display: none; }
+            .article-hero { padding: 100px 20px 36px; }
+            .article-body { padding: 32px 20px 60px; }
+            .article-body h2 { font-size: 22px; }
+            .article-meta { gap: 12px; }
+            .routine-table th, .routine-table td { padding: 10px 14px; font-size: 13px; }
+            .references { padding: 24px 20px; }
+            .danger-box, .safe-box, .caution-box { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="reading-progress" id="readingProgress"></div>
+
+<!-- HEADER -->
+<header id="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">D</div>
+            <span style="color:var(--text)">Derin</span><span style="color:var(--accent)">de</span><span style="color:var(--text)">Bilgi</span>
+        </a>
+        <div class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </div>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-hero-inner">
+        <div class="article-category">🤰 Hamilelik</div>
+        <h1 class="article-title">Hamilelikte Cilt Bakımı ve Kozmetik Güvenliği</h1>
+        <p class="article-subtitle">Kanıta dayalı kapsamlı rehber: güvenli aktifler, kontrendike maddeler ve klinik öneriler</p>
+        <div class="article-meta">
+            <span>📅 1 Mart 2026</span>
+            <span>⏱ 12 dk okuma</span>
+            <span>🤰 Hamilelik</span>
+            <span>📚 Kanıta Dayalı</span>
+        </div>
+    </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc fade-in">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#giris">Giriş: Hamilelikte Cilt Değişiklikleri ve Kozmetik Güvenliği</a></li>
+            <li><a href="#kacinilmasi">Kesinlikle Kaçınılması Gerekenler (Kontrendike)</a></li>
+            <li><a href="#guvenli">Güvenli Kabul Edilen Aktif Maddeler</a></li>
+            <li><a href="#melazma">Hamilelik Melazması</a></li>
+            <li><a href="#akne">Hamilelik Aknesi</a></li>
+            <li><a href="#stria">Stria Gravidarum (Çatlaklar)</a></li>
+            <li><a href="#sac">Saç Bakımı ve Boya Güvenliği</a></li>
+            <li><a href="#tablo">Güvenlik Kontrol Listesi</a></li>
+            <li><a href="#emzirme">Emzirme Dönemi</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+
+    <!-- DISCLAIMER (TOP) -->
+    <div class="disclaimer fade-in">
+        <span class="disclaimer-icon">⚠️</span>
+        <div>
+            <strong>Bu içerik tıbbi tavsiye yerine geçmez.</strong> Hamilelik ve emzirme döneminde herhangi bir ürün kullanmadan önce mutlaka doktorunuza danışın.
+        </div>
+    </div>
+
+    <!-- SECTION 1: GİRİŞ -->
+    <h2 id="giris" class="fade-in">1. Giriş: Hamilelikte Cilt Değişiklikleri ve Kozmetik Güvenliği</h2>
+
+    <p class="fade-in">Hamilelik, kadın vücudunda derin hormonal, vasküler ve immünolojik değişikliklerin yaşandığı fizyolojik bir süreçtir. Bu değişiklikler cildi de doğrudan etkiler. <strong>Hamile kadınların yaklaşık %90'ında</strong> en az bir dermatolojik değişiklik gözlemlenmektedir <strong>(Kroumpouzos G, Cohen LM. J Am Acad Dermatol. 2001)</strong>.</p>
+
+    <p class="fade-in">Başlıca fizyolojik cilt değişiklikleri şunlardır:</p>
+    <ul class="fade-in">
+        <li><strong>Hiperpigmentasyon:</strong> Östrojen ve progesteron artışı melanosit stimüle edici hormon (MSH) düzeylerini yükseltir. Linea nigra, areolar koyulaşma ve melazma (gebelik maskesi) en sık görülen bulgulardır.</li>
+        <li><strong>Vasküler değişiklikler:</strong> Artmış kan hacmi ve östrojenin etkisiyle spider anjiyomlar, palmar eritem ve varikoz venler ortaya çıkabilir.</li>
+        <li><strong>Bağ dokusu değişiklikleri:</strong> Stria gravidarum (çatlaklar) hamile kadınların %50-90'ında görülür.</li>
+        <li><strong>Saç ve tırnak değişiklikleri:</strong> Anagen faz uzaması nedeniyle saçlar gürleşebilir; postpartum dönemde telogen effluvium görülebilir.</li>
+    </ul>
+
+    <div class="highlight-box fade-in">
+        <p><strong>💡 Neden kozmetik güvenliği kritiktir?</strong> Topikal olarak uygulanan pek çok madde ciltten emilerek sistemik dolaşıma katılabilir. Plasental bariyeri geçebilen maddeler fetal teratojenisite, nörotoksisite veya endokrin bozulma riskine yol açabilir. Bu nedenle hamilelikte kullanılan her kozmetik ingrediyen, bilinen güvenlik profili açısından değerlendirilmelidir <strong>(Bozzo P, et al. Can Fam Physician. 2011)</strong>.</p>
+    </div>
+
+    <p class="fade-in">FDA'nın (ABD Gıda ve İlaç Dairesi) eski gebelik kategorileri (A, B, C, D, X) 2015'te PLLR (Pregnancy and Lactation Labeling Rule) ile değiştirilmiş olsa da, dermatoloji literatüründe hâlâ yaygın olarak referans alınmaktadır. Bu rehberde hem eski kategori sistemi hem de güncel kanıtlar temel alınmıştır.</p>
+    <span class="ref-tag">📎 Kroumpouzos G, Cohen LM. J Am Acad Dermatol. 2001;45(1):1-19 · Bozzo P, et al. Can Fam Physician. 2011;57(6):665-667</span>
+
+
+    <!-- SECTION 2: KAÇINILMASI GEREKENLER -->
+    <h2 id="kacinilmasi" class="fade-in">2. Kesinlikle Kaçınılması Gerekenler (Kontrendike)</h2>
+
+    <p class="fade-in">Aşağıdaki maddeler, hayvan veya insan çalışmalarında teratojen etki kanıtı veya yüksek sistemik absorpsiyon riski nedeniyle hamilelikte kesinlikle kontrendikedir.</p>
+
+    <!-- 2.1 Retinoidler -->
+    <h3 class="fade-in">2.1 Retinoidler (Tretinoin, İzotretinoin, Adapalen, Tazaroten)</h3>
+
+    <div class="danger-box fade-in">
+        <div class="box-title">🚫 KESİNLİKLE KAÇININ — Teratojen (FDA Kategori X)</div>
+        <p>Sistemik retinoidler (izotretinoin) bilinen güçlü teratojenlerdir. <strong>İzotretinoin embriyopatisi</strong> — kraniofasiyal, kardiyak, timik ve santral sinir sistemi malformasyonlarını içerir.</p>
+        <ul>
+            <li><strong>Lammer ve ark. (1985)</strong>, New England Journal of Medicine'de yayımlanan landmark çalışmada, izotretinoine maruz kalan 154 fetüsten 21'inde majör malformasyon saptanmıştır (%26 risk). Spontan düşük oranı da anlamlı düzeyde yüksek bulunmuştur.</li>
+            <li><strong>Oral izotretinoin:</strong> Kesin kontrendike. Tedavi bitiminden sonra en az 1 ay (bazı kılavuzlar 3 ay) beklenmesi önerilir.</li>
+            <li><strong>Topikal retinoidler (tretinoin, adapalen, tazaroten):</strong> Sistemik absorpsiyonları düşük olmakla birlikte, olgu sunumlarında topikal tretinoinin fetal anomalilerle ilişkilendirildiği bildirilmiştir <strong>(Jick SS, et al. Pharmacotherapy. 1993)</strong>. Bu nedenle tüm topikal retinoidler hamilelikte kontrendikedir.</li>
+            <li><strong>Retinol (kozmetik formülasyonlar):</strong> Retinol, cilt içinde retinoik aside dönüştürülür. Yeterli güvenlik verisi olmadığından hamilelikte önerilmez.</li>
+        </ul>
+    </div>
+    <span class="ref-tag">📎 Lammer EJ, et al. N Engl J Med. 1985;313(14):837-841 · Jick SS, et al. Pharmacotherapy. 1993;13(2):180-181</span>
+
+    <!-- 2.2 Hidrokinon -->
+    <h3 class="fade-in">2.2 Hidrokinon</h3>
+
+    <div class="danger-box fade-in">
+        <div class="box-title">🚫 KAÇININ — Yüksek Sistemik Absorpsiyon</div>
+        <p>Hidrokinon, melazma tedavisinde yaygın kullanılan bir depigmentasyon ajanıdır. Ancak topikal uygulamadan sonra <strong>sistemik absorpsiyonu %35-45'e ulaşmaktadır</strong> — bu oran, dermatolojide kullanılan diğer topikal ajanlarla kıyaslandığında oldukça yüksektir <strong>(Wester RC, et al. J Toxicol Environ Health. 1998)</strong>.</p>
+        <p>Spesifik teratojenite çalışması bulunmamakla birlikte, yüksek absorpsiyon oranı nedeniyle hamilelikte kullanımı önerilmemektedir. <strong>ACOG ve çoğu dermatoloji kılavuzu</strong> gebelikte hidrokinondan kaçınılmasını tavsiye eder.</p>
+    </div>
+    <span class="ref-tag">📎 Wester RC, et al. J Toxicol Environ Health. 1998;54(4):301-317</span>
+
+    <!-- 2.3 Yüksek Doz Salisilik Asit -->
+    <h3 class="fade-in">2.3 Yüksek Doz Salisilik Asit (Oral / Yüksek Konsantrasyonlu Peeling)</h3>
+
+    <div class="danger-box fade-in">
+        <div class="box-title">🚫 YÜKSEK DOZDA KAÇININ — Aspirin Benzeri Risk</div>
+        <p>Salisilik asit, aspirinin (asetilsalisilik asit) bir metabolitidir. Oral salisilatların gebelikte — özellikle üçüncü trimesterde — duktus arteriozus erken kapanması, intrakraniyal kanama ve düşük doğum ağırlığı ile ilişkilendirildiği bilinmektedir.</p>
+        <ul>
+            <li><strong>Düşük konsantrasyonlu topikal BHA (≤%2):</strong> Sınırlı yüzey alanında uygulandığında sistemik absorpsiyonu çok düşüktür. Bazı yazarlar kısa süreli, sınırlı alana uygulamayı kabul edilebilir bulmaktadır, ancak kesin güvenlik verisi yoktur.</li>
+            <li><strong>Yüksek konsantrasyonlu salisilik asit peeling'leri (%20-30) ve oral salisilatlar:</strong> Hamilelikte kesinlikle kontrendikedir.</li>
+        </ul>
+    </div>
+    <span class="ref-tag">📎 Briggs GG, Freeman RK. Drugs in Pregnancy and Lactation. 11th ed. 2017. · Bozzo P, et al. Can Fam Physician. 2011;57(6):665-667</span>
+
+    <!-- 2.4 Kimyasal Güneş Koruyucular -->
+    <h3 class="fade-in">2.4 Bazı Kimyasal Güneş Koruyucular (Oksibenzon, Oktinoksat)</h3>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ DİKKATLİ OLUN — Endokrin Disruptor Potansiyeli</div>
+        <p>Oksibenzon (benzofenon-3), in vitro ve hayvan çalışmalarında zayıf östrojenik aktivite göstermiştir <strong>(Schlumpf M, et al. Toxicology. 2001)</strong>. İnsan çalışmalarında ise kordon kanı ve anne sütünde tespit edilmiştir <strong>(Calafat AM, et al. Environ Health Perspect. 2008)</strong>.</p>
+        <p>Klinik anlamlı bir teratojen etki henüz kesin olarak gösterilmemiştir. Ancak <strong>ihtiyat prensibi gereği</strong>, hamilelikte oksibenzon ve oktinoksat içeren kimyasal filtrelerin yerine <strong>mineral güneş koruyucuların</strong> (çinko oksit, titanyum dioksit) tercih edilmesi önerilmektedir.</p>
+    </div>
+    <span class="ref-tag">📎 Schlumpf M, et al. Toxicology. 2001;166(1-2):79-91 · Calafat AM, et al. Environ Health Perspect. 2008;116(7):893-897</span>
+
+    <!-- 2.5 Diğer -->
+    <h3 class="fade-in">2.5 Formaldehit, Ftalatlar ve Yüksek Doz Parabenler</h3>
+
+    <div class="danger-box fade-in">
+        <div class="box-title">🚫 KAÇININ — Bilinen veya Şüpheli Toksik Etki</div>
+        <ul>
+            <li><strong>Formaldehit:</strong> Bilinen karsinojen (IARC Grup 1). Keratin saç düzleştirme işlemlerinde ve bazı tırnak ürünlerinde bulunur. İnhalasyon yoluyla da toksiktir; hamilelikte kesinlikle kaçınılmalıdır.</li>
+            <li><strong>Ftalatlar (DEP, DBP, DEHP):</strong> Endokrin bozucu etkileri nedeniyle hamilelikte kaygı uyandırmaktadır. Hayvan çalışmalarında anti-androjenik etki ve erkek fetal gelişim bozuklukları bildirilmiştir <strong>(Swan SH, et al. Environ Health Perspect. 2005)</strong>.</li>
+            <li><strong>Parabenler (yüksek dozda):</strong> Normal kozmetik konsantrasyonlarda (%0.01-0.3) sistemik etkisi tartışmalıdır. Ancak hamilelikte gereksiz maruziyet minimuma indirilmelidir. Birden fazla üründen kümülatif maruziyet dikkate alınmalıdır.</li>
+        </ul>
+    </div>
+    <span class="ref-tag">📎 Swan SH, et al. Environ Health Perspect. 2005;113(8):1056-1061 · IARC Monographs, Vol. 100F (Formaldehyde)</span>
+
+
+    <!-- SECTION 3: GÜVENLİ AKTİFLER -->
+    <h2 id="guvenli" class="fade-in">3. Güvenli Kabul Edilen Aktif Maddeler</h2>
+
+    <p class="fade-in">Aşağıdaki maddeler, mevcut literatüre göre hamilelikte güvenli kabul edilmektedir. Ancak her durumda bir sağlık profesyoneline danışılması önerilir.</p>
+
+    <!-- 3.1 Azelaik Asit -->
+    <h3 class="fade-in">3.1 Azelaik Asit</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ GÜVENLİ — FDA Kategori B</div>
+        <p>Azelaik asit (%15-20, topikal), hamilelikte hem akne hem de melazma tedavisi için kullanılabilen en güçlü kanıta sahip aktif maddelerden biridir.</p>
+        <ul>
+            <li>Hayvan çalışmalarında teratojenik etki saptanmamıştır.</li>
+            <li>Topikal uygulamadan sonra sistemik absorpsiyonu düşüktür (<strong>%4'ten az</strong>).</li>
+            <li>Tirozinaz inhibisyonu ile melanin sentezini azaltır (melazma); bakterisidal ve komedolitik etki gösterir (akne).</li>
+            <li><strong>Briggs'in "Drugs in Pregnancy and Lactation" (2017)</strong> referans kitabında Kategori B olarak sınıflandırılmıştır.</li>
+        </ul>
+    </div>
+    <span class="ref-tag">📎 Briggs GG, Freeman RK. Drugs in Pregnancy and Lactation. 11th ed. Wolters Kluwer; 2017 · Fitton A, Goa KL. Drugs. 1991;41(5):780-798</span>
+
+    <!-- 3.2 Glikolik Asit -->
+    <h3 class="fade-in">3.2 Glikolik Asit (Düşük Konsantrasyon, Topikal)</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ DÜŞÜK KONSANTRASYONDA GÜVENLİ</div>
+        <p>Glikolik asit (alfa-hidroksi asit / AHA), düşük konsantrasyonlarda (%5-10) topikal kullanıldığında sistemik absorpsiyonu minimeldir. Hamilelikte düşük dozda kullanımı güvenli kabul edilmektedir <strong>(Bozzo P, et al. 2011)</strong>.</p>
+        <p><strong>Not:</strong> Yüksek konsantrasyonlu profesyonel peelingler (%30-70) hamilelikte önerilmez — artan cilt hassasiyeti ve kontrolsüz absorpsiyon riski nedeniyle.</p>
+    </div>
+
+    <!-- 3.3 C Vitamini -->
+    <h3 class="fade-in">3.3 C Vitamini (Topikal L-Askorbik Asit)</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ GÜVENLİ — Antioksidan Koruma</div>
+        <p>Topikal C vitamini, fizyolojik olarak vücutta zaten bulunan bir antioksidandır. Sistemik toksisitesi yoktur. Hamilelikte hiperpigmentasyona karşı antioksidan koruma ve fotoprotektif destek sağlayabilir <strong>(Telang PS. Indian Dermatol Online J. 2013)</strong>.</p>
+    </div>
+
+    <!-- 3.4 Niasinamid -->
+    <h3 class="fade-in">3.4 Niasinamid (Vitamin B3)</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ GÜVENLİ — İyi Tolere Edilen Aktif</div>
+        <p>Niasinamid, topikal olarak anti-inflamatuar, bariyer güçlendirici ve sebum düzenleyici etkilere sahiptir. Sistemik niasin (B3 vitamini) hamilelikte esansiyel bir vitamindir ve topikal niasinamidin bilinen bir teratojenik riski yoktur <strong>(Gehring W. Int J Cosmet Sci. 2004)</strong>. Düşük konsantrasyonlarda (%4-5) güvenle kullanılabilir.</p>
+    </div>
+
+    <!-- 3.5 Mineral Güneş Koruyucular -->
+    <h3 class="fade-in">3.5 Mineral Güneş Koruyucular (Çinko Oksit, Titanyum Dioksit)</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ GÜVENLİ — Tercih Edilen Güneş Koruyucular</div>
+        <p>Çinko oksit ve titanyum dioksit, fiziksel (mineral) güneş koruyucularıdır. Cilt yüzeyinde kalarak UV ışınlarını yansıtırlar; stratum korneumu geçmezler ve <strong>sistemik absorpsiyonları neredeyse sıfırdır</strong> <strong>(Nohynek GJ, et al. Toxicol Appl Pharmacol. 2008)</strong>.</p>
+        <p>Bu nedenle hamilelikte <strong>birinci tercih güneş koruyucu</strong> olarak önerilmektedirler. Melazma riski nedeniyle hamilelikte SPF 30+ geniş spektrumlu güneş koruması özellikle önemlidir.</p>
+    </div>
+    <span class="ref-tag">📎 Nohynek GJ, et al. Toxicol Appl Pharmacol. 2008;225(3):221-229</span>
+
+    <!-- 3.6 HA ve Seramidler -->
+    <h3 class="fade-in">3.6 Hyaluronik Asit ve Seramidler</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ GÜVENLİ — Bariyer Desteği ve Hidrasyon</div>
+        <p><strong>Hyaluronik asit:</strong> Vücutta doğal olarak bulunan bir glikozaminoglikandır. Topikal uygulamada yüksek moleküler ağırlıklı formlar epidermiste kalır; düşük moleküler ağırlıklı formların bile sistemik emilimi ihmal edilebilir düzeydedir.</p>
+        <p><strong>Seramidler:</strong> Cilt bariyerinin doğal bileşenleridir. Topikal kullanımda herhangi bir güvenlik kaygısı taşımazlar ve hamilelikte bariyer onarımı için güvenle kullanılabilirler.</p>
+    </div>
+
+
+    <!-- SECTION 4: MELAZMa -->
+    <h2 id="melazma" class="fade-in">4. Hamilelik Melazması (Kloazma)</h2>
+
+    <p class="fade-in">Melazma, hamilelikte en sık görülen pigmentasyon bozukluğudur. Hamile kadınların <strong>%50-70'inde</strong> ortaya çıkar ve "gebelik maskesi" olarak da bilinir. Yüzde — özellikle alın, elmacık kemikleri, üst dudak ve çene bölgesinde — simetrik, düzensiz sınırlı kahverengi-gri hiperpigmente lezyonlar şeklinde kendini gösterir <strong>(Sheth VM, Pandya AG. J Am Acad Dermatol. 2011)</strong>.</p>
+
+    <p class="fade-in"><strong>Patofizyoloji:</strong> Östrojen ve progesteron artışı, melanosit aktivasyonunu uyarır. UV maruziyeti durumu ağırlaştırır. Genetik yatkınlık ve koyu cilt tipleri (Fitzpatrick III-V) risk faktörleridir.</p>
+
+    <h3 class="fade-in">Hamilelikte Melazma Tedavisi</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ Hamilelikte Güvenli Melazma Yaklaşımı</div>
+        <ul>
+            <li><strong>Birinci basamak:</strong> SPF 30+ mineral güneş koruyucu — her gün, 2 saatte bir tekrar. UV koruması melazma yönetiminin temelini oluşturur.</li>
+            <li><strong>İkinci basamak:</strong> Azelaik asit %15-20 (topikal, günde 2 kez). FDA Kategori B; tirozinaz inhibisyonu ile melanin sentezini azaltır.</li>
+            <li><strong>Destekleyici:</strong> Topikal C vitamini — antioksidan koruma ve hafif depigmentasyon desteği.</li>
+        </ul>
+        <p style="margin-top:8px"><strong>Postpartum plan:</strong> Melazmanın önemli bir kısmı doğumdan sonra kendiliğinden geriler. Kalıcı olgularda hidrokinon, tretinoin, traneksamik asit ve kombine tedaviler postpartum dönemde (emzirme bitiminde) değerlendirilebilir.</p>
+    </div>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ Yetersiz Kanıt</div>
+        <p>Traneksamik asit (topikal/oral) ve kojik asit melazma tedavisinde etkili olmakla birlikte, <strong>hamilelikte güvenlikleri yeterince çalışılmamıştır</strong>. Bu nedenle hamilelikte önerilmezler.</p>
+    </div>
+    <span class="ref-tag">📎 Sheth VM, Pandya AG. J Am Acad Dermatol. 2011;65(4):689-697 · Bozzo P, et al. Can Fam Physician. 2011;57(6):665-667</span>
+
+
+    <!-- SECTION 5: AKNE -->
+    <h2 id="akne" class="fade-in">5. Hamilelik Aknesi</h2>
+
+    <p class="fade-in">Hamilelikte artan androjen ve progesteron düzeyleri sebum üretimini artırarak akneyi tetikleyebilir veya mevcut akneyi kötüleştirebilir. Akne tedavisinde yaygın olarak kullanılan retinoidler, tetrasiklin grubu antibiyotikler (oral) ve spironolakton hamilelikte kontrendike olduğundan, tedavi seçenekleri sınırlıdır.</p>
+
+    <h3 class="fade-in">Güvenli Tedavi Seçenekleri</h3>
+
+    <div class="safe-box fade-in">
+        <div class="box-title">✅ Hamilelikte Güvenli Akne Tedavileri</div>
+        <ul>
+            <li><strong>Azelaik asit (%15-20, topikal):</strong> FDA Kategori B. Komedolitik ve antibakteriyel etki. Hamilelikte akne tedavisinde birinci tercih olarak önerilmektedir <strong>(Kong YL, Tey HL. Am J Clin Dermatol. 2013)</strong>.</li>
+            <li><strong>Benzoil peroksit (düşük konsantrasyon, ≤%5, sınırlı alan):</strong> Sistemik absorpsiyonu çok düşüktür (%5'ten az). FDA Kategori C olmakla birlikte, sınırlı alanda düşük dozda kullanımı uzmanlar tarafından genellikle güvenli kabul edilmektedir.</li>
+            <li><strong>Eritromisin (topikal, %2):</strong> FDA Kategori B. Hamilelikte güvenle kullanılabilir. P. acnes'e karşı bakteriyostatik etki gösterir.</li>
+            <li><strong>Klindamisin (topikal, %1):</strong> FDA Kategori B. Eritromisine alternatif olarak kullanılabilir.</li>
+        </ul>
+    </div>
+
+    <div class="danger-box fade-in">
+        <div class="box-title">🚫 Hamilelikte Kontrendike Akne Tedavileri</div>
+        <ul>
+            <li>İzotretinoin (oral) — Kesin teratojen</li>
+            <li>Topikal retinoidler (tretinoin, adapalen, tazaroten)</li>
+            <li>Oral tetrasiklinler (doksisiklin, minosiklin) — kemik ve diş gelişim bozukluğu</li>
+            <li>Spironolakton — anti-androjenik etki, feminizasyon riski</li>
+            <li>Yüksek doz salisilik asit peeling</li>
+        </ul>
+    </div>
+    <span class="ref-tag">📎 Kong YL, Tey HL. Am J Clin Dermatol. 2013;14(4):235-245 · Briggs GG, Freeman RK. 2017</span>
+
+
+    <!-- SECTION 6: STRİA -->
+    <h2 id="stria" class="fade-in">6. Stria Gravidarum (Gebelik Çatlakları)</h2>
+
+    <p class="fade-in">Stria gravidarum, hamile kadınların <strong>%50-90'ında</strong> görülen, dermiste elastin ve kolajen liflerinin hasarlanması sonucu oluşan atrofik bantlardır. Genellikle gebeliğin 24. haftasından sonra — karın, göğüs, kalça ve üst bacaklarda — ortaya çıkar. Genetik yatkınlık, genç yaş, yüksek kilo alımı ve aile öyküsü başlıca risk faktörleridir.</p>
+
+    <p class="fade-in"><strong>Kanıt değerlendirmesi:</strong> Stria önlenmesi konusunda kanıt düzeyi genel olarak düşüktür. Pek çok ürün ve yöntem iddia edilmesine rağmen, güçlü randomize kontrollü çalışma verileri sınırlıdır.</p>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ Kakao Yağı — Etkisiz (Negatif Kanıt)</div>
+        <p><strong>Osman ve ark. (2008)</strong>, Cochrane Veritabanı için yapılan randomize kontrollü bir çalışmada, kakao yağı kullanımının plasebo ile karşılaştırıldığında stria oluşumunu <strong>anlamlı düzeyde azaltmadığını</strong> göstermiştir. Yaygın inanışın aksine, kakao yağının gebelik çatlaklarını önlediğine dair güçlü kanıt yoktur.</p>
+    </div>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ Centella Asiatica — Bazı Pozitif Kanıt (Sınırlı)</div>
+        <p><strong>Centella asiatica (Gotu kola)</strong> ekstresi, kolajen sentezini uyarma ve fibroblast aktivasyonu üzerindeki etkileri nedeniyle stria önlemede çalışılmıştır. <strong>Mallol ve ark. (1991)</strong>, Centella asiatica, alfa tokoferol ve kollajen-elastin hidrolizatları içeren bir kremin stria insidansını anlamlı düzeyde azalttığını bildirmiştir. Ancak bu çalışma küçük ölçekli olup, tekrarlayan büyük RCT verileri sınırlıdır.</p>
+    </div>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ Hyaluronik Asit ve Trofolastin — Sınırlı Pozitif Veri</div>
+        <p><strong>Ud-Din ve ark. (2013)</strong>, bir sistematik derlemede, hyaluronik asit içeren formülasyonların stria önlemede sınırlı düzeyde olumlu sonuçlar gösterdiğini bildirmiştir. Trofolastin (Centella asiatica + hidrolize elastin + E vitamini içeren krem) ile yapılan çalışmalarda da insidans düşüşü gözlemlenmiştir, ancak kanıt kalitesi orta düzeydedir.</p>
+    </div>
+
+    <div class="highlight-box fade-in">
+        <p><strong>💡 Sonuç:</strong> Stria önlemede <strong>"kesin etkili" tek bir ürün yoktur</strong>. Genetik en güçlü belirleyicidir. Düzenli nemlendirme (hyaluronik asit, seramid içeren losyonlar) cilt elastikiyetini destekleyebilir, ancak çatlak oluşumunu tamamen engelleme garantisi veren bir tedavi mevcut değildir. Kontrollü kilo alımı en önemli modifiye edilebilir risk faktörüdür.</p>
+    </div>
+    <span class="ref-tag">📎 Osman H, et al. BJOG. 2008;115(9):1138-1142 · Mallol J, et al. Int J Cosmet Sci. 1991;13(1):51-57 · Ud-Din S, et al. Br J Dermatol. 2013;169(6):1185-1191</span>
+
+
+    <!-- SECTION 7: SAÇ BAKIMI -->
+    <h2 id="sac" class="fade-in">7. Saç Bakımı ve Boya Güvenliği</h2>
+
+    <h3 class="fade-in">7.1 Saç Boyası</h3>
+
+    <p class="fade-in">Saç boyaları hamilelikte en sık sorulan güvenlik konularından biridir. <strong>Chua-Gocheco ve ark. (2008)</strong>, Canadian Family Physician dergisinde yayımlanan sistematik derlemelerinde, mevcut kanıtları değerlendirmiş ve şu sonuçlara ulaşmıştır:</p>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ Saç Boyası — Muhtemelen Güvenli (Sınırlı Kanıt)</div>
+        <ul>
+            <li>Kalıcı ve yarı kalıcı saç boyalarının sistemik absorpsiyonu düşüktür — saç derisinden emilen miktar minimaldir.</li>
+            <li>Hayvan çalışmalarında ve sınırlı epidemiyolojik verilerde, <strong>normal saç boyama kullanımının fetal malformasyonlarla ilişkisi gösterilememiştir</strong>.</li>
+            <li>Bununla birlikte, büyük prospektif çalışmalar sınırlıdır ve kesin güvenlik kanıtı yoktur.</li>
+        </ul>
+        <p style="margin-top:8px"><strong>İhtiyatlı yaklaşım:</strong> İlk trimesterde — organogenez dönemi — mümkünse boyadan kaçınılması veya ertelenmesi önerilir. Dip boyama yerine <strong>folyo/balyaj teknikleri</strong> tercih edilebilir (boyacı madde saç derisine temas etmez). Bitkisel boyalar (henna/kına) kontaminan riski nedeniyle dikkatli seçilmelidir.</p>
+    </div>
+    <span class="ref-tag">📎 Chua-Gocheco A, et al. Can Fam Physician. 2008;54(1):36-37</span>
+
+    <h3 class="fade-in">7.2 Keratin Saç Düzleştirme Tedavileri</h3>
+
+    <div class="danger-box fade-in">
+        <div class="box-title">🚫 KAÇININ — Formaldehit Riski</div>
+        <p>Birçok "Brezilya keratini" ve saç düzleştirme işlemi, <strong>formaldehit veya formaldehit salınım yapan bileşikler</strong> (metilen glikol) içermektedir. Formaldehit, IARC tarafından Grup 1 karsinojen olarak sınıflandırılmıştır. İnhalasyon yoluyla yüksek dozda maruziyet, mukozal irritasyon, baş ağrısı ve potansiyel fetal toksisiteye yol açabilir.</p>
+        <p><strong>Hamilelikte formaldehit içeren keratin tedavilerinden kesinlikle kaçınılmalıdır.</strong> "Formaldehitsiz" olarak pazarlanan ürünlerin bile bağımsız testlerde formaldehit içerebildiği bildirilmiştir (ABD OSHA raporları).</p>
+    </div>
+
+
+    <!-- SECTION 8: GÜVENLİK TABLOSU -->
+    <h2 id="tablo" class="fade-in">8. Güvenlik Kontrol Listesi</h2>
+
+    <p class="fade-in">Aşağıdaki tablo, hamilelikte sık kullanılan kozmetik ingrediyenlerin güvenlik profilini özetlemektedir. Bu tablo genel bir rehberdir; bireysel durumlar için doktorunuza danışın.</p>
+
+    <div class="routine-table-wrapper fade-in">
+        <table class="routine-table">
+            <thead>
+                <tr>
+                    <th>İngrediyen</th>
+                    <th>Durum</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Azelaik asit (%15-20)</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>FDA Kat. B. Akne + melazma. Birinci tercih.</td>
+                </tr>
+                <tr>
+                    <td><strong>C vitamini (topikal)</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>Antioksidan, fotoprotektif destek.</td>
+                </tr>
+                <tr>
+                    <td><strong>Niasinamid (%4-5)</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>Anti-inflamatuar, bariyer güçlendirici.</td>
+                </tr>
+                <tr>
+                    <td><strong>Hyaluronik asit</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>Hidrasyon, sistemik absorpsiyonu ihmal edilebilir.</td>
+                </tr>
+                <tr>
+                    <td><strong>Seramidler</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>Cildin doğal bileşeni, bariyer onarımı.</td>
+                </tr>
+                <tr>
+                    <td><strong>Çinko oksit / Titanyum dioksit</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>Mineral SPF. Sistemik absorpsiyon yok.</td>
+                </tr>
+                <tr>
+                    <td><strong>Glikolik asit (≤%10)</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>Düşük dozda topikal kullanım. Yüksek doz peeling kaçının.</td>
+                </tr>
+                <tr>
+                    <td><strong>Benzoil peroksit (≤%5)</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli*</span></td>
+                    <td>Sınırlı alanda, düşük dozda. *FDA Kat. C, klinik konsensüs güvenli.</td>
+                </tr>
+                <tr>
+                    <td><strong>Eritromisin (topikal)</strong></td>
+                    <td><span class="badge-safe">✅ Güvenli</span></td>
+                    <td>FDA Kat. B. Topikal akne tedavisi.</td>
+                </tr>
+                <tr>
+                    <td><strong>Retinoidler (tüm formlar)</strong></td>
+                    <td><span class="badge-danger">🚫 Kaçının</span></td>
+                    <td>Teratojen. Retinol dahil tüm formları kontrendike.</td>
+                </tr>
+                <tr>
+                    <td><strong>Hidrokinon</strong></td>
+                    <td><span class="badge-danger">🚫 Kaçının</span></td>
+                    <td>%35-45 sistemik absorpsiyon. Güvenlik verisi yetersiz.</td>
+                </tr>
+                <tr>
+                    <td><strong>Salisilik asit (≥%2 / peeling)</strong></td>
+                    <td><span class="badge-danger">🚫 Kaçının</span></td>
+                    <td>Yüksek dozda salisilat riski. Düşük dozda tartışmalı.</td>
+                </tr>
+                <tr>
+                    <td><strong>Oksibenzon</strong></td>
+                    <td><span class="badge-caution">⚠️ Dikkat</span></td>
+                    <td>Endokrin disruptor potansiyeli. Mineral SPF tercih edin.</td>
+                </tr>
+                <tr>
+                    <td><strong>Formaldehit</strong></td>
+                    <td><span class="badge-danger">🚫 Kaçının</span></td>
+                    <td>Karsinojen (IARC Grup 1). Keratin tedavileri dahil.</td>
+                </tr>
+                <tr>
+                    <td><strong>Ftalatlar (DBP, DEHP)</strong></td>
+                    <td><span class="badge-danger">🚫 Kaçının</span></td>
+                    <td>Endokrin bozucu. Anti-androjenik etki riski.</td>
+                </tr>
+                <tr>
+                    <td><strong>Saç boyası</strong></td>
+                    <td><span class="badge-caution">⚠️ Dikkat</span></td>
+                    <td>Muhtemelen güvenli; ilk trimesterde ertelenmesi önerilir.</td>
+                </tr>
+                <tr>
+                    <td><strong>Traneksamik asit</strong></td>
+                    <td><span class="badge-caution">⚠️ Yetersiz</span></td>
+                    <td>Hamilelikte yeterli güvenlik verisi yok.</td>
+                </tr>
+                <tr>
+                    <td><strong>Kojik asit</strong></td>
+                    <td><span class="badge-caution">⚠️ Yetersiz</span></td>
+                    <td>Hamilelikte yeterli güvenlik verisi yok.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- SECTION 9: EMZİRME -->
+    <h2 id="emzirme" class="fade-in">9. Emzirme Dönemi</h2>
+
+    <p class="fade-in">Emzirme döneminde kozmetik güvenlik prensipleri hamileliğe benzemekle birlikte, bazı farklılıklar mevcuttur. Topikal olarak uygulanan maddeler, sistemik dolaşıma geçtikten sonra anne sütüne transfer olabilir — ancak çoğu topikal deratolojik ajanın sütteki konsantrasyonu çok düşüktür.</p>
+
+    <div class="highlight-box fade-in">
+        <p><strong>💡 Emzirme döneminde temel prensipler:</strong></p>
+        <ul style="margin-top:8px;color:var(--accent-dark)">
+            <li><strong>Retinoidler:</strong> Oral izotretinoin emzirmede de kontrendikedir. Topikal retinoidlerin emzirmede güvenliği yeterince çalışılmamıştır — çoğu kaynak kaçınılmasını önerir.</li>
+            <li><strong>Azelaik asit:</strong> Emzirmede de güvenli kabul edilmektedir (LactMed veritabanı).</li>
+            <li><strong>Hidrokinon:</strong> Yüksek absorpsiyon oranı nedeniyle emzirmede de kaçınılmalıdır.</li>
+            <li><strong>Göğüs bölgesinde uygulanan ürünler:</strong> Bebeğin ağız yoluyla maruziyetini önlemek için, emzirmeden önce göğüs bölgesindeki ürünler temizlenmelidir.</li>
+            <li><strong>Mineral güneş koruyucular:</strong> Emzirmede de güvenli — tercih edilen seçenektir.</li>
+        </ul>
+    </div>
+
+    <div class="caution-box fade-in">
+        <div class="box-title">⚠️ Emzirmede Ek Dikkat</div>
+        <p>Emzirme döneminde postpartum melazma tedavisi planlanırken, hidrokinon ve retinoid gibi aktifler emzirme sonrasına ertelenmelidir. Azelaik asit + mineral SPF ile destekleyici tedavi sürdürülebilir. Herhangi bir reçeteli topikal tedavi başlamadan önce doktorunuza danışın.</p>
+    </div>
+    <span class="ref-tag">📎 LactMed Database (NIH/NLM) · Briggs GG, Freeman RK. 2017</span>
+
+
+    <!-- SECTION 10: KAYNAKLAR -->
+    <div class="references fade-in" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Kroumpouzos G, Cohen LM. Dermatoses of pregnancy. <em>J Am Acad Dermatol.</em> 2001;45(1):1-19.</li>
+            <li>Bozzo P, Chua-Gocheco A, Einarson A. Safety of skin care products during pregnancy. <em>Can Fam Physician.</em> 2011;57(6):665-667.</li>
+            <li>Lammer EJ, Chen DT, Hoar RM, et al. Retinoic acid embryopathy. <em>N Engl J Med.</em> 1985;313(14):837-841.</li>
+            <li>Jick SS, Terris BZ, Jick H. First trimester topical tretinoin and congenital disorders. <em>Lancet.</em> 1993;341(8854):1181-1182.</li>
+            <li>Briggs GG, Freeman RK. <em>Drugs in Pregnancy and Lactation.</em> 11th ed. Wolters Kluwer; 2017.</li>
+            <li>Wester RC, Melendres J, Hui X, et al. Human in vivo and in vitro hydroquinone topical bioavailability, metabolism, and disposition. <em>J Toxicol Environ Health.</em> 1998;54(4):301-317.</li>
+            <li>Schlumpf M, Cotton B, Conscience M, et al. In vitro and in vivo estrogenicity of UV screens. <em>Environ Health Perspect.</em> 2001;109(3):239-244.</li>
+            <li>Calafat AM, Wong LY, Ye X, et al. Concentrations of the sunscreen agent benzophenone-3 in residents of the United States. <em>Environ Health Perspect.</em> 2008;116(7):893-897.</li>
+            <li>Swan SH, Main KM, Liu F, et al. Decrease in anogenital distance among male infants with prenatal phthalate exposure. <em>Environ Health Perspect.</em> 2005;113(8):1056-1061.</li>
+            <li>Sheth VM, Pandya AG. Melasma: a comprehensive update. <em>J Am Acad Dermatol.</em> 2011;65(4):689-697.</li>
+            <li>Kong YL, Tey HL. Treatment of acne vulgaris during pregnancy and lactation. <em>Am J Clin Dermatol.</em> 2013;14(4):235-245.</li>
+            <li>Osman H, Usta IM, Rubeiz N, et al. Cocoa butter lotion for prevention of striae gravidarum: a double-blind, randomised and placebo-controlled trial. <em>BJOG.</em> 2008;115(9):1138-1142.</li>
+            <li>Mallol J, Belda MA, Costa D, et al. Prophylaxis of striae gravidarum with a topical formulation. A double blind trial. <em>Int J Cosmet Sci.</em> 1991;13(1):51-57.</li>
+            <li>Ud-Din S, McGeorge D, Bayat A. Topical management of striae distensae (stretch marks): prevention and therapy of striae rubrae and albae. <em>J Eur Acad Dermatol Venereol.</em> 2016;30(2):211-222.</li>
+            <li>Chua-Gocheco A, Bozzo P, Einarson A. Safety of hair products during pregnancy. <em>Can Fam Physician.</em> 2008;54(1):36-37.</li>
+            <li>Nohynek GJ, Dufour EK, Roberts MS. Nanotechnology, cosmetics and the skin: is there a health risk? <em>Skin Pharmacol Physiol.</em> 2008;21(3):136-149.</li>
+            <li>Telang PS. Vitamin C in dermatology. <em>Indian Dermatol Online J.</em> 2013;4(2):143-146.</li>
+            <li>Gehring W. Nicotinic acid/niacinamide and the skin. <em>J Cosmet Dermatol.</em> 2004;3(2):88-93.</li>
+            <li>ACOG Committee Opinion No. 575. Exposure to toxic environmental agents. <em>Obstet Gynecol.</em> 2013;122(4):931-935.</li>
+            <li>LactMed Database. National Library of Medicine (US). Bethesda (MD): National Institutes of Health. [Erişim: 2026].</li>
+        </ol>
+    </div>
+
+    <!-- DISCLAIMER (BOTTOM) -->
+    <div class="disclaimer fade-in">
+        <span class="disclaimer-icon">⚠️</span>
+        <div>
+            <strong>Bu içerik tıbbi tavsiye yerine geçmez.</strong> Hamilelik ve emzirme döneminde herhangi bir ürün kullanmadan önce mutlaka doktorunuza danışın. DerindeBilgi'deki tüm içerikler eğitim ve bilgilendirme amaçlıdır; profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz.
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta fade-in">
+        <h3>Cilt tipinizi biliyor musunuz?</h3>
+        <p>2 dakikada cilt tipinizi öğrenin ve size özel bakım önerilerine ulaşın.</p>
+        <a href="../index.html#araclar" class="btn btn-primary">🧪 Cilt Tipini Öğren →</a>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>nden<span>Bilgi</span></div>
+        <p style="font-size: 14px; margin-bottom: 8px;">Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <span>© 2025 DerindeBilgi. Tüm hakları saklıdır.</span>
+            <span style="margin-left: 16px;">Bu platform tıbbi tavsiye değildir.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Header scroll effect
+window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('readingProgress').style.width = scrolled + '%';
+});
+
+// Fade-in animations on scroll
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+</script>
+
+</body>
+</html>
