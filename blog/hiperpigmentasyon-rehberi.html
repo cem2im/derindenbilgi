@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiperpigmentasyon A'dan Z'ye: Melazma, PIH, Güneş Lekesi ve Tedavi | Derindenbilgi</title>
+    <meta name="description" content="Hiperpigmentasyon rehberi: melazma, post-inflamatuar hiperpigmentasyon, güneş lekesi, göz altı koyuluğu — ayırıcı tanı, Wood lambası, tedavi ajanları karşılaştırması ve lazer seçenekleri.">
+    <meta name="keywords" content="hiperpigmentasyon, melazma, PIH, güneş lekesi, solar lentigo, göz altı koyuluğu, hidrokinon, tretinoin, azelaik asit, traneksamik asit, sisteamin, kojic asit, arbutin, niasinamid, C vitamini, lazer pigmentasyon">
+    <meta property="og:title" content="Hiperpigmentasyon A'dan Z'ye: Melaninden Tedaviye">
+    <meta property="og:description" content="Melazma, PIH, güneş lekesi, göz altı — her tip için ayırıcı tanı, tedavi algoritması ve 9 depigmentasyon ajanının karşılaştırması.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+            color: #7c3aed;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== TOC ===== */
+        .toc {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .toc-box {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+        }
+        .toc-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-t);
+            margin-bottom: 0.75rem;
+        }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .toc-box a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE BODY ===== */
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.3px;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .article-body h2:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.75rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        .article-body strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* ===== HIZLI ÖZET ===== */
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .hizli-ozet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5b21b6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+            font-size: 0.95rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet .bullet {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== HAP BİLGİ BOX ===== */
+        .hap-bilgi {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .hap-bilgi-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .hap-bilgi p {
+            color: var(--accent-dark) !important;
+            font-weight: 500;
+            margin-bottom: 0 !important;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-card {
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .verdict-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .verdict-content { flex: 1; }
+        .verdict-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .verdict-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .verdict-positive {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+        .verdict-positive .verdict-label { color: #166534; }
+        .verdict-positive .verdict-text { color: #14532d; }
+        .verdict-mixed {
+            background: #fef9c3;
+            border: 1px solid #fde68a;
+        }
+        .verdict-mixed .verdict-label { color: #854d0e; }
+        .verdict-mixed .verdict-text { color: #713f12; }
+        .verdict-negative {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+        .verdict-negative .verdict-label { color: #991b1b; }
+        .verdict-negative .verdict-text { color: #7f1d1d; }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-box {
+            background: #faf5ff;
+            border: 1px solid #e9d5ff;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .myth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        .myth-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ede9fe;
+        }
+        .myth-item:last-child { border-bottom: none; }
+        .myth-claim {
+            font-weight: 600;
+            color: #5b21b6;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .myth-fact {
+            color: #6b21a8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== WARNING / DANGER / HIGHLIGHT BOXES ===== */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            color: #134e4a !important;
+            margin-bottom: 0.5rem;
+        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p, .warning-box li {
+            color: #92400e !important;
+            margin-bottom: 0.5rem;
+        }
+        .warning-box p:last-child { margin-bottom: 0; }
+
+        .danger-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .danger-box-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .danger-box p {
+            color: #7f1d1d !important;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .danger-box li {
+            color: #7f1d1d !important;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+        .danger-box p:last-child { margin-bottom: 0; }
+
+        /* ===== ENDIKASYON SECTION ===== */
+        .endikasyon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
+        }
+        .endikasyon-header:first-of-type { border-top: none; }
+        .endikasyon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .endikasyon-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+        .endikasyon-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            font-weight: 500;
+        }
+
+        /* ===== KANIT BADGE ===== */
+        .kanit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .kanit-guclu { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+        .kanit-sinirli { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+        .kanit-yetersiz { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+        /* ===== PART DIVIDER ===== */
+        .part-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+        }
+        .part-divider-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-t);
+            margin-bottom: 0.5rem;
+        }
+        .part-divider-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 700px;
+        }
+        .comparison-table thead { background: var(--accent); }
+        .comparison-table th {
+            color: #fff;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:hover { background: var(--bg-alt); }
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .references h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+        }
+        .references ol {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.7;
+        }
+        .references li { margin-bottom: 0.4rem; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 2rem 0;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .article-body { padding: 0 1.25rem 2rem; }
+            .toc { padding: 0 1.25rem; }
+            .toc-box { padding: 1.25rem 1.5rem; }
+            .hizli-ozet { padding: 1.25rem 1.5rem; }
+            .endikasyon-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .comparison-table { min-width: 550px; }
+            .header-nav { display: none; }
+            .myth-box, .verdict-card { padding: 1rem 1.25rem; }
+            .part-divider { margin: 2rem 0 1.5rem; padding: 1.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- READING PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🎯 Pigmentasyon</span>
+        <span class="read-time">📅 1 Mart 2026 · ⏱ 18 dk okuma</span>
+    </div>
+    <h1>Hiperpigmentasyon A'dan Z'ye: Melaninden Tedaviye</h1>
+    <p class="article-subtitle">Yüzünüzdeki o koyu lekeler melazma mı, güneş lekesi mi, yoksa geçirdiğiniz sivilcenin izi mi? Her birinin nedeni farklı, tedavisi farklı. Melanin biyolojisinden Wood lambasına, 9 farklı depigmentasyon ajanından lazer seçeneklerine — hiperpigmentasyonu derinden anlıyoruz.</p>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+    <div class="toc-box">
+        <div class="toc-title">📋 İçindekiler</div>
+        <ol>
+            <li><a href="#melanin">Melanin Nedir? — Basitçe</a></li>
+            <li><a href="#tipler">Hiperpigmentasyon Tipleri</a></li>
+            <li><a href="#melazma">Melazma</a></li>
+            <li><a href="#pih">Post-İnflamatuar Hiperpigmentasyon (PIH)</a></li>
+            <li><a href="#solar">Solar Lentigo (Güneş Lekesi)</a></li>
+            <li><a href="#periorbital">Periorbital Hiperpigmentasyon (Göz Altı)</a></li>
+            <li><a href="#wood">Wood Lambası: Lekenizi Okumak</a></li>
+            <li><a href="#tedavi-ajanlari">9 Depigmentasyon Ajanı Karşılaştırması</a></li>
+            <li><a href="#lazer">Lazer ve IPL: Pigmentasyonda Kullanım</a></li>
+            <li><a href="#kombinasyon">Kombinasyon Tedavi Protokolleri</a></li>
+            <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+            <li><a href="#sonuc">Sonuç</a></li>
+            <li><a href="#kaynaklar">Kaynaklar</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+    <!-- HIZLI ÖZET -->
+    <div class="hizli-ozet">
+        <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+        <ul>
+            <li><span class="bullet">🎨</span> <strong>Melanin</strong> cildi rengini veren pigment. Hiperpigmentasyon = melaninin fazla üretilmesi veya anormal birikmesi.</li>
+            <li><span class="bullet">🔍</span> <strong>4 ana tip:</strong> Melazma (hormon + güneş), PIH (sivilce/yara izi), solar lentigo (güneş lekesi), periorbital (göz altı koyuluğu). Her birinin tedavisi farklı.</li>
+            <li><span class="bullet">🔦</span> <strong>Wood lambası</strong> (siyah ışık) lekenin epidermal mi dermal mi olduğunu gösteriyor — tedavi seçimini doğrudan etkiliyor.</li>
+            <li><span class="bullet">💊</span> <strong>Güçlü kanıt:</strong> Hidrokinon (%2-4), tretinoin (%0.025-0.05), azelaik asit (%15-20), sisteamin (%5), traneksamik asit hâlâ en güçlü depigmentasyon ajanları.</li>
+            <li><span class="bullet">⚡</span> <strong>Lazer dikkatli kullanılmalı:</strong> Özellikle koyu ten ve melazmada lazer "iyileştireceğim" derken daha kötü yapabilir.</li>
+            <li><span class="bullet">☀️</span> <strong>SPF her şeyin temeli.</strong> Güneş koruması olmadan hiçbir depigmentasyon tedavisi sürdürülebilir sonuç vermez.</li>
+            <li><span class="bullet">🎯</span> Kombinasyon tedavisi > tek ajan. Birden fazla mekanizmayı hedeflemek en etkili strateji.</li>
+        </ul>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 1: MELANİN VE TİPLER -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 1</div>
+        <div class="part-divider-title">🎨 Melanin Biyolojisi ve Tipler</div>
+    </div>
+
+    <h2 id="melanin">🎨 Melanin Nedir? — Basitçe</h2>
+
+    <p>Cildinizin rengi <strong>melanin</strong> denen bir pigmente bağlı. Melanin, derinin en üst tabakasında (epidermis) bulunan <strong>melanosit</strong> adlı hücrelerde üretiliyor. Bu hücreler bir nevi "boya fabrikası" gibi çalışıyor.</p>
+
+    <p>Melanosit, <strong>tirozinaz</strong> enzimini kullanarak tirozin adlı bir aminoasidi melanine dönüştürüyor. Üretilen melanin paketlere (melanozom) konulup komşu keratinosit hücrelerine dağıtılıyor. Güneşe çıkınca bu fabrika hız kazanıyor — bronzlaşma bu (Brenner M & Hearing VJ, 2008).</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Melanin = cildin doğal boyası. Melanosit hücreleri üretiyor, tirozinaz enzimi kontrol ediyor. Güneş bu sistemi hızlandırıyor.</p>
+    </div>
+
+    <h3>İki Tip Melanin</h3>
+
+    <p><strong>Ömelanin</strong> (kahverengi-siyah) ve <strong>feomelanin</strong> (kırmızı-sarı). Koyu tenli bireylerde ömelanin baskın, açık tenli ve kızıl saçlılarda feomelanin daha fazla. Hiperpigmentasyon dediğimiz şey genellikle ömelaninin fazla üretilmesi (Ito S & Wakamatsu K, 2003).</p>
+
+    <p>Herkesin melanosit sayısı aşağı yukarı aynı — fark melaninin <strong>ne kadar</strong> ve <strong>nasıl dağıtıldığında</strong>. Koyu tenlilerde melanozomlar daha büyük ve daha yaygın dağılmış.</p>
+
+    <h2 id="tipler">🔍 Hiperpigmentasyon Tipleri: Hepsini Aynı Sanmayın</h2>
+
+    <p>"Yüzümde leke var" deyip geçmek kolay. Ama dermatoloji perspektifinden bakıldığında, <strong>her leke tipi farklı bir hastalık</strong> ve tedavisi de farklı. Yanlış tedavi lekeyi iyileştirmek yerine kötüleştirebilir.</p>
+
+    <p>Dört ana tip:</p>
+
+    <ul>
+        <li><strong>Melazma</strong> — hormon + güneş kaynaklı, simetrik, yüz ortasında</li>
+        <li><strong>PIH</strong> (post-inflamatuar hiperpigmentasyon) — sivilce, yara veya tahriş sonrası oluşan iz</li>
+        <li><strong>Solar lentigo</strong> — güneşe maruz kalan bölgelerde oluşan güneş lekesi</li>
+        <li><strong>Periorbital hiperpigmentasyon</strong> — göz altı koyuluğu (çoklu nedenleri var)</li>
+    </ul>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Leke ≠ leke. Melazma, PIH, güneş lekesi ve göz altı koyuluğu birbirinden tamamen farklı durumlar — doğru teşhis tedaviden önce gelir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 2: TİPLER DETAYLI -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 2</div>
+        <div class="part-divider-title">🔬 Her Tip Detaylı: Tanı ve Tedavi</div>
+    </div>
+
+
+    <!-- MELAZMA -->
+    <h2 id="melazma">🦋 Melazma</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.2)">🦋</div>
+        <div>
+            <div class="endikasyon-title">Melazma</div>
+            <div class="endikasyon-subtitle">Hormon + güneş kaynaklı kronik pigmentasyon</div>
+        </div>
+    </div>
+
+    <p>Melazma, genellikle yüzün ortasında (alın, yanaklar, üst dudak, burun sırtı) <strong>simetrik, yamalı kahverengi lekeler</strong> şeklinde görülür. Kadınlarda erkeklerden 9 kat daha sık. Hamilelik, doğum kontrol hapları ve güneş en büyük tetikleyiciler (Ogbechie-Godec OA & Elbuluk N, 2017).</p>
+
+    <p>Melazma kronik bir durumdur — "tedavi ederim, gider" gibi düşünmeyin. Kontrol altına alınır ama nüks (tekrarlama) sıktır. Sabrın en çok gerektiği leke tipidir.</p>
+
+    <h3>Ayırıcı Tanı</h3>
+
+    <p>Melazma ile karışabilecek durumlar: solar lentigo (simetrik değil, güneş gören alanda sınırlı noktalar), lichen planus pigmentosus (daha gri-mavi, Wood lambasında silinmiyor), okronozis (uzun süreli hidrokinon kullanımına bağlı), post-inflamatuar hiperpigmentasyon (bir inflamasyon öyküsü var).</p>
+
+    <h3>Tedavi Stratejisi</h3>
+
+    <ul>
+        <li><strong>Birinci basamak:</strong> Geniş spektrumlu SPF 50+ (demir oksit içeren formüller görünür ışığı da filtreler) + topikal depigmentasyon ajanı (üçlü kombinasyon: hidrokinon + tretinoin + steroid — "Kligman formülü")</li>
+        <li><strong>İkinci basamak:</strong> Azelaik asit (%15-20), sisteamin (%5), traneksamik asit (topikal veya oral)</li>
+        <li><strong>Üçüncü basamak:</strong> Kimyasal peeling (glikolik asit, salisilik asit), düşük akımlı Q-switched lazer (dikkatli!)</li>
+    </ul>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Melazmada lazer çok dikkatli kullanılmalı.</strong> Agresif lazer melazmanın nüks etmesine, hatta kötüleşmesine neden olabilir. Özellikle Fitzpatrick IV-VI (koyu ten) hastalarda lazer sonrası rebound (geri sıçrama) pigmentasyon ciddi bir risk. Lazer ancak üçüncü basamak ve uzman elinde düşünülmeli (Trivedi MK et al., 2017).</p>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🦋</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Melazma</div>
+            <div class="verdict-text">Kronik, inatçı ve nüks eder. SPF (demir oksitli) + depigmentasyon ajanı altın standart. Sabır şart — haftalarda değil aylarda sonuç beklenmeli. Lazer son çare ve uzman elinde olmalı.</div>
+        </div>
+    </div>
+
+
+    <!-- PIH -->
+    <h2 id="pih">🔴 Post-İnflamatuar Hiperpigmentasyon (PIH)</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.2)">🔴</div>
+        <div>
+            <div class="endikasyon-title">PIH (Post-İnflamatuar Hiperpigmentasyon)</div>
+            <div class="endikasyon-subtitle">İnflamasyon/hasar sonrası oluşan koyu iz</div>
+        </div>
+    </div>
+
+    <p>Bir sivilce çıktı, iyileşti — ama geride koyu bir iz kaldı. İşte bu PIH. Cildiniz herhangi bir inflamasyon (iltihaplanma) sonrası o bölgede fazla melanin biriktiriyor. Akne, egzema, lazer tedavisi, yara — her türlü cilt hasarı PIH'e neden olabilir (Davis EC & Callender VD, 2010).</p>
+
+    <p>İyi haber: PIH genellikle zamanla kendiliğinden solar — ama "kendiliğinden" derken aylardan yıllara kadar sürebilir. Koyu tenlilerde (Fitzpatrick IV-VI) çok daha sık ve daha inatçı.</p>
+
+    <h3>Ayırıcı Tanı</h3>
+
+    <p>PIH ile karışan durumlar: melazma (simetrik, hormon ilişkili, sivilce öyküsü yok), lichen planus pigmentosus, ilaç kaynaklı hiperpigmentasyon (minosiklin gibi). PIH'in ayırt edici özelliği: her zaman öncesinde bir inflamasyon/hasar öyküsü vardır.</p>
+
+    <h3>Tedavi Stratejisi</h3>
+
+    <ul>
+        <li><strong>Birinci basamak:</strong> SPF 30+ + tretinoin (%0.025-0.05) veya azelaik asit (%15-20)</li>
+        <li><strong>İkinci basamak:</strong> Hidrokinon (%2-4) sınırlı süreli, niasinamid (%4-5), C vitamini, arbutin</li>
+        <li><strong>Üçüncü basamak:</strong> Kimyasal peeling (glikolik asit %20-50), microneedling</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>🎯 PIH'te en önemli adım:</strong> Altta yatan inflamasyonu tedavi etmek. Akne devam ediyorsa, akne tedavisine öncelik verin — aksi halde yeni PIH oluşmaya devam eder.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — PIH</div>
+            <div class="verdict-text">İyi prognoz — zamanla düzelir ve tedaviye iyi yanıt verir. Tretinoin + azelaik asit en güçlü kanıtlı kombinasyon. Ama önce altta yatan inflamasyonu tedavi edin.</div>
+        </div>
+    </div>
+
+
+    <!-- SOLAR LENTİGO -->
+    <h2 id="solar">☀️ Solar Lentigo (Güneş Lekesi)</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(251,146,60,0.1); border:1px solid rgba(251,146,60,0.2)">☀️</div>
+        <div>
+            <div class="endikasyon-title">Solar Lentigo</div>
+            <div class="endikasyon-subtitle">Kümülatif güneş hasarının izi</div>
+        </div>
+    </div>
+
+    <p>Halk arasında "yaşlılık lekesi" veya "karaciğer lekesi" denir — ama karaciğerle ilgisi yok. Yıllar boyu birikimli güneş hasarının sonucunda oluşan, genellikle el sırtı, yüz, ön kol ve dekoltede görülen düz, keskin sınırlı kahverengi lekeler (Bastiaens M et al., 2004).</p>
+
+    <p>Melazma gibi yamalı değil — ayrı ayrı, sınırları belli noktalar halinde. 40 yaş üstü açık tenli bireylerde çok sık.</p>
+
+    <h3>Ayırıcı Tanı</h3>
+
+    <p><strong>Kritik ayrım:</strong> Solar lentigo iyi huylu (benign) bir durumdur. Ama <strong>lentigo maligna</strong> (melanomun bir formu) ile karışabilir. Düzensiz sınırlı, renk değişikliği gösteren veya büyüyen lekelerin dermatoskopik değerlendirmesi şarttır. Şüphe varsa biyopsi yapılmalı.</p>
+
+    <h3>Tedavi Stratejisi</h3>
+
+    <ul>
+        <li><strong>Birinci basamak:</strong> SPF 50+ (yeni leke oluşumunu engellemek) + topikal retinoid (tretinoin %0.05) + C vitamini</li>
+        <li><strong>İkinci basamak:</strong> Kriyoterapi (dondurma), kimyasal peeling (TCA %10-35)</li>
+        <li><strong>Üçüncü basamak:</strong> IPL (yoğun atımlı ışık), Q-switched lazer — solar lentigoda lazer/IPL en etkili tedavi seçeneğidir</li>
+    </ul>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Solar lentigo, melazmadan farklı olarak lazere çok iyi yanıt verir. IPL ve Q-switched lazer ile tek/birkaç seansta belirgin düzelme mümkün.</p>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">✅</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Solar Lentigo</div>
+            <div class="verdict-text">En iyi tedavi edilebilen tip. IPL veya Q-switched lazer güçlü kanıtlı. Topikal retinoid + C vitamini de etkili. Ama düzensiz sınırlı lekeleri uzman kontrol ettirmeden "güneş lekesi" diye tedavi etmeyin.</div>
+        </div>
+    </div>
+
+
+    <!-- PERİORBİTAL -->
+    <h2 id="periorbital">👁️ Periorbital Hiperpigmentasyon (Göz Altı Koyuluğu)</h2>
+
+    <div class="endikasyon-header">
+        <div class="endikasyon-icon" style="background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.2)">👁️</div>
+        <div>
+            <div class="endikasyon-title">Periorbital Hiperpigmentasyon</div>
+            <div class="endikasyon-subtitle">Göz altı koyuluğu — birden fazla nedeni var</div>
+        </div>
+    </div>
+
+    <p>Göz altı koyuluğu herkesin bildiği ama yanlış anladığı bir konudur. Tek bir hastalık değil — <strong>birden fazla nedeni</strong> olabilir ve genellikle bunlar iç içe geçmiştir (Freitag FM & Cestari TF, 2007):</p>
+
+    <ul>
+        <li><strong>Pigmenter tip:</strong> Gerçek melanin artışı — kahverengi, koyu tenli bireylerde sık</li>
+        <li><strong>Vasküler tip:</strong> İnce deri altından damarların görünmesi — mavimsi/morumsu, ışıkta değişir</li>
+        <li><strong>Yapısal tip:</strong> Göz altı çukurluğu (tear trough) — gölge etkisi, yaşla artar</li>
+        <li><strong>Karışık tip:</strong> Yukarıdakilerin kombinasyonu — en sık görülen</li>
+    </ul>
+
+    <h3>Ayırıcı Tanı</h3>
+
+    <p><strong>Germe testi:</strong> Parmakla göz altı derisi gergin çekildiğinde koyu renk soluyorsa vasküler, değişmiyorsa pigmenter. <strong>Wood lambası:</strong> Kontrastı artırıyorsa epidermal pigment. Alerjik göz altı koyuluğu (Dennie-Morgan çizgisi), demir eksikliği ve tiroid sorunları da ayırıcı tanıda düşünülmeli.</p>
+
+    <h3>Tedavi Stratejisi (Tipe Göre)</h3>
+
+    <ul>
+        <li><strong>Pigmenter tip:</strong> Topikal depigmentasyon (C vitamini, kojik asit, azelaik asit), kimyasal peeling</li>
+        <li><strong>Vasküler tip:</strong> C vitamini (damar duvarı güçlendirme), retinoid (deri kalınlığı artışı), vasküler lazer (PDL/KTP)</li>
+        <li><strong>Yapısal tip:</strong> Hyaluronik asit dolgu (gözyaşı oluğu), yağ greftleme</li>
+        <li><strong>Karışık tip:</strong> Kombinasyon — topikal + lazer + gerekirse dolgu</li>
+    </ul>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">👁️</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Verdict — Göz Altı Koyuluğu</div>
+            <div class="verdict-text">Tedavisi en zor tip — çünkü nedeni doğru belirlemek şart. Pigmenter ise depigmentasyon yardımcı olur, vasküler ise farklı, yapısal ise dolgu. Tek bir "mucize krem" her tipi çözmez.</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 3: WOOD LAMBASI -->
+    <!-- ============================================== -->
+
+    <h2 id="wood">🔦 Wood Lambası: Lekenizi "Okumak"</h2>
+
+    <p>Wood lambası (siyah ışık, 340-400 nm UV-A) dermatoloğun en temel pigmentasyon aracıdır. Karanlık ortamda yüze tutulduğunda, <strong>epidermal (üst tabaka) pigmentin kontrastını artırır</strong> — dermal (derin tabaka) pigment ise görünmez olur (Gupta LK & Singhi MK, 2004).</p>
+
+    <h3>Ne Söylüyor?</h3>
+
+    <ul>
+        <li><strong>Kontrast artıyor</strong> → Pigment epidermal (üst tabakada). Tedaviye iyi yanıt verir.</li>
+        <li><strong>Kontrast değişmiyor/azalıyor</strong> → Pigment dermal (derin tabakada). Tedavisi çok daha zor.</li>
+        <li><strong>Karışık patern</strong> → Her iki tabakada da pigment var. Tedavi zorlaşır ama imkansız değil.</li>
+    </ul>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Wood lambası lekenin yüzeyde mi derinlerde mi olduğunu gösteriyor. Yüzeydeki leke tedaviye iyi yanıt verir, derindeki çok daha inatçıdır.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>Pratik bilgi:</strong> Melazma genellikle karışık (epidermal + dermal) patern gösterir. PIH çoğunlukla epidermal, solar lentigo de epidermal. Dermal melanozis durumlarında (Hori nevüs gibi) sadece lazer seçenek olabilir.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 4: TEDAVİ AJANLARI -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 3</div>
+        <div class="part-divider-title">💊 Tedavi Ajanları</div>
+    </div>
+
+    <h2 id="tedavi-ajanlari">💊 9 Depigmentasyon Ajanı: Karşılaştırma Tablosu</h2>
+
+    <p>Piyasada düzinelerce "leke karşıtı" ürün var. Ama hangisi gerçekten etkili, hangisi sadece pazarlama? İşte en çok kullanılan 9 depigmentasyon ajanı — mekanizma, kanıt düzeyi ve yan etkileriyle birlikte.</p>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Ajan</th>
+                    <th>Mekanizma</th>
+                    <th>Konsantrasyon</th>
+                    <th>Kanıt</th>
+                    <th>Dikkat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Hidrokinon</strong></td>
+                    <td>Tirozinaz inhibisyonu (doğrudan)</td>
+                    <td>%2-4</td>
+                    <td>✅ Güçlü</td>
+                    <td>Uzun süreli kullanımda okronozis riski; 3-6 ay arayla dinlendirmeli</td>
+                </tr>
+                <tr>
+                    <td><strong>Tretinoin</strong></td>
+                    <td>Melanin dağılımını hızlandırma + hücre döngüsü</td>
+                    <td>%0.025-0.1</td>
+                    <td>✅ Güçlü</td>
+                    <td>Tahriş, kuruluk, güneş hassasiyeti; hamilelikte kontrendike</td>
+                </tr>
+                <tr>
+                    <td><strong>Azelaik asit</strong></td>
+                    <td>Tirozinaz inhibisyonu + antioksidan</td>
+                    <td>%15-20</td>
+                    <td>✅ Güçlü</td>
+                    <td>Hamilelikte güvenli (Kategori B); hafif yanma/batma</td>
+                </tr>
+                <tr>
+                    <td><strong>Traneksamik asit</strong></td>
+                    <td>Plazmin inhibisyonu → melanosit uyarısını azaltma</td>
+                    <td>Topikal %2-5 veya oral 250 mg 2×/gün</td>
+                    <td>✅ Güçlü (melazma)</td>
+                    <td>Oral formda tromboz riski (düşük ama mevcut); kontrendikasyonlar sorgulanmalı</td>
+                </tr>
+                <tr>
+                    <td><strong>Sisteamin</strong></td>
+                    <td>Çoklu hedef: tirozinaz + peroksidaz + melanin oksidasyonu</td>
+                    <td>%5</td>
+                    <td>✅ Güçlü</td>
+                    <td>Kokusu rahatsız edici; hidrokinon alternatifi olarak yükseliyor</td>
+                </tr>
+                <tr>
+                    <td><strong>Kojik asit</strong></td>
+                    <td>Tirozinaz bakır şelasyonu</td>
+                    <td>%1-4</td>
+                    <td>🤔 Orta</td>
+                    <td>Kontakt dermatit riski; genellikle kombinasyonda kullanılır</td>
+                </tr>
+                <tr>
+                    <td><strong>Arbutin</strong></td>
+                    <td>Tirozinaz inhibisyonu (hafif, hidrokinon ön maddesi)</td>
+                    <td>%1-3 (alfa-arbutin)</td>
+                    <td>🤔 Orta</td>
+                    <td>Daha nazik, daha yavaş; tek başına zayıf, kombinasyonda daha iyi</td>
+                </tr>
+                <tr>
+                    <td><strong>Niasinamid</strong></td>
+                    <td>Melanozom transferini bloke etme</td>
+                    <td>%4-5</td>
+                    <td>🤔 Orta</td>
+                    <td>Çok iyi tolere edilir; bariyer onarıcı; tek başına hafif etkili</td>
+                </tr>
+                <tr>
+                    <td><strong>C Vitamini (LAA)</strong></td>
+                    <td>Tirozinaz inhibisyonu + antioksidan + melanin oksidasyonunu azaltma</td>
+                    <td>%10-20 (L-askorbik asit)</td>
+                    <td>🤔 Orta</td>
+                    <td>Stabilite sorunu; düşük pH formülü tahriş yapabilir; fotokoruyucu etkisi bonus</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>En güçlü kanıt: hidrokinon, tretinoin, azelaik asit, sisteamin ve traneksamik asit. Niasinamid ve C vitamini güzel destekçiler ama tek başlarına zayıf.</p>
+    </div>
+
+
+    <!-- HER AJAN İÇİN VERDİCT CARDS -->
+
+    <h3>Ajan Bazında Değerlendirmeler</h3>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">💧</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Hidrokinon — Altın Standart</div>
+            <div class="verdict-text">Onlarca yıllık kanıtla en etkili depigmentasyon ajanı. Ama uzun süreli kontrolsüz kullanım okronozis (paradoksal koyulaşma) riski taşır. 3 ay kullanım + 1-2 ay dinlendirme döngüsü önerilir (Draelos ZD, 2007).</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🧬</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Tretinoin — Çok Yönlü</div>
+            <div class="verdict-text">Hem tek başına depigmentasyon etkisi var hem de diğer ajanların penetrasyonunu artırıyor. Kligman formülünün vazgeçilmez bileşeni. PIH'te özellikle güçlü (Kimbrough-Green CK et al., 1994).</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🛡️</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Azelaik Asit — Güvenli ve Etkili</div>
+            <div class="verdict-text">Hamilelikte kullanılabilen nadir depigmentasyon ajanlarından. Melazma ve PIH'te etkili. Akne ve rozasede de kullanıldığı için çok yönlü (Breathnach AS, 1996).</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">⚡</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Traneksamik Asit — Melazmada Yıldız</div>
+            <div class="verdict-text">Oral formu özellikle melazmada çarpıcı sonuçlar veriyor. Topikal formu da etkili ve daha az riskli. Melazmanın inatçı vakalarında oyun değiştirici olabilir (Del Rosario E et al., 2018).</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🔬</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Sisteamin — Yükselen Yıldız</div>
+            <div class="verdict-text">Çoklu hedef mekanizmasıyla melazma ve PIH'te hidrokinona eşdeğer/üstün bulunmuş. Steroid ve hidrokinon riski yok. Kokusu dezavantajı — ama etkinliği bunu kompanse ediyor (Mansouri P et al., 2015).</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🤔</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Kojik Asit — Destekçi Rol</div>
+            <div class="verdict-text">Tek başına orta etkili ama kontakt dermatit riski var. Genellikle kombinasyonda (hidrokinon veya arbutin ile) kullanıldığında katma değer sağlıyor.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🌿</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Arbutin — Nazik Ama Yavaş</div>
+            <div class="verdict-text">Hidrokinonun doğal öncüsü — daha nazik ama çok daha yavaş. Tek başına belirgin sonuç için uzun süre gerekiyor. Hassas ciltler için kombinasyonda iyi bir seçenek.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">✨</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Niasinamid — Herkese Uyar, Ama Güçlü Değil</div>
+            <div class="verdict-text">Melanozom transferini %35-68 oranında azalttığı in vitro'da gösterilmiş (Hakozaki T et al., 2002). Ama klinik etki hafif. Bariyer onarımı, sebum kontrolü gibi bonusları var — "ana silah" değil, "iyi destekçi."</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">🍊</div>
+        <div class="verdict-content">
+            <div class="verdict-label">C Vitamini — Antioksidan + Hafif Depigmentasyon</div>
+            <div class="verdict-text">Fotokoruyucu etkisi (SPF ile birlikte UV hasarını azaltma) en büyük avantajı. Depigmentasyon etkisi var ama orta düzeyde. Stabilite çok önemli — L-askorbik asit formları hızla okside olur. Kombine kullanımda değerli (Al-Niaimi F & Chiang NYZ, 2017).</div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 5: LAZER ve IPL -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 4</div>
+        <div class="part-divider-title">⚡ Lazer, IPL ve Kombinasyon</div>
+    </div>
+
+    <h2 id="lazer">⚡ Lazer ve IPL: Pigmentasyonda Kullanım</h2>
+
+    <p>Lazer tedavisi pigmentasyonun sihirli değneği gibi görülüyor — ama gerçek çok daha nüanslı. Lazer her leke tipinde eşit derecede etkili değil ve yanlış kullanımda iyileştirmek yerine kötüleştirebilir.</p>
+
+    <h3>Lazer Tipleri ve Kullanım Alanları</h3>
+
+    <ul>
+        <li><strong>Q-switched Nd:YAG (1064 nm):</strong> Dermal pigmentasyonda etkili. Melazmada düşük akımla ("laser toning") kullanılabiliyor ama tartışmalı — bazı çalışmalar nüks artışı bildiriyor.</li>
+        <li><strong>Q-switched Ruby / Alexandrite (694-755 nm):</strong> Solar lentigo ve dermal melanozisde etkili.</li>
+        <li><strong>IPL (Yoğun Atımlı Işık):</strong> Solar lentigoda altın standart. Geniş dalga boyu spektrumu ile yüzeysel pigmentasyonu hedefliyor.</li>
+        <li><strong>Picosecond lazerler:</strong> Ultra kısa atım süresi ile daha az termal hasar. Melazmada Q-switched'dan daha güvenli olabilir — ama kanıt henüz gelişiyor (Chalermchai T & Rummaneethorn P, 2018).</li>
+        <li><strong>Fraksiyonel lazerler:</strong> PIH tedavisinde yardımcı olarak kullanılabiliyor ama koyu tenlilerde PIH riski var.</li>
+    </ul>
+
+    <div class="table-wrapper">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Leke Tipi</th>
+                    <th>Lazer/IPL Uygunluğu</th>
+                    <th>Tercih</th>
+                    <th>Risk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Melazma</strong></td>
+                    <td>⚠️ Dikkatli</td>
+                    <td>Düşük akımlı Q-switched veya pico; son çare</td>
+                    <td>Rebound pigmentasyon, kötüleşme</td>
+                </tr>
+                <tr>
+                    <td><strong>PIH</strong></td>
+                    <td>🤔 Sınırlı</td>
+                    <td>Topikal tedavi öncelikli; lazer yeni PIH yapabilir</td>
+                    <td>Koyu tenlilerde yeni PIH riski</td>
+                </tr>
+                <tr>
+                    <td><strong>Solar Lentigo</strong></td>
+                    <td>✅ Çok İyi</td>
+                    <td>IPL veya Q-switched; en iyi yanıt veren tip</td>
+                    <td>Düşük risk (açık tenlilerde)</td>
+                </tr>
+                <tr>
+                    <td><strong>Periorbital</strong></td>
+                    <td>🤔 Tipe Bağlı</td>
+                    <td>Pigmenter: Q-switched. Vasküler: PDL/KTP</td>
+                    <td>Göz çevresi hassas bölge</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="danger-box">
+        <div class="danger-box-title">🚨 Lazer Uyarıları</div>
+        <ul>
+            <li><strong>Koyu ten (Fitzpatrick IV-VI):</strong> Lazer sonrası PIH riski çok yüksek. Daha düşük enerji, daha uzun aralıklı seanslar ve pre/post tedavi (topikal depigmentasyon) şart.</li>
+            <li><strong>Melazmada agresif lazer:</strong> "Bir seansta temizleriz" vaadi alarm çanı. Melazmada agresif lazer rebound pigmentasyon yapabilir.</li>
+            <li><strong>SPF şart:</strong> Lazer sonrası güneş koruması olmadan sonuçlar kalıcı olmaz.</li>
+        </ul>
+    </div>
+
+
+    <h2 id="kombinasyon">🎯 Kombinasyon Tedavi Protokolleri</h2>
+
+    <p>Hiperpigmentasyonda tek ajan nadiren yeterlidir. En etkili yaklaşım, <strong>melanin üretiminin farklı basamaklarını hedefleyen birden fazla ajanı kombine etmek</strong>. İşte kanıta dayalı kombinasyon protokolleri:</p>
+
+    <h3>1. Kligman Formülü (Modifiye Üçlü Kombinasyon)</h3>
+
+    <p>Hidrokinon (%4) + tretinoin (%0.05) + fluosinolon asetonid (%0.01). Melazmada altın standart kombinasyon — FDA onaylı (Kligman AM & Willis I, 1975). Hidrokinon melanin üretimini durdurur, tretinoin hücre döngüsünü hızlandırır, steroid tahrişi azaltır.</p>
+
+    <div class="warning-box">
+        <p><strong>⚠️ Steroid içermesi nedeniyle uzun süreli kullanımda dikkat:</strong> Cilt atrofisi ve telanjiektazi riski. Maksimum 8-12 hafta, ardından idame tedaviye geçiş.</p>
+    </div>
+
+    <h3>2. Hidrokinonsuz Kombinasyon</h3>
+
+    <p>Sisteamin (%5) veya azelaik asit (%20) + tretinoin (%0.025-0.05) + niasinamid (%5). Hidrokinon okronozis riski veya erişim sorunu olan hastalar için etkili alternatif.</p>
+
+    <h3>3. Melazma İçin Oral + Topikal</h3>
+
+    <p>Oral traneksamik asit (250 mg 2×/gün) + topikal üçlü kombinasyon + SPF 50+ (demir oksitli). İnatçı melazma vakalarında güçlü protokol. Oral traneksamik asit öncesinde kanama-pıhtılaşma profili kontrol edilmeli (Bala HR et al., 2018).</p>
+
+    <h3>4. PIH İçin Aşamalı Yaklaşım</h3>
+
+    <p>İlk 4 hafta: Altta yatan inflamasyonu tedavi et (akne ise akne tedavisi). Sonra: tretinoin (%0.025) + azelaik asit (%15-20) başla. Yetersizse: sınırlı süreli hidrokinon (%2) ekle. Hep SPF 30+.</p>
+
+    <div class="hap-bilgi">
+        <div class="hap-bilgi-label">💊 Tek Cümleyle</div>
+        <p>Tek ajan < kombinasyon. Melanin yolağının farklı noktalarını hedefleyen 2-3 ajanı bir arada kullanmak en etkili strateji.</p>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- PART 6: MİTLER VE SONUÇ -->
+    <!-- ============================================== -->
+
+    <div class="part-divider">
+        <div class="part-divider-label">Bölüm 5</div>
+        <div class="part-divider-title">🔮 Mitler ve Sonuç</div>
+    </div>
+
+    <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+    <div class="myth-box">
+        <div class="myth-label">🔮 Mitler vs Gerçekler</div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Limon suyu lekeleri yok eder"</div>
+            <div class="myth-fact">Limon suyu pH'ı çok düşük (2-3) ve sitrik asit konsantrasyonu kontrolsüz. Kimyasal yanık ve fitofotodermatit (güneşle birlikte daha kötü yanık) yapabilir. Kanıtlanmış hiçbir depigmentasyon ajanının yerini tutmaz.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "SPF sadece güneşli günlerde gerekli"</div>
+            <div class="myth-fact">UVA ışınları bulutların %80'inden geçer. Görünür ışık (özellikle mavi ışık) da melanositleri uyarabilir — özellikle koyu tenlilerde. Hiperpigmentasyonu olan herkesin her gün SPF kullanması gerekir (Mahmoud BH et al., 2010).</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Lazer her lekeyi bir seansta siler"</div>
+            <div class="myth-fact">Solar lentigo iyi yanıt verir — ama melazmada lazer iyileştirmek yerine kötüleştirebilir. Her leke tipi lazere farklı yanıt verir. "Tek seansta garanti" vaadi ciddi bir kırmızı bayrak.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Koyu tenliler hiperpigmentasyon yaşamaz"</div>
+            <div class="myth-fact">Tam tersi — koyu tenlilerde (Fitzpatrick IV-VI) PIH çok daha sık ve daha inatçı. Melanosit aktivitesi daha yüksek olduğu için her inflamasyon daha kolay lekeye dönüşür.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Doğal ürünler kimyasallardan daha güvenli"</div>
+            <div class="myth-fact">"Doğal" ≠ "güvenli." Hidrokinon havuç ve buğdayda da bulunan doğal bir madde. Sisteamin vücutta doğal olarak bulunan bir aminotiol. Önemli olan doğallık değil, kanıt düzeyi ve güvenlik verisi.</div>
+        </div>
+
+        <div class="myth-item">
+            <div class="myth-claim">❌ "Leke kremi sürdüm, 2 haftada sonuç göreceğim"</div>
+            <div class="myth-fact">Depigmentasyon ajanlarının etki göstermesi minimum 6-8 hafta, genellikle 3-6 ay sürer. Melanin döngüsü yavaştır — epidermis yenilenme süresi yaklaşık 28 gün. Sabır olmazsa olmaz.</div>
+        </div>
+    </div>
+
+
+    <h2 id="sonuc">🏁 Sonuç: Ne Yapmalı?</h2>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">☀️</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Adım 1 — Her Şeyden Önce SPF</div>
+            <div class="verdict-text">Geniş spektrumlu SPF 30-50+, her gün, her mevsim. Melazmada demir oksit içeren formüller (görünür ışığı da filtreler) ekstra koruma sağlar. SPF olmadan hiçbir depigmentasyon tedavisi kalıcı sonuç vermez.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">🔍</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Adım 2 — Doğru Teşhis</div>
+            <div class="verdict-text">Melazma ≠ PIH ≠ güneş lekesi ≠ göz altı. Tedavi başlamadan önce leke tipini ve derinliğini (Wood lambası!) belirletin. Yanlış teşhis = yanlış tedavi = zaman ve para kaybı.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-positive">
+        <div class="verdict-icon">💊</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Adım 3 — Kanıtlı Ajanlarla Başla</div>
+            <div class="verdict-text">Tretinoin, azelaik asit, sisteamin veya hidrokinon — durumunuza göre dermatoloğunuzla birlikte seçin. Kombinasyon tedavisi tek ajandan daha etkili. Niasinamid ve C vitamini destekçi olarak eklenebilir.</div>
+        </div>
+    </div>
+
+    <div class="verdict-card verdict-mixed">
+        <div class="verdict-icon">⏳</div>
+        <div class="verdict-content">
+            <div class="verdict-label">Adım 4 — Sabır</div>
+            <div class="verdict-text">Minimum 3 ay düzenli kullanım. Bazı vakalarda 6 aya kadar beklemek gerekebilir. Melazmada nüks olağandır — idame tedavisi planlanmalı. "Bir haftada mucize" vaatlerine kanmayın.</div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>🎯 Genel Mesaj:</strong> Hiperpigmentasyon sinir bozucu olabilir ama tedavi edilebilir bir durumdur. Doğru teşhis, kanıta dayalı tedavi seçimi, SPF disiplini ve sabır — bu dört ayak sağlam olduğunda sonuç gelir.</p>
+        <p>Piyasadaki "mucize krem" vaatlerine değil, kanıta dayalı dermatolojiye güvenin. Lekeniz sizi endişelendiriyorsa mutlaka bir dermatoloji uzmanına danışın — özellikle düzensiz, büyüyen veya renk değiştiren lekeler için.</p>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu yazı tıbbi tavsiye değildir.</strong> Derindenbilgi'deki içerikler eğitim amaçlıdır ve profesyonel tıbbi tavsiye, teşhis veya tedavinin yerini almaz. Herhangi bir tedaviye başlamadan önce mutlaka bir dermatoloji uzmanına danışın.</div>
+    </div>
+
+
+    <!-- KAYNAKLAR -->
+    <div class="references" id="kaynaklar">
+        <h2>📚 Kaynaklar</h2>
+        <ol>
+            <li>Brenner M, Hearing VJ. The protective role of melanin against UV damage in human skin. <em>Photochem Photobiol.</em> 2008;84(3):539–549.</li>
+            <li>Ito S, Wakamatsu K. Quantitative analysis of eumelanin and pheomelanin in humans, mice, and other animals: a comparative review. <em>Pigment Cell Res.</em> 2003;16(5):523–531.</li>
+            <li>Ogbechie-Godec OA, Elbuluk N. Melasma: an up-to-date comprehensive review. <em>Dermatol Ther (Heidelb).</em> 2017;7(3):305–318.</li>
+            <li>Trivedi MK, Yang FC, Cho BK. A review of laser and light therapy in melasma. <em>Int J Womens Dermatol.</em> 2017;3(1):11–20.</li>
+            <li>Davis EC, Callender VD. Postinflammatory hyperpigmentation: a review of the epidemiology, clinical features, and treatment options in skin of color. <em>J Clin Aesthet Dermatol.</em> 2010;3(7):20–31.</li>
+            <li>Bastiaens M, Hoefnagel J, Westendorp R, et al. Solar lentigines are strongly related to sun exposure in contrast to ephelides. <em>Pigment Cell Res.</em> 2004;17(3):225–229.</li>
+            <li>Freitag FM, Cestari TF. What causes dark circles under the eyes? <em>J Cosmet Dermatol.</em> 2007;6(3):211–215.</li>
+            <li>Gupta LK, Singhi MK. Wood's lamp. <em>Indian J Dermatol Venereol Leprol.</em> 2004;70(2):131–135.</li>
+            <li>Draelos ZD. Skin lightening preparations and the hydroquinone controversy. <em>Dermatol Ther.</em> 2007;20(5):308–313.</li>
+            <li>Kimbrough-Green CK, Griffiths CE, Finkel LJ, et al. Topical retinoic acid (tretinoin) for melasma in Black patients. <em>Arch Dermatol.</em> 1994;130(6):727–733.</li>
+            <li>Breathnach AS. Azelaic acid: potential as a general antimelanizing agent. <em>Int J Dermatol.</em> 1996;35(6):411–413.</li>
+            <li>Del Rosario E, Florez-Pollack S, Engelman D, et al. Randomized, placebo-controlled, double-blind study of oral tranexamic acid in the treatment of moderate-to-severe melasma. <em>J Am Acad Dermatol.</em> 2018;78(2):363–369.</li>
+            <li>Mansouri P, Farshi S, Hashemi Z, et al. Evaluation of the efficacy of cysteamine 5% cream in the treatment of epidermal melasma: a randomized double-blind placebo-controlled trial. <em>Br J Dermatol.</em> 2015;173(1):209–217.</li>
+            <li>Hakozaki T, Minwalla L, Zhuang J, et al. The effect of niacinamide on reducing cutaneous pigmentation and suppression of melanosome transfer. <em>Br J Dermatol.</em> 2002;147(1):20–31.</li>
+            <li>Al-Niaimi F, Chiang NYZ. Topical vitamin C and the skin: mechanisms of action and clinical applications. <em>J Clin Aesthet Dermatol.</em> 2017;10(7):14–17.</li>
+            <li>Kligman AM, Willis I. A new formula for depigmenting human skin. <em>Arch Dermatol.</em> 1975;111(1):40–48.</li>
+            <li>Bala HR, Lee S, Wong C, et al. Oral tranexamic acid for the treatment of melasma: a review. <em>Dermatol Surg.</em> 2018;44(6):814–825.</li>
+            <li>Mahmoud BH, Ruvolo E, Hexsel CL, et al. Impact of long-wavelength UVA and visible light on melanocompetent skin. <em>J Invest Dermatol.</em> 2010;130(8):2092–2097.</li>
+            <li>Chalermchai T, Rummaneethorn P. Effects of a fractional picosecond 1,064 nm laser for the treatment of dermal and mixed type melasma. <em>J Cosmet Laser Ther.</em> 2018;20(3):134–139.</li>
+        </ol>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    document.getElementById('progressBar').style.width = Math.min(scrolled, 100) + '%';
+});
+</script>
+</body>
+</html>
