@@ -556,6 +556,106 @@
             width: 0%;
         }
 
+        /* Hap bilgi - tek cümle özet */
+        .hap-bilgi {
+            background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(13,148,136,0.12));
+            border: 1px solid rgba(13,148,136,0.2);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #134e4a;
+        }
+        .hap-bilgi::before {
+            content: "💊 Tek Cümleyle: ";
+            font-weight: 700;
+            color: #0d9488;
+        }
+
+        /* Verdict card */
+        .verdict-card {
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border: 2px solid;
+        }
+        .verdict-al {
+            background: #f0fdfa;
+            border-color: #0d9488;
+        }
+        .verdict-dusun {
+            background: #fffbeb;
+            border-color: #f59e0b;
+        }
+        .verdict-gec {
+            background: #fef2f2;
+            border-color: #ef4444;
+        }
+        .verdict-card .verdict-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .verdict-card .verdict-label {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .verdict-card .verdict-text {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        /* Quick summary box */
+        .hizli-ozet {
+            background: linear-gradient(135deg, #0d9488, #0891b2);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin: 1.5rem 0 2rem;
+            color: #ffffff;
+        }
+        .hizli-ozet h3 {
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            border: none !important;
+        }
+        .hizli-ozet ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hizli-ozet li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.95);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .hizli-ozet li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Myth buster */
+        .myth-box {
+            background: #fef3c7;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.93rem;
+        }
+        .myth-box .myth-q {
+            font-weight: 700;
+            color: #92400e;
+        }
+        .myth-box .myth-a {
+            color: #78350f;
+            margin-top: 0.35rem;
+        }
+
         /* Responsive */
         @media (max-width: 640px) {
             body {
@@ -601,6 +701,14 @@
             .protocol-steps li {
                 padding-left: 3rem;
             }
+
+            .hizli-ozet {
+                padding: 1.25rem;
+            }
+
+            .verdict-card {
+                padding: 1.25rem;
+            }
         }
 
         /* Scroll animation */
@@ -638,10 +746,24 @@
     </div>
     <h1>Ev Tipi Cilt Bakım Cihazları: LED Maskeler ve Elektroporasyon — Bilim Ne Diyor?</h1>
     <p class="article-subtitle">
-        LED fototerapi maskeleri ve Medicube AGE-R gibi elektroporasyon cihazları sosyal medyada her yerde. 
-        Peki bu cihazlar gerçekten işe yarıyor mu? İki popüler teknolojiyi peer-reviewed literatür ışığında, 
-        dürüstçe değerlendiriyoruz.
+        LED maskeler ve Medicube AGE-R gibi cihazlar sosyal medyada her yerde. Peki gerçekten işe yarıyorlar mı? 
+        İki popüler teknolojiyi bilimsel çalışmalar ışığında, dürüstçe ve sıfır sponsorlukla değerlendiriyoruz.
     </p>
+</div>
+
+<!-- Hızlı Özet — right after hero -->
+<div class="article-body" style="padding-bottom:0;">
+    <div class="hizli-ozet fade-in">
+        <h3>⚡ 30 Saniyede Özet</h3>
+        <ul>
+            <li>LED kırmızı + kızılötesi = anti-aging için gerçek bilimsel kanıt var, ama mucize beklemeyin</li>
+            <li>LED mavi = hafif akne için etkili, ciddi akne için tek başına yetersiz</li>
+            <li>LED yeşil / sarı = kanıt neredeyse yok, para israfı</li>
+            <li>Medicube elektroporasyon = mantıklı fikir ama ev cihazı kanıtı zayıf</li>
+            <li>Mikrocurrent = geçici lifting etkisi, ertesi gün eski haline döner</li>
+            <li>Hiçbiri retinoid + güneş kremi + nemlendiricinin yerini tutmaz</li>
+        </ul>
+    </div>
 </div>
 
 <!-- Table of Contents -->
@@ -651,13 +773,13 @@
 
         <div class="toc-part">Bölüm 1 — LED Yüz Maskeleri</div>
         <ol>
-            <li><a href="#giris">Giriş: Ev Tipi Cihazların Yükselişi</a></li>
-            <li><a href="#pbm">Fotobiyomodülasyon (PBM) Bilimi</a></li>
-            <li><a href="#dalga-boylari">Dalga Boyları ve Etkileri</a></li>
-            <li><a href="#klinik-kanitlar">Klinik Kanıtlar: Anti-Aging ve Akne</a></li>
-            <li><a href="#ev-vs-profesyonel">Ev Tipi vs. Profesyonel Cihazlar</a></li>
-            <li><a href="#satin-alma">LED Maske Satın Alma Rehberi</a></li>
-            <li><a href="#led-protokol">LED Kullanım Protokolü</a></li>
+            <li><a href="#giris">Giriş: Herkes Neden Yüzüne LED Takıyor?</a></li>
+            <li><a href="#pbm">LED Nasıl Çalışıyor? (Bilim Kısmı)</a></li>
+            <li><a href="#dalga-boylari">Hangi Renk Ne İşe Yarar?</a></li>
+            <li><a href="#klinik-kanitlar">Klinik Kanıtlar: Gerçekten Etkili mi?</a></li>
+            <li><a href="#ev-vs-profesyonel">Ev Tipi vs. Profesyonel: Aradaki Uçurum</a></li>
+            <li><a href="#satin-alma">LED Maske Alırken Nelere Dikkat Etmeli?</a></li>
+            <li><a href="#led-protokol">LED Kullanım Rehberi</a></li>
         </ol>
 
         <div class="toc-part">Bölüm 2 — Elektroporasyon ve Medicube</div>
@@ -665,7 +787,7 @@
             <li><a href="#elektroporasyon">Elektroporasyon Nedir?</a></li>
             <li><a href="#medicube">Medicube AGE-R Booster Pro İnceleme</a></li>
             <li><a href="#ep-kanit">Elektroporasyon: Kanıt Gerçeği</a></li>
-            <li><a href="#mikrocurrent">Mikrocurrent: Kanıt Değerlendirmesi</a></li>
+            <li><a href="#mikrocurrent">Mikrocurrent: Geçici mi Kalıcı mı?</a></li>
             <li><a href="#sonuc">Dürüst Sonuç ve Tavsiyeler</a></li>
             <li><a href="#guvenlik">Güvenlik ve Kontrendikasyonlar</a></li>
             <li><a href="#kaynaklar">Kaynaklar</a></li>
@@ -679,102 +801,118 @@
     <!-- ==================== BÖLÜM 1: LED ==================== -->
 
     <!-- 1. Giriş -->
-    <h2 id="giris" class="fade-in">1. Giriş: Ev Tipi Cilt Bakım Cihazlarının Yükselişi</h2>
+    <h2 id="giris" class="fade-in">1. 📱 Herkes Neden Yüzüne LED Takıyor?</h2>
 
     <p class="fade-in">
-        Son birkaç yılda TikTok, Instagram ve YouTube'da bir trend patlaması yaşandı: LED yüz maskeleri, mikrocurrent cihazları, elektroporasyon aletleri... Influencer'ların "klinik sonuçlar evde" vaadiyle tanıttığı bu cihazlar, küresel cilt bakım cihazı pazarını milyar dolarlık bir sektöre dönüştürdü.
+        TikTok'ta #LEDMask hashtagini açın: milyonlarca görüntülenme, parlayan yüzler, "klinik sonuçlar evde" vaatleri. LED maskeleri, mikrocurrent cihazları, elektroporasyon aletleri... Bu cihazlar küresel cilt bakım pazarını <strong>milyar dolarlık</strong> bir sektöre dönüştürdü.
     </p>
 
     <p class="fade-in">
-        Peki gerçek nerede başlıyor, pazarlama nerede bitiyor? Bu yazıda iki popüler ev tipi cilt bakım teknolojisini — <strong>LED fototerapi maskeleri</strong> ve <strong>elektroporasyon cihazları (Medicube AGE-R Booster Pro örneğiyle)</strong> — bilimsel literatür ışığında, dürüst ve kanıta dayalı olarak değerlendiriyoruz.
+        Peki gerçek nerede başlıyor, pazarlama nerede bitiyor? Bu yazıda iki popüler teknolojiyi — <strong>LED fototerapi maskeleri</strong> ve <strong>Medicube AGE-R Booster Pro</strong> — bilimsel makalelere bakarak dürüstçe değerlendiriyoruz.
     </p>
 
     <div class="warning-box fade-in">
-        <p><strong>⚠️ Yazıya başlamadan önemli bir not:</strong></p>
-        <p>Bu yazıda belirtilen ürün ve marka isimleri bilgilendirme amaçlıdır. Derindenbilgi hiçbir marka ile sponsorluk ilişkisi içinde değildir. Amacımız pazarlama iddialarını bağımsız bilimsel kanıtlarla karşılaştırmaktır.</p>
+        <p><strong>⚠️ Başlamadan önce:</strong> Bu yazıda geçen ürün ve marka isimleri bilgilendirme amaçlıdır. Derindenbilgi hiçbir marka ile sponsorluk ilişkisi içinde değildir. Amacımız pazarlama iddialarını bağımsız bilimsel kanıtlarla karşılaştırmak.</p>
     </div>
 
     <!-- 2. PBM Bilimi -->
-    <h2 id="pbm" class="fade-in">2. Fotobiyomodülasyon (PBM) Bilimi</h2>
+    <h2 id="pbm" class="fade-in">2. 🔬 LED Nasıl Çalışıyor? (Bilim Kısmı)</h2>
 
     <p class="fade-in">
-        LED (Light Emitting Diode) cilt tedavileri, daha geniş bir kavram olan <strong>fotobiyomodülasyon</strong> (PBM) prensibiyle çalışır. PBM, düşük yoğunluklu ışığın hücresel düzeyde biyolojik yanıtlar uyardığı, lazer olmayan bir ışık tedavisi yöntemidir. Termal (ısı) hasar oluşturmaz — yani cildi yakmaz veya ablasyon yapmaz.
+        LED cilt tedavileri, <strong>fotobiyomodülasyon</strong> (PBM) denen bir prensiple çalışıyor. İsmi karmaşık ama mantığı basit: düşük yoğunluklu ışık, hücrelerde biyolojik tepkiler uyarıyor. Lazer gibi yakmıyor, kesmiyortamamen ısısız.
     </p>
 
-    <h3 class="fade-in">Moleküler Mekanizma</h3>
+    <h3 class="fade-in">🔋 Hücrelerin Pilini Şarj Etmek</h3>
 
     <p class="fade-in">
-        PBM'nin temel hedefi, mitokondrinin iç membranında bulunan <strong>sitokrom c oksidaz</strong> (CCO) enzimidir. Bu enzim, elektron taşıma zincirinin IV. kompleksinde yer alır ve hücresel enerji üretiminin (ATP sentezi) kritik bir parçasıdır.
+        LED maskeler nasıl çalışıyor? Basit:
+    </p>
+
+    <p class="fade-in">
+        Belirli renklerdeki ışık cildinize giriyor ve hücrelerinizin <strong>enerji santralini</strong> (mitokondri) uyarıyor. Daha fazla enerji = daha aktif hücreler = daha fazla kolajen üretimi.
+    </p>
+
+    <p class="fade-in">
+        Bunu telefonunuzu şarja takmak gibi düşünün — hücreleriniz daha fazla enerjiyle daha iyi çalışıyor.
     </p>
 
     <div class="highlight-box fade-in">
-        <p><strong>PBM'nin hücresel mekanizması (Hamblin, 2017):</strong></p>
-        <p>1. Kırmızı ve yakın kızılötesi (NIR) fotonlar, sitokrom c oksidaz tarafından absorbe edilir</p>
-        <p>2. Nitrik oksit (NO) CCO'dan ayrılır → enzim inhibisyonu kaldırılır</p>
-        <p>3. Mitokondri membran potansiyeli artar → <strong>ATP üretimi yükselir</strong></p>
-        <p>4. Düşük düzeyde reaktif oksijen türleri (ROS) üretilir → bu ROS'lar <strong>sinyal molekülleri</strong> olarak görev yapar</p>
-        <p>5. NF-κB gibi transkripsiyon faktörleri aktive olur → gen ekspresyonu değişir</p>
-        <p>6. Sonuç: kolajen sentezi artışı, inflamasyon azalması, yara iyileşmesinin hızlanması</p>
+        <p><strong>Peki biyolojik olarak ne oluyor? (Hamblin, 2017):</strong></p>
+        <p>1. Kırmızı / kızılötesi ışık, hücrelerdeki <strong>sitokrom c oksidaz</strong> (CCO) enzimini uyarıyor</p>
+        <p>2. Enzim aktifleşince → hücre daha fazla <strong>enerji</strong> (ATP) üretiyor</p>
+        <p>3. Düşük dozda oluşan serbest radikaller, hücrelere "harekete geç" sinyali gönderiyor</p>
+        <p>4. Sonuç: kolajen üretimi artıyor, iltihap azalıyor, onarım hızlanıyor</p>
     </div>
 
+    <div class="hap-bilgi fade-in">LED ışığı hücrelerinizin pilini şarj ediyor. Daha fazla enerji = daha fazla kolajen, daha az iltihap.</div>
+
     <p class="fade-in">
-        Karu (1999) tarafından tanımlanan bu "fotobiyolojik" yanıt, binlerce çalışmayla desteklenmektedir. Ancak kritik bir nokta var: <strong>bu mekanizma dalga boyuna ve doza bağımlıdır.</strong> Her renk ışığın aynı etkiyi göstermesi beklenmemelidir.
+        Bu mekanizma 1999'da Karu tarafından tanımlandı ve binlerce çalışmayla desteklendi. Ama kritik bir nokta var: <strong>her renk ışık aynı etkiyi göstermiyor.</strong> Dalga boyu ve doz her şeyi değiştiriyor.
     </p>
 
     <!-- 3. Dalga Boyları -->
-    <h2 id="dalga-boylari" class="fade-in">3. Dalga Boyları ve Etkileri</h2>
+    <h2 id="dalga-boylari" class="fade-in">3. 🌈 Hangi Renk Ne İşe Yarar?</h2>
 
     <p class="fade-in">
-        LED maskelerde kullanılan ışığın rengi (dalga boyu), o ışığın ciltte ne kadar derine ulaşacağını ve hangi hücresel hedeflerle etkileşeceğini belirler. Her dalga boyunun kanıt düzeyi farklıdır.
+        LED maskenizdeki ışığın rengi, yani dalga boyu, o ışığın ciltte ne kadar derine ulaşacağını belirliyor. Her rengin bilimsel kanıt düzeyi çok farklı. Şimdi tek tek bakalım.
     </p>
 
     <h3 class="fade-in">🔴 Kırmızı Işık (620–660 nm) <span class="kanit-badge kanit-guclu">Güçlü ✅</span></h3>
 
     <p class="fade-in">
-        Kırmızı ışık, PBM alanında <strong>en çok çalışılmış dalga boyudur.</strong> Özellikle 630–660 nm aralığı dermisteki fibroblastları uyararak kolajen ve elastin sentezini artırır.
+        Anti-aging'in en güvenilir dostu. Kırmızı ışık, PBM alanında <strong>en çok araştırılmış</strong> dalga boyu. Özellikle 630–660 nm aralığı, cildin orta katmanındaki kolajen üreten hücreleri (fibroblastlar) uyarıyor.
     </p>
 
     <ul class="fade-in">
-        <li><strong>Penetrasyon derinliği:</strong> ~2–3 mm (dermis üst-orta katmanları)</li>
-        <li><strong>Birincil hedef:</strong> Fibroblastlar → kolajen tip I ve III üretimi</li>
-        <li><strong>Klinik kanıt:</strong> Wunsch & Matuschka (2014) RKÇ'de kırmızı ışık, kırışıklık derinliğini anlamlı şekilde azalttı ve kolajen yoğunluğunu artırdı (p&lt;0.05). Barolet (2009) derlemesi kolajen stimülasyonunu destekliyor.</li>
-        <li><strong>Anti-aging için en iyi desteklenmiş dalga boyu.</strong></li>
+        <li><strong>Ne kadar derine gidiyor?</strong> ~2–3 mm (cildin orta katmanları)</li>
+        <li><strong>Ne yapıyor?</strong> Kolajen tip I ve III üretimini artırıyor</li>
+        <li><strong>Kanıt?</strong> 2014'teki bir araştırmada (Wunsch) <strong>136</strong> kişiye uygulandı → kırışıklık azaldı, kolajen arttı. Barolet (2009) derlemesi de destekliyor.</li>
+        <li><strong>Anti-aging için en güçlü kanıta sahip renk.</strong></li>
     </ul>
+
+    <div class="hap-bilgi fade-in">Kırmızı ışık = kolajen üretimini artıran, en çok araştırılmış dalga boyu. Anti-aging'de bir numaralı seçenek.</div>
 
     <h3 class="fade-in">🟣 Yakın Kızılötesi / NIR (810–850 nm) <span class="kanit-badge kanit-guclu">Güçlü ✅</span></h3>
 
     <p class="fade-in">
-        NIR ışık gözle görülmez ancak cildin en derin tabakalarına ulaşır. Anti-inflamatuvar etkileri ve doku onarımı üzerine güçlü kanıtlara sahiptir.
+        Gözle göremezsiniz ama cildin en derinlerine ulaşır. İltihabı söndürmek ve doku onarımında çok güçlü kanıtlara sahip.
     </p>
 
     <ul class="fade-in">
-        <li><strong>Penetrasyon derinliği:</strong> ~5–10 mm (derin dermis, subkutan doku)</li>
-        <li><strong>Birincil hedef:</strong> Derin fibroblastlar, inflamatuvar hücreler, sinir uçları</li>
-        <li><strong>Klinik kanıt:</strong> Yara iyileşmesi, post-prosedür iyileşme ve inflamasyon azaltmada çok sayıda çalışma (Hamblin 2017 derlemesi). Anti-aging'de kırmızı ışıkla kombine kullanımda sinerjik etki.</li>
-        <li><strong>Ağrı ve inflamasyon için de kullanılır</strong> (kas ağrıları, spor yaralanmaları).</li>
+        <li><strong>Derinlik:</strong> ~5–10 mm (derin dermis, hatta altındaki doku)</li>
+        <li><strong>Ne yapıyor?</strong> Derin fibroblastları, iltihap hücrelerini ve sinir uçlarını hedefliyor</li>
+        <li><strong>Kanıt?</strong> Yara iyileşmesi ve iltihap azaltmada çok sayıda çalışma var (Hamblin 2017). Kırmızı ışıkla birlikte kullanınca sinerjik etki yapıyor.</li>
+        <li><strong>Bonus:</strong> Kas ağrıları ve spor yaralanmalarında da kullanılıyor</li>
     </ul>
+
+    <div class="hap-bilgi fade-in">NIR gözle görünmez ama en derinine iner. İltihap söndürücü ve onarıcı — kırmızıyla birlikte güçlü ikili.</div>
 
     <h3 class="fade-in">🔵 Mavi Işık (415–450 nm) <span class="kanit-badge kanit-guclu">Güçlü ✅ (akne için)</span></h3>
 
     <p class="fade-in">
-        Mavi ışık, akne tedavisinde spesifik bir mekanizmayla çalışır: <em>Cutibacterium acnes</em> (eski adıyla <em>P. acnes</em>) bakterisi doğal olarak <strong>porfirinler</strong> (özellikle koproporfirin III) üretir. Mavi ışık bu porfirinleri uyararak toksik oksijen radikalleri oluşturur ve bakteri ölür.
+        Mavi ışık, akne tedavisinde çok spesifik bir mekanizmayla çalışıyor. Akneye neden olan bakteri (<em>C. acnes</em>) doğal olarak <strong>porfirinler</strong> üretiyor. Mavi ışık bu porfirinleri uyarınca toksik oksijen açığa çıkıyor ve bakteri ölüyor.
+    </p>
+
+    <p class="fade-in">
+        Yani mavi ışık cildinize "antibiyotik" gibi doğrudan bir etki yapıyor — ama sadece yüzeyde.
     </p>
 
     <ul class="fade-in">
-        <li><strong>Penetrasyon derinliği:</strong> ~1 mm (çok yüzeysel — epidermis)</li>
-        <li><strong>Birincil hedef:</strong> C. acnes porfirinleri</li>
-        <li><strong>Klinik kanıt:</strong> Papageorgiou ve ark. (2000) mavi ışığın, hafif-orta akne vulgaris'te %76 inflamatuvar lezyon azaltması sağladığını göstermiştir — benzoil peroksit (%58) ile karşılaştırılabilir.</li>
-        <li><strong>Sınırlamaları:</strong> Derin/kistik akne için yetersiz, komedonal akneye etkisi sınırlı.</li>
+        <li><strong>Derinlik:</strong> ~1 mm (çok yüzeysel — sadece üst tabaka)</li>
+        <li><strong>Kanıt?</strong> 2000'deki bir çalışmada (Papageorgiou) mavi ışık hafif-orta aknede <strong>%76</strong> iltihaplı lezyon azalması sağladı — benzoil peroksitten (%58) bile iyi çıktı.</li>
+        <li><strong>Sınırı?</strong> Derin, kistik akne için yetersiz. Siyah noktalara etkisi çok sınırlı.</li>
     </ul>
+
+    <div class="hap-bilgi fade-in">Mavi ışık akne bakterisini yüzeyde öldürüyor. Hafif akne için iyi, derin akne için yetersiz.</div>
 
     <h3 class="fade-in">🟢 Yeşil Işık (520–560 nm) ve 🟡 Sarı Işık (570–590 nm) <span class="kanit-badge kanit-yetersiz">Yetersiz ❌</span></h3>
 
-    <div class="warning-box fade-in">
-        <p><strong>⚠️ Kanıt çok sınırlı — paranızı bunlara harcamayın.</strong></p>
-        <p>Yeşil ışığın "hiperpigmentasyon azaltma", sarı ışığın "kızarıklık giderme" etkileri için güçlü klinik kanıt bulunmamaktadır. Birkaç küçük pilot çalışma dışında büyük RKÇ yoktur. "7 renk LED maske" pazarlamasının çoğu, bu dalga boylarının kanıt eksikliğini görmezden gelir.</p>
+    <div class="myth-box fade-in">
+        <div class="myth-q">🤔 "7 renk LED maske daha mı etkili?"</div>
+        <div class="myth-a">Hayır. Yeşil ışığın "leke giderme" ve sarı ışığın "kızarıklık azaltma" etkisi için güçlü klinik kanıt <strong>yok.</strong> 7 renk LED maskelerdeki ekstra renkler çoğunlukla pazarlama malzemesi. Kanıtlanmış olanlar: kırmızı, NIR ve mavi — o kadar.</div>
     </div>
 
-    <h3 class="fade-in">Dalga Boyu Karşılaştırma Tablosu</h3>
+    <h3 class="fade-in">📊 Dalga Boyu Karşılaştırma Tablosu</h3>
 
     <div class="comparison-table-wrapper fade-in">
         <table class="comparison-table">
@@ -828,57 +966,71 @@
     </div>
 
     <!-- 4. Klinik Kanıtlar -->
-    <h2 id="klinik-kanitlar" class="fade-in">4. Klinik Kanıtlar: Anti-Aging ve Akne</h2>
+    <h2 id="klinik-kanitlar" class="fade-in">4. 🧪 Klinik Kanıtlar: Gerçekten Etkili mi?</h2>
 
-    <h3 class="fade-in">Anti-Aging <span class="kanit-badge kanit-guclu">Güçlü ✅</span> (ama mütevazı)</h3>
+    <h3 class="fade-in">✨ Anti-Aging <span class="kanit-badge kanit-guclu">Güçlü ✅</span> (ama mucize değil)</h3>
 
     <p class="fade-in">
-        LED ışık tedavisinin anti-aging etkisi, en güçlü kanıt tabanına sahip alanlardan biridir:
+        İşin güzel kısmı: LED'in anti-aging etkisi hayal ürünü değil. Gerçek kanıt var. Ama işin diğer tarafı: sonuçlar "mütevazı". Yani beklentinizi doğru ayarlayın.
     </p>
 
     <div class="highlight-box fade-in">
-        <p><strong>Wunsch & Matuschka (2014) — Anahtar Çalışma:</strong></p>
-        <p>136 gönüllüyle yapılan randomize kontrollü çalışma (RKÇ). 611–650 nm (kırmızı) ve 570–850 nm (kombinasyon) LED tedavisi, haftada 2 kez, 30 oturum boyunca uygulanmış.</p>
-        <p><strong>Sonuç:</strong> Kırmızı ışık grubunda kırışıklık derinliğinde anlamlı azalma, intradermal kolajen yoğunluğunda artış, cilt pürüzsüzlüğünde iyileşme (ultrasound ile doğrulanmış).</p>
-        <p><strong>Ancak:</strong> Sonuçlar "mütevazı" düzeydedir — lazer rejuvenation veya retinoid kullanımıyla kıyaslanamaz. "5 yaş gençleşme" beklemeyin.</p>
+        <p><strong>🔑 Anahtar Çalışma — Wunsch & Matuschka (2014):</strong></p>
+        <p><strong>136</strong> gönüllü, randomize kontrollü çalışma (RKÇ). Kırmızı ışık (611–650 nm) haftada 2 kez, toplam 30 oturum uygulanmış.</p>
+        <p><strong>Sonuç:</strong> Kırışıklık derinliği azaldı, kolajen yoğunluğu arttı, cilt daha pürüzsüz oldu (ultrasonla doğrulandı).</p>
+        <p><strong>Ama:</strong> Lazer veya retinoidle kıyaslanamaz. "5 yaş gençleşme" beklemeyin. Daha çok "cildin biraz daha canlı ve sıkı hissettirmesi" gibi düşünün.</p>
     </div>
 
     <p class="fade-in">
-        Russell ve ark. (2005) benzer pozitif sonuçlar bildirmiş, ancak çalışma daha küçük örneklemlidir. Sistematik derlemeler (Barolet, 2009; Avci ve ark., 2013) genel olarak kırmızı ve NIR ışığın anti-aging'de "hafif-orta düzeyde etkili" olduğunu desteklemektedir.
+        Russell ve ark. (2005), Lee ve ark. (2007) gibi başka çalışmalar da benzer sonuçlar bulmuş. Sistematik derlemeler (Barolet 2009, Avci 2013) genel olarak kırmızı + NIR'ın anti-aging'de <strong>"hafif-orta düzeyde etkili"</strong> olduğunu söylüyor.
     </p>
 
-    <h3 class="fade-in">Akne <span class="kanit-badge kanit-guclu">Güçlü ✅</span> (hafif-orta şiddette)</h3>
+    <div class="hap-bilgi fade-in">Anti-aging etkisi gerçek ama mütevazı. Retinoid değil — daha çok "cildin kendini daha iyi hissetmesi" seviyesinde.</div>
+
+    <h3 class="fade-in">💙 Akne <span class="kanit-badge kanit-guclu">Güçlü ✅</span> (hafif-orta)</h3>
 
     <div class="highlight-box fade-in">
-        <p><strong>Papageorgiou ve ark. (2000) — Landmark Çalışma:</strong></p>
-        <p>107 hastada mavi ışık (415 nm), mavi-kırmızı kombinasyonu, soğuk beyaz ışık (plasebo) ve %5 benzoil peroksit (BP) karşılaştırılmış.</p>
-        <p><strong>Sonuç:</strong> Mavi-kırmızı kombinasyonu inflamatuvar lezyonlarda %76 azalma sağlamış — BP'nin %58'lik sonucundan üstün. Mavi ışık tek başına da anlamlı iyileşme göstermiş.</p>
-        <p><strong>Uyarı:</strong> Bu çalışma klinik düzeyde cihazlarla yapılmıştır. Ev tipi maskelerin aynı sonuçları vereceği garanti edilemez.</p>
+        <p><strong>🔑 Anahtar Çalışma — Papageorgiou ve ark. (2000):</strong></p>
+        <p><strong>107</strong> hasta. Mavi ışık (415 nm), mavi-kırmızı kombo, plasebo ve benzoil peroksit (%5) karşılaştırılmış.</p>
+        <p><strong>Sonuç:</strong> Mavi-kırmızı kombo iltihaplı lezyonlarda <strong>%76</strong> azalma sağladı — benzoil peroksidin %58'lik sonucundan üstün.</p>
+        <p><strong>Dikkat:</strong> Bu çalışma klinik cihazlarla yapıldı. Ev tipi maskelerin aynı sonuçları vereceği garanti edilemez.</p>
     </div>
 
-    <h3 class="fade-in">Diğer İddialar <span class="kanit-badge kanit-yetersiz">Yetersiz ❌</span></h3>
+    <h3 class="fade-in">🚫 Diğer İddialar <span class="kanit-badge kanit-yetersiz">Yetersiz ❌</span></h3>
 
     <p class="fade-in">
-        LED maskelerin "hiperpigmentasyon tedavisi", "rosacea kontrolü", "gözenek küçültme" gibi iddia edilen etkileri için güçlü klinik kanıt <strong>bulunmamaktadır.</strong> Bireysel vaka raporları veya çok küçük örneklemli pilot çalışmalar dışında sistematik kanıt yoktur.
+        "Leke giderme", "rosacea kontrolü", "gözenek küçültme" gibi iddialar için güçlü bilimsel kanıt <strong>yok.</strong> Birkaç küçük pilot çalışma dışında sistematik veri bulunmuyor.
     </p>
+
+    <div class="verdict-card verdict-al fade-in">
+        <div class="verdict-emoji">✅</div>
+        <div class="verdict-label">LED Kırmızı + NIR: Alabilirsiniz</div>
+        <div class="verdict-text">Anti-aging kanıtı gerçek ama mütevazı. Realist beklentilerle, kaliteli bir cihaz seçerseniz mantıklı yatırım. Akne için mavi ışık da etkili.</div>
+    </div>
+
+    <div class="verdict-card verdict-gec fade-in">
+        <div class="verdict-emoji">❌</div>
+        <div class="verdict-label">LED Yeşil + Sarı: Geçin</div>
+        <div class="verdict-text">Kanıt yok. "7 renk" pazarlamasına kanmayın — paranızı kırmızı + NIR'a harcayın.</div>
+    </div>
 
     <!-- 5. Ev vs Profesyonel -->
-    <h2 id="ev-vs-profesyonel" class="fade-in">5. Ev Tipi vs. Profesyonel Cihazlar</h2>
+    <h2 id="ev-vs-profesyonel" class="fade-in">5. 🏠 vs 🏥 Ev Tipi vs. Profesyonel: Aradaki Uçurum</h2>
 
     <p class="fade-in">
-        İşte pek konuşulmayan gerçek: klinik çalışmaların büyük çoğunluğu <strong>profesyonel, yüksek güçlü LED panellerle</strong> yapılmıştır. Ev tipi maskeler çok daha düşük enerji yoğunluğunda çalışır.
+        Şimdi işin pek konuşulmayan kısmına geliyoruz. Klinik çalışmaların büyük çoğunluğu <strong>profesyonel, yüksek güçlü LED panellerle</strong> yapılmış. Ev tipi maskeler çok daha düşük güçte çalışıyor.
     </p>
 
-    <h3 class="fade-in">İrradiance: En Kritik Parametre</h3>
+    <h3 class="fade-in">📏 İrradiance: Bilmeniz Gereken Tek Sayı</h3>
 
     <p class="fade-in">
-        <strong>İrradiance</strong> (ışınım yoğunluğu, mW/cm²) bir LED cihazın gerçek "gücünü" gösteren parametredir. Doz ise <strong>fluence</strong> olarak ifade edilir ve şu formülle hesaplanır:
+        <strong>İrradiance</strong> (ışınım yoğunluğu, mW/cm²) = bir LED cihazın gerçek "gücü". Peki ne kadar doz alıyorsunuz?
     </p>
 
     <div class="highlight-box fade-in">
-        <p><strong>Fluence (J/cm²) = İrradiance (mW/cm²) × Süre (saniye) ÷ 1000</strong></p>
-        <p>Örnek: 30 mW/cm² irradiance ile 20 dakika (1200 sn) kullanım = <strong>36 J/cm²</strong></p>
-        <p>Çoğu klinik çalışma <strong>4–60 J/cm²</strong> arasında doz kullanmıştır.</p>
+        <p><strong>Doz Formülü:</strong> Fluence (J/cm²) = İrradiance (mW/cm²) × Süre (saniye) ÷ 1000</p>
+        <p><strong>Örnek:</strong> 30 mW/cm² × 20 dakika (1200 sn) = <strong>36 J/cm²</strong></p>
+        <p>Klinik çalışmaların çoğu <strong>4–60 J/cm²</strong> arasında doz kullanmış.</p>
     </div>
 
     <div class="comparison-table-wrapper fade-in">
@@ -925,30 +1077,33 @@
         </table>
     </div>
 
-    <div class="redflag-box fade-in">
-        <p><strong>🚩 FDA 510(k) clearance ≠ etkinlik onayı!</strong></p>
-        <p>Bazı markalar "FDA onaylı" ifadesini kullanır. 510(k) clearance, cihazın <strong>güvenli</strong> olduğunu gösterir — <strong>etkili</strong> olduğunu değil. Bu iki kavram çok farklıdır. Bir LED maskenin "FDA cleared" olması, cildinizde gözle görülür bir fark yaratacağını garanti etmez.</p>
+    <div class="myth-box fade-in">
+        <div class="myth-q">🤔 "FDA onaylı" demek "etkili" demek mi?</div>
+        <div class="myth-a"><strong>Hayır.</strong> FDA 510(k) clearance, cihazın <strong>güvenli</strong> olduğunu gösterir — <strong>etkili</strong> olduğunu değil. Bir LED maskenin "FDA cleared" olması, cildinizde gözle görülür bir fark yaratacağını garanti etmez. Bu iki kavram çok farklı.</div>
     </div>
 
     <p class="fade-in">
-        <strong>Sonuç:</strong> Ev tipi maskeler, klinik çalışmalarda kullanılan cihazlara göre daha düşük doz verir. Bu, "hiçbir etkisi yok" anlamına gelmez — ancak sonuçların daha yavaş, daha mütevazı ve daha az tahmin edilebilir olmasını beklemek gerekir. Daha uzun ve daha sık kullanımla doz telafisi mümkündür, ancak bunu destekleyen spesifik ev cihazı çalışması azdır.
+        <strong>Kısacası:</strong> Ev tipi maskeler daha düşük doz veriyor. Bu "hiç işe yaramaz" demek değil — ama sonuçların daha yavaş, daha mütevazı olmasını bekleyin. Daha sık kullanarak dozu telafi etmek mümkün olabilir ama bunu destekleyen ev cihazı çalışması az.
     </p>
 
-    <!-- 6. Satın Alma Rehberi -->
-    <h2 id="satin-alma" class="fade-in">6. LED Maske Satın Alma Rehberi</h2>
+    <div class="hap-bilgi fade-in">Ev maskeleri kliniğin 3-10 katı daha düşük güçte. Etkisiz değil ama yavaş, mütevazı ve sabır gerektiriyor.</div>
 
-    <h3 class="fade-in">Nelere Dikkat Etmeli?</h3>
+    <!-- 6. Satın Alma Rehberi -->
+    <h2 id="satin-alma" class="fade-in">6. 🛒 LED Maske Alırken Nelere Dikkat Etmeli?</h2>
+
+    <h3 class="fade-in">✅ Kontrol Listesi</h3>
 
     <ul class="fade-in">
-        <li><strong>İrradiance (mW/cm²):</strong> En önemli parametre. Maalesef çoğu marka bunu <strong>belirtmez.</strong> "Elektrik gücü" (Watt) ile irradiance farklıdır — bir cihazın "36W" olması yüksek irradiance anlamına gelmez.</li>
-        <li><strong>Dalga boyu:</strong> Kırmızı (630–660 nm) ve/veya NIR (830–850 nm) yeterlidir. Akne için mavi (415 nm) ek fayda sağlayabilir. 7 farklı renk gerekmez.</li>
-        <li><strong>LED sayısı ve dağılımı:</strong> Yüze eşit ışık dağılımı önemlidir. Çene altı ve alın bölgeleri genellikle ihmal edilir.</li>
-        <li><strong>Göz koruması:</strong> Mutlaka opak göz koruması veya göz bölgesi kapatma özelliği olmalıdır. LED ışığı gözlere zarar verebilir.</li>
-        <li><strong>Bağımsız test sonuçları:</strong> Markanın kendi "klinik çalışması" yeterli değildir. Bağımsız, hakemli dergilerde yayımlanmış çalışma arayın.</li>
+        <li><strong>İrradiance (mW/cm²) veriliyor mu?</strong> En önemli parametre. Çoğu marka bunu <strong>gizler.</strong> "36W güç" = yüksek irradiance değil — elektrik tüketimi ile ışık yoğunluğu farklı şeyler.</li>
+        <li><strong>Dalga boyu:</strong> Kırmızı (630–660 nm) ve/veya NIR (830–850 nm) yeterli. Akne için mavi (415 nm) eklenebilir. 7 renk gerekmez.</li>
+        <li><strong>LED dağılımı:</strong> Yüze eşit ışık dağılımı önemli. Çene altı ve alın genellikle ihmal edilir.</li>
+        <li><strong>Göz koruması:</strong> Mutlaka opak koruma olmalı. LED ışığı retinaya zarar verebilir.</li>
+        <li><strong>Bağımsız çalışma:</strong> Markanın kendi "testi" değil, hakemli dergilerde yayımlanmış bağımsız araştırma arayın.</li>
     </ul>
 
+    <h3 class="fade-in">🚩 Bu Cihazlardan Uzak Durun</h3>
+
     <div class="redflag-box fade-in">
-        <p><strong>🚩 Kırmızı Bayraklar — Bu Cihazlardan Uzak Durun:</strong></p>
         <p>• "7 farklı renk, 7 farklı tedavi" vaadi — kanıtlanmamış dalga boylarıyla dolu</p>
         <p>• İrradiance değerini hiçbir yerde belirtmeyen markalar</p>
         <p>• "Botox'un yerini alır", "lazer etkisi" gibi mucize iddialar</p>
@@ -956,39 +1111,52 @@
         <p>• Öncesi-sonrası fotoğraflarının hepsi farklı ışık/açıyla çekilmiş</p>
     </div>
 
+    <div class="myth-box fade-in">
+        <div class="myth-q">📱 Instagram vs Gerçek: "Öncesi-sonrası" fotoğraflarına güvenebilir miyim?</div>
+        <div class="myth-a">Çoğuna <strong>hayır.</strong> Ring light karşısında herkesin cildi harika görünür. Sosyal medyadaki LED maske öncesi-sonrası fotoğraflarının büyük çoğunluğu farklı aydınlatma + farklı filtrelerle çekilmiş. Gerçek klinik sonuçlar çok daha mütevazı — ama en azından gerçek.</div>
+    </div>
+
     <!-- 7. LED Protokol -->
-    <h2 id="led-protokol" class="fade-in">7. LED Kullanım Protokolü</h2>
+    <h2 id="led-protokol" class="fade-in">7. 📋 LED Kullanım Rehberi</h2>
 
     <p class="fade-in">
-        Eğer bir LED maske aldıysanız veya almayı düşünüyorsanız, en iyi sonuçlar için tutarlı bir protokol izlemeniz gerekir:
+        Bir LED maske aldıysanız, en iyi sonuç için tutarlı bir rutin şart. İşte adım adım:
     </p>
 
     <ul class="protocol-steps fade-in">
         <li>
             <strong>Cildi temizleyin</strong>
-            Makyaj, krem ve serum kalıntılarını ılık su ve nazik bir temizleyiciyle tamamen çıkarın. LED ışığının doğrudan cilde ulaşması gerekir — arada bir bariyer olmamalıdır.
+            Makyaj ve krem kalıntılarını çıkarın. LED ışığı doğrudan cilde ulaşmalı — arada bariyer olmamalı.
         </li>
         <li>
             <strong>Göz korumasını takın</strong>
-            Cihazla birlikte gelen opak göz korumasını mutlaka kullanın. LED ışığı doğrudan retinaya zarar verebilir. Göz bölgesi silikon kapakları veya ayrı gözlükler kabul edilebilir.
+            LED ışığı retinaya zarar verebilir. Cihazla gelen opak korumayı mutlaka kullanın.
         </li>
         <li>
             <strong>10–20 dakika uygulayın</strong>
-            Çoğu ev tipi maske 10–20 dk seanslar için tasarlanmıştır. Cihazınızın talimatlarını aşmayın — daha uzun ≠ daha iyi. PBM'de "bifazik doz yanıtı" (Arndt-Schulz eğrisi) vardır: aşırı doz ters etki yapabilir.
+            Daha uzun ≠ daha iyi. PBM'de aşırı doz ters etki yapabiliyor (bifazik doz yanıtı). Cihazın talimatlarını aşmayın.
         </li>
         <li>
             <strong>Haftada 3–5 kez tekrarlayın</strong>
-            Tutarlılık kritiktir. Haftada 1 kullanım yeterli doz birikimine ulaşmaz. İdeal sıklık haftada 3–5 kez olup, günlük kullanım da genellikle güvenlidir.
+            Tutarlılık kritik. Haftada 1 kez yeterli doza ulaşmaz. Günlük kullanım da genellikle güvenli.
         </li>
         <li>
             <strong>8–12 hafta sabırlı olun</strong>
-            Kolajen sentezi yavaş bir süreçtir. Göz görülür sonuçlar için minimum 8–12 hafta tutarlı kullanım gerekir. 1 haftada "mucize" görmezseniz cihazı çöpe atmayın — bu normal.
+            Kolajen sentezi yavaş bir süreç. 1 haftada sonuç görmezseniz normal — çöpe atmayın. Minimum <strong>8–12 hafta</strong> verin.
         </li>
         <li>
             <strong>Sonrasında bakım rutininize devam edin</strong>
-            LED sonrası serum, nemlendirici ve (sabahsa) güneş kremi uygulayabilirsiniz. LED, mevcut cilt bakım rutininizin yerine değil, yanına eklenen bir adımdır.
+            LED sonrası serum, nemlendirici ve güneş kremi uygulayın. LED mevcut rutininizin yerine değil, <strong>yanına</strong> eklenen bir adım.
         </li>
     </ul>
+
+    <div class="hap-bilgi fade-in">Temiz cilt + göz koruması + 10-20 dk + haftada 3-5 kez + 8-12 hafta sabır = en iyi sonuç.</div>
+
+    <div class="verdict-card verdict-al fade-in">
+        <div class="verdict-emoji">✅</div>
+        <div class="verdict-label">💸 LED Maske: Paraya Değer mi?</div>
+        <div class="verdict-text">Kaliteli bir kırmızı + NIR maske, realist beklentilerle kullanılırsa mantıklı yatırım. Ama önce retinoid + güneş kremi rutini olsun — bunlar çok daha güçlü kanıta sahip ve çok daha ucuz.</div>
+    </div>
 
     <!-- ==================== BÖLÜM 2: ELEKTROPORASYON ==================== -->
 
@@ -998,41 +1166,53 @@
     </div>
 
     <!-- 8. Elektroporasyon Nedir -->
-    <h2 id="elektroporasyon" class="fade-in">8. Elektroporasyon Nedir?</h2>
+    <h2 id="elektroporasyon" class="fade-in">8. ⚡ Elektroporasyon Nedir?</h2>
 
     <p class="fade-in">
-        Elektroporasyon, kısa süreli elektrik darbeleri (pulse) uygulayarak hücre membranında <strong>geçici gözenekler</strong> (porlar) oluşturma tekniğidir. Bu gözenekler aracılığıyla normalde hücre membranını geçemeyecek büyük moleküller hücre içine taşınabilir.
+        Cildinizin en dış katmanı bir güvenlik duvarı gibi çalışır — bakım ürünlerinin çoğunu dışarıda tutar.
     </p>
 
-    <h3 class="fade-in">Orijinal Kullanım Alanları</h3>
+    <p class="fade-in">
+        Elektroporasyon ne yapıyor? Bu duvarda <strong>geçici minik kapılar</strong> açıyor. Kısa süreli elektrik darbeleriyle hücre zarında anlık gözenekler oluşturuyor. Böylece kremlerdeki faydalı maddeler normalde giremeyecekleri derinliğe ulaşabiliyor.
+    </p>
 
     <p class="fade-in">
-        Elektroporasyon, kozmetik bir teknik olarak başlamamıştır. Orijinal ve en güçlü kanıt tabanı şu alanlardadır:
+        Kapılar birkaç dakika içinde kapanıyor — yani kalıcı hasar yok.
+    </p>
+
+    <div class="hap-bilgi fade-in">Cildin koruma duvarında geçici kapılar açıp ürünlerin daha derinden emilmesini sağlıyor.</div>
+
+    <h3 class="fade-in">🧬 Kozmetik Değil, Tıp Dünyasından Geliyor</h3>
+
+    <p class="fade-in">
+        Elektroporasyon aslında kozmetik bir teknik olarak başlamadı. Kökleri çok daha ciddi alanlarda:
     </p>
 
     <ul class="fade-in">
-        <li><strong>Gen terapisi:</strong> DNA'nın hücre içine aktarılması</li>
-        <li><strong>Elektrokemoterapi:</strong> Kanser ilaçlarının (bleomisin, cisplatin) tümör hücrelerine etkin iletimi — klinik pratikte aktif olarak kullanılıyor</li>
-        <li><strong>İlaç iletimi:</strong> Transdermal ilaç iletiminin artırılması (Prausnitz, 1993)</li>
+        <li><strong>Gen terapisi:</strong> DNA'yı hücre içine aktarmak</li>
+        <li><strong>Elektrokemoterapi:</strong> Kanser ilaçlarını (bleomisin, cisplatin) tümöre iletmek — klinik pratikte aktif kullanılıyor (Serša 2008)</li>
+        <li><strong>İlaç iletimi:</strong> Ciltten ilaç geçişini artırmak (Prausnitz 1993)</li>
     </ul>
 
-    <h3 class="fade-in">Dermatolojide Mekanizma</h3>
+    <h3 class="fade-in">🔬 Ciltte Nasıl Çalışıyor?</h3>
 
     <p class="fade-in">
-        Ciltte elektroporasyon, <strong>stratum corneum</strong>'daki (boynuz tabakası) lipid çift tabakasında geçici pertürbasyon oluşturarak çalışır. Normalde stratum corneum, dış dünyadan gelen maddelerin cilde geçişini engelleyen güçlü bir bariyerdir. Elektrik darbeleri bu bariyerde geçici "kanallar" açar.
+        Cildin en dış tabakası olan <strong>stratum corneum</strong> (boynuz tabakası) çok etkili bir bariyer. Kremlerin çoğunu dışarıda tutar. Elektroporasyon bu bariyerdeki yağ tabakasında geçici "kanallar" açıyor.
     </p>
 
     <div class="highlight-box fade-in">
-        <p><strong>Bilimsel literatürde elektroporasyon (Prausnitz 1993, Denet ve ark. 2004):</strong></p>
-        <p>Laboratuvar ortamında, elektroporasyon moleküllerin transdermal iletimini <strong>"several orders of magnitude"</strong> (yani yüzlerce-binlerce kat) artırabilmektedir. Bu, ilaç iletimi alanında devrim niteliğinde bir bulgudur.</p>
-        <p><strong>Ancak kritik ayrım:</strong> Bu çalışmalar klinik düzeyde, yüksek voltajlı (100–1000 V/cm) pulse jeneratörleriyle ve ilaç molekülleriyle yapılmıştır.</p>
+        <p><strong>Bilim ne diyor? (Prausnitz 1993, Denet 2004):</strong></p>
+        <p>Laboratuvar ortamında elektroporasyon, madde geçişini <strong>yüzlerce-binlerce kat</strong> artırabiliyor. İlaç iletimi alanında devrim niteliğinde bir bulgu.</p>
+        <p><strong>Ama:</strong> Bu çalışmalar klinik düzeyde, yüksek voltajlı (100–1000 V/cm) cihazlarla ve ilaç molekülleriyle yapılmış. Ev cihazlarıyla değil.</p>
     </div>
 
+    <div class="hap-bilgi fade-in">Bilim sağlam: elektroporasyon madde geçişini dramatik artırıyor. Ama kanıtlar klinik cihazlarla, ev cihazlarıyla değil.</div>
+
     <!-- 9. Medicube -->
-    <h2 id="medicube" class="fade-in">9. Medicube AGE-R Booster Pro — Detaylı İnceleme</h2>
+    <h2 id="medicube" class="fade-in">9. 🔍 Medicube AGE-R Booster Pro — Ne Vaat Ediyor, Ne Veriyor?</h2>
 
     <p class="fade-in">
-        Medicube AGE-R Booster Pro, Güney Kore menşeili bir ev tipi çok fonksiyonlu cilt bakım cihazıdır. Özellikle TikTok ve YouTube'da influencer pazarlamasıyla büyük popülerlik kazanmıştır. Altı farklı modu bir arada sunar:
+        Güney Kore'den gelen bu cihaz, özellikle TikTok ve YouTube'da influencer'larla büyük popülerlik kazandı. Altı farklı modu tek cihazda topluyor:
     </p>
 
     <div class="guide-table-wrapper fade-in">
@@ -1080,90 +1260,109 @@
     </div>
 
     <p class="fade-in" style="font-size:0.88rem;color:#64748b;">
-        * LED modu için kırmızı ışık bilimi genel olarak güçlüdür, ancak Medicube'ün küçük LED başlığının yeterli irradiance ve kapsama alanı sağlayıp sağlamadığı belirsizdir. Tam yüz maskeleriyle karşılaştırılamaz.
+        * Kırmızı ışık bilimi genel olarak güçlü ama Medicube'ün küçük LED başlığının yeterli ışık yoğunluğu ve kapsama alanı sağlayıp sağlamadığı belirsiz. Tam yüz maskeleriyle karşılaştırılamaz.
     </p>
 
-    <h3 class="fade-in">Medicube'ün "%785 Artış" İddiası</h3>
+    <h3 class="fade-in">🧐 Medicube'ün "%785 Artış" İddiası</h3>
 
-    <div class="redflag-box fade-in">
-        <p><strong>🚩 Dikkatli değerlendirin!</strong></p>
-        <p>Medicube, elektroporasyon moduyla aktif madde penetrasyonunun "%785 arttığını" iddia etmektedir. Ancak bu rakam şirketin <strong>kendi sponsorlu çalışmasından</strong> gelmektedir.</p>
-        <p>• Bağımsız, hakemli bir dergide yayımlanmış <strong>bağımsız RKÇ değildir</strong></p>
-        <p>• Çalışma metodolojisi, kontrol grubu ve istatistiksel yöntemler şeffaf değildir</p>
-        <p>• Şirket-sponsorlu çalışmalar, bilimsel kanıt hiyerarşisinde düşük güvenilirlik düzeyindedir</p>
-        <p>• Bu, cihazın "işe yaramadığı" anlamına gelmez — ancak "%785" rakamını yüzeysel olarak kabul etmek bilimsel olarak doğru olmaz</p>
+    <div class="myth-box fade-in">
+        <div class="myth-q">🤔 "%785 daha fazla emilim" iddiası doğru mu?</div>
+        <div class="myth-a">Bu rakam Medicube'ün <strong>kendi</strong> çalışmasından geliyor — bağımsız bilim insanlarının değil. Bir marka kendi ürününü test ederse sonuç genelde çok parlak çıkar. Çalışmanın metodolojisi, kontrol grubu ve istatistiksel yöntemleri şeffaf değil. Bağımsız doğrulama olmadan bu rakamı tuz ile alın. 🧂</div>
     </div>
+
+    <p class="fade-in">
+        Bu, cihazın "işe yaramadığı" anlamına gelmiyor. Ama "%785" rakamını olduğu gibi kabul etmek bilimsel olarak doğru olmaz.
+    </p>
 
     <!-- 10. EP Kanıt Gerçeği -->
-    <h2 id="ep-kanit" class="fade-in">10. Elektroporasyon: Kanıt Gerçeği</h2>
+    <h2 id="ep-kanit" class="fade-in">10. 📊 Elektroporasyon: Kanıt Gerçeği</h2>
 
     <p class="fade-in">
-        Elektroporasyon konusunda dürüst bir değerlendirme yapacak olursak, durum "ya işe yarar ya yaramaz" kadar basit değildir. Katmanlar halinde inceleyelim:
+        Elektroporasyon konusunda "ya işe yarar ya yaramaz" demek çok basit kalır. Katman katman bakalım:
     </p>
 
-    <h3 class="fade-in">Laboratuvar Kanıtları <span class="kanit-badge kanit-guclu">Güçlü ✅</span></h3>
-
-    <div class="highlight-box fade-in">
-        <p><strong>Mekanizma bilimsel olarak sağlamdır.</strong></p>
-        <p>Prausnitz (1993) ve Denet ve ark. (2004) gibi çok sayıda çalışma, elektroporasyonun transdermal iletimi dramatik ölçüde artırdığını in vitro ve ex vivo ortamda kesin olarak göstermiştir. Hücre membranında geçici por oluşumu, fizik ve biyoloji açısından tartışmasız bir fenomendir.</p>
-    </div>
-
-    <h3 class="fade-in">Klinik/Medikal Düzey Kanıtlar <span class="kanit-badge kanit-guclu">Güçlü ✅</span></h3>
+    <h3 class="fade-in">🔬 Laboratuvar Kanıtları <span class="kanit-badge kanit-guclu">Güçlü ✅</span></h3>
 
     <p class="fade-in">
-        Klinik elektroporasyon cihazları (yüksek voltaj, kontrollü pulse parametreleri) ile yapılan ilaç iletimi çalışmaları güçlü kanıt tabanına sahiptir. Elektrokemoterapi, bu teknolojinin klinik başarısının en somut örneğidir.
+        Mekanizma bilimsel olarak sağlam. Prausnitz (1993) ve Denet (2004) gibi çok sayıda çalışma, elektroporasyonun madde geçişini dramatik şekilde artırdığını laboratuvar ortamında <strong>kesin olarak</strong> göstermiş. Hücre zarında geçici por oluşumu, fizik ve biyoloji açısından tartışmasız.
     </p>
 
-    <h3 class="fade-in">Ev Tipi Kozmetik Cihazlar <span class="kanit-badge kanit-yetersiz">Yetersiz ❌</span></h3>
-
-    <div class="warning-box fade-in">
-        <p><strong>⚠️ İşte sorun burada başlıyor:</strong></p>
-        <p>• Ev tipi cihazların voltaj ve pulse parametreleri, klinik cihazlardan <strong>çok farklıdır</strong> (güvenlik nedeniyle düşük tutulur)</p>
-        <p>• Klinik çalışmalar ilaç molekülleriyle yapılmıştır — <strong>kozmetik aktiflerle</strong> (hyaluronik asit, C vitamini, niacinamide vb.) yapılmış bağımsız RKÇ sayısı çok azdır</p>
-        <p>• Ev tipi cihazın gerçekten stratum corneum'da yeterli por oluşturup oluşturmadığı bağımsız olarak doğrulanmamıştır</p>
-        <p>• Aktif maddelerin artan penetrasyonunun <strong>klinik olarak anlamlı</strong> bir fark yaratıp yaratmadığı (yani gözle görülür cilt iyileşmesi) ayrı bir sorudur</p>
-    </div>
+    <h3 class="fade-in">🏥 Klinik/Medikal Düzey <span class="kanit-badge kanit-guclu">Güçlü ✅</span></h3>
 
     <p class="fade-in">
-        Reddit r/SkincareAddiction topluluğunun sıkça referans verilen bir özetini burada paylaşmak yerinde olacaktır: <em>"Electroporation is generally well-documented in clinical studies, but there isn't much research specifically for at-home skincare use."</em>
+        Klinik cihazlarla (yüksek voltaj, kontrollü parametreler) yapılan ilaç iletimi çalışmaları güçlü. Elektrokemoterapi bunun en somut başarı örneği — gerçek hastalarda, gerçek sonuçlarla (Serša 2008).
+    </p>
+
+    <h3 class="fade-in">🏠 Ev Tipi Kozmetik Cihazlar <span class="kanit-badge kanit-yetersiz">Yetersiz ❌</span></h3>
+
+    <p class="fade-in">
+        İşte sorun burada başlıyor:
+    </p>
+
+    <ul class="fade-in">
+        <li>Ev cihazlarının voltaj ve darbe parametreleri klinik cihazlardan <strong>çok farklı</strong> (güvenlik nedeniyle düşük tutulmuş)</li>
+        <li>Klinik çalışmalar ilaç molekülleriyle yapılmış — <strong>kozmetik aktiflerle</strong> (hyaluronik asit, C vitamini, niacinamide) bağımsız RKÇ neredeyse yok</li>
+        <li>Ev cihazının gerçekten cilt bariyerinde yeterli kapı açıp açmadığı bağımsız olarak doğrulanmamış</li>
+        <li>Artan emilimin <strong>gözle görülür</strong> bir fark yaratıp yaratmadığı ayrı bir soru</li>
+    </ul>
+
+    <p class="fade-in">
+        Reddit r/SkincareAddiction topluluğunun sık alıntılanan özeti: <em>"Electroporation is generally well-documented in clinical studies, but there isn't much research specifically for at-home skincare use."</em>
     </p>
 
     <div class="highlight-box fade-in">
         <p><strong>Dürüst değerlendirmemiz:</strong></p>
-        <p>Elektroporasyon mekanizması bilimsel olarak sağlamdır. "İşe yaradığına dair mekanizma mantıklı" — bu doğru. Ancak ev tipi kozmetik cihazların etkinliği için güçlü, bağımsız klinik kanıt <strong>henüz yeterli düzeyde değildir.</strong> Bu, "kesinlikle işe yaramaz" demek değildir — "kesinlikle işe yarar" demek de değildir. Kanıt yetersiz.</p>
+        <p>Mekanizma mantıklı. "İşe yaradığına dair bilimsel temel var" — bu doğru. Ama ev tipi kozmetik cihazların etkinliği için güçlü, bağımsız kanıt <strong>henüz yeterli değil.</strong></p>
+        <p>"Kesinlikle işe yaramaz" demiyoruz. "Kesinlikle işe yarar" da demiyoruz. Kanıt yetersiz.</p>
+    </div>
+
+    <div class="hap-bilgi fade-in">Laboratuvarda süper, klinikte harika, ama ev cihazlarında "hâlâ bekliyoruz" seviyesinde. Mantıklı fikir, yetersiz kanıt.</div>
+
+    <div class="verdict-card verdict-dusun fade-in">
+        <div class="verdict-emoji">🤔</div>
+        <div class="verdict-label">💸 Elektroporasyon: Düşünebilirsiniz</div>
+        <div class="verdict-text">Mekanizma mantıklı, muhtemelen zararsız, ama "kesin işe yarıyor" diyecek bağımsız kanıt henüz yok. Bakım rutininize ek olarak deneyebilirsiniz — yerine değil.</div>
     </div>
 
     <!-- 11. Mikrocurrent -->
-    <h2 id="mikrocurrent" class="fade-in">11. Mikrocurrent: Kanıt Değerlendirmesi</h2>
+    <h2 id="mikrocurrent" class="fade-in">11. ⚡ Mikrocurrent: Geçici mi Kalıcı mı?</h2>
 
     <p class="fade-in">
-        Mikrocurrent (mikro-akım), çok düşük amperajlı elektrik akımı (genellikle 10–600 μA) ile dokuları uyarma tekniğidir. Medicube AGE-R Booster Pro'nun mikrocurrent modu, yüz kaslarını "eğitme" ve "lifting" etkisi vaat eder.
+        Mikrocurrent (mikro-akım), çok düşük şiddette elektrik akımı (10–600 μA) ile dokuları uyarma tekniği. Medicube'ün mikrocurrent modu, yüz kaslarını "eğitme" ve "lifting" etkisi vaat ediyor.
     </p>
 
-    <h3 class="fade-in">Kanıtlar Nerede Güçlü?</h3>
+    <h3 class="fade-in">💪 Nerede Güçlü?</h3>
 
     <p class="fade-in">
-        Mikrocurrent, fizyoterapi ve yara iyileşmesi alanında uzun bir geçmişe sahiptir. Düşük amprajlı elektrik akımının yara iyileşmesini hızlandırdığı, kemik rejenerasyonunu desteklediği iyi belgelenmiştir. Bu alandaki kanıtlar güçlüdür.
+        Fizyoterapi ve yara iyileşmesinde uzun bir geçmişi var. Düşük akımın yara iyileşmesini hızlandırdığı ve kemik onarımını desteklediği iyi belgelenmiş (Cheng 1982). Bu alandaki kanıt gerçekten güçlü.
     </p>
 
-    <h3 class="fade-in">Kozmetik "Lifting" Etkisi? <span class="kanit-badge kanit-sinirli">Sınırlı ⚠️</span></h3>
+    <h3 class="fade-in">💆 Kozmetik "Lifting" Etkisi? <span class="kanit-badge kanit-sinirli">Sınırlı ⚠️</span></h3>
 
-    <div class="warning-box fade-in">
-        <p><strong>⚠️ "Workout for your face" metaforu bilimsel olarak yanıltıcıdır.</strong></p>
-        <p>Yüz kasları iskelet kaslarından farklı çalışır — birçoğu cilde doğrudan tutunur (mimik kasları). Vücut kasları gibi "hypertrofi" (büyüme) göstermezler. Mikrocurrent'ın yüz kasları üzerindeki etkisi geçici bir tonus artışıdır — seanslar arasında kaybolur.</p>
+    <div class="myth-box fade-in">
+        <div class="myth-q">🤔 "Yüzünüz için spor salonu" doğru mu?</div>
+        <div class="myth-a"><strong>Yanıltıcı.</strong> Yüz kasları vücut kaslarından farklı — birçoğu doğrudan cilde tutunuyor (mimik kasları). Vücut kasları gibi "büyümezler." Mikrocurrent'ın yaptığı geçici bir tonus artışı — seanslar arasında kaybolur.</div>
     </div>
 
     <ul class="fade-in">
-        <li>Birkaç küçük çalışma, mikrocurrent sonrası geçici "lifting" etkisi bildirmiştir — ancak etki <strong>saatler-günler içinde</strong> kaybolur</li>
-        <li>Kalıcı yüz "lifting" veya "gençleşme" için güçlü bağımsız kanıt yoktur</li>
-        <li>Kolektyif olarak: <strong>geçici etki var, kalıcı sonuç beklemeyin</strong></li>
+        <li>Birkaç küçük çalışma, mikrocurrent sonrası geçici "lifting" etkisi bildirmiş — ama etki <strong>saatler-günler içinde</strong> kayboluyor</li>
+        <li>Kalıcı yüz liftingi veya gençleşme için güçlü bağımsız kanıt yok</li>
+        <li><strong>Özet:</strong> Geçici etki var, kalıcı sonuç beklemeyin</li>
     </ul>
 
+    <div class="hap-bilgi fade-in">Mikrocurrent = önemli bir etkinlik için geçici bir lift. Ertesi gün aynaya bakınca muhtemelen fark görmezsiniz.</div>
+
+    <div class="verdict-card verdict-dusun fade-in">
+        <div class="verdict-emoji">😐</div>
+        <div class="verdict-label">💸 Mikrocurrent: Düşünün Ama Beklentinizi Düşürün</div>
+        <div class="verdict-text">Geçici tonus artışı var — kalıcı lifting yok. Özel bir gün öncesi için olabilir. Günlük rutin olarak: büyük beklenti büyük hayal kırıklığı.</div>
+    </div>
+
     <!-- 12. Sonuç -->
-    <h2 id="sonuc" class="fade-in">12. Dürüst Sonuç ve Tavsiyeler</h2>
+    <h2 id="sonuc" class="fade-in">12. 🏁 Dürüst Sonuç: Ne Almalı, Ne Geçmeli?</h2>
 
     <p class="fade-in">
-        İki teknolojiyi de değerlendirdikten sonra, kanıta dayalı sonuçlarımızı tablo halinde özetleyelim:
+        Tüm teknolojiyi değerlendirdik. İşte kanıta dayalı sonuç tablosu:
     </p>
 
     <div class="guide-table-wrapper fade-in">
@@ -1189,7 +1388,7 @@
                 <tr>
                     <td><strong>Elektroporasyon (ev tipi)</strong></td>
                     <td><span class="kanit-badge kanit-sinirli">Sınırlı ⚠️</span></td>
-                    <td>Mekanizma sağlam, ev cihazı etkinliği kanıt yetersiz ama muhtemelen zararsız.</td>
+                    <td>Mekanizma sağlam, ev cihazı kanıtı yetersiz ama muhtemelen zararsız.</td>
                 </tr>
                 <tr>
                     <td><strong>Mikrocurrent</strong></td>
@@ -1205,65 +1404,67 @@
         </table>
     </div>
 
-    <h3 class="fade-in">Altın Kurallar</h3>
+    <h3 class="fade-in">🏆 Altın Kural</h3>
 
     <div class="highlight-box fade-in">
-        <p><strong>🏆 Hiçbir cihaz, kanıtlanmış temel bakımın yerini almaz:</strong></p>
-        <p>Cilt bakımının "altın üçgeni" hâlâ <strong>retinoid + güneş kremi (SPF 30+) + nemlendirici</strong>'dir. Bu üç adımın kanıt tabanı, herhangi bir ev tipi cihazdan çok daha güçlüdür.</p>
-        <p>LED maskeleri ve elektroporasyon cihazları, bu temel bakımın <strong>yanına</strong> düşünülebilir — <strong>yerine</strong> asla.</p>
+        <p><strong>Hiçbir cihaz temel bakımın yerini almaz:</strong></p>
+        <p>Cilt bakımının "altın üçgeni" hâlâ <strong>retinoid + güneş kremi (SPF 30+) + nemlendirici.</strong> Bu üç adımın bilimsel kanıt tabanı, herhangi bir ev cihazından çok daha güçlü.</p>
+        <p>LED maskeleri ve elektroporasyon cihazları bu temel rutinin <strong>yanına</strong> düşünülebilir — <strong>yerine</strong> asla.</p>
     </div>
 
-    <h3 class="fade-in">Fiyat/Performans Değerlendirmesi</h3>
+    <h3 class="fade-in">💰 Peki Paraya Değer mi?</h3>
 
     <ul class="fade-in">
-        <li><strong>Kaliteli LED maske (3.000–10.000 ₺):</strong> Anti-aging için en iyi kanıt/fiyat oranı. Kırmızı + NIR seçin, irradiance değerini araştırın.</li>
-        <li><strong>Medicube AGE-R Booster Pro (~5.000–7.000 ₺):</strong> Çok modlu cihaz. Kanıt düzeyi düşük ama zararsız. "Zaten bakım rutiniyle ilgileniyorum, ekstra bir şey denemek istiyorum" diyenler için.</li>
-        <li><strong>Aynı bütçeyle:</strong> 1 yıllık iyi bir retinoid serum + SPF + C vitamini serumu ≈ 3.000–5.000 ₺. Kanıt açısından çok daha güçlü yatırım.</li>
+        <li><strong>Kaliteli LED maske (3.000–10.000 ₺):</strong> Anti-aging için en iyi kanıt/fiyat oranı. Kırmızı + NIR seçin, irradiance'ı araştırın.</li>
+        <li><strong>Medicube AGE-R Booster Pro (~5.000–7.000 ₺):</strong> Kanıt düzeyi düşük ama zararsız. "Zaten ilgileniyorum, ekstra bir şey denemek istiyorum" diyenler için.</li>
+        <li><strong>Aynı bütçeyle alternatif:</strong> 1 yıllık iyi bir retinoid serum + SPF + C vitamini serumu ≈ 3.000–5.000 ₺. Kanıt açısından <strong>çok daha güçlü</strong> yatırım.</li>
     </ul>
 
-    <div class="redflag-box fade-in">
-        <p><strong>🚩 Instagram sonuçları genelde ışık + filtre etkisidir.</strong></p>
-        <p>Sosyal medyada gördüğünüz "LED maske öncesi-sonrası" fotoğraflarının büyük çoğunluğu farklı aydınlatma koşullarında, farklı filtrelerle çekilmiştir. Ring light karşısında herkesin cildi harika görünür. Gerçek klinik çalışmalarda sonuçlar çok daha mütevazıdır — ama gerçektir.</p>
+    <div class="myth-box fade-in">
+        <div class="myth-q">📱 Instagram vs Gerçek: Sonuçlar neden sosyal medyada inanılmaz görünüyor?</div>
+        <div class="myth-a">Ring light + filtre + farklı açı = mucize. Gerçek klinik çalışmalarda sonuçlar çok daha mütevazı. LED maskeler gerçekten bir şey yapıyor — ama Instagram'daki kadar dramatik değil. Öncesi-sonrası fotoğraflarına değil, hakemli çalışmalara güvenin.</div>
     </div>
 
     <!-- 13. Güvenlik -->
-    <h2 id="guvenlik" class="fade-in">13. Güvenlik ve Kontrendikasyonlar</h2>
+    <h2 id="guvenlik" class="fade-in">13. 🛑 Güvenlik ve Kontrendikasyonlar</h2>
 
     <p class="fade-in">
-        Her iki teknoloji de genel olarak güvenli kabul edilir, ancak bazı durumlarda <strong>kesinlikle kullanılmamalıdır:</strong>
+        Her iki teknoloji de genel olarak güvenli. Ama bazı durumlarda <strong>kesinlikle kullanılmamalı.</strong> İşte bilmeniz gerekenler:
     </p>
 
-    <h3 class="fade-in">LED Maskeleri: Güvenlik Uyarıları</h3>
+    <h3 class="fade-in">💡 LED Maskeleri: Kim Kullanmamalı?</h3>
 
     <div class="redflag-box fade-in">
         <p><strong>🔴 LED Kontrendikasyonları:</strong></p>
         <p>• <strong>Göz koruması olmadan kullanmayın</strong> — LED ışığı retina hasarına neden olabilir</p>
-        <p>• <strong>Fotosensitif ilaçlar:</strong> Doksisiklin, izotretinoin, bazı NSAİİ'ler ve diğer fotosensitize edici ilaçları kullanıyorsanız dikkatli olun, dermatoloğunuza danışın</p>
-        <p>• <strong>Melazma + mavi ışık uyarısı:</strong> Duteil ve ark. (2014), mavi ışığın melanositleri uyararak melazmanın kötüleşmesine neden olabileceğini göstermiştir. Melazma hastalarında mavi ışık LED kullanmayın!</p>
-        <p>• <strong>Epilepsi:</strong> Flaş/titreşim modları epileptik nöbetleri tetikleyebilir</p>
-        <p>• <strong>Aktif herpes simplex:</strong> LED ışığının herpes reaktivasyonunu tetikleyebileceğine dair olgu raporları vardır</p>
+        <p>• <strong>Işığa duyarlılık yapan ilaçlar:</strong> Doksisiklin, izotretinoin ve bazı ağrı kesiciler cildi ışığa duyarlı yapar — dermatoloğunuza danışın</p>
+        <p>• <strong>Melazma + mavi ışık:</strong> 2014'teki bir çalışmada (Duteil) mavi ışığın lekeleri kötüleştirebildiği gösterildi. Melazmanız varsa mavi ışıktan uzak durun!</p>
+        <p>• <strong>Epilepsi:</strong> Flaş/titreşim modları nöbet tetikleyebilir</p>
+        <p>• <strong>Aktif uçuk:</strong> LED ışığının herpes reaktivasyonunu tetikleyebileceğine dair raporlar var</p>
     </div>
 
-    <h3 class="fade-in">Elektroporasyon/Mikrocurrent: Güvenlik Uyarıları</h3>
+    <h3 class="fade-in">⚡ Elektroporasyon / Mikrocurrent: Kim Kullanmamalı?</h3>
 
     <div class="redflag-box fade-in">
         <p><strong>🔴 Elektroporasyon ve Mikrocurrent Kontrendikasyonları:</strong></p>
-        <p>• <strong>Kalp pili (pacemaker):</strong> Elektrik akımı pacemaker'ın çalışmasını bozabilir — kesin kontrendikasyon</p>
-        <p>• <strong>Metal implantlar:</strong> Yüz bölgesinde metal implant (diş teli dahil) varsa dikkatli olun</p>
-        <p>• <strong>Hamilelik:</strong> Güvenlik verisi yetersiz — kullanmayın</p>
-        <p>• <strong>Aktif enfeksiyon/açık yara:</strong> Enfeksiyonu yayabilir veya kötüleştirebilir</p>
-        <p>• <strong>Hassas/bariyer bozuk cilt:</strong> Dermatit, egzama, rozasea alevlenme dönemlerinde kullanmayın</p>
-        <p>• <strong>Kanser/tümör:</strong> Uygulama bölgesinde kanser öyküsü varsa kullanmayın</p>
+        <p>• <strong>Kalp pili (pacemaker):</strong> Elektrik akımı pacemaker'ı bozabilir — kesin kontrendikasyon</p>
+        <p>• <strong>Metal implantlar:</strong> Yüz bölgesinde metal implant (diş teli dahil) varsa dikkat</p>
+        <p>• <strong>Hamilelik:</strong> Güvenlik verisi yeterli değil — kullanmayın</p>
+        <p>• <strong>Açık yara / aktif enfeksiyon:</strong> Enfeksiyonu yayabilir</p>
+        <p>• <strong>Bariyer bozuk cilt:</strong> Dermatit, egzama, rozasea alevlenme dönemlerinde kullanmayın</p>
+        <p>• <strong>Kanser:</strong> Uygulama bölgesinde kanser öyküsü varsa kullanmayın</p>
     </div>
 
     <div class="warning-box fade-in">
-        <p><strong>⚠️ Her iki cihaz türü için geçerli genel kural:</strong></p>
-        <p>Cilt bariyeriniz bozuksa (kızarıklık, soyulma, yanma hissi, aktif dermatit) <strong>hiçbir cihaz kullanmayın.</strong> Önce cilt bariyerini onarmaya odaklanın (nemlendirici, seramid, bariyere zarar veren aktiflerden uzak durma). Bariyer sağlıklı olduğunda cihaz kullanımına başlayabilirsiniz.</p>
+        <p><strong>⚠️ Her iki cihaz için geçerli genel kural:</strong></p>
+        <p>Cilt bariyeriniz bozuksa (kızarıklık, soyulma, yanma hissi) <strong>hiçbir cihaz kullanmayın.</strong> Önce bariyeri onarın (nemlendirici, seramid, aktiflerden uzak durma). Bariyer sağlıklı olduğunda cihaz kullanımına geçin.</p>
     </div>
+
+    <div class="hap-bilgi fade-in">Cilt bariyeri bozuksa → önce onar, sonra cihaz kullan. Kalp pili, hamilelik, epilepsi, aktif enfeksiyon = kesin hayır.</div>
 
     <!-- 14. Kaynaklar -->
     <div class="references fade-in">
-        <h2 id="kaynaklar">Kaynaklar</h2>
+        <h2 id="kaynaklar">📚 Kaynaklar</h2>
         <ol>
             <li>Hamblin MR. Mechanisms and applications of the anti-inflammatory effects of photobiomodulation. <em>AIMS Biophys.</em> 2017;4(3):337-361. doi:10.3934/biophy.2017.3.337</li>
             <li>Karu TI. Primary and secondary mechanisms of action of visible to near-IR radiation on cells. <em>J Photochem Photobiol B.</em> 1999;49(1):1-17. doi:10.1016/S1011-1344(98)00219-X</li>
