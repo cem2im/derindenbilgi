@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akne Şiddeti Değerlendirmesi — İnteraktif Araç | Derindenbilgi</title>
+    <meta name="description" content="Aknenizin şiddetini değerlendirin ve kişiselleştirilmiş tedavi yol haritası alın. GEA skalasına dayalı interaktif akne değerlendirme aracı.">
+    <meta name="keywords" content="akne şiddeti, akne değerlendirme, akne testi, akne tedavisi, komedon, papül, püstül, nodül, kist, GEA skala, dermatoloji">
+    <meta property="og:title" content="Akne Şiddeti Değerlendirmesi — İnteraktif Araç">
+    <meta property="og:description" content="Aknenizin şiddetini değerlendirin ve kişiselleştirilmiş tedavi yol haritası alın.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #ef4444, #f59e0b);
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== ARTICLE HERO ===== */
+        .article-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(245,158,11,0.1));
+            color: #dc2626;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: var(--text-t);
+            font-weight: 500;
+        }
+        .article-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #92400e;
+            margin: 0 0 2rem;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ===== TOOL CONTAINER ===== */
+        .tool-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        /* ===== STEP PROGRESS ===== */
+        .step-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 2rem;
+        }
+        .step-dot {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text-t);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 2;
+        }
+        .step-dot.active {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 0 4px rgba(13,148,136,0.15);
+        }
+        .step-dot.done {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+        .step-line {
+            width: 60px;
+            height: 2px;
+            background: var(--border);
+            transition: background 0.4s ease;
+        }
+        .step-line.done {
+            background: var(--accent);
+        }
+
+        /* ===== STEP PANELS ===== */
+        .step-panel {
+            display: none;
+            animation: fadeSlideIn 0.5s ease;
+        }
+        .step-panel.active {
+            display: block;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .step-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-s);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* ===== LESION CARDS ===== */
+        .lesion-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 1.5rem;
+        }
+        .lesion-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--bg);
+            position: relative;
+        }
+        .lesion-card:hover {
+            border-color: rgba(13,148,136,0.4);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .lesion-card.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.04);
+            box-shadow: 0 0 0 3px rgba(13,148,136,0.12);
+        }
+        .lesion-card .check-mark {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+        .lesion-card.selected .check-mark {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+        .lesion-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .lesion-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+        .lesion-aka {
+            font-size: 0.78rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .lesion-desc {
+            font-size: 0.82rem;
+            color: var(--text-s);
+            line-height: 1.5;
+        }
+        .lesion-severity {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .sev-noninflam { background: #dbeafe; color: #1e40af; }
+        .sev-inflam { background: #fef3c7; color: #92400e; }
+        .sev-severe { background: #fee2e2; color: #991b1b; }
+
+        /* ===== OPTION CARDS ===== */
+        .option-group {
+            margin-bottom: 1.5rem;
+        }
+        .option-group-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .option-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .option-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            background: var(--bg);
+        }
+        .option-card:hover {
+            border-color: rgba(13,148,136,0.3);
+            background: rgba(13,148,136,0.02);
+        }
+        .option-card.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.05);
+        }
+        .option-radio {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+        }
+        .option-card.selected .option-radio {
+            border-color: var(--accent);
+            background: var(--accent);
+        }
+        .option-radio::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+        .option-card.selected .option-radio::after {
+            opacity: 1;
+        }
+        .option-text {
+            flex: 1;
+        }
+        .option-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .option-desc {
+            font-size: 0.82rem;
+            color: var(--text-s);
+            margin-top: 0.15rem;
+        }
+
+        /* ===== CHECKBOX OPTION ===== */
+        .checkbox-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1.15rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--bg);
+        }
+        .checkbox-card:hover {
+            border-color: rgba(13,148,136,0.3);
+        }
+        .checkbox-card.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.05);
+        }
+        .checkbox-box {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+            font-size: 0.7rem;
+            color: transparent;
+        }
+        .checkbox-card.selected .checkbox-box {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* ===== AREA SELECT ===== */
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+        .area-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--bg);
+        }
+        .area-card:hover {
+            border-color: rgba(13,148,136,0.3);
+            transform: translateY(-2px);
+        }
+        .area-card.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.05);
+            box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
+        }
+        .area-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .area-name { font-size: 0.9rem; font-weight: 600; color: #0f172a; }
+
+        /* ===== SCIENCE NOTE ===== */
+        .science-note {
+            background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-size: 0.88rem;
+            color: var(--accent-dark);
+        }
+        .science-note strong {
+            color: #0f766e;
+        }
+
+        /* ===== NAV BUTTONS ===== */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+        }
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13,148,136,0.3);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-s);
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* ===== RESULTS ===== */
+        .result-container {
+            animation: fadeSlideIn 0.6s ease;
+        }
+
+        .severity-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+        .sev-hafif { background: #dcfce7; color: #166534; border: 2px solid #86efac; }
+        .sev-orta { background: #fef3c7; color: #92400e; border: 2px solid #fde68a; }
+        .sev-siddetli { background: #fed7aa; color: #9a3412; border: 2px solid #fdba74; }
+        .sev-cok-siddetli { background: #fecaca; color: #991b1b; border: 2px solid #fca5a5; }
+
+        /* ===== SEVERITY METER ===== */
+        .severity-meter {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .meter-bar {
+            height: 16px;
+            border-radius: 999px;
+            background: #e2e8f0;
+            overflow: hidden;
+            margin: 0.75rem 0;
+            position: relative;
+        }
+        .meter-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 1s ease, background 1s ease;
+            position: relative;
+        }
+        .meter-fill::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: inherit;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .meter-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-t);
+        }
+
+        /* ===== TREATMENT ROADMAP ===== */
+        .roadmap {
+            margin: 1.5rem 0;
+        }
+        .roadmap-step {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            position: relative;
+        }
+        .roadmap-step:last-child { border-bottom: none; }
+        .roadmap-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            color: #fff;
+        }
+        .roadmap-content { flex: 1; }
+        .roadmap-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+        .roadmap-desc {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.5;
+        }
+
+        /* ===== DOCTOR WARNING ===== */
+        .doctor-warning {
+            background: linear-gradient(135deg, #fef2f2, #fff1f2);
+            border: 2px solid #fca5a5;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .doctor-warning-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        .doctor-warning-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 0.35rem;
+        }
+        .doctor-warning-text {
+            font-size: 0.9rem;
+            color: #7f1d1d;
+            line-height: 1.6;
+        }
+
+        /* ===== RESULT CARD ===== */
+        .result-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .result-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ===== ACTION BUTTONS ===== */
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.15rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text-s);
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .btn-action:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(13,148,136,0.04);
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, rgba(13,148,136,0.04), rgba(99,102,241,0.04));
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            margin: 1.5rem 0;
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent);
+        }
+        .link-card-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        .link-card-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+        }
+        .link-card-desc {
+            font-size: 0.82rem;
+            color: var(--text-s);
+            margin-top: 0.2rem;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: #0f172a;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            white-space: nowrap;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .article-hero h1 { font-size: 1.65rem; }
+            .article-hero { padding: 2rem 1.25rem 1.5rem; }
+            .tool-container { padding: 0 1.25rem 2rem; }
+            .lesion-grid { grid-template-columns: 1fr; }
+            .area-grid { grid-template-columns: 1fr 1fr 1fr; }
+            .header-nav { display: none; }
+            .step-line { width: 30px; }
+            .step-dot { width: 38px; height: 38px; font-size: 0.8rem; }
+            .action-buttons { flex-direction: column; }
+            .btn-action { justify-content: center; }
+        }
+        @media (max-width: 480px) {
+            .area-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="article-hero">
+    <div class="article-meta">
+        <span class="category-badge">🔴 İnteraktif Araç</span>
+        <span class="read-time">⏱ ~3 dakika · GEA Skalası temel alınmıştır</span>
+    </div>
+    <h1>Akne Şiddeti Değerlendirmesi</h1>
+    <p class="article-subtitle">Akneniz hafif mi, orta mı, şiddetli mi? 3 adımlık bu interaktif araçla akne şiddetinizi değerlendirin ve kişiselleştirilmiş tedavi yol haritası alın. Sonuçlarınızı kopyalayıp dermatoloğunuzla paylaşabilirsiniz.</p>
+</section>
+
+<!-- TOOL -->
+<div class="tool-container">
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span class="disclaimer-icon">⚠️</span>
+        <div><strong>Bu araç tanı amaçlı değildir.</strong> Sadece genel bir yönlendirme sağlar. Kesin tanı ve tedavi için mutlaka bir dermatoloji uzmanına başvurun. GEA (Global Evaluation Acne) skalası basitleştirilerek uyarlanmıştır.</div>
+    </div>
+
+    <!-- STEP PROGRESS -->
+    <div class="step-progress">
+        <div class="step-dot active" id="dot-1">1</div>
+        <div class="step-line" id="line-1"></div>
+        <div class="step-dot" id="dot-2">2</div>
+        <div class="step-line" id="line-2"></div>
+        <div class="step-dot" id="dot-3">3</div>
+        <div class="step-line" id="line-3"></div>
+        <div class="step-dot" id="dot-4">✓</div>
+    </div>
+
+    <!-- ========== STEP 1: LEZYON TİPİ ========== -->
+    <div class="step-panel active" id="step-1">
+        <div class="step-title">🔬 Adım 1: Lezyon Tipinizi Belirleyin</div>
+        <div class="step-subtitle">Cildinizde hangi tip akne lezyonları var? Birden fazla seçebilirsiniz. Her kartı dikkatle okuyun ve cildinize en uygun olanları işaretleyin.</div>
+
+        <div class="lesion-grid">
+            <div class="lesion-card" onclick="toggleLesion(this, 'acik-komedon')" data-type="acik-komedon">
+                <div class="check-mark">✓</div>
+                <div class="lesion-icon">⚫</div>
+                <div class="lesion-name">Açık Komedon</div>
+                <div class="lesion-aka">Siyah nokta (Blackhead)</div>
+                <div class="lesion-desc">Gözenek açık, yüzeyde siyah/koyu nokta. Okside sebum nedeniyle koyu renk alır. Kabarıklık yok.</div>
+                <div class="lesion-severity sev-noninflam">Non-inflamatuar</div>
+            </div>
+
+            <div class="lesion-card" onclick="toggleLesion(this, 'kapali-komedon')" data-type="kapali-komedon">
+                <div class="check-mark">✓</div>
+                <div class="lesion-icon">⚪</div>
+                <div class="lesion-name">Kapalı Komedon</div>
+                <div class="lesion-aka">Beyaz nokta (Whitehead)</div>
+                <div class="lesion-desc">Gözenek kapalı, cilt altında küçük beyaz/ten rengi kabartı. Sıkınca çıkmaz, dokunulduğunda hissedilir.</div>
+                <div class="lesion-severity sev-noninflam">Non-inflamatuar</div>
+            </div>
+
+            <div class="lesion-card" onclick="toggleLesion(this, 'papul')" data-type="papul">
+                <div class="check-mark">✓</div>
+                <div class="lesion-icon">🔴</div>
+                <div class="lesion-name">Papül</div>
+                <div class="lesion-aka">Kırmızı kabartı</div>
+                <div class="lesion-desc">Küçük (<5mm), kırmızı, kabarık, dokunulduğunda ağrılı olabilen lezyon. İltihaplı ama içinde görünür cerahat yok.</div>
+                <div class="lesion-severity sev-inflam">İnflamatuar</div>
+            </div>
+
+            <div class="lesion-card" onclick="toggleLesion(this, 'pustul')" data-type="pustul">
+                <div class="check-mark">✓</div>
+                <div class="lesion-icon">🟡</div>
+                <div class="lesion-name">Püstül</div>
+                <div class="lesion-aka">Cerahatli sivilce</div>
+                <div class="lesion-desc">Kırmızı taban üzerinde sarı/beyaz cerahatli başı olan lezyon. Papülden farkı: içinde görünür cerahat var.</div>
+                <div class="lesion-severity sev-inflam">İnflamatuar</div>
+            </div>
+
+            <div class="lesion-card" onclick="toggleLesion(this, 'nodul')" data-type="nodul">
+                <div class="check-mark">✓</div>
+                <div class="lesion-icon">🟤</div>
+                <div class="lesion-name">Nodül</div>
+                <div class="lesion-aka">Derin sert şişlik</div>
+                <div class="lesion-desc">Deri altında büyük (>5mm), sert, ağrılı kitle. Yüzeyde cerahat görünmez. Derinin derin katmanlarında oluşur, iz bırakma riski yüksek.</div>
+                <div class="lesion-severity sev-severe">Şiddetli</div>
+            </div>
+
+            <div class="lesion-card" onclick="toggleLesion(this, 'kist')" data-type="kist">
+                <div class="check-mark">✓</div>
+                <div class="lesion-icon">🔵</div>
+                <div class="lesion-name">Kist</div>
+                <div class="lesion-aka">Derin cerahatli kitle</div>
+                <div class="lesion-desc">Büyük (>5mm), derin, ağrılı, içi cerahat dolu yumuşak kitle. Çoğunlukla iz bırakır. En şiddetli akne lezyonu.</div>
+                <div class="lesion-severity sev-severe">Şiddetli</div>
+            </div>
+        </div>
+
+        <div class="science-note">
+            <strong>🔬 Bilimsel Not:</strong> Akne lezyonları iki ana gruba ayrılır: <strong>non-inflamatuar</strong> (komedonlar — siyah/beyaz nokta) ve <strong>inflamatuar</strong> (papül, püstül, nodül, kist). Nodül ve kist varlığı GEA skalasında otomatik olarak "şiddetli" kategorisine girer (Dréno B, et al. <em>Dermatology</em>, 2003).
+        </div>
+
+        <div class="nav-buttons">
+            <div></div>
+            <button class="btn btn-primary" id="btn-next-1" onclick="goToStep(2)" disabled>Sonraki Adım →</button>
+        </div>
+    </div>
+
+    <!-- ========== STEP 2: YAYGINLIK ========== -->
+    <div class="step-panel" id="step-2">
+        <div class="step-title">📍 Adım 2: Yaygınlık ve Yoğunluk</div>
+        <div class="step-subtitle">Akne lezyonlarınız nerelerde ve ne yoğunlukta? Bu adım, aknenizin yüzeysel dağılımını ve şiddetini anlamaya yardımcı olur.</div>
+
+        <div class="option-group">
+            <div class="option-group-label">📍 Etkilenen Bölgeler <span style="font-weight:400;color:var(--text-t)">(birden fazla seçebilirsiniz)</span></div>
+            <div class="area-grid">
+                <div class="area-card" onclick="toggleArea(this, 'yuz')">
+                    <div class="area-icon">😶</div>
+                    <div class="area-name">Yüz</div>
+                </div>
+                <div class="area-card" onclick="toggleArea(this, 'sirt')">
+                    <div class="area-icon">🔙</div>
+                    <div class="area-name">Sırt</div>
+                </div>
+                <div class="area-card" onclick="toggleArea(this, 'gogus')">
+                    <div class="area-icon">👕</div>
+                    <div class="area-name">Göğüs</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <div class="option-group-label">📊 Lezyon Yoğunluğu</div>
+            <div class="option-cards" id="density-options">
+                <div class="option-card" onclick="selectOption('density', this, 'az')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Birkaç lezyon</div>
+                        <div class="option-desc">Toplam 10'dan az lezyon, dağınık</div>
+                    </div>
+                </div>
+                <div class="option-card" onclick="selectOption('density', this, 'orta')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Orta sayıda</div>
+                        <div class="option-desc">10-30 lezyon, belirli bölgelerde yoğunlaşmış</div>
+                    </div>
+                </div>
+                <div class="option-card" onclick="selectOption('density', this, 'cok')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Çok sayıda</div>
+                        <div class="option-desc">30'dan fazla lezyon, geniş alana yayılmış</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="science-note">
+            <strong>🔬 Bilimsel Not:</strong> Aknenin birden fazla bölgeyi (yüz + gövde) etkilemesi ve yüksek lezyon yoğunluğu, şiddetin önemli belirteçleridir. Gövde aknesi tek başına topikal tedaviye zor yanıt verir ve genellikle sistemik tedavi gerektirir (Zaenglein AL, et al. <em>J Am Acad Dermatol</em>, 2016).
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="goToStep(1)">← Geri</button>
+            <button class="btn btn-primary" id="btn-next-2" onclick="goToStep(3)" disabled>Sonraki Adım →</button>
+        </div>
+    </div>
+
+    <!-- ========== STEP 3: SÜRE VE GEÇMİŞ ========== -->
+    <div class="step-panel" id="step-3">
+        <div class="step-title">📋 Adım 3: Süre ve Geçmiş</div>
+        <div class="step-subtitle">Aknenizin geçmişini ve diğer faktörleri değerlendirelim. Bu bilgiler tedavi yaklaşımını belirlemede önemlidir.</div>
+
+        <div class="option-group">
+            <div class="option-group-label">⏰ Ne zamandır akneniz var?</div>
+            <div class="option-cards" id="duration-options">
+                <div class="option-card" onclick="selectOption('duration', this, 'yeni')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Yeni başladı</div>
+                        <div class="option-desc">Son birkaç hafta içinde oluştu</div>
+                    </div>
+                </div>
+                <div class="option-card" onclick="selectOption('duration', this, 'aylar')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Birkaç aydır var</div>
+                        <div class="option-desc">1-12 ay arasında devam ediyor</div>
+                    </div>
+                </div>
+                <div class="option-card" onclick="selectOption('duration', this, 'yillar')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Yıllardır var</div>
+                        <div class="option-desc">1 yıldan uzun süredir devam ediyor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <div class="option-group-label">💊 Daha önce tedavi denediniz mi?</div>
+            <div class="option-cards" id="treatment-options">
+                <div class="option-card" onclick="selectOption('treatment', this, 'yok')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Hayır, hiç tedavi denemedim</div>
+                    </div>
+                </div>
+                <div class="option-card" onclick="selectOption('treatment', this, 'topikal')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Topikal tedavi denedim</div>
+                        <div class="option-desc">Kremler, jeller (retinoid, benzoil peroksit vb.)</div>
+                    </div>
+                </div>
+                <div class="option-card" onclick="selectOption('treatment', this, 'oral')">
+                    <div class="option-radio"></div>
+                    <div class="option-text">
+                        <div class="option-title">Hem topikal hem oral tedavi denedim</div>
+                        <div class="option-desc">Antibiyotik, hormonal tedavi vb. kullanıldı</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <div class="option-group-label">🩹 Ek Faktörler <span style="font-weight:400;color:var(--text-t)">(varsa işaretleyin)</span></div>
+            <div class="option-cards" id="extra-options">
+                <div class="checkbox-card" onclick="toggleCheckbox(this, 'skar')">
+                    <div class="checkbox-box">✓</div>
+                    <div class="option-text">
+                        <div class="option-title">Akne izleri / skar var</div>
+                        <div class="option-desc">Çukur, kabartı veya renk değişikliği şeklinde izler</div>
+                    </div>
+                </div>
+                <div class="checkbox-card" onclick="toggleCheckbox(this, 'adet')">
+                    <div class="checkbox-box">✓</div>
+                    <div class="option-text">
+                        <div class="option-title">Adet düzensizliği var (kadınlar)</div>
+                        <div class="option-desc">Düzensiz adet, çene hattında akne alevlenmeleri</div>
+                    </div>
+                </div>
+                <div class="checkbox-card" onclick="toggleCheckbox(this, 'pcos')">
+                    <div class="checkbox-box">✓</div>
+                    <div class="option-text">
+                        <div class="option-title">PCOS belirtileri / tanısı (kadınlar)</div>
+                        <div class="option-desc">Polikistik over sendromu, aşırı kıllanma, saç dökülmesi</div>
+                    </div>
+                </div>
+                <div class="checkbox-card" onclick="toggleCheckbox(this, 'psikolojik')">
+                    <div class="checkbox-box">✓</div>
+                    <div class="option-text">
+                        <div class="option-title">Psikolojik etkileniyor</div>
+                        <div class="option-desc">Aknem sosyal hayatımı, özgüvenimi olumsuz etkiliyor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="science-note">
+            <strong>🔬 Bilimsel Not:</strong> Uzun süredir devam eden, daha önceki tedavilere yanıt vermeyen, skar bırakan ve hormonal belirtilerin eşlik ettiği akne daha agresif tedavi gerektirir. PCOS'un eşlik ettiği aknede hormonal tedavi (anti-androjen) ilk seçeneklerdendir (Zaenglein AL, et al. <em>J Am Acad Dermatol</em>, 2016).
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" onclick="goToStep(2)">← Geri</button>
+            <button class="btn btn-primary" id="btn-calculate" onclick="calculateResult()" disabled>Sonuçları Gör 🎯</button>
+        </div>
+    </div>
+
+    <!-- ========== STEP 4: RESULTS ========== -->
+    <div class="step-panel" id="step-4">
+        <div class="result-container" id="resultContainer"></div>
+    </div>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== STATE =====
+const state = {
+    lesions: new Set(),
+    areas: new Set(),
+    density: null,
+    duration: null,
+    treatment: null,
+    extras: new Set()
+};
+
+// ===== STEP NAVIGATION =====
+function goToStep(step) {
+    // Hide all panels
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('step-' + step).classList.add('active');
+
+    // Update dots
+    for (let i = 1; i <= 4; i++) {
+        const dot = document.getElementById('dot-' + i);
+        dot.classList.remove('active', 'done');
+        if (i < step) dot.classList.add('done');
+        else if (i === step) dot.classList.add('active');
+    }
+
+    // Update lines
+    for (let i = 1; i <= 3; i++) {
+        const line = document.getElementById('line-' + i);
+        line.classList.toggle('done', i < step);
+    }
+
+    // Update progress bar
+    const pct = step === 4 ? 100 : ((step - 1) / 3) * 100;
+    document.getElementById('progressBar').style.width = pct + '%';
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===== STEP 1: LESION TYPE =====
+function toggleLesion(el, type) {
+    el.classList.toggle('selected');
+    if (state.lesions.has(type)) {
+        state.lesions.delete(type);
+    } else {
+        state.lesions.add(type);
+    }
+    document.getElementById('btn-next-1').disabled = state.lesions.size === 0;
+}
+
+// ===== STEP 2: AREA & DENSITY =====
+function toggleArea(el, area) {
+    el.classList.toggle('selected');
+    if (state.areas.has(area)) {
+        state.areas.delete(area);
+    } else {
+        state.areas.add(area);
+    }
+    validateStep2();
+}
+
+function selectOption(key, el, value) {
+    const parent = el.parentElement;
+    parent.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    state[key] = value;
+    if (key === 'density') validateStep2();
+    if (key === 'duration' || key === 'treatment') validateStep3();
+}
+
+function validateStep2() {
+    document.getElementById('btn-next-2').disabled = !(state.areas.size > 0 && state.density);
+}
+
+// ===== STEP 3: DURATION & HISTORY =====
+function toggleCheckbox(el, key) {
+    el.classList.toggle('selected');
+    if (state.extras.has(key)) {
+        state.extras.delete(key);
+    } else {
+        state.extras.add(key);
+    }
+}
+
+function validateStep3() {
+    document.getElementById('btn-calculate').disabled = !(state.duration && state.treatment);
+}
+
+// ===== SCORING ENGINE =====
+function calculateResult() {
+    let score = 0;
+    let hasNoduleCyst = false;
+    let hasInflammatory = false;
+    let isComedo = false;
+
+    // Lesion type scoring
+    if (state.lesions.has('acik-komedon') || state.lesions.has('kapali-komedon')) {
+        score += 1;
+        isComedo = true;
+    }
+    if (state.lesions.has('papul')) {
+        score += 2;
+        hasInflammatory = true;
+    }
+    if (state.lesions.has('pustul')) {
+        score += 3;
+        hasInflammatory = true;
+    }
+    if (state.lesions.has('nodul')) {
+        score += 5;
+        hasNoduleCyst = true;
+        hasInflammatory = true;
+    }
+    if (state.lesions.has('kist')) {
+        score += 6;
+        hasNoduleCyst = true;
+        hasInflammatory = true;
+    }
+
+    // Area scoring
+    score += state.areas.size; // 1-3 points
+
+    // Density scoring
+    if (state.density === 'az') score += 1;
+    else if (state.density === 'orta') score += 3;
+    else if (state.density === 'cok') score += 5;
+
+    // Duration scoring
+    if (state.duration === 'yeni') score += 0;
+    else if (state.duration === 'aylar') score += 1;
+    else if (state.duration === 'yillar') score += 3;
+
+    // Previous treatment
+    if (state.treatment === 'topikal') score += 1;
+    else if (state.treatment === 'oral') score += 2;
+
+    // Extras
+    if (state.extras.has('skar')) score += 2;
+    if (state.extras.has('psikolojik')) score += 1;
+
+    // Determine severity
+    let severity, sevClass, sevEmoji, meterPct, meterColor;
+
+    if (hasNoduleCyst) {
+        // Nodule/cyst = automatic severe or very severe
+        if (score >= 18 || (state.lesions.has('nodul') && state.lesions.has('kist'))) {
+            severity = 'Çok Şiddetli';
+            sevClass = 'sev-cok-siddetli';
+            sevEmoji = '🔴';
+            meterPct = 95;
+            meterColor = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        } else {
+            severity = 'Şiddetli';
+            sevClass = 'sev-siddetli';
+            sevEmoji = '🟠';
+            meterPct = 75;
+            meterColor = 'linear-gradient(135deg, #f97316, #ea580c)';
+        }
+    } else if (!hasInflammatory && isComedo) {
+        // Pure comedonal
+        if (state.density === 'cok' || score >= 10) {
+            severity = 'Orta';
+            sevClass = 'sev-orta';
+            sevEmoji = '🟡';
+            meterPct = 45;
+            meterColor = 'linear-gradient(135deg, #f59e0b, #d97706)';
+        } else {
+            severity = 'Hafif';
+            sevClass = 'sev-hafif';
+            sevEmoji = '🟢';
+            meterPct = 20;
+            meterColor = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        }
+    } else if (hasInflammatory) {
+        // Mixed inflammatory
+        if (score >= 16) {
+            severity = 'Şiddetli';
+            sevClass = 'sev-siddetli';
+            sevEmoji = '🟠';
+            meterPct = 72;
+            meterColor = 'linear-gradient(135deg, #f97316, #ea580c)';
+        } else if (score >= 10) {
+            severity = 'Orta';
+            sevClass = 'sev-orta';
+            sevEmoji = '🟡';
+            meterPct = 50;
+            meterColor = 'linear-gradient(135deg, #f59e0b, #d97706)';
+        } else {
+            severity = 'Hafif';
+            sevClass = 'sev-hafif';
+            sevEmoji = '🟢';
+            meterPct = 25;
+            meterColor = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        }
+    } else {
+        severity = 'Hafif';
+        sevClass = 'sev-hafif';
+        sevEmoji = '🟢';
+        meterPct = 15;
+        meterColor = 'linear-gradient(135deg, #22c55e, #16a34a)';
+    }
+
+    // Build treatment roadmap
+    const roadmap = buildRoadmap(severity, hasNoduleCyst, hasInflammatory, isComedo);
+
+    // Build lesion summary
+    const lesionNames = {
+        'acik-komedon': 'Açık Komedon (Siyah Nokta)',
+        'kapali-komedon': 'Kapalı Komedon (Beyaz Nokta)',
+        'papul': 'Papül',
+        'pustul': 'Püstül',
+        'nodul': 'Nodül',
+        'kist': 'Kist'
+    };
+    const areaNames = { 'yuz': 'Yüz', 'sirt': 'Sırt', 'gogus': 'Göğüs' };
+    const densityNames = { 'az': 'Birkaç lezyon', 'orta': 'Orta sayıda', 'cok': 'Çok sayıda' };
+    const durationNames = { 'yeni': 'Yeni başladı', 'aylar': 'Birkaç aydır', 'yillar': 'Yıllardır' };
+
+    const needsDoctor = severity === 'Orta' || severity === 'Şiddetli' || severity === 'Çok Şiddetli';
+    const needsUrgent = severity === 'Şiddetli' || severity === 'Çok Şiddetli';
+
+    // Extra flags summary
+    const extraLabels = [];
+    if (state.extras.has('skar')) extraLabels.push('İz/skar mevcut');
+    if (state.extras.has('adet')) extraLabels.push('Adet düzensizliği');
+    if (state.extras.has('pcos')) extraLabels.push('PCOS belirtileri');
+    if (state.extras.has('psikolojik')) extraLabels.push('Psikolojik etkilenme');
+
+    // Render results
+    const container = document.getElementById('resultContainer');
+    container.innerHTML = `
+        <div style="text-align:center;margin-bottom:2rem">
+            <div style="font-size:3rem;margin-bottom:0.75rem">${sevEmoji}</div>
+            <div style="margin-bottom:0.75rem"><span class="severity-badge ${sevClass}">${severity} Akne</span></div>
+            <div style="font-size:0.9rem;color:var(--text-s)">Toplam skor: ${score} puan</div>
+        </div>
+
+        <!-- Severity Meter -->
+        <div class="severity-meter">
+            <div style="font-size:0.85rem;font-weight:600;color:var(--text);margin-bottom:0.25rem">Şiddet Göstergesi</div>
+            <div class="meter-bar">
+                <div class="meter-fill" style="width:${meterPct}%;background:${meterColor}"></div>
+            </div>
+            <div class="meter-labels">
+                <span>Hafif</span>
+                <span>Orta</span>
+                <span>Şiddetli</span>
+                <span>Çok Şiddetli</span>
+            </div>
+        </div>
+
+        ${needsDoctor ? `
+        <div class="doctor-warning">
+            <div class="doctor-warning-icon">${needsUrgent ? '🚨' : '👩‍⚕️'}</div>
+            <div>
+                <div class="doctor-warning-title">${needsUrgent ? 'Dermatoloğa Başvurmanız Önerilir!' : 'Dermatoloji Konsültasyonu Önerilir'}</div>
+                <div class="doctor-warning-text">${needsUrgent
+                    ? 'Şiddetli/çok şiddetli akne, kalıcı iz (skar) bırakma riski yüksek olan bir durumdur. İzotretinoin dahil sistemik tedavi seçenekleri ancak dermatolog tarafından değerlendirilebilir. <strong>En kısa sürede bir dermatoloji uzmanına başvurmanızı öneriyoruz.</strong>'
+                    : 'Orta şiddette akne, topikal tedavinin yetersiz kalabileceği ve oral tedavilerin gerekebileceği bir aşamadır. Tedavi planınız için bir dermatoloji uzmanına başvurmanız faydalı olacaktır.'
+                }</div>
+            </div>
+        </div>` : ''}
+
+        <!-- Summary -->
+        <div class="result-card">
+            <div class="result-card-title">📋 Değerlendirme Özeti</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;font-size:0.88rem">
+                <div><span style="color:var(--text-t)">Lezyon tipleri:</span><br><strong>${Array.from(state.lesions).map(l => lesionNames[l]).join(', ')}</strong></div>
+                <div><span style="color:var(--text-t)">Etkilenen bölgeler:</span><br><strong>${Array.from(state.areas).map(a => areaNames[a]).join(', ')}</strong></div>
+                <div><span style="color:var(--text-t)">Yoğunluk:</span><br><strong>${densityNames[state.density]}</strong></div>
+                <div><span style="color:var(--text-t)">Süre:</span><br><strong>${durationNames[state.duration]}</strong></div>
+                ${extraLabels.length > 0 ? `<div style="grid-column:1/-1"><span style="color:var(--text-t)">Ek faktörler:</span><br><strong>${extraLabels.join(' · ')}</strong></div>` : ''}
+            </div>
+        </div>
+
+        <!-- Hormonal note -->
+        ${(state.extras.has('adet') || state.extras.has('pcos')) ? `
+        <div style="background:#faf5ff;border:1px solid #e9d5ff;border-radius:var(--radius-md);padding:1.25rem;margin:1rem 0">
+            <div style="font-size:0.95rem;font-weight:700;color:#7c3aed;margin-bottom:0.5rem">🔬 Hormonal Değerlendirme Önerisi</div>
+            <div style="font-size:0.88rem;color:#6b21a8;line-height:1.6">${state.extras.has('pcos')
+                ? 'PCOS belirtileriniz mevcut. PCOS\'un eşlik ettiği aknede <strong>anti-androjen tedavi</strong> (spironolakton, siproteron asetat) ve <strong>kombine oral kontraseptifler</strong> ilk seçenekler arasındadır. Endokrinoloji ve dermatoloji birlikte değerlendirilmelidir.'
+                : 'Adet düzensizliği, hormonal akneye işaret edebilir. <strong>Hormonal profil (DHEA-S, serbest testosteron, 17-OH progesteron)</strong> bakılması ve gerekirse jinekoloji konsültasyonu önerilir.'
+            }</div>
+        </div>` : ''}
+
+        <!-- Treatment Roadmap -->
+        <div class="result-card">
+            <div class="result-card-title">🗺️ Önerilen Tedavi Yol Haritası</div>
+            <div class="roadmap">
+                ${roadmap.map((step, i) => `
+                <div class="roadmap-step">
+                    <div class="roadmap-num" style="background:${step.color}">${i + 1}</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">${step.title}</div>
+                        <div class="roadmap-desc">${step.desc}</div>
+                    </div>
+                </div>`).join('')}
+            </div>
+            <div style="font-size:0.78rem;color:var(--text-t);font-style:italic;margin-top:0.75rem">Bu yol haritası genel bir yönlendirmedir. Kesin tedavi planı dermatoloğunuz tarafından belirlenmelidir.</div>
+        </div>
+
+        <!-- Scar note -->
+        ${state.extras.has('skar') ? `
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem 1.25rem;margin:1rem 0">
+            <div style="font-size:0.85rem;font-weight:700;color:#92400e;margin-bottom:0.25rem">🩹 Akne İzi (Skar) Notu</div>
+            <div style="font-size:0.88rem;color:#92400e;line-height:1.6">Mevcut akne izleri için <strong>aktif akne kontrol altına alındıktan sonra</strong> skar tedavisi planlanmalıdır. Skar tedavi seçenekleri: fraksiyonel lazer, microneedling, kimyasal peeling, dermal dolgu (atrofik skarlar için). Erken tedavi iz kalma riskini azaltır.</div>
+        </div>` : ''}
+
+        <!-- Link to full guide -->
+        <a href="akne-rehberi.html" class="link-card">
+            <div class="link-card-icon">📖</div>
+            <div>
+                <div class="link-card-title">Akne A'dan Z'ye — Tedavi Rehberi</div>
+                <div class="link-card-desc">Akne patogenezi, kanıt düzeyine göre tedavi seçenekleri, diyet ilişkisi ve daha fazlası. Kapsamlı rehberimizi okuyun →</div>
+            </div>
+        </a>
+
+        <!-- Actions -->
+        <div class="action-buttons">
+            <button class="btn-action" onclick="copyResults()">📋 Sonuçları Kopyala</button>
+            <button class="btn-action" onclick="shareResults()">📤 Paylaş</button>
+            <button class="btn-action" onclick="resetTool()">🔄 Tekrarla</button>
+        </div>
+
+        <!-- Final Disclaimer -->
+        <div class="disclaimer" style="margin-top:1.5rem">
+            <span class="disclaimer-icon">⚠️</span>
+            <div><strong>Bu sonuçlar tanı değildir.</strong> Akne şiddeti değerlendirmesi genel bilgi amaçlıdır ve tıbbi tavsiye niteliği taşımaz. Tedavi kararlarınızı mutlaka bir dermatoloji uzmanı ile birlikte verin.</div>
+        </div>
+    `;
+
+    goToStep(4);
+}
+
+// ===== BUILD ROADMAP =====
+function buildRoadmap(severity, hasNoduleCyst, hasInflammatory, isComedo) {
+    const steps = [];
+
+    if (severity === 'Hafif') {
+        steps.push({
+            title: '🧴 Topikal Retinoid',
+            desc: 'Adapalen %0.1 jel veya tretinoin %0.025 krem — komedon ve hafif inflamatuar akne için birinci basamak. Gece, ince tabaka halinde uygulanır.',
+            color: '#22c55e'
+        });
+        steps.push({
+            title: '🫧 Benzoil Peroksit (%2.5-5)',
+            desc: 'Anti-bakteriyel ve komedolitik etki. Sabah kullanılabilir. Retinoid ile kombinasyonu etkiyi artırır.',
+            color: '#0d9488'
+        });
+        steps.push({
+            title: '☀️ Güneş Koruması',
+            desc: 'Non-komedojenik SPF 30+ her gün. Retinoid kullanırken güneş hassasiyeti artar.',
+            color: '#f59e0b'
+        });
+        steps.push({
+            title: '📅 Kontrol: 8-12 hafta',
+            desc: 'Topikal tedaviler tam etkiyi 8-12 haftada gösterir. Sabırlı olun. Yanıt yoksa dermatoloğa başvurun.',
+            color: '#6366f1'
+        });
+    } else if (severity === 'Orta') {
+        steps.push({
+            title: '👩‍⚕️ Dermatoloji Randevusu',
+            desc: 'Orta şiddette akne için profesyonel değerlendirme önerilir. Tedavi planı kişiselleştirilmelidir.',
+            color: '#0d9488'
+        });
+        steps.push({
+            title: '🧴 Kombine Topikal Tedavi',
+            desc: 'Adapalen + benzoil peroksit sabit kombinasyonu (Epiduo) veya tretinoin + klindamisin. Tek ajandan daha etkilidir.',
+            color: '#22c55e'
+        });
+        steps.push({
+            title: '💊 Oral Antibiyotik Değerlendirmesi',
+            desc: 'Dermatoloğunuz gerekli görürse: doksisiklin veya azitromisin. Topikal ile birlikte, 3 ayı geçmemeli (direnç riski).',
+            color: '#3b82f6'
+        });
+        if (state.extras.has('adet') || state.extras.has('pcos')) {
+            steps.push({
+                title: '💜 Hormonal Tedavi Değerlendirmesi',
+                desc: 'Anti-androjen (spironolakton) veya kombine oral kontraseptif değerlendirilmeli. Hormonal profil gerekli.',
+                color: '#8b5cf6'
+            });
+        }
+        steps.push({
+            title: '📅 Kontrol: 6-8 hafta',
+            desc: 'Oral tedavi yanıtı 6-8 haftada değerlendirilir. Yetersiz yanıtta tedavi basamağı yükseltilir.',
+            color: '#6366f1'
+        });
+    } else if (severity === 'Şiddetli' || severity === 'Çok Şiddetli') {
+        steps.push({
+            title: '🚨 Acil Dermatoloji Randevusu',
+            desc: 'Şiddetli/çok şiddetli akne, kalıcı skar riski nedeniyle erken ve agresif tedavi gerektirir. Geciktirmeyin.',
+            color: '#ef4444'
+        });
+        steps.push({
+            title: '💊 İzotretinoin Değerlendirmesi',
+            desc: hasNoduleCyst
+                ? 'Nodüler/kistik akne, izotretinoin (Roaccutane) endikasyonudur. Tek küratif tedavi seçeneği — dermatoloğunuz uygun görürse.'
+                : 'Diğer tedavilere yanıtsız şiddetli akne, izotretinoin endikasyonu olabilir. Dermatoloğunuz değerlendirecektir.',
+            color: '#dc2626'
+        });
+        if (!hasNoduleCyst) {
+            steps.push({
+                title: '🧴 Yoğun Kombine Tedavi',
+                desc: 'İzotretinoin kararı verilene kadar: topikal retinoid + BPO + oral antibiyotik kombinasyonu başlanabilir.',
+                color: '#0d9488'
+            });
+        }
+        if (state.extras.has('adet') || state.extras.has('pcos')) {
+            steps.push({
+                title: '💜 Hormonal Değerlendirme (Kadın)',
+                desc: 'PCOS/hormonal akne: anti-androjen tedavi, izotretinoin ile birlikte veya alternatif olarak değerlendirilebilir.',
+                color: '#8b5cf6'
+            });
+        }
+        steps.push({
+            title: '🩹 Skar Önleme Stratejisi',
+            desc: 'Aktif akne kontrol altına alınırken skar gelişimini minimalize etmek için erken müdahale önemlidir. Lezyonları sıkmayın.',
+            color: '#f59e0b'
+        });
+        steps.push({
+            title: '📅 Yakın Takip',
+            desc: 'İzotretinoin kullanılıyorsa aylık kan takibi ve dermatolog kontrolü gereklidir. Tedavi süresi genellikle 5-7 aydır.',
+            color: '#6366f1'
+        });
+    }
+
+    return steps;
+}
+
+// ===== COPY RESULTS =====
+function copyResults() {
+    const lesionNames = {
+        'acik-komedon': 'Açık Komedon',
+        'kapali-komedon': 'Kapalı Komedon',
+        'papul': 'Papül',
+        'pustul': 'Püstül',
+        'nodul': 'Nodül',
+        'kist': 'Kist'
+    };
+    const areaNames = { 'yuz': 'Yüz', 'sirt': 'Sırt', 'gogus': 'Göğüs' };
+    const densityNames = { 'az': 'Birkaç lezyon', 'orta': 'Orta sayıda', 'cok': 'Çok sayıda' };
+    const durationNames = { 'yeni': 'Yeni başladı', 'aylar': 'Birkaç aydır', 'yillar': 'Yıllardır' };
+
+    const badge = document.querySelector('.severity-badge');
+    const severity = badge ? badge.textContent.trim() : '';
+
+    let text = `📋 Akne Şiddeti Değerlendirmesi (Derindenbilgi)\n`;
+    text += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    text += `Sonuç: ${severity}\n\n`;
+    text += `Lezyon Tipleri: ${Array.from(state.lesions).map(l => lesionNames[l]).join(', ')}\n`;
+    text += `Bölgeler: ${Array.from(state.areas).map(a => areaNames[a]).join(', ')}\n`;
+    text += `Yoğunluk: ${densityNames[state.density]}\n`;
+    text += `Süre: ${durationNames[state.duration]}\n`;
+
+    const extraLabels = [];
+    if (state.extras.has('skar')) extraLabels.push('İz/skar mevcut');
+    if (state.extras.has('adet')) extraLabels.push('Adet düzensizliği');
+    if (state.extras.has('pcos')) extraLabels.push('PCOS belirtileri');
+    if (state.extras.has('psikolojik')) extraLabels.push('Psikolojik etkilenme');
+    if (extraLabels.length) text += `Ek faktörler: ${extraLabels.join(', ')}\n`;
+
+    text += `\n⚠️ Bu sonuç tanı değildir. Dermatoloğunuzla paylaşabilirsiniz.\n`;
+    text += `🔗 derindenbilgi.com`;
+
+    navigator.clipboard.writeText(text).then(() => {
+        showToast('✅ Sonuçlar kopyalandı!');
+    }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('✅ Sonuçlar kopyalandı!');
+    });
+}
+
+// ===== SHARE =====
+function shareResults() {
+    const badge = document.querySelector('.severity-badge');
+    const severity = badge ? badge.textContent.trim() : '';
+    const text = `Akne şiddetimi değerlendirdim: ${severity}. Dermatoloğumla paylaşacağım! 🔗 Derindenbilgi Akne Şiddeti Değerlendirme Aracı`;
+
+    if (navigator.share) {
+        navigator.share({
+            title: 'Akne Şiddeti Değerlendirmesi — Derindenbilgi',
+            text: text,
+            url: window.location.href
+        }).catch(() => {});
+    } else {
+        navigator.clipboard.writeText(text + '\n' + window.location.href).then(() => {
+            showToast('📤 Paylaşım linki kopyalandı!');
+        });
+    }
+}
+
+// ===== RESET =====
+function resetTool() {
+    state.lesions.clear();
+    state.areas.clear();
+    state.density = null;
+    state.duration = null;
+    state.treatment = null;
+    state.extras.clear();
+
+    // Reset UI
+    document.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
+    document.getElementById('btn-next-1').disabled = true;
+    document.getElementById('btn-next-2').disabled = true;
+    document.getElementById('btn-calculate').disabled = true;
+
+    goToStep(1);
+}
+
+// ===== TOAST =====
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>
