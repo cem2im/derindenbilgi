@@ -62,7 +62,56 @@
 14. "Cildi Detoks Yapmak" Mümkün mü?
 15. Gözenekler Açılır ve Kapanır mı?
 
+## 🔥 2026 TREND KONULAR (Mart 2026 Taraması)
+
+### Viral: "Gece Mumyalama" Trendi — Dermatolog Analizi [YENİ]
+- Kaynak: TikTok viral trend, Milliyet haberi (Şubat 2026)
+- Konu: Çene bandı, kolajen gece maskesi, dudak renklendiricisi, ipek bone ile uyuma akımı
+- İçerik fikri: "Gece Mumyalama Trendi: Dermatolog Ne Diyor?" — riskleri, faydası var mı, bilimsel bakış
+- Format: Blog + araç (checklist: hangi gece ürünleri gerçekten işe yarar?)
+- Neden: Çok viral, tartışmalı, dermatolog görüşü aranıyor
+
+### Well-Aging: Anti-Aging Yerine Zarif Yaş Alma [YENİ]
+- Kaynak: 2026 güzellik trendi, İstanbul Cevahir & sektörel raporlar
+- Konu: "Anti-aging" → "Well-aging" paradigma değişimi. Yaşlanmaya karşı savaşmak yerine bütünsel güzellik
+- İçerik fikri: "Well-Aging Nedir? 2026'nın En Büyük Güzellik Felsefesi"
+- Format: Blog yazısı + Dr. Cansu'nun yaşlanma karşıtı içerikleriyle bağlantılı
+- Neden: Dr. Cansu zaten "Yaşlanma Karşıtı Etki Eden İçerikler" videosu yapmış, bu konsepti genişletebiliriz
+
+### Skin Longevity: Cilt Uzun Ömürlülüğü [YENİ]
+- Kaynak: 2026 dermatoloji trendi, Menajer.im sektör raporu
+- Konu: Anlık güzellik yerine cildin uzun vadeli sağlığı. Longevity tıbbının cilt bakımına yansıması
+- İçerik fikri: "Cilt Longevity: Cildinizi 10 Yıl Sonrası İçin Nasıl Korursunuz?"
+- Format: Blog + araç (kişisel cilt longevity skoru hesaplama)
+- Neden: Yükselen trend, henüz Türkçe içerik az
+
+### Skinimalism 2.0: Sade Ama Etkili Rutinler [YENİ]
+- Kaynak: 2026 cilt bakım trendleri
+- Konu: Çok adımlı K-beauty rutinleri → 3-4 adımlık etkili minimalist rutinler
+- İçerik fikri: "2026 Cilt Bakım Rutini: Daha Az Ürün, Daha Çok Etki"
+- Format: Blog + araç (rutin sadeleştirici: mevcut rutinini gir, gereksiz adımları çıkar)
+- Neden: Dr. Cansu'nun skin cycling içeriğiyle uyumlu
+
+### Fotona 4D: Ameliyatsız Gençleşme Teknolojisi [YENİ]
+- Kaynak: Medihaber (Şubat 2026), sektörel fuar haberleri
+- Konu: Lazer teknolojisiyle invazif olmayan yüz gençleştirme
+- İçerik fikri: "Fotona 4D Nedir? Ameliyatsız Yüz Germe Hakkında Bilmeniz Gerekenler"
+- Format: Blog + Kozmetik İşlem Karşılaştırıcı aracına ekleme
+- Neden: 2026'da çok aranan işlem, Dr. Cansu'nun "popüler işlemler" içerik serisine uygun
+
+### Bilinçli Kozmetik Tüketim & İçerik Şeffaflığı [YENİ]
+- Kaynak: 2026 tüketici davranış trendleri
+- Konu: INCI listesi okuma, "temiz güzellik" vs gerçek bilim, greenwashing tuzakları
+- İçerik fikri: "Kozmetik Etiketi Nasıl Okunur? Dermatolog Rehberi"
+- Format: Blog + araç (INCI okuyucu: ürün içeriğini yapıştır → riskleri/faydaları gör)
+- Neden: Bilinçli tüketim trendi ile örtüşüyor, pratik araç potansiyeli yüksek
+
 ## 🔄 İZLEME
 - Dr. Cansu Şahin profili düzenli taranıyor (web search)
 - Yeni popüler içerikler bu plana ekleniyor
-- Son tarama: 2025-07-11
+- Son tarama: 2026-03-02
+- Önceki tarama: 2025-07-11
+- YouTube: @dr.cansusahin — Son bilinen videolar: "Yaşlanma Karşıtı Etki Eden İçerikler" (Ekim 2025), "2025'in En Popüler İşlemleri" (Ağustos 2025)
+- TikTok: @dr.cansusahin — 15.5K takipçi, estetik/ciltbakımı nişi
+- Instagram: @dr.cansusahin — 293K takipçi, 1,203+ post
+- Not: Blog sayfası (drcansusahin.com/blog) minimal içerik gösteriyor, muhtemelen JS-tabanlı yükleme
