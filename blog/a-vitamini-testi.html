@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangi A Vitamini Türevi Sana Uygun? — Retinoid Seçim Rehberi | Derindenbilgi</title>
+    <meta name="description" content="Cilt tipinize, deneyiminize ve hedefinize göre size en uygun vitamin A türevini bulun. Bakuchiol, retinol, retinal, tretinoin... Hangi retinoid sizin için ideal?">
+    <meta name="keywords" content="vitamin a türevi, retinoid seçimi, retinol, tretinoin, bakuchiol, retinal, cilt bakım rehberi, dermatoloji">
+    <meta property="og:title" content="Hangi A Vitamini Türevi Sana Uygun? — Retinoid Seçim Rehberi">
+    <meta property="og:description" content="7 soruluk kişiselleştirilmiş testle ideal vitamin A türevinizi keşfedin. Bilimsel kanıtlar eşliğinde doğru retinoid seçimi.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== TOOL HERO ===== */
+        .tool-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        .tool-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(8,145,178,0.1));
+            color: var(--accent-dark);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        .tool-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.75px;
+            margin-bottom: 1rem;
+        }
+        .tool-hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-s);
+            line-height: 1.65;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== PROGRESS ===== */
+        .progress-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 1.5rem;
+        }
+        .progress-track {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 3px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-t);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* ===== QUIZ CONTAINER ===== */
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        /* ===== STEP CARD ===== */
+        .step-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            animation: fadeUp 0.5s ease;
+            display: none;
+        }
+        .step-card.active { display: block; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(13,148,136,0.3); }
+            50% { box-shadow: 0 0 20px 4px rgba(13,148,136,0.15); }
+        }
+
+        .step-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 1.25rem;
+            background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(8,145,178,0.1));
+        }
+        .step-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .step-q {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.3px;
+        }
+        .step-hint {
+            font-size: 0.88rem;
+            color: var(--text-s);
+            text-align: center;
+            margin-bottom: 1.75rem;
+            line-height: 1.6;
+        }
+        .step-science {
+            font-size: 0.78rem;
+            color: var(--text-t);
+            text-align: center;
+            margin-top: 1.25rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .step-science a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* ===== OPTION BUTTONS ===== */
+        .options-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .opt-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            background: var(--bg);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: left;
+        }
+        .opt-btn:hover {
+            border-color: var(--accent-light);
+            background: rgba(13,148,136,0.03);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+        .opt-btn.selected {
+            border-color: var(--accent);
+            background: rgba(13,148,136,0.06);
+            box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
+        }
+        .opt-emoji {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
+        }
+        .opt-text {
+            flex: 1;
+        }
+        .opt-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .opt-desc {
+            font-size: 0.82rem;
+            color: var(--text-s);
+            margin-top: 0.15rem;
+        }
+
+        /* ===== NAV BUTTONS ===== */
+        .nav-btns {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.25s ease;
+        }
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(13,148,136,0.3);
+        }
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(13,148,136,0.35);
+        }
+        .btn-secondary {
+            background: var(--bg-alt);
+            color: var(--text-s);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover:not(:disabled) {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        /* ===== RESULT ===== */
+        .result-wrap {
+            display: none;
+            animation: scaleIn 0.6s ease;
+        }
+        .result-wrap.active { display: block; }
+
+        .result-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 1.5rem;
+        }
+        .result-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .result-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(8,145,178,0.1));
+        }
+        .result-header h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .result-header .subtitle {
+            color: var(--text-s);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* STRENGTH INDICATOR */
+        .strength-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        .strength-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-s);
+        }
+        .strength-bar {
+            display: flex;
+            gap: 2px;
+            align-items: center;
+        }
+        .strength-segment {
+            width: 20px;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border);
+        }
+        .strength-segment.filled {
+            background: var(--accent);
+        }
+
+        /* RESULT SECTIONS */
+        .result-section {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin: 1.25rem 0;
+        }
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0;
+        }
+        .section-content li {
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+        .section-content li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .warning-box {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+            color: #92400e;
+            line-height: 1.5;
+        }
+        .prescription-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: #ddd6fe;
+            color: #6b21a8;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .otc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        .reference-list {
+            background: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+            color: #1e40af;
+            line-height: 1.4;
+        }
+        .reference-list strong {
+            color: #1e3a8a;
+        }
+
+        /* SHARE */
+        .share-row {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn-share {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            transition: all 0.2s;
+        }
+        .btn-share:hover {
+            background: var(--bg-alt);
+            border-color: var(--accent-border);
+        }
+        .btn-share.copied {
+            background: #dcfce7;
+            border-color: #bbf7d0;
+            color: #166534;
+        }
+
+        .btn-restart {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            color: var(--text-s);
+            transition: all 0.2s;
+            margin-top: 1.5rem;
+        }
+        .btn-restart:hover {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.88rem;
+            color: #92400e;
+            margin: 1.5rem 0;
+            line-height: 1.6;
+        }
+        .disclaimer-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent-light); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .tool-hero h1 { font-size: 1.65rem; }
+            .tool-hero { padding: 2rem 1.25rem 1.25rem; }
+            .quiz-container { padding: 0 1.25rem 2rem; }
+            .step-card { padding: 1.75rem 1.25rem; }
+            .result-card { padding: 1.5rem 1.25rem; }
+            .step-q { font-size: 1.15rem; }
+            .header-nav { display: none; }
+            .nav-btns { flex-direction: column; }
+            .nav-btns .btn { width: 100%; justify-content: center; }
+        }
+
+        /* Intro card extra */
+        .intro-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .intro-feat {
+            text-align: center;
+            padding: 1rem 0.5rem;
+        }
+        .intro-feat-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .intro-feat-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .intro-feat-desc {
+            font-size: 0.75rem;
+            color: var(--text-s);
+            margin-top: 0.15rem;
+        }
+        @media (max-width: 480px) {
+            .intro-features { grid-template-columns: 1fr; gap: 0.5rem; }
+            .intro-feat { display: flex; align-items: center; gap: 0.75rem; text-align: left; padding: 0.75rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="tool-hero">
+    <span class="tool-badge">🧬 Kişisel Test</span>
+    <h1>Hangi A Vitamini Türevi Sana Uygun?</h1>
+    <p class="subtitle">Cilt tipinize, deneyiminize ve hedeflerinize göre size en uygun vitamin A türevini bulun. Bakuchiol'den tretinoin'e kadar bilimsel kanıtlarla desteklenmiş kişiselleştirilmiş öneri.</p>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label">
+        <span id="progressText">Soru 1 / 7</span>
+        <span id="progressPct">0%</span>
+    </div>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-container">
+
+    <!-- INTRO -->
+    <div class="step-card active" id="step-intro">
+        <div class="step-icon">🧬</div>
+        <div class="step-q">Size Özel Retinoid Önerisi</div>
+        <div class="step-hint">A vitamini türevleri (retinoidler) cilt bakımında altın standart — ancak doğru seçim çok önemli. Çok güçlü başlarsanız tahriş, çok zayıf seçerseniz sonuç alamazsınız. Bu test 7 soruda size ideal retinoid türünü önerir.</div>
+
+        <div class="intro-features">
+            <div class="intro-feat">
+                <div class="intro-feat-icon">📊</div>
+                <div class="intro-feat-label">8 Farklı Seçenek</div>
+                <div class="intro-feat-desc">Bakuchiol'den tazaroten'e</div>
+            </div>
+            <div class="intro-feat">
+                <div class="intro-feat-icon">🔬</div>
+                <div class="intro-feat-label">Bilimsel Kanıt</div>
+                <div class="intro-feat-desc">Dermatology makaleleri</div>
+            </div>
+            <div class="intro-feat">
+                <div class="intro-feat-icon">💡</div>
+                <div class="intro-feat-label">Kullanım Protokolü</div>
+                <div class="intro-feat-desc">Başlangıç rehberi</div>
+            </div>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-primary" onclick="startQuiz()">Teste Başla →</button>
+        </div>
+
+        <div class="step-science">⏱ Yaklaşık 2 dakika sürer. Verileriniz kaydedilmez.</div>
+    </div>
+
+    <!-- Q1: CİLT TİPİ -->
+    <div class="step-card" id="step-1">
+        <div class="step-icon">🧴</div>
+        <div class="step-num">Soru 1 / 7</div>
+        <div class="step-q">Cilt tipiniz nedir?</div>
+        <div class="step-hint">Cilt tipi retinoid toleransını doğrudan etkiler. Kuru-hassas ciltler daha düşük konsantrasyonla başlamalı.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(1, 0, this)" data-value="0">
+                <span class="opt-emoji">🏜️</span>
+                <div class="opt-text">
+                    <div class="opt-label">Kuru</div>
+                    <div class="opt-desc">Sıkışma hissi, pullanma, genellikle mat görünüm</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(1, 1, this)" data-value="1">
+                <span class="opt-emoji">✅</span>
+                <div class="opt-text">
+                    <div class="opt-label">Normal</div>
+                    <div class="opt-desc">Dengeli, ne çok yağlı ne çok kuru</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(1, 2, this)" data-value="2">
+                <span class="opt-emoji">🔀</span>
+                <div class="opt-text">
+                    <div class="opt-label">Karma</div>
+                    <div class="opt-desc">T-bölgede yağlılık, yanaklar normal/kuru</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(1, 3, this)" data-value="3">
+                <span class="opt-emoji">💦</span>
+                <div class="opt-text">
+                    <div class="opt-label">Yağlı</div>
+                    <div class="opt-desc">Parlama, belirgin gözenekler, sebum üretimi fazla</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(1, 4, this)" data-value="4">
+                <span class="opt-emoji">🌹</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hassas</div>
+                    <div class="opt-desc">Kolayca kızarma, yanma, tahriş olma eğilimi</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn1" disabled>Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q2: TEMEL SORUN -->
+    <div class="step-card" id="step-2">
+        <div class="step-icon">🎯</div>
+        <div class="step-num">Soru 2 / 7</div>
+        <div class="step-q">Temel cilt sorununuz nedir?</div>
+        <div class="step-hint">Hedefiniz retinoid seçimini belirler. Akne → adapalen/tretinoin, yaşlanma → retinol/retinal gibi.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(2, 0, this)" data-value="0">
+                <span class="opt-emoji">🔴</span>
+                <div class="opt-text">
+                    <div class="opt-label">Akne</div>
+                    <div class="opt-desc">Sivilce, komedon, gözenek tıkanıklığı</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(2, 1, this)" data-value="1">
+                <span class="opt-emoji">📏</span>
+                <div class="opt-text">
+                    <div class="opt-label">Kırışıklık ve Yaşlanma</div>
+                    <div class="opt-desc">İnce çizgiler, derin kırışıklıklar, cilt elastikiyet kaybı</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(2, 2, this)" data-value="2">
+                <span class="opt-emoji">🎨</span>
+                <div class="opt-text">
+                    <div class="opt-label">Leke ve Ton Eşitsizliği</div>
+                    <div class="opt-desc">Güneş lekeleri, hiperpigmentasyon, mel hazma</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(2, 3, this)" data-value="3">
+                <span class="opt-emoji">✨</span>
+                <div class="opt-text">
+                    <div class="opt-label">Genel Bakım ve Parlaklık</div>
+                    <div class="opt-desc">Önleyici yaşlanma karşıtı, cilt tekstürü, sağlıklı görünüm</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn2" disabled>Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q3: DENEYİM -->
+    <div class="step-card" id="step-3">
+        <div class="step-icon">🎓</div>
+        <div class="step-num">Soru 3 / 7</div>
+        <div class="step-q">Retinoid deneyiminiz nasıl?</div>
+        <div class="step-hint">Başlangıç seviyesi çok önemli. Doğrudan güçlü retinoid kullanmak ciddi tahriş yaratabilir.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(3, 0, this)" data-value="0">
+                <span class="opt-emoji">🆕</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hiç kullanmadım</div>
+                    <div class="opt-desc">A vitamini türevi deneyimim yok, yeni başlıyorum</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(3, 1, this)" data-value="1">
+                <span class="opt-emoji">🌱</span>
+                <div class="opt-text">
+                    <div class="opt-label">Yeni başladım (1-3 ay)</div>
+                    <div class="opt-desc">Birkaç aydır düşük konsantrasyon retinol kullanıyorum</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(3, 2, this)" data-value="2">
+                <span class="opt-emoji">⚡</span>
+                <div class="opt-text">
+                    <div class="opt-label">Deneyimliyim (6+ ay)</div>
+                    <div class="opt-desc">Uzun süredir retinoid kullanıyorum, toleransım gelişti</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn3" disabled>Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q4: HASSASIYET -->
+    <div class="step-card" id="step-4">
+        <div class="step-icon">🌡️</div>
+        <div class="step-num">Soru 4 / 7</div>
+        <div class="step-q">Cildiniz ürünlere nasıl tepki verir?</div>
+        <div class="step-hint">Reaktivite düzeyi başlangıç konsantrasyonunu ve artış hızını belirler.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(4, 0, this)" data-value="0">
+                <span class="opt-emoji">🔥</span>
+                <div class="opt-text">
+                    <div class="opt-label">Çok hassas</div>
+                    <div class="opt-desc">Hemen kızarır, yanma-batma hissi, kolay tahriş</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(4, 1, this)" data-value="1">
+                <span class="opt-emoji">⚖️</span>
+                <div class="opt-text">
+                    <div class="opt-label">Normal reaktivite</div>
+                    <div class="opt-desc">Nadiren reaksiyon, çoğu ürünü tolere ederim</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(4, 2, this)" data-value="2">
+                <span class="opt-emoji">🛡️</span>
+                <div class="opt-text">
+                    <div class="opt-label">Dayanıklı</div>
+                    <div class="opt-desc">Her şeyi tolere ederim, hiç tahriş olmam</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn4" disabled>Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q5: YAŞ ARALIĞI -->
+    <div class="step-card" id="step-5">
+        <div class="step-icon">🎂</div>
+        <div class="step-num">Soru 5 / 7</div>
+        <div class="step-q">Yaş aralığınız?</div>
+        <div class="step-hint">Genç ciltler önleyici yaklaşım, olgun ciltler tedavi edici yaklaşım gerektirir.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(5, 0, this)" data-value="0">
+                <span class="opt-emoji">🌸</span>
+                <div class="opt-text">
+                    <div class="opt-label">18-25</div>
+                    <div class="opt-desc">Genç cilt, önleyici bakım odaklı</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(5, 1, this)" data-value="1">
+                <span class="opt-emoji">🌿</span>
+                <div class="opt-text">
+                    <div class="opt-label">26-35</div>
+                    <div class="opt-desc">Erken yaşlanma belirtileri başlıyor</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(5, 2, this)" data-value="2">
+                <span class="opt-emoji">🍃</span>
+                <div class="opt-text">
+                    <div class="opt-label">36-45</div>
+                    <div class="opt-desc">Orta yaş, belirgin yaşlanma belirtileri</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(5, 3, this)" data-value="3">
+                <span class="opt-emoji">🌰</span>
+                <div class="opt-text">
+                    <div class="opt-label">45+</div>
+                    <div class="opt-desc">Olgun cilt, güçlü anti-aging gerekli</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn5" disabled>Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q6: HAMİLELİK -->
+    <div class="step-card" id="step-6">
+        <div class="step-icon">👶</div>
+        <div class="step-num">Soru 6 / 7</div>
+        <div class="step-q">Hamilelik/emzirme durumunuz?</div>
+        <div class="step-hint">Retinoidler hamilelik ve emzirme döneminde güvenli değil. Bu durumlarda bakuchiol gibi alternatifler öneriliyor.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(6, 0, this)" data-value="0">
+                <span class="opt-emoji">👶</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hamileyim veya emziriyorum</div>
+                    <div class="opt-desc">Şu anda hamile ya da emzirme dönemindeyim</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(6, 1, this)" data-value="1">
+                <span class="opt-emoji">✅</span>
+                <div class="opt-text">
+                    <div class="opt-label">Hayır</div>
+                    <div class="opt-desc">Hamile değilim ve emzirmiyorum</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(6, 2, this)" data-value="2">
+                <span class="opt-emoji">📅</span>
+                <div class="opt-text">
+                    <div class="opt-label">Planlıyorum (6 ay içinde)</div>
+                    <div class="opt-desc">Yakın zamanda hamilelik planlıyorum</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="nextBtn6" disabled>Devam →</button>
+        </div>
+    </div>
+
+    <!-- Q7: BÜTÇE -->
+    <div class="step-card" id="step-7">
+        <div class="step-icon">💰</div>
+        <div class="step-num">Soru 7 / 7</div>
+        <div class="step-q">Bütçe tercihiniz?</div>
+        <div class="step-hint">Reçeteli ürünler genellikle daha uygun, OTC retinol ürünleri çeşitli fiyat aralığında.</div>
+
+        <div class="options-grid">
+            <button class="opt-btn" onclick="selectOpt(7, 0, this)" data-value="0">
+                <span class="opt-emoji">💰</span>
+                <div class="opt-text">
+                    <div class="opt-label">Uygun fiyat</div>
+                    <div class="opt-desc">Bütçe dostu, reçeteli seçenekler tercih</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(7, 1, this)" data-value="1">
+                <span class="opt-emoji">💳</span>
+                <div class="opt-text">
+                    <div class="opt-label">Orta segment</div>
+                    <div class="opt-desc">Kalite-fiyat dengesine odaklanıyorum</div>
+                </div>
+            </button>
+            <button class="opt-btn" onclick="selectOpt(7, 2, this)" data-value="2">
+                <span class="opt-emoji">💎</span>
+                <div class="opt-text">
+                    <div class="opt-label">Fark etmez</div>
+                    <div class="opt-desc">En iyi sonuç için fiyat önemli değil</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="nav-btns">
+            <button class="btn btn-secondary" onclick="prevStep()">← Geri</button>
+            <button class="btn btn-primary" onclick="calculateResult()" id="nextBtn7" disabled>Sonuçları Gör 🎯</button>
+        </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-wrap" id="resultWrap">
+        <div class="result-card" id="resultMain">
+            <div class="result-header">
+                <div class="result-icon" id="resultIcon">✨</div>
+                <h2 id="resultName">Sonuçlarınız hesaplanıyor...</h2>
+                <p class="subtitle" id="resultDescription">Size özel vitamin A türevi önerisi</p>
+            </div>
+
+            <div class="strength-indicator" id="strengthIndicator">
+                <span class="strength-label">Güç Seviyesi:</span>
+                <div class="strength-bar">
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                    <div class="strength-segment"></div>
+                </div>
+                <span class="strength-label" id="strengthLabel">—</span>
+            </div>
+
+            <div class="result-section" id="descriptionSection">
+                <div class="section-title">📝 Ürün Açıklaması</div>
+                <div class="section-content" id="productDescription"></div>
+            </div>
+
+            <div class="result-section" id="protocolSection">
+                <div class="section-title">📋 Başlangıç Protokolü</div>
+                <div class="section-content" id="usageProtocol"></div>
+            </div>
+
+            <div class="result-section" id="warningSection">
+                <div class="section-title">⚠️ Dikkat Edilmesi Gerekenler</div>
+                <div class="section-content" id="warningContent"></div>
+            </div>
+
+            <div class="result-section" id="combinationSection">
+                <div class="section-title">🤝 Kombinasyon Önerileri</div>
+                <div class="section-content" id="combinationContent"></div>
+            </div>
+
+            <div id="prescriptionStatus"></div>
+
+            <div class="reference-list" id="references">
+                <strong>📚 Bilimsel Kaynaklar:</strong><br>
+                <div id="referenceContent"></div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <span class="disclaimer-icon">⚠️</span>
+            <div><strong>Bu test tanı amaçlı değildir.</strong> Retinoid seçimi için dermatoloğunuza danışın. Öneriler genel bilgilendirme amaçlıdır ve kişisel tıbbi tavsiye yerine geçmez.</div>
+        </div>
+
+        <div style="text-align:center">
+            <button class="btn-restart" onclick="restartQuiz()">🔄 Testi Tekrarla</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== STATE =====
+let currentStep = 0; // 0 = intro, 1-7 = questions
+const totalSteps = 7;
+const answers = {};
+
+// ===== RETINOID DATABASE =====
+const retinoids = {
+    bakuchiol: {
+        name: "Bakuchiol",
+        icon: "🌿",
+        strength: 1,
+        strengthLabel: "Çok Hafif",
+        description: "Babchi bitkisinden elde edilen doğal retinol alternatifi. Hamilelik-güvenli, hassas cilt dostu. Retinol benzeri anti-aging etkiler gösterir ancak tahriş riski minimal.",
+        protocol: [
+            "Her gece kullanılabilir (tahriş riski çok düşük)",
+            "2-4 damla tüm yüze, temizlenmiş cilde uygulayın",
+            "Nemlendirici ile beraber kullanılabilir",
+            "Sabah da kullanım mümkün (fotosensitif değil)"
+        ],
+        warnings: [
+            "Sonuçlar retinol'den daha yavaş görülür",
+            "3-4 ay düzenli kullanım gerekli",
+            "Nadir alerjik reaksiyon mümkün (önce patch test)"
+        ],
+        combinations: [
+            "C Vitamini serumu (sabah): Antioksidan destek",
+            "Hyalüronik asit: Ekstra hidrasyon",
+            "Niacinamide %5: Bariyer güçlendirme",
+            "SPF 30+ (önemli): UV koruma her zaman şart"
+        ],
+        prescription: false,
+        references: "Dhaliwal S, et al. Br J Dermatol. 2019;180(2):289-296. — Bakuchiol, retinol ile karşılaştırılabilir anti-aging etki gösterdi."
+    },
+    retinylPalmitate: {
+        name: "Retinyl Palmitat",
+        icon: "🥇",
+        strength: 2,
+        strengthLabel: "Hafif",
+        description: "En yumuşak retinoid formu. Ciltte yavaş yavaş retinol'e dönüşür. Başlangıç için ideal, tahriş riski minimum.",
+        protocol: [
+            "İlk hafta: 2-3 gece",
+            "2-3. hafta: gece aşırı",
+            "4+ hafta: her gece (tolere edilirse)",
+            "Bezelye tanesi büyüklüğü tüm yüze"
+        ],
+        warnings: [
+            "Etkisi diğer retinoidlerden daha zayıf",
+            "Sonuç için 4-6 ay sabır gerekli",
+            "Yine de SPF şart (hafif fotosensitize eder)"
+        ],
+        combinations: [
+            "Ceramide içeren nemlendirici: Bariyer koruma",
+            "Peptid serumları: Kolajen desteği",
+            "Niacinamide: Toleransı artırır",
+            "Günlük SPF 30+: Fotosensitivite koruması"
+        ],
+        prescription: false,
+        references: "Varani J, et al. J Invest Dermatol. 2000;114(3):480-486. — Retinyl palmitat dermal kolajen sentezini artırır."
+    },
+    retinol03: {
+        name: "Retinol %0.3-0.5",
+        icon: "⭐",
+        strength: 2,
+        strengthLabel: "Hafif-Orta",
+        description: "Başlangıç seviyesi retinol. OTC ürünlerde en yaygın konsantrasyon. Kırışıklık, ton eşitsizliği ve genel cilt tekstürü için etkili.",
+        protocol: [
+            "İlk 2 hafta: haftada 2-3 gece",
+            "3-4. hafta: gece aşırı",
+            "5+ hafta: her gece (tolere edilirse)",
+            "Bezelye tanesi miktarı, temiz cilde"
+        ],
+        warnings: [
+            "İlk 2-4 hafta pullanma, kızarıklık normal",
+            "'Retinoid purging' ilk aylarda olabilir",
+            "Göz çevresinden kaçının (çok hassas)",
+            "Benzoyl peroksit ile aynı anda kullanmayın"
+        ],
+        combinations: [
+            "Hyalüronik asit serum: Nem desteği",
+            "Niacinamide %5: Anti-inflamatuar",
+            "Ceramide nemlendirici: Bariyer onarımı",
+            "SPF 30+ (kritik): Fotosensitivite koruması"
+        ],
+        prescription: false,
+        references: "Kong R, et al. Dermatol Surg. 2016;42(2):217-224. — %0.5 retinol 12 haftada ince çizgi ve pigmentasyonu anlamlı düzeltti."
+    },
+    retinol1: {
+        name: "Retinol %1",
+        icon: "🔥",
+        strength: 3,
+        strengthLabel: "Orta",
+        description: "Güçlü OTC retinol. Deneyimli kullanıcılar için. Kırışıklık karşıtı etkisi güçlü, ancak tahriş riski de artmış.",
+        protocol: [
+            "Önce %0.5'e tolere olun",
+            "İlk hafta: 2 gece",
+            "2-3. hafta: gece aşırı",
+            "4+ hafta: her gece (cilt izin verirse)"
+        ],
+        warnings: [
+            "İlk 4-6 hafta ciddi kızarıklık-pullanma",
+            "Hamilelik/emzirme döneminde kullanmayın",
+            "AHA/BHA ile aynı gece kullanmayın",
+            "Göz altı-üstü ve dudak çevresi yasak"
+        ],
+        combinations: [
+            "Squalane yağı: Yoğun hidrasyon",
+            "B5 (Panthenol): Sakinleştirici",
+            "Ceramide kompleksi: Bariyer onarımı",
+            "SPF 50+ (zorunlu): Güçlü UV koruma"
+        ],
+        prescription: false,
+        references: "Kafi R, et al. Arch Dermatol. 2007;143(5):606-612. — %1 retinol 10-12 haftada epidermal kalınlaşma ve kolajen artışı."
+    },
+    retinal: {
+        name: "Retinaldehit (Retinal)",
+        icon: "⚡",
+        strength: 4,
+        strengthLabel: "Orta-Güçlü",
+        description: "Retinol'den güçlü ama tretinoin'den hafif. Son yıllarda popüler, hızlı sonuç verir. Retinol'e göre 10-100x etkili.",
+        protocol: [
+            "Retinol %0.5 deneyimi olmalı",
+            "İlk hafta: 2 gece (%0.05 ile başla)",
+            "2-4. hafta: gece aşırı",
+            "Tolere edilirse: her gece"
+        ],
+        warnings: [
+            "Retinol'den daha fazla tahriş yapar",
+            "Işığa karşı hassas, buzdolabında saklanmalı",
+            "Gebelik/emzirme güvenli değil",
+            "Metal aplikatörlerle oksitlenir"
+        ],
+        combinations: [
+            "Niacinamide (ayrı zamanlarda): Tolerans artırır",
+            "Centella asiatica: Anti-inflamatuar",
+            "Peptid serum: Onarım desteği",
+            "Yüksek SPF (40+): Fotosensitivite koruması"
+        ],
+        prescription: false,
+        references: "Kwiatkowska D, et al. Clin Cosmet Investig Dermatol. 2022;15:2377-2396. — Retinal, retinol'e göre superior anti-aging etkinlik."
+    },
+    adapalene: {
+        name: "Adapalen %0.1-0.3",
+        icon: "🎯",
+        strength: 4,
+        strengthLabel: "Güçlü",
+        description: "3. nesil reçeteli retinoid. Akne tedavisinde altın standart. Fotostabil, anti-inflamatuar özellik güçlü.",
+        protocol: [
+            "Dermatoloji kontrolü şart",
+            "İlk 2-4 hafta: gece aşırı",
+            "Tolere edilirse: her gece",
+            "Bezelye tanesi miktarı ile başla"
+        ],
+        warnings: [
+            "İlk 6-8 hafta şiddetli 'purging'",
+            "Ciddi kızarıklık, pullanma beklenir",
+            "Gebelik kategorisi C (riskli)",
+            "Waxing/epilasyon yasak"
+        ],
+        combinations: [
+            "Benzoyl peroksit (sabah): Akne tedavisi",
+            "Hyalüronik asit: Nem desteği",
+            "Ceramide krem: Bariyer koruma",
+            "SPF 30+ (zorunlu): Fotosensitivite"
+        ],
+        prescription: true,
+        references: "Thiboutot DM, et al. J Am Acad Dermatol. 2008;59(1):56-65. — Adapalen akne tedavisinde tretinoin kadar etkili, daha az tahriş."
+    },
+    tretinoin: {
+        name: "Tretinoin %0.025-0.05",
+        icon: "👑",
+        strength: 5,
+        strengthLabel: "Çok Güçlü",
+        description: "Retinoidlerin 'altın standardı'. Anti-aging ve akne için en güçlü kanıtlara sahip. Reçeteli, dermatoloji kontrolü şart.",
+        protocol: [
+            "Mutlaka dermatoloji reçetesi",
+            "İlk 2 hafta: 3 gece",
+            "3-4. hafta: gece aşırı",
+            "6+ hafta: her gece (tolere edilirse)"
+        ],
+        warnings: [
+            "İlk 2-3 ay ciddi tahriş beklenir",
+            "Gebelikte kesinlikle yasak (kategori C)",
+            "Işık altında inaktive olur",
+            "Cilt incelmesi, laser öncesi bırakın"
+        ],
+        combinations: [
+            "Sandwhich metodu: nemlendirici-tretinoin-nemlendirici",
+            "B5 serum: İyileşme desteği",
+            "Squalane: Yoğun hidrasyon",
+            "SPF 50+ (kritik): Fotosensitivite koruması"
+        ],
+        prescription: true,
+        references: "Mukherjee S, et al. Clin Interv Aging. 2006;1(4):327-348. — Tretinoin fotoyaşlanma tedavisinde en güçlü kanıta sahip topikal ajan."
+    },
+    tazarotene: {
+        name: "Tazaroten",
+        icon: "💥",
+        strength: 5,
+        strengthLabel: "En Güçlü",
+        description: "En güçlü topikal retinoid. Dirençli akne, psoriasis, şiddetli fotoyaşlanma için. Çok yüksek tahriş potansiyeli.",
+        protocol: [
+            "Sadece uzman dermatoloji kontrolü",
+            "İlk ay: haftada 2-3 gece",
+            "Çok yavaş artırım",
+            "Kesinlikle spot uygulama ile başla"
+        ],
+        warnings: [
+            "En yüksek tahriş riski",
+            "Gebelikte kesinlikle yasak (kategori X)",
+            "Ciddi fotosensitivite yapar",
+            "Waxing, lazer öncesi 1 ay bırakın"
+        ],
+        combinations: [
+            "Yoğun moisturizer: Bariyer koruma kritik",
+            "Kortikosteroid krem: İlk haftalar tahriş kontrolü",
+            "Hyalüronik asit: Nem desteği",
+            "Çok yüksek SPF (50+): UV koruma zorunlu"
+        ],
+        prescription: true,
+        references: "Schikowski T, et al. J Cosmet Dermatol. 2015;14(1):8-15. — Tazaroten dirençli akne ve fotoaging tedavisinde etkili ama yüksek tahriş riski."
+    }
+};
+
+// ===== SCORING ALGORITHM =====
+function calculateBestRetinoid() {
+    // Pregnancy/breastfeeding override
+    if (answers[6] === 0 || answers[6] === 2) {
+        return 'bakuchiol'; // Pregnancy-safe
+    }
+    
+    // Sensitive skin + no experience
+    if (answers[4] === 0 && answers[3] === 0) {
+        return 'bakuchiol';
+    }
+    
+    // Very sensitive skin
+    if (answers[4] === 0) {
+        return answers[3] === 0 ? 'retinylPalmitate' : 'retinol03';
+    }
+    
+    // Acne priority
+    if (answers[2] === 0) {
+        if (answers[3] === 0) return 'retinol03'; // Beginner + acne
+        if (answers[3] === 1) return 'retinol1'; // Some experience + acne
+        if (answers[5] <= 1) return 'adapalene'; // Young + experienced + acne
+        return 'tretinoin'; // Mature + experienced + acne
+    }
+    
+    // Anti-aging priority
+    if (answers[2] === 1) {
+        if (answers[3] === 0) return 'retinol03'; // Beginner + anti-aging
+        if (answers[3] === 1) return 'retinol1'; // Some experience
+        if (answers[5] >= 2) return 'tretinoin'; // Mature + experienced
+        return 'retinal'; // Experienced but not mature
+    }
+    
+    // Pigmentation
+    if (answers[2] === 2) {
+        if (answers[3] === 0) return 'retinol03';
+        if (answers[3] === 1) return 'retinal';
+        return 'tretinoin'; // Best for melasma
+    }
+    
+    // General maintenance
+    if (answers[2] === 3) {
+        if (answers[3] === 0) return answers[5] <= 1 ? 'retinylPalmitate' : 'retinol03';
+        if (answers[3] === 1) return 'retinol03';
+        return 'retinol1'; // Experienced + maintenance
+    }
+    
+    // Very resistant skin + experienced
+    if (answers[4] === 2 && answers[3] === 2) {
+        if (answers[2] === 0) return 'adapalene'; // Acne
+        return 'tretinoin'; // Anti-aging
+    }
+    
+    // Default fallback
+    return 'retinol03';
+}
+
+// ===== FUNCTIONS =====
+
+function startQuiz() {
+    currentStep = 1;
+    showStep(1);
+    document.getElementById('progressWrap').style.display = 'block';
+    updateProgress();
+}
+
+function showStep(n) {
+    document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active'));
+    const card = document.getElementById('step-' + (n === 0 ? 'intro' : n));
+    if (card) {
+        card.classList.add('active');
+        card.style.animation = 'none';
+        card.offsetHeight; // trigger reflow
+        card.style.animation = 'fadeUp 0.5s ease';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateProgress() {
+    const pct = Math.round((currentStep / totalSteps) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `Soru ${currentStep} / ${totalSteps}`;
+    document.getElementById('progressPct').textContent = pct + '%';
+}
+
+function nextStep() {
+    if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+        updateProgress();
+    }
+}
+
+function prevStep() {
+    if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+        updateProgress();
+    } else if (currentStep === 1) {
+        currentStep = 0;
+        showStep(0);
+        document.getElementById('progressWrap').style.display = 'none';
+    }
+}
+
+function selectOpt(step, value, el) {
+    answers[step] = value;
+    // Deselect siblings
+    el.parentNode.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+
+    // Enable next button
+    const btn = document.getElementById('nextBtn' + step);
+    if (btn) btn.disabled = false;
+}
+
+function calculateResult() {
+    const bestRetinoid = calculateBestRetinoid();
+    const retinoidData = retinoids[bestRetinoid];
+    
+    showResult(retinoidData);
+}
+
+function showResult(data) {
+    // Hide quiz, show result
+    document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active'));
+    document.getElementById('progressWrap').style.display = 'none';
+
+    const wrap = document.getElementById('resultWrap');
+    wrap.classList.add('active');
+    wrap.style.animation = 'none';
+    wrap.offsetHeight;
+    wrap.style.animation = 'scaleIn 0.6s ease';
+
+    // Populate result
+    document.getElementById('resultIcon').textContent = data.icon;
+    document.getElementById('resultName').textContent = data.name;
+    document.getElementById('resultDescription').textContent = 'Size özel vitamin A türevi önerisi';
+
+    // Strength indicator
+    const segments = document.querySelectorAll('.strength-segment');
+    segments.forEach((seg, i) => {
+        if (i < data.strength) {
+            seg.classList.add('filled');
+        } else {
+            seg.classList.remove('filled');
+        }
+    });
+    document.getElementById('strengthLabel').textContent = data.strengthLabel;
+
+    // Sections
+    document.getElementById('productDescription').textContent = data.description;
+    
+    document.getElementById('usageProtocol').innerHTML = '<ul>' + 
+        data.protocol.map(p => `<li>${p}</li>`).join('') + '</ul>';
+    
+    document.getElementById('warningContent').innerHTML = '<ul>' + 
+        data.warnings.map(w => `<li>${w}</li>`).join('') + '</ul>';
+    
+    document.getElementById('combinationContent').innerHTML = '<ul>' + 
+        data.combinations.map(c => `<li>${c}</li>`).join('') + '</ul>';
+
+    // Prescription status
+    const prescStatus = document.getElementById('prescriptionStatus');
+    if (data.prescription) {
+        prescStatus.innerHTML = '<div class="prescription-badge">💊 Reçeteli Ürün</div>';
+    } else {
+        prescStatus.innerHTML = '<div class="otc-badge">🛒 Reçetesiz Satışta</div>';
+    }
+
+    // References
+    document.getElementById('referenceContent').textContent = data.references;
+
+    // Scroll to result
+    setTimeout(() => {
+        wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+}
+
+function restartQuiz() {
+    // Reset state
+    currentStep = 0;
+    Object.keys(answers).forEach(k => delete answers[k]);
+
+    // Reset UI
+    document.getElementById('resultWrap').classList.remove('active');
+    document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+    document.querySelectorAll('[id^="nextBtn"]').forEach(b => b.disabled = true);
+
+    // Show intro
+    showStep(0);
+    document.getElementById('progressWrap').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
