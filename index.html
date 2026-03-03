@@ -105,10 +105,11 @@
         .pill:hover,.pill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 
         /* TABS */
-        .tabs{display:flex;gap:4px;background:var(--bg-elevated);border-radius:var(--r-m);padding:4px;margin:0 auto 32px;flex-wrap:wrap;justify-content:center;max-width:100%}
-        .tab,.tab-link{padding:10px 20px;border-radius:var(--r-s);font-size:13px;font-weight:500;border:none;background:transparent;color:var(--text-s);cursor:pointer;transition:all .2s;font-family:inherit;text-decoration:none;white-space:nowrap}
+        .tabs{display:flex;gap:6px;background:var(--bg-elevated);border-radius:var(--r-m);padding:6px;margin:0 auto 32px;flex-wrap:wrap;justify-content:center;max-width:100%}
+        .tab,.tab-link{padding:10px 18px;border-radius:var(--r-s);font-size:13px;font-weight:500;border:none;background:transparent;color:var(--text-s);cursor:pointer;transition:all .2s;font-family:inherit;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
         .tab.active{background:#fff;color:var(--accent);box-shadow:var(--sh-s)}
-        .tab-link:hover{background:rgba(13,148,136,.08);color:var(--accent)}
+        .tab-link{border:1px dashed rgba(13,148,136,.2)}
+        .tab-link:hover{background:rgba(13,148,136,.08);color:var(--accent);border-color:var(--accent)}
 
         /* INTERACTIVE TEST */
         .test-box{max-width:680px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-xl);padding:40px;box-shadow:var(--sh-l)}
@@ -183,9 +184,8 @@
             .test-box{padding:24px}
             .f-grid{grid-template-columns:1fr;gap:24px}
             .f-bot{flex-direction:column;gap:10px;text-align:center}
-            .tabs{width:100%;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-            .tabs::-webkit-scrollbar{display:none}
-            .tab,.tab-link{padding:8px 14px;font-size:12px;flex-shrink:0}
+            .tabs{width:100%;flex-wrap:wrap;justify-content:center;gap:6px}
+            .tab,.tab-link{padding:8px 12px;font-size:11px}
             #scResult [style*="grid-template-columns"]{grid-template-columns:1fr!important}
         }
 
@@ -457,7 +457,15 @@
             <a href="blog/akne-rehberi.html" class="card guide-card" data-cat="cilt"><div class="card-i">📖</div><div class="card-t">Akne A'dan Z'ye — Tedavi Rehberi</div><div class="card-d">Akne patogenezi, kanıt düzeyine göre tedavi seçenekleri. AAD ve EADV kılavuzları referans alınmıştır.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/anti-aging-rehberi.html" class="card guide-card" data-cat="aging"><div class="card-i">⏳</div><div class="card-t">Anti-Aging Başlangıç Rehberi</div><div class="card-d">Retinoidler, peptidler, antioksidanlar: kanıt düzeyine göre anti-aging aktif maddeler ve başlangıç protokolleri.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/gunesten-korunma-rehberi.html" class="card guide-card" data-cat="cilt"><div class="card-i">☀️</div><div class="card-t">Güneşten Korunma Rehberi</div><div class="card-d">Kimyasal vs. fiziksel filtreler, uygulama miktarı ve tekrar sürme sıklığı — AAD ve WHO önerilerine göre.</div><span class="card-tag">✨ Yeni →</span></a>
-            <a href="blog/kozmetik-islemler-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">💉</div><div class="card-t">Kozmetik İşlemler Rehberi</div><div class="card-d">Botulinum toksin, dermal dolgu, lazer, PRP, mezoterapi: endikasyonlar, kanıt düzeyleri, riskler.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/kozmetik-islemler-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">💉</div><div class="card-t">Kozmetik İşlemler Rehberi</div><div class="card-d">11 işlem tek sayfada — endikasyonlar, kanıt düzeyleri, riskler.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/botulinum-toksin-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">💉</div><div class="card-t">Botulinum Toksin (Botox)</div><div class="card-d">Nasıl çalışır, toksin tipleri, Bocouture, mitler vs gerçekler.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/dermal-dolgu-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">💋</div><div class="card-t">Dermal Dolgu Rehberi</div><div class="card-d">HA, CaHA, PLLA — dolgu tipleri, uygulama alanları, riskler.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/lazer-tedavileri-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">⚡</div><div class="card-t">Lazer Tedavileri</div><div class="card-d">CO₂, fraksiyonel, IPL, PDL, picosecond ve lazer epilasyon.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/prp-tedavisi-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">🩸</div><div class="card-t">PRP Tedavisi</div><div class="card-d">6 endikasyona göre kanıt değerlendirmesi — saç, cilt, akne skarı.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/mezoterapi-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">💧</div><div class="card-t">Mezoterapi Rehberi</div><div class="card-d">6 endikasyon için kanıt — Türkiye'de popüler ama bilim ne diyor?</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/sivi-yuz-germe-rehberi.html" class="card guide-card" data-cat="islem"><div class="card-i">💆</div><div class="card-t">Sıvı Yüz Germe</div><div class="card-d">Dolgu + botulinum toksin ile ameliyatsız gençleştirme.</div><span class="card-tag">✨ Yeni →</span></a>
+            <a href="blog/eksozom-pdrn-somon-dna.html" class="card guide-card" data-cat="islem"><div class="card-i">🧬</div><div class="card-t">Eksozom & Somon DNA (PDRN)</div><div class="card-d">Yeni nesil trendler — hype mı bilim mi?</div><span class="card-tag">🔥 Trend →</span></a>
+            <a href="blog/ameliyat-sonrasi-iz-azaltma.html" class="card guide-card" data-cat="islem"><div class="card-i">🩹</div><div class="card-t">Ameliyat Sonrası İz Azaltma</div><div class="card-d">Silikon, lazer, microneedling — zamanlama rehberi.</div><span class="card-tag">Rehber →</span></a>
             <a href="blog/cilt-bakim-icerikleri-sozlugu.html" class="card guide-card" data-cat="cilt"><div class="card-i">🔬</div><div class="card-t">Cilt Bakım İçerikleri Sözlüğü</div><div class="card-d">Retinol, niacinamide, AHA, BHA, vitamin C, hyaluronik asit: etki mekanizmaları ve kullanım önerileri.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/mevsimsel-cilt-bakimi.html" class="card guide-card" data-cat="cilt"><div class="card-i">🍂</div><div class="card-t">Mevsimsel Cilt Bakımı Rehberi</div><div class="card-d">Mevsimsel çevresel faktörlerin cilt üzerindeki etkileri ve bakım rutini adaptasyonu.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/oral-kolajen-takviyesi.html" class="card guide-card" data-cat="beslenme"><div class="card-i">🧬</div><div class="card-t">Oral Kolajen Takviyesi: Kanıtlar</div><div class="card-d">Hidrolize kolajen peptidlerinin cilt hidrasyonu, elastikiyeti ve kırışıklık derinliği üzerine etkileri — meta-analizler ışığında.</div><span class="card-tag">✨ Yeni →</span></a>
@@ -465,7 +473,7 @@
             <a href="blog/cyspera-leke-tedavisi.html" class="card guide-card" data-cat="leke"><div class="card-i">✨</div><div class="card-t">Cyspera (Sisteamin) ve Leke Tedavisi</div><div class="card-d">Sisteamin %5: etki mekanizması, klinik veriler, hidrokinon karşılaştırması, uygulama protokolü.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/hiperpigmentasyon-rehberi.html" class="card guide-card" data-cat="leke"><div class="card-i">🎯</div><div class="card-t">Hiperpigmentasyon A'dan Z'ye</div><div class="card-d">Melazma, PIH, solar lentigo, periorbital: ayırıcı tanı, tedavi algoritması ve depigmentasyon ajanları.</div><span class="card-tag">✨ Yeni →</span></a>
         </div>
-        <div class="show-more"><button class="show-more-btn" data-label="Tüm Rehberler (+4)" onclick="toggleGrid(this)">Tüm Rehberler (+4) <span class="arrow">↓</span></button></div>
+        <div class="show-more"><button class="show-more-btn" data-label="Tüm Rehberler (+12)" onclick="toggleGrid(this)">Tüm Rehberler (+4) <span class="arrow">↓</span></button></div>
     </div>
 </section>
 
