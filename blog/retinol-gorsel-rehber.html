@@ -674,12 +674,12 @@
 
         /* Top bun — rounded dome */
         .bun-top {
-            background: linear-gradient(180deg, #60a5fa, #3b82f6);
+            background: linear-gradient(180deg, #f59e0b, #d97706, #b45309);
             color: white;
             border-radius: 140px 140px 6px 6px;
             padding: 32px 24px 18px;
             font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(59,130,246,0.25), inset 0 -3px 0 rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(180,83,9,0.3), inset 0 -3px 0 rgba(0,0,0,0.1);
             z-index: 3;
         }
         /* Sesame seeds */
@@ -693,6 +693,16 @@
             letter-spacing: 4px;
             opacity: 0.7;
         }
+        .bun-top::before {
+            content: '• • • • •';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 8px;
+        }
         .bun-top .layer-label {
             font-size: 0.7rem;
             opacity: 0.85;
@@ -701,14 +711,14 @@
         }
         /* Retinol patty */
         .patty {
-            background: linear-gradient(180deg, #f59e0b, #d97706);
+            background: linear-gradient(180deg, #dc2626, #b91c1c, #991b1b);
             color: white;
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 22px 24px;
             font-size: 1.2rem;
             font-weight: 900;
             letter-spacing: 1px;
-            box-shadow: 0 4px 20px rgba(245,158,11,0.35), inset 0 -3px 0 rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(185,28,28,0.35), inset 0 -3px 0 rgba(0,0,0,0.12);
             z-index: 2;
             margin: -4px 0;
             width: 260px;
@@ -725,19 +735,19 @@
             content: '';
             position: absolute;
             inset: -4px;
-            border-radius: 12px;
-            background: radial-gradient(ellipse, rgba(245,158,11,0.3), transparent 70%);
+            border-radius: 14px;
+            background: radial-gradient(ellipse, rgba(185,28,28,0.2), transparent 70%);
             z-index: -1;
             animation: pulse 2s ease-in-out infinite;
         }
         /* Bottom bun — flat base */
         .bun-bottom {
-            background: linear-gradient(180deg, #3b82f6, #2563eb);
+            background: linear-gradient(180deg, #d97706, #b45309, #92400e);
             color: white;
             border-radius: 6px 6px 140px 140px;
             padding: 18px 24px 28px;
             font-size: 1rem;
-            box-shadow: 0 6px 20px rgba(37,99,235,0.25), inset 0 3px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 6px 20px rgba(146,64,14,0.3), inset 0 3px 0 rgba(255,255,255,0.08);
             z-index: 1;
         }
         .bun-bottom .layer-label {
@@ -778,8 +788,8 @@
             border-radius: 50%;
             flex-shrink: 0;
         }
-        .annotation .dot.blue { background: #3b82f6; }
-        .annotation .dot.gold { background: #f59e0b; }
+        .annotation .dot.blue { background: #d97706; }
+        .annotation .dot.gold { background: #dc2626; }
         .annotation .dot.green { background: #22c55e; }
         @media (max-width: 768px) {
             .bun, .patty, .bun-top, .bun-bottom { width: 240px; }
