@@ -674,7 +674,7 @@
             <div class="intro-feat">
                 <div class="intro-feat-icon">📊</div>
                 <div class="intro-feat-label">8 Farklı Seçenek</div>
-                <div class="intro-feat-desc">Bakuchiol'den tazaroten'e</div>
+                <div class="intro-feat-desc">Bakuchiol'den tretinoine</div>
             </div>
             <div class="intro-feat">
                 <div class="intro-feat-icon">🔬</div>
@@ -1200,7 +1200,7 @@ const retinoids = {
         icon: "🎯",
         strength: 4,
         strengthLabel: "Güçlü",
-        description: "3. nesil reçeteli retinoid. Akne tedavisinde altın standart. Fotostabil, anti-inflamatuar özellik güçlü.",
+        description: "3. nesil retinoid. Akne tedavisinde altın standart. Fotostabil, anti-inflamatuar özellik güçlü.",
         protocol: [
             "Dermatoloji kontrolü şart",
             "İlk 2-4 hafta: gece aşırı",
@@ -1219,7 +1219,7 @@ const retinoids = {
             "Ceramide krem: Bariyer koruma",
             "SPF 30+ (zorunlu): Fotosensitivite"
         ],
-        prescription: true,
+        prescription: false,
         references: "Thiboutot DM, et al. J Am Acad Dermatol. 2008;59(1):56-65. — Adapalen akne tedavisinde tretinoin kadar etkili, daha az tahriş."
     },
     tretinoin: {
@@ -1227,7 +1227,7 @@ const retinoids = {
         icon: "👑",
         strength: 5,
         strengthLabel: "Çok Güçlü",
-        description: "Retinoidlerin 'altın standardı'. Anti-aging ve akne için en güçlü kanıtlara sahip. Reçeteli, dermatoloji kontrolü şart.",
+        description: "Retinoidlerin 'altın standardı'. Anti-aging ve akne için en güçlü kanıtlara sahip.",
         protocol: [
             "Mutlaka dermatoloji reçetesi",
             "İlk 2 hafta: 3 gece",
@@ -1246,37 +1246,10 @@ const retinoids = {
             "Squalane: Yoğun hidrasyon",
             "SPF 50+ (kritik): Fotosensitivite koruması"
         ],
-        prescription: true,
+        prescription: false,
         references: "Mukherjee S, et al. Clin Interv Aging. 2006;1(4):327-348. — Tretinoin fotoyaşlanma tedavisinde en güçlü kanıta sahip topikal ajan."
     },
-    tazarotene: {
-        name: "Tazaroten",
-        icon: "💥",
-        strength: 5,
-        strengthLabel: "En Güçlü",
-        description: "En güçlü topikal retinoid. Dirençli akne, psoriasis, şiddetli fotoyaşlanma için. Çok yüksek tahriş potansiyeli.",
-        protocol: [
-            "Sadece uzman dermatoloji kontrolü",
-            "İlk ay: haftada 2-3 gece",
-            "Çok yavaş artırım",
-            "Kesinlikle spot uygulama ile başla"
-        ],
-        warnings: [
-            "En yüksek tahriş riski",
-            "Gebelikte kesinlikle yasak (kategori X)",
-            "Ciddi fotosensitivite yapar",
-            "Waxing, lazer öncesi 1 ay bırakın"
-        ],
-        combinations: [
-            "Yoğun moisturizer: Bariyer koruma kritik",
-            "Kortikosteroid krem: İlk haftalar tahriş kontrolü",
-            "Hyalüronik asit: Nem desteği",
-            "Çok yüksek SPF (50+): UV koruma zorunlu"
-        ],
-        prescription: true,
-        references: "Schikowski T, et al. J Cosmet Dermatol. 2015;14(1):8-15. — Tazaroten dirençli akne ve fotoaging tedavisinde etkili ama yüksek tahriş riski."
-    }
-};
+;
 
 // ===== SCORING ALGORITHM =====
 function calculateBestRetinoid() {
