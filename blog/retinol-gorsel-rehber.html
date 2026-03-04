@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinol Başlangıç Rehberi: A'dan Z'ye — Görsel Rehber | Derindenbilgi</title>
+    <meta name="description" content="Retinoid merdiveni, retinizasyon süreci, sandviç metodu, güvenli kombinasyonlar ve yaygın mitler — görsel rehber formatında kanıta dayalı bilgiler.">
+    <meta name="keywords" content="retinol, retinoid, tretinoin, adapalen, retinaldehit, anti-aging, kırışıklık, akne, vitamin A, cilt bakımı, dermatoloji">
+    <meta property="og:title" content="Retinol Başlangıç Rehberi: A'dan Z'ye — Görsel Rehber">
+    <meta property="og:description" content="Retinoid merdiveni, retinizasyon süreci, sandviç metodu ve yaygın mitler — kanıta dayalı retinol rehberi.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Original teal theme for header/footer */
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            
+            /* Retinol golden/amber theme */
+            --gold-primary: #f59e0b;
+            --gold-secondary: #d97706;
+            --gold-tertiary: #fbbf24;
+            --gold-light: #fffbeb;
+            --gold-bg: rgba(245,158,11,0.08);
+            --gold-border: rgba(245,158,11,0.2);
+            --gold-gradient: linear-gradient(135deg, #f59e0b, #d97706);
+            --gold-gradient-light: linear-gradient(135deg, #fffbeb, rgba(251,191,36,0.2));
+            
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fffbeb;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200px 0; }
+            100% { background-position: calc(200px + 100%) 0; }
+        }
+        @keyframes goldGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(245,158,11,0.3); }
+            50% { box-shadow: 0 0 40px rgba(245,158,11,0.5); }
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: var(--gold-gradient-light);
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23f59e0b" fill-opacity="0.03"><path d="M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z"/></g></g></svg>');
+            pointer-events: none;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(245,158,11,0.15);
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease;
+        }
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #0f172a;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            animation: fadeUp 0.8s ease;
+        }
+        .hero .emoji {
+            font-size: 3rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-right: 0.5rem;
+        }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--gold-secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: fadeUp 0.8s ease 0.2s both;
+        }
+        .hero .description {
+            font-size: 1rem;
+            color: var(--text-s);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeUp 0.8s ease 0.4s both;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section {
+            margin-bottom: 4rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeUp 0.6s ease;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-s);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== RETINOID LADDER (STAR FEATURE) ===== */
+        .retinoid-tower {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,251,235,0.9));
+            border: 1px solid var(--gold-border);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        .retinoid-tower::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(245,158,11,0.1), transparent, rgba(217,119,6,0.1), transparent);
+            animation: spin 20s linear infinite;
+            pointer-events: none;
+        }
+        .retinoid-tower::after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            background: var(--bg);
+            border-radius: var(--radius-md);
+            z-index: 1;
+        }
+        .tower-content {
+            position: relative;
+            z-index: 2;
+        }
+        .tower-title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .retinoid-ladder {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .retinoid-step {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,251,235,0.6));
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        .retinoid-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .retinoid-step:hover {
+            transform: translateX(8px) perspective(1000px) rotateY(2deg);
+            box-shadow: 0 8px 25px rgba(245,158,11,0.2);
+            border-color: var(--gold-border);
+            animation: goldGlow 2s ease-in-out infinite;
+        }
+        .retinoid-step:hover::before {
+            opacity: 1;
+        }
+        .retinoid-step.expanded {
+            border-color: var(--gold-primary);
+            background: linear-gradient(135deg, rgba(255,251,235,0.8), rgba(255,255,255,0.9));
+        }
+        .retinoid-step.expanded::before {
+            opacity: 1;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+        .step-concentration {
+            font-size: 0.85rem;
+            color: var(--gold-secondary);
+            font-weight: 600;
+        }
+
+        .step-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge.otc {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+        .badge.prescription {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+        }
+        .badge.strength-1 { background: linear-gradient(135deg, #e5e7eb, #d1d5db); color: #374151; }
+        .badge.strength-2 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #92400e; }
+        .badge.strength-3 { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        .badge.strength-4 { background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; }
+        .badge.strength-5 { background: linear-gradient(135deg, #7c2d12, #991b1b); color: white; }
+
+        .strength-bar {
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .strength-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #e5e7eb;
+        }
+        .strength-dot.active {
+            background: var(--gold-primary);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .step-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .retinoid-step.expanded .step-details {
+            max-height: 200px;
+        }
+        .step-reference {
+            font-size: 0.75rem;
+            color: var(--text-t);
+            font-style: italic;
+            border-top: 1px solid var(--border);
+            padding-top: 0.75rem;
+        }
+
+        /* ===== RETINIZATION TIMELINE ===== */
+        .retinization-timeline {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,250,252,0.9));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-weeks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .timeline-week {
+            background: rgba(255,255,255,0.8);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .timeline-week:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(245,158,11,0.15);
+            border-color: var(--gold-border);
+        }
+        .week-number {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        .week-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .week-desc {
+            font-size: 0.8rem;
+            color: var(--text-s);
+            line-height: 1.5;
+        }
+
+        /* ===== ROUTINE CARDS ===== */
+        .routine-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .routine-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,253,255,0.6));
+            border: 2px solid transparent;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .routine-card.morning {
+            background: linear-gradient(135deg, #fef3c7, rgba(254,243,199,0.7));
+            border-color: rgba(245,158,11,0.3);
+        }
+        .routine-card.evening {
+            background: linear-gradient(135deg, #ddd6fe, rgba(221,214,254,0.7));
+            border-color: rgba(139,92,246,0.3);
+        }
+        .routine-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .routine-card.morning:hover {
+            border-color: #f59e0b;
+            animation: goldGlow 2s ease-in-out infinite;
+        }
+        .routine-card.evening:hover {
+            border-color: #8b5cf6;
+        }
+
+        .routine-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .routine-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .routine-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .routine-steps {
+            list-style: none;
+        }
+        .routine-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.7);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+        }
+        .routine-step:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateX(4px);
+        }
+        .step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-text {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        .step-detail {
+            font-size: 0.75rem;
+            color: var(--text-s);
+            margin-top: 0.25rem;
+        }
+
+        /* ===== SANDWICH METHOD ===== */
+        .sandwich-visual {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,251,235,0.8));
+            border: 1px solid var(--gold-border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .sandwich-layers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .sandwich-layer {
+            background: rgba(255,255,255,0.9);
+            border: 2px solid var(--gold-border);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text);
+            position: relative;
+            min-width: 140px;
+            transition: all 0.3s ease;
+        }
+        .sandwich-layer:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(245,158,11,0.2);
+        }
+        .sandwich-arrow {
+            font-size: 1.5rem;
+            color: var(--gold-primary);
+            animation: float 3s ease-in-out infinite;
+        }
+        .sandwich-layer.moisturizer {
+            background: linear-gradient(135deg, #dbeafe, rgba(219,234,254,0.8));
+            border-color: #3b82f6;
+            color: #1d4ed8;
+        }
+        .sandwich-layer.retinol {
+            background: linear-gradient(135deg, #fef3c7, rgba(254,243,199,0.8));
+            border-color: var(--gold-primary);
+            color: var(--gold-secondary);
+            font-weight: 800;
+        }
+
+        /* ===== COMBINATIONS GRID ===== */
+        .combinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .combination-section {
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        .combination-section.safe {
+            background: linear-gradient(135deg, #f0fdf4, rgba(240,253,244,0.8));
+            border: 1px solid rgba(34,197,94,0.3);
+        }
+        .combination-section.risky {
+            background: linear-gradient(135deg, #fef2f2, rgba(254,242,242,0.8));
+            border: 1px solid rgba(239,68,68,0.3);
+        }
+        .combination-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .combination-icon {
+            font-size: 1.5rem;
+        }
+        .combination-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .combination-section.safe .combination-title { color: #059669; }
+        .combination-section.risky .combination-title { color: #dc2626; }
+
+        .combination-list {
+            list-style: none;
+        }
+        .combination-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.7);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+        }
+        .combination-item:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateX(4px);
+        }
+        .combination-check {
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .combination-text {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        .combination-reason {
+            font-size: 0.75rem;
+            color: var(--text-s);
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        /* ===== MYTH BUSTER ===== */
+        .myth-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .myth-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(249,250,251,0.8));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .myth-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ef4444, #22c55e);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .myth-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .myth-card:hover::before {
+            opacity: 1;
+        }
+
+        .myth-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .myth-false {
+            flex: 1;
+            text-align: left;
+        }
+        .myth-arrow {
+            font-size: 1.5rem;
+            color: var(--gold-primary);
+            align-self: center;
+            animation: float 3s ease-in-out infinite;
+        }
+        .myth-true {
+            flex: 1;
+            text-align: left;
+        }
+
+        .myth-statement {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+        }
+        .myth-false .myth-statement {
+            color: #dc2626;
+        }
+        .myth-true .myth-statement {
+            color: #059669;
+        }
+
+        /* ===== SUITABILITY CARDS ===== */
+        .suitability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .suitability-card {
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .suitability-card.suitable {
+            background: linear-gradient(135deg, #f0fdf4, rgba(240,253,244,0.8));
+            border: 1px solid rgba(34,197,94,0.3);
+        }
+        .suitability-card.caution {
+            background: linear-gradient(135deg, #fffbeb, rgba(255,251,235,0.8));
+            border: 1px solid rgba(245,158,11,0.3);
+        }
+        .suitability-card.contraindicated {
+            background: linear-gradient(135deg, #fef2f2, rgba(254,242,242,0.8));
+            border: 1px solid rgba(239,68,68,0.3);
+        }
+        .suitability-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .suitability-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .suitability-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .suitability-card.suitable .suitability-title { color: #059669; }
+        .suitability-card.caution .suitability-title { color: #d97706; }
+        .suitability-card.contraindicated .suitability-title { color: #dc2626; }
+        
+        .suitability-desc {
+            font-size: 0.85rem;
+            color: var(--text-s);
+            line-height: 1.5;
+        }
+
+        /* ===== DOCTOR NOTE ===== */
+        .doctor-note {
+            background: linear-gradient(135deg, #fffbeb, rgba(255,251,235,0.8));
+            border: 2px solid #fbbf24;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+        .doctor-note::before {
+            content: '👨‍⚕️';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+        .doctor-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .doctor-text {
+            font-size: 0.95rem;
+            color: #78350f;
+            line-height: 1.7;
+        }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .references h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .reference-list {
+            list-style: none;
+            counter-reset: ref-counter;
+        }
+        .reference-item {
+            font-size: 0.8rem;
+            color: var(--text-s);
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+            counter-increment: ref-counter;
+        }
+        .reference-item::before {
+            content: counter(ref-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 600;
+            color: var(--gold-primary);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2.5rem 1.25rem 2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .main-content {
+                padding: 0 1.25rem 3rem;
+            }
+            .retinoid-tower {
+                padding: 2rem 1.5rem;
+            }
+            .routine-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .combinations-grid {
+                grid-template-columns: 1fr;
+            }
+            .myth-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .myth-arrow {
+                transform: rotate(90deg);
+                align-self: center;
+            }
+            .header-nav {
+                display: none;
+            }
+            .sandwich-layers {
+                flex-direction: column;
+            }
+            .sandwich-arrow {
+                transform: rotate(90deg);
+            }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">✨ Görsel Rehber</span>
+        <h1><span class="emoji">✨</span>Retinol Başlangıç Rehberi</h1>
+        <div class="subtitle">A Vitamini dünyasına adım adım giriş — kanıta dayalı</div>
+        <p class="description">
+            <strong>Retinol</strong> ve retinoidler, anti-aging ve akne tedavisinin altın standardıdır. Doğru kullanımla cildinizde dönüşüm yaşayın — retinoid merdiveni, retinizasyon süreci ve güvenli kombinasyonlarla.
+        </p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- RETINOID LADDER -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🪜 Retinoid Merdiveni</h2>
+            <p class="section-subtitle">En hafiften en güçlüsüne — hangi retinoid sizin için doğru?</p>
+        </div>
+
+        <div class="retinoid-tower">
+            <div class="tower-content">
+                <h3 class="tower-title">💎 Güç Merdiveni</h3>
+                
+                <div class="retinoid-ladder">
+                    <!-- RETINYL PALMITATE -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <h3>Retinyl Palmitat</h3>
+                                <div class="step-concentration">En hafif retinoid</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge otc">Reçetesiz</span>
+                            <span class="badge strength-1">Güç ●○○○○</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot"></span>
+                            <span class="strength-dot"></span>
+                            <span class="strength-dot"></span>
+                            <span class="strength-dot"></span>
+                        </div>
+                        <p class="step-desc">
+                            Kozmetiklerde yaygın, dönüşüm oranı düşük, hassas ciltler için giriş noktası.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 Retinyl esters: tretinoin aktivitesine dönüşüm için 2+ adım gerekir
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RETINOL 0.3% -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <h3>Retinol %0.3</h3>
+                                <div class="step-concentration">Başlangıç dozu</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge otc">Reçetesiz</span>
+                            <span class="badge strength-2">Güç ●●○○○</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot"></span>
+                            <span class="strength-dot"></span>
+                            <span class="strength-dot"></span>
+                        </div>
+                        <p class="step-desc">
+                            Gece kullanım, haftalık 2-3 gece ile başla. Retinol dünyasına ideal giriş.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 %0.3 retinol — etkinlik ile tolere edilebilirlik dengesinin sweet spot'u
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RETINOL 0.5-1% -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <h3>Retinol %0.5-1</h3>
+                                <div class="step-concentration">Orta seviye</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge otc">Reçetesiz</span>
+                            <span class="badge strength-3">Güç ●●●○○</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot"></span>
+                            <span class="strength-dot"></span>
+                        </div>
+                        <p class="step-desc">
+                            Deneyimli kullanıcılar, anti-aging için etkili doz, kollajen stimülasyonu.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 %1 retinol — kırışıklık azalması ve kollajen üretimi için optimal doz
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RETINALDEHYDE -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-info">
+                                <h3>Retinaldehit (Retinal)</h3>
+                                <div class="step-concentration">İleri seviye</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge otc">Reçetesiz</span>
+                            <span class="badge strength-4">Güç ●●●●○</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot"></span>
+                        </div>
+                        <p class="step-desc">
+                            Retinolden 11x daha güçlü, tretinoine sadece 1 dönüşüm adımı kala.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 Kong R et al. Retinal vs retinol: 11x daha hızlı dönüşüm. Dermatol Surg. 2016
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ADAPALENE -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <div class="step-info">
+                                <h3>Adapalen %0.1-0.3</h3>
+                                <div class="step-concentration">3. nesil retinoid</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge prescription">Reçeteli</span>
+                            <span class="badge strength-4">Güç ●●●●○</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot"></span>
+                        </div>
+                        <p class="step-desc">
+                            Akne odaklı, FDA onaylı, fotostabil — güneşte daha az hassasiyet.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 Adapalen — fotografik stabilite avantajı, daha az irritasyon
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TRETINOIN -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">6</div>
+                            <div class="step-info">
+                                <h3>Tretinoin %0.025-0.05</h3>
+                                <div class="step-concentration">Altın standart</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge prescription">Reçeteli</span>
+                            <span class="badge strength-5">Güç ●●●●●</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                        </div>
+                        <p class="step-desc">
+                            Anti-aging + akne, en çok çalışılmış retinoid. Kırışıklık, ton eşitsizliği, akne.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 Mukherjee S et al. Tretinoin — en kapsamlı klinik veri. Clin Interv Aging. 2006
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAZAROTENE -->
+                    <div class="retinoid-step" onclick="toggleStep(this)">
+                        <div class="step-header">
+                            <div class="step-number">7</div>
+                            <div class="step-info">
+                                <h3>Tazaroten %0.05-0.1</h3>
+                                <div class="step-concentration">En güçlü reçeteli</div>
+                            </div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="badge prescription">Reçeteli</span>
+                            <span class="badge strength-5">Güç ●●●●●</span>
+                        </div>
+                        <div class="strength-bar">
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                            <span class="strength-dot active"></span>
+                        </div>
+                        <p class="step-desc">
+                            Psoriasis + akne + fotoaging. En güçlü retinoid, hassasiyet riski en yüksek.
+                        </p>
+                        <div class="step-details">
+                            <div class="step-reference">
+                                🔗 Tazaroten — selektif RAR-β ve RAR-γ aktivitesi, güçlü anti-proliferatif etki
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RETINIZATION TIMELINE -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">📈 Retinizasyon Süreci</h2>
+            <p class="section-subtitle">Ne beklemeli? — Cildinizin adapte olma yolculuğu</p>
+        </div>
+
+        <div class="retinization-timeline">
+            <p style="text-align: center; font-size: 1rem; color: var(--gold-secondary); font-weight: 600; margin-bottom: 1rem;">
+                ⚠️ Retinizasyon korkulacak değil, cildin adapte olma sürecidir
+            </p>
+            
+            <div class="timeline-weeks">
+                <div class="timeline-week">
+                    <div class="week-number">Hafta 1-2</div>
+                    <div class="week-title">İlk Reaksiyon</div>
+                    <div class="week-desc">Hafif kuruluk, soyulma, kızarıklık (normal!). Cildiniz vitamin A'ya alışıyor.</div>
+                </div>
+                
+                <div class="timeline-week">
+                    <div class="week-number">Hafta 3-4</div>
+                    <div class="week-title">Retinizasyon</div>
+                    <div class="week-desc">Adapte olma devam ediyor, purging olabilir. Sabreden kazanır!</div>
+                </div>
+                
+                <div class="timeline-week">
+                    <div class="week-number">Hafta 6-8</div>
+                    <div class="week-title">Stabilizasyon</div>
+                    <div class="week-desc">Cilt adapte olmaya başlıyor, yan etkiler azalıyor, ilk olumlu değişiklikler.</div>
+                </div>
+                
+                <div class="timeline-week">
+                    <div class="week-number">Hafta 12+</div>
+                    <div class="week-title">Tam Etki</div>
+                    <div class="week-desc">Kırışıklık azalması, ton eşitlenmesi, akne iyileşmesi — tam dönüşüm!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROUTINE SECTION -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">⏰ Sabah & Akşam Rutini</h2>
+            <p class="section-subtitle">Retinol kullanıyorsanız mutlaka uymanız gereken kurallar</p>
+        </div>
+
+        <div class="routine-cards">
+            <!-- MORNING ROUTINE -->
+            <div class="routine-card morning">
+                <div class="routine-header">
+                    <span class="routine-icon">☀️</span>
+                    <h3 class="routine-title">Sabah (Retinol Kullanıyorsan)</h3>
+                </div>
+                <ol class="routine-steps">
+                    <li class="routine-step">
+                        <span class="step-num">1</span>
+                        <div>
+                            <div class="step-text">Hafif temizleyici</div>
+                            <div class="step-detail">SLS-free, pH dengeleyici, tahriş etmeyen</div>
+                        </div>
+                    </li>
+                    <li class="routine-step">
+                        <span class="step-num">2</span>
+                        <div>
+                            <div class="step-text">Antioksidan serum (C vitamini)</div>
+                            <div class="step-detail">UV hasarından koruma, retinol sinerjisi</div>
+                        </div>
+                    </li>
+                    <li class="routine-step">
+                        <span class="step-num">3</span>
+                        <div>
+                            <div class="step-text">Nemlendirici</div>
+                            <div class="step-detail">Cilt bariyerini güçlendirme</div>
+                        </div>
+                    </li>
+                    <li class="routine-step">
+                        <span class="step-num">4</span>
+                        <div>
+                            <div class="step-text">SPF 30+ (ZORUNLU!)</div>
+                            <div class="step-detail">Retinol fotosensitivite yapar — ÇOK ÖNEMLİ!</div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- EVENING ROUTINE -->
+            <div class="routine-card evening">
+                <div class="routine-header">
+                    <span class="routine-icon">🌙</span>
+                    <h3 class="routine-title">Akşam Rutini</h3>
+                </div>
+                <ol class="routine-steps">
+                    <li class="routine-step">
+                        <span class="step-num">1</span>
+                        <div>
+                            <div class="step-text">Temizleyici</div>
+                            <div class="step-detail">Gün içi kir ve SPF'i temizle</div>
+                        </div>
+                    </li>
+                    <li class="routine-step">
+                        <span class="step-num">2</span>
+                        <div>
+                            <div class="step-text">Retinol/retinoid (kuru cilde)</div>
+                            <div class="step-detail">Nem yokken uygula — daha iyi absorpsiyon</div>
+                        </div>
+                    </li>
+                    <li class="routine-step">
+                        <span class="step-num">3</span>
+                        <div>
+                            <div class="step-text">Nemlendirici (sandwich method)</div>
+                            <div class="step-detail">Retinol öncesi ve sonrası — irritasyonu azaltır</div>
+                        </div>
+                    </li>
+                    <li class="routine-step">
+                        <span class="step-num">4</span>
+                        <div>
+                            <div class="step-text">Göz kremi</div>
+                            <div class="step-detail">Göz çevresi hassas — retinol uygulamayın!</div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- SANDWICH METHOD -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🥪 Retinol Sandviç Metodu</h2>
+            <p class="section-subtitle">İrritasyonu azaltır, etkinliği korur</p>
+        </div>
+
+        <div class="sandwich-visual">
+            <div class="sandwich-layers">
+                <div class="sandwich-layer moisturizer">Nemlendirici</div>
+                <span class="sandwich-arrow">→</span>
+                <div class="sandwich-layer retinol">RETINOL</div>
+                <span class="sandwich-arrow">→</span>
+                <div class="sandwich-layer moisturizer">Nemlendirici</div>
+            </div>
+            
+            <p style="font-size: 0.9rem; color: var(--text-s); line-height: 1.6; max-width: 500px; margin: 0 auto;">
+                Nemlendirici retinol penetrasyonunu %50 azaltır, ama irritasyon riskini %80 düşürür. 
+                Net kazanç! Özellikle hassas ciltlerde veya başlangıç döneminde ideal.
+            </p>
+        </div>
+    </section>
+
+    <!-- COMBINATIONS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🧪 Retinol Kombinasyonları</h2>
+            <p class="section-subtitle">Güvenli ve riskli eşleştirmeler</p>
+        </div>
+
+        <div class="combinations-grid">
+            <!-- SAFE COMBINATIONS -->
+            <div class="combination-section safe">
+                <div class="combination-header">
+                    <span class="combination-icon">✅</span>
+                    <h3 class="combination-title">Güvenli Kombinasyonlar</h3>
+                </div>
+                
+                <ul class="combination-list">
+                    <li class="combination-item">
+                        <span class="combination-check">✓</span>
+                        <div>
+                            <div class="combination-text">Retinol + Niasinamid</div>
+                            <div class="combination-reason">İrritasyonu azaltır, cilt bariyerini güçlendirir</div>
+                        </div>
+                    </li>
+                    <li class="combination-item">
+                        <span class="combination-check">✓</span>
+                        <div>
+                            <div class="combination-text">Retinol + Hyaluronik Asit</div>
+                            <div class="combination-reason">Nemlendirme desteği, tahriş azaltma</div>
+                        </div>
+                    </li>
+                    <li class="combination-item">
+                        <span class="combination-check">✓</span>
+                        <div>
+                            <div class="combination-text">Retinol + Peptitler</div>
+                            <div class="combination-reason">Anti-aging sinerji, kollajen stimülasyonu</div>
+                        </div>
+                    </li>
+                    <li class="combination-item">
+                        <span class="combination-check">✓</span>
+                        <div>
+                            <div class="combination-text">Retinol + SPF (sabah)</div>
+                            <div class="combination-reason">ZORUNLU! Fotosensitivite koruması</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- RISKY COMBINATIONS -->
+            <div class="combination-section risky">
+                <div class="combination-header">
+                    <span class="combination-icon">❌</span>
+                    <h3 class="combination-title">Riskli Kombinasyonlar</h3>
+                </div>
+                
+                <ul class="combination-list">
+                    <li class="combination-item">
+                        <span class="combination-check">✗</span>
+                        <div>
+                            <div class="combination-text">Retinol + AHA/BHA (aynı gece)</div>
+                            <div class="combination-reason">Aşırı irritasyon, cilt bariyeri hasarı</div>
+                        </div>
+                    </li>
+                    <li class="combination-item">
+                        <span class="combination-check">✗</span>
+                        <div>
+                            <div class="combination-text">Retinol + Benzoil Peroksit</div>
+                            <div class="combination-reason">Retinolü oksitleyip inaktive eder</div>
+                        </div>
+                    </li>
+                    <li class="combination-item">
+                        <span class="combination-check">⚠</span>
+                        <div>
+                            <div class="combination-text">Retinol + C Vitamini (aynı gece)</div>
+                            <div class="combination-reason">pH uyumsuzluğu, tartışmalı — sabah/akşam ayırın</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MYTH BUSTER -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🔍 Yaygın Mitler</h2>
+            <p class="section-subtitle">Retinol hakkında doğru bilinen yanlışlar</p>
+        </div>
+
+        <div class="myth-grid">
+            <div class="myth-card">
+                <div class="myth-content">
+                    <div class="myth-false">
+                        <div class="myth-statement">❌ "Retinol cildi inceltir"</div>
+                    </div>
+                    <div class="myth-arrow">→</div>
+                    <div class="myth-true">
+                        <div class="myth-statement">✅ Tam tersi — epidermal kalınlığı artırır, kollajen üretimini stimüle eder</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-content">
+                    <div class="myth-false">
+                        <div class="myth-statement">❌ "Yazın retinol kullanılmaz"</div>
+                    </div>
+                    <div class="myth-arrow">→</div>
+                    <div class="myth-true">
+                        <div class="myth-statement">✅ SPF ile birlikte 4 mevsim kullanılabilir</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-content">
+                    <div class="myth-false">
+                        <div class="myth-statement">❌ "Retinol hemen etki eder"</div>
+                    </div>
+                    <div class="myth-arrow">→</div>
+                    <div class="myth-true">
+                        <div class="myth-statement">✅ Minimum 12 hafta sabır gerekli</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myth-card">
+                <div class="myth-content">
+                    <div class="myth-false">
+                        <div class="myth-statement">❌ "Hamilelikte retinol güvenli"</div>
+                    </div>
+                    <div class="myth-arrow">→</div>
+                    <div class="myth-true">
+                        <div class="myth-statement">✅ Kesinlikle HAYIR — tüm retinoidler kontrendike (Bakuchiol alternatif)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUITABILITY SECTION -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">👤 Kime Uygun, Kime Değil?</h2>
+            <p class="section-subtitle">Retinol kullanımında kişisel durum değerlendirmesi</p>
+        </div>
+
+        <div class="suitability-grid">
+            <div class="suitability-card suitable">
+                <span class="suitability-icon">✅</span>
+                <h3 class="suitability-title">Uygun</h3>
+                <p class="suitability-desc">25+ yaş anti-aging, akne, hiperpigmentasyon, fotoaging, kollajen stimülasyonu ihtiyacı</p>
+            </div>
+            
+            <div class="suitability-card caution">
+                <span class="suitability-icon">🤔</span>
+                <h3 class="suitability-title">Dikkatli</h3>
+                <p class="suitability-desc">Hassas cilt (düşük dozla başla), rozasea (retinaldehit tercih), çok kuru cilt</p>
+            </div>
+            
+            <div class="suitability-card contraindicated">
+                <span class="suitability-icon">❌</span>
+                <h3 class="suitability-title">Kontrendike</h3>
+                <p class="suitability-desc">Hamilelik, emzirme, aktif egzama/dermatit, açık yaralar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTOR NOTE -->
+    <div class="doctor-note scroll-reveal">
+        <h3 class="doctor-title">⚕️ Hekim Notu</h3>
+        <p class="doctor-text">
+            Bu rehber bilgilendirme amaçlıdır. Reçeteli retinoidler için dermatoloğunuza danışın. 
+            Özellikle hassas cilt tiplerinde, diğer cilt hastalıkları varlığında veya ilaç kullanımında mutlaka profesyonel değerlendirme gereklidir.
+        </p>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references scroll-reveal">
+        <h3>📚 Bilimsel Kaynaklar</h3>
+        <ol class="reference-list">
+            <li class="reference-item">Mukherjee S et al. Retinoids in the treatment of skin aging: an overview of clinical efficacy and safety. Clin Interv Aging. 2006;1(4):327-348.</li>
+            <li class="reference-item">Kong R et al. A comparative study of the effects of retinol and retinoic acid on histological, molecular, and clinical properties of human skin. J Cosmet Dermatol. 2016;15(1):49-57.</li>
+            <li class="reference-item">Zasada M, Budzisz E. Retinoids: active molecules influencing skin structure formation in cosmetic and dermatological treatments. Adv Dermatol Allergol. 2019;36(4):392-397.</li>
+            <li class="reference-item">Yoham AL, Casadesus D. Tretinoin. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2024.</li>
+            <li class="reference-item">Dhaliwal S et al. Prospective, randomized, double-blind assessment of topical bakuchiol and retinol for facial photoageing. Br J Dermatol. 2019;180(2):289-296.</li>
+        </ol>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Retinoid step toggle
+function toggleStep(step) {
+    step.classList.toggle('expanded');
+}
+
+// Scroll reveal animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el);
+});
+
+// Add interactive sparkles to retinoid steps on hover
+document.querySelectorAll('.retinoid-step').forEach(step => {
+    step.addEventListener('mouseenter', function() {
+        const sparkle = document.createElement('div');
+        sparkle.style.cssText = `
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #f59e0b;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        `;
+        sparkle.textContent = '✨';
+        this.appendChild(sparkle);
+        
+        setTimeout(() => {
+            sparkle.style.opacity = '1';
+        }, 100);
+        
+        setTimeout(() => {
+            if (sparkle.parentNode) {
+                sparkle.parentNode.removeChild(sparkle);
+            }
+        }, 2000);
+    });
+});
+
+// Add subtle animation to strength bars
+document.querySelectorAll('.strength-dot.active').forEach((dot, index) => {
+    dot.style.animationDelay = (index * 0.2) + 's';
+});
+</script>
+
+</body>
+</html>
