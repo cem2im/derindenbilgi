@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    width: 1080px;
+    height: 1920px;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #fef2f2 0%, #fff1f2 30%, #fce7f3 60%, #fdf2f8 100%);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Decorative blobs */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+  }
+  .blob-1 { width: 400px; height: 400px; background: #f43f5e; top: -100px; right: -100px; }
+  .blob-2 { width: 300px; height: 300px; background: #ec4899; bottom: 200px; left: -80px; }
+  .blob-3 { width: 250px; height: 250px; background: #f97316; top: 600px; right: -60px; opacity: 0.15; }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 60px 56px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f43f5e, #ec4899);
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #1a1a2e;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+  }
+
+  .title span {
+    color: #e11d48;
+  }
+
+  .subtitle {
+    font-size: 26px;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  /* Serum bottle visual */
+  .bottle-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex: 1;
+  }
+
+  .bottle {
+    width: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottle-cap {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(180deg, #374151, #1f2937);
+    border-radius: 8px 8px 4px 4px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bottle-neck {
+    width: 40px;
+    height: 20px;
+    background: linear-gradient(180deg, #4b5563, #374151);
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+  }
+
+  .bottle-body {
+    width: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    margin-top: -4px;
+  }
+
+  .layer {
+    padding: 18px 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  .layer-1 { background: linear-gradient(135deg, #dc2626, #ef4444); height: 90px; display: flex; align-items: center; justify-content: center; }
+  .layer-2 { background: linear-gradient(135deg, #f43f5e, #fb7185); height: 80px; display: flex; align-items: center; justify-content: center; }
+  .layer-3 { background: linear-gradient(135deg, #f97316, #fb923c); height: 80px; display: flex; align-items: center; justify-content: center; }
+  .layer-4 { background: linear-gradient(135deg, #f59e0b, #fbbf24); height: 75px; display: flex; align-items: center; justify-content: center; }
+  .layer-5 { background: linear-gradient(135deg, #fde68a, #fef3c7); height: 70px; display: flex; align-items: center; justify-content: center; color: #92400e; }
+  .layer-6 { background: linear-gradient(135deg, #e0f2fe, #bae6fd); height: 70px; display: flex; align-items: center; justify-content: center; color: #0369a1; border-radius: 0 0 20px 20px; }
+
+  /* Ingredient cards */
+  .ingredients {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .ingredient {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px 24px;
+    border: 1px solid rgba(255,255,255,0.8);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  .ing-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .ing-name {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.5px;
+  }
+
+  .ing-desc {
+    font-size: 18px;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .dot-1 { background: #dc2626; }
+  .dot-2 { background: #f43f5e; }
+  .dot-3 { background: #f97316; }
+  .dot-4 { background: #f59e0b; }
+  .dot-5 { background: #fde68a; border: 2px solid #f59e0b; }
+  .dot-6 { background: #bae6fd; border: 2px solid #0ea5e9; }
+
+  /* Avoid section */
+  .avoid-section {
+    margin-top: 32px;
+    background: rgba(239,68,68,0.08);
+    border: 2px dashed rgba(239,68,68,0.3);
+    border-radius: 24px;
+    padding: 28px 32px;
+  }
+
+  .avoid-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #dc2626;
+    margin-bottom: 14px;
+  }
+
+  .avoid-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .avoid-tag {
+    background: rgba(239,68,68,0.1);
+    color: #b91c1c;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 2px solid rgba(0,0,0,0.06);
+  }
+
+  .brand {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+
+  .brand span { color: #0d9488; }
+
+  .evidence {
+    font-size: 18px;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .ref {
+    font-size: 16px;
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* Connector lines */
+  .connector {
+    position: absolute;
+    border-top: 2px dashed rgba(0,0,0,0.15);
+  }
+</style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="badge">🌹 Rozasea Rehberi</div>
+      <div class="title">Rozasea İçin<br><span>Doğru Bakım</span> Rutini</div>
+      <div class="subtitle">Kanıta dayalı aktif içerikler</div>
+    </div>
+
+    <!-- Main content: Bottle + Ingredients -->
+    <div class="bottle-section">
+      <div class="bottle">
+        <div class="bottle-cap"></div>
+        <div class="bottle-neck"></div>
+        <div class="bottle-body">
+          <div class="layer layer-1">SPF 30+</div>
+          <div class="layer layer-2">Azelaik<br>Asit</div>
+          <div class="layer layer-3">Niasi-<br>namid</div>
+          <div class="layer layer-4">Centella</div>
+          <div class="layer layer-5">Sera-<br>midler</div>
+          <div class="layer layer-6">HA</div>
+        </div>
+      </div>
+
+      <div class="ingredients">
+        <div class="ingredient">
+          <div class="ing-dot dot-1"></div>
+          <div>
+            <div class="ing-name">Mineral SPF 30+</div>
+            <div class="ing-desc">Çinko oksit — kimyasal filtre irritasyonu yok</div>
+          </div>
+        </div>
+        <div class="ingredient">
+          <div class="ing-dot dot-2"></div>
+          <div>
+            <div class="ing-name">Azelaik Asit %15</div>
+            <div class="ing-desc">FDA onaylı 🏆 Anti-inflamatuar + antimikrobiyal</div>
+          </div>
+        </div>
+        <div class="ingredient">
+          <div class="ing-dot dot-3"></div>
+          <div>
+            <div class="ing-name">Niasinamid %4-5</div>
+            <div class="ing-desc">Bariyer onarımı + kızarıklık azaltma</div>
+          </div>
+        </div>
+        <div class="ingredient">
+          <div class="ing-dot dot-4"></div>
+          <div>
+            <div class="ing-name">Centella Asiatica</div>
+            <div class="ing-desc">Yatıştırıcı + anti-inflamatuar</div>
+          </div>
+        </div>
+        <div class="ingredient">
+          <div class="ing-dot dot-5"></div>
+          <div>
+            <div class="ing-name">Seramidler</div>
+            <div class="ing-desc">Bozulan cilt bariyerini destekler</div>
+          </div>
+        </div>
+        <div class="ingredient">
+          <div class="ing-dot dot-6"></div>
+          <div>
+            <div class="ing-name">Hyaluronik Asit</div>
+            <div class="ing-desc">Tahriş etmeden derin nemlendirme</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avoid section -->
+    <div class="avoid-section">
+      <div class="avoid-title">🚫 Rozaseada KAÇININ</div>
+      <div class="avoid-items">
+        <span class="avoid-tag">Alkol</span>
+        <span class="avoid-tag">Parfüm/Koku</span>
+        <span class="avoid-tag">Mentol</span>
+        <span class="avoid-tag">SLS</span>
+        <span class="avoid-tag">AHA/BHA</span>
+        <span class="avoid-tag">Sıcak Su</span>
+        <span class="avoid-tag">Retinol*</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="brand"><span>Deri</span>ndenbilgi</div>
+      <div class="evidence">📖 Kanıta Dayalı</div>
+    </div>
+    <div class="ref">*Retinol: düşük dozda (≤%0.025) tolere edilebilir, ama başlangıçta kaçının · Referanslar: Oge' LK, JAAD 2015 · Two AM, Dermatol Ther 2015 · Del Rosso JQ, Cutis 2021</div>
+  </div>
+</body>
+</html>
