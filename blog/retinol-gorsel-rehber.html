@@ -644,50 +644,147 @@
             background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,251,235,0.8));
             border: 1px solid var(--gold-border);
             border-radius: var(--radius-lg);
-            padding: 2.5rem;
+            padding: 2.5rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
-        .sandwich-layers {
+        /* Hamburger container */
+        .burger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            margin: 2rem auto;
+            max-width: 340px;
+            perspective: 600px;
+        }
+        /* Shared bun/patty style */
+        .bun, .patty {
+            width: 280px;
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+            cursor: default;
+        }
+        .burger:hover .bun-top { transform: translateY(-10px) rotateX(-4deg); }
+        .burger:hover .patty { transform: scale(1.04); }
+        .burger:hover .bun-bottom { transform: translateY(10px) rotateX(4deg); }
+
+        /* Top bun — rounded dome */
+        .bun-top {
+            background: linear-gradient(180deg, #60a5fa, #3b82f6);
+            color: white;
+            border-radius: 140px 140px 6px 6px;
+            padding: 32px 24px 18px;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(59,130,246,0.25), inset 0 -3px 0 rgba(0,0,0,0.08);
+            z-index: 3;
+        }
+        /* Sesame seeds */
+        .bun-top::before {
+            content: '💧  💧  💧';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            opacity: 0.7;
+        }
+        .bun-top .layer-label {
+            font-size: 0.7rem;
+            opacity: 0.85;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        /* Retinol patty */
+        .patty {
+            background: linear-gradient(180deg, #f59e0b, #d97706);
+            color: white;
+            border-radius: 8px;
+            padding: 22px 24px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 20px rgba(245,158,11,0.35), inset 0 -3px 0 rgba(0,0,0,0.1);
+            z-index: 2;
+            margin: -4px 0;
+            width: 260px;
+        }
+        .patty .layer-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 4px;
+            letter-spacing: 0;
+        }
+        /* Retinol glow */
+        .patty::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 12px;
+            background: radial-gradient(ellipse, rgba(245,158,11,0.3), transparent 70%);
+            z-index: -1;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        /* Bottom bun — flat base */
+        .bun-bottom {
+            background: linear-gradient(180deg, #3b82f6, #2563eb);
+            color: white;
+            border-radius: 6px 6px 140px 140px;
+            padding: 18px 24px 28px;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(37,99,235,0.25), inset 0 3px 0 rgba(255,255,255,0.1);
+            z-index: 1;
+        }
+        .bun-bottom .layer-label {
+            font-size: 0.7rem;
+            opacity: 0.85;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        /* Lettuce decoration between layers */
+        .lettuce {
+            width: 290px;
+            height: 14px;
+            background: repeating-linear-gradient(90deg, #22c55e 0px, #16a34a 8px, #22c55e 16px);
+            border-radius: 4px;
+            opacity: 0.5;
+            margin: -2px 0;
+            z-index: 4;
+        }
+        /* Annotation arrows */
+        .burger-annotations {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        .annotation {
             display: flex;
             align-items: center;
+            gap: 10px;
             justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-s);
         }
-        .sandwich-layer {
-            background: rgba(255,255,255,0.9);
-            border: 2px solid var(--gold-border);
-            border-radius: var(--radius-md);
-            padding: 1rem 1.5rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text);
-            position: relative;
-            min-width: 140px;
-            transition: all 0.3s ease;
+        .annotation .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
         }
-        .sandwich-layer:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(245,158,11,0.2);
-        }
-        .sandwich-arrow {
-            font-size: 1.5rem;
-            color: var(--gold-primary);
-            animation: float 3s ease-in-out infinite;
-        }
-        .sandwich-layer.moisturizer {
-            background: linear-gradient(135deg, #dbeafe, rgba(219,234,254,0.8));
-            border-color: #3b82f6;
-            color: #1d4ed8;
-        }
-        .sandwich-layer.retinol {
-            background: linear-gradient(135deg, #fef3c7, rgba(254,243,199,0.8));
-            border-color: var(--gold-primary);
-            color: var(--gold-secondary);
-            font-weight: 800;
+        .annotation .dot.blue { background: #3b82f6; }
+        .annotation .dot.gold { background: #f59e0b; }
+        .annotation .dot.green { background: #22c55e; }
+        @media (max-width: 768px) {
+            .bun, .patty, .bun-top, .bun-bottom { width: 240px; }
+            .patty { width: 220px; font-size: 1rem; }
+            .lettuce { width: 250px; }
         }
 
         /* ===== COMBINATIONS GRID ===== */
@@ -1005,12 +1102,7 @@
             .header-nav {
                 display: none;
             }
-            .sandwich-layers {
-                flex-direction: column;
-            }
-            .sandwich-arrow {
-                transform: rotate(90deg);
-            }
+            .burger { max-width: 280px; }
         }
 
         /* ===== SCROLL ANIMATIONS ===== */
@@ -1415,15 +1507,30 @@
         </div>
 
         <div class="sandwich-visual">
-            <div class="sandwich-layers">
-                <div class="sandwich-layer moisturizer">Nemlendirici</div>
-                <span class="sandwich-arrow">→</span>
-                <div class="sandwich-layer retinol">RETINOL</div>
-                <span class="sandwich-arrow">→</span>
-                <div class="sandwich-layer moisturizer">Nemlendirici</div>
+            <div class="burger">
+                <div class="bun bun-top">
+                    NEMLENDİRİCİ
+                    <div class="layer-label">Seramid + HA bazlı</div>
+                </div>
+                <div class="lettuce"></div>
+                <div class="patty">
+                    ✨ RETINOL ✨
+                    <div class="layer-label">Gece — kuru cilde uygula</div>
+                </div>
+                <div class="lettuce"></div>
+                <div class="bun bun-bottom">
+                    <div class="layer-label">Bariyer koruyucu</div>
+                    NEMLENDİRİCİ
+                </div>
+            </div>
+
+            <div class="burger-annotations">
+                <div class="annotation"><div class="dot blue"></div><strong>Nemlendirici katmanları</strong> — irritasyonu %80 azaltır</div>
+                <div class="annotation"><div class="dot gold"></div><strong>Retinol</strong> — aktif madde ortada korunur</div>
+                <div class="annotation"><div class="dot green"></div><strong>Yeşil çizgi</strong> — tampon bölge, geçişi yumuşatır</div>
             </div>
             
-            <p style="font-size: 0.9rem; color: var(--text-s); line-height: 1.6; max-width: 500px; margin: 0 auto;">
+            <p style="font-size: 0.9rem; color: var(--text-s); line-height: 1.6; max-width: 500px; margin: 1.5rem auto 0;">
                 Nemlendirici retinol penetrasyonunu %50 azaltır, ama irritasyon riskini %80 düşürür. 
                 Net kazanç! Özellikle hassas ciltlerde veya başlangıç döneminde ideal.
             </p>
