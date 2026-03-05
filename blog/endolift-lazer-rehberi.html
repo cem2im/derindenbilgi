@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endolift Lazer: Ameliyatsız Yüz Germe — Bilim Ne Diyor? | Derindenbilgi</title>
+    <meta name="description" content="Endolift subdermal lazer ile yağ eritme ve kolajen stimülasyonu. 2025 sistematik derleme ışığında kanıt değerlendirmesi ve risk analizi.">
+    <meta name="keywords" content="endolift, lazer yüz germe, subdermal lazer, ameliyatsız yüz germe, kolajen stimülasyonu, lipoliz">
+    <meta property="og:title" content="Endolift Lazer: Ameliyatsız Yüz Germe — Bilim Ne Diyor?">
+    <meta property="og:description" content="Subdermal lazer tekniği ile ameliyatsız yüz germe. Bilimsel kanıt değerlendirmesi ve risk analizi.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* Endolift purple/electric theme */
+            --accent: #7c3aed;
+            --accent-light: #8b5cf6;
+            --accent-dark: #6d28d9;
+            --accent-bg: rgba(124,58,237,0.08);
+            --accent-border: rgba(124,58,237,0.2);
+            
+            /* Electric gradient */
+            --electric-gradient: linear-gradient(135deg, #7c3aed, #6d28d9);
+            --electric-light: #f3f0ff;
+            --electric-bg: rgba(124,58,237,0.06);
+            
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fefbff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            
+            /* Evidence colors */
+            --evidence-good: #10b981;
+            --evidence-limited: #f59e0b;
+            --evidence-poor: #ef4444;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes electricGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(124,58,237,0.3); }
+            50% { box-shadow: 0 0 40px rgba(124,58,237,0.5); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--electric-light), rgba(255,255,255,0.9));
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%237c3aed" fill-opacity="0.03"><path d="M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z"/></g></g></svg>');
+            pointer-events: none;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--electric-bg);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease;
+        }
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #0f172a;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            animation: fadeUp 0.8s ease;
+        }
+        .hero .emoji {
+            font-size: 3rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-right: 0.5rem;
+        }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: fadeUp 0.8s ease 0.2s both;
+        }
+        .hero .description {
+            font-size: 1rem;
+            color: var(--text-s);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeUp 0.8s ease 0.4s both;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        /* ===== QUICK SUMMARY ===== */
+        .quick-summary {
+            background: var(--electric-gradient);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .quick-summary::before {
+            content: '⚡';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            opacity: 0.3;
+            animation: float 4s ease-in-out infinite;
+        }
+        .summary-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .summary-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .summary-item {
+            background: rgba(255,255,255,0.15);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        .summary-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section {
+            margin-bottom: 4rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeUp 0.6s ease;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-s);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTENT CARDS ===== */
+        .content-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,250,252,0.8));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ===== PROCESS STEPS ===== */
+        .process-steps {
+            display: grid;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .process-step {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), var(--electric-bg));
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--electric-gradient);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        .step-content p {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== APPLICATION AREAS ===== */
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .area-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), var(--electric-bg));
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .area-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            animation: electricGlow 2s ease-in-out infinite;
+        }
+        .area-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .area-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        .area-desc {
+            font-size: 0.85rem;
+            color: var(--text-s);
+        }
+
+        /* ===== EVIDENCE VERDICTS ===== */
+        .evidence-section {
+            background: var(--bg-alt);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+        .verdict-cards {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .verdict-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border-left: 4px solid var(--evidence-limited);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .verdict-card.good {
+            border-left-color: var(--evidence-good);
+        }
+        .verdict-card.limited {
+            border-left-color: var(--evidence-limited);
+        }
+        .verdict-card.poor {
+            border-left-color: var(--evidence-poor);
+        }
+        .verdict-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .verdict-emoji {
+            font-size: 1.5rem;
+        }
+        .verdict-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .verdict-level {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            color: white;
+            margin-left: auto;
+        }
+        .verdict-level.good { background: var(--evidence-good); }
+        .verdict-level.limited { background: var(--evidence-limited); }
+        .verdict-level.poor { background: var(--evidence-poor); }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin: 2rem 0;
+        }
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        .comparison-header {
+            background: var(--electric-gradient);
+            color: white;
+        }
+        .comparison-cell {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        .comparison-header .comparison-cell {
+            font-weight: 600;
+        }
+        .comparison-treatment {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* ===== PROS CONS ===== */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .pros-card, .cons-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            border-left: 4px solid var(--evidence-good);
+        }
+        .cons-card {
+            border-left-color: var(--evidence-poor);
+        }
+        .pros-title, .cons-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .pros-title { color: var(--evidence-good); }
+        .cons-title { color: var(--evidence-poor); }
+        .pros-list, .cons-list {
+            list-style: none;
+        }
+        .pros-list li, .cons-list li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .pros-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+        .cons-list li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== SUITABILITY CARDS ===== */
+        .suitability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .suitability-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .suitability-card.suitable {
+            border-color: var(--evidence-good);
+            background: linear-gradient(135deg, rgba(16,185,129,0.05), white);
+        }
+        .suitability-card.careful {
+            border-color: var(--evidence-limited);
+            background: linear-gradient(135deg, rgba(245,158,11,0.05), white);
+        }
+        .suitability-card.not-suitable {
+            border-color: var(--evidence-poor);
+            background: linear-gradient(135deg, rgba(239,68,68,0.05), white);
+        }
+        .suitability-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .suitability-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .suitability-card.suitable .suitability-title { color: var(--evidence-good); }
+        .suitability-card.careful .suitability-title { color: var(--evidence-limited); }
+        .suitability-card.not-suitable .suitability-title { color: var(--evidence-poor); }
+
+        /* ===== PILL SUMMARY ===== */
+        .pill-summary {
+            background: var(--electric-gradient);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .pill-summary::before {
+            content: '💊';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+        .pill-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .pill-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: linear-gradient(135deg, #fef3c7, rgba(254,243,199,0.8));
+            border: 2px solid #fbbf24;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .disclaimer-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .disclaimer-text {
+            font-size: 0.95rem;
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .references h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .reference-list {
+            list-style: none;
+            counter-reset: ref-counter;
+        }
+        .reference-item {
+            font-size: 0.8rem;
+            color: var(--text-s);
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        .reference-item::before {
+            content: counter(ref-counter);
+            counter-increment: ref-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2.5rem 1.25rem 2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .main-content {
+                padding: 0 1.25rem 3rem;
+            }
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            .area-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .comparison-cell {
+                padding: 0.75rem;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .header-nav {
+                display: none;
+            }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">⚡ Teknoloji Analizi</span>
+        <h1><span class="emoji">⚡</span>Endolift Lazer: Ameliyatsız Yüz Germe</h1>
+        <div class="subtitle">Bilim ne diyor? — 2025 sistematik derleme ışığında kanıt değerlendirmesi</div>
+        <p class="description">
+            Subdermal lazer ile yağ eritme ve kolajen stimülasyonu. Umut verici mi, yoksa hype mı? Bilimsel verileri inceliyoruz.
+        </p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- QUICK SUMMARY -->
+    <section class="quick-summary scroll-reveal">
+        <h2 class="summary-title">⚡ Hızlı Özet</h2>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <strong>Ne:</strong>
+                Deri altına fiber optik ile lazer — yağ eritme + kolajen stimülasyonu
+            </div>
+            <div class="summary-item">
+                <strong>Tarih:</strong>
+                2005'ten beri uygulanıyor, lokal anestezi ile
+            </div>
+            <div class="summary-item">
+                <strong>Kanıt:</strong>
+                DÜŞÜK — 2025 sistematik derlemede yüksek bias riski
+            </div>
+            <div class="summary-item">
+                <strong>Sonuç:</strong>
+                Umut verici ama kanıt yetersiz. RCT yok.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: WHAT IS ENDOLIFT -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🔬 Endolift Nedir?</h2>
+            <p class="section-subtitle">Subdermal lazer tekniğinin anatomisi</p>
+        </div>
+
+        <div class="content-card">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent);">🎯 Teknik Özeti</h3>
+            <p style="margin-bottom: 1.5rem;">
+                <strong>Endolift</strong>, deri altına (subdermal) yerleştirilen ince fiber optik kablo ile lazer enerjisi uygulayan minimal invaziv bir tekniktir. Diyot lazer kullanarak iki ana etki yaratır.
+            </p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <h4>Subdermal Yağ Eritme (Lipoliz)</h4>
+                        <p>300μm çapındaki fiber optik deri altına yerleştiriliyor. 1470nm veya 980nm diyot lazer ile yağ dokusunu eritiyor.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <h4>Kolajen Stimülasyonu (Neocollagenesis)</h4>
+                        <p>Termal etki dermiste kontrollü yaralanma yaratarak yeni kolajen üretimini tetikliyor.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">3</span>
+                    <div class="step-content">
+                        <h4>Deri Sıkılaştırma</h4>
+                        <p>Fibröz doku kontraksiyonu ile cilt gerginleştirilmeye çalışılıyor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: var(--electric-bg); padding: 1.5rem; border-radius: var(--radius-sm); margin-top: 1.5rem;">
+                <strong style="color: var(--accent);">⚠️ Önemli:</strong> Ameliyat değil, lokal anestezi yeterli. "Minimal invaziv" kategorisinde yer alıyor.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: APPLICATION AREAS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🎯 Hangi Bölgelere Uygulanır?</h2>
+            <p class="section-subtitle">Endolift'in hedef alanları</p>
+        </div>
+
+        <div class="area-grid">
+            <div class="area-card">
+                <span class="area-icon">👤</span>
+                <h4 class="area-title">Yüz & Jawline</h4>
+                <p class="area-desc">Çene altı sarkma, jawline netleştirme</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">🦃</span>
+                <h4 class="area-title">Boyun</h4>
+                <p class="area-desc">Turkey neck (hindi boynu) düzeltme</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">👃</span>
+                <h4 class="area-title">Nasolabial</h4>
+                <p class="area-desc">Burun kenarı çizgileri</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">👁️</span>
+                <h4 class="area-title">Alın Kırışıklıkları</h4>
+                <p class="area-desc">Horizontal forehead lines</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">👁️‍🗨️</span>
+                <h4 class="area-title">Göz Altı</h4>
+                <p class="area-desc">Under-eye bags</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">💪</span>
+                <h4 class="area-title">Vücut</h4>
+                <p class="area-desc">Kol, karın uygulamaları</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EVIDENCE EVALUATION -->
+    <section class="evidence-section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">📊 Bilim Ne Diyor? — Kanıt Değerlendirmesi</h2>
+            <p class="section-subtitle">2025 sistematik derleme bulgularıyla birlikte</p>
+        </div>
+
+        <div class="verdict-cards">
+            <div class="verdict-card limited">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">🤔</span>
+                    <div>
+                        <h4 class="verdict-title">Cilt kalınlığı ve elastikiyet artışı</h4>
+                        <span class="verdict-level limited">Sınırlı Kanıt</span>
+                    </div>
+                </div>
+                <p>Bir çalışmada anlamlı artış gösterildi (Naser M, 2022, J Cosmet Dermatol) ama bias riski yüksek. Kontrol grubu yok, objektif ölçüm yetersiz.</p>
+            </div>
+
+            <div class="verdict-card limited">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">🤔</span>
+                    <div>
+                        <h4 class="verdict-title">Nasolabial kıvrım ve marionette çizgileri</h4>
+                        <span class="verdict-level limited">Sınırlı Kanıt</span>
+                    </div>
+                </div>
+                <p>Objektif fotoğrafik değerlendirmede iyileşme gösterildi (PMC 2023) ama kontrol grubu yok. Plasebo etkisi elimine edilememiş.</p>
+            </div>
+
+            <div class="verdict-card poor">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">⚠️</span>
+                    <div>
+                        <h4 class="verdict-title">Genel etkinlik ve güvenlik</h4>
+                        <span class="verdict-level poor">Kanıt Yetersiz</span>
+                    </div>
+                </div>
+                <p>2025 sistematik derleme (Modena DA, Lasers Med Sci): 111 makaleden sadece 7'si dahil edilebilmiş, hepsi yüksek bias riskli. Standart parametre protokolü bile yok.</p>
+            </div>
+
+            <div class="verdict-card poor" style="border-left: 4px solid var(--evidence-poor); background: linear-gradient(135deg, rgba(239,68,68,0.05), white);">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">🤔</span>
+                    <div>
+                        <h4 class="verdict-title" style="color: var(--evidence-poor);">Overall Verdict</h4>
+                        <span class="verdict-level poor">DİKKATLİ OL</span>
+                    </div>
+                </div>
+                <p style="font-weight: 600;">"Umut verici ama kanıt yetersiz. RCT (randomize kontrollü çalışma) yok. Off-label kullanımda yan etki raporları mevcut."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROS AND CONS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">⚖️ Avantajlar vs Riskler</h2>
+            <p class="section-subtitle">Endolift'in artı ve eksi yönleri</p>
+        </div>
+
+        <div class="pros-cons">
+            <div class="pros-card">
+                <h3 class="pros-title">✅ Avantajlar</h3>
+                <ul class="pros-list">
+                    <li>Ameliyatsız, lokal anestezi yeterli</li>
+                    <li>Kısa işlem süresi (30-60 dakika)</li>
+                    <li>Hızlı iyileşme süreci (1-3 gün)</li>
+                    <li>Her cilt tipine uygulanabilir</li>
+                    <li>Kesi veya iz bırakmaz</li>
+                    <li>Günlük aktivitelere hızla dönüş</li>
+                </ul>
+            </div>
+
+            <div class="cons-card">
+                <h3 class="cons-title">⚠️ Riskler ve Yan Etkiler</h3>
+                <ul class="cons-list">
+                    <li>Şişlik, morluk (geçici, 3-7 gün)</li>
+                    <li>Yanık riski (parametre ayarına bağlı)</li>
+                    <li>Asimetri olasılığı</li>
+                    <li>Sinir hasarı (nadir ama ciddi)</li>
+                    <li>Off-label kullanımda komplikasyonlar</li>
+                    <li>Uygulayıcı deneyimi kritik öneme sahip</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: SUITABILITY -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">👥 Kimler İçin Uygun?</h2>
+            <p class="section-subtitle">Endolift adayı profili</p>
+        </div>
+
+        <div class="suitability-grid">
+            <div class="suitability-card suitable">
+                <span class="suitability-icon">✅</span>
+                <h4 class="suitability-title">Uygun</h4>
+                <ul style="list-style: none; text-align: left; font-size: 0.9rem; color: var(--text-s);">
+                    <li>• Hafif-orta düzey sarkma</li>
+                    <li>• Ameliyat istemeyen hastalar</li>
+                    <li>• 35-55 yaş aralığı</li>
+                    <li>• Gerçekçi beklentiler</li>
+                </ul>
+            </div>
+
+            <div class="suitability-card careful">
+                <span class="suitability-icon">🤔</span>
+                <h4 class="suitability-title">Dikkatli</h4>
+                <ul style="list-style: none; text-align: left; font-size: 0.9rem; color: var(--text-s);">
+                    <li>• İnce cilt yapısı</li>
+                    <li>• Aşırı sarkma (beklentiyi yönet)</li>
+                    <li>• Önceki estetik işlem öyküsü</li>
+                    <li>• Hassas cilt tipi</li>
+                </ul>
+            </div>
+
+            <div class="suitability-card not-suitable">
+                <span class="suitability-icon">❌</span>
+                <h4 class="suitability-title">Uygun Değil</h4>
+                <ul style="list-style: none; text-align: left; font-size: 0.9rem; color: var(--text-s);">
+                    <li>• İleri sarkma (cerrahi gerek)</li>
+                    <li>• Aktif cilt enfeksiyonu</li>
+                    <li>• Keloid yatkınlığı</li>
+                    <li>• Hamilelik, emzirme</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ALTERNATIVES COMPARISON -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🔄 Endolift vs Alternatifler</h2>
+            <p class="section-subtitle">Diğer yüz germe teknikleriyle karşılaştırma</p>
+        </div>
+
+        <div class="comparison-table">
+            <div class="comparison-row comparison-header">
+                <div class="comparison-cell">Yöntem</div>
+                <div class="comparison-cell">Teknik</div>
+                <div class="comparison-cell">FDA Onayı</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">Endolift</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Invaziv (fiber giriyor), termal</div>
+                </div>
+                <div class="comparison-cell">Subdermal lazer</div>
+                <div class="comparison-cell" style="color: var(--evidence-poor);">❌ Yok</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">Ultherapy</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Non-invaziv, HIFU</div>
+                </div>
+                <div class="comparison-cell">Odaklanmış ultrason</div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">✅ Var</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">İplik Germe</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Mekanik, PDO/PLLA</div>
+                </div>
+                <div class="comparison-cell">Emilir iplik asma</div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">✅ Var</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">Cerrahi Facelift</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">İnvaziv, altın standart</div>
+                </div>
+                <div class="comparison-cell">Cerrahi doku germe</div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">✅ Elbette</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--electric-bg); border-radius: var(--radius-md); border-left: 4px solid var(--accent);">
+            <p><strong>🔍 Anahtar Fark:</strong> Endolift cerrahi facelift sonuçlarına ulaşamaz. RF (Radiofrekanslı) tedavilerden daha invaziv, ama Ultherapy'den daha az ağrılı olduğu iddia ediliyor.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 7: ONE LINER -->
+    <section class="pill-summary scroll-reveal">
+        <h3 class="pill-title">💊 Tek Cümleyle</h3>
+        <p class="pill-text">
+            "Endolift umut verici bir teknik ama henüz bilimsel olarak kendini kanıtlayamamış. RCT sonuçları gelene kadar dikkatli yaklaşın."
+        </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer scroll-reveal">
+        <h3 class="disclaimer-title">⚠️ Önemli Uyarı</h3>
+        <p class="disclaimer-text">
+            Bu içerik bilgilendirme amaçlıdır. Endolift uygulaması için mutlaka uzman dermatoloğunuza danışın. 
+            Her hasta farklıdır, bireysel değerlendirme gereklidir.
+        </p>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references scroll-reveal">
+        <h3>📚 Bilimsel Kaynaklar</h3>
+        <ol class="reference-list">
+            <li class="reference-item">Modena DA, et al. Endolift® is a non-surgical treatment for skin tissue conditions. Is there evidence for its application? Lasers Med Sci. 2025;40(1):49.</li>
+            <li class="reference-item">Naser M. Endolift laser an effective treatment modality for forehead wrinkles and frown line. J Cosmet Dermatol. 2022;21(11):5782-5787.</li>
+            <li class="reference-item">PMC study on nasolabial folds and marionette lines. Dermatol Ther (Heidelb). 2023;13(10):2523-2536.</li>
+            <li class="reference-item">Wassmer B, et al. Comparative study of wavelengths for laser lipolysis. Photomed Laser Surg. 2010;28(2):185-188.</li>
+            <li class="reference-item">Goldman A, et al. Submental Nd:YAG laser-assisted liposuction. Lasers Surg Med. 2006;38(3):181-184.</li>
+        </ol>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Scroll reveal animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el);
+});
+
+// Add interactive effects to area cards
+document.querySelectorAll('.area-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-6px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(-4px) scale(1)';
+    });
+});
+
+// Add hover effects to verdict cards
+document.querySelectorAll('.verdict-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateX(8px)';
+        this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateX(0)';
+        this.style.boxShadow = 'none';
+    });
+});
+</script>
+
+</body>
+</html>
