@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIFU ve LIFU: Ultrasonla Cilt Sıkılaştırma — Bilim Ne Diyor? | Derindenbilgi</title>
+    <meta name="description" content="HIFU (FDA onaylı) ve LIFU ultrason teknolojileri ile ameliyatsız yüz germe. Kanıt değerlendirmesi, uygulama bölgeleri ve risk analizi.">
+    <meta name="keywords" content="HIFU, LIFU, ultrason, yüz germe, ameliyatsız sıkılaştırma, Ultherapy, kolajen stimülasyonu">
+    <meta property="og:title" content="HIFU ve LIFU: Ultrasonla Cilt Sıkılaştırma — Bilim Ne Diyor?">
+    <meta property="og:description" content="Yüksek ve düşük yoğunluklu odaklanmış ultrason teknolojileri ile ameliyatsız cilt sıkılaştırma. Bilimsel kanıt değerlendirmesi.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* HIFU/LIFU cyan/blue theme for ultrasound waves */
+            --accent: #0891b2;
+            --accent-light: #06b6d4;
+            --accent-dark: #0e7490;
+            --accent-bg: rgba(8,145,178,0.08);
+            --accent-border: rgba(8,145,178,0.2);
+            
+            /* Ultrasound wave gradient */
+            --ultrasound-gradient: linear-gradient(135deg, #0891b2, #06b6d4);
+            --ultrasound-light: #ecfeff;
+            --ultrasound-bg: rgba(8,145,178,0.06);
+            
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fafeff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            
+            /* Evidence colors */
+            --evidence-good: #10b981;
+            --evidence-limited: #f59e0b;
+            --evidence-poor: #ef4444;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes ultrasoundGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(8,145,178,0.3); }
+            50% { box-shadow: 0 0 40px rgba(8,145,178,0.5); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes wave {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--ultrasound-light), rgba(255,255,255,0.9));
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%230891b2" fill-opacity="0.03"><circle cx="30" cy="30" r="20"/><circle cx="30" cy="30" r="15"/><circle cx="30" cy="30" r="10"/></g></g></svg>');
+            pointer-events: none;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--ultrasound-bg);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease;
+        }
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #0f172a;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            animation: fadeUp 0.8s ease;
+        }
+        .hero .emoji {
+            font-size: 3rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            margin-right: 0.5rem;
+        }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: fadeUp 0.8s ease 0.2s both;
+        }
+        .hero .description {
+            font-size: 1rem;
+            color: var(--text-s);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeUp 0.8s ease 0.4s both;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        /* ===== QUICK SUMMARY ===== */
+        .quick-summary {
+            background: var(--ultrasound-gradient);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .quick-summary::before {
+            content: '⚡';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            opacity: 0.3;
+            animation: float 4s ease-in-out infinite;
+        }
+        .summary-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .summary-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .summary-item {
+            background: rgba(255,255,255,0.15);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        .summary-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section {
+            margin-bottom: 4rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeUp 0.6s ease;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-s);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTENT CARDS ===== */
+        .content-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,250,252,0.8));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ===== PROCESS STEPS ===== */
+        .process-steps {
+            display: grid;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .process-step {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), var(--ultrasound-bg));
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--ultrasound-gradient);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        .step-content p {
+            font-size: 0.9rem;
+            color: var(--text-s);
+            line-height: 1.6;
+        }
+
+        /* ===== APPLICATION AREAS ===== */
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .area-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), var(--ultrasound-bg));
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .area-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            animation: ultrasoundGlow 2s ease-in-out infinite;
+        }
+        .area-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .area-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        .area-desc {
+            font-size: 0.85rem;
+            color: var(--text-s);
+        }
+
+        /* ===== EVIDENCE VERDICTS ===== */
+        .evidence-section {
+            background: var(--bg-alt);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+        .verdict-cards {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .verdict-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border-left: 4px solid var(--evidence-limited);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .verdict-card.good {
+            border-left-color: var(--evidence-good);
+        }
+        .verdict-card.limited {
+            border-left-color: var(--evidence-limited);
+        }
+        .verdict-card.poor {
+            border-left-color: var(--evidence-poor);
+        }
+        .verdict-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .verdict-emoji {
+            font-size: 1.5rem;
+        }
+        .verdict-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .verdict-level {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            color: white;
+            margin-left: auto;
+        }
+        .verdict-level.good { background: var(--evidence-good); }
+        .verdict-level.limited { background: var(--evidence-limited); }
+        .verdict-level.poor { background: var(--evidence-poor); }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin: 2rem 0;
+        }
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        .comparison-header {
+            background: var(--ultrasound-gradient);
+            color: white;
+        }
+        .comparison-cell {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        .comparison-header .comparison-cell {
+            font-weight: 600;
+        }
+        .comparison-treatment {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* ===== PROS CONS ===== */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .pros-card, .cons-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            border-left: 4px solid var(--evidence-good);
+        }
+        .cons-card {
+            border-left-color: var(--evidence-poor);
+        }
+        .pros-title, .cons-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .pros-title { color: var(--evidence-good); }
+        .cons-title { color: var(--evidence-poor); }
+        .pros-list, .cons-list {
+            list-style: none;
+        }
+        .pros-list li, .cons-list li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .pros-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+        .cons-list li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== SUITABILITY CARDS ===== */
+        .suitability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .suitability-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .suitability-card.suitable {
+            border-color: var(--evidence-good);
+            background: linear-gradient(135deg, rgba(16,185,129,0.05), white);
+        }
+        .suitability-card.careful {
+            border-color: var(--evidence-limited);
+            background: linear-gradient(135deg, rgba(245,158,11,0.05), white);
+        }
+        .suitability-card.not-suitable {
+            border-color: var(--evidence-poor);
+            background: linear-gradient(135deg, rgba(239,68,68,0.05), white);
+        }
+        .suitability-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .suitability-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .suitability-card.suitable .suitability-title { color: var(--evidence-good); }
+        .suitability-card.careful .suitability-title { color: var(--evidence-limited); }
+        .suitability-card.not-suitable .suitability-title { color: var(--evidence-poor); }
+
+        /* ===== PILL SUMMARY ===== */
+        .pill-summary {
+            background: var(--ultrasound-gradient);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .pill-summary::before {
+            content: '💊';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+        .pill-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .pill-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: linear-gradient(135deg, #fef3c7, rgba(254,243,199,0.8));
+            border: 2px solid #fbbf24;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .disclaimer-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .disclaimer-text {
+            font-size: 0.95rem;
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: #f8fafc;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .references h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .reference-list {
+            list-style: none;
+            counter-reset: ref-counter;
+        }
+        .reference-item {
+            font-size: 0.8rem;
+            color: var(--text-s);
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        .reference-item::before {
+            content: counter(ref-counter);
+            counter-increment: ref-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--accent); }
+        .footer-bottom {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2.5rem 1.25rem 2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .main-content {
+                padding: 0 1.25rem 3rem;
+            }
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            .area-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .comparison-cell {
+                padding: 0.75rem;
+            }
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .header-nav {
+                display: none;
+            }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#blog">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">🔊 Cihaz İnceleme</span>
+        <h1><span class="emoji">🔊</span>HIFU ve LIFU: Ultrasonla Cilt Sıkılaştırma</h1>
+        <div class="subtitle">Bilim ne diyor? — Yüksek ve düşük yoğunluklu odaklanmış ultrason</div>
+        <p class="description">
+            HIFU (FDA onaylı) ve LIFU teknolojileri ile ameliyatsız yüz germe. Hangi kanıtlar var, hangileri eksik?
+        </p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- QUICK SUMMARY -->
+    <section class="quick-summary scroll-reveal">
+        <h2 class="summary-title">⚡ Hızlı Özet</h2>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <strong>HIFU:</strong>
+                Yüksek yoğunluklu odaklanmış ultrason — FDA onaylı (kaş kaldırma, 2009)
+            </div>
+            <div class="summary-item">
+                <strong>LIFU:</strong>
+                Düşük yoğunluklu odaklanmış ultrason — daha yeni, RF ile kombine
+            </div>
+            <div class="summary-item">
+                <strong>Kanıt HIFU:</strong>
+                ORTA düzey — meta-analiz var, ama kontrol grupları eksik
+            </div>
+            <div class="summary-item">
+                <strong>Kanıt LIFU:</strong>
+                DÜŞÜK — erken aşama çalışmalar, uzun vadeli veri yok
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: HIFU WHAT IS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">⚡ HIFU Nedir? Nasıl Çalışır?</h2>
+            <p class="section-subtitle">Yüksek yoğunluklu odaklanmış ultrason teknolojisinin anatomisi</p>
+        </div>
+
+        <div class="content-card">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent);">🎯 Teknik Özeti</h3>
+            <p style="margin-bottom: 1.5rem;">
+                <strong>HIFU (High Intensity Focused Ultrasound)</strong>, ultrason dalgalarını deri altında belirli noktalara odaklar. Cilt yüzeyine zarar vermeden derinlerde termal etki yaratır.
+            </p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <h4>Odaklanmış Enerji Uygulama</h4>
+                        <p>Ultrason enerjisi 1.5mm, 3mm ve 4.5mm derinliklere odaklanıyor. Her derinlik farklı doku tabakasını hedef alıyor.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <h4>SMAS Tabakasına Ulaşım</h4>
+                        <p>SMAS (yüz germe cerrahisinin hedefi) tabakasına ulaşan tek non-invaziv teknoloji. 60-70°C'de termal koagülasyon noktaları oluşturuyor.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">3</span>
+                    <div class="step-content">
+                        <h4>Kolajen Yenilenmesi</h4>
+                        <p>Kolajen denatürasyonu sonrası yeni kolajen üretimi (neocollagenesis) başlıyor. Süreç 2-6 ay sürüyor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: var(--ultrasound-bg); padding: 1.5rem; border-radius: var(--radius-sm); margin-top: 1.5rem; border-left: 4px solid var(--accent);">
+                <strong style="color: var(--accent);">🏆 Marka Örnekleri:</strong> Ultherapy (orijinal FDA onaylı), Doublo, Ultraformer, Liftera
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: LIFU DIFFERENCE -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🔄 LIFU Nedir? Farkı Ne?</h2>
+            <p class="section-subtitle">Düşük yoğunluklu ultrasonun özellikleri</p>
+        </div>
+
+        <div class="content-card">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent);">⚙️ LIFU Özellikleri</h3>
+            <p style="margin-bottom: 1.5rem;">
+                <strong>LIFU (Low Intensity Focused Ultrasound)</strong>, HIFU'dan daha az enerji kullanır. Genellikle RF (radyofrekans) ile kombine edilir.
+            </p>
+
+            <div class="pros-cons" style="grid-template-columns: 1fr 1fr;">
+                <div class="pros-card" style="border-left-color: var(--accent);">
+                    <h3 class="pros-title" style="color: var(--accent);">🔊 LIFU Avantajları</h3>
+                    <ul class="pros-list">
+                        <li>Daha az ağrı ve rahatsızlık</li>
+                        <li>Daha konforlu işlem</li>
+                        <li>RF kombination ile çift etki</li>
+                        <li>Vücut konturlama için daha popüler</li>
+                        <li>Yağ hücrelerini parçalama + sıkılaştırma</li>
+                    </ul>
+                </div>
+
+                <div class="cons-card">
+                    <h3 class="cons-title">⚠️ LIFU Sınırları</h3>
+                    <ul class="cons-list">
+                        <li>HIFU'dan daha az çalışılmış</li>
+                        <li>Kanıt erken aşamada</li>
+                        <li>Uzun vadeli etkinlik belirsiz</li>
+                        <li>Kombine tedavi gereksinimi</li>
+                        <li>Standart protokol eksikliği</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, var(--ultrasound-bg), rgba(255,255,255,0.8)); padding: 1.5rem; border-radius: var(--radius-sm); margin-top: 1.5rem;">
+                <strong style="color: var(--accent);">🎯 Ana Kullanım:</strong> Karın, bel bölgesi konturlama. Yüz uygulamaları henüz sınırlı.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EVIDENCE EVALUATION -->
+    <section class="evidence-section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">📊 Bilim Ne Diyor? — Kanıt Değerlendirmesi</h2>
+            <p class="section-subtitle">HIFU ve LIFU'nun bilimsel dayanaklarını inceliyoruz</p>
+        </div>
+
+        <div class="verdict-cards">
+            <div class="verdict-card good">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">✅</span>
+                    <div>
+                        <h4 class="verdict-title">HIFU — Yüz ve Boyun Gençleştirme</h4>
+                        <span class="verdict-level good">Orta Düzey Kanıt</span>
+                    </div>
+                </div>
+                <p>2020 sistematik derleme + meta-analiz: Yüz ve boyun gençleştirmede etkili ve güvenli bulundu. 2025 sistematik derleme (Aesthetic Surgery Journal): 45 klinik çalışma dahil edildi. Ancak çoğu çalışma küçük örneklem, kontrol grupsuz. <em>(Ref: Skrzypek E, et al. J Eur Acad Dermatol Venereol. 2020; Systematic Review, Aesthet Surg J. 2025)</em></p>
+            </div>
+
+            <div class="verdict-card good">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">✅</span>
+                    <div>
+                        <h4 class="verdict-title">HIFU — Kaş Kaldırma (Browlift)</h4>
+                        <span class="verdict-level good">FDA Onaylı</span>
+                    </div>
+                </div>
+                <p>2009'da kaş kaldırma için FDA onayı aldı (Ultherapy). En güçlü kanıt bu endikasyonda. Kontrollü çalışmalar mevcut ve sonuçlar tutarlı.</p>
+            </div>
+
+            <div class="verdict-card limited">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">🤔</span>
+                    <div>
+                        <h4 class="verdict-title">HIFU — Vücut Konturlama</h4>
+                        <span class="verdict-level limited">Sınırlı Kanıt</span>
+                    </div>
+                </div>
+                <p>Çevre ölçümünde azalma gösterildi ama uzun vadeli veriler yetersiz. Vücut uygulamaları için daha fazla araştırma gerekli.</p>
+            </div>
+
+            <div class="verdict-card limited">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">🤔</span>
+                    <div>
+                        <h4 class="verdict-title">LIFU — Karın Konturlama</h4>
+                        <span class="verdict-level limited">Erken Aşama</span>
+                    </div>
+                </div>
+                <p>Wu et al. 2025: LIFU + RF kombinasyonu 6 seansta karın çevresinde azalma gösterdi. Tek çalışma, küçük örneklem. Tekrarlanması gerekli.</p>
+            </div>
+
+            <div class="verdict-card limited" style="border-left: 4px solid var(--evidence-limited); background: linear-gradient(135deg, rgba(245,158,11,0.05), white);">
+                <div class="verdict-header">
+                    <span class="verdict-emoji">🤔</span>
+                    <div>
+                        <h4 class="verdict-title" style="color: var(--evidence-limited);">Genel Değerlendirme</h4>
+                        <span class="verdict-level limited">DİKKATLİ İYİMSER</span>
+                    </div>
+                </div>
+                <p style="font-weight: 600;">"HIFU iyi bir seçenek ama mucize beklemeyin. LIFU henüz erken. Cerrahi facelift'in yerini alamaz."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: APPLICATION AREAS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🎯 HIFU Uygulama Bölgeleri</h2>
+            <p class="section-subtitle">Hangi bölgelere uygulanabilir?</p>
+        </div>
+
+        <div class="area-grid">
+            <div class="area-card">
+                <span class="area-icon">👤</span>
+                <h4 class="area-title">Yüz (Jawline)</h4>
+                <p class="area-desc">Jawline sıkılaştırma, çene hattı belirginleştirme</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">🦃</span>
+                <h4 class="area-title">Boyun</h4>
+                <p class="area-desc">Sarkma, çift çene düzeltme</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">👁️</span>
+                <h4 class="area-title">Kaş Bölgesi</h4>
+                <p class="area-desc">Browlift — FDA onaylı endikasyon</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">👁️‍🗨️</span>
+                <h4 class="area-title">Göz Çevresi</h4>
+                <p class="area-desc">Alt göz kapağı sarkma</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">👗</span>
+                <h4 class="area-title">Dekolte</h4>
+                <p class="area-desc">Göğüs üstü bölgesi sıkılaştırma</p>
+            </div>
+            
+            <div class="area-card">
+                <span class="area-icon">💪</span>
+                <h4 class="area-title">Vücut</h4>
+                <p class="area-desc">Kol, karın, uyluk uygulamaları</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PROCESS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">⏰ İşlem Süreci</h2>
+            <p class="section-subtitle">HIFU ve LIFU seansları nasıl geçer?</p>
+        </div>
+
+        <div class="content-card">
+            <div class="process-steps">
+                <div class="process-step">
+                    <span class="step-number">⏱️</span>
+                    <div class="step-content">
+                        <h4>Süre: 30-90 dakika</h4>
+                        <p>Bölgenin büyüklüğüne göre değişir. Yüz ve boyun genellikle 60-90 dakika.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">💉</span>
+                    <div class="step-content">
+                        <h4>Anestezi: Topikal anestezik krem</h4>
+                        <p>HIFU ağrılı olabilir! Özellikle çene ve boyun bölgesinde. LIFU daha konforlu.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">🔄</span>
+                    <div class="step-content">
+                        <h4>Seans: 1-3 seans, 3-6 ay arayla</h4>
+                        <p>Tek seansta görünür iyileşme olabilir. Tam etki için 2-3 seans önerilir.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">📈</span>
+                    <div class="step-content">
+                        <h4>Sonuçlar: 2-6 ay içinde belirginleşir</h4>
+                        <p>Kolajen üretimi zaman alır. İlk haftalarda hafif sıkılaşma, gerçek etki aylar sonra.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">🔄</span>
+                    <div class="step-content">
+                        <h4>Süreklilik: 1-2 yıl</h4>
+                        <p>Bakım seansları önerilir. Yaşlanma devam ettiği için periyodik tekrar gerekebilir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: RISKS -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">⚠️ Riskler ve Yan Etkiler</h2>
+            <p class="section-subtitle">Bilmeniz gereken komplikasyonlar</p>
+        </div>
+
+        <div class="content-card">
+            <div class="pros-cons">
+                <div style="background: linear-gradient(135deg, rgba(245,158,11,0.05), white); border-left: 4px solid #f59e0b; padding: 2rem; border-radius: var(--radius-md);">
+                    <h3 style="color: #f59e0b; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">⚠️ Sık Yan Etkiler</h3>
+                    <ul style="list-style: none;">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0;">😣</span> Ağrı/rahatsızlık (özellikle HIFU)</li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0;">🔴</span> Geçici kızarıklık, şişlik</li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0;">⏰</span> 3-7 gün sürebilir</li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(239,68,68,0.05), white); border-left: 4px solid #ef4444; padding: 2rem; border-radius: var(--radius-md);">
+                    <h3 style="color: #ef4444; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">🚨 Ciddi Riskler</h3>
+                    <ul style="list-style: none;">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0;">🔥</span> Yanık riski (parametre hatası)</li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0;">😵</span> Sinir hasarı (geçici yüz felci)</li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;"><span style="position: absolute; left: 0;">🕳️</span> Yağ atrofisi (yüzde çukurlaşma)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: #fee2e2; border: 2px solid #ef4444; padding: 1.5rem; border-radius: var(--radius-sm); margin-top: 2rem;">
+                <strong style="color: #ef4444;">⚠️ Kritik Önemde:</strong> Cihaz kalitesi ve uygulayıcı deneyimi kritik. Sahte/düşük kaliteli HIFU cihazları yaygın!
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: SUITABILITY -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">👥 Kimler İçin Uygun?</h2>
+            <p class="section-subtitle">HIFU/LIFU adayı profili</p>
+        </div>
+
+        <div class="suitability-grid">
+            <div class="suitability-card suitable">
+                <span class="suitability-icon">✅</span>
+                <h4 class="suitability-title">Uygun</h4>
+                <ul style="list-style: none; text-align: left; font-size: 0.9rem; color: var(--text-s);">
+                    <li>• Hafif-orta sarkma</li>
+                    <li>• 30-60 yaş arası</li>
+                    <li>• Ameliyat istemeyen</li>
+                    <li>• Kolajen kaybı başlamış</li>
+                    <li>• Gerçekçi beklentiler</li>
+                </ul>
+            </div>
+
+            <div class="suitability-card careful">
+                <span class="suitability-icon">🤔</span>
+                <h4 class="suitability-title">Dikkatli</h4>
+                <ul style="list-style: none; text-align: left; font-size: 0.9rem; color: var(--text-s);">
+                    <li>• Çok ince yüz yağı</li>
+                    <li>• İleri yaş (60+)</li>
+                    <li>• Çukurlaşma riski var</li>
+                    <li>• Önceki estetik işlemler</li>
+                </ul>
+            </div>
+
+            <div class="suitability-card not-suitable">
+                <span class="suitability-icon">❌</span>
+                <h4 class="suitability-title">Uygun Değil</h4>
+                <ul style="list-style: none; text-align: left; font-size: 0.9rem; color: var(--text-s);">
+                    <li>• İleri sarkma</li>
+                    <li>• Aktif akne/enfeksiyon</li>
+                    <li>• Metal implant bölgesi</li>
+                    <li>• Hamilelik, emzirme</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: COMPARISON -->
+    <section class="section scroll-reveal">
+        <div class="section-header">
+            <h2 class="section-title">🔄 HIFU vs LIFU vs Alternatifler</h2>
+            <p class="section-subtitle">Hangi teknoloji ne zaman tercih edilir?</p>
+        </div>
+
+        <div class="comparison-table">
+            <div class="comparison-row comparison-header">
+                <div class="comparison-cell">Teknoloji</div>
+                <div class="comparison-cell">Güç</div>
+                <div class="comparison-cell">Ağrı</div>
+                <div class="comparison-cell">Kanıt</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">HIFU</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Yüksek yoğunluk</div>
+                </div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">Güçlü</div>
+                <div class="comparison-cell" style="color: var(--evidence-poor);">Yüksek</div>
+                <div class="comparison-cell" style="color: var(--evidence-limited);">Orta</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">LIFU</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Düşük yoğunluk</div>
+                </div>
+                <div class="comparison-cell" style="color: var(--evidence-limited);">Orta</div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">Düşük</div>
+                <div class="comparison-cell" style="color: var(--evidence-poor);">Düşük</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">RF (Thermage)</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Radyofrekans</div>
+                </div>
+                <div class="comparison-cell" style="color: var(--evidence-limited);">Orta</div>
+                <div class="comparison-cell" style="color: var(--evidence-limited);">Orta</div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">Yüksek</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell">
+                    <div class="comparison-treatment">Cerrahi Facelift</div>
+                    <div style="font-size: 0.8rem; color: var(--text-s);">Altın standart</div>
+                </div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">En güçlü</div>
+                <div class="comparison-cell" style="color: var(--evidence-poor);">En yüksek</div>
+                <div class="comparison-cell" style="color: var(--evidence-good);">En yüksek</div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent);">🔍 Karşılaştırma Detayları</h3>
+            
+            <div style="display: grid; gap: 1.5rem;">
+                <div style="padding: 1rem; background: var(--ultrasound-bg); border-radius: var(--radius-sm); border-left: 4px solid var(--accent);">
+                    <strong>HIFU vs LIFU:</strong> HIFU daha güçlü, daha ağrılı, daha çok kanıt. LIFU daha konforlu, daha az kanıt.
+                </div>
+                
+                <div style="padding: 1rem; background: var(--ultrasound-bg); border-radius: var(--radius-sm); border-left: 4px solid var(--accent);">
+                    <strong>HIFU vs Endolift:</strong> HIFU non-invaziv, Endolift minimal invaziv (fiber giriyor). HIFU daha çok kanıt.
+                </div>
+                
+                <div style="padding: 1rem; background: var(--ultrasound-bg); border-radius: var(--radius-sm); border-left: 4px solid var(--accent);">
+                    <strong>HIFU vs RF (Thermage):</strong> İkisi de non-invaziv. RF daha yüzeyel, HIFU daha derin (SMAS). Kombine kullanım trendi artıyor.
+                </div>
+                
+                <div style="padding: 1rem; background: var(--ultrasound-bg); border-radius: var(--radius-sm); border-left: 4px solid var(--accent);">
+                    <strong>HIFU vs Cerrahi:</strong> Cerrahi altın standart, HIFU onun yerini alamaz ama ameliyat istemeyenler için opsiyon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: ONE LINER -->
+    <section class="pill-summary scroll-reveal">
+        <h3 class="pill-title">💊 Tek Cümleyle</h3>
+        <p class="pill-text">
+            "HIFU ameliyatsız sıkılaştırma için en çok çalışılmış teknoloji — mucize değil ama hafif-orta sarkmada makul bir opsiyon. LIFU henüz kendini kanıtlama aşamasında."
+        </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer scroll-reveal">
+        <h3 class="disclaimer-title">⚠️ Önemli Uyarı</h3>
+        <p class="disclaimer-text">
+            Bu içerik bilgilendirme amaçlıdır. HIFU/LIFU uygulaması için mutlaka uzman dermatoloğunuza danışın. 
+            Her hasta farklıdır, bireysel değerlendirme gereklidir.
+        </p>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references scroll-reveal">
+        <h3>📚 Bilimsel Kaynaklar</h3>
+        <ol class="reference-list">
+            <li class="reference-item">Skrzypek E, et al. Systematic review and meta-analysis of safety and efficacy of HIFU for face and neck rejuvenation. J Eur Acad Dermatol Venereol. 2020;34(5):1022-1028.</li>
+            <li class="reference-item">Systematic Review of High-Intensity Focused Ultrasound in Skin Tightening and Body Contouring. Aesthet Surg J. 2025;45(7):690-705.</li>
+            <li class="reference-item">Wu et al. Combined Use of LIFU and Radiofrequency for Female Abdominal Contouring. J Cosmet Dermatol. 2025.</li>
+            <li class="reference-item">Alam M, et al. Ultrasound tightening of facial and neck skin: a rater-blinded prospective cohort study. J Am Acad Dermatol. 2010;62(2):262-269.</li>
+            <li class="reference-item">FDA 510(k) Clearance for Ultherapy (2009). FDA Database: K082609.</li>
+        </ol>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span>Deri</span>ndenbilgi</div>
+        <p>Kanıta dayalı dermatoloji bilgisi. Cildinizi derinden anlıyoruz.</p>
+        <div class="footer-bottom">
+            <p>© 2025 Derindenbilgi. Tüm hakları saklıdır. Bu platform tıbbi tavsiye değildir.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Scroll reveal animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el);
+});
+
+// Add interactive effects to area cards
+document.querySelectorAll('.area-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-6px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(-4px) scale(1)';
+    });
+});
+
+// Add hover effects to verdict cards
+document.querySelectorAll('.verdict-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateX(8px)';
+        this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateX(0)';
+        this.style.boxShadow = 'none';
+    });
+});
+
+// Add ultrasound wave animation on scroll
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const parallax = scrolled * 0.5;
+    
+    document.querySelectorAll('.area-card:hover').forEach(card => {
+        card.style.transform = `translateY(-4px) rotateX(${parallax * 0.01}deg)`;
+    });
+});
+</script>
+
+</body>
+</html>
