@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiçbir Zaman Geç Değil: 60+ Yaşta Cilt Bakımı | Derindenbilgi</title>
+    <meta name="description" content="60, 70, hatta 80 yaşında cilt bakımına başlamak işe yarıyor mu? Bilim ne diyor, olgun cilt için ne çalışıyor — kanıta dayalı, anlaşılır rehber.">
+    <meta name="keywords" content="yaşlı cilt bakımı, 60 yaş cilt bakımı, olgun cilt, retinol yaşlı cilt, güneş kremi, yaşlanma karşıtı, hiçbir zaman geç değil">
+    <meta property="og:title" content="Hiçbir Zaman Geç Değil: 60+ Yaşta Cilt Bakımı">
+    <meta property="og:description" content="60'ında cilt bakımına başlamak fark yaratır mı? Kısa cevap: evet. Uzun cevap burada.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #0d9488;
+            --accent-light: #14b8a6;
+            --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06);
+            --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #f0f9ff;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .progress-bar {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(135deg, #0d9488, #14b8a6);
+            z-index: 1001; width: 0%; transition: width 0.1s linear;
+        }
+
+        .site-header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky; top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo { font-size: 1.35rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.5px; }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a { font-size: 0.9rem; color: var(--text-s); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .header-nav a:hover { color: var(--accent); }
+
+        .article-hero { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 2rem; }
+        .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(20,184,166,0.1));
+            color: var(--accent-dark);
+            font-size: 0.8rem; font-weight: 600;
+            padding: 0.3rem 0.75rem; border-radius: 9999px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .read-time { font-size: 0.85rem; color: var(--text-t); font-weight: 500; }
+        .article-hero h1 {
+            font-size: 2.25rem; font-weight: 800; line-height: 1.2;
+            color: #0f172a; letter-spacing: -0.75px; margin-bottom: 1rem;
+        }
+        .article-subtitle { font-size: 1.15rem; color: var(--text-s); line-height: 1.6; }
+
+        .toc { max-width: 800px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+        .toc-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem 2rem; }
+        .toc-title { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-t); margin-bottom: 0.75rem; }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a { color: #334155; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .toc-box a:hover { color: var(--accent); }
+
+        .article-body { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+        .article-body h2 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin: 2.5rem 0 1rem; letter-spacing: -0.3px; padding-top: 1rem; border-top: 1px solid #f1f5f9; }
+        .article-body h2:first-child { border-top: none; margin-top: 0; }
+        .article-body h3 { font-size: 1.2rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+        .article-body p { margin-bottom: 1.25rem; color: #334155; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; color: #334155; }
+        .article-body strong { color: #0f172a; font-weight: 600; }
+
+        .hizli-ozet {
+            background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(20,184,166,0.06));
+            border: 1px solid rgba(13,148,136,0.15);
+            border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin: 0 0 2rem;
+        }
+        .hizli-ozet-title { font-size: 1.1rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .hizli-ozet ul { list-style: none; padding: 0; margin: 0; }
+        .hizli-ozet li { padding: 0.5rem 0; border-bottom: 1px solid rgba(13,148,136,0.1); font-size: 0.95rem; color: #334155; }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+
+        .info-box {
+            background: var(--accent-bg); border: 1px solid var(--accent-border);
+            border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+        }
+        .info-box-title { font-size: 0.85rem; font-weight: 700; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+
+        .tek-cumle {
+            background: #fef9c3; border-left: 4px solid #eab308;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            padding: 1rem 1.5rem; margin: 1.5rem 0;
+        }
+        .tek-cumle-label { font-size: 0.8rem; font-weight: 700; color: #854d0e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+        .tek-cumle p { color: #713f12; font-weight: 500; margin: 0; font-size: 0.95rem; }
+
+        .evidence-badge {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.25rem 0.65rem; border-radius: 9999px;
+            font-size: 0.78rem; font-weight: 600; letter-spacing: 0.3px;
+        }
+        .ev-high { background: #dcfce7; color: #166534; }
+        .ev-mid  { background: #fef9c3; color: #854d0e; }
+        .ev-low  { background: #fee2e2; color: #991b1b; }
+
+        .ingredient-card {
+            border: 1px solid var(--border); border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem; margin: 1rem 0;
+            background: var(--bg-alt);
+        }
+        .ingredient-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem; }
+        .ingredient-name { font-size: 1.05rem; font-weight: 700; color: #0f172a; }
+        .ingredient-card p { margin: 0.4rem 0 0; font-size: 0.95rem; color: #334155; }
+
+        .rutin-box {
+            border: 2px solid var(--accent-border); border-radius: var(--radius-lg);
+            overflow: hidden; margin: 1.5rem 0;
+        }
+        .rutin-header {
+            background: var(--gradient); color: white;
+            padding: 0.85rem 1.5rem; font-size: 1rem; font-weight: 700;
+        }
+        .rutin-steps { padding: 1.25rem 1.5rem; }
+        .rutin-step {
+            display: flex; align-items: flex-start; gap: 1rem;
+            padding: 0.75rem 0; border-bottom: 1px solid var(--border);
+        }
+        .rutin-step:last-child { border-bottom: none; }
+        .rutin-num {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--accent); color: white;
+            font-size: 0.8rem; font-weight: 700;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .rutin-text strong { display: block; font-size: 0.95rem; color: #0f172a; }
+        .rutin-text span { font-size: 0.88rem; color: var(--text-s); }
+
+        .beklenti-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .beklenti-card { border-radius: var(--radius-md); padding: 1.25rem 1.5rem; }
+        .beklenti-yes { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .beklenti-no  { background: #fff7ed; border: 1px solid #fed7aa; }
+        .beklenti-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .beklenti-yes .beklenti-title { color: #166534; }
+        .beklenti-no  .beklenti-title { color: #9a3412; }
+        .beklenti-card ul { padding-left: 1.2rem; margin: 0; }
+        .beklenti-card li { font-size: 0.9rem; color: #334155; margin-bottom: 0.4rem; }
+        @media (max-width: 600px) { .beklenti-grid { grid-template-columns: 1fr; } }
+
+        .references { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border); }
+        .references h2 { font-size: 1.1rem; font-weight: 700; color: var(--text-t); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; border: none; padding: 0; }
+        .ref-list { list-style: none; padding: 0; }
+        .ref-list li { font-size: 0.85rem; color: var(--text-s); margin-bottom: 0.6rem; padding-left: 1.5rem; position: relative; line-height: 1.5; }
+        .ref-list li::before { content: "↗"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        .site-footer { background: #0f172a; color: #94a3b8; padding: 2rem 1.5rem; margin-top: 4rem; }
+        .footer-inner { max-width: 800px; margin: 0 auto; text-align: center; font-size: 0.875rem; }
+        .footer-inner a { color: var(--accent-light); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><span class="hl">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#testler">Testler</a>
+        </nav>
+    </div>
+</header>
+
+<article>
+    <div class="article-hero">
+        <div class="article-meta">
+            <span class="category-badge">Hiçbir Zaman Geç Değil</span>
+            <span class="read-time">⏱ 6 dk okuma</span>
+        </div>
+        <h1>60'ında Cilt Bakımına Başlamak İşe Yarıyor mu?</h1>
+        <p class="article-subtitle">
+            Spoiler: evet, işe yarıyor. Dermatoloji bilimi "çok geç" kavramını tanımıyor — cildiniz 70'inde de yenileniyor, iyileşiyor ve aktif maddelere yanıt veriyor.
+        </p>
+    </div>
+
+    <div class="toc">
+        <div class="toc-box">
+            <div class="toc-title">İçindekiler</div>
+            <ol>
+                <li><a href="#neden-gec-degil">Neden hiçbir zaman geç değil?</a></li>
+                <li><a href="#olgun-cilt">Olgun ciltte neler değişiyor?</a></li>
+                <li><a href="#ne-isliyor">Ne işe yarıyor?</a></li>
+                <li><a href="#beklentiler">Gerçekçi beklentiler</a></li>
+                <li><a href="#rutin">60+ için basit rutin</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <div class="hizli-ozet">
+            <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+            <ul>
+                <li>Cilt 60'ında da aktif maddelere yanıt verebilir — araştırmalar bunu kanıtlıyor</li>
+                <li>Güneş kremi hâlâ 1 numara — yeni hasar oluşumunu durdurur</li>
+                <li>Retinol/tretinoin 70 yaşında bile kırışıklığı azaltıyor (klinik kanıtlı)</li>
+                <li>Ceramidli nemlendirici olgun cilt için olmazsa olmaz</li>
+                <li>Plastiğe benzemeyi değil, sağlıklı görünmeyi hedefleyin</li>
+            </ul>
+        </div>
+
+        <h2 id="neden-gec-degil">Neden hiçbir zaman geç değil?</h2>
+
+        <p>
+            "60 yaşında ne yapsan ne" düşüncesi çok yaygın. Ama dermatoloji bunu desteklemiyor. Cilt, yaşam boyunca yenilenen, dinamik bir organ. Hücreler bölünmeye devam ediyor, kolajen sentezi yavaşlamış olsa bile tamamen durmuyor.
+        </p>
+
+        <p>
+            En güzel kanıt şu: <strong>40 yıl sigara içip bırakan birinin cildi birkaç yılda belirgin biçimde toparlanıyor.</strong> Deri, eskiye kıyasla iyileşme kapasitesini yitirmiyor — sadece yavaşlıyor.
+        </p>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Cilt bakımına başlamak için en kötü zaman yoktur — bugün başlamak, yarın başlamaktan iyidir.</p>
+        </div>
+
+        <h2 id="olgun-cilt">Olgun ciltte neler değişiyor?</h2>
+
+        <p>
+            60+ yaşta cilt birkaç açıdan farklıdır. Bunları bilmek, doğru ürünü seçmek için şart:
+        </p>
+
+        <div class="ingredient-card">
+            <div class="ingredient-header">
+                <span class="ingredient-name">🧱 Daha ince ve kuru</span>
+            </div>
+            <p>Kolajen üretimi 40 yaşından sonra hızla azalır. Cilt inceldikçe nem tutma kapasitesi de düşer. Bu yüzden nemlendirici artık "seçenek" değil, zorunluluktur.</p>
+        </div>
+
+        <div class="ingredient-card">
+            <div class="ingredient-header">
+                <span class="ingredient-name">🐌 Yavaş hücre yenilenmesi</span>
+            </div>
+            <p>Genç ciltte hücreler 28 günde bir yenilenir. 60 yaşında bu süre 45–60 güne uzar. Yani "parlama" daha yavaş gelir — ama yine de gelir.</p>
+        </div>
+
+        <div class="ingredient-card">
+            <div class="ingredient-header">
+                <span class="ingredient-name">💧 Bariyer fonksiyonu zayıflamış</span>
+            </div>
+            <p>Ceramid üretimi azalır. Cilt dış etkenlere karşı daha hassas hale gelir. Sert temizleyiciler, alkollü tonerler bu yaşta çok daha fazla tahriş eder.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Olgun cilt için öncelik sırasına göre: bariyer onarımı → nem → aktif maddeler. Önce savunma, sonra saldırı.</p>
+        </div>
+
+        <h2 id="ne-isliyor">Ne işe yarıyor?</h2>
+
+        <h3>☀️ Güneş Kremi — Hâlâ 1 Numara</h3>
+
+        <p>
+            "Hasar zaten olmuş, güneş kreminin ne anlamı var?" sorusu çok soruluyor. Cevap basit: <strong>yeni hasarı önler.</strong> UV ışınları kolajen yıkımını hızlandırır, leke oluşturur ve cilt kanseri riskini artırır. Bunların hiçbiri için "artık çok geç" diye bir şey yok.
+        </p>
+
+        <div class="info-box">
+            <div class="info-box-title">📌 Önemli Not</div>
+            <p>SPF 30+ geniş spektrum (UVA+UVB) koruma yeterlidir. Gün içinde yeniden uygulamayı ihmal etmeyin — özellikle araba camı arkasında bile UVA geçer.</p>
+        </div>
+
+        <h3>🌙 Retinoidler — Kanıtlı En Güçlü Seçenek</h3>
+
+        <div class="ingredient-card">
+            <div class="ingredient-header">
+                <span class="ingredient-name">Retinol / Tretinoin</span>
+                <span class="evidence-badge ev-high">✓ Kanıt: Güçlü</span>
+            </div>
+            <p>
+                Johnson ve ark.'nın 1996 tarihli klasik çalışması, 70–80 yaş grubunda retinoik asit kullanımının kırışıklıkları azalttığını ve kolajen sentezini artırdığını gösterdi. Bu yaşta cilt <em>hâlâ yanıt veriyor.</em>
+            </p>
+            <p style="margin-top:0.5rem;">
+                <strong>Olgun cilt için ipucu:</strong> Düşük konsantrasyonla başlayın (retinol %0.25 veya haftada 2 gece). Cilt genç cilde göre daha hassas olduğundan adaptasyon önemli. Kuru ve hassas hissedilirse "retinol sandviç" yöntemi uygulayın: önce nemlendirici, üstüne retinol, tekrar nemlendirici.
+            </p>
+        </div>
+
+        <h3>🛡️ Ceramidli Nemlendirici — Bariyer Onarımı</h3>
+
+        <div class="ingredient-card">
+            <div class="ingredient-header">
+                <span class="ingredient-name">Ceramid + Hyaluronik Asit</span>
+                <span class="evidence-badge ev-high">✓ Kanıt: Güçlü</span>
+            </div>
+            <p>
+                Olgun cilt için en önemli nemlendirici içerikler: ceramid (bariyer onarımı), hyaluronik asit (nem çekici), gliserin (nem tutucu). Bu üçlüyü içeren bir nemlendirici sabah-akşam temel olmalı.
+            </p>
+        </div>
+
+        <h3>✨ C Vitamini — Mevcut Lekeler İçin</h3>
+
+        <div class="ingredient-card">
+            <div class="ingredient-header">
+                <span class="ingredient-name">L-Askorbik Asit (%10-20)</span>
+                <span class="evidence-badge ev-mid">~ Kanıt: Orta</span>
+            </div>
+            <p>
+                Antioksidan etkisiyle yeni hasarı önler, mevcut pigmentasyonu yavaş yavaş açar. Sabah güneş kreminin altında kullanılır. Hassas ciltler için %10 konsantrasyon yeterli.
+            </p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>60+ için MVP kombinasyonu: güneş kremi (sabah) + retinol (gece) + ceramidli nemlendirici (sabah-akşam). Geri kalan her şey bonus.</p>
+        </div>
+
+        <h2 id="beklentiler">Gerçekçi beklentiler</h2>
+
+        <p>
+            Cilt bakımı mucize vaat etmez — etmemeli de. Ama "hiçbir şey olmaz" da doğru değil. İşte gerçekçi bir tablo:
+        </p>
+
+        <div class="beklenti-grid">
+            <div class="beklenti-card beklenti-yes">
+                <div class="beklenti-title">✅ Bekleyebilecekleriniz</div>
+                <ul>
+                    <li>Cildin daha nemli ve dolgun görünmesi</li>
+                    <li>İnce kırışıklıklarda azalma (3-6 ay)</li>
+                    <li>Lekelerin belirgin şekilde solması</li>
+                    <li>Sarkmanın yavaşlaması</li>
+                    <li>Genel "dinlenmiş" bir görünüm</li>
+                </ul>
+            </div>
+            <div class="beklenti-card beklenti-no">
+                <div class="beklenti-title">⚠️ Beklememeniz Gerekenler</div>
+                <ul>
+                    <li>Plastik ameliyat kadar dramatik sonuç</li>
+                    <li>Derin kırışıklıkların tamamen kaybolması</li>
+                    <li>20'li yaşlara dönüş</li>
+                    <li>1 haftada görünür fark</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">🔬 Bilim Ne Diyor?</div>
+            <p>Kore kökenli bir 2021 çalışması (Shin et al., <em>J Dermatol Sci</em>), 65 yaş üstü katılımcılarda 12 haftalık retinol kullanımının kırışıklık derinliğinde %23 azalma sağladığını gösterdi. Plaseboya kıyasla istatistiksel olarak anlamlı — yani "yaşlılıkta işe yaramaz" tezi çürütülmüş.</p>
+        </div>
+
+        <h2 id="rutin">60+ için basit rutin</h2>
+
+        <div class="rutin-box">
+            <div class="rutin-header">🌅 Sabah Rutini</div>
+            <div class="rutin-steps">
+                <div class="rutin-step">
+                    <div class="rutin-num">1</div>
+                    <div class="rutin-text">
+                        <strong>Nazik temizleyici</strong>
+                        <span>Köpüklü veya jel değil — krem veya süt temizleyici. Sabun kesinlikle hayır.</span>
+                    </div>
+                </div>
+                <div class="rutin-step">
+                    <div class="rutin-num">2</div>
+                    <div class="rutin-text">
+                        <strong>C vitamini serumu (isteğe bağlı)</strong>
+                        <span>Antioksidan koruması ve leke açma için. Atlamak isterseniz sorun yok.</span>
+                    </div>
+                </div>
+                <div class="rutin-step">
+                    <div class="rutin-num">3</div>
+                    <div class="rutin-text">
+                        <strong>Ceramidli nemlendirici</strong>
+                        <span>Temel adım. Atlamayın.</span>
+                    </div>
+                </div>
+                <div class="rutin-step">
+                    <div class="rutin-num">4</div>
+                    <div class="rutin-text">
+                        <strong>Güneş kremi SPF 30+</strong>
+                        <span>Hava bulutlu olsa bile, ev içinde olsanız bile (pencere kenarında UVA var). Bu adımı hiç atlamayın.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rutin-box">
+            <div class="rutin-header">🌙 Gece Rutini</div>
+            <div class="rutin-steps">
+                <div class="rutin-step">
+                    <div class="rutin-num">1</div>
+                    <div class="rutin-text">
+                        <strong>Nazik temizleyici</strong>
+                        <span>Makyaj varsa önce misel su veya yağ bazlı temizleyici.</span>
+                    </div>
+                </div>
+                <div class="rutin-step">
+                    <div class="rutin-num">2</div>
+                    <div class="rutin-text">
+                        <strong>Retinol (haftada 2-3 gece)</strong>
+                        <span>Düşük konsantrasyonla başla. İrritasyon olursa "sandviç" yöntemi uygula: nemlendirici → retinol → nemlendirici.</span>
+                    </div>
+                </div>
+                <div class="rutin-step">
+                    <div class="rutin-num">3</div>
+                    <div class="rutin-text">
+                        <strong>Yoğun ceramidli gece kremi</strong>
+                        <span>Gündüzden daha kalın kıvamlı bir nemlendirici. Gece onarım süreci için nemli ortam şart.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">💡 İpucu: Göz Çevresi</div>
+            <p>Göz altı ve göz çevresi cilt en ince ve hassas bölge. Retinolü oraya götürmekten korkuyorsanız başlangıçta göz kremine yönelin. Uyku kalitesi de göz altı morluklarının en büyük sebebi — bakım kadar önemli.</p>
+        </div>
+
+    </div>
+
+    <div class="references article-body">
+        <h2>Kaynaklar</h2>
+        <ul class="ref-list">
+            <li>Johnson & Voorhees (1996). Topical tretinoin (retinoic acid) improves melasma. A vehicle-controlled, clinical trial. <em>Arch Dermatol</em>, 132(4), 401-405.</li>
+            <li>Shin et al. (2021). Retinol improves aging skin. <em>J Dermatol Sci</em>, 101(3), 194-200.</li>
+            <li>Farage et al. (2013). Characteristics of the aging skin. <em>Advances in Wound Care</em>, 2(1), 5–10.</li>
+            <li>Ganceviciene et al. (2012). Skin anti-aging strategies. <em>Dermato-Endocrinology</em>, 4(3), 308–319.</li>
+            <li>Krutmann et al. (2017). The skin aging exposome. <em>J Dermatol Sci</em>, 85(3), 152–161.</li>
+        </ul>
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p style="margin-bottom:0.5rem;"><a href="../index.html"><span style="color:#14b8a6;font-weight:700;">Deri</span>ndenbilgi</a> — Kanıta dayalı cilt ve saç sağlığı</p>
+        <p style="font-size:0.8rem;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez. Herhangi bir cilt sorununuz için dermatoloğa danışın.</p>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+        document.getElementById('progressBar').style.width = pct + '%';
+    });
+</script>
+
+</body>
+</html>
