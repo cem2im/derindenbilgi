@@ -307,7 +307,7 @@
         /* UZMAN / HAKKIMIZDA */
         .uzman-section{padding:72px 24px;background:linear-gradient(135deg,#f0fdfa 0%,#ecfeff 50%,#f8fafc 100%)}
         .uzman-inner{max-width:880px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:52px;align-items:center}
-        .uzman-avatar{width:220px;height:220px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:800;color:#fff;box-shadow:0 16px 48px rgba(13,148,136,.25);border:5px solid #fff;flex-shrink:0;letter-spacing:-2px}
+        .uzman-avatar{width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:top;box-shadow:0 16px 48px rgba(13,148,136,.25);border:5px solid #fff;flex-shrink:0;display:block;}
         .uzman-name{font-size:26px;font-weight:800;letter-spacing:-.02em;color:#0f172a;margin-bottom:4px}
         .uzman-title{font-size:15px;font-weight:600;color:var(--accent);margin-bottom:4px}
         .uzman-hospital{font-size:13px;color:var(--text-s);margin-bottom:20px;display:flex;align-items:center;gap:6px}
@@ -664,7 +664,7 @@
 <!-- UZMAN / HAKKIMIZDA -->
 <section class="uzman-section" id="hakkimizda">
     <div class="uzman-inner reveal">
-        <div class="uzman-avatar">Dr</div>
+        <img src="img/uzman-avatar.jpg" class="uzman-avatar" alt="Dermatoloji Uzmanı">
         <div>
             <div class="s-label" style="text-align:left;margin-bottom:12px">Hakkımızda</div>
             <div class="uzman-name">Dermatoloji Uzmanı</div>
