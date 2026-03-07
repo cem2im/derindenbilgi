@@ -16,11 +16,11 @@
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --accent: #0d9488; --accent-light: #14b8a6; --accent-dark: #0f766e;
-            --accent-bg: rgba(13,148,136,0.06); --accent-border: rgba(13,148,136,0.15);
+            --accent: #FA8072; --accent-light: #FCBDB7; --accent-dark: #D95F52;
+            --accent-bg: rgba(217,95,82,0.06); --accent-border: rgba(217,95,82,0.18);
             --text: #1e293b; --text-s: #64748b; --text-t: #94a3b8;
             --bg: #ffffff; --bg-alt: #f8fafc; --border: #e2e8f0;
-            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --gradient: linear-gradient(135deg, #FA8072, #D95F52);
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.04); --shadow-md: 0 4px 12px rgba(0,0,0,0.06); --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
             --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
         }
@@ -39,7 +39,7 @@
 
         .article-hero { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 2rem; }
         .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
-        .category-badge { display: inline-block; background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(20,184,166,0.1)); color: var(--accent-dark); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .category-badge { display: inline-block; background: linear-gradient(135deg, rgba(217,95,82,0.1), rgba(20,184,166,0.1)); color: var(--accent-dark); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; }
         .read-time { font-size: 0.85rem; color: var(--text-t); font-weight: 500; }
         .article-hero h1 { font-size: 2.25rem; font-weight: 800; line-height: 1.2; color: #0f172a; letter-spacing: -0.75px; margin-bottom: 1rem; }
         .article-subtitle { font-size: 1.15rem; color: var(--text-s); line-height: 1.6; }
@@ -67,10 +67,10 @@
         .article-body li { margin-bottom: 0.5rem; color: #334155; }
         .article-body strong { color: #0f172a; font-weight: 600; }
 
-        .hizli-ozet { background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(20,184,166,0.06)); border: 1px solid rgba(13,148,136,0.15); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin: 0 0 2rem; }
+        .hizli-ozet { background: linear-gradient(135deg, rgba(217,95,82,0.06), rgba(20,184,166,0.06)); border: 1px solid rgba(217,95,82,0.15); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin: 0 0 2rem; }
         .hizli-ozet-title { font-size: 1.1rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
         .hizli-ozet ul { list-style: none; padding: 0; margin: 0; }
-        .hizli-ozet li { padding: 0.5rem 0; border-bottom: 1px solid rgba(13,148,136,0.1); font-size: 0.95rem; color: #334155; }
+        .hizli-ozet li { padding: 0.5rem 0; border-bottom: 1px solid rgba(217,95,82,0.1); font-size: 0.95rem; color: #334155; }
         .hizli-ozet li:last-child { border-bottom: none; }
         .hizli-ozet li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
 
@@ -99,7 +99,7 @@
         .compare-card { border-radius: var(--radius-md); padding: 1.25rem 1.5rem; }
         .compare-card.pro { background: #f0fdf4; border: 1px solid #bbf7d0; }
         .compare-card.con { background: #fff7ed; border: 1px solid #fed7aa; }
-        .compare-card.neutral { background: #f0f9ff; border: 1px solid #bae6fd; }
+        .compare-card.neutral { background: #fdf8f6; border: 1px solid #bae6fd; }
         .compare-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.75rem; }
         .compare-card.pro .compare-title { color: #166534; }
         .compare-card.con .compare-title { color: #9a3412; }
@@ -133,7 +133,7 @@
         .tech-table th { background: var(--gradient); color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
         .tech-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); color: #334155; }
         .tech-table tr:nth-child(even) td { background: var(--bg-alt); }
-        .tech-table tr:hover td { background: rgba(13,148,136,0.04); }
+        .tech-table tr:hover td { background: rgba(217,95,82,0.04); }
         @media (max-width: 600px) { .tech-table { font-size: 0.8rem; } .tech-table th, .tech-table td { padding: 0.5rem 0.65rem; } }
 
         /* Norwood tablosu */
@@ -166,10 +166,10 @@
 
         /* Timeline */
         .timeline { position: relative; padding-left: 2rem; margin: 1.5rem 0; }
-        .timeline::before { content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0d9488, #0891b2); }
+        .timeline::before { content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #FA8072, #D95F52); }
         .timeline-item { position: relative; margin-bottom: 1.5rem; }
-        .timeline-dot { position: absolute; left: -1.75rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background: #0d9488; border: 2px solid white; box-shadow: 0 0 0 2px #0d9488; }
-        .timeline-month { font-size: 0.78rem; font-weight: 700; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; }
+        .timeline-dot { position: absolute; left: -1.75rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background: #FA8072; border: 2px solid white; box-shadow: 0 0 0 2px #FA8072; }
+        .timeline-month { font-size: 0.78rem; font-weight: 700; color: #FA8072; text-transform: uppercase; letter-spacing: 0.5px; }
         .timeline-desc { font-size: 0.95rem; color: #334155; margin-top: 2px; }
     </style>
 </head>
