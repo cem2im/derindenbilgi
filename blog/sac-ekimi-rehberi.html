@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saç Ekimi (FUE/DHI) Rehberi | Derindenbilgi</title>
+    <meta name="description" content="FUE ve DHI saç ekimi nedir, nasıl yapılır, şok dökülmesi ne zaman geçer, sonuçlar ne zaman çıkar? Kanıta dayalı, sade anlatımlı rehber.">
+    <meta name="keywords" content="saç ekimi, FUE, DHI, FUT, şok dökülmesi, Norwood skalası, greft, donör bölge, saç ekimi Türkiye, PRP saç ekimi, CAL saç ekimi">
+    <meta property="og:title" content="Saç Ekimi (FUE/DHI) Rehberi: Norwood'dan Sonuçlara Tam Rehber">
+    <meta property="og:description" content="FUE mu DHI mi? Şok dökülmesi ne zaman geçer? 12 aylık sonuç takvimi, PRP kombinasyonu ve Türkiye'de saç ekimi gerçekleri.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #0d9488; --accent-light: #14b8a6; --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06); --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b; --text-s: #64748b; --text-t: #94a3b8;
+            --bg: #ffffff; --bg-alt: #f8fafc; --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04); --shadow-md: 0 4px 12px rgba(0,0,0,0.06); --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+        .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 1001; width: 0%; transition: width 0.1s linear; }
+
+        .site-header { border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 100; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.35rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px; }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a { font-size: 0.9rem; color: var(--text-s); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .header-nav a:hover { color: var(--accent); }
+
+        .article-hero { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 2rem; }
+        .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+        .category-badge { display: inline-block; background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(20,184,166,0.1)); color: var(--accent-dark); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .read-time { font-size: 0.85rem; color: var(--text-t); font-weight: 500; }
+        .article-hero h1 { font-size: 2.25rem; font-weight: 800; line-height: 1.2; color: #0f172a; letter-spacing: -0.75px; margin-bottom: 1rem; }
+        .article-subtitle { font-size: 1.15rem; color: var(--text-s); line-height: 1.6; }
+
+        .author-strip { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 1.5rem; }
+        .author-inner { display: flex; align-items: center; gap: 10px; padding: 10px 0 16px; border-bottom: 1px solid var(--border); }
+        .author-av { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top center; border: 2px solid var(--accent-border); flex-shrink: 0; }
+        .author-name { font-size: .85rem; font-weight: 700; color: var(--text); display: block; }
+        .author-tag { font-size: .78rem; color: var(--text-s); display: block; }
+
+        .toc { max-width: 800px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+        .toc-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem 2rem; }
+        .toc-title { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-t); margin-bottom: 0.75rem; }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a { color: #334155; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .toc-box a:hover { color: var(--accent); }
+
+        .article-body { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+        .article-body h2 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin: 2.5rem 0 1rem; letter-spacing: -0.3px; padding-top: 1rem; border-top: 1px solid #f1f5f9; }
+        .article-body h2:first-child { border-top: none; margin-top: 0; }
+        .article-body h3 { font-size: 1.2rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+        .article-body p { margin-bottom: 1.25rem; color: #334155; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; color: #334155; }
+        .article-body strong { color: #0f172a; font-weight: 600; }
+
+        .hizli-ozet { background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(20,184,166,0.06)); border: 1px solid rgba(13,148,136,0.15); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin: 0 0 2rem; }
+        .hizli-ozet-title { font-size: 1.1rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .hizli-ozet ul { list-style: none; padding: 0; margin: 0; }
+        .hizli-ozet li { padding: 0.5rem 0; border-bottom: 1px solid rgba(13,148,136,0.1); font-size: 0.95rem; color: #334155; }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+
+        .info-box { background: var(--accent-bg); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .info-box-title { font-size: 0.85rem; font-weight: 700; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+
+        .tek-cumle { background: #fef9c3; border-left: 4px solid #eab308; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+        .tek-cumle-label { font-size: 0.8rem; font-weight: 700; color: #854d0e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+        .tek-cumle p { color: #713f12; font-weight: 500; margin: 0; font-size: 0.95rem; }
+
+        .evidence-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.3px; }
+        .ev-high { background: #dcfce7; color: #166534; }
+        .ev-mid  { background: #fef9c3; color: #854d0e; }
+        .ev-low  { background: #fee2e2; color: #991b1b; }
+
+        .steps-box { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin: 1.5rem 0; }
+        .steps-header { background: var(--gradient); color: white; padding: 0.85rem 1.5rem; font-size: 1rem; font-weight: 700; }
+        .steps-list { padding: 0.5rem 0; }
+        .step-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
+        .step-item:last-child { border-bottom: none; }
+        .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: white; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .step-content strong { display: block; font-size: 0.95rem; color: #0f172a; margin-bottom: 3px; }
+        .step-content span { font-size: 0.88rem; color: var(--text-s); }
+
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.5rem 0; }
+        .compare-card { border-radius: var(--radius-md); padding: 1.25rem 1.5rem; }
+        .compare-card.pro { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .compare-card.con { background: #fff7ed; border: 1px solid #fed7aa; }
+        .compare-card.neutral { background: #f0f9ff; border: 1px solid #bae6fd; }
+        .compare-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .compare-card.pro .compare-title { color: #166534; }
+        .compare-card.con .compare-title { color: #9a3412; }
+        .compare-card.neutral .compare-title { color: #075985; }
+        .compare-card ul { padding-left: 1.2rem; margin: 0; }
+        .compare-card li { font-size: 0.9rem; color: #334155; margin-bottom: 0.4rem; }
+        @media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } .article-hero h1 { font-size: 1.75rem; } }
+
+        .endikasyon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1.5rem 0; }
+        .endikasyon-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; text-align: center; }
+        .endikasyon-icon { font-size: 1.75rem; margin-bottom: 6px; }
+        .endikasyon-label { font-size: 0.82rem; font-weight: 600; color: var(--text); }
+        .endikasyon-sub { font-size: 0.75rem; color: var(--text-s); margin-top: 3px; }
+        @media (max-width: 500px) { .endikasyon-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .warning-box-title { font-size: 0.85rem; font-weight: 700; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+
+        .references { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border); }
+        .references h2 { font-size: 1.1rem; font-weight: 700; color: var(--text-t); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; border: none; padding: 0; }
+        .ref-list { list-style: none; padding: 0; }
+        .ref-list li { font-size: 0.85rem; color: var(--text-s); margin-bottom: 0.6rem; padding-left: 1.5rem; position: relative; line-height: 1.5; }
+        .ref-list li::before { content: "↗"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        .site-footer { background: #0f172a; color: #94a3b8; padding: 2rem 1.5rem; margin-top: 4rem; }
+        .footer-inner { max-width: 800px; margin: 0 auto; text-align: center; font-size: 0.875rem; }
+        .footer-inner a { color: var(--accent-light); text-decoration: none; }
+
+        /* Teknik karşılaştırma tablosu */
+        .tech-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .tech-table th { background: var(--gradient); color: white; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .tech-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); color: #334155; }
+        .tech-table tr:nth-child(even) td { background: var(--bg-alt); }
+        .tech-table tr:hover td { background: rgba(13,148,136,0.04); }
+        @media (max-width: 600px) { .tech-table { font-size: 0.8rem; } .tech-table th, .tech-table td { padding: 0.5rem 0.65rem; } }
+
+        /* Norwood tablosu */
+        .norwood-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 1.5rem 0; }
+        .norwood-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; }
+        .norwood-stage { font-size: 0.75rem; font-weight: 700; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.5px; }
+        .norwood-title { font-size: 0.95rem; font-weight: 600; color: #0f172a; margin: 2px 0; }
+        .norwood-graft { font-size: 0.85rem; color: var(--text-s); }
+        @media (max-width: 500px) { .norwood-grid { grid-template-columns: 1fr; } }
+
+        /* Verdikt kartları */
+        .verdict-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1.5rem 0; }
+        .verdict-card { border-radius: var(--radius-md); padding: 1.1rem 1.25rem; text-align: center; }
+        .verdict-card.evet { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .verdict-card.belki { background: #fef9c3; border: 1px solid #fde68a; }
+        .verdict-card.hayir { background: #fff1f2; border: 1px solid #fecdd3; }
+        .verdict-icon { font-size: 1.75rem; margin-bottom: 4px; }
+        .verdict-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .verdict-card.evet .verdict-label { color: #166534; }
+        .verdict-card.belki .verdict-label { color: #854d0e; }
+        .verdict-card.hayir .verdict-label { color: #9f1239; }
+        .verdict-desc { font-size: 0.82rem; color: #334155; margin-top: 4px; }
+        @media (max-width: 500px) { .verdict-grid { grid-template-columns: 1fr; } }
+
+        /* Myth/Fact */
+        .myth-box { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; margin: 1rem 0; }
+        .myth-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.2rem; background: #fff1f2; border-bottom: 1px solid #fecdd3; }
+        .myth-header span { font-size: 0.85rem; font-weight: 700; color: #9f1239; }
+        .myth-fact { padding: 0.75rem 1.2rem; font-size: 0.9rem; color: #334155; background: #f0fdf4; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 2rem; margin: 1.5rem 0; }
+        .timeline::before { content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #0d9488, #0891b2); }
+        .timeline-item { position: relative; margin-bottom: 1.5rem; }
+        .timeline-dot { position: absolute; left: -1.75rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background: #0d9488; border: 2px solid white; box-shadow: 0 0 0 2px #0d9488; }
+        .timeline-month { font-size: 0.78rem; font-weight: 700; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; }
+        .timeline-desc { font-size: 0.95rem; color: #334155; margin-top: 2px; }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="lc"><path d="M18 10 L54 10 C86 10 102 32 102 60 C102 88 86 110 54 110 L18 110 Z"/></clipPath></defs><path d="M18 10 L54 10 C86 10 102 32 102 60 C102 88 86 110 54 110 L18 110 Z" fill="#0f172a"/><path d="M0 35 C25 24 50 44 75 35 C100 24 115 38 130 33 L130 0 L0 0 Z" fill="#ccfbf1" clip-path="url(#lc)"/><path d="M0 62 C25 50 50 70 75 62 C100 50 115 64 130 59 L130 33 C115 38 100 24 75 35 C50 44 25 24 0 35 Z" fill="#0d9488" clip-path="url(#lc)"/><path d="M0 88 C25 76 50 96 75 88 C100 76 115 90 130 85 L130 59 C115 64 100 50 75 62 C50 70 25 50 0 62 Z" fill="#0f766e" clip-path="url(#lc)"/><path d="M0 120 L130 120 L130 85 C115 90 100 76 75 88 C50 96 25 76 0 88 Z" fill="#1e3a5f" clip-path="url(#lc)"/><path d="M18 35 C30 24 48 44 66 35 C84 24 98 38 102 34" stroke="rgba(255,255,255,0.55)" stroke-width="2" fill="none" clip-path="url(#lc)"/><path d="M18 62 C30 50 48 70 66 62 C84 50 98 64 102 60" stroke="rgba(255,255,255,0.45)" stroke-width="2" fill="none" clip-path="url(#lc)"/><path d="M18 88 C30 76 48 96 66 88 C84 76 98 90 102 86" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none" clip-path="url(#lc)"/><rect x="18" y="10" width="10" height="100" fill="#0f172a"/></svg><span style="color:#0d9488">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#testler">Testler</a>
+        </nav>
+    </div>
+</header>
+
+<article>
+    <div class="article-hero">
+        <div class="article-meta">
+            <span class="category-badge">Kozmetik İşlemler</span>
+            <span class="read-time">⏱ 15 dk okuma</span>
+        </div>
+
+        <h1>Saç Ekimi (FUE/DHI) Rehberi: Norwood'dan Sonuçlara Tam Rehber</h1>
+        <p class="article-subtitle">
+            FUE mu, DHI mi, FUT mu? Şok dökülmesi ne zaman başlayıp ne zaman biter? 12. ayda gerçekten ne görürsünüz? Türkiye neden dünya merkezi haline geldi — ve asıl sorular neler? Kanıta dayalı, sade anlatımlı tam rehber.
+        </p>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-inner">
+            <img src="../img/uzman-avatar.jpg" class="author-av" alt="Dermatoloji Uzmanı">
+            <div>
+                <span class="author-name">Dermatoloji Uzmanı</span>
+                <span class="author-tag">🏥 Gülhane Eğitim ve Araştırma Hastanesi · Dermatoloji & Veneroloji</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="toc">
+        <div class="toc-box">
+            <div class="toc-title">İçindekiler</div>
+            <ol>
+                <li><a href="#giris">Giriş: FUE, DHI, FUT nedir?</a></li>
+                <li><a href="#teknikler">Üç teknik karşılaştırması</a></li>
+                <li><a href="#islem-adimlari">İşlem adım adım</a></li>
+                <li><a href="#norwood">Norwood skalası: kim kaç greft alır?</a></li>
+                <li><a href="#donor">Donör bölge: gerçekten bitmez mi?</a></li>
+                <li><a href="#sok-dokulmesi">Şok dökülmesi: ne zaman, neden, geçer mi?</a></li>
+                <li><a href="#sonuc-takvimi">Sonuç takvimi: 3–18 ay</a></li>
+                <li><a href="#prp-yag">PRP ve yağ transferi kombinasyonu</a></li>
+                <li><a href="#turkiye">Türkiye'de saç ekimi: gerçekler ve riskler</a></li>
+                <li><a href="#mitler">Mitler vs Gerçekler</a></li>
+                <li><a href="#uygun-degil">Kimler uygun değil?</a></li>
+                <li><a href="#kanit">Kanıt düzeyi özeti</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <div class="hizli-ozet">
+            <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+            <ul>
+                <li>FUE en yaygın teknik — bıçak yok, dikiş yok, iz bırakmaz. DHI ise kanalı ve yerleştirmeyi tek adımda yapıyor</li>
+                <li>FUT (şerit tekniği) eskide kaldı ama hâlâ birkaç avantajı var — özellikle yüksek greft sayısına ihtiyaç duyanlarda</li>
+                <li>Şok dökülmesi (shock loss) korkunç görünür ama neredeyse her zaman geçer — 3. ayda büyüme başlar</li>
+                <li>12. ayda %80, 18. ayda %100 sonuç görülür — sabır şart</li>
+                <li>Türkiye dünyada en fazla saç ekimi yapılan ülke — hem fiyat hem deneyim avantajı var, ama riskler de gerçek</li>
+                <li>PRP kombinasyonu greft sağkalımını artırıyor (orta düzey kanıt)</li>
+            </ul>
+        </div>
+
+        <!-- ====== GİRİŞ ====== -->
+        <h2 id="giris">💆 Giriş: FUE, DHI, FUT nedir?</h2>
+
+        <p>
+            Saç ekimi (hair transplantation), kısaca şu demek: dökülmeye dayanıklı ense saçları alınıp dökülmüş bölgeye taşınıyor. Arka ense bölgesindeki saçlar genetik olarak DHT hormonuna daha az duyarlı — yani onlar dökülen yerde de dökülemez.
+        </p>
+
+        <p>
+            Bu fikir 1950'lerde ortaya çıktı. Ama o zamanki teknikler kaba "saç adacığı" görüntüsü veriyordu — çirkin, yapay. Bugünkü FUE tekniği ile tek tek folikül (saç kökü) nakledildiği için sonuç tamamen doğal görünüyor.
+        </p>
+
+        <div class="info-box">
+            <div class="info-box-title">🌍 Türkiye Neden Dünya Merkezi?</div>
+            <p>Türkiye'de yılda yaklaşık <strong>500.000–700.000</strong> saç ekimi yapılıyor — bu sayı tüm dünya operasyonlarının büyük çoğunluğunu oluşturuyor. Nedenler: fiyat (Batı Avrupa'nın 3–5'te 1'i), deneyimli ekip yoğunluğu, kapsamlı paket seçenekleri ve kolay ulaşım. İstanbul tek başına tüm kliniği barındırıyor.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Dökülmeye dirençli ense saçları, dökülmüş bölgeye taşınıyor — ve o saçlar yeni yerlerinde de dökülmüyor.</p>
+        </div>
+
+        <!-- ====== TEKNİKLER ====== -->
+        <h2 id="teknikler">⚙️ Üç Teknik Karşılaştırması: FUE vs DHI vs FUT</h2>
+
+        <p>
+            Üç ana yöntem var. Hangisinin sizin için doğru olduğu, saç dökülmesinin evresine, ihtiyaç duyulan greft sayısına ve cerrahın tercihine göre değişiyor.
+        </p>
+
+        <table class="tech-table">
+            <thead>
+                <tr>
+                    <th>Kriter</th>
+                    <th>FUE</th>
+                    <th>DHI</th>
+                    <th>FUT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Tam adı</strong></td>
+                    <td>Follicular Unit Extraction</td>
+                    <td>Direct Hair Implantation</td>
+                    <td>Follicular Unit Transplantation</td>
+                </tr>
+                <tr>
+                    <td><strong>Nasıl alınır?</strong></td>
+                    <td>Mikro punch ile tek tek folikül</td>
+                    <td>Mikro punch ile tek tek folikül</td>
+                    <td>Şerit cilt kesisi</td>
+                </tr>
+                <tr>
+                    <td><strong>Kanal açımı</strong></td>
+                    <td>Ayrı adım (neşter/lazer)</td>
+                    <td>Yok — choi kalem ile yerleştirme</td>
+                    <td>Ayrı adım</td>
+                </tr>
+                <tr>
+                    <td><strong>İz</strong></td>
+                    <td>Çok küçük nokta izleri</td>
+                    <td>Çok küçük nokta izleri</td>
+                    <td>Ense çizgisel iz (kalıcı)</td>
+                </tr>
+                <tr>
+                    <td><strong>İyileşme</strong></td>
+                    <td>7–10 gün</td>
+                    <td>7–10 gün</td>
+                    <td>2–3 hafta</td>
+                </tr>
+                <tr>
+                    <td><strong>Max greft/seans</strong></td>
+                    <td>3.000–4.000</td>
+                    <td>2.000–3.000</td>
+                    <td>4.000–5.000+</td>
+                </tr>
+                <tr>
+                    <td><strong>Yoğunluk</strong></td>
+                    <td>İyi</td>
+                    <td>Biraz daha iyi</td>
+                    <td>İyi</td>
+                </tr>
+                <tr>
+                    <td><strong>En uygun</strong></td>
+                    <td>Orta-ileri evre, çoğu hasta</td>
+                    <td>Çizgi tasarımı, yoğunluk artırma</td>
+                    <td>Çok yüksek greft ihtiyacı</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="compare-grid">
+            <div class="compare-card pro">
+                <div class="compare-title">✅ DHI'nin Avantajı</div>
+                <ul>
+                    <li>Kanal açılmadan doğrudan yerleştirme</li>
+                    <li>Folikül havada daha az kalıyor → daha yüksek sağkalım potansiyeli</li>
+                    <li>Saç çizgisi tasarımında hassasiyet</li>
+                    <li>Mevcut saçlar arasına daha kolay yerleştirme</li>
+                </ul>
+            </div>
+            <div class="compare-card neutral">
+                <div class="compare-title">🔵 FUE'nin Avantajı</div>
+                <ul>
+                    <li>Daha fazla greft = daha büyük alan kaplama</li>
+                    <li>Daha yaygın, daha fazla deneyimli hekim</li>
+                    <li>Maliyet genellikle daha düşük</li>
+                    <li>Kanıt düzeyi daha olgun</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>FUE = daha yaygın, daha büyük alan. DHI = daha hassas, biraz daha yoğun. FUT = iz bırakır ama en fazla greft sağlar.</p>
+        </div>
+
+        <!-- ====== İŞLEM ADIMLARI ====== -->
+        <h2 id="islem-adimlari">🔬 İşlem Adım Adım</h2>
+
+        <p>
+            Bir saç ekimi günü nasıl geçer? Sabah erkenden başlar, akşama kadar sürebilir. İşte adım adım ne olur:
+        </p>
+
+        <div class="steps-box">
+            <div class="steps-header">🏥 Saç Ekimi Adım Adım</div>
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <strong>Tasarım ve çizgi belirleme</strong>
+                        <span>Saç çizgisi (hairline) hasta ile birlikte tasarlanır. Bu adım belki de en kritik estetik karar — çok düşük çizgi doğal görünmez, çok yüksek yetersiz kalabilir.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <strong>Donör bölge hazırlığı ve anestezi</strong>
+                        <span>Ense bölgesi kısaltılır (FUE/DHI için tıraş, FUT için değil). Lokal anestezi yapılır — bu kısım biraz acıtabilir ama işlemin geri kalanı ağrısız geçer.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <strong>Greft alımı (punch ile)</strong>
+                        <span>0.8–1.0 mm çapında mikro punch ile tek tek foliküler üniteler (greft) çıkarılır. Her greft 1–4 saç içerebilir. Bu, işlemin en uzun adımı — binlerce greft için saatler sürer.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <strong>Greftlerin saklanması</strong>
+                        <span>Alınan greftler özel soğuk salin (tuzlu su) çözeltisinde bekletilir. Dışarıda geçirilen süre kritik — uzun süre bekleyen greft canlılığını kaybeder.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <strong>Kanal açımı (FUE'de)</strong>
+                        <span>Alıcı bölgede mikro neşterler veya lazer ile açılar ve derinlikler ayarlanarak kanallar açılır. Açı çok önemli — doğal saç yönünü taklit etmeli.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">6</div>
+                    <div class="step-content">
+                        <strong>Yerleştirme</strong>
+                        <span>Greftler tek tek kanallara yerleştirilir. DHI'de kanal açımı ve yerleştirme eş zamanlı yapılır (Choi kalemi). Bu adım da saatler sürer ve el becerisi kritik önemdedir.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">7</div>
+                    <div class="step-content">
+                        <strong>İlk yıkama ve bakım talimatları</strong>
+                        <span>Genellikle ertesi gün klinik ilk yıkamayı yapar. Takip eden 10–14 gün için detaylı bakım talimatları verilir. Bu dönem greft tutunması için kritik.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Bir saç ekimi günü 6–10 saat sürüyor, lokal anestezi altında — sabah başlar, akşam eve gidersiniz.</p>
+        </div>
+
+        <!-- ====== NORWOOD ====== -->
+        <h2 id="norwood">📊 Norwood Skalası: Kim Kaç Greft Alır?</h2>
+
+        <p>
+            Norwood-Hamilton skalası, erkek tipi saç dökülmesini (androgenetik alopesi) 7 evreye ayırır. Hangi evrede olduğunuz, kaç greft ihtiyaç duyacağınızı belirler — ve aynı zamanda işlemin yapılabilir olup olmadığını da.
+        </p>
+
+        <div class="norwood-grid">
+            <div class="norwood-card">
+                <div class="norwood-stage">Evre I–II</div>
+                <div class="norwood-title">Minimal çekilme</div>
+                <div class="norwood-graft">500–1.500 greft · Genellikle saç çizgisi dolgusu</div>
+            </div>
+            <div class="norwood-card">
+                <div class="norwood-stage">Evre III</div>
+                <div class="norwood-title">Belirgin çekilme / tepe başlangıcı</div>
+                <div class="norwood-graft">1.500–2.500 greft</div>
+            </div>
+            <div class="norwood-card">
+                <div class="norwood-stage">Evre IV</div>
+                <div class="norwood-title">Öne + tepeye yayılım</div>
+                <div class="norwood-graft">2.500–3.500 greft</div>
+            </div>
+            <div class="norwood-card">
+                <div class="norwood-stage">Evre V</div>
+                <div class="norwood-title">Geniş tepe açıklığı</div>
+                <div class="norwood-graft">3.500–4.500 greft · 2 seans gerekebilir</div>
+            </div>
+            <div class="norwood-card">
+                <div class="norwood-stage">Evre VI</div>
+                <div class="norwood-title">Ön + tepe birleşmiş</div>
+                <div class="norwood-graft">4.500–6.000 greft · Genellikle 2 seans</div>
+            </div>
+            <div class="norwood-card">
+                <div class="norwood-stage">Evre VII</div>
+                <div class="norwood-title">Sadece yan şerit kaldı</div>
+                <div class="norwood-graft">Sınırlı donör · Gerçekçi beklenti şart</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-box-title">⚠️ Evre VII'de Gerçekçi Beklenti</div>
+            <p>İleri evre dökülmede donör bölge sınırlıdır. 7.000 greftlik kapsamlı kapatma vaadi genellikle gerçekçi değil. Saç yoğunluğu arka bölgede aynı görünmeyecek — ama estetik iyileşme yine mümkün. Cerrahinizle açık konuşun.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Norwood evre = kaç greft ihtiyacı — ve donör bölge ne kadar izin veriyor bunu belirler.</p>
+        </div>
+
+        <!-- ====== DONÖR ====== -->
+        <h2 id="donor">🎯 Donör Bölge: Gerçekten Bitmez Mi?</h2>
+
+        <p>
+            "Donör bölge (ense) tükenmez" derler — ama bu tam doğru değil. Donör bölgenin bir kapasitesi var. Bu kapasiteyi aşarsanız sonraki seanslarda sorun yaşarsınız.
+        </p>
+
+        <p>
+            Ortalama bir insanın ense bölgesinde güvenli şekilde alınabilecek <strong>4.000–7.000 greft</strong> var. Bunun üzerinde alım yapılırsa donör bölgede seyreklik (over-harvesting) oluşur — hem estetik sorun yaratır hem de bir daha vericiye güvenemezsiniz.
+        </p>
+
+        <div class="compare-grid">
+            <div class="compare-card pro">
+                <div class="compare-title">✅ Donörün Gerçekten İyi Yanı</div>
+                <ul>
+                    <li>DHT'ye (erkeklik hormonu) genetik direnç var</li>
+                    <li>Nakledilen saç yeni yerinde de dökülmez (donor dominance)</li>
+                    <li>Sağlıklı donörde 4.000–7.000 greft kapasitesi</li>
+                    <li>Sakal, bıyık ve vücut kılları ek kaynak olarak kullanılabilir</li>
+                </ul>
+            </div>
+            <div class="compare-card con">
+                <div class="compare-title">⚠️ Donörün Sınırları</div>
+                <ul>
+                    <li>Over-harvesting (aşırı alım) donör bölgeyi inceltir</li>
+                    <li>Donör kapasitesi kişiden kişiye değişir</li>
+                    <li>İleri yaşta dökülme ilerleyebilir — ek greft ihtiyacı</li>
+                    <li>Diffüz alopeside donör de etkilenmiş olabilir</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">💡 Sakal Grefleri: Ek Kaynak</div>
+            <p>Donör kapasitesi yetersiz olan hastalarda sakal kılları alternatif kaynak olarak kullanılabilir. Sakal grefti kalın ve sağlam — ama saç ile tam aynı değil. Genellikle tepe bölgesine, saçla karışık kullanılır. Deneyimli merkezlerde başarılı sonuçlar var.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Donör bölge sonsuz değil — ortalama 4.000–7.000 greft kapasitesi var ve aşılırsa kalıcı iz bırakır.</p>
+        </div>
+
+        <!-- ====== ŞOK DÖKÜLMESİ ====== -->
+        <h2 id="sok-dokulmesi">😱 Şok Dökülmesi: Ne Zaman, Neden, Geçer Mi?</h2>
+
+        <p>
+            Saç ekiminin en korkunç yanı bu: ekimden 2–6 hafta sonra ekilen saçlar dökülmeye başlar. Hatta bazen çevre saçlar da dökülür. Panik yapmayın — bu beklenen bir süreç.
+        </p>
+
+        <p>
+            Şok dökülmesi (shock loss) oluşuyor çünkü foliküller travmaya tepki olarak "uyku moduna" (telogen faz) geçiyor. Saçın kendisi döküldü ama <strong>kök aşağıda sağ</strong> — büyüme tekrar başlayacak.
+        </p>
+
+        <div class="steps-box">
+            <div class="steps-header">⏰ Şok Dökülmesi Zaman Çizelgesi</div>
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <strong>0–2. Hafta: Kabuk dönemi</strong>
+                        <span>Ekilen bölgede küçük kabuklar oluşur, kırmızılık ve hassasiyet normal. Yavaş yavaş iyileşir.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <strong>2–6. Hafta: Şok dökülmesi başlar</strong>
+                        <span>Ekilen saçlar (ve bazen çevre saçlar) dökülür. En stresli dönem bu. Ama bu BEKLENEN bir süreç — köklere zarar yok.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <strong>2–3. Ay: "Çirkin ördek yavrusu" dönemi</strong>
+                        <span>Bölge seyrek ve tuhaf görünür. Sabır kritik. Büyüme henüz başlamadı.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <strong>3–6. Ay: İlk filizler</strong>
+                        <span>İnce, kıvrık ve açık renkli yeni saçlar çıkmaya başlar. Heyecan verici ama henüz tam değil.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <strong>6–12. Ay: Asıl gelişim</strong>
+                        <span>Saçlar kalınlaşır, koyulaşır ve uzar. %60–80 sonuç bu dönemde görülür.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">6</div>
+                    <div class="step-content">
+                        <strong>12–18. Ay: Final</strong>
+                        <span>%100 sonuç burada. Bazı hastalar 18. aya kadar gelişim yaşayabilir. Değerlendirme ancak burada yapılabilir.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">🔬 Donör Bölgede de Şok Dökülmesi Olabilir</div>
+            <p>Özellikle yüksek greft alımı yapılan durumlarda ense bölgesinde de geçici dökülme görülebilir. Bu da genellikle 3 ay içinde düzelir. Ama nadir durumlarda — özellikle aşırı alımda — kalıcı seyreklik bırakabilir.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Şok dökülmesi neredeyse her hastada olur ve neredeyse her zaman geçer — ama 3. aya kadar sabretmek gerekir.</p>
+        </div>
+
+        <!-- ====== SONUÇ TAKVİMİ ====== -->
+        <h2 id="sonuc-takvimi">📅 Sonuç Takvimi: 3. Aydan 18. Aya</h2>
+
+        <p>
+            Saç ekiminde en sık sorulan soru şu: "Ne zaman göreceğim?" Cevap: beklenenden çok daha geç. İşte gerçekçi zaman çizelgesi:
+        </p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">1. Hafta</div>
+                <div class="timeline-desc">Kabuklar, kırmızılık, hafif ödem. İşe gidebilirsiniz ama şapka gerekli. İlk yıkama klinik tarafından yapılır.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">2–6. Hafta</div>
+                <div class="timeline-desc">Şok dökülmesi dönemi. Ekilen saçların çoğu dökülebilir. Panik yapma — bu normal. Kökler sağ.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">3. Ay</div>
+                <div class="timeline-desc">İlk ince tüyler çıkmaya başlar. Henüz %10–20 sonuç. Spor ve yoğun egzersiz artık serbest.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">6. Ay</div>
+                <div class="timeline-desc">%40–60 sonuç görülür. Saçlar kalınlaşıyor, koyulaşıyor. Sosyal çevreniz fark etmeye başlar.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">9. Ay</div>
+                <div class="timeline-desc">%70–80 sonuç. Büyük fark belirgin. Çoğu hasta bu noktada çok memnun.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">12. Ay</div>
+                <div class="timeline-desc">%80–90 sonuç. Kontrol fotoğrafı çekilir, sonuç değerlendirmesi yapılır.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-month">18. Ay</div>
+                <div class="timeline-desc">%100 final sonuç. Saçlar tam olgunluğuna ulaştı. Bazılar burada 2. seans gerekip gerekmediğine karar verir.</div>
+            </div>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Saç ekimini 12. ayda değerlendirin, 18. ayda finalize edin — 3. ayda yargılamayın.</p>
+        </div>
+
+        <!-- ====== PRP ve YAĞ TRANSFERİ ====== -->
+        <h2 id="prp-yag">💉 PRP ve Yağ Transferi Kombinasyonu</h2>
+
+        <p>
+            Saç ekimine ek olarak iki popüler kombinasyon var: PRP (trombosit zengini plazma) ve CAL (hücre destekli yağ transferi). İkisi de greft sağkalımını artırmayı ve iyileşme sürecini hızlandırmayı hedefliyor.
+        </p>
+
+        <h3>PRP Kombinasyonu</h3>
+
+        <p>
+            PRP (Platelet-Rich Plasma — trombosit yoğun plazma): kendi kanınızdan elde edilen, büyüme faktörü açısından zengin bir madde. Saç ekimi sırasında alıcı bölgeye enjekte edildiğinde folikül sağkalımını artırıyor.
+        </p>
+
+        <div class="compare-grid">
+            <div class="compare-card pro">
+                <div class="compare-title">✅ PRP Kombine Fayda</div>
+                <ul>
+                    <li>Greft sağkalım oranını artırıyor (%10–15 iyileşme)</li>
+                    <li>İyileşme sürecini hızlandırıyor</li>
+                    <li>Şok dökülmesini azaltabilir</li>
+                    <li>Kendi kanınızdan — alerji riski yok</li>
+                </ul>
+            </div>
+            <div class="compare-card neutral">
+                <div class="compare-title">🔵 PRP Sınırları</div>
+                <ul>
+                    <li>Orta düzey kanıt — büyük RKT sınırlı</li>
+                    <li>Hazırlama protokolü klinikten kliniğe değişiyor</li>
+                    <li>Tek başına PRP saç ekiminin yerini almaz</li>
+                    <li>Ek maliyet: 200–500 USD</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">🔬 Kanıt Düzeyi — PRP + Saç Ekimi</div>
+            <p>Kuka G, et al. (2019) yayımladığı çalışma dahil birden fazla kontrollü çalışma, PRP'nin saç ekimi ile kombine kullanımında greft sağkalımını anlamlı ölçüde artırdığını gösteriyor. Kanıt düzeyi: <span class="evidence-badge ev-mid">Orta (Level III–IV)</span></p>
+        </div>
+
+        <h3>Yağ Transferi (CAL) Kombinasyonu</h3>
+
+        <p>
+            CAL (Cell-Assisted Lipotransfer — hücre destekli yağ transferi): vücudun başka bir bölgesinden alınan yağ içindeki adipöz kök hücreler saç derisi bölgesine enjekte ediliyor. Bu hücreler folikül mikro çevresini iyileştiriyor.
+        </p>
+
+        <p>
+            Fukuoka H ve Suga H'ın 2015 çalışması, yağ transferi + saç ekimi kombinasyonunun greft tutunma oranını tek başına ekime kıyasla anlamlı ölçüde artırdığını gösterdi. Özellikle saç derisinin yeterince beslenmediği hastalarda ekstra fayda sağlıyor.
+        </p>
+
+        <div class="info-box">
+            <div class="info-box-title">🔬 Kanıt Düzeyi — CAL + Saç Ekimi</div>
+            <p>CAL için kanıt düzeyi <span class="evidence-badge ev-mid">Orta (Level III)</span> — umut verici ama büyük randomize çalışmalar henüz sınırlı. En güçlü veri FUE/DHI ile kombine kullanımda. Tek başına CAL erken evre saç dökülmesini yavaşlatabilir ama saç ekiminin yerini almaz.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>PRP ve CAL kombinasyonu greft sağkalımını artırıyor — ikisi de kendi dokudan elde edildiği için güvenli, ama tek başına saç ekiminin yerini tutmuyor.</p>
+        </div>
+
+        <!-- ====== TÜRKİYE ====== -->
+        <h2 id="turkiye">🇹🇷 Türkiye'de Saç Ekimi: Gerçekler ve Riskler</h2>
+
+        <p>
+            Her yıl yüz binlerce yabancı hasta saç ekimi için Türkiye'ye geliyor. Bunun gerçek nedenleri var — ama aynı zamanda gerçek riskler de mevcut.
+        </p>
+
+        <h3>Neden Türkiye?</h3>
+
+        <div class="endikasyon-grid">
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">💰</div>
+                <div class="endikasyon-label">Fiyat Avantajı</div>
+                <div class="endikasyon-sub">İngiltere–Almanya fiyatının 3–5'te biri (2.000–4.000 EUR paket)</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">🏥</div>
+                <div class="endikasyon-label">Hacim = Deneyim</div>
+                <div class="endikasyon-sub">Yılda 500.000+ işlem → cerrahlar çok tecrübeli</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">✈️</div>
+                <div class="endikasyon-label">Kolay Ulaşım</div>
+                <div class="endikasyon-sub">İstanbul merkezi konum, çoğu Avrupa şehrinden 3–4 saat</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">🏨</div>
+                <div class="endikasyon-label">Paket Kolaylığı</div>
+                <div class="endikasyon-sub">Uçak + otel + transfer + klinik dahil all-in paketler</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">🔬</div>
+                <div class="endikasyon-label">Teknoloji</div>
+                <div class="endikasyon-sub">FUE motorları, sapphire punch, DHI donanımı — en yeni ekipmanlar</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">📋</div>
+                <div class="endikasyon-label">JCI Akredite Klinikler</div>
+                <div class="endikasyon-sub">Pek çok klinik uluslararası kalite standartlarına sahip</div>
+            </div>
+        </div>
+
+        <h3>Gerçek Riskler</h3>
+
+        <div class="warning-box">
+            <div class="warning-box-title">⚠️ Türkiye'de Saç Ekimi Riskleri</div>
+            <p>
+                <strong>Lisanssız operatör:</strong> Bazı kliniklerde cerrah sadece tasarımı yapıyor, ekimin geri kalanını teknisyenler tamamlıyor — yasal ama kaliteyi etkiliyor.<br><br>
+                <strong>"5.000 greft garantisi" tuzağı:</strong> Greft sayısı tek başına kalite garantisi değil. Greftin sağlıklı alınması, saklanması ve yerleştirilmesi daha kritik.<br><br>
+                <strong>Takip eksikliği:</strong> Ülkenize döndükten sonra sorun yaşarsanız iletişim zorlaşabilir. Akredite ve iyi iletişim kuran merkez seçin.<br><br>
+                <strong>Komplikasyonlar:</strong> Enfeksiyon, skar dokusu, düzensiz çizgi, over-harvesting — yanlış teknik veya kötü uygulama ile kalıcı hasar mümkün.
+            </p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card evet">
+                <div class="verdict-icon">✅</div>
+                <div class="verdict-label">Doğru</div>
+                <div class="verdict-desc">Akredite, cerrah-denetimli, referanslı kliniklerde gerçekten mükemmel sonuçlar alınıyor</div>
+            </div>
+            <div class="verdict-card belki">
+                <div class="verdict-icon">🤔</div>
+                <div class="verdict-label">Dikkat</div>
+                <div class="verdict-desc">Araştırma yapmadan en ucuz paketi seçmek riskli — fiyat tek kriter olmamalı</div>
+            </div>
+            <div class="verdict-card hayir">
+                <div class="verdict-icon">❌</div>
+                <div class="verdict-label">Yanlış</div>
+                <div class="verdict-desc">"Türkiye'de saç ekimi hep başarısız" da değil, "hep mükemmel" de değil — kalite klinike göre değişiyor</div>
+            </div>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Türkiye gerçekten iyi bir seçenek olabilir — ama klinik araştırması işlemin kendisi kadar önemli.</p>
+        </div>
+
+        <!-- ====== MİTLER ====== -->
+        <h2 id="mitler">🔮 Mitler vs Gerçekler</h2>
+
+        <div class="myth-box">
+            <div class="myth-header"><span>❌ Mit 1: "Saç ekimi ağrılıdır"</span></div>
+            <div class="myth-fact">YANLIŞ. İşlem lokal anestezi altında yapılır ve büyük çoğunluğu ağrısız geçer. En çok acıtan kısım anestezi enjeksiyonudur — ve bu da birkaç dakika sürer.</div>
+        </div>
+
+        <div class="myth-box">
+            <div class="myth-header"><span>❌ Mit 2: "Ekilen saçlar ömür boyu dökülez"</span></div>
+            <div class="myth-fact">DOĞRU AMA YANLIŞ BİR ÇERÇEVELENDİRME. Ekilen foliküller donör dominance özelliği taşıdığından genetik dökülmeye direnç gösterir. Ama saç derisini etkileyen diğer faktörler (stres, hastalık, ilaç) onları da etkileyebilir.</div>
+        </div>
+
+        <div class="myth-box">
+            <div class="myth-header"><span>❌ Mit 3: "Şok dökülmesi greftlerin öldüğü anlamına gelir"</span></div>
+            <div class="myth-fact">YANLIŞ. Şok dökülmesinde saç teli düşer ama kök (folikül) hayatta kalır. 3–4 ay içinde yeniden büyüme başlar. Greftler ancak ciddi enfeksiyon veya teknik hata durumunda kalıcı zarar görür.</div>
+        </div>
+
+        <div class="myth-box">
+            <div class="myth-header"><span>❌ Mit 4: "5.000 greft = her zaman daha iyi"</span></div>
+            <div class="myth-fact">YANLIŞ. Greft kalitesi, doğru açı, doğru derinlik ve greft sağkalımı miktardan çok daha önemli. 3.000 iyi yerleştirilmiş greft, 5.000 kötü yerleştirilmiş greft'ten üstün sonuç verir.</div>
+        </div>
+
+        <div class="myth-box">
+            <div class="myth-header"><span>❌ Mit 5: "Saç ekimi kadınlara yapılmaz"</span></div>
+            <div class="myth-fact">YANLIŞ. Kadın tipi saç dökülmesi (Ludwig skalası) için de saç ekimi yapılabilir. Ancak kadınlarda saç dökülmesi çoğunlukla diffüz olduğundan — yani donör bölge de etkilenebilir — hasta seçimi çok daha dikkatli yapılmalıdır.</div>
+        </div>
+
+        <div class="myth-box">
+            <div class="myth-header"><span>❌ Mit 6: "Saç ekimi yaptıran belli olmaz"</span></div>
+            <div class="myth-fact">YANLIŞ DEĞİL — AMA KOŞULLU. İyi planlanmış, doğal çizgi tasarımlı ve uygun açıda yapılmış saç ekimi gerçekten belli olmaz. Kötü yapılanlar ise yıllarca belli olur ve düzeltmesi zordur.</div>
+        </div>
+
+        <!-- ====== UYGUN DEĞİL ====== -->
+        <h2 id="uygun-degil">🚫 Kimler Uygun Değil?</h2>
+
+        <p>
+            Saç ekimi herkese yapılmaz. Aşağıdaki durumlar kontrendikasyon (yapılmamalı) oluşturabilir:
+        </p>
+
+        <div class="compare-grid">
+            <div class="compare-card con">
+                <div class="compare-title">❌ Kesin Kontrendikasyonlar</div>
+                <ul>
+                    <li>Aktif saç derisi enfeksiyonu veya psoriazis atağı</li>
+                    <li>Aktif alopesia areata (otoimmün saç dökülmesi)</li>
+                    <li>Yetersiz donör bölge kapasitesi</li>
+                    <li>Kan pıhtılaşma bozukluğu veya tedavisi</li>
+                    <li>Gebelik</li>
+                    <li>Aktif, kontrol altında olmayan sistemik hastalık</li>
+                </ul>
+            </div>
+            <div class="compare-card neutral">
+                <div class="compare-title">🤔 Dikkatli Olunacak Durumlar</div>
+                <ul>
+                    <li>20 yaş altı — dökülme henüz stabilize olmamış olabilir</li>
+                    <li>Diffüz androgenetik alopesi — donör da etkilenmiş olabilir</li>
+                    <li>Keloid yatkınlığı</li>
+                    <li>Diyabet (iyileşme süreci uzar)</li>
+                    <li>Gerçekçi olmayan beklentiler</li>
+                    <li>Aktif sigara kullanımı — greft sağkalımını düşürür</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">👤 Yaş ve Beklenti Meselesi</div>
+            <p>25 yaşında saç ekimi yaptıran biri 40 yaşında ek dökülme yaşayabilir. Bu durumda ya 2. seans gerekir ya da ilaç tedavisi (minoksidil, finasterid) ile dökülme yavaşlatılmalıdır. Genç hastalarda finasterid + minoksidil ile stabilizasyon sağlandıktan sonra saç ekimi daha akıllıca bir seçenek.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Uygun aday olmak için: stabil dökülme, yeterli donör, gerçekçi beklenti ve iyi genel sağlık şartı.</p>
+        </div>
+
+        <!-- ====== KANIT DÜZEYİ ====== -->
+        <h2 id="kanit">🔬 Kanıt Düzeyi Özeti</h2>
+
+        <div class="info-box">
+            <div class="info-box-title">📊 Kanıt Düzeyleri</div>
+            <p>
+                <strong>FUE (androgenetik alopeside):</strong> <span class="evidence-badge ev-high">Yüksek — Level I–II</span> — Gupta AK ve ark. (2020) sistematik derlemesi dahil çok sayıda RKT mevcut.<br><br>
+                <strong>DHI vs FUE:</strong> <span class="evidence-badge ev-mid">Orta — Level II–III</span> — DHI FUE'ye benzer etkinlik, yoğunlukta hafif avantaj.<br><br>
+                <strong>FUT:</strong> <span class="evidence-badge ev-high">Yüksek — Level I–II</span> — FUE'den eski ve geniş literatür. Yüksek greft sayısında hâlâ seçenek.<br><br>
+                <strong>PRP kombinasyonu:</strong> <span class="evidence-badge ev-mid">Orta — Level III</span> — Greft sağkalımını artırıyor, metodoloji heterojen.<br><br>
+                <strong>CAL (yağ transferi):</strong> <span class="evidence-badge ev-mid">Orta — Level III</span> — Umut verici, büyük RKT sınırlı.
+            </p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card evet">
+                <div class="verdict-icon">✅</div>
+                <div class="verdict-label">FUE / FUT</div>
+                <div class="verdict-desc">Kanıtlı, güvenli, etkili — uygun adayda birinci tercih</div>
+            </div>
+            <div class="verdict-card evet">
+                <div class="verdict-icon">✅</div>
+                <div class="verdict-label">DHI</div>
+                <div class="verdict-desc">FUE ile karşılaştırılabilir — hassas tasarımda artı</div>
+            </div>
+            <div class="verdict-card belki">
+                <div class="verdict-icon">🤔</div>
+                <div class="verdict-label">PRP + CAL Kombo</div>
+                <div class="verdict-desc">Faydalı ek seçenek — ama tek başına saç ekiminin yerini tutmuyor</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="references article-body">
+        <h2>Kaynaklar</h2>
+        <ul class="ref-list">
+            <li>Bernstein RM, et al. (2002). Follicular transplantation: patient evaluation and surgical planning. <em>Int J Dermatol</em>, 41(12), 819–823.</li>
+            <li>Shapiro R, Unger WP. (2004). <em>Hair Transplantation</em>. 4th ed. Marcel Dekker.</li>
+            <li>Gupta AK, et al. (2020). Systematic review of evidence for follicular unit extraction in androgenetic alopecia. <em>J Am Acad Dermatol</em>, 84(3), 720–728.</li>
+            <li>Kuka G, et al. (2019). Platelet-rich plasma in hair transplantation: evidence for improved graft survival. <em>Dermatol Surg</em>, 45(3), 397–406.</li>
+            <li>Fukuoka H, Suga H. (2015). Hair loss and rejuvenation by simultaneous treatment with adipose-derived stromal cell-enriched lipoinjection and platelet-rich plasma. <em>J Cosmet Dermatol</em>, 14(2), 132–138.</li>
+            <li>Rashid RM, Rashid MR. (2012). Surgical management of androgenetic alopecia: follicular unit extraction vs. follicular unit transplantation. <em>J Drugs Dermatol</em>, 11(10), 1202–1207.</li>
+            <li>Salanitri S, et al. (2009). Androgenetic alopecia: evidence-based treatments. <em>Semin Cutan Med Surg</em>, 28(3), 177–183.</li>
+            <li>Harris JA. (2006). New methodology and instrumentation for follicular unit extraction: lower follicle transection rates and expanded patient candidacy. <em>Dermatol Surg</em>, 32(1), 56–61.</li>
+        </ul>
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p style="margin-bottom:0.5rem;"><a href="../index.html"><span style="color:#14b8a6;font-weight:700;">Deri</span>ndenbilgi</a> — Kanıta dayalı cilt ve saç sağlığı</p>
+        <p style="font-size:0.8rem;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez. Herhangi bir prosedür için dermatoloji uzmanınıza danışın.</p>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+        document.getElementById('progressBar').style.width = pct + '%';
+    });
+</script>
+
+</body>
+</html>
