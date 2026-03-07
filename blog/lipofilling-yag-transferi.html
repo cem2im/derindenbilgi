@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipofilling: Kendi Yağınızla Gençleşme | Derindenbilgi</title>
+    <meta name="description" content="Kendi yağınızla dolgu: lipofilling (otolog yağ transferi) nedir, nereye uygulanır, kalıcı mı, HA dolgudan farkı ne? Kanıta dayalı rehber.">
+    <meta name="keywords" content="lipofilling, yağ transferi, otolog yağ dolgusu, fat grafting, yüz dolgusu, lipoaspiration, kendi yağı, yağ enjeksiyonu">
+    <meta property="og:title" content="Lipofilling: Kendi Yağınızla Gençleşme">
+    <meta property="og:description" content="Lipoaspirasyonla alınan yağ başka yere enjekte edilirse ne olur? Avantajlar, dezavantajlar, kalıcılık ve kanıt düzeyi.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #0d9488; --accent-light: #14b8a6; --accent-dark: #0f766e;
+            --accent-bg: rgba(13,148,136,0.06); --accent-border: rgba(13,148,136,0.15);
+            --text: #1e293b; --text-s: #64748b; --text-t: #94a3b8;
+            --bg: #ffffff; --bg-alt: #f8fafc; --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #0d9488, #0891b2);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04); --shadow-md: 0 4px 12px rgba(0,0,0,0.06); --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+        .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gradient); z-index: 1001; width: 0%; transition: width 0.1s linear; }
+
+        .site-header { border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 100; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.35rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px; }
+        .logo .hl { color: var(--accent); }
+        .header-nav { display: flex; gap: 1.25rem; }
+        .header-nav a { font-size: 0.9rem; color: var(--text-s); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .header-nav a:hover { color: var(--accent); }
+
+        .article-hero { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 2rem; }
+        .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+        .category-badge { display: inline-block; background: linear-gradient(135deg, rgba(13,148,136,0.1), rgba(20,184,166,0.1)); color: var(--accent-dark); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .read-time { font-size: 0.85rem; color: var(--text-t); font-weight: 500; }
+        .article-hero h1 { font-size: 2.25rem; font-weight: 800; line-height: 1.2; color: #0f172a; letter-spacing: -0.75px; margin-bottom: 1rem; }
+        .article-subtitle { font-size: 1.15rem; color: var(--text-s); line-height: 1.6; }
+
+        .author-strip { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 1.5rem; }
+        .author-inner { display: flex; align-items: center; gap: 10px; padding: 10px 0 16px; border-bottom: 1px solid var(--border); }
+        .author-av { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top center; border: 2px solid var(--accent-border); flex-shrink: 0; }
+        .author-name { font-size: .85rem; font-weight: 700; color: var(--text); display: block; }
+        .author-tag { font-size: .78rem; color: var(--text-s); display: block; }
+
+        .toc { max-width: 800px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+        .toc-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem 2rem; }
+        .toc-title { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-t); margin-bottom: 0.75rem; }
+        .toc-box ol { padding-left: 1.25rem; }
+        .toc-box li { margin-bottom: 0.4rem; }
+        .toc-box a { color: #334155; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .toc-box a:hover { color: var(--accent); }
+
+        .article-body { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+        .article-body h2 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin: 2.5rem 0 1rem; letter-spacing: -0.3px; padding-top: 1rem; border-top: 1px solid #f1f5f9; }
+        .article-body h2:first-child { border-top: none; margin-top: 0; }
+        .article-body h3 { font-size: 1.2rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+        .article-body p { margin-bottom: 1.25rem; color: #334155; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; color: #334155; }
+        .article-body strong { color: #0f172a; font-weight: 600; }
+
+        .hizli-ozet { background: linear-gradient(135deg, rgba(13,148,136,0.06), rgba(20,184,166,0.06)); border: 1px solid rgba(13,148,136,0.15); border-radius: var(--radius-lg); padding: 1.75rem 2rem; margin: 0 0 2rem; }
+        .hizli-ozet-title { font-size: 1.1rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .hizli-ozet ul { list-style: none; padding: 0; margin: 0; }
+        .hizli-ozet li { padding: 0.5rem 0; border-bottom: 1px solid rgba(13,148,136,0.1); font-size: 0.95rem; color: #334155; }
+        .hizli-ozet li:last-child { border-bottom: none; }
+        .hizli-ozet li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+
+        .info-box { background: var(--accent-bg); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .info-box-title { font-size: 0.85rem; font-weight: 700; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+
+        .tek-cumle { background: #fef9c3; border-left: 4px solid #eab308; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+        .tek-cumle-label { font-size: 0.8rem; font-weight: 700; color: #854d0e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+        .tek-cumle p { color: #713f12; font-weight: 500; margin: 0; font-size: 0.95rem; }
+
+        .evidence-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.3px; }
+        .ev-high { background: #dcfce7; color: #166534; }
+        .ev-mid  { background: #fef9c3; color: #854d0e; }
+        .ev-low  { background: #fee2e2; color: #991b1b; }
+
+        .steps-box { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin: 1.5rem 0; }
+        .steps-header { background: var(--gradient); color: white; padding: 0.85rem 1.5rem; font-size: 1rem; font-weight: 700; }
+        .steps-list { padding: 0.5rem 0; }
+        .step-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); }
+        .step-item:last-child { border-bottom: none; }
+        .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: white; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .step-content strong { display: block; font-size: 0.95rem; color: #0f172a; margin-bottom: 3px; }
+        .step-content span { font-size: 0.88rem; color: var(--text-s); }
+
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.5rem 0; }
+        .compare-card { border-radius: var(--radius-md); padding: 1.25rem 1.5rem; }
+        .compare-card.pro { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .compare-card.con { background: #fff7ed; border: 1px solid #fed7aa; }
+        .compare-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .compare-card.pro .compare-title { color: #166534; }
+        .compare-card.con .compare-title { color: #9a3412; }
+        .compare-card ul { padding-left: 1.2rem; margin: 0; }
+        .compare-card li { font-size: 0.9rem; color: #334155; margin-bottom: 0.4rem; }
+        @media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } .article-hero h1 { font-size: 1.75rem; } }
+
+        .endikasyon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1.5rem 0; }
+        .endikasyon-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; text-align: center; }
+        .endikasyon-icon { font-size: 1.75rem; margin-bottom: 6px; }
+        .endikasyon-label { font-size: 0.82rem; font-weight: 600; color: var(--text); }
+        .endikasyon-sub { font-size: 0.75rem; color: var(--text-s); margin-top: 3px; }
+        @media (max-width: 500px) { .endikasyon-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .warning-box-title { font-size: 0.85rem; font-weight: 700; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+
+        .references { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border); }
+        .references h2 { font-size: 1.1rem; font-weight: 700; color: var(--text-t); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; border: none; padding: 0; }
+        .ref-list { list-style: none; padding: 0; }
+        .ref-list li { font-size: 0.85rem; color: var(--text-s); margin-bottom: 0.6rem; padding-left: 1.5rem; position: relative; line-height: 1.5; }
+        .ref-list li::before { content: "↗"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        .site-footer { background: #0f172a; color: #94a3b8; padding: 2rem 1.5rem; margin-top: 4rem; }
+        .footer-inner { max-width: 800px; margin: 0 auto; text-align: center; font-size: 0.875rem; }
+        .footer-inner a { color: var(--accent-light); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="lc"><path d="M18 10 L54 10 C86 10 102 32 102 60 C102 88 86 110 54 110 L18 110 Z"/></clipPath></defs><path d="M18 10 L54 10 C86 10 102 32 102 60 C102 88 86 110 54 110 L18 110 Z" fill="#0f172a"/><path d="M0 35 C25 24 50 44 75 35 C100 24 115 38 130 33 L130 0 L0 0 Z" fill="#ccfbf1" clip-path="url(#lc)"/><path d="M0 62 C25 50 50 70 75 62 C100 50 115 64 130 59 L130 33 C115 38 100 24 75 35 C50 44 25 24 0 35 Z" fill="#0d9488" clip-path="url(#lc)"/><path d="M0 88 C25 76 50 96 75 88 C100 76 115 90 130 85 L130 59 C115 64 100 50 75 62 C50 70 25 50 0 62 Z" fill="#0f766e" clip-path="url(#lc)"/><path d="M0 120 L130 120 L130 85 C115 90 100 76 75 88 C50 96 25 76 0 88 Z" fill="#1e3a5f" clip-path="url(#lc)"/><path d="M18 35 C30 24 48 44 66 35 C84 24 98 38 102 34" stroke="rgba(255,255,255,0.55)" stroke-width="2" fill="none" clip-path="url(#lc)"/><path d="M18 62 C30 50 48 70 66 62 C84 50 98 64 102 60" stroke="rgba(255,255,255,0.45)" stroke-width="2" fill="none" clip-path="url(#lc)"/><path d="M18 88 C30 76 48 96 66 88 C84 76 98 90 102 86" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none" clip-path="url(#lc)"/><rect x="18" y="10" width="10" height="100" fill="#0f172a"/></svg><span style="color:#0d9488">Deri</span>ndenbilgi</a>
+        <nav class="header-nav">
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#rehberler">Rehberler</a>
+            <a href="../index.html#testler">Testler</a>
+        </nav>
+    </div>
+</header>
+
+<article>
+    <div class="article-hero">
+        <div class="article-meta">
+            <span class="category-badge">Kozmetik Dermatoloji</span>
+            <span class="read-time">⏱ 7 dk okuma</span>
+        </div>
+        <h1>Kendi Yağınızla Gençleşme: Lipofilling Nedir?</h1>
+        <p class="article-subtitle">
+            Karnınızdaki ya da bacağınızdaki yağ alınıp yüzünüze, ellerinize veya başka bir bölgeye enjekte ediliyor. Kulağa tuhaf mı geliyor? Aslında dermatolojinin en akıllıca prosedürlerinden biri.
+        </p>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-inner">
+            <img src="../img/uzman-avatar.jpg" class="author-av" alt="Dermatoloji Uzmanı">
+            <div>
+                <span class="author-name">Dermatoloji Uzmanı</span>
+                <span class="author-tag">🏥 Gülhane Eğitim ve Araştırma Hastanesi · Dermatoloji & Veneroloji</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="toc">
+        <div class="toc-box">
+            <div class="toc-title">İçindekiler</div>
+            <ol>
+                <li><a href="#ne-olduğu">Lipofilling tam olarak nedir?</a></li>
+                <li><a href="#nasil-yapilir">Nasıl yapılır?</a></li>
+                <li><a href="#nereye">Nereye uygulanır?</a></li>
+                <li><a href="#avantaj-dezavantaj">Artılar ve eksiler</a></li>
+                <li><a href="#dolgudan-farki">HA dolgudan farkı ne?</a></li>
+                <li><a href="#kalicilik">Kalıcı mı?</a></li>
+                <li><a href="#kime-uygun">Kime uygun?</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="article-body">
+
+        <div class="hizli-ozet">
+            <div class="hizli-ozet-title">⚡ Hızlı Özet</div>
+            <ul>
+                <li>Kendi vücudunuzdaki yağ başka bir bölgeye transfer edilir — tamamen doğal, alerjik reaksiyon riski sıfır</li>
+                <li>Yüz, eller, dudak, göğüs ve kalçaya uygulanabilir</li>
+                <li>Enjekte edilen yağın %30–70'i kalıcı olarak tutunur; geri kalanı vücut tarafından emilir</li>
+                <li>HA dolgudan farkı: hem hacim hem doku kalitesi iyileştiriyor</li>
+                <li>Kök hücre içeriği sayesinde deri gençleşme etkisi de var</li>
+            </ul>
+        </div>
+
+        <h2 id="ne-olduğu">Lipofilling tam olarak nedir?</h2>
+
+        <p>
+            Lipofilling (yağ dolgusu, fat grafting veya otolog yağ transferi de denir), lipoaspirasyonla vücudun bir bölgesinden alınan yağ dokusunun işlenip başka bir bölgeye enjekte edilmesi işlemidir.
+        </p>
+
+        <p>
+            "Otolog" kelimesi Yunanca'dan gelir ve <strong>kendi kendinizden alınan</strong> anlamına taşır. Yani dolgu maddesi sentetik değil — tamamen sizin kendi yağınız. Bu yüzden alerjik reaksiyon ihtimali neredeyse sıfırdır.
+        </p>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Vücudunuzda istemediğiniz yerde duran yağ, istediğiniz yere taşınıyor. İki sorun, tek çözüm.</p>
+        </div>
+
+        <h2 id="nasil-yapilir">Nasıl yapılır?</h2>
+
+        <div class="steps-box">
+            <div class="steps-header">🔬 İşlem Adım Adım</div>
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <strong>Yağ Alımı (Lipoaspirasyon)</strong>
+                        <span>Karın, uyluk veya yan bölgelerden ince kanüllerle mini liposuction yapılır. Lokal anestezi altında, genellikle 30–60 dakika sürer.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <strong>İşleme (Santrifüjleme / Filtrasyon)</strong>
+                        <span>Alınan materyal santrifüjlenir veya özel filtrelerden geçirilir. Kan, sıvı yağ ve kırık hücreler ayrılır — geriye canlı yağ hücreleri (adipositler) ve değerli kök hücreler kalır.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <strong>Enjeksiyon</strong>
+                        <span>İnce mikro-kanüllerle hedef bölgeye küçük miktarlarda, çok sayıda geçişte enjekte edilir. "Coleman tekniği" olarak bilinen bu yöntemde yağ, mümkün olduğunca fazla dokuyla temas edecek şekilde yerleştirilir — bu tutunmayı artırır.</span>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <strong>İyileşme</strong>
+                        <span>Donör bölge (alınan yer) 1–2 hafta içinde iyileşir. Alıcı bölgede 2–4 hafta şişlik ve hafif morluk olabilir. Nihai sonuç 3–6 ayda ortaya çıkar.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">🧬 Kök Hücre Bonusu</div>
+            <p>Yağ dokusu, vücudun en zengin kök hücre kaynağından biri. Santrifüj sonrası elde edilen SVF (stromal vasküler fraksiyon), adipöz kaynaklı kök hücreler içeriyor. Bu hücreler sadece hacim doldurmakla kalmıyor — çevre dokuyu da uyarıp gençleştiriyor.</p>
+        </div>
+
+        <h2 id="nereye">Nereye uygulanır?</h2>
+
+        <div class="endikasyon-grid">
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">😊</div>
+                <div class="endikasyon-label">Yüz</div>
+                <div class="endikasyon-sub">Yanak, göz altı, şakak, alın hacim kaybı</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">👄</div>
+                <div class="endikasyon-label">Dudak</div>
+                <div class="endikasyon-sub">Doğal hacim, perioral çizgiler</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">🤲</div>
+                <div class="endikasyon-label">Eller</div>
+                <div class="endikasyon-sub">Yaşla gelen incelme, damar görünümü</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">🩺</div>
+                <div class="endikasyon-label">Yara İzleri</div>
+                <div class="endikasyon-sub">Akne izleri, cerrahi skarlar, radyasyon hasarı</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">🌸</div>
+                <div class="endikasyon-label">Göğüs</div>
+                <div class="endikasyon-sub">Doğal büyütme, asimetri, mastektomi sonrası</div>
+            </div>
+            <div class="endikasyon-card">
+                <div class="endikasyon-icon">✨</div>
+                <div class="endikasyon-label">Kalça</div>
+                <div class="endikasyon-sub">BBL (Brazilian Butt Lift) — yağ + şekillendirme</div>
+            </div>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Yüzdeki hacim kaybı ve el gençleştirme, lipofilling'in en kanıtlı ve en sık kullanılan endikasyonları.</p>
+        </div>
+
+        <h2 id="avantaj-dezavantaj">Artılar ve eksiler</h2>
+
+        <div class="compare-grid">
+            <div class="compare-card pro">
+                <div class="compare-title">✅ Avantajlar</div>
+                <ul>
+                    <li>%100 doğal, kendi dokusu — alerji riski yok</li>
+                    <li>Tutunun yağ kalıcı (yıllarca sürebilir)</li>
+                    <li>Hem hacim hem doku kalitesi iyileşiyor</li>
+                    <li>Donör bölgede de şekillendirme etkisi</li>
+                    <li>Kök hücre etkisi — "gençleştirici" özellik</li>
+                    <li>Yabancı madde vücutta kalmıyor</li>
+                </ul>
+            </div>
+            <div class="compare-card con">
+                <div class="compare-title">⚠️ Dezavantajlar</div>
+                <ul>
+                    <li>Emilim oranı değişken — %30–70 tutunur, geri kalan kaybolur</li>
+                    <li>Çoğunlukla 1–2 seans gerekir</li>
+                    <li>Donör bölgede de iyileşme süreci var</li>
+                    <li>HA dolguya göre daha invaziv</li>
+                    <li>Sonuç 3–6 ay içinde netleşir</li>
+                    <li>Yeterli donör yağ olması şart</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="dolgudan-farki">HA dolgudan farkı ne?</h2>
+
+        <p>
+            Piyasada en çok kullanılan dolgu maddesi hyaluronik asittir (HA). Lipofilling ile HA dolgu arasındaki temel fark şu:
+        </p>
+
+        <div class="info-box">
+            <div class="info-box-title">⚖️ Lipofilling vs HA Dolgu</div>
+            <p>
+                <strong>HA dolgu:</strong> hızlı, öngörülebilir, ayarlanabilir (enzimle eritilebilir), 6–18 ayda emilir. Dolgu + biraz nem çekici etki.<br><br>
+                <strong>Lipofilling:</strong> daha uzun süren prosedür, emilim değişken ama tutunursa kalıcı, doku gençleştirici etki de var. Kendi dokunuz olduğu için doğal his ve görünüm çok daha belirgin.
+            </p>
+        </div>
+
+        <p>
+            Hangisi daha iyi? İkisi farklı araç. Hafif hacim kaybı ve hızlı sonuç için HA dolgu tercih edilebilir. Daha ciddi hacim kaybı, yara izi tedavisi veya doku kalitesini iyileştirmek isteyenler için lipofilling daha uygun bir seçenek.
+        </p>
+
+        <h2 id="kalicilik">Kalıcı mı?</h2>
+
+        <p>
+            Bu sorunun cevabı "kısmen" — ve bu kısım tahmin ettiğinizden daha uzun sürebilir.
+        </p>
+
+        <p>
+            Enjekte edilen yağın <strong>%30–70'i</strong> ilk 3–6 ay içinde vücut tarafından emilir. Ama hayatta kalanlar damarlanır (vaskülarizasyon) ve gerçek bir doku parçası haline gelir. Bu yağ artık sonsuza kadar orada kalabilir — tıpkı vücudun başka yerlerindeki yağ gibi.
+        </p>
+
+        <div class="warning-box">
+            <div class="warning-box-title">⚠️ Dikkat Edilmesi Gereken</div>
+            <p>Kilo değişimleri lipofilling'i etkiler. Kilo alırsanız transfer edilen yağ da büyüyebilir; kilo verirseniz küçülebilir. Bu yüzden stabil bir kiloda olmak en iyi sonuç için önemli.</p>
+        </div>
+
+        <div class="tek-cumle">
+            <div class="tek-cumle-label">💊 Tek Cümleyle</div>
+            <p>Tutunursa sonsuza kadar kalır. Tutunmayan kısım 3–6 ayda sessizce gider.</p>
+        </div>
+
+        <h2 id="kime-uygun">Kime uygun?</h2>
+
+        <p>Lipofilling şu durumlarda güçlü bir seçenek:</p>
+
+        <ul>
+            <li>Yüzde belirgin <strong>hacim kaybı</strong> yaşayanlar (özellikle yanak, şakak, göz altı)</li>
+            <li>Yaşa bağlı <strong>el incelemesi</strong> ve damar görünümü şikayeti olanlar</li>
+            <li><strong>Derin akne izleri</strong> veya cerrahi skarları olanlar</li>
+            <li>Sentetik dolgudan kaçınanlar, <strong>doğal materyal</strong> isteyenler</li>
+            <li>Tek seansta hem donör bölgeyi şekillendirmek hem de eksik bölgeyi doldurmak isteyenler</li>
+        </ul>
+
+        <div class="warning-box">
+            <div class="warning-box-title">🚫 Uygun Olmayan Durumlar</div>
+            <p>Aktif enfeksiyon, kan pıhtılaşma bozukluğu, çok düşük vücut yağ oranı (donör doku yetersizliği), aktif otoimmün hastalık ve gebelik lipofilling için kontrendikasyon oluşturabilir. Mutlaka uzman değerlendirmesi şart.</p>
+        </div>
+
+        <div class="info-box">
+            <div class="info-box-title">🔬 Kanıt Düzeyi</div>
+            <p>Yüz gençleştirme ve el rejuvenasyonunda lipofilling için kanıt düzeyi <strong>orta-yüksek</strong>. Coleman tekniği 1990'lardan bu yana binlerce vakada uygulandı ve uzun vadeli güvenlik profili iyi. BBL (kalça) için kanıt düzeyi orta, güvenlik profili daha dikkatli değerlendirme gerektiriyor — özellikle derin enjeksiyon teknikleri komplikasyon riski taşıyor.</p>
+        </div>
+
+    </div>
+
+    <div class="references article-body">
+        <h2>Kaynaklar</h2>
+        <ul class="ref-list">
+            <li>Coleman SR. (1997). Facial recontouring with lipostructure. <em>Clin Plast Surg</em>, 24(2), 347–367.</li>
+            <li>Gir P, et al. (2012). Fat grafting: evidence-based review on autologous fat harvesting, processing, reinjection, and storage. <em>Plast Reconstr Surg</em>, 130(1), 249–258.</li>
+            <li>Yoshimura K, et al. (2008). Cell-assisted lipotransfer for facial lipoatrophy. <em>Dermatol Surg</em>, 34(9), 1178–1185.</li>
+            <li>Caviggioli F, et al. (2011). Autologous fat grafting in post-mastectomy reconstructed breast. <em>Plast Reconstr Surg</em>, 127(6), 2384–2394.</li>
+            <li>Gentile P, et al. (2019). Adipose-derived stromal vascular fraction cells and platelet-rich plasma. <em>J Cell Physiol</em>, 234(5), 5702–5713.</li>
+            <li>Oranges CM, et al. (2020). Fat grafting for facial rejuvenation: a systematic review. <em>Aesthet Surg J</em>, 40(4), NP226–NP238.</li>
+        </ul>
+    </div>
+</article>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p style="margin-bottom:0.5rem;"><a href="../index.html"><span style="color:#14b8a6;font-weight:700;">Deri</span>ndenbilgi</a> — Kanıta dayalı cilt ve saç sağlığı</p>
+        <p style="font-size:0.8rem;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez. Herhangi bir prosedür için dermatoloji uzmanınıza danışın.</p>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+        document.getElementById('progressBar').style.width = pct + '%';
+    });
+</script>
+
+</body>
+</html>
