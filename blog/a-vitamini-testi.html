@@ -164,10 +164,10 @@
             border-radius: var(--radius-lg);
             padding: 2.5rem;
             box-shadow: var(--shadow-md);
-            animation: fadeUp 0.5s ease;
             display: none;
         }
         .step-card.active { display: block; }
+        .step-card.animating { animation: fadeUp 0.4s ease forwards; }
 
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
@@ -1325,15 +1325,14 @@ function startQuiz() {
 }
 
 function showStep(n) {
-    document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active', 'animating'));
     const card = document.getElementById('step-' + (n === 0 ? 'intro' : n));
     if (card) {
         card.classList.add('active');
-        card.style.animation = 'none';
-        card.offsetHeight; // trigger reflow
-        card.style.animation = 'fadeUp 0.5s ease';
+        void card.offsetHeight; // trigger reflow
+        card.classList.add('animating');
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 200, behavior: 'smooth' });
 }
 
 function updateProgress() {
@@ -1388,9 +1387,8 @@ function showResult(data) {
 
     const wrap = document.getElementById('resultWrap');
     wrap.classList.add('active');
-    wrap.style.animation = 'none';
-    wrap.offsetHeight;
-    wrap.style.animation = 'scaleIn 0.6s ease';
+    void wrap.offsetHeight;
+    wrap.style.animation = 'scaleIn 0.6s ease forwards';
 
     // Populate result
     document.getElementById('resultIcon').textContent = data.icon;
