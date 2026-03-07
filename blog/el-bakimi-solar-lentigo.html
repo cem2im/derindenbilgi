@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eller Yaşı Ele Verir: Solar Lentigo ve El Bakımı Rehberi | Derindenbilgi</title>
+    <meta name="description" content="Solar lentigo nedir, yüzle aynı bakımı görmüyorsa eller neden erken yaşlanır, topikal tedaviler (tretinoin, azelaik asit, sisteamin), prosedürel seçenekler (lazer, IPL, kriyoterapi) ve önleme — görsel rehber.">
+    <meta name="keywords" content="solar lentigo, güneş lekesi, yaşlılık lekesi, el bakımı, eller, tretinoin el, sisteamin, IPL el, kriyoterapi lentigo, el yaşlanması, dermatoloji">
+    <meta property="og:title" content="Eller Yaşı Ele Verir: Solar Lentigo ve El Bakımı Rehberi">
+    <meta property="og:description" content="Güneş lekesi nedir, neden ellerde görünür ve nasıl tedavi edilir? Kanıta dayalı görsel rehber.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing:border-box;margin:0;padding:0; }
+
+        :root {
+            --accent: #FA8072;
+            --accent-light: #FCBDB7;
+            --accent-dark: #D95F52;
+
+            /* 🟤 El / solar lentigo teması — amber/toprak */
+            --amb-primary: #b45309;
+            --amb-secondary: #92400e;
+            --amb-tertiary: #d97706;
+            --amb-light: #fffbeb;
+            --amb-bg: rgba(180,83,9,0.07);
+            --amb-border: rgba(180,83,9,0.2);
+            --amb-gradient: linear-gradient(135deg, #b45309, #78350f);
+            --amb-gradient-soft: linear-gradient(135deg, #fffbeb, rgba(253,230,138,0.2));
+
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fffbeb;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior:smooth; }
+        body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:17px;-webkit-font-smoothing:antialiased; }
+
+        @keyframes fadeUp { from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)} }
+
+        /* NAV */
+        nav { position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px; }
+        .nav-inner { max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;height:60px; }
+        .nav-logo { display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:18px; }
+        .nav-logo svg { width:36px;height:36px;flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto;display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text-s);font-size:14px;padding:6px 14px;border:1px solid var(--border);border-radius:8px;transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt);color:var(--text); }
+
+        /* HERO */
+        .hero { background:linear-gradient(160deg,#fffbeb 0%,#fef3c7 40%,#fff8f0 100%);padding:60px 24px 40px;text-align:center;position:relative;overflow:hidden; }
+        .hero::before { content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(180,83,9,0.1) 0%,transparent 70%);pointer-events:none; }
+        .hero-badge { display:inline-flex;align-items:center;gap:8px;background:var(--amb-bg);border:1px solid var(--amb-border);color:var(--amb-secondary);font-size:13px;font-weight:600;padding:6px 16px;border-radius:99px;margin-bottom:20px; }
+        .hero-icon { font-size:68px;line-height:1;animation:float 4s ease-in-out infinite;display:block;margin-bottom:16px; }
+        .hero h1 { font-size:clamp(26px,5vw,40px);font-weight:800;line-height:1.2;color:var(--text);margin-bottom:14px; }
+        .hero h1 span { color:var(--amb-primary); }
+        .hero p { font-size:17px;color:var(--text-s);max-width:580px;margin:0 auto 28px; }
+        .hero-tags { display:flex;flex-wrap:wrap;justify-content:center;gap:8px; }
+        .hero-tag { background:white;border:1px solid var(--amb-border);color:var(--amb-secondary);font-size:13px;font-weight:500;padding:5px 14px;border-radius:99px; }
+
+        /* QUICK SUMMARY */
+        .quick-summary { background:var(--amb-gradient);color:white;padding:28px 24px; }
+        .quick-summary-inner { max-width:760px;margin:0 auto; }
+        .quick-summary h2 { font-size:17px;font-weight:700;margin-bottom:14px;opacity:.95; }
+        .qs-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px; }
+        .qs-item { background:rgba(255,255,255,.15);border-radius:var(--radius-sm);padding:12px 16px;font-size:14px;line-height:1.5; }
+        .qs-item strong { display:block;font-weight:700;margin-bottom:3px; }
+
+        /* CONTENT */
+        .content { max-width:800px;margin:0 auto;padding:48px 24px 80px; }
+
+        /* SECTION */
+        .section { margin-bottom:60px; }
+        .section-label { display:inline-flex;align-items:center;gap:8px;background:var(--amb-bg);color:var(--amb-secondary);font-size:12px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:99px;margin-bottom:14px;text-transform:uppercase; }
+        .section h2 { font-size:clamp(20px,3.5vw,26px);font-weight:800;color:var(--text);margin-bottom:16px;line-height:1.3; }
+        .section p { color:var(--text-s);margin-bottom:14px;line-height:1.8; }
+
+        /* LENTIGO TYPES */
+        .type-cards { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:24px 0; }
+        .type-card { border-radius:var(--radius-md);padding:18px;border:1.5px solid; }
+        .type-card h4 { font-size:15px;font-weight:800;margin-bottom:4px; }
+        .type-card .subtitle { font-size:12px;font-weight:600;margin-bottom:10px;opacity:.75; }
+        .type-card p { font-size:13px;line-height:1.6;margin:0; }
+        .tc-lentigo { background:linear-gradient(135deg,#fffbeb,#fef3c7);border-color:#fcd34d;color:#78350f; }
+        .tc-ephelis { background:linear-gradient(135deg,#fdf2f8,#fce7f3);border-color:#f9a8d4;color:#831843; }
+        .tc-seb { background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#86efac;color:#14532d; }
+        .tc-melanom { background:linear-gradient(135deg,#fef2f2,#fee2e2);border-color:#fca5a5;color:#7f1d1d; }
+        .tc-melanom h4::after { content:' ⚠️'; }
+
+        /* ABCDE */
+        .abcde-grid { display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:24px 0; }
+        @media(max-width:560px){ .abcde-grid{grid-template-columns:repeat(auto-fit,minmax(90px,1fr))} }
+        .abcde-card { background:white;border:1.5px solid var(--amb-border);border-radius:var(--radius-md);padding:14px 10px;text-align:center; }
+        .abcde-letter { font-size:28px;font-weight:800;color:var(--amb-primary);margin-bottom:4px; }
+        .abcde-word { font-size:11px;font-weight:700;color:var(--text);margin-bottom:6px; }
+        .abcde-desc { font-size:11px;color:var(--text-s);line-height:1.4; }
+
+        /* WHY HANDS */
+        .reason-list { display:flex;flex-direction:column;gap:10px;margin:24px 0; }
+        .reason-item { display:flex;gap:14px;background:white;border:1px solid var(--border);border-radius:var(--radius-md);padding:14px 16px;align-items:flex-start; }
+        .reason-icon { font-size:24px;flex-shrink:0;margin-top:2px; }
+        .reason-body h4 { font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px; }
+        .reason-body p { font-size:13px;color:var(--text-s);margin:0;line-height:1.6; }
+
+        /* TREATMENT LADDER */
+        .treatment-ladder { display:flex;flex-direction:column;gap:12px;margin:24px 0; }
+        .tl-row { display:flex;gap:14px;align-items:stretch;background:white;border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;transition:transform .2s,box-shadow .2s; }
+        .tl-row:hover { transform:translateX(4px);box-shadow:var(--shadow-md); }
+        .tl-level { min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 8px;font-size:12px;font-weight:800;color:white;flex-shrink:0; }
+        .tl-info { flex:1;padding:14px 16px; }
+        .tl-info h4 { font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px; }
+        .tl-info p { font-size:13px;color:var(--text-s);margin:0;line-height:1.5; }
+        .tl-evidence { font-size:11px;font-weight:700;padding:14px 14px;display:flex;align-items:center;color:var(--text-s);flex-shrink:0; }
+
+        /* INGREDIENT CARDS */
+        .ingr-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:24px 0; }
+        .ingr-card { background:white;border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;transition:box-shadow .2s,transform .2s; }
+        .ingr-card:hover { box-shadow:var(--shadow-md);transform:translateY(-2px); }
+        .ingr-icon { font-size:28px;margin-bottom:8px; }
+        .ingr-name { font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px; }
+        .ingr-dose { font-size:12px;color:var(--amb-primary);font-weight:600;margin-bottom:8px; }
+        .ingr-desc { font-size:13px;color:var(--text-s);line-height:1.6; }
+        .ingr-evidence { font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-top:6px; }
+        .ev-high { background:#d1fae5;color:#065f46; }
+        .ev-mod { background:#fef3c7;color:#92400e; }
+        .ev-low { background:#f3f4f6;color:#4b5563; }
+
+        /* ROUTINE */
+        .routine-box { background:var(--amb-gradient-soft);border:1.5px solid var(--amb-border);border-radius:var(--radius-lg);padding:24px;margin:24px 0; }
+        .routine-box h3 { font-size:17px;font-weight:800;color:var(--amb-secondary);margin-bottom:18px; }
+        .r-steps { display:flex;flex-direction:column;gap:12px; }
+        .r-step { display:flex;gap:12px;align-items:flex-start; }
+        .r-num { width:28px;height:28px;border-radius:50%;background:var(--amb-gradient);color:white;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px; }
+        .r-body .r-name { font-size:14px;font-weight:700;color:var(--text); }
+        .r-body .r-desc { font-size:13px;color:var(--text-s);margin-top:2px;line-height:1.5; }
+        .r-note { font-size:11px;font-weight:700;color:var(--amb-secondary);background:rgba(180,83,9,0.1);border-radius:4px;padding:2px 7px;display:inline-block;margin-top:4px; }
+
+        /* INFO / VERDICT */
+        .info-box { background:var(--amb-bg);border-left:4px solid var(--amb-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:16px 20px;margin:20px 0; }
+        .info-box .label { font-size:12px;font-weight:700;color:var(--amb-secondary);letter-spacing:.06em;margin-bottom:6px; }
+        .info-box p { font-size:14px;color:var(--text);margin:0;line-height:1.7; }
+        .verdict-box { display:flex;align-items:center;gap:12px;background:var(--bg-elevated);border:1px solid var(--amb-border);border-radius:var(--radius-md);padding:14px 18px;margin:16px 0; }
+        .verdict-icon { font-size:22px;flex-shrink:0; }
+        .verdict-text { font-size:14px;color:var(--text);font-weight:500; }
+        .verdict-text strong { color:var(--amb-secondary); }
+
+        /* CHECKLIST */
+        .checklist-card { background:var(--amb-gradient);border-radius:var(--radius-lg);padding:28px;color:white;margin:24px 0; }
+        .checklist-card h3 { font-size:18px;font-weight:800;margin-bottom:18px; }
+        .check-grid { display:grid;grid-template-columns:1fr 1fr;gap:10px; }
+        @media(max-width:500px){ .check-grid{grid-template-columns:1fr} }
+        .check-item { display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.15);border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.5; }
+        .check-item span:first-child { flex-shrink:0; }
+
+        /* REFERENCES */
+        .references { background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 28px;margin-top:60px; }
+        .references h3 { font-size:16px;font-weight:700;margin-bottom:16px; }
+        .references ol { padding-left:20px;display:flex;flex-direction:column;gap:8px; }
+        .references li { font-size:13px;color:var(--text-s);line-height:1.6; }
+
+        /* AUTHOR */
+        .author-strip { display:flex;align-items:center;gap:14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 20px;margin:40px 0 20px; }
+        .author-info .name { font-weight:700;font-size:15px;color:var(--text); }
+        .author-info .title { font-size:13px;color:var(--text-s);margin-top:2px; }
+        .author-badge { margin-left:auto;background:var(--amb-bg);border:1px solid var(--amb-border);color:var(--amb-secondary);font-size:12px;font-weight:600;padding:4px 10px;border-radius:99px;white-space:nowrap; }
+
+        /* FOOTER */
+        footer { background:#1e293b;color:#94a3b8;text-align:center;padding:32px 24px;font-size:14px;line-height:1.7; }
+        footer a { color:#FCBDB7;text-decoration:none; }
+        footer .brand { color:white;font-weight:700;margin-bottom:8px; }
+
+        /* SCROLL */
+        .fade-in { opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1;transform:translateY(0); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="90" rx="14" fill="#fdf0ea"/>
+                <defs><clipPath id="lhH"><rect x="5" y="5" width="90" height="80" rx="10"/></clipPath><clipPath id="ghH"><circle cx="54" cy="50" r="29"/></clipPath></defs>
+                <g clip-path="url(#lhH)"><rect x="5" y="52" width="90" height="38" fill="#fce4cc" opacity="0.6"/><rect x="5" y="62" width="90" height="33" fill="#FA8072" opacity="0.4"/><rect x="5" y="70" width="90" height="25" fill="#c4705a" opacity="0.35"/><rect x="5" y="78" width="90" height="17" fill="#f0d888" opacity="0.4"/></g>
+                <g clip-path="url(#ghH)"><rect x="25" y="21" width="58" height="58" fill="#fce4cc"/><rect x="25" y="46" width="58" height="33" fill="#e8947a"/><rect x="25" y="58" width="58" height="21" fill="#c4705a"/><rect x="25" y="69" width="58" height="10" fill="#f0d888"/></g>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <rect x="5" y="5" width="90" height="80" rx="10" fill="none" stroke="#D95F52" stroke-width="1" opacity="0.5"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">🟤 Görsel Rehber</div>
+    <span class="hero-icon">🤲</span>
+    <h1>Eller Yaşı<br><span>Ele Verir</span></h1>
+    <p>Solar lentigo nedir, neden ellerde görünür, nasıl tedavi edilir ve nasıl önlenir — kanıta dayalı el bakımı rehberi.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">Solar Lentigo</span>
+        <span class="hero-tag">Güneş Lekesi</span>
+        <span class="hero-tag">El Yaşlanması</span>
+        <span class="hero-tag">Topikal Tedavi</span>
+        <span class="hero-tag">Lazer / IPL</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Solar lentigo nedir?</strong>UV hasarıyla oluşan düz, kahverengi pigment lekeleri. Melanoma benzemez — ama her yeni veya değişen lekeyi dermatoloğa göster.</div>
+            <div class="qs-item"><strong>Neden ellerde?</strong>El sırtı cildi ince, yağ bezi az, her gün UV maruziyeti var ve en az korunan bölge. Yüz yaşlanırken eller çoğunlukla unutuluyor.</div>
+            <div class="qs-item"><strong>En iyi topikal</strong>Tretinoin %0,05-0,1 + geniş spektrum SPF kombinasyonu. Sonuçlar 3-6 ayda görülür. Günlük sabır şart.</div>
+            <div class="qs-item"><strong>En hızlı prosedür</strong>Kriyoterapi veya Q-switch/picosecond lazer tek seansta belirgin iyileşme sağlar — topikal tedaviye göre çok daha hızlı. Dermatoloğa git.</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="section fade-in">
+        <div class="section-label">01 — Solar Lentigo</div>
+        <h2>Solar Lentigo Nedir?</h2>
+        <p><strong>Solar lentigo</strong> (çoğul: lentigines), kronik UV maruziyetinin tetiklediği, melanositlerin lokal artışından kaynaklanan <strong>düz, iyi sınırlı, kahverengi-sarımsı pigment lekeleri</strong>dir. Halk arasında "yaşlılık lekesi" veya "güneş lekesi" denir — ikisi de doğru.</p>
+        <p>Benign bir değişikliktir. Ama benzer görünen ve ciddiye alınması gereken lezyonlar da vardır. Farkı bilmek önemli.</p>
+
+        <div class="type-cards">
+            <div class="type-card tc-lentigo">
+                <h4>Solar Lentigo</h4>
+                <div class="subtitle">Yaşlılık / güneş lekesi</div>
+                <p>Düz, uniform kahverengi, iyi sınırlı. Benign. UV maruziyetiyle oluşur. El sırtı, yüz, dekolte sık bölgeler.</p>
+            </div>
+            <div class="type-card tc-ephelis">
+                <h4>Efeli (Çil)</h4>
+                <div class="subtitle">Freckle</div>
+                <p>Genetik. Çocuklukta başlar. Yazın belirginleşir, kışın solar. Açık tenli, kızıl saçlılarda daha sık.</p>
+            </div>
+            <div class="type-card tc-seb">
+                <h4>Seborrheik Keratoz</h4>
+                <div class="subtitle">"Yapışık" görünüm</div>
+                <p>Yükseltili, pürüzlü, "yapışkan" yüzey. Benign. Tabanı kaldırılabilir gibi görünür. Yaşla birlikte artar.</p>
+            </div>
+            <div class="type-card tc-melanom">
+                <h4>Lentigo Maligna</h4>
+                <div class="subtitle">Melanom in situ</div>
+                <p>Düzensiz sınır, renk heterojenitesi (siyah, kahverengi, pembe alanlar), büyüme veya değişim. Dermatoloğa acil.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">⚠️ ABCDE Kuralı — Ne Zaman Endişelenmelisin?</div>
+            <p>Mevcut bir lekenin değişmesi veya yeni çıkan her leke ABCDE kriteri ile değerlendirilmeli. Aşağıdaki kartlardan herhangi biri pozitifse dermatoloğa git.</p>
+        </div>
+
+        <div class="abcde-grid">
+            <div class="abcde-card">
+                <div class="abcde-letter">A</div>
+                <div class="abcde-word">Asimetri</div>
+                <div class="abcde-desc">İki yarısı birbirinin aynası değil</div>
+            </div>
+            <div class="abcde-card">
+                <div class="abcde-letter">B</div>
+                <div class="abcde-word">Border</div>
+                <div class="abcde-desc">Sınırlar düzensiz, çentikli veya belirsiz</div>
+            </div>
+            <div class="abcde-card">
+                <div class="abcde-letter">C</div>
+                <div class="abcde-word">Color</div>
+                <div class="abcde-desc">Tek renk değil; siyah, pembe, beyaz alanlar</div>
+            </div>
+            <div class="abcde-card">
+                <div class="abcde-letter">D</div>
+                <div class="abcde-word">Diameter</div>
+                <div class="abcde-desc">6 mm'den büyük (kurşun kalem silgisi)</div>
+            </div>
+            <div class="abcde-card">
+                <div class="abcde-letter">E</div>
+                <div class="abcde-word">Evolution</div>
+                <div class="abcde-desc">Büyüme, renk değişimi, kanama, kabuklanma</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">02 — El Sırtı Neden?</div>
+        <h2>Eller Neden Bu Kadar Erken Yaşlanır?</h2>
+        <p>El sırtı, vücudun en çok ihmal edilen ama en fazla UV maruziyetine maruz kalan bölgelerinden biridir. Birkaç biyolojik nedeni var:</p>
+
+        <div class="reason-list">
+            <div class="reason-item">
+                <div class="reason-icon">📏</div>
+                <div class="reason-body">
+                    <h4>İnce, yağsız cilt</h4>
+                    <p>El sırtının dermal kalınlığı yüz derisinden belirgin şekilde daha azdır. Yağ bezleri az, sebase tabaka zayıf — bu hem UV hasarını hem de nemin buharlaşmasını hızlandırır.</p>
+                </div>
+            </div>
+            <div class="reason-item">
+                <div class="reason-icon">☀️</div>
+                <div class="reason-body">
+                    <h4>Kronik, fark edilmeyen UV maruziyeti</h4>
+                    <p>Araba kullanırken, masa başında çalışırken, açık havada — eller sürekli güneşe maruz kalır. Oysa yüze güneş kremi sürülürken eller genellikle unutulur.</p>
+                </div>
+            </div>
+            <div class="reason-item">
+                <div class="reason-icon">🧴</div>
+                <div class="reason-body">
+                    <h4>Deterjan ve kimyasal hasar</h4>
+                    <p>Günlük bulaşık, temizlik ve el yıkama cilt bariyerini sürekli aşındırır. Lipid tabakası bozulan cilt UV hasarına daha açık hale gelir.</p>
+                </div>
+            </div>
+            <div class="reason-item">
+                <div class="reason-icon">📉</div>
+                <div class="reason-body">
+                    <h4>Dermal volüm ve kolajen kaybı</h4>
+                    <p>Yaşla birlikte el sırtında yağ dokusu ve kolajen azalır — tendonlar, damarlar ve eklem çıkıntıları belirginleşir. Bu süreç solar lentigoyla eş zamanlı gerçekleşir ve "yaşlı el" görünümünü oluşturur.</p>
+                </div>
+            </div>
+            <div class="reason-item">
+                <div class="reason-icon">🛡️</div>
+                <div class="reason-body">
+                    <h4>Koruma ihmal ediliyor</h4>
+                    <p>Cilt bakım rutinlerinde yüz öncelikli. Eller nemlendirici ve SPF almaz — ya da güneş kremi ellere sürülse bile el yıkandıkça çok daha hızlı uzaklaşır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">03 — Topikal Tedaviler</div>
+        <h2>Solar Lentigo İçin Topikal Seçenekler</h2>
+        <p>Sabır isteyen ama güvenli seçenekler. Sonuçlar <strong>3-6 ay</strong> düzenli kullanım sonrası görülür. SPF olmadan hiçbiri tam etkisini göstermez.</p>
+
+        <div class="ingr-grid">
+            <div class="ingr-card">
+                <div class="ingr-icon">🔬</div>
+                <div class="ingr-name">Tretinoin</div>
+                <div class="ingr-dose">%0,025 – 0,1 · Reçeteli</div>
+                <div class="ingr-desc">Solar lentigo için en güçlü kanıta sahip topikal ajan. Melanozom dağılımını bozar, hücre yenilenmesini hızlandırır. El sırtı için %0,05 başlangıç konsantrasyonu önerilir — yüzden daha hassas bölge.</div>
+                <span class="ingr-evidence ev-high">★★★★★ Güçlü kanıt</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">⚗️</div>
+                <div class="ingr-name">Azelaik Asit</div>
+                <div class="ingr-dose">%10 (OTC) / %20 (Rx)</div>
+                <div class="ingr-desc">Melanin sentezinde tirozinaz enzimini inhibe eder. Tretinoin ile kombine çok etkili. Hamilelikte güvenli kategoride olması nedeniyle geniş kullanım yelpazesi var.</div>
+                <span class="ingr-evidence ev-high">★★★★ Güçlü kanıt</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">💜</div>
+                <div class="ingr-name">Sisteamin %5</div>
+                <div class="ingr-dose">%5 (OTC, ör. Cyspera)</div>
+                <div class="ingr-desc">Çoklu melanogenez yolu inhibisyonu. Hidrokinona kıyasla daha az tahriş, hamilelikte güvenli profil. Solar lentigo dahil hiperpigmentasyon için etkinliği kanıtlanmış.</div>
+                <span class="ingr-evidence ev-high">★★★★ İyi kanıt</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🌿</div>
+                <div class="ingr-name">Kojik Asit</div>
+                <div class="ingr-dose">%1 – 4</div>
+                <div class="ingr-desc">Mantar fermantasyonundan elde edilen doğal tirozinaz inhibitörü. Kontakt dermatit riski var — hassas ciltlerde dikkatli kullanılmalı. Genellikle kombinasyon ürünlerinde bulunur.</div>
+                <span class="ingr-evidence ev-mod">★★★ Orta kanıt</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🧪</div>
+                <div class="ingr-name">Traneksamik Asit</div>
+                <div class="ingr-dose">%2 – 5 (topikal)</div>
+                <div class="ingr-desc">Prostaglandin yolunu bloke ederek melanosit aktivasyonunu azaltır. Solar lentigo yerine melazma için daha güçlü kanıt mevcut. Yan etki profili minimal.</div>
+                <span class="ingr-evidence ev-mod">★★★ Orta kanıt</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🌱</div>
+                <div class="ingr-name">Arbutin / Alfa-Arbutin</div>
+                <div class="ingr-dose">%1 – 2</div>
+                <div class="ingr-desc">Hidrokinonun öncüsü, çok daha güvenli profil. Yavaş etki ama iyi tolere edilir. Azelaik asit ile kombinasyonu popüler. Renk açmaktan çok dengeleme etkisi.</div>
+                <span class="ingr-evidence ev-mod">★★★ Orta kanıt</span>
+            </div>
+        </div>
+
+        <div class="verdict-box">
+            <div class="verdict-icon">💡</div>
+            <div class="verdict-text"><strong>En etkili kombinasyon:</strong> Tretinoin (gece) + azelaik asit veya sisteamin (sabah) + geniş spektrum SPF 50+ (her sabah, tekrarlayarak). 3 ayda belirgin fark görülür.</div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">04 — Prosedürel Tedaviler</div>
+        <h2>Hızlı Sonuç İçin Dermatolojik İşlemler</h2>
+        <p>Topikal tedaviler aylarca sabır ister. Prosedürel seçenekler çok daha hızlı — ama dermatoloji doktoru tarafından uygulanmalı.</p>
+
+        <div class="treatment-ladder">
+            <div class="tl-row">
+                <div class="tl-level" style="background:#d97706">Krio&shy;terapi</div>
+                <div class="tl-info">
+                    <h4>Sıvı Azot ile Dondurma</h4>
+                    <p>Solar lentigo için ilk basamak prosedürel seçenek. Saniyeler içinde lezyon üzerine uygulanır. Tek veya birkaç seansta belirgin açılma. Pigment değişimi veya skar riski var — uygulamayı dermatoloğa bırak.</p>
+                </div>
+                <div class="tl-evidence">★★★★</div>
+            </div>
+            <div class="tl-row">
+                <div class="tl-level" style="background:#b45309">IPL<br><small style="font-size:10px">(Intense Pulsed Light)</small></div>
+                <div class="tl-info">
+                    <h4>Yoğun Atımlı Işık Tedavisi</h4>
+                    <p>Melanin seçici olarak hedef alır. Birden fazla lentigoyu aynı seansta tedavi etmek için idealdir. Ortalama 2-4 seans. Koyu tenli hastalarda dikkatli kullanım (PIH riski).</p>
+                </div>
+                <div class="tl-evidence">★★★★</div>
+            </div>
+            <div class="tl-row">
+                <div class="tl-level" style="background:#92400e">Q-Switch / Picosecond Lazer</div>
+                <div class="tl-info">
+                    <h4>Melanin Parçalayıcı Lazerler</h4>
+                    <p>Nd:YAG (1064 nm / 532 nm) ve Alexandrite lazerleri melanin içeren hücreleri seçici olarak parçalar. Picosecond platformlar daha kısa pulse süresiyle daha az çevre doku hasarı. Solar lentigo için çok yüksek etkinlik.</p>
+                </div>
+                <div class="tl-evidence">★★★★★</div>
+            </div>
+            <div class="tl-row">
+                <div class="tl-level" style="background:#78350f">Kimyasal Peeling</div>
+                <div class="tl-info">
+                    <h4>Glikolik Asit / TCA Peeling</h4>
+                    <p>Yüzeysel-orta derinlikte peeling solar lentigo rengini açar. El sırtı için dikkatli uygulama gerekir — iyileşme süreci yüze göre farklı seyreder. Lazer seçeneği mevcut olduğunda genellikle ikinci tercih.</p>
+                </div>
+                <div class="tl-evidence">★★★</div>
+            </div>
+            <div class="tl-row">
+                <div class="tl-level" style="background:#6b7280">Dermal Dolgu<br><small style="font-size:10px">(Volüm)</small></div>
+                <div class="tl-info">
+                    <h4>El Sırtına Hyaluronik Asit Dolgu</h4>
+                    <p>Leke tedavisi değil — dermal volüm kaybını ve tendon/damar belirginleşmesini düzeltir. HA dolgu ile doldurulan el sırtı belirgin biçimde daha genç görünür. Pigmentasyon ayrıca tedavi edilmeli.</p>
+                </div>
+                <div class="tl-evidence">★★★</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Solar lentigo için en hızlı sonuç kriyoterapi veya lazerden gelir. Topikal tedaviler sonrası bakımı destekler ve nüks riskini azaltır — ama başlangıç tedavinin yerini tutmaz.</p>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">05 — El Bakımı Rutini</div>
+        <h2>Günlük El Bakımı: Adım Adım</h2>
+        <p>Yüze uygulanan bakımın benzerini ellere de uygulamak gerekiyor. Fark şu: eller çok daha sık yıkanır ve yeniden uygulama kritik.</p>
+
+        <div class="routine-box">
+            <h3>🌅 Sabah Rutini</h3>
+            <div class="r-steps">
+                <div class="r-step">
+                    <div class="r-num">1</div>
+                    <div class="r-body">
+                        <div class="r-name">Nemlendirici</div>
+                        <div class="r-desc">Hyaluronik asit + ceramid içerikli el kremi. Bariyer onarımı için pH dengeli formüller tercih edilmeli.</div>
+                    </div>
+                </div>
+                <div class="r-step">
+                    <div class="r-num">2</div>
+                    <div class="r-body">
+                        <div class="r-name">SPF 30-50+ — El Sırtına da Sür</div>
+                        <div class="r-desc">Yüze güneş kremi sürerken elleri de unutma. Hafif, hızlı emilen formüller el kullanımına uygun.</div>
+                        <span class="r-note">Her el yıkama sonrası güneş kremi yenilenmeli</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="routine-box" style="margin-top:14px">
+            <h3>🌙 Akşam Rutini</h3>
+            <div class="r-steps">
+                <div class="r-step">
+                    <div class="r-num">1</div>
+                    <div class="r-body">
+                        <div class="r-name">Tretinoin veya Sisteamin</div>
+                        <div class="r-desc">El sırtına nokta nokta uygula. Tretinoin başlangıçta haftada 2-3 gece, ardından her gece. Sisteamin günlük kullanıma uygun.</div>
+                    </div>
+                </div>
+                <div class="r-step">
+                    <div class="r-num">2</div>
+                    <div class="r-body">
+                        <div class="r-name">Onarıcı El Kremi (bol miktarda)</div>
+                        <div class="r-desc">Gece bol nemlendirici uygula — gerekirse ince pamuk eldiven ile gece boyunca tut. Bariyer onarımını hızlandırır.</div>
+                        <span class="r-note">Pamuklu eldiven ile "uyku maskesi" tekniği</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="verdict-box">
+            <div class="verdict-icon">⚠️</div>
+            <div class="verdict-text">El yıkamak güneş kremini ve topikal tedaviyi kaldırır. <strong>Dışarıda uzun süre kalınacaksa güneş kremi 2 saatte bir, her el yıkama sonrası</strong> mutlaka yenilenmeli.</div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">06 — Önleme</div>
+        <h2>Tedavi Etmekten Çok Önlemek</h2>
+        <p>Solar lentigo bir kez oluştuktan sonra tedavisi uzun ve maliyetlidir. Koruma her zaman daha kolay ve daha ucuzdur.</p>
+
+        <div class="checklist-card">
+            <h3>🛡️ Elleri Koruma Kontrol Listesi</h3>
+            <div class="check-grid">
+                <div class="check-item"><span>☀️</span><span>Her sabah el sırtına SPF 50+ — yüz ile birlikte</span></div>
+                <div class="check-item"><span>🚗</span><span>Araba kullanırken UV koruyucu eldiven veya SPF yenileme</span></div>
+                <div class="check-item"><span>🧴</span><span>El yıkama sonrası nemlendirici — bariyer koruması</span></div>
+                <div class="check-item"><span>🧤</span><span>Bahçe işleri ve uzun dış mekan için UV koruyucu eldiven</span></div>
+                <div class="check-item"><span>🌊</span><span>Havuz / denizde su geçirmez SPF + her çıkışta yenileme</span></div>
+                <div class="check-item"><span>🌑</span><span>Gece tretinoin kullanımı lentigo oluşumunu önler</span></div>
+                <div class="check-item"><span>🏥</span><span>Yılda bir dermatoloji kontrolü — ABCDE takibi</span></div>
+                <div class="check-item"><span>💧</span><span>Sert deterjanlardan kaçın, silikon bazlı bariyer krem kullan</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🟤 Kanıta Dayalı</span>
+    </div>
+
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Ortonne JP, et al. <em>A global survey of the role of ultraviolet radiation and hormonal influences in the development of melasma and solar lentigines.</em> J Eur Acad Dermatol Venereol. 2009.</li>
+            <li>Lazo ND, et al. <em>Solar lentigines are characterized by an accumulation of epithelioid dendrocytes.</em> J Invest Dermatol. 1996.</li>
+            <li>Kang S, et al. <em>Topical tretinoin (retinoic acid) improves early stretch marks.</em> Arch Dermatol. 1996. [tretinoin on photodamage/lentigines]</li>
+            <li>Passeron T, Picardo M. <em>Melasma, a photoaging disorder.</em> Pigment Cell Melanoma Res. 2018.</li>
+            <li>Farshi S, et al. <em>Could azelaic acid be considered as a new therapeutic agent for solar lentigo?</em> J Cosmet Dermatol. 2019.</li>
+            <li>Mansouri P, et al. <em>Efficacy of cystamine hydrochloride vs hydroquinone on facial melasma.</em> J Cosmet Dermatol. 2015.</li>
+            <li>Haddad AL, et al. <em>A clinical, prospective, randomized, double-blind trial comparing skin whitening complex with hydroquinone.</em> Dermatol Surg. 2003. [kojik asit]</li>
+            <li>Negishi K, et al. <em>Effect of intense pulsed light on solar lentigines.</em> J Dermatol Sci. 2004.</li>
+            <li>Watanabe S, et al. <em>Q-switched Nd:YAG laser therapy for solar lentigines on the face and dorsal hands.</em> J Dermatol. 2003.</li>
+            <li>Goldman MP, et al. <em>Treatment of leg veins and lentigines with the picosecond Alexandrite laser.</em> J Am Acad Dermatol. 2018.</li>
+        </ol>
+    </div>
+</div>
+
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="../index.html#gorsel-rehberler">Görsel Rehberler</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:.6">Bu içerik tıbbi tavsiye değildir. Cilt sağlığınız için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}}),{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

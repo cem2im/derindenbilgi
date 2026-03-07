@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erkekler İçin Cilt Bakımı Rehberi — Görsel Rehber | Derindenbilgi</title>
+    <meta name="description" content="Erkek cildi neden farklı, hangi 4 ürün yeterli, tıraş bakımı, aktif maddeler ve en yaygın hatalar — sade, bilimsel, uygulanabilir görsel rehber.">
+    <meta name="keywords" content="erkek cilt bakımı, erkekler için cilt bakımı, tıraş bakımı, erkek nemlendirici, erkek güneş kremi, retinol erkek, niasinamid, androjen, sebum, dermatoloji">
+    <meta property="og:title" content="Erkekler İçin Cilt Bakımı Rehberi — Görsel Rehber">
+    <meta property="og:description" content="4 temel ürün, tıraş bakımı, aktif maddeler ve yaygın hatalar — erkek cildi için kanıta dayalı rehber.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #FA8072;
+            --accent-light: #FCBDB7;
+            --accent-dark: #D95F52;
+
+            /* 🔵 Erkek teması — derin mavi/lacivert */
+            --blue-primary: #1d4ed8;
+            --blue-secondary: #1e40af;
+            --blue-tertiary: #3b82f6;
+            --blue-light: #eff6ff;
+            --blue-bg: rgba(29,78,216,0.07);
+            --blue-border: rgba(29,78,216,0.18);
+            --blue-gradient: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+            --blue-gradient-soft: linear-gradient(135deg, #eff6ff, rgba(147,197,253,0.2));
+
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #eff6ff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg); color: var(--text);
+            line-height: 1.8; font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        /* NAV */
+        nav { position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px; }
+        .nav-inner { max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;height:60px; }
+        .nav-logo { display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-weight:700;font-size:18px; }
+        .nav-logo svg { width:36px;height:36px;flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto;display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text-s);font-size:14px;padding:6px 14px;border:1px solid var(--border);border-radius:8px;transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt);color:var(--text); }
+
+        /* HERO */
+        .hero { background:linear-gradient(160deg,#eff6ff 0%,#e0f2fe 40%,#f8fafc 100%);padding:60px 24px 40px;text-align:center;position:relative;overflow:hidden; }
+        .hero::before { content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(29,78,216,0.1) 0%,transparent 70%);pointer-events:none; }
+        .hero-badge { display:inline-flex;align-items:center;gap:8px;background:var(--blue-bg);border:1px solid var(--blue-border);color:var(--blue-secondary);font-size:13px;font-weight:600;padding:6px 16px;border-radius:99px;margin-bottom:20px; }
+        .hero-icon { font-size:68px;line-height:1;animation:float 4s ease-in-out infinite;display:block;margin-bottom:16px; }
+        .hero h1 { font-size:clamp(26px,5vw,40px);font-weight:800;line-height:1.2;color:var(--text);margin-bottom:14px; }
+        .hero h1 span { color:var(--blue-primary); }
+        .hero p { font-size:17px;color:var(--text-s);max-width:580px;margin:0 auto 28px; }
+        .hero-tags { display:flex;flex-wrap:wrap;justify-content:center;gap:8px; }
+        .hero-tag { background:white;border:1px solid var(--blue-border);color:var(--blue-secondary);font-size:13px;font-weight:500;padding:5px 14px;border-radius:99px; }
+
+        /* QUICK SUMMARY */
+        .quick-summary { background:var(--blue-gradient);color:white;padding:28px 24px; }
+        .quick-summary-inner { max-width:760px;margin:0 auto; }
+        .quick-summary h2 { font-size:17px;font-weight:700;margin-bottom:14px;opacity:.95; }
+        .qs-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px; }
+        .qs-item { background:rgba(255,255,255,.15);border-radius:var(--radius-sm);padding:12px 16px;font-size:14px;line-height:1.5; }
+        .qs-item strong { display:block;font-weight:700;margin-bottom:3px; }
+
+        /* CONTENT */
+        .content { max-width:800px;margin:0 auto;padding:48px 24px 80px; }
+
+        /* SECTION */
+        .section { margin-bottom:60px; }
+        .section-label { display:inline-flex;align-items:center;gap:8px;background:var(--blue-bg);color:var(--blue-secondary);font-size:12px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:99px;margin-bottom:14px;text-transform:uppercase; }
+        .section h2 { font-size:clamp(20px,3.5vw,26px);font-weight:800;color:var(--text);margin-bottom:16px;line-height:1.3; }
+        .section p { color:var(--text-s);margin-bottom:14px;line-height:1.8; }
+
+        /* DIFFERENCE GRID */
+        .diff-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0; }
+        @media(max-width:560px){ .diff-grid{grid-template-columns:1fr} }
+        .diff-card { border-radius:var(--radius-md);padding:20px;border:1.5px solid; }
+        .diff-card.erkek { background:var(--blue-gradient-soft);border-color:var(--blue-border); }
+        .diff-card.kadin { background:linear-gradient(135deg,#fdf2f8,rgba(244,114,182,0.1));border-color:rgba(244,114,182,0.25); }
+        .diff-card h3 { font-size:16px;font-weight:800;margin-bottom:12px; }
+        .diff-card.erkek h3 { color:var(--blue-secondary); }
+        .diff-card.kadin h3 { color:#be185d; }
+        .diff-list { list-style:none;display:flex;flex-direction:column;gap:7px; }
+        .diff-list li { font-size:13px;color:var(--text-s);padding-left:18px;position:relative;line-height:1.5; }
+        .diff-list li::before { content:'•';position:absolute;left:0;font-weight:700; }
+        .diff-card.erkek .diff-list li::before { color:var(--blue-primary); }
+        .diff-card.kadin .diff-list li::before { color:#ec4899; }
+
+        /* 4 TEMEL ÜRÜN */
+        .core-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:24px 0; }
+        .core-card { background:white;border:1.5px solid var(--blue-border);border-radius:var(--radius-lg);padding:20px;text-align:center;transition:box-shadow .2s,transform .2s; }
+        .core-card:hover { box-shadow:var(--shadow-md);transform:translateY(-2px); }
+        .core-num { width:32px;height:32px;border-radius:50%;background:var(--blue-gradient);color:white;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px; }
+        .core-icon { font-size:30px;margin-bottom:8px; }
+        .core-name { font-size:14px;font-weight:800;color:var(--text);margin-bottom:4px; }
+        .core-pick { font-size:12px;color:var(--blue-secondary);font-weight:600;margin-bottom:6px; }
+        .core-desc { font-size:12px;color:var(--text-s);line-height:1.5; }
+
+        /* TIRAŞ */
+        .shave-flow { display:flex;flex-direction:column;gap:12px;margin:24px 0; }
+        .shave-step { display:flex;gap:16px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;transition:box-shadow .2s; }
+        .shave-step:hover { box-shadow:var(--shadow-md); }
+        .shave-num { width:36px;height:36px;border-radius:50%;background:var(--blue-gradient);color:white;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+        .shave-body h4 { font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px; }
+        .shave-body p { font-size:13px;color:var(--text-s);margin:0;line-height:1.6; }
+        .shave-tip { font-size:11px;font-weight:700;color:var(--blue-secondary);background:var(--blue-bg);border-radius:4px;padding:2px 7px;display:inline-block;margin-top:5px; }
+
+        /* AKTİF MADDELER */
+        .ingr-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0; }
+        .ingr-card { background:white;border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;transition:box-shadow .2s,transform .2s;position:relative; }
+        .ingr-card:hover { box-shadow:var(--shadow-md);transform:translateY(-2px); }
+        .ingr-icon { font-size:28px;margin-bottom:8px; }
+        .ingr-name { font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px; }
+        .ingr-why { font-size:12px;color:var(--blue-secondary);font-weight:600;margin-bottom:8px; }
+        .ingr-desc { font-size:13px;color:var(--text-s);line-height:1.6; }
+        .ingr-tip { font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;display:inline-block;margin-top:6px; }
+        .tip-blue { background:#dbeafe;color:#1e40af; }
+        .tip-green { background:#d1fae5;color:#065f46; }
+        .tip-orange { background:#ffedd5;color:#9a3412; }
+
+        /* RUTIN */
+        .routine-grid { display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0; }
+        @media(max-width:580px){ .routine-grid{grid-template-columns:1fr} }
+        .routine-col { border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border); }
+        .routine-header { padding:16px 20px;font-weight:800;font-size:16px;display:flex;align-items:center;gap:10px; }
+        .routine-header.morning { background:linear-gradient(135deg,#fef9c3,#fef3c7);color:#78350f; }
+        .routine-header.evening { background:var(--blue-gradient);color:white; }
+        .routine-steps { padding:16px 20px;display:flex;flex-direction:column;gap:12px; }
+        .r-step { display:flex;gap:12px;align-items:flex-start; }
+        .r-num { width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-top:1px; }
+        .r-num.morning { background:#fef3c7;color:#92400e; }
+        .r-num.evening { background:rgba(255,255,255,.2);color:white; }
+        .r-text .step-name { font-size:14px;font-weight:700;color:var(--text); }
+        .r-text.ev .step-name { color:#f8fafc; }
+        .r-text .step-prod { font-size:13px;color:var(--text-s);line-height:1.5;margin-top:2px; }
+        .r-text.ev .step-prod { color:rgba(248,250,252,.75); }
+        .r-note { font-size:12px;color:var(--blue-secondary);font-weight:600;background:var(--blue-bg);border-radius:4px;padding:2px 7px;display:inline-block;margin-top:4px; }
+        .r-note.ev { background:rgba(255,255,255,.15);color:white; }
+
+        /* HATALAR */
+        .mistake-list { display:flex;flex-direction:column;gap:12px;margin:24px 0; }
+        .mistake-item { display:flex;gap:14px;background:white;border:1px solid var(--border);border-radius:var(--radius-md);padding:16px;align-items:flex-start; }
+        .mistake-item .m-icon { font-size:24px;flex-shrink:0; }
+        .mistake-body h4 { font-size:14px;font-weight:700;color:#7f1d1d;margin-bottom:4px; }
+        .mistake-body p { font-size:13px;color:var(--text-s);margin:0;line-height:1.6; }
+
+        /* MYTH */
+        .myth-list { display:flex;flex-direction:column;gap:14px;margin:24px 0; }
+        .myth-item { background:white;border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden; }
+        .myth-header { display:flex;gap:12px;align-items:flex-start;padding:14px 18px;background:#eff6ff;border-bottom:1px solid #bfdbfe; }
+        .myth-icon { font-size:20px;flex-shrink:0; }
+        .myth-claim { font-weight:700;font-size:15px;color:#1e3a8a; }
+        .myth-truth { padding:14px 18px;font-size:14px;color:var(--text-s);line-height:1.7; }
+        .myth-truth strong { color:var(--text); }
+
+        /* CHECKLIST */
+        .checklist-card { background:var(--blue-gradient);border-radius:var(--radius-lg);padding:28px;color:white;margin:24px 0; }
+        .checklist-card h3 { font-size:18px;font-weight:800;margin-bottom:18px; }
+        .check-grid { display:grid;grid-template-columns:1fr 1fr;gap:10px; }
+        @media(max-width:500px){ .check-grid{grid-template-columns:1fr} }
+        .check-item { display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.15);border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.5; }
+        .check-item span:first-child { flex-shrink:0; }
+
+        /* INFO / VERDICT */
+        .info-box { background:var(--blue-bg);border-left:4px solid var(--blue-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:16px 20px;margin:20px 0; }
+        .info-box .label { font-size:12px;font-weight:700;color:var(--blue-secondary);letter-spacing:.06em;margin-bottom:6px; }
+        .info-box p { font-size:14px;color:var(--text);margin:0;line-height:1.7; }
+        .verdict-box { display:flex;align-items:center;gap:12px;background:var(--bg-elevated);border:1px solid var(--blue-border);border-radius:var(--radius-md);padding:14px 18px;margin:16px 0; }
+        .verdict-icon { font-size:22px;flex-shrink:0; }
+        .verdict-text { font-size:14px;color:var(--text);font-weight:500; }
+        .verdict-text strong { color:var(--blue-secondary); }
+
+        /* REFERENCES */
+        .references { background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 28px;margin-top:60px; }
+        .references h3 { font-size:16px;font-weight:700;margin-bottom:16px; }
+        .references ol { padding-left:20px;display:flex;flex-direction:column;gap:8px; }
+        .references li { font-size:13px;color:var(--text-s);line-height:1.6; }
+
+        /* AUTHOR */
+        .author-strip { display:flex;align-items:center;gap:14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 20px;margin:40px 0 20px; }
+        .author-info .name { font-weight:700;font-size:15px;color:var(--text); }
+        .author-info .title { font-size:13px;color:var(--text-s);margin-top:2px; }
+        .author-badge { margin-left:auto;background:var(--blue-bg);border:1px solid var(--blue-border);color:var(--blue-secondary);font-size:12px;font-weight:600;padding:4px 10px;border-radius:99px;white-space:nowrap; }
+
+        /* FOOTER */
+        footer { background:#1e293b;color:#94a3b8;text-align:center;padding:32px 24px;font-size:14px;line-height:1.7; }
+        footer a { color:#FCBDB7;text-decoration:none; }
+        footer .brand { color:white;font-weight:700;margin-bottom:8px; }
+
+        /* SCROLL */
+        .fade-in { opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease; }
+        .fade-in.visible { opacity:1;transform:translateY(0); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="90" rx="14" fill="#fdf0ea"/>
+                <defs><clipPath id="lhE"><rect x="5" y="5" width="90" height="80" rx="10"/></clipPath><clipPath id="ghE"><circle cx="54" cy="50" r="29"/></clipPath></defs>
+                <g clip-path="url(#lhE)"><rect x="5" y="52" width="90" height="38" fill="#fce4cc" opacity="0.6"/><rect x="5" y="62" width="90" height="33" fill="#FA8072" opacity="0.4"/><rect x="5" y="70" width="90" height="25" fill="#c4705a" opacity="0.35"/><rect x="5" y="78" width="90" height="17" fill="#f0d888" opacity="0.4"/></g>
+                <g clip-path="url(#ghE)"><rect x="25" y="21" width="58" height="58" fill="#fce4cc"/><rect x="25" y="46" width="58" height="33" fill="#e8947a"/><rect x="25" y="58" width="58" height="21" fill="#c4705a"/><rect x="25" y="69" width="58" height="10" fill="#f0d888"/></g>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <rect x="5" y="5" width="90" height="80" rx="10" fill="none" stroke="#D95F52" stroke-width="1" opacity="0.5"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">🔵 Görsel Rehber</div>
+    <span class="hero-icon">🧔</span>
+    <h1>Erkekler İçin<br><span>Cilt Bakımı</span></h1>
+    <p>4 temel ürün, tıraş bakımı, aktif maddeler ve en yaygın hatalar — karmaşık değil, kanıta dayalı.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">Erkek Cildi</span>
+        <span class="hero-tag">4 Temel Ürün</span>
+        <span class="hero-tag">Tıraş Bakımı</span>
+        <span class="hero-tag">Aktif Maddeler</span>
+        <span class="hero-tag">Mitler</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Gerçekten farklı mı?</strong>Evet. Erkek cildi androjenler nedeniyle ~%25 daha kalın, ~2× daha fazla sebum üretir — bu hem avantaj hem dezavantaj.</div>
+            <div class="qs-item"><strong>Minimum rutin</strong>4 ürün yeter: nazik temizleyici + nemlendirici + SPF 30+ + gece retinol. Hepsi bu.</div>
+            <div class="qs-item"><strong>Tıraş = cilt bakımı</strong>Tıraş zaten bir "eksfoliasyon". Sonrası kolonyayı atla, yumuşatıcı bariyer krem sür.</div>
+            <div class="qs-item"><strong>En büyük hata</strong>SPF atlamak. Erkekler kadınlara göre 2× daha fazla cilt kanseri tanısı alıyor — büyük ölçüde güneş kremini ihmal ettikleri için.</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="section fade-in">
+        <div class="section-label">01 — Fark Ne?</div>
+        <h2>Erkek Cildi Gerçekten Farklı mı?</h2>
+        <p>Evet — hem biyolojik hem de davranışsal olarak. Farkları bilmek, doğru ürün seçimini kolaylaştırır.</p>
+        <div class="diff-grid">
+            <div class="diff-card erkek">
+                <h3>🧔 Erkek Cildi</h3>
+                <ul class="diff-list">
+                    <li>%25 daha kalın epidermis (androgen etkisi)</li>
+                    <li>~2× daha fazla sebum üretimi → yağlı görünüm</li>
+                    <li>Daha büyük gözenekler</li>
+                    <li>Tıraştan kaynaklanan günlük mikrotravma</li>
+                    <li>Kolajen daha yavaş azalır (50'ye kadar avantaj)</li>
+                    <li>UV koruması daha az kullanılır → melanom riski ↑</li>
+                </ul>
+            </div>
+            <div class="diff-card kadin">
+                <h3>👩 Kadın Cildi (karşılaştırma)</h3>
+                <ul class="diff-list">
+                    <li>Daha ince, daha hassas epidermis</li>
+                    <li>Daha az sebum → kuru cilt daha yaygın</li>
+                    <li>Menopozda östrojen düşüşüyle hızlı kolajen kaybı</li>
+                    <li>Daha yüksek SPF kullanım oranı</li>
+                    <li>Makyaj UV filtresi sağlayabilir</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Kalın cilt ve yüksek sebum üretimi erken kırışıklığı geciktirir — ama aynı zamanda tıkanan por ve akne riskini artırır. İyi haber: çok basit bir rutin büyük fark yaratır.</p>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">02 — Temel Rutin</div>
+        <h2>4 Ürün Yeterli</h2>
+        <p>Karmaşık 10 adımlık rutin gerekmez. Dört ürünü tutarlı kullanmak, on ürünü rastgele kullanmaktan çok daha etkili.</p>
+        <div class="core-grid">
+            <div class="core-card">
+                <div class="core-num">1</div>
+                <div class="core-icon">🧼</div>
+                <div class="core-name">Nazik Temizleyici</div>
+                <div class="core-pick">Jel veya köpük</div>
+                <div class="core-desc">pH dengeli, SLS-free. Yüzü "çeken" sert sabunlar sebum üretimini artırır. Günde 2× yeterli.</div>
+            </div>
+            <div class="core-card">
+                <div class="core-num">2</div>
+                <div class="core-icon">💧</div>
+                <div class="core-name">Nemlendirici</div>
+                <div class="core-pick">Hafif losyon / jel</div>
+                <div class="core-desc">Yağlı ciltler için oil-free, hafif formüller. Glycerin + hyaluronik asit kombinasyonu ideal. "Erkek ürünü" olmak zorunda değil.</div>
+            </div>
+            <div class="core-card">
+                <div class="core-num">3</div>
+                <div class="core-icon">☀️</div>
+                <div class="core-name">SPF 30+</div>
+                <div class="core-pick">Her sabah — zorunlu</div>
+                <div class="core-desc">Erkekler melanom tanısı almada kadınları 2× geçiyor. Mat formüller yağlı görünümü önler. Bu adım hiç atlanmaz.</div>
+            </div>
+            <div class="core-card">
+                <div class="core-num">4</div>
+                <div class="core-icon">✨</div>
+                <div class="core-name">Retinol / Adapalen</div>
+                <div class="core-pick">Gece · 30'lu yaşlarda başla</div>
+                <div class="core-desc">Kolajen kaybını yavaşlatır, gözenek görünümünü azaltır, akne izlerini hafifletir. Adapalen akne varsa bonus.</div>
+            </div>
+        </div>
+        <div class="verdict-box">
+            <div class="verdict-icon">💡</div>
+            <div class="verdict-text"><strong>Sıralama önemli:</strong> Temizleyici → nemlendirici → SPF (sabah) / temizleyici → retinol → nemlendirici (gece). Katmanlar bu sırayla uygulanır.</div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">03 — Tıraş Bakımı</div>
+        <h2>Tıraş: Cildin İçin Doğru Yap</h2>
+        <p>Tıraş adeta günlük bir yüzeysel peelingtir — her seferinde epidermis tabakasını hafifçe kaldırır. Yapılan hatalar tahriş, kıl batması ve kronik cilt bariyeri bozukluğuna yol açar.</p>
+        <div class="shave-flow">
+            <div class="shave-step">
+                <div class="shave-num">1</div>
+                <div class="shave-body">
+                    <h4>Öncesi: Islatma ve Yumuşatma</h4>
+                    <p>Tıraştan önce 2-3 dakika ılık suyla yıkama veya duş. Kıl ve cilt yumuşar, bıçak daha kolay kayar. Kuru tıraş bariyer hasarını artırır.</p>
+                    <span class="shave-tip">💧 Sıcak duş sonrası ideal</span>
+                </div>
+            </div>
+            <div class="shave-step">
+                <div class="shave-num">2</div>
+                <div class="shave-body">
+                    <h4>Tıraş Kremi / Jeli — Sabun Değil</h4>
+                    <p>Kayganlaştırıcı tıraş ürünü sürtünmeyi azaltır, bariyer tahribini minimale indirir. Yüz sabunu veya şampuanla tıraş tahriş ve kızarıklık yaratır.</p>
+                    <span class="shave-tip">🚫 Sabunlu tıraştan kaçın</span>
+                </div>
+            </div>
+            <div class="shave-step">
+                <div class="shave-num">3</div>
+                <div class="shave-body">
+                    <h4>Kılın Yönünde Tıraş (Başlangıç İçin)</h4>
+                    <p>Tersine tıraş daha yakın keser ama kıl batması (pseudofolliculitis barbae) ve iritasyon riskini artırır. Hassas ciltler için kılın yönü, tek bıçak veya elektrikli tıraş daha güvenli.</p>
+                </div>
+            </div>
+            <div class="shave-step">
+                <div class="shave-num">4</div>
+                <div class="shave-body">
+                    <h4>Sonrası: Kolonyayı At, Bariyer Kremini Sür</h4>
+                    <p>Alkollü kolonya tahriş gören cilde ek hasar verir, kurutur ve uzun vadede sebum üretimini artırır. Bunun yerine parfümsüz nemlendirici veya bariyer onarıcı krem (pantenol, seramid içerikli) uygula.</p>
+                    <span class="shave-tip">🚫 Alkollü aftershave → ✅ Nazik nemlendirici</span>
+                </div>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="label">Kıl Batması (Pseudofolliculitis Barbae)</div>
+            <p>Kıvırcık veya kalın kıllı erkeklerde sık görülür — tıraş sonrası kıl deriye doğru büyür, iltihaplanma yaratır. Çözüm: kimyasal eksfoliant (salisilik asit veya glikolik asit) + tek bıçaklı ustura veya elektrikli tıraş. Adapalen uzun vadede kıl batmasını azaltır.</p>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">04 — Aktif Maddeler</div>
+        <h2>Erkek Cildi İçin Öne Çıkan Aktif Maddeler</h2>
+        <div class="ingr-grid">
+            <div class="ingr-card">
+                <div class="ingr-icon">🟡</div>
+                <div class="ingr-name">Niasinamid</div>
+                <div class="ingr-why">Sebum kontrolü + gözenek görünümü</div>
+                <div class="ingr-desc">%5-10 niasinamid, yüksek sebum üretimini düzenler ve gözenek görünümünü azaltır. Erkek cildi için en öncelikli aktif maddelerden biri.</div>
+                <span class="ingr-tip tip-green">İlk adım için ideal</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🧬</div>
+                <div class="ingr-name">Retinol / Adapalen</div>
+                <div class="ingr-why">Anti-aging + akne + gözenek</div>
+                <div class="ingr-desc">Hücre yenilenmesini hızlandırır, kolajen üretimini uyarır. Adapalen aynı zamanda kıl batmasını azaltır — tıraş yapan erkekler için çift kazanım.</div>
+                <span class="ingr-tip tip-blue">30+ yaş için öncelikli</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🔵</div>
+                <div class="ingr-name">Salisilik Asit (BHA)</div>
+                <div class="ingr-why">Tıkalı por + akne</div>
+                <div class="ingr-desc">Yüksek sebum üretimi ve büyük gözenekler nedeniyle erkek cildi için özellikle etkili. %1-2 salisilik asit toner veya temizleyici halinde kullanılabilir.</div>
+                <span class="ingr-tip tip-orange">Yağlı/karma cilt için</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🌊</div>
+                <div class="ingr-name">Hyaluronik Asit</div>
+                <div class="ingr-why">Nemlendirme — hafif hissiyat</div>
+                <div class="ingr-desc">Yağlı ciltlerde bile nemlendirme şart — HA hafif ve yağsız sunar. Tıraş sonrası tahriş gören ciltte bariyer onarımını destekler.</div>
+                <span class="ingr-tip tip-green">Tüm cilt tipleri</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🛡️</div>
+                <div class="ingr-name">Pantenol (B5)</div>
+                <div class="ingr-why">Tıraş sonrası onarım</div>
+                <div class="ingr-desc">Cilt bariyerini onarır ve sakinleştirir. Tıraş sonrası aftershave balm veya nemlendiricide pantenol içermesi büyük artı.</div>
+                <span class="ingr-tip tip-blue">Tıraş bakımı için</span>
+            </div>
+            <div class="ingr-card">
+                <div class="ingr-icon">🍊</div>
+                <div class="ingr-name">C Vitamini (LAA)</div>
+                <div class="ingr-why">Parlaklık + fotokoruma desteği</div>
+                <div class="ingr-desc">%10-20 L-askorbik asit sabah rutininde SPF'i destekler, kolajen sentezini uyarır. Erkeklerin en az kullandığı ama en çok fayda göreceği aktif.</div>
+                <span class="ingr-tip tip-orange">Sabah, SPF öncesi</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">05 — Sabah &amp; Akşam</div>
+        <h2>Minimal Ama Etkili Günlük Rutin</h2>
+        <div class="routine-grid">
+            <div class="routine-col">
+                <div class="routine-header morning">☀️ Sabah (3 dk)</div>
+                <div class="routine-steps">
+                    <div class="r-step">
+                        <div class="r-num morning">1</div>
+                        <div class="r-text">
+                            <div class="step-name">Temizleyici</div>
+                            <div class="step-prod">Nazik jel. Tıraş yapıyorsan tıraş öncesi ya da sonrası.</div>
+                        </div>
+                    </div>
+                    <div class="r-step">
+                        <div class="r-num morning">2</div>
+                        <div class="r-text">
+                            <div class="step-name">Niasinamid Serum (opsiyonel)</div>
+                            <div class="step-prod">Yağlı cilt varsa ekle. Aksi halde atlayabilirsin.</div>
+                        </div>
+                    </div>
+                    <div class="r-step">
+                        <div class="r-num morning">3</div>
+                        <div class="r-text">
+                            <div class="step-name">Hafif Nemlendirici</div>
+                            <div class="step-prod">Oil-free, non-comedogenic. Tıraş sonrası bariyer kremi olarak da kullanılabilir.</div>
+                        </div>
+                    </div>
+                    <div class="r-step">
+                        <div class="r-num morning">4</div>
+                        <div class="r-text">
+                            <div class="step-name">SPF 30+ 🚨</div>
+                            <div class="step-prod">Mat formül. Bu asla atlanmaz.</div>
+                            <span class="r-note">Melanom riski erkekte 2×</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="routine-col">
+                <div class="routine-header evening">🌙 Akşam (3 dk)</div>
+                <div class="routine-steps">
+                    <div class="r-step">
+                        <div class="r-num evening">1</div>
+                        <div class="r-text ev">
+                            <div class="step-name">Temizleyici</div>
+                            <div class="step-prod">Günün kirlini ve güneş kremini çıkar.</div>
+                        </div>
+                    </div>
+                    <div class="r-step">
+                        <div class="r-num evening">2</div>
+                        <div class="r-text ev">
+                            <div class="step-name">Retinol veya Adapalen</div>
+                            <div class="step-prod">Haftada 2-3 geceyle başla. Bezelye büyüklüğünde tüm yüze.</div>
+                            <span class="r-note ev">İlk 4 haftada tahriş normaldir</span>
+                        </div>
+                    </div>
+                    <div class="r-step">
+                        <div class="r-num evening">3</div>
+                        <div class="r-text ev">
+                            <div class="step-name">Nemlendirici</div>
+                            <div class="step-prod">Retinol üzerine nemlendirici — bariyer onarımı ve tahriş azaltma.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">06 — Yaygın Hatalar</div>
+        <h2>Erkeklerin En Sık Yaptığı Cilt Bakımı Hataları</h2>
+        <div class="mistake-list">
+            <div class="mistake-item">
+                <div class="m-icon">🚿</div>
+                <div class="mistake-body">
+                    <h4>Yüzü duş sabunuyla yıkamak</h4>
+                    <p>Vücut sabunları yüzün pH dengesini bozar, cilt bariyerini hasar verir ve paradoks olarak daha fazla yağlanmaya yol açar. Yüz için ayrı, nazik temizleyici şart.</p>
+                </div>
+            </div>
+            <div class="mistake-item">
+                <div class="m-icon">🍹</div>
+                <div class="mistake-body">
+                    <h4>Tıraş sonrası alkollü kolonya</h4>
+                    <p>Alkol tahriş gören cilt bariyerini daha da zayıflatır, uzun vadede kronik kuruluk ve hassasiyet yaratır. "Yanma hissi iyi temizlendi" demek değildir — hasar göstergesidir.</p>
+                </div>
+            </div>
+            <div class="mistake-item">
+                <div class="m-icon">☀️</div>
+                <div class="mistake-body">
+                    <h4>Güneş kremini atlamak</h4>
+                    <p>Erkekler cilt kanserinden kadınlara göre çok daha fazla etkileniyor. Özellikle melanom oranları erkeklerde belirgin şekilde yüksek — büyük ölçüde SPF ihmalinden kaynaklı.</p>
+                </div>
+            </div>
+            <div class="mistake-item">
+                <div class="m-icon">💧</div>
+                <div class="mistake-body">
+                    <h4>"Yağlı cildim için nemlendirici gerekmez"</h4>
+                    <p>Yağlı cilt bile su kaybeder (TEWL). Nemlendirici atlamak cilt bariyerini zayıflatır ve sebum üretimini paradoks artırır. Hafif, oil-free formüller yağlı ciltler için de şarttır.</p>
+                </div>
+            </div>
+            <div class="mistake-item">
+                <div class="m-icon">🔄</div>
+                <div class="mistake-body">
+                    <h4>Yıpranmış, körelmiş jilet kullanmaya devam etmek</h4>
+                    <p>Körleşmiş jilet cilde daha fazla baskı uygular, bakteriyel kontaminasyon riskini artırır ve tahriş kaçınılmaz olur. 5-7 kullanımda jilet değiştirilmeli.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">07 — Mitler</div>
+        <h2>Erkek Cilt Bakımı Hakkında Yanlış Bilinenler</h2>
+        <div class="myth-list">
+            <div class="myth-item">
+                <div class="myth-header"><div class="myth-icon">❌</div><div class="myth-claim">"Erkeklerin cilt bakımına ihtiyacı yok, ciltleri zaten sağlam."</div></div>
+                <div class="myth-truth">Kalın cilt ve yüksek sebum erken kırışıklığı geciktirir ama cilt kanseri, akne ve tıraş hasarına karşı koruma sağlamaz. <strong>Erkekler melanomdan çok daha fazla ölüyor</strong> — büyük ölçüde teşhis gecikmesi ve SPF ihmalinden.</div>
+            </div>
+            <div class="myth-item">
+                <div class="myth-header"><div class="myth-icon">❌</div><div class="myth-claim">"Cilt bakım ürünleri kadınlara özel."</div></div>
+                <div class="myth-truth">Pazarlama kökenli bir ayrım. Temizleyici, nemlendirici, SPF ve retinol cinsiyete göre farklı çalışmaz. <strong>Erkek etiketli ürünler genellikle daha pahalı ve daha az içerik içerir</strong>. İçeriğe bak, markaya değil.</div>
+            </div>
+            <div class="myth-item">
+                <div class="myth-header"><div class="myth-icon">❌</div><div class="myth-claim">"Tıraş zaten yeterli eksfoliyasyon."</div></div>
+                <div class="myth-truth">Tıraş yüzeysel bir eksfoliyasyon sağlar ama yalnızca tıraş yapılan bölgede. <strong>Kimyasal eksfoliantlar (BHA/AHA) por içine girer</strong> — tıraşın ulaşamadığı alanlarda çalışır ve akneyi önler.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="section-label">08 — Kontrol Listesi</div>
+        <h2>Erkek Cilt Bakımı: Özet</h2>
+        <div class="checklist-card">
+            <h3>✅ Temel Kontrol Listesi</h3>
+            <div class="check-grid">
+                <div class="check-item"><span>🧼</span><span>Ayrı yüz temizleyicisi — duş sabunu değil</span></div>
+                <div class="check-item"><span>☀️</span><span>SPF 30+ her sabah — asla atlama</span></div>
+                <div class="check-item"><span>💧</span><span>Oil-free nemlendirici — yağlı cilt de kullanır</span></div>
+                <div class="check-item"><span>✨</span><span>Retinol/adapalen gece — 30'lu yaşlarda başla</span></div>
+                <div class="check-item"><span>🪒</span><span>Tıraş kremi kullan, kolonyayı at</span></div>
+                <div class="check-item"><span>🔄</span><span>Jilet 5-7 kullanımda değiştir</span></div>
+                <div class="check-item"><span>🟡</span><span>Niasinamid — gözenek + sebum için</span></div>
+                <div class="check-item"><span>👨‍⚕️</span><span>Yılda bir cilt kontrolü — özellikle ben/leke takibi</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🔵 Kanıta Dayalı</span>
+    </div>
+
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Tan JKL. <em>Skin aging in men.</em> Dermatol Clin. 2022.</li>
+            <li>Rogers HW, et al. <em>Incidence estimate of nonmelanoma skin cancer (NMSC) in the United States.</em> JAMA Dermatol. 2015.</li>
+            <li>Siegel RL, et al. <em>Cancer statistics, 2023.</em> CA Cancer J Clin. 2023.</li>
+            <div></div>
+            <li>Hashim PW, et al. <em>Men and skincare: barriers and opportunities.</em> J Drugs Dermatol. 2019.</li>
+            <li>Callender VD, et al. <em>Pseudofolliculitis barbae: a review of current treatment options.</em> J Clin Aesthet Dermatol. 2016.</li>
+            <li>Thiboutot D, et al. <em>Guidelines of care for acne vulgaris management.</em> J Am Acad Dermatol. 2016.</li>
+            <li>Mukherjee S, et al. <em>Retinoids in the treatment of skin aging.</em> Clin Interv Aging. 2006.</li>
+            <li>American Academy of Dermatology. <em>Men's skin care: tips for healthy skin.</em> aad.org. 2024.</li>
+        </ol>
+    </div>
+</div>
+
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="../index.html#gorsel-rehberler">Görsel Rehberler</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:.6">Bu içerik tıbbi tavsiye değildir. Cilt sağlığınız için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}}),{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
