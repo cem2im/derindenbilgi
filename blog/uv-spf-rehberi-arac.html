@@ -1507,7 +1507,9 @@ function selectFitz(el, type) {
     document.querySelectorAll('.fitz-card').forEach(c => c.classList.remove('selected'));
     el.classList.add('selected');
     state.fitz = type;
-    document.getElementById('btn1').disabled = false;
+    const btn = document.getElementById('btn1');
+    btn.disabled = false;
+    setTimeout(() => btn.scrollIntoView({behavior: 'smooth', block: 'center'}), 150);
 }
 
 // ===== EXPOSURE =====
@@ -1515,7 +1517,9 @@ function selectExposure(el, type) {
     document.querySelectorAll('#step2 .opt-card').forEach(c => c.classList.remove('selected'));
     el.classList.add('selected');
     state.exposure = type;
-    document.getElementById('btn2').disabled = false;
+    const btn = document.getElementById('btn2');
+    btn.disabled = false;
+    setTimeout(() => btn.scrollIntoView({behavior: 'smooth', block: 'center'}), 150);
 }
 
 // ===== SEASON =====
@@ -1523,7 +1527,9 @@ function selectSeason(el, type) {
     document.querySelectorAll('#step3 .opt-card').forEach(c => c.classList.remove('selected'));
     el.classList.add('selected');
     state.season = type;
-    document.getElementById('btn3').disabled = false;
+    const btn = document.getElementById('btn3');
+    btn.disabled = false;
+    setTimeout(() => btn.scrollIntoView({behavior: 'smooth', block: 'center'}), 150);
 }
 
 // ===== CITY =====
