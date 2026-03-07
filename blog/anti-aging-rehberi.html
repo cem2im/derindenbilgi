@@ -97,11 +97,37 @@
         }
         .header-nav a:hover { color: var(--accent); }
 
+        /* ===== FLOATING AVATAR ===== */
+        .hero-avatar-wrap {
+            position: absolute;
+            right: -30px;
+            bottom: -10px;
+            width: 180px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 2;
+            animation: avatarFloat 5s ease-in-out infinite;
+            filter: drop-shadow(-8px 16px 24px rgba(13,148,136,0.22)) drop-shadow(-2px 4px 8px rgba(0,0,0,0.18));
+        }
+        .hero-avatar-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0 0 20px 20px;
+        }
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0px) rotate(0.5deg); }
+            50%       { transform: translateY(-10px) rotate(-0.5deg); }
+        }
+        @media (max-width: 760px) { .hero-avatar-wrap { display: none; } }
+
         /* ===== ARTICLE HERO ===== */
         .article-hero {
             max-width: 800px;
             margin: 0 auto;
             padding: 3rem 1.5rem 2rem;
+            position: relative;
+            overflow: visible;
         }
         .article-meta {
             display: flex;
@@ -621,6 +647,9 @@
     </div>
     <h1>Anti-Aging Başlangıç Rehberi: Neye Para Verin, Neyden Kaçının?</h1>
     <p class="article-subtitle">Retinoidler, C vitamini, peptidler, güneş kremi… Cilt yaşlanmasına karşı yüzlerce ürün var ama hangisi gerçekten çalışıyor? Her aktif maddeyi kanıt düzeyine göre değerlendiriyoruz — ve yaşınıza göre nereden başlamanız gerektiğini anlatıyoruz.</p>
+    <div class="hero-avatar-wrap">
+        <img src="../img/avatar-krem.jpg" alt="Dermatoloji Uzmanı">
+    </div>
 </section>
 
 <!-- TABLE OF CONTENTS -->
