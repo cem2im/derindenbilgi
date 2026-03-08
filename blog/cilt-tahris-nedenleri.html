@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cildinize Zarar Veren 6 Şey — Bilmeden Yaptıklarınız | Derindenbilgi</title>
+    <meta name="description" content="Limon, sarımsak, parfüm, alkollü ürünler, sıcak su, fazla asit... Cildinize farkında olmadan zarar veren 6 yaygın alışkanlık ve bunlardan nasıl vazgeçilir.">
+    <meta name="keywords" content="cilt tahrişi, cilt bakım hataları, limon yüze sürülür mü, parfüm cilt, alkollü tonik, yüz yıkama, AHA BHA retinoid, cilt bariyeri, derindenbilgi">
+    <meta property="og:title" content="Cildinize Zarar Veren 6 Şey — Bilmeden Yaptıklarınız">
+    <meta property="og:description" content="DIY maskeler, parfüm, alkollü tonikler, fazla yüz yıkama, sıcak su, asit karmaşası — bu alışkanlıklar cildinizi sessizce yıpratıyor.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #FA8072;
+            --accent-light: #FCBDB7;
+            --accent-dark: #D95F52;
+
+            /* 🔴 Tahriş teması — mercan/salmon */
+            --primary: #D95F52;
+            --primary-dark: #b84a3e;
+            --primary-light: #f28a7f;
+            --primary-bg: rgba(217,95,82,0.07);
+            --primary-border: rgba(217,95,82,0.22);
+            --primary-gradient: linear-gradient(135deg, #D95F52, #b84a3e);
+            --primary-gradient-soft: linear-gradient(135deg, #fff1f0, rgba(252,189,183,0.2));
+
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fff1f0;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        /* ===== NAV ===== */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 900px; margin: 0 auto;
+            display: flex; align-items: center; gap: 16px;
+            height: 60px;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 8px;
+            text-decoration: none; color: var(--text); font-weight: 700; font-size: 18px;
+        }
+        .nav-logo svg { width: 36px; height: 36px; flex-shrink: 0; }
+        .brand-deri { color: #D95F52; }
+        .nav-back {
+            margin-left: auto;
+            display: flex; align-items: center; gap: 6px;
+            text-decoration: none; color: var(--text-s); font-size: 14px;
+            padding: 6px 14px; border: 1px solid var(--border);
+            border-radius: 8px; transition: all .2s;
+        }
+        .nav-back:hover { background: var(--bg-alt); color: var(--text); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(160deg, #fff1f0 0%, #fde8e6 40%, #fff8f8 100%);
+            padding: 60px 24px 40px;
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(217,95,82,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--primary-bg); border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 13px; font-weight: 600;
+            padding: 6px 16px; border-radius: 99px; margin-bottom: 20px;
+        }
+        .hero-icon {
+            font-size: 68px; line-height: 1;
+            animation: float 4s ease-in-out infinite;
+            display: block; margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: clamp(26px,5vw,40px); font-weight: 800;
+            line-height: 1.2; color: var(--text); margin-bottom: 14px;
+        }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 17px; color: var(--text-s); max-width: 580px; margin: 0 auto 28px; }
+        .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .hero-tag {
+            background: white; border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 13px; font-weight: 500;
+            padding: 5px 14px; border-radius: 99px;
+        }
+
+        /* ===== QUICK SUMMARY ===== */
+        .quick-summary { background: var(--primary-gradient); color: white; padding: 28px 24px; }
+        .quick-summary-inner { max-width: 760px; margin: 0 auto; }
+        .quick-summary h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; opacity: .95; }
+        .qs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; }
+        .qs-item { background: rgba(255,255,255,.15); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.5; }
+        .qs-item strong { display: block; font-weight: 700; margin-bottom: 3px; }
+
+        /* ===== CONTENT ===== */
+        .content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+        /* ===== SECTION ===== */
+        .section { margin-bottom: 64px; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--primary-bg); color: var(--primary-dark);
+            font-size: 12px; font-weight: 700; letter-spacing: .06em;
+            padding: 4px 12px; border-radius: 99px;
+            margin-bottom: 14px; text-transform: uppercase;
+        }
+        .section h2 { font-size: clamp(20px,3.5vw,26px); font-weight: 800; color: var(--text); margin-bottom: 16px; line-height: 1.3; }
+        .section p { color: var(--text-s); margin-bottom: 14px; line-height: 1.8; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* ===== INFO & PILL BOXES ===== */
+        .info-box {
+            background: var(--primary-bg); border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px; margin: 22px 0;
+        }
+        .info-box .label { font-size: 12px; font-weight: 700; color: var(--primary-dark); letter-spacing: .06em; margin-bottom: 6px; }
+        .info-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.7; }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns: 1fr; } }
+        .verdict-card {
+            border-radius: var(--radius-md); padding: 16px 18px;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .verdict-card.yap { background: #f0fdf4; border: 1.5px solid #86efac; }
+        .verdict-card.yapma { background: #fef2f2; border: 1.5px solid #fca5a5; }
+        .verdict-card .v-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+        .verdict-card .v-text { font-size: 14px; line-height: 1.6; }
+        .verdict-card.yap .v-text { color: #166534; }
+        .verdict-card.yapma .v-text { color: #7f1d1d; }
+        .verdict-card .v-label { font-weight: 800; font-size: 12px; display: block; margin-bottom: 3px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        /* ===== DAMAGE CARDS (numbered) ===== */
+        .damage-header {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 16px;
+        }
+        .damage-num {
+            width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+            background: var(--primary-gradient); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 800;
+        }
+        .damage-header h2 { margin: 0; }
+
+        /* ===== INGREDIENT / ITEM PILLS ===== */
+        .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+        .pill {
+            font-size: 13px; font-weight: 600; padding: 4px 13px; border-radius: 99px;
+            border: 1px solid var(--primary-border); background: var(--primary-bg); color: var(--primary-dark);
+        }
+        .pill.bad { background: #fef2f2; border-color: #fca5a5; color: #7f1d1d; }
+        .pill.good { background: #f0fdf4; border-color: #86efac; color: #166534; }
+
+        /* ===== SCIENCE NOTE ===== */
+        .science-note {
+            font-size: 13px; color: var(--text-t); font-style: italic;
+            border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 14px;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fffbeb; border: 1px solid #fde68a;
+            border-radius: var(--radius-md); padding: 14px 18px;
+            margin: 32px 0; font-size: 14px; color: #78350f;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .disclaimer .d-icon { font-size: 18px; flex-shrink: 0; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 60px;
+        }
+        .references h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+        .references ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .references li { font-size: 13px; color: var(--text-s); line-height: 1.6; }
+
+        /* ===== AUTHOR ===== */
+        .author-strip {
+            display: flex; align-items: center; gap: 14px;
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 18px 20px;
+            margin: 40px 0 20px;
+        }
+        .author-info .name { font-weight: 700; font-size: 15px; color: var(--text); }
+        .author-info .title { font-size: 13px; color: var(--text-s); margin-top: 2px; }
+        .author-badge {
+            margin-left: auto;
+            background: var(--primary-bg); border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 12px; font-weight: 600;
+            padding: 4px 10px; border-radius: 99px; white-space: nowrap;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1e293b; color: #94a3b8;
+            text-align: center; padding: 32px 24px; font-size: 14px; line-height: 1.7;
+        }
+        footer a { color: #FCBDB7; text-decoration: none; }
+        footer .brand { color: white; font-weight: 700; margin-bottom: 8px; }
+
+        /* ===== DIVIDER ===== */
+        .section-divider {
+            border: none; border-top: 2px dashed var(--primary-border);
+            margin: 16px 0 28px;
+        }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .fade-in { opacity:0; transform:translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="90" rx="14" fill="#fdf0ea"/>
+                <defs>
+                    <clipPath id="lh3"><rect x="5" y="5" width="90" height="80" rx="10"/></clipPath>
+                    <clipPath id="gh3"><circle cx="54" cy="50" r="29"/></clipPath>
+                </defs>
+                <g clip-path="url(#lh3)">
+                    <rect x="5" y="52" width="90" height="38" fill="#fce4cc" opacity="0.6"/>
+                    <rect x="5" y="62" width="90" height="33" fill="#FA8072" opacity="0.4"/>
+                    <rect x="5" y="70" width="90" height="25" fill="#c4705a" opacity="0.35"/>
+                    <rect x="5" y="78" width="90" height="17" fill="#f0d888" opacity="0.4"/>
+                </g>
+                <g clip-path="url(#gh3)">
+                    <rect x="25" y="21" width="58" height="58" fill="#fce4cc"/>
+                    <rect x="25" y="46" width="58" height="33" fill="#e8947a"/>
+                    <rect x="25" y="58" width="58" height="21" fill="#c4705a"/>
+                    <rect x="25" y="69" width="58" height="10" fill="#f0d888"/>
+                </g>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <rect x="5" y="5" width="90" height="80" rx="10" fill="none" stroke="#D95F52" stroke-width="1" opacity="0.5"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">⚠️ Cilt Sağlığı</div>
+    <span class="hero-icon">🚫</span>
+    <h1>Cildinize Zarar Veren<br><span>6 Şey</span></h1>
+    <p>İyi niyetle yapılan ama cildi sessizce yıpratan alışkanlıklar — limon maskesinden fazla asit kullanımına kadar.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">DIY Maskeler</span>
+        <span class="hero-tag">Parfüm</span>
+        <span class="hero-tag">Alkol</span>
+        <span class="hero-tag">Fazla Yıkama</span>
+        <span class="hero-tag">Sıcak Su</span>
+        <span class="hero-tag">Asit Karmaşası</span>
+    </div>
+</div>
+
+<!-- QUICK SUMMARY -->
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>DIY Maskeler</strong>Limon, sarımsak, elma sirkesi — bunların pH'ı cildininkinden çok farklı. Kimyasal yanık, hiperpigmentasyon ve kalıcı hasar riski var.</div>
+            <div class="qs-item"><strong>Parfüm &amp; Alkol</strong>Koku ve alkol, cilt bariyerini (koruyucu tabakayı) bozar. Hassas ve akneye yatkın ciltlerde en sık tahriş nedeni bunlardır.</div>
+            <div class="qs-item"><strong>Yüz Yıkama</strong>Günde 2 kezden fazla yıkamak cildi "temizlemez" — aksine yağ dengesini bozar ve paradoks olarak yağlanmayı artırır.</div>
+            <div class="qs-item"><strong>Asit Kombinasyonu</strong>AHA + BHA + retinoid aynı anda kullanmak "daha fazla etki" değil, daha fazla tahriş demek. Cilt bariyeri için "az ama doğru" kazanır.</div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <div class="d-icon">ℹ️</div>
+        <div>Bu içerik genel bilgilendirme amaçlıdır, tanı ve tedavi yerine geçmez. Cilt sorunlarınız için bir dermatoloji uzmanına başvurun.</div>
+    </div>
+
+    <!-- BÖLÜM 1: DIY MASKELER -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">1</div>
+            <div>
+                <div class="section-label">DIY Maskeler</div>
+                <h2>Limon, Sarımsak ve Elma Sirkesi</h2>
+            </div>
+        </div>
+
+        <p>Sosyal medyada gördünüz, anneanneniz anlattı, hatta "doğal olduğu için zararsız" diye düşündünüz. Ama bu üç malzeme cildinize gerçekten zarar verebilir.</p>
+
+        <p><strong>Limon suyu</strong> yaklaşık pH 2'dir — saf sirke kadar asidik. Cildinizin sağlıklı pH'ı ise 4,5–5,5 arasında. Bu fark küçük görünüyor ama pH skalası logaritmik: yani limon, cildinizden 10–100 kat daha asidik. Sonuç: kimyasal yanık riski ve fitofotodermatit (limon + güneş = kalıcı leke).</p>
+
+        <p><strong>Sarımsak</strong> içindeki allicin bileşiği güçlü bir antimikrobiyal — ama aynı zamanda güçlü bir tahriş edici. Direkt cilt teması temas dermatiti ve ikinci derece yanık benzeri lezyonlara yol açabilir. Yeme, harika. Yüzüne sürme — hayır.</p>
+
+        <p><strong>Elma sirkesi</strong> de pH 2–3 civarında, üstelik asit konsantrasyonu kontrol edilemiyor. Dermatit, bariyer bozulması ve özellikle açık yara veya akne lezyonları üzerinde ciddi tahriş kaçınılmaz.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">🍋 Limon — pH ~2</span>
+            <span class="pill bad">🧄 Sarımsak — Allicin tahrişi</span>
+            <span class="pill bad">🍶 Elma Sirkesi — pH 2-3</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>"Doğal" demek "güvenli" demek değildir — bu üçü cildiniz için kimyasal yanık potansiyeli taşır. (Kaynak: Journal of Clinical and Aesthetic Dermatology, 2019)</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Lekeler için azelaik asit (%10) veya niasinamid (%5) gibi dermatolojik olarak güvenli aktifler kullan.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Yüzüne limon, sarımsak veya saf elma sirkesi sürme. Hiçbir etki faydası tahriş riskine değmez.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 2: PARFÜM -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">2</div>
+            <div>
+                <div class="section-label">Parfüm & Fragrance</div>
+                <h2>"Mis Gibi" Kokan Ürünler</h2>
+            </div>
+        </div>
+
+        <p>Bir cilt ürününün kutusunda "fragrance" ya da "parfüm" yazıyorsa, bu tek kelime onlarca farklı kimyasal bileşiği gizliyor olabilir. Avrupa'da 26 alerjen koku bileşeni ayrı ayrı etiketlenmek zorunda — çünkü reaksiyon riski gerçek.</p>
+
+        <p>Parfüm kaynaklı kontakt dermatit (kokuya bağlı cilt reaksiyonu) dermatoloji kliniklerinde en sık görülen sorunların başında geliyor. Özellikle gül, tarçın, limonene ve linalool bileşenleri hassasiyeti yüksek kişilerde kızarıklık, kaşıntı ve egzama benzeri tabloya yol açabiliyor.</p>
+
+        <p>Boyun ve bileklerinize sürdüğünüz parfüm aynı zamanda "fotosensitizan" — yani güneşle tepkimeye girerek kalıcı kahverengi leke bırakabiliyor. Bu duruma berlok dermatit deniyor.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">🚨 Fragrance / Parfüm</span>
+            <span class="pill bad">Limonene</span>
+            <span class="pill bad">Linalool</span>
+            <span class="pill bad">Cinnamal</span>
+            <span class="pill good">✓ Fragrance-free tercih et</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Hassas, akneye yatkın veya egzamalı ciltlerde ilk yapılacak şey "fragrance-free" (koku içermeyen) ürünlere geçmek — bu tek değişiklik fark yaratır.</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Cilt bakım ürünlerinde "fragrance-free" veya "parfümsüz" etiketini ara. Parfümü kıyafetine, saçına — deriden uzak yerlere kullan.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Hassas ciltlerde parfümlü tonik, serum veya krem kullanma. "Hafif koku" da bariyer için sorun yaratabilir.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 3: ALKOLLÜ ÜRÜNLER -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">3</div>
+            <div>
+                <div class="section-label">Alkollü Cilt Ürünleri</div>
+                <h2>Tonik ve Losyonlardaki Alkol Tuzağı</h2>
+            </div>
+        </div>
+
+        <p>Yüzünüzü sildikten sonra o "temiz ve ferah" hissi? Büyük ihtimalle alkol. Etanol (standart alkol) ve denat alkol (denatüre alkol), cilt yüzeyindeki yağ tabakasını çok hızlı uçurur — ve bu "temizlik" hissi aslında bir uyarı sinyali.</p>
+
+        <p>Cilt bariyeri keratinosit hücreleri, ceramid, kolesterol ve yağ asitlerinden oluşan bir katmandır. Alkol bu katmanı bozar; içeri giren bakteriler ve tahriş edici maddeler için kapıyı açar. Sonuç: daha fazla kuruluk, daha fazla kızarıklık, daha fazla reaktif yağlanma.</p>
+
+        <p>Ancak hepsi kötü değil: <em>fatty alcohol</em> denen yağ alkolleri (setil alkol, stearil alkol, setearil alkol) tamamen farklı bir kimyasal yapıda — bunlar aslında nemlendirici ve yumuşatıcı. Etikette bunları gördüğünde paniklemene gerek yok.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">❌ Alcohol Denat</span>
+            <span class="pill bad">❌ Ethanol</span>
+            <span class="pill bad">❌ Isopropyl Alcohol</span>
+            <span class="pill good">✓ Cetyl Alcohol — zararsız</span>
+            <span class="pill good">✓ Stearyl Alcohol — zararsız</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Etiketin başında "alcohol denat" veya "ethanol" görüyorsan, o ürün cilt bariyerini bozuyor demektir — o "ferahlık" hissi bariyerin çöküşünün sinyali. (Kaynak: Skin Pharmacology and Physiology, 2012)</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Tonik veya losyon alırken ilk 5 içeriğe bak. Alkol-free, toner yerine hyaluronik asit veya niasinamid bazlı serumlar kullan.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>"Gözenek sıkılaştırıcı" veya "matlaştırıcı" diye satılan yüksek alkol içerikli tonikleri günlük rutinine alma.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 4: FAZLA YÜZ YIKAMA -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">4</div>
+            <div>
+                <div class="section-label">Fazla Yüz Yıkama</div>
+                <h2>Günde 3–4 Kez Yıkamak — Neden Yanlış?</h2>
+            </div>
+        </div>
+
+        <p>Yüzün yağlanıyor → daha sık yıkıyorsun → daha da yağlanıyor. Bu döngü tanıdık geldi mi? İşte bu tam anlamıyla bir kısır döngü ve altında çok basit bir biyoloji yatıyor.</p>
+
+        <p>Cildinizin yüzeyinde <em>sebum</em> denilen doğal bir yağ tabakası var. Bu tabaka nem kilidi görevi görür ve dış etkenlerden korur. Günde 2 kezden fazla yıkamak bu tabakayı siler; cilt bunu "tehdit" olarak algılar ve daha fazla sebum üretir. Sonuç: paradoks yağlanma artışı.</p>
+
+        <p>Amerikan Dermatoloji Akademisi'nin önerisi net: sabah ve akşam, günde 2 kez — yeterli. Spor sonrası terlemişseniz ekstra bir yıkama normal, ama o da nazik bir temizleyiciyle olsun.</p>
+
+        <div class="pill-row">
+            <span class="pill good">✓ Günde 2 kez — ideal</span>
+            <span class="pill bad">❌ 3+ kez — bariyer bozulması</span>
+            <span class="pill good">✓ pH dengeli temizleyici</span>
+            <span class="pill bad">❌ Köpüklü SLS'li temizleyici — kurutucu</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Daha sık yıkamak cildi temizlemez, savunma sistemini bozar — ve yağ bezleri "tehlikedeyim" diyerek daha fazla yağ üretir.</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Sabah hafif bir su yıkaması + pH dengeli temizleyici. Akşam da aynı şekilde, makyap varsa çift temizleme. Yeterli.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Öğlen ve gün içinde defalarca yüzünü yıkama. Yağlanıyorsa hafif bir yüz tülü veya blotting kağıdı daha akıllıca çözüm.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 5: SICAK SUYLA YÜZ YIKAMA -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">5</div>
+            <div>
+                <div class="section-label">Sıcak Su</div>
+                <h2>Sıcak Suyla Yüz Yıkamak Neden Sorun?</h2>
+            </div>
+        </div>
+
+        <p>Sıcak duş sonrası yüzünüzü yıkamak veya buhara tutmak "gözenekleri açar" diye popüler. Kısmen doğru — kıl kanalları ısıyla genişleyebilir. Ama asıl mesele bu değil.</p>
+
+        <p>Çok sıcak su, ciltteki lipid (yağ) bariyerini gereksiz yere çözer. Bu bariyer nem tutar ve zararlı maddelerden korur. Aynı zamanda ısı cilt yüzeyindeki kılcal damarları genişletir; rosacea (yüz kızarıklığı hastalığı) olan kişilerde bu başlı başına bir tetikleyici. Sürekli sıcak su → kalıcı kızarıklık döngüsü.</p>
+
+        <p>İdeal su sıcaklığı ılık, hatta serin. "Ama buz gibi su gözenekleri kapatır" miti de doğru değil — gözeneklerin gerçek anlamda "açılıp kapanması" yoktur; boyutları genetik ve bakıma bağlıdır.</p>
+
+        <div class="pill-row">
+            <span class="pill good">✓ Ilık su — 30-36°C ideal</span>
+            <span class="pill bad">❌ Çok sıcak — lipid bariyer çözülür</span>
+            <span class="pill bad">❌ Yüz buharı — rosacea tetikler</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Yüzünü ılık suyla yıka, serin suyla durula — bu kadar. Buz soğuğuna da, kaynayan sıcağa da gerek yok.</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Yüzünü ılık (oda sıcaklığına yakın) suyla yıka. Duş başlığını yüzünden uzakta tut ya da duştan önce yüzünü yıka.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Buhar makinesiyle uzun süreli yüz buharı alma. Rosacea veya kızarıklık eğiliminiz varsa bu özellikle geçerli.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 6: AŞİRİ ASİT KOMBİNASYONU -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">6</div>
+            <div>
+                <div class="section-label">Asit Karmaşası</div>
+                <h2>AHA + BHA + Retinoid — Hepsi Aynı Anda</h2>
+            </div>
+        </div>
+
+        <p>Cilt bakımı ilgi çekmeye başladıkça "daha fazla aktif = daha iyi sonuç" mantığı yaygınlaştı. Glikolik asit (AHA), salisilik asit (BHA), retinol, retinoid, C vitamini… Hepsini bir gecede yüze sürmek gerçekten işe yarıyor mu?</p>
+
+        <p>Hayır — ve işte nedeni: AHA'lar (glikolik, laktik asit) ve BHA (salisilik asit) zaten asittir; birlikte kullanıldığında pH dengesi bozulur ve biribirinin etkinliğini düşürür. Üstüne retinoid eklendiğinde cilt bariyeri bu dörtlüyle baş edemez: sonuç tahriş, soyulma, şiddetli kuruluk ve kızarıklık.</p>
+
+        <p>İronisi şu ki bu tahriş durumunda cildiniz "hasar modu"na geçer — yenilenme yavaşlar, lezyonlar artar. Yani tam istediğinizin tersi olur.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">❌ AHA + BHA + Retinoid — aynı gece</span>
+            <span class="pill good">✓ Gece 1: AHA veya BHA</span>
+            <span class="pill good">✓ Gece 2: Retinoid</span>
+            <span class="pill good">✓ Gece 3-4: Sadece nemlendirici</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>"Skin cycling" (cilt döngüsü) tam da bu yüzden işe yarıyor: asit, retinoid, dinlenme, dinlenme — hepsini aynı geceye sıkıştırmak yerine sıraya dizmek cildi hem daha az tahrişle hem de daha yüksek etkinlikle çalıştırır. (Kaynak: JAAD, 2022)</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Aktiflerini farklı gecelere böl. Retinoid kullandığın gece asit ürün kullanma. Haftada 1-2 "dinlenme gecesi" bırak.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Aynı gece AHA tonik + BHA serum + retinol krem + C vitamini uygulamayı deneme. Bu "güçlü kombinasyon" değil, tahriş reçetesi.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-strip fade-in">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🔬 Kanıta Dayalı</span>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Draelos ZD. <em>The science behind skin care: Cleansers.</em> Journal of Cosmetic Dermatology. 2018;17(1):8–14.</li>
+            <li>Katsambas AD, Dessinioti C. <em>New and emerging treatments in dermatology: acne.</em> Dermatologic Therapy. 2008;21(2):86–95.</li>
+            <li>Broze AD, et al. <em>Contact allergy to fragrances — a systematic review.</em> Contact Dermatitis. 2020;82(1):7–16.</li>
+            <li>Fluhr JW, et al. <em>Functional skin adaptation in infancy — almost complete but not fully competent.</em> Experimental Dermatology. 2004;13(8):459–468.</li>
+            <li>Lambers H, et al. <em>Natural skin surface pH is on average below 5, which is beneficial for its resident flora.</em> International Journal of Cosmetic Science. 2006;28(5):359–370.</li>
+            <li>Maarouf M, et al. <em>The role of moisturizers in addressing various kinds of dermatitis: A review.</em> Dermatology and Therapy. 2018;8(4):523–545.</li>
+            <li>Levin J, Momin SB. <em>How much do we really know about our favorite cosmeceutical ingredients?</em> Journal of Clinical and Aesthetic Dermatology. 2010;3(2):22–41.</li>
+            <li>Skin cycling for acne-prone skin. <em>Journal of the American Academy of Dermatology.</em> 2022 (Letter to the Editor).</li>
+            <li>American Academy of Dermatology. <em>How to safely exfoliate at home.</em> aad.org. 2024.</li>
+            <li>Stücker M, et al. <em>The cutaneous uptake of atmospheric oxygen contributes significantly to the oxygen supply of human dermis and epidermis.</em> Journal of Physiology. 2002.</li>
+        </ol>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="../index.html#gorsel-rehberler">Görsel Rehberler</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:0.6">Bu içerik tıbbi tavsiye değildir. Cilt sağlığınız için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
