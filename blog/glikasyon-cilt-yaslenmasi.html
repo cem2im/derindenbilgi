@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şeker Cildinizi Nasıl Yaşlandırıyor? Glikasyon Rehberi | Derindenbilgi</title>
+    <meta name="description" content="Glikasyon nedir, şeker kolajeninizi nasıl tahrip eder, AGE nedir ve cildinizi korumak için ne yapabilirsiniz? Bilimsel kaynaklara dayalı, sade anlatımlı rehber.">
+    <meta name="keywords" content="glikasyon, cilt yaşlanması, şeker ve cilt, AGE, advanced glycation end products, kolajen sertleşmesi, glikasyon önleme, cilt bakımı, derindenbilgi">
+    <meta property="og:title" content="Şeker Cildinizi Nasıl Yaşlandırıyor? Glikasyon Rehberi">
+    <meta property="og:description" content="Glikasyon (şeker + kolajen = yaşlanan cilt) — muz kabuğu kararması gibi ama cildinizde. Bilim ve pratik önlemler.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #FA8072;
+            --accent-light: #FCBDB7;
+            --accent-dark: #D95F52;
+
+            --primary: #D95F52;
+            --primary-dark: #b84a3e;
+            --primary-light: #f28a7f;
+            --primary-bg: rgba(217,95,82,0.07);
+            --primary-border: rgba(217,95,82,0.22);
+            --primary-gradient: linear-gradient(135deg, #D95F52, #b84a3e);
+            --primary-gradient-soft: linear-gradient(135deg, #fff1f0, rgba(252,189,183,0.2));
+
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fff1f0;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        /* ===== NAV ===== */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 900px; margin: 0 auto;
+            display: flex; align-items: center; gap: 16px;
+            height: 60px;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 8px;
+            text-decoration: none; color: var(--text); font-weight: 700; font-size: 18px;
+        }
+        .nav-logo svg { width: 36px; height: 36px; flex-shrink: 0; }
+        .brand-deri { color: #D95F52; }
+        .nav-back {
+            margin-left: auto;
+            display: flex; align-items: center; gap: 6px;
+            text-decoration: none; color: var(--text-s); font-size: 14px;
+            padding: 6px 14px; border: 1px solid var(--border);
+            border-radius: 8px; transition: all .2s;
+        }
+        .nav-back:hover { background: var(--bg-alt); color: var(--text); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(160deg, #fff1f0 0%, #fde8e6 40%, #fff8f8 100%);
+            padding: 60px 24px 40px;
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(217,95,82,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--primary-bg); border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 13px; font-weight: 600;
+            padding: 6px 16px; border-radius: 99px; margin-bottom: 20px;
+        }
+        .hero-icon {
+            font-size: 68px; line-height: 1;
+            animation: float 4s ease-in-out infinite;
+            display: block; margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: clamp(26px,5vw,40px); font-weight: 800;
+            line-height: 1.2; color: var(--text); margin-bottom: 14px;
+        }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 17px; color: var(--text-s); max-width: 580px; margin: 0 auto 28px; }
+        .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .hero-tag {
+            background: white; border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 13px; font-weight: 500;
+            padding: 5px 14px; border-radius: 99px;
+        }
+
+        /* ===== QUICK SUMMARY ===== */
+        .quick-summary { background: var(--primary-gradient); color: white; padding: 28px 24px; }
+        .quick-summary-inner { max-width: 760px; margin: 0 auto; }
+        .quick-summary h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; opacity: .95; }
+        .qs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; }
+        .qs-item { background: rgba(255,255,255,.15); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.5; }
+        .qs-item strong { display: block; font-weight: 700; margin-bottom: 3px; }
+
+        /* ===== CONTENT ===== */
+        .content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+        /* ===== SECTION ===== */
+        .section { margin-bottom: 64px; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--primary-bg); color: var(--primary-dark);
+            font-size: 12px; font-weight: 700; letter-spacing: .06em;
+            padding: 4px 12px; border-radius: 99px;
+            margin-bottom: 14px; text-transform: uppercase;
+        }
+        .section h2 { font-size: clamp(20px,3.5vw,26px); font-weight: 800; color: var(--text); margin-bottom: 16px; line-height: 1.3; }
+        .section p { color: var(--text-s); margin-bottom: 14px; line-height: 1.8; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* ===== INFO & PILL BOXES ===== */
+        .info-box {
+            background: var(--primary-bg); border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px; margin: 22px 0;
+        }
+        .info-box .label { font-size: 12px; font-weight: 700; color: var(--primary-dark); letter-spacing: .06em; margin-bottom: 6px; }
+        .info-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.7; }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns: 1fr; } }
+        .verdict-card {
+            border-radius: var(--radius-md); padding: 16px 18px;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .verdict-card.yap { background: #f0fdf4; border: 1.5px solid #86efac; }
+        .verdict-card.yapma { background: #fef2f2; border: 1.5px solid #fca5a5; }
+        .verdict-card .v-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+        .verdict-card .v-text { font-size: 14px; line-height: 1.6; }
+        .verdict-card.yap .v-text { color: #166534; }
+        .verdict-card.yapma .v-text { color: #7f1d1d; }
+        .verdict-card .v-label { font-weight: 800; font-size: 12px; display: block; margin-bottom: 3px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        /* ===== SECTION HEADER WITH NUMBER ===== */
+        .damage-header {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 16px;
+        }
+        .damage-num {
+            width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+            background: var(--primary-gradient); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 800;
+        }
+        .damage-header h2 { margin: 0; }
+
+        /* ===== INGREDIENT / ITEM PILLS ===== */
+        .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+        .pill {
+            font-size: 13px; font-weight: 600; padding: 4px 13px; border-radius: 99px;
+            border: 1px solid var(--primary-border); background: var(--primary-bg); color: var(--primary-dark);
+        }
+        .pill.bad { background: #fef2f2; border-color: #fca5a5; color: #7f1d1d; }
+        .pill.good { background: #f0fdf4; border-color: #86efac; color: #166534; }
+        .pill.neutral { background: #f8fafc; border-color: #cbd5e1; color: #475569; }
+
+        /* ===== SCIENCE NOTE ===== */
+        .science-note {
+            font-size: 13px; color: var(--text-t); font-style: italic;
+            border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 14px;
+        }
+
+        /* ===== ANALOGY BOX ===== */
+        .analogy-box {
+            background: linear-gradient(135deg, #fffbeb, #fef9ee);
+            border: 1.5px solid #fde68a;
+            border-radius: var(--radius-md); padding: 18px 22px; margin: 22px 0;
+        }
+        .analogy-box .a-label { font-size: 12px; font-weight: 700; color: #92400e; letter-spacing: .06em; margin-bottom: 6px; }
+        .analogy-box p { font-size: 15px; color: #78350f; margin: 0; line-height: 1.7; }
+
+        /* ===== STAT CALLOUT ===== */
+        .stat-callout {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+            gap: 12px; margin: 22px 0;
+        }
+        .stat-item {
+            background: var(--bg-elevated); border: 1px solid var(--primary-border);
+            border-radius: var(--radius-md); padding: 14px 16px; text-align: center;
+        }
+        .stat-num { font-size: 28px; font-weight: 800; color: var(--primary); line-height: 1.1; }
+        .stat-label { font-size: 12px; color: var(--text-s); margin-top: 4px; line-height: 1.4; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fffbeb; border: 1px solid #fde68a;
+            border-radius: var(--radius-md); padding: 14px 18px;
+            margin: 32px 0; font-size: 14px; color: #78350f;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .disclaimer .d-icon { font-size: 18px; flex-shrink: 0; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 60px;
+        }
+        .references h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+        .references ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .references li { font-size: 13px; color: var(--text-s); line-height: 1.6; }
+
+        /* ===== AUTHOR ===== */
+        .author-strip {
+            display: flex; align-items: center; gap: 14px;
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 18px 20px;
+            margin: 40px 0 20px;
+        }
+        .author-info .name { font-weight: 700; font-size: 15px; color: var(--text); }
+        .author-info .title { font-size: 13px; color: var(--text-s); margin-top: 2px; }
+        .author-badge {
+            margin-left: auto;
+            background: var(--primary-bg); border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 12px; font-weight: 600;
+            padding: 4px 10px; border-radius: 99px; white-space: nowrap;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1e293b; color: #94a3b8;
+            text-align: center; padding: 32px 24px; font-size: 14px; line-height: 1.7;
+        }
+        footer a { color: #FCBDB7; text-decoration: none; }
+        footer .brand { color: white; font-weight: 700; margin-bottom: 8px; }
+
+        /* ===== DIVIDER ===== */
+        .section-divider {
+            border: none; border-top: 2px dashed var(--primary-border);
+            margin: 16px 0 28px;
+        }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .fade-in { opacity:0; transform:translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="90" rx="14" fill="#fdf0ea"/>
+                <defs>
+                    <clipPath id="lh3"><rect x="5" y="5" width="90" height="80" rx="10"/></clipPath>
+                    <clipPath id="gh3"><circle cx="54" cy="50" r="29"/></clipPath>
+                </defs>
+                <g clip-path="url(#lh3)">
+                    <rect x="5" y="52" width="90" height="38" fill="#fce4cc" opacity="0.6"/>
+                    <rect x="5" y="62" width="90" height="33" fill="#FA8072" opacity="0.4"/>
+                    <rect x="5" y="70" width="90" height="25" fill="#c4705a" opacity="0.35"/>
+                    <rect x="5" y="78" width="90" height="17" fill="#f0d888" opacity="0.4"/>
+                </g>
+                <g clip-path="url(#gh3)">
+                    <rect x="25" y="21" width="58" height="58" fill="#fce4cc"/>
+                    <rect x="25" y="46" width="58" height="33" fill="#e8947a"/>
+                    <rect x="25" y="58" width="58" height="21" fill="#c4705a"/>
+                    <rect x="25" y="69" width="58" height="10" fill="#f0d888"/>
+                </g>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <rect x="5" y="5" width="90" height="80" rx="10" fill="none" stroke="#D95F52" stroke-width="1" opacity="0.5"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">🍬 Beslenme & Cilt Yaşlanması</div>
+    <span class="hero-icon">🍭</span>
+    <h1>Şeker Cildinizi Nasıl<br><span>Yaşlandırıyor?</span></h1>
+    <p>Glikasyon — şekerin kolajeninizle yaptığı sessiz anlaşma. Neden oluyor, ne zaman başlıyor ve bunu durdurmak için ne yapabilirsiniz?</p>
+    <div class="hero-tags">
+        <span class="hero-tag">Glikasyon</span>
+        <span class="hero-tag">AGE</span>
+        <span class="hero-tag">Kolajen</span>
+        <span class="hero-tag">Cilt Yaşlanması</span>
+        <span class="hero-tag">Glisemik İndeks</span>
+        <span class="hero-tag">Pişirme Yöntemi</span>
+    </div>
+</div>
+
+<!-- QUICK SUMMARY -->
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Glikasyon nedir?</strong>Şeker molekülleri kolajen liflerine yapışır, kimyasal çapraz bağlar oluşturur. Sonuç: sert, kırılgan, sararmış kolajen.</div>
+            <div class="qs-item"><strong>Hasar ne zaman başlar?</strong>20 yaşından itibaren birikim başlar. 80 yaşına geldiğinizde kolajeninizdeki AGE (ileri glikasyon ürünleri) miktarı 3.5 kata çıkıyor.</div>
+            <div class="qs-item"><strong>Asıl suçlular</strong>Şekerli içecekler ve tatlılar, evet — ama beyaz ekmek, beyaz pirinç, meyve suyu da aynı kategori. Ve ızgara/kızartma pişirme yöntemi de ekler.</div>
+            <div class="qs-item"><strong>Ne yapabilirsiniz?</strong>Şeker miktarını azalt, glisemik yükü düşür, pişirme yöntemini değiştir, C vitamini sabah rutinine ekle. Küçük değişiklikler, büyük fark.</div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <div class="d-icon">ℹ️</div>
+        <div>Bu içerik genel bilgilendirme amaçlıdır, tanı ve tedavi yerine geçmez. Cilt sorunlarınız için bir dermatoloji uzmanına başvurun.</div>
+    </div>
+
+    <!-- BÖLÜM 1: GLİKASYON NEDİR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">1</div>
+            <div>
+                <div class="section-label">Temel Kavram</div>
+                <h2>Glikasyon Nedir? — Kolajeninize Olan Şey</h2>
+            </div>
+        </div>
+
+        <p>Bir muz alın, kabuğunu bırakın — birkaç günde kararır. O kararma, şekerlerin oksijenle tepkimeye girmesinden kaynaklanır. Cildinizdeki glikasyon da aynı mantıkla çalışıyor — sadece daha yavaş, sessiz sedasiz.</p>
+
+        <p>Kan dolaşımınızdaki şeker molekülleri (glukoz ve fruktoz), kolajen ve elastin gibi protein liflerine yapışır. Bu yapışma bir kimyasal reaksiyon başlatır ve sonunda <strong>AGE</strong> (Advanced Glycation End Products — İleri Glikasyon Son Ürünleri) adı verilen hasar bileşikleri oluşur. Türkçesiyle: şeker artıkları kolajeninizin içine gömülür, onu içten çürütür.</p>
+
+        <p>Bu bileşiklerin bir kez oluştuğunda geri dönüşü yok. Kolajen lifleri birbiriyle çapraz bağ (cross-link) kurar, sertleşir ve işlevini yitirir. Dermatolog FW Danby'nin Clin Dermatol'de yayımlanan çalışması (2010) bunu şöyle özetliyor: glikasyon, cildin biyokimyasal yaşlanmasının en önemli motorlarından biridir.</p>
+
+        <div class="analogy-box">
+            <div class="a-label">🍮 Karamel Analojisi</div>
+            <p>Şekeri tavada ısıtırsanız önce erir, sonra yapışır, sertleşir, kahverengi olur — işte buna Maillard reaksiyonu deniyor. Glikasyon da aynı reaksiyonun vücudunuzda gerçekleşen, çok daha yavaş versiyonu. Kolajeniniz zamanla "karamelleşiyor."</p>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Glikasyon = şeker + kolajen → sertleşmiş, kırılgan, işlevsiz protein lifleri. Ve bu birikim bir kez başladığında geri alınamıyor. (Danby FW, Clin Dermatol. 2010)</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 2: CİLTTE NE OLUR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">2</div>
+            <div>
+                <div class="section-label">Gözle Görülen Etkiler</div>
+                <h2>Cildinizde Ne Değişiyor?</h2>
+            </div>
+        </div>
+
+        <p>Glikasyonun ciltteki etkileri başta gözden kaçar — ama birikiyor. Önce dokunsal bir değişim: cilt, eskisi gibi "zıplamıyor." Elastikiyeti azalmış kolajen yavaş toparlanır, kırışıklıklar yerleşmeye başlar.</p>
+
+        <p>Sonra renk değişimi gelir. AGE birikimi ciltte <strong>sarımsı ya da grimsi bir ton</strong> oluşturur — bu, glikasyonun en karakteristik bulgusudur. Uzun süredir fazla şeker tüketenlerde ve özellikle diyabetiklerde bu ton değişimi çok belirgindir. Pageon ve ekibinin Exp Dermatol'de yayımlanan deneyi (2008) kolajen glikasyonunu doğrudan cildin mekanik özelliklerindeki bozulmayla ilişkilendirdi.</p>
+
+        <p>Üç cephede hasar gelişir: <strong>sertleşme</strong> (sert kolajen kırışır), <strong>renk değişimi</strong> (AGE birikiminden grimsi/sarı ton) ve <strong>elastikiyet kaybı</strong> (cilt "geriye dönmez"). Buna bir de inflamasyon (iltihaplanma) eşlik eder — AGE'ler hücre reseptörlerini uyararak kronik düşük dereceli yangı başlatır, bu da iyileşmeyi yavaşlatır.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">⚡ Sertleşmiş kolajen</span>
+            <span class="pill bad">🎨 Grimsi/sarı cilt tonu</span>
+            <span class="pill bad">📉 Elastikiyet kaybı</span>
+            <span class="pill bad">🔥 Kronik inflamasyon</span>
+            <span class="pill bad">⏩ Erken kırışıklık</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Yüzünüzde açıklanamayan sarımsı/soluk ton ve elastikiyet kaybı varsa, bu glikasyonun birer el kartıdır. (Pageon H et al., Exp Dermatol. 2008)</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 3: HASAR NE ZAMAN BAŞLAR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">3</div>
+            <div>
+                <div class="section-label">Zaman Çizelgesi</div>
+                <h2>Hasar Ne Zaman Başlar? — Düşündüğünüzden Erken</h2>
+            </div>
+        </div>
+
+        <p>Glikasyon hasarını "yaşlıların sorunu" olarak düşünüyorsanız, üzgünüm — rakamlar size katılmıyor.</p>
+
+        <p>Verzijl ve ekibinin J Biol Chem'de yayımlanan kapsamlı araştırması (2000) kolajen glikasyonunu yaşla birlikte sistematik olarak inceledi: birikim <strong>20 yaşında başlıyor</strong> ve bitmeden devam ediyor. Sell ve arkadaşlarının 1996 tarihli çalışması ise rakamı netleştirdi: <strong>20-80 yaş arasında kolajeninizde glikasyon ürünleri 3,5 kat artıyor</strong>. Bu artışın yarısı 40-80 yaş arasında değil, 20-50 yaş arasında gerçekleşiyor.</p>
+
+        <p>Kısacası: glikasyona karşı önlem almak için "yaşlanana kadar beklemek" mantıklı değil. 25 yaşında alınan bir önlem, 45 yaşında alınan önlemin çok daha önünde başlıyor.</p>
+
+        <div class="stat-callout">
+            <div class="stat-item">
+                <div class="stat-num">20</div>
+                <div class="stat-label">Yaşından itibaren kolajen birikimi başlıyor</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">3.5×</div>
+                <div class="stat-label">20-80 yaş arası AGE artışı (Sell 1996)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">%1</div>
+                <div class="stat-label">Her yıl kaybedilen kolajen miktarı (30+ yaştan)</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Glikasyon 20 yaşında başlar, durmaz; 80 yaşa gelindiğinde kolajeninizdeki hasar 3.5 kat artmış olur. Önlem almak için ideal zaman: şu an. (Verzijl N et al., J Biol Chem. 2000; Sell DR et al., J Gerontol Biol Sci. 1996)</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 4: ASIL SUÇLULAR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">4</div>
+            <div>
+                <div class="section-label">Beslenme & Pişirme</div>
+                <h2>Asıl Suçlular — Sadece Şekerlemeler Değil</h2>
+            </div>
+        </div>
+
+        <p>"Ben tatlı yemiyorum ki" diyorsanız, devam edin — çünkü bu bölüm tam size göre.</p>
+
+        <p>Glikasyonu tetikleyen şey yalnızca çikolata veya pasta değil. <strong>Kan şekerini hızla yükselten her gıda</strong>, yani yüksek glisemik indeksli (GI) besinler, aynı problemi yaratıyor. Beyaz ekmek, beyaz pirinç, hazır meyve suyu, krakerler, beyaz makarna — bunlar kan şekerinizi ağzına kadar dolduruyor ve glikasyonu hızlandırıyor.</p>
+
+        <p>Ama işte beklenmedik bir ek suçlu: <strong>pişirme yöntemi</strong>. Gıdalar yüksek ısıda pişirilirken de AGE oluşur — buna "diyetle alınan AGE" (dietary AGE / dAGE) deniyor. Izgara, kızartma ve kavurma; haşlama, buğulama ve buharda pişirmeye göre çok daha yüksek miktarda AGE üretiyor. Kıtır kızarmış bir tavuk fırında ya da buharda pişirilmiş tavuktan dermatolojik açıdan çok daha "pahalıya" mal oluyor.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">❌ Beyaz ekmek / baguette</span>
+            <span class="pill bad">❌ Beyaz pirinç</span>
+            <span class="pill bad">❌ Hazır meyve suyu</span>
+            <span class="pill bad">❌ Şekerli içecekler</span>
+            <span class="pill bad">❌ Kraker, wafer, bisküvi</span>
+            <span class="pill bad">❌ Izgara / kızartma</span>
+            <span class="pill good">✓ Tam tahıllar</span>
+            <span class="pill good">✓ Baklagiller</span>
+            <span class="pill good">✓ Haşlama / buğulama</span>
+        </div>
+
+        <div class="analogy-box">
+            <div class="a-label">🧑‍🍳 Pişirme Yöntemi Neden Bu Kadar Önemli?</div>
+            <p>Ekmek kararınca Maillard reaksiyonu işlemiş demektir. Aynı reaksiyon kızarmış, ızgara yapılmış, karamelleşmiş gıdalarda da gerçekleşir. Bu gıdalardaki AGE doğrudan emilip kan dolaşımına karışıyor. Yani kızarmış yediğinizde hem hazır AGE yüklüyorsunuz hem de kan şekerini yükseltip vücudun kendi AGE'sini tetikliyorsunuz — çifte stres.</p>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Glikasyona karşı beslenme stratejisi iki cepheli: kan şekerini yavaş yükselt (düşük GI), ve pişirme sıcaklığını/yöntemini değiştir (buğulama, haşlama, az ısı).</p>
+        </div>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Fırında düşük ısıda veya buharda pişir. Tam tahıl, baklagil ve sebze ağırlıklı beslen. Tatlandırmak için bal yerine tarçın kullan.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Her gün ızgara veya kızartma yeme. "Meyve suyu sağlıklı" diyerek paket meyve suyu içme — içindeki şeker + fruktoz yükü yüksek.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 5: ŞEKERIN AKNE BAĞLANTISI -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">5</div>
+            <div>
+                <div class="section-label">Bonus: Akne Bağlantısı</div>
+                <h2>Şeker Sadece Yaşlandırmıyor — Akneyi de Körüklüyor</h2>
+            </div>
+        </div>
+
+        <p>Glikasyon konuşulduğunda genellikle yaşlanma öne çıkıyor. Ama yüksek glisemik diyetin başka bir kurbanı daha var: akneli cilt.</p>
+
+        <p>Smith ve ekibinin Am J Clin Nutr'da yayımladığı klinik çalışmada (2007) düşük glisemik yükü olan bir diyetin, yüksek glisemik yükü olan diyetle karşılaştırıldığında akne şiddetini anlamlı ölçüde azalttığı gösterildi. Mekanizma şu: kan şekeri yükselince insülin ve IGF-1 (insülin benzeri büyüme faktörü) artar → bu hormonlar yağ bezi aktivitesini ve keratinosit çoğalmasını uyarır → akne kötüleşir.</p>
+
+        <p>Yani yüksek şekerli bir diyet hem glikasyon yoluyla kolajeninizi yaşlandırıyor, hem de akne yoluyla o kolajenin zaten çalışmakta zorlandığı bir ortamı daha da kötüleştiriyor. İki cepheli saldırı.</p>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Düşük glisemik yükü olan bir diyet hem glikasyonu yavaşlatır hem akne şiddetini azaltır — aynı değişiklik, iki farklı kazanım. (Smith RN et al., Am J Clin Nutr. 2007;86(1):107–115)</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 6: NE YAPABİLİRSİNİZ -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">6</div>
+            <div>
+                <div class="section-label">Pratik Önlemler</div>
+                <h2>Glikasyona Karşı Ne Yapabilirsiniz?</h2>
+            </div>
+        </div>
+
+        <p>Geri alınamaz olan hasarı tersine çeviremezsiniz — ama yeni hasarı yavaşlatabilirsiniz. Ve bu, düşündüğünüzden daha erişilebilir.</p>
+
+        <p><strong>Beslenme cephesi:</strong> Şeker miktarını azaltmak ilk adım — ama daha az göze batan ikinci adım glisemik yükü düşürmek. Her öğüne lif, protein veya yağ eklemek kan şekerinin ani yükselmesini frenler. Tam tahıl ekmeği beyaz ekmeğe göre çok daha yavaş emilir. Meyveyi suyu olarak değil, tanesi olarak tüketin — lifli formda glisemik yük çok daha düşük.</p>
+
+        <p><strong>Pişirme cephesi:</strong> Haftada en az 4 gün düşük ısılı pişirmeye geçin. Izgara, kavurma ve kızartma günlük değil, haftada 1-2 kez. Buğulama ve haşlama daha az AGE üretiyor — hem vücudunuza dışarıdan AGE yüklemiyorsunuz, hem kan şekerini daha yavaş yükseltiyorsunuz.</p>
+
+        <p><strong>Cilt bakımı cephesi:</strong> C vitamini (L-askorbik asit) hem antioksidan olarak AGE'ye karşı bir miktar koruma sağlar, hem de kolajen sentezini aktive eder. Sabah rutininde kararlı ve tutarlı bir C vitamini serumu kullanmak, bu süreçte bilimsel bir dayanağa sahip tek topikal adımdır. Güneş koruyucu da kritik — UV ışınları glikasyonu hızlandırır.</p>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Düşük GI beslen, pişirme yöntemini değiştir, sabah rutinine %10-15 C vitamini serumu ekle, güneş koruyucu sür. Bunlar kanıtlı, uygulanabilir adımlar.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>"Ben zaten fazla tatlı yemiyorum" diyerek geçiştirme. Beyaz ekmek, pirinç ve hazır meyve suyu kan şekerini tatlılar kadar yükseltebiliyor.</div>
+            </div>
+        </div>
+
+        <div class="verdict-grid" style="margin-top:0">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Yap</span>Haftada 4+ gün buharda/haşlama pişir. Meyveyi tanesiyle ye. Öğünlere mutlaka lif veya protein ekle — salata, bakliyat, yumurta.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Yapma</span>Her gün ızgara/kavurma/kızartma ye. Bu yöntemler doğrudan diyetle AGE yüklemesi yapıyor — pişirme yöntemi de hesaba giriyor.</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Glikasyona karşı üç cephe: beslenme (düşük GI), mutfak (buharda pişirme) ve cilt bakımı (C vitamini + SPF). Üçünü bir arada yaparsanız, fark yaratırsınız.</p>
+        </div>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-strip fade-in">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🔬 Kanıta Dayalı</span>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Danby FW. <em>Nutrition and aging skin: sugar and glycation.</em> Clin Dermatol. 2010;28(4):409–411.</li>
+            <li>Verzijl N, DeGroot J, Thorpe SR, et al. <em>Effect of collagen turnover on the accumulation of advanced glycation end products.</em> J Biol Chem. 2000;275(50):39027–39031.</li>
+            <li>Sell DR, Monnier VM, et al. <em>Differential accumulation of advanced glycation end products in human tissues.</em> J Gerontol Biol Sci. 1996.</li>
+            <li>Smith RN, Mann NJ, Braue A, Mäkeläinen H, Varigos GA. <em>A low-glycemic-load diet improves symptoms in acne vulgaris patients: a randomized controlled trial.</em> Am J Clin Nutr. 2007;86(1):107–115.</li>
+            <li>Pageon H, Técher M-P, Asselineau D. <em>Reconstructed skin modified by glycation of the dermal equivalent as a model for the clinical consequences of skin aging and diabetes.</em> Exp Dermatol. 2008.</li>
+        </ol>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="../index.html#gorsel-rehberler">Görsel Rehberler</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:0.6">Bu içerik tıbbi tavsiye değildir. Cilt sağlığınız için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
