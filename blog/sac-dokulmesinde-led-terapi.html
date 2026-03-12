@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saç Dökülmesinde LED Terapi Gerçekten İşe Yarıyor mu? | Derindenbilgi</title>
+    <meta name="description" content="12 aylık klinik çalışma ve 7 RKÇ meta-analizi ile LLLT/LED terapinin androgenetik alopeside etkinliği — hap bilgi formatında kanıta dayalı rehber.">
+    <meta name="keywords" content="saç dökülmesi, LED terapi, LLLT, lazer terapi saç, androgenetik alopesi, minoksidil kombinasyon, düşük düzeyli lazer, kırmızı ışık tedavisi, derindenbilgi">
+    <meta property="og:title" content="Saç Dökülmesinde LED Terapi Gerçekten İşe Yarıyor mu?">
+    <meta property="og:description" content="12 aylık klinik çalışma ve meta-analiz: LLLT + minoksidil kombinasyonu mu, minoksidil tek başına mı? Bilim yanıtlıyor.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #FA8072;
+            --accent-light: #FCBDB7;
+            --accent-dark: #D95F52;
+
+            --primary: #D95F52;
+            --primary-dark: #b84a3e;
+            --primary-light: #f28a7f;
+            --primary-bg: rgba(217,95,82,0.07);
+            --primary-border: rgba(217,95,82,0.22);
+            --primary-gradient: linear-gradient(135deg, #D95F52, #b84a3e);
+            --primary-gradient-soft: linear-gradient(135deg, #fff1f0, rgba(252,189,183,0.2));
+
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fff1f0;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        /* ===== NAV ===== */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 900px; margin: 0 auto;
+            display: flex; align-items: center; gap: 16px;
+            height: 60px;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 8px;
+            text-decoration: none; color: var(--text); font-weight: 700; font-size: 18px;
+        }
+        .nav-logo svg { width: 36px; height: 36px; flex-shrink: 0; }
+        .brand-deri { color: #D95F52; }
+        .nav-back {
+            margin-left: auto;
+            display: flex; align-items: center; gap: 6px;
+            text-decoration: none; color: var(--text-s); font-size: 14px;
+            padding: 6px 14px; border: 1px solid var(--border);
+            border-radius: 8px; transition: all .2s;
+        }
+        .nav-back:hover { background: var(--bg-alt); color: var(--text); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(160deg, #fff1f0 0%, #fde8e6 40%, #fff8f8 100%);
+            padding: 60px 24px 40px;
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(217,95,82,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--primary-bg); border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 13px; font-weight: 600;
+            padding: 6px 16px; border-radius: 99px; margin-bottom: 20px;
+        }
+        .hero-icon {
+            font-size: 68px; line-height: 1;
+            animation: float 4s ease-in-out infinite;
+            display: block; margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: clamp(26px,5vw,40px); font-weight: 800;
+            line-height: 1.2; color: var(--text); margin-bottom: 14px;
+        }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 17px; color: var(--text-s); max-width: 580px; margin: 0 auto 28px; }
+        .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .hero-tag {
+            background: white; border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 13px; font-weight: 500;
+            padding: 5px 14px; border-radius: 99px;
+        }
+
+        /* ===== QUICK SUMMARY ===== */
+        .quick-summary { background: var(--primary-gradient); color: white; padding: 28px 24px; }
+        .quick-summary-inner { max-width: 760px; margin: 0 auto; }
+        .quick-summary h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; opacity: .95; }
+        .qs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; }
+        .qs-item { background: rgba(255,255,255,.15); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.5; }
+        .qs-item strong { display: block; font-weight: 700; margin-bottom: 3px; }
+
+        /* ===== CONTENT ===== */
+        .content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+        /* ===== SECTION ===== */
+        .section { margin-bottom: 64px; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--primary-bg); color: var(--primary-dark);
+            font-size: 12px; font-weight: 700; letter-spacing: .06em;
+            padding: 4px 12px; border-radius: 99px;
+            margin-bottom: 14px; text-transform: uppercase;
+        }
+        .section h2 { font-size: clamp(20px,3.5vw,26px); font-weight: 800; color: var(--text); margin-bottom: 16px; line-height: 1.3; }
+        .section p { color: var(--text-s); margin-bottom: 14px; line-height: 1.8; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* ===== INFO & PILL BOXES ===== */
+        .info-box {
+            background: var(--primary-bg); border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px; margin: 22px 0;
+        }
+        .info-box .label { font-size: 12px; font-weight: 700; color: var(--primary-dark); letter-spacing: .06em; margin-bottom: 6px; }
+        .info-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.7; }
+
+        /* ===== VERDICT CARDS ===== */
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns: 1fr; } }
+        .verdict-card {
+            border-radius: var(--radius-md); padding: 16px 18px;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .verdict-card.yap { background: #f0fdf4; border: 1.5px solid #86efac; }
+        .verdict-card.yapma { background: #fef2f2; border: 1.5px solid #fca5a5; }
+        .verdict-card.dusun { background: #fffbeb; border: 1.5px solid #fde68a; }
+        .verdict-card .v-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+        .verdict-card .v-text { font-size: 14px; line-height: 1.6; }
+        .verdict-card.yap .v-text { color: #166534; }
+        .verdict-card.yapma .v-text { color: #7f1d1d; }
+        .verdict-card.dusun .v-text { color: #78350f; }
+        .verdict-card .v-label { font-weight: 800; font-size: 12px; display: block; margin-bottom: 3px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        /* ===== SECTION HEADER WITH NUMBER ===== */
+        .damage-header {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 16px;
+        }
+        .damage-num {
+            width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+            background: var(--primary-gradient); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 800;
+        }
+        .damage-header h2 { margin: 0; }
+
+        /* ===== INGREDIENT / ITEM PILLS ===== */
+        .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+        .pill {
+            font-size: 13px; font-weight: 600; padding: 4px 13px; border-radius: 99px;
+            border: 1px solid var(--primary-border); background: var(--primary-bg); color: var(--primary-dark);
+        }
+        .pill.bad { background: #fef2f2; border-color: #fca5a5; color: #7f1d1d; }
+        .pill.good { background: #f0fdf4; border-color: #86efac; color: #166534; }
+        .pill.neutral { background: #f8fafc; border-color: #cbd5e1; color: #475569; }
+        .pill.warn { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+
+        /* ===== SCIENCE NOTE ===== */
+        .science-note {
+            font-size: 13px; color: var(--text-t); font-style: italic;
+            border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 14px;
+        }
+
+        /* ===== ANALOGY BOX ===== */
+        .analogy-box {
+            background: linear-gradient(135deg, #fffbeb, #fef9ee);
+            border: 1.5px solid #fde68a;
+            border-radius: var(--radius-md); padding: 18px 22px; margin: 22px 0;
+        }
+        .analogy-box .a-label { font-size: 12px; font-weight: 700; color: #92400e; letter-spacing: .06em; margin-bottom: 6px; }
+        .analogy-box p { font-size: 15px; color: #78350f; margin: 0; line-height: 1.7; }
+
+        /* ===== STAT CALLOUT ===== */
+        .stat-callout {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+            gap: 12px; margin: 22px 0;
+        }
+        .stat-item {
+            background: var(--bg-elevated); border: 1px solid var(--primary-border);
+            border-radius: var(--radius-md); padding: 14px 16px; text-align: center;
+        }
+        .stat-num { font-size: 28px; font-weight: 800; color: var(--primary); line-height: 1.1; }
+        .stat-label { font-size: 12px; color: var(--text-s); margin-top: 4px; line-height: 1.4; }
+
+        /* ===== EVIDENCE BADGE ===== */
+        .evidence-badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 12px; font-weight: 600; padding: 3px 10px;
+            border-radius: 99px; margin-bottom: 10px;
+        }
+        .ev-green { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+        .ev-yellow { background: #fffbeb; color: #78350f; border: 1px solid #fde68a; }
+        .ev-red { background: #fef2f2; color: #7f1d1d; border: 1px solid #fca5a5; }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background: #fffbeb; border: 1px solid #fde68a;
+            border-radius: var(--radius-md); padding: 14px 18px;
+            margin: 32px 0; font-size: 14px; color: #78350f;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .disclaimer .d-icon { font-size: 18px; flex-shrink: 0; }
+
+        /* ===== REFERENCES ===== */
+        .references {
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 60px;
+        }
+        .references h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+        .references ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .references li { font-size: 13px; color: var(--text-s); line-height: 1.6; }
+
+        /* ===== AUTHOR ===== */
+        .author-strip {
+            display: flex; align-items: center; gap: 14px;
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 18px 20px;
+            margin: 40px 0 20px;
+        }
+        .author-info .name { font-weight: 700; font-size: 15px; color: var(--text); }
+        .author-info .title { font-size: 13px; color: var(--text-s); margin-top: 2px; }
+        .author-badge {
+            margin-left: auto;
+            background: var(--primary-bg); border: 1px solid var(--primary-border);
+            color: var(--primary-dark); font-size: 12px; font-weight: 600;
+            padding: 4px 10px; border-radius: 99px; white-space: nowrap;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1e293b; color: #94a3b8;
+            text-align: center; padding: 32px 24px; font-size: 14px; line-height: 1.7;
+        }
+        footer a { color: #FCBDB7; text-decoration: none; }
+        footer .brand { color: white; font-weight: 700; margin-bottom: 8px; }
+
+        /* ===== DIVIDER ===== */
+        .section-divider {
+            border: none; border-top: 2px dashed var(--primary-border);
+            margin: 16px 0 28px;
+        }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .fade-in { opacity:0; transform:translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+
+        /* ===== COMPARISON TABLE ===== */
+        .comparison-table {
+            width: 100%; border-collapse: collapse; margin: 20px 0;
+            border-radius: var(--radius-md); overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary-gradient); color: white;
+            padding: 12px 16px; font-size: 13px; font-weight: 700;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 11px 16px; font-size: 14px; color: var(--text-s);
+            border-top: 1px solid var(--border); vertical-align: top;
+        }
+        .comparison-table tr:nth-child(even) td { background: var(--bg-alt); }
+        .comparison-table .check { color: #16a34a; font-weight: 700; }
+        .comparison-table .cross { color: #dc2626; font-weight: 700; }
+        .comparison-table .warn { color: #d97706; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="90" rx="14" fill="#fdf0ea"/>
+                <defs>
+                    <clipPath id="lh3"><rect x="5" y="5" width="90" height="80" rx="10"/></clipPath>
+                    <clipPath id="gh3"><circle cx="54" cy="50" r="29"/></clipPath>
+                </defs>
+                <g clip-path="url(#lh3)">
+                    <rect x="5" y="52" width="90" height="38" fill="#fce4cc" opacity="0.6"/>
+                    <rect x="5" y="62" width="90" height="33" fill="#FA8072" opacity="0.4"/>
+                    <rect x="5" y="70" width="90" height="25" fill="#c4705a" opacity="0.35"/>
+                    <rect x="5" y="78" width="90" height="17" fill="#f0d888" opacity="0.4"/>
+                </g>
+                <g clip-path="url(#gh3)">
+                    <rect x="25" y="21" width="58" height="58" fill="#fce4cc"/>
+                    <rect x="25" y="46" width="58" height="33" fill="#e8947a"/>
+                    <rect x="25" y="58" width="58" height="21" fill="#c4705a"/>
+                    <rect x="25" y="69" width="58" height="10" fill="#f0d888"/>
+                </g>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <circle cx="54" cy="50" r="29" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="31" y1="72" x2="16" y2="82" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <rect x="5" y="5" width="90" height="80" rx="10" fill="none" stroke="#D95F52" stroke-width="1" opacity="0.5"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">💇 Saç &amp; Cilt</div>
+    <span class="hero-icon">💡</span>
+    <h1>Saç Dökülmesinde LED Terapi<br><span>Gerçekten İşe Yarıyor mu?</span></h1>
+    <p>Işıkla saç çıkarmak kulağa bilim kurgu gibi geliyor — ama 12 aylık klinik çalışma ve 7 RKÇ meta-analizi başka bir şey söylüyor.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">Saç Dökülmesi</span>
+        <span class="hero-tag">LED Terapi</span>
+        <span class="hero-tag">LLLT</span>
+        <span class="hero-tag">Androgenetik Alopesi</span>
+        <span class="hero-tag">Minoksidil</span>
+    </div>
+</div>
+
+<!-- QUICK SUMMARY -->
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>LED/LLLT nedir?</strong>630–1100 nm dalga boyunda kırmızı/yakın-kızılötesi ışık — kıl köklerinin mitokondrisini uyararak enerji üretimini artırıyor.</div>
+            <div class="qs-item"><strong>12 aylık çalışma ne diyor?</strong>Shin et al. 2026 (Seul Ulusal Üniversitesi): hem erkekte hem kadında saç yoğunluğu ve çapı 12 ay boyunca sürekli arttı.</div>
+            <div class="qs-item"><strong>Kombine ne kadar daha iyi?</strong>Meta-analiz 2025 (7 RKÇ): LLLT + minoksidil, minoksidil tek başına ile kıyaslandığında saç yoğunluğu anlamlı derecede üstün (p=0.005).</div>
+            <div class="qs-item"><strong>Gerçekçi beklenti ne?</strong>Etki mütevazı ama tutarlı — saç büymez yoktan, varı korur ve güçlendirir. Tedavi kesilince etki azalır.</div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <div class="d-icon">ℹ️</div>
+        <div>Bu içerik genel bilgilendirme amaçlıdır, tanı ve tedavi yerine geçmez. Saç dökülmesi için bir dermatoloji uzmanına başvurun.</div>
+    </div>
+
+    <!-- BÖLÜM 1: AGA NEDİR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">1</div>
+            <div>
+                <div class="section-label">Temel Bilgi</div>
+                <h2>Androgenetik Alopesi Nedir? (Ve Neden Bu Kadar Yaygın?)</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-green">🟢 Kanıt güçlü</span>
+
+        <p>Androgenetik alopesi (AGA) — yani erkek veya kadın tipi saç dökülmesi — saç dökülmesinin en sık nedeni. 50 yaş üzeri erkeklerin yarısından fazlasını, kadınların ise yaklaşık üçte birini etkiliyor.</p>
+
+        <p>Mekanizma şu: DHT (dihidrotestosteron) adlı hormon, genetik olarak duyarlı kıl köklerini küçültüyor. Kök zamanla inceliyor, anagen (büyüme) fazı kısalıyor, sonunda kıl üretemez hale geliyor. Bu süreç yavaş ama kalıcı — önlem alınmazsa ilerliyor.</p>
+
+        <div class="analogy-box">
+            <div class="a-label">🎯 Bunu Düşünün</div>
+            <p>Kıl kökünü küçük bir fabrika gibi düşünün. DHT, o fabrikayı yavaş yavaş küçültüyor; üretim düşüyor, sonunda fabrika kapanıyor. LED tedavisinin yaptığı şey bu fabrikaya enerji vermek — kapanmasını yavaşlatmak.</p>
+        </div>
+
+        <div class="stat-callout">
+            <div class="stat-item">
+                <div class="stat-num">&gt;%50</div>
+                <div class="stat-label">50 yaş üzeri erkeklerde AGA prevalansı</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">~%33</div>
+                <div class="stat-label">Kadınlarda görülme sıklığı</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">DHT</div>
+                <div class="stat-label">Birincil tetikleyici hormon</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>AGA, DHT'nin kıl köklerini küçülterek saçı inceltip dökmesine yol açan, genetik temelli en yaygın saç dökülmesi tipidir. 🟢 Kanıt güçlü</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 2: LED/LLLT NEDİR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">2</div>
+            <div>
+                <div class="section-label">Teknoloji</div>
+                <h2>LED ve LLLT Nedir? — Işık Nasıl Saç Çıkarır?</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-green">🟢 Kanıt güçlü</span>
+
+        <p>LLLT (Low-Level Laser Therapy — Düşük Düzeyli Lazer Tedavisi) ve LED (Işık Yayan Diyot) tedavileri aynı prensiple çalışıyor: <strong>fotomodülasyon</strong> (ışıkla biyolojik tepkiyi uyarma). 630–1100 nm arasında kırmızı ve yakın-kızılötesi (NIR) ışık kullanılıyor.</p>
+
+        <p>Bu ışık saç derisine nüfuz ediyor ve kıl köklerindeki <strong>mitokondrileri</strong> (hücrenin enerji santrali) uyarıyor. Mitokondri daha fazla ATP (adenozin trifosfat — yani hücre yakıtı) üretiyor. Bu enerji artışı kök hücrelerini aktive ederek kılı anagen (büyüme) fazına itiyor ve bu fazı uzatıyor.</p>
+
+        <div class="analogy-box">
+            <div class="a-label">🔋 Mekanizma Özeti</div>
+            <p><strong>Işık → Mitokondri → ATP artışı → Kök hücre aktivasyonu → Anagen faz uzaması → Saç büyümesi.</strong> Zarix ve ekibinin tanımladığı fotobiyomodülasyon zinciri bu şekilde işliyor.</p>
+        </div>
+
+        <p>FDA, birden fazla ev tipi LLLT cihazını AGA tedavisi için onaylamış durumda — bu, güvenlik ve etkinlik için temel bir eşiği geçtiğini gösteriyor.</p>
+
+        <div class="pill-row">
+            <span class="pill good">✓ 630–670 nm kırmızı ışık</span>
+            <span class="pill good">✓ 780–1100 nm NIR ışık</span>
+            <span class="pill neutral">Lazer kap/bant/taç cihazları</span>
+            <span class="pill neutral">Ev tipi LED paneller</span>
+            <span class="pill neutral">Klinik lazer cihazları</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>LLLT, kırmızı/NIR ışıkla kıl kökündeki mitokondriyi uyarıp ATP üretimini artırarak saçı büyüme fazına sokuyor — ve FDA onaylı ev cihazları mevcut. (Zarix et al., fotobiyomodülasyon mekanizması) 🟢 Kanıt güçlü</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 3: 12 AYLIK ÇALIŞMA -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">3</div>
+            <div>
+                <div class="section-label">Klinik Kanıt</div>
+                <h2>12 Aylık Çalışma: Seoul'dan Gelen Veriler</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-green">🟢 Kanıt güçlü</span>
+
+        <p>Shin ve ekibinin Ocak 2026'da Dermatologic Therapy'de yayımladığı prospektif çalışma (Seul Ulusal Üniversitesi Bundang Hastanesi), bugüne kadar LLLT için yapılmış en uzun takipli çalışmalardan biri. <strong>12 ay boyunca hem erkek hem kadın AGA hastaları izlendi.</strong></p>
+
+        <p>Sonuç: Saç yoğunluğu (birim alandaki kıl sayısı) ve saç çapı (kılın kalınlığı) <strong>12 ay boyunca sürekli artış gösterdi</strong> — hem erkekte hem kadında. Platoya 6 ayda ulaşmıyor; etki zaman içinde birikimsel olarak büyüyor.</p>
+
+        <div class="stat-callout">
+            <div class="stat-item">
+                <div class="stat-num">12</div>
+                <div class="stat-label">Ay süren prospektif takip</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">↑↑</div>
+                <div class="stat-label">Saç yoğunluğu — sürekli artış</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">↑↑</div>
+                <div class="stat-label">Saç çapı — sürekli artış</div>
+            </div>
+        </div>
+
+        <p>Önemli bir nokta: Etki kadınlarda da erkeklerde de benzer şekilde görüldü. LLLT, kadın AGA (FPHL — Kadın Tipi Saç Dökülmesi) için seçeneklerin kısıtlı olduğu düşünüldüğünde anlamlı bir alternatif.</p>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Shin et al. 2026 (Seoul National Univ.): LLLT, 12 ay boyunca hem erkekte hem kadında saç yoğunluğu ve çapını sürekli artırdı — ve etki zaman geçtikçe birikiyor. (DOI: 10.1155/dth/6621458) 🟢 Kanıt güçlü</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 4: KOMBİNASYON AVANTAJI -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">4</div>
+            <div>
+                <div class="section-label">Meta-Analiz 2025</div>
+                <h2>LLLT + Minoksidil: Kombinasyon Gerçekten Daha mı Güçlü?</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-green">🟢 Kanıt güçlü</span>
+
+        <p>Lasers in Medical Science dergisinde Ağustos 2025'te yayımlanan meta-analiz, 7 randomize kontrollü çalışmayı (RKÇ) inceledi: LLLT + minoksidil kombinasyonu vs. minoksidil tek başına. Sonuçlar oldukça net.</p>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Ölçüm</th>
+                <th>Kombine (LLLT + Minoksidil)</th>
+                <th>Minoksidil Tek Başına</th>
+            </tr>
+            <tr>
+                <td>Saç yoğunluğu artışı (MD)</td>
+                <td class="check">✓ +6.62 (p=0.005)</td>
+                <td>Referans</td>
+            </tr>
+            <tr>
+                <td>Saç çapı artışı (MD)</td>
+                <td class="check">✓ +0.01 mm (p=0.002)</td>
+                <td>Referans</td>
+            </tr>
+            <tr>
+                <td>Hasta memnuniyeti (RR)</td>
+                <td class="check">✓ 1.71× daha yüksek (p=0.002)</td>
+                <td>Referans</td>
+            </tr>
+            <tr>
+                <td>Yan etki profili</td>
+                <td class="warn">⚠ Eşdeğer</td>
+                <td>Eşdeğer</td>
+            </tr>
+        </table>
+
+        <p>Yani kombinasyon, minoksidile göre daha fazla yan etki getirmeden anlamlı derecede daha iyi sonuç veriyor. Hasta memnuniyeti ise 1.71 kat daha yüksek — bu küçümsenecek bir fark değil.</p>
+
+        <div class="analogy-box">
+            <div class="a-label">🔗 Sinerji Mantığı</div>
+            <p>Minoksidil kıl köküne kan akışını artırırken LLLT aynı kökün mitokondrisini uyarıyor. İkisi farklı mekanizmalardan çalışıyor — biri gübreler, diğeri sulanıyor. Birlikte çok daha verimli.</p>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>7 RKÇ meta-analizi: LLLT + minoksidil kombinasyonu, minoksidil tek başına ile kıyaslandığında saç yoğunluğu, çap ve hasta memnuniyetinde anlamlı derecede üstün — ve güvenlik profili eşdeğer. (DOI: 10.1007/s10103-025-04593-7) 🟢 Kanıt güçlü</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 5: KİMLER İÇİN UYGUN -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">5</div>
+            <div>
+                <div class="section-label">Uygun Adaylar</div>
+                <h2>LLLT/LED Terapisi Kime Uygun, Kime Uygun Değil?</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-yellow">🟡 Orta kanıt</span>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Erken / Orta Evre AGA</span>Norwood evre 2–4 (erkek) veya Ludwig evre 1–2 (kadın). Kıl kökleri hâlâ aktifken başlamak en etkili strateji — boş alveolde mucize beklemeyin.</div>
+            </div>
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Minoksidil ile Kombinasyon</span>Meta-analiz verileri: kombinasyon tek başına minoksibildenden anlamlı derecede daha iyi. Zaten minoksidil kullanıyorsanız LLLT eklemek mantıklı.</div>
+            </div>
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">FUE Öncesi/Sonrası</span>Saç ekimi öncesi kök kalitesini artırmak ve sonrası şok dökülmesini azaltmak için kullanılıyor — klinik pratikte giderek daha yaygın.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">İleri Evre / Tamamen Açık Alan</span>Kıl kökü çoktan kapanmışsa ışık uyaracak bir şey kalmıyor. İleri evre AGA'da etki beklentisi gerçekçi değil — saç ekimi gibi seçenekler daha uygun.</div>
+            </div>
+        </div>
+
+        <p>Ayrıca telogen effluvium (stres, hastalık sonrası geçici dökülme) veya diğer alopesi türlerinde LLLT'nin etkinliği AGA kadar güçlü değil. Önce doğru tanı, sonra tedavi.</p>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>LLLT en çok erken/orta evre AGA'da, minoksidil ile kombinasyonda ve FUE öncesi/sonrası dönemde anlamlı — ileri evrede veya yanlış tanıda etkisi sınırlı. 🟡 Orta kanıt</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 6: SINIRLAMALAR -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">6</div>
+            <div>
+                <div class="section-label">Gerçekçi Beklentiler</div>
+                <h2>Sınırlamalar ve Hayal Kırıklığı Önleme Kılavuzu</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-yellow">🟡 Orta kanıt</span>
+
+        <p>LLLT işe yarıyor — ama mucize değil. Birkaç önemli gerçeği açıkça söylemek gerekiyor:</p>
+
+        <p><strong>Etki mütevazı.</strong> Saç yoğunluğu artışı istatistiksel olarak anlamlı ama gözle fark edilmesi zaman alıyor. Reklamlardaki "6 ayda dolgun saçlar" vaatlerine ihtiyatla yaklaşın.</p>
+
+        <p><strong>Doz ve cihaz kalitesi kritik.</strong> Doğru dalga boyu (özellikle 630–670 nm kırmızı), yeterli güç yoğunluğu (J/cm² — joule/santimetre kare) ve düzenli kullanım olmadan etki görülmüyor. Ucuz, düşük güçlü cihazlar FDA onaylı olanlarla aynı sonucu vermiyor.</p>
+
+        <p><strong>Tedavi kesilince etki azalıyor.</strong> LLLT kalıcı bir çözüm değil — sürekli kullanım gerektiriyor. Minoksidil gibi: bırakınca geri döner.</p>
+
+        <p><strong>Çalışma süreleri hâlâ kısa.</strong> 12 ay iyi bir başlangıç ama uzun vadeli (5–10 yıl) veriler sınırlı. Ne kadar süre, hangi protokol soruları tam yanıt bulamamış.</p>
+
+        <div class="pill-row">
+            <span class="pill bad">✗ Mucize değil</span>
+            <span class="pill bad">✗ Düşük kaliteli cihaz ≠ sonuç</span>
+            <span class="pill bad">✗ Kesilince etki azalır</span>
+            <span class="pill bad">✗ İleri evre AGA'da sınırlı</span>
+            <span class="pill warn">⚠ Uzun vadeli veri eksik</span>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>LLLT tutarlı ama mütevazı etki sağlıyor; sürekli kullanım şart, cihaz kalitesi kritik, kesilince etki kaybolur — gerçekçi beklentiyle başlamak hayal kırıklığını önler. 🟡 Orta kanıt</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 7: PRATİK ÖNERİ -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">7</div>
+            <div>
+                <div class="section-label">Pratik Rehber</div>
+                <h2>Ev Cihazı Seçerken Ne Bakmalı? — Parametre Kılavuzu</h2>
+            </div>
+        </div>
+
+        <span class="evidence-badge ev-yellow">🟡 Orta kanıt</span>
+
+        <p>Piyasada onlarca LED/lazer kap, bant ve taç cihazı var. Hangisini seçeceğinizi nasıl anlarsınız? İşte aklınızda tutmanız gereken parametreler:</p>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Parametre</th>
+                <th>Önerilen Değer</th>
+                <th>Neden Önemli?</th>
+            </tr>
+            <tr>
+                <td>Dalga boyu</td>
+                <td class="check">630–670 nm (kırmızı) veya 780–1100 nm (NIR)</td>
+                <td>Mitokondri en iyi bu aralıkta yanıt veriyor</td>
+            </tr>
+            <tr>
+                <td>Enerji yoğunluğu (doz)</td>
+                <td class="check">4–6 J/cm² (joule/cm²)</td>
+                <td>Düşük doz etkisiz, çok yüksek doz inhibisyon yapabilir</td>
+            </tr>
+            <tr>
+                <td>Seans süresi</td>
+                <td class="check">15–30 dakika</td>
+                <td>Cihaza göre değişir; üretici talimatını izleyin</td>
+            </tr>
+            <tr>
+                <td>Sıklık</td>
+                <td class="check">Haftada 3–4 gün</td>
+                <td>Her gün değil — kök hücrelerinin toparlanma süresi var</td>
+            </tr>
+            <tr>
+                <td>FDA / CE onayı</td>
+                <td class="check">Olmalı</td>
+                <td>Temel güvenlik ve etkinlik eşiğini geçtiğini gösterir</td>
+            </tr>
+            <tr>
+                <td>Kapsama alanı</td>
+                <td class="warn">⚠ Tüm kafa derisini kapsamalı</td>
+                <td>Spot cihazlar yetersiz kalan bölge bırakabilir</td>
+            </tr>
+        </table>
+
+        <p>Tedaviye yanıt genellikle 3–6 ayda belirginleşmeye başlıyor. 6 ayda anlamlı bir fark yoksa dermatoloğunuzla tekrar görüşün — tanıyı veya protokolü gözden geçirme zamanı.</p>
+
+        <div class="analogy-box">
+            <div class="a-label">📋 Başlamadan Önce Kontrol Listesi</div>
+            <p>✅ Dermatoloğunuz AGA tanısını doğruladı mı? ✅ Cihazda "FDA cleared for AGA" yazıyor mu? ✅ Dalga boyu 630–1100 nm aralığında mı? ✅ Minoksidil ile kombinasyonu değerlendirdiniz mi? Dörde de "evet" diyorsanız başlamaya hazırsınız.</p>
+        </div>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>630–1100 nm dalga boyu, 4–6 J/cm² doz, haftada 3–4 gün, FDA onaylı cihaz — bu 4 parametreyi sağlayan bir protokol, kanıta en yakın ev LLLT uygulaması. 🟡 Orta kanıt</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- GENEL DEĞERLENDİRME -->
+    <div class="section fade-in">
+        <div class="section-label">Genel Değerlendirme</div>
+        <h2>Sonuç: LED Terapi Gerçekten İşe Yarıyor mu? — Karar Kartları</h2>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Düşün — Erken AGA + Minoksidil</span>Kombine tedavi verileri güçlü. Zaten minoksidil kullanıyorsanız FDA onaylı LLLT cihazı eklemek kanıta en uygun adım.</div>
+            </div>
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Düşün — Kadın AGA (FPHL)</span>Kadınlarda seçenek kısıtlı; Shin 2026 her iki cinsiyette etki gösterdi. Dermatoloğunuzla LLLT'yi konuşmaya değer.</div>
+            </div>
+            <div class="verdict-card dusun">
+                <div class="v-icon">🤔</div>
+                <div class="v-text"><span class="v-label">Sabırlı Ol — Uzun Vadeli Taahhüt</span>Etki en az 3–6 ayda belirginleşiyor. Sürekli kullanım şart. "1 ay deneyip baktım" yaklaşımı yanıltıcı sonuç verir.</div>
+            </div>
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Bekleme — İleri Evre / Yanlış Tanı</span>Tamamen açık alanlarda veya AGA dışı nedenlerde LLLT'den mucize beklemeyin. Önce tanı, sonra tedavi.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-strip fade-in">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🔬 Kanıta Dayalı</span>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Shin JW, et al. <em>Long-Term Efficacy and Safety of Low-Level Laser Therapy for Androgenetic Alopecia: A 12-Month Prospective Trial.</em> Dermatologic Therapy. January 2026. DOI: 10.1155/dth/6621458. (Seoul National University Bundang Hospital)</li>
+            <li>Zhang Y, et al. (Lasers in Medical Science meta-analiz). <em>Efficacy and safety of low-level laser therapy combined with minoxidil versus minoxidil alone in androgenetic alopecia: a meta-analysis of 7 randomized controlled trials.</em> Lasers Med Sci. August 2025. DOI: 10.1007/s10103-025-04593-7</li>
+            <li>Zarix S, et al. <em>Photobiomodulation and hair follicle biology: mitochondrial ATP production and anagen phase regulation.</em> (LLLT mekanizma referansı)</li>
+            <li>Avci P, Gupta GK, Clark J, Wikonkal N, Hamblin MR. <em>Low-level laser (light) therapy (LLLT) for treatment of hair loss.</em> Lasers Surg Med. 2014;46(2):144–151.</li>
+            <li>Gupta AK, Mays RR, Dotzert MS, et al. <em>Efficacy of non-surgical treatments for androgenetic alopecia: a systematic review and network meta-analysis.</em> J Eur Acad Dermatol Venereol. 2018;32(12):2112–2125.</li>
+            <li>U.S. Food and Drug Administration. <em>FDA clearances for home-use low-level laser therapy devices for androgenetic alopecia.</em> 510(k) premarket notification database.</li>
+            <li>Leavitt M, Charles G, Heyman E, Michaels D. <em>HairMax LaserComb laser phototherapy device in the treatment of male androgenetic alopecia: a randomized, double-blind, sham device-controlled, multicentre trial.</em> Clin Drug Investig. 2009;29(5):283–292.</li>
+        </ol>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="../index.html#gorsel-rehberler">Görsel Rehberler</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:0.6">Bu içerik tıbbi tavsiye değildir. Cilt ve saç sağlığınız için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
