@@ -327,6 +327,23 @@
         .uzman-tag{padding:5px 14px;background:#fff;border:1px solid var(--accent-br);border-radius:100px;font-size:12px;font-weight:500;color:var(--accent-d)}
         @media(max-width:680px){.uzman-inner{grid-template-columns:1fr;text-align:center}.uzman-avatar{margin:0 auto}.uzman-hospital{justify-content:center}.uzman-tags{justify-content:center}}
 
+
+/* ===== SEARCH ===== */
+.search-btn{background:none;border:none;cursor:pointer;color:var(--text-light);padding:8px;border-radius:8px;display:flex;align-items:center;transition:.2s}
+.search-btn:hover{color:var(--accent);background:rgba(250,128,114,.1)}
+.search-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:flex-start;justify-content:center;padding-top:80px;backdrop-filter:blur(4px)}
+.search-overlay.open{display:flex}
+.search-box{background:#fff;border-radius:16px;width:100%;max-width:600px;box-shadow:0 20px 60px rgba(0,0,0,.2);overflow:hidden;margin:0 16px}
+.search-input-wrap{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid #f0ece8}
+#search-input{flex:1;border:none;outline:none;font-size:16px;color:#1a1a1a;background:transparent;font-family:inherit}
+.search-results{max-height:400px;overflow-y:auto}
+.search-result-item{display:flex;align-items:center;gap:12px;padding:14px 20px;text-decoration:none;color:inherit;transition:.15s;border-bottom:1px solid #f9f6f4}
+.search-result-item:hover,.search-result-item.active{background:#fdf8f6}
+.search-result-icon{width:36px;height:36px;border-radius:8px;background:rgba(250,128,114,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.search-result-info{flex:1;min-width:0}
+.search-result-cat{font-size:11px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.search-result-title{font-size:15px;font-weight:600;color:#1a1a1a;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-no-results{padding:32px 20px;text-align:center;color:#999;font-size:15px}
     </style>
 </head>
 <body>
@@ -348,6 +365,9 @@
             <a href="#sss">SSS</a>
             <a href="#araclar" class="nav-cta">Testlere Git →</a>
         </nav>
+        <button class="search-btn" onclick="toggleSearch()" aria-label="Ara">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
         <button class="ham" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
 </header>
@@ -580,6 +600,8 @@
     <div class="container reveal">
         <div class="s-head"><div class="s-label">Saç Sağlığı</div><h2 class="s-title">Derinlemesine Saç Bakımı</h2><p class="s-desc">Androgenetik alopesiden telogen effluviuma, kanıta dayalı saç dökülmesi bilgisi ve güncel tedavi yaklaşımları.</p></div>
         <div class="grid g3 grid-peek-6">
+            <a href="blog/sac-dokulmesinde-led-terapi.html" class="card" style="border-color:rgba(251,191,36,.25);background:linear-gradient(135deg,rgba(251,191,36,.04),rgba(250,128,114,.04))"><div class="card-i" style="background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.25)">💡</div><div class="card-t">Saç Dökülmesinde LED Terapi Gerçekten İşe Yarıyor mu?</div><div class="card-d">12 aylık klinik çalışma + 7 RKÇ meta-analizi: LLLT nedir, nasıl çalışır, minoksidil ile kombinasyonu ne kadar güçlü?</div><span class="card-tag" style="color:#D95F52">🆕 Yeni →</span></a>
+            <a href="blog/kuru-sampuan-rehberi.html" class="card" style="border-color:rgba(217,95,82,.25);background:linear-gradient(135deg,rgba(217,95,82,.04),rgba(139,92,246,.04))"><div class="card-i" style="background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.25)">🧴</div><div class="card-t">Kuru Şampuan: Nasıl Çalışır, Yan Etkileri Neler ve K18 Neden Farklı?</div><div class="card-d">Benzen skandalı, foliküler birikim riski ve K18 AirWash'ın domuz genomu teknolojisi — kuru şampuan rehberi.</div><span class="card-tag" style="color:#D95F52">🆕 Yeni →</span></a>
             <a href="blog/sac-dokulmesi-interaktif.html" class="card"><div class="card-i">💇</div><div class="card-t">Saç Dökülmesi Değerlendirme Aracı</div><div class="card-d">AGA, telogen effluvium, alopesi areata — 3 aşamalı interaktif değerlendirme, tedavi ve risk skoru.</div><span class="card-tag">✨ Yeni — Başla →</span></a>
             <a href="blog/minoxidil-rehberi.html" class="card"><div class="card-i">💊</div><div class="card-t">Minoxidil Rehberi</div><div class="card-d">%2 vs %5, köpük vs solüsyon: dozaj, etkinlik verileri ve yan etki profili.</div><span class="card-tag">✨ Yeni →</span></a>
             <a href="blog/tretinoin-minoxidil-kombine.html" class="card"><div class="card-i">🔬</div><div class="card-t">Tretinoin + Minoxidil Kombine</div><div class="card-d">Topikal tretinoin minoxidilin etkinliğini nasıl artırıyor? Mekanizma ve klinik veriler.</div><span class="card-tag">🔥 Gündem →</span></a>
@@ -862,6 +884,149 @@ function scSelectSkin(el,type){
     },300);
 }
 function scReset(){document.getElementById('scForm').style.display='block';document.getElementById('scResult').style.display='none';document.querySelectorAll('#scSkinType .test-opt').forEach(o=>o.classList.remove('sel'))}
+</script>
+
+<!-- ===== SEARCH OVERLAY ===== -->
+<div id="search-overlay" class="search-overlay" onclick="closeSearch(event)">
+  <div class="search-box" onclick="event.stopPropagation()">
+    <div class="search-input-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FA8072" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Ara... (retinol, güneş kremi, rozasea)" oninput="handleSearch(this.value)" autocomplete="off" spellcheck="false">
+      <button onclick="closeSearch()" style="background:none;border:none;cursor:pointer;color:#999;font-size:20px;line-height:1;padding:0 4px">✕</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<script>
+// ===== SEARCH INDEX =====
+const SEARCH_INDEX = [
+  { title: "Pahalı Güneş Kremi Gerçekten Daha mı İyi?", url: "blog/gunes-kremi-pahali-mi-olmali.html", tags: "güneş kremi spf fiyat koruma ucuz pahalı", cat: "Güneş Koruma", icon: "☀️" },
+  { title: "Güneşten Korunma Rehberi", url: "blog/gunesten-korunma-rehberi.html", tags: "güneş kremi spf uva uvb koruma rehber", cat: "Güneş Koruma", icon: "☀️" },
+  { title: "UV / SPF Rehber Aracı", url: "blog/uv-spf-rehberi-arac.html", tags: "uv spf rehber araç güneş koruma faktörü", cat: "Güneş Koruma", icon: "☀️" },
+  { title: "Güneş Kremi Seçim Rehberi", url: "blog/gunes-kremi-gorsel-rehber.html", tags: "güneş kremi seçim spf rehber görsel", cat: "Güneş Koruma", icon: "☀️" },
+  { title: "Saç Dökülmesinde LED Terapi Gerçekten İşe Yarıyor mu?", url: "blog/sac-dokulmesinde-led-terapi.html", tags: "saç dökülmesi led lllt laser minoksidil alopesi", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Kuru Şampuan: Nasıl Çalışır, Yan Etkileri Neler?", url: "blog/kuru-sampuan-rehberi.html", tags: "kuru şampuan k18 airwash benzen folikül saç", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Saç Dökülmesinde Tretinoin + Minoksidil", url: "blog/tretinoin-minoxidil-kombine.html", tags: "tretinoin minoksidil saç dökülmesi kombinasyon", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Saç Dökülmesi Tedavi Rehberi", url: "blog/sac-dokulmesi-tedavi-rehberi.html", tags: "saç dökülmesi tedavi alopesi erkek kadın", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Saç Dökülmesi İnteraktif Rehber", url: "blog/sac-dokulmesi-interaktif.html", tags: "saç dökülmesi interaktif araç değerlendirme", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Kadınlarda Saç Dökülmesi", url: "blog/kadinlarda-sac-dokulmesi.html", tags: "kadın saç dökülmesi androgenetik alopesi hormon", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Saç Ekimi Rehberi", url: "blog/sac-ekimi-rehberi.html", tags: "saç ekimi fue fut transplant", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Saç Dökülmesinde Şampuan Seçimi", url: "blog/sampuan-secimi-sac-dokulmesi.html", tags: "şampuan saç dökülmesi ketokonazol zinc", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Finasterid Rehberi", url: "blog/finasterid-rehberi.html", tags: "finasterid propecia saç dökülmesi erkek androjen", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Minoksidil Rehberi", url: "blog/minoxidil-rehberi.html", tags: "minoksidil minoxidil saç dökülmesi rogaine", cat: "Saç Bakımı", icon: "💇" },
+  { title: "Şeker Cildinizi Nasıl Yaşlandırıyor? Glikasyon Rehberi", url: "blog/glikasyon-cilt-yaslenmasi.html", tags: "glikasyon şeker yaşlanma kolajen cilt beslenme", cat: "Beslenme & Cilt", icon: "🍎" },
+  { title: "Beslenme ve Cilt Sağlığı", url: "blog/beslenme-ve-cilt-sagligi.html", tags: "beslenme cilt sağlık diyet omega vitamin", cat: "Beslenme & Cilt", icon: "🍎" },
+  { title: "Retinol Başlangıç Görsel Rehberi", url: "blog/retinol-gorsel-rehber.html", tags: "retinol başlangıç rehber görsel nasıl kullanılır", cat: "Aktif Maddeler", icon: "✨" },
+  { title: "Topikal A Vitamini Rehberi", url: "blog/topikal-a-vitamini-rehberi.html", tags: "retinol tretinoin retinoid a vitamini yaşlanma kırışıklık", cat: "Aktif Maddeler", icon: "✨" },
+  { title: "A Vitamini Testi", url: "blog/a-vitamini-testi.html", tags: "a vitamini retinol testi hangi ürün", cat: "Aktif Maddeler", icon: "✨" },
+  { title: "C Vitamini Serumu", url: "blog/c-vitamini-serumu.html", tags: "c vitamini serum antioksidan leke parlak cilt", cat: "Aktif Maddeler", icon: "✨" },
+  { title: "Oral Kolajen Takviyesi", url: "blog/oral-kolajen-takviyesi.html", tags: "kolajen takviye oral içme etkinlik peptid", cat: "Aktif Maddeler", icon: "✨" },
+  { title: "Oral vs Topikal Kolajen", url: "blog/oral-vs-topikal-kolajen.html", tags: "kolajen oral topikal serum karşılaştırma etki", cat: "Aktif Maddeler", icon: "✨" },
+  { title: "Leke Tedavisinde Yeni Nesil: Sisteamin (Cyspera)", url: "blog/cyspera-leke-tedavisi.html", tags: "leke sisteamin cyspera hidrokinon melazma hiperpigmentasyon", cat: "Leke Tedavisi", icon: "🔬" },
+  { title: "Hiperpigmentasyon Rehberi", url: "blog/hiperpigmentasyon-rehberi.html", tags: "hiperpigmentasyon leke melazma tedavi niasinamid", cat: "Leke Tedavisi", icon: "🔬" },
+  { title: "Ameliyat Sonrası İz Azaltma", url: "blog/ameliyat-sonrasi-iz-azaltma.html", tags: "ameliyat iz azaltma scar silikone yara", cat: "Leke Tedavisi", icon: "🔬" },
+  { title: "Botulinum Toksin Rehberi", url: "blog/botulinum-toksin-rehberi.html", tags: "botox botulinum toksin kırışıklık yüz enjeksiyon", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "Dermal Dolgu Rehberi", url: "blog/dermal-dolgu-rehberi.html", tags: "dolgu filler hyaluronik asit yüz hacim", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "Mezoterapi Rehberi", url: "blog/mezoterapi-rehberi.html", tags: "mezoterapi enjeksiyon cilt saç vitamin", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "PRP Tedavisi Rehberi", url: "blog/prp-tedavisi-rehberi.html", tags: "prp platelet zengin plazma saç cilt yüz", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "Kozmetik İşlemler Rehberi", url: "blog/kozmetik-islemler-rehberi.html", tags: "kozmetik işlem estetik ameliyatsız rehber", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "Sıvı Yüz Germe Rehberi", url: "blog/sivi-yuz-germe-rehberi.html", tags: "sıvı yüz germe thread lift ip askı", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "Lipofilling / Yağ Transferi", url: "blog/lipofilling-yag-transferi.html", tags: "lipofilling yağ transferi dolgu yüz", cat: "Kozmetik İşlemler", icon: "💉" },
+  { title: "Eksozom ve Somon DNA (PDRN)", url: "blog/eksozom-pdrn-somon-dna.html", tags: "eksozom pdrn somon dna saç cilt rejenerasyon", cat: "Yeni Tedaviler", icon: "🧬" },
+  { title: "HIFU / LIFU Ultrason Rehberi", url: "blog/hifu-lifu-ultrason-rehberi.html", tags: "hifu lifu ultrason yüz germe cilt sıkılaştırma", cat: "Cihazlar", icon: "📡" },
+  { title: "Endolift Lazer Rehberi", url: "blog/endolift-lazer-rehberi.html", tags: "endolift lazer yüz germe cilt sıkılaştırma", cat: "Cihazlar", icon: "📡" },
+  { title: "Lazer Tedavileri Rehberi", url: "blog/lazer-tedavileri-rehberi.html", tags: "lazer tedavi cilt leke scar fraksiyonel", cat: "Cihazlar", icon: "📡" },
+  { title: "LED Maskeler ve Elektroporasyon", url: "blog/led-maske-elektroporasyon-cihazlari.html", tags: "led maske elektroporasyon cihaz ev kullanım", cat: "Cihazlar", icon: "📡" },
+  { title: "Rozasea Bakım Rehberi", url: "blog/rozasea-cilt-bakimi.html", tags: "rozasea kızarıklık brimonidin bakım rutin hassas", cat: "Hastalıklar", icon: "🌿" },
+  { title: "Akne Rehberi", url: "blog/akne-rehberi.html", tags: "akne sivilce tedavi salisilik asit benzoil peroksit", cat: "Hastalıklar", icon: "🌿" },
+  { title: "Akneye Yatkın Cilt Bakımı", url: "blog/akne-cilt-bakimi.html", tags: "akne sivilce yağlı cilt bakım rutin", cat: "Hastalıklar", icon: "🌿" },
+  { title: "Akne Şiddeti Değerlendirme", url: "blog/akne-siddeti-degerlendirme.html", tags: "akne şiddet değerlendirme hafif orta ağır", cat: "Hastalıklar", icon: "🌿" },
+  { title: "20'li Yaşlarda Cilt Bakımı", url: "blog/20li-yaslarda-cilt-bakimi.html", tags: "20 yaş genç cilt bakım başlangıç rutin", cat: "Yaşa Göre Bakım", icon: "🧴" },
+  { title: "30'lu Yaşlarda Kolajen Kaybı", url: "blog/30lu-yaslarda-kolajen-kaybi.html", tags: "30 yaş kolajen kaybı yaşlanma cilt elastikiyet", cat: "Yaşa Göre Bakım", icon: "🧴" },
+  { title: "40 Yaş Üstü Hormon Değişimi ve Cilt", url: "blog/40-yas-ustu-hormon-degisimi.html", tags: "40 yaş hormon menopoz cilt kuru yaşlanma", cat: "Yaşa Göre Bakım", icon: "🧴" },
+  { title: "Hamilelikte Cilt Bakımı", url: "blog/hamilelikte-cilt-bakimi.html", tags: "hamilelik cilt bakım güvenli ürün melazma", cat: "Yaşa Göre Bakım", icon: "🧴" },
+  { title: "Cilt Bakımına Başlamak İçin Hiçbir Zaman Geç Değil", url: "blog/hicbir-zaman-gec-degil.html", tags: "başlangıç cilt bakım geç geç olmaz motivasyon", cat: "Genel Cilt", icon: "🧴" },
+  { title: "Mevsimsel Cilt Bakımı", url: "blog/mevsimsel-cilt-bakimi.html", tags: "mevsim kış yaz ilkbahar cilt bakım değişim", cat: "Genel Cilt", icon: "🧴" },
+  { title: "El Bakımı ve Solar Lentigo", url: "blog/el-bakimi-solar-lentigo.html", tags: "el leke solar lentigo yaşlanma güneş", cat: "Genel Cilt", icon: "🧴" },
+  { title: "Anti-Aging Rehberi", url: "blog/anti-aging-rehberi.html", tags: "anti aging yaşlanma karşı cilt bakım kolajen peptid", cat: "Genel Cilt", icon: "🧴" },
+  { title: "Erkekler İçin Cilt Bakımı", url: "blog/erkekler-cilt-bakimi.html", tags: "erkek cilt bakım tıraş rutin basit", cat: "Genel Cilt", icon: "🧴" },
+  { title: "Cilt Bakım İçerikleri Sözlüğü", url: "blog/cilt-bakim-icerikleri-sozlugu.html", tags: "sözlük içerik bileşen inci rehber terim", cat: "Genel Cilt", icon: "📖" },
+];
+
+// ===== SEARCH LOGIC =====
+let searchActiveIdx = -1;
+
+function searchContent(query) {
+  if (!query || query.length < 2) return [];
+  const q = query.toLowerCase().trim();
+  return SEARCH_INDEX.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.tags.toLowerCase().includes(q) ||
+    item.cat.toLowerCase().includes(q)
+  ).slice(0, 8);
+}
+
+function toggleSearch() {
+  const overlay = document.getElementById('search-overlay');
+  if (overlay.classList.contains('open')) {
+    closeSearch();
+  } else {
+    overlay.classList.add('open');
+    setTimeout(() => document.getElementById('search-input').focus(), 50);
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeSearch(event) {
+  if (event && event.target !== document.getElementById('search-overlay')) return;
+  document.getElementById('search-overlay').classList.remove('open');
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-results').innerHTML = '';
+  document.body.style.overflow = '';
+  searchActiveIdx = -1;
+}
+
+function handleSearch(query) {
+  const results = searchContent(query);
+  const container = document.getElementById('search-results');
+  searchActiveIdx = -1;
+  if (!query || query.length < 2) { container.innerHTML = ''; return; }
+  if (results.length === 0) {
+    container.innerHTML = '<div class="search-no-results">🔍 Sonuç bulunamadı</div>';
+    return;
+  }
+  container.innerHTML = results.map((item, i) =>
+    `<a href="${item.url}" class="search-result-item" data-idx="${i}">
+      <div class="search-result-icon">${item.icon||'📄'}</div>
+      <div class="search-result-info">
+        <div class="search-result-cat">${item.cat}</div>
+        <div class="search-result-title">${item.title}</div>
+      </div>
+    </a>`
+  ).join('');
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  const overlay = document.getElementById('search-overlay');
+  if (!overlay.classList.contains('open')) return;
+  const items = document.querySelectorAll('.search-result-item');
+  if (e.key === 'Escape') { closeSearch(); return; }
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    searchActiveIdx = Math.min(searchActiveIdx + 1, items.length - 1);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    searchActiveIdx = Math.max(searchActiveIdx - 1, -1);
+    if (searchActiveIdx === -1) { document.getElementById('search-input').focus(); return; }
+  } else if (e.key === 'Enter' && searchActiveIdx >= 0) {
+    if (items[searchActiveIdx]) items[searchActiveIdx].click();
+    return;
+  } else { return; }
+  items.forEach((el, i) => el.classList.toggle('active', i === searchActiveIdx));
+  if (items[searchActiveIdx]) items[searchActiveIdx].scrollIntoView({ block: 'nearest' });
+});
 </script>
 </body>
 </html>
