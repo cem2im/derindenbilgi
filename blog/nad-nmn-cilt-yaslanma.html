@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvard Profesörü Her Gün Alıyor: NAD+/NMN Takviyesi Cilde Gerçekten Yarıyor mu? | Derindenbilgi</title>
+    <meta name="description" content="David Sinclair etkisiyle herkes NMN aldı. 2025'te ilk insan klinik çalışması çıktı. Ama sürpriz bir twist var: cevap belki zaten dolabınızda.">
+    <meta name="keywords" content="NAD+, NMN, nikotinamid mononükleotid, NR nikotinamid ribozid, yaşlanma karşıtı takviye, David Sinclair, longevity, cilt yaşlanması, niasinamid, derindenbilgi">
+    <meta property="og:title" content="Harvard Profesörü Her Gün Alıyor: NAD+/NMN Takviyesi Cilde Gerçekten Yarıyor mu?">
+    <meta property="og:description" content="David Sinclair etkisiyle herkes NMN aldı. 2025 ilk insan klinik çalışması çıktı. Ama sürpriz bir twist var.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent: #FA8072;
+            --accent-light: #FCBDB7;
+            --accent-dark: #D95F52;
+            --primary: #D95F52;
+            --primary-dark: #b84a3e;
+            --primary-light: #f28a7f;
+            --primary-bg: rgba(217,95,82,0.07);
+            --primary-border: rgba(217,95,82,0.22);
+            --primary-gradient: linear-gradient(135deg, #D95F52, #b84a3e);
+            --primary-gradient-soft: linear-gradient(135deg, #fff1f0, rgba(252,189,183,0.2));
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-elevated: #fff1f0;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 900px; margin: 0 auto;
+            display: flex; align-items: center; gap: 16px;
+            height: 60px;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 8px;
+            text-decoration: none; color: var(--text); font-weight: 700; font-size: 18px;
+        }
+        .nav-logo svg { width: 36px; height: 36px; flex-shrink: 0; }
+        .brand-deri { color: #D95F52; }
+        .nav-back {
+            margin-left: auto;
+            display: flex; align-items: center; gap: 6px;
+            text-decoration: none; color: var(--text-s); font-size: 14px;
+            padding: 6px 14px; border: 1px solid var(--border);
+            border-radius: 8px; transition: all .2s;
+        }
+        .nav-back:hover { background: var(--bg-alt); color: var(--text); }
+
+        .hero {
+            background: linear-gradient(160deg, #ecfdf5 0%, #d1fae5 40%, #f0fdf4 100%);
+            padding: 60px 24px 40px;
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(16,185,129,0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(16,185,129,0.10); border: 1px solid rgba(16,185,129,0.3);
+            color: #065f46; font-size: 13px; font-weight: 600;
+            padding: 6px 16px; border-radius: 99px; margin-bottom: 20px;
+        }
+        .hero-icon {
+            font-size: 68px; line-height: 1;
+            animation: float 4s ease-in-out infinite;
+            display: block; margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: clamp(26px,5vw,40px); font-weight: 800;
+            line-height: 1.2; color: var(--text); margin-bottom: 14px;
+        }
+        .hero h1 span { color: #10b981; }
+        .hero p { font-size: 17px; color: var(--text-s); max-width: 580px; margin: 0 auto 28px; }
+        .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .hero-tag {
+            background: white; border: 1px solid rgba(16,185,129,0.3);
+            color: #065f46; font-size: 13px; font-weight: 500;
+            padding: 5px 14px; border-radius: 99px;
+        }
+
+        .quick-summary { background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 28px 24px; }
+        .quick-summary-inner { max-width: 760px; margin: 0 auto; }
+        .quick-summary h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; opacity: .95; }
+        .qs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; }
+        .qs-item { background: rgba(255,255,255,.15); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; line-height: 1.5; }
+        .qs-item strong { display: block; font-weight: 700; margin-bottom: 3px; }
+
+        .content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+        .section { margin-bottom: 64px; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(16,185,129,0.08); color: #065f46;
+            font-size: 12px; font-weight: 700; letter-spacing: .06em;
+            padding: 4px 12px; border-radius: 99px;
+            margin-bottom: 14px; text-transform: uppercase;
+        }
+        .section h2 { font-size: clamp(20px,3.5vw,26px); font-weight: 800; color: var(--text); margin-bottom: 16px; line-height: 1.3; }
+        .section p { color: var(--text-s); margin-bottom: 14px; line-height: 1.8; }
+        .section p:last-child { margin-bottom: 0; }
+
+        .info-box {
+            background: rgba(16,185,129,0.07); border-left: 4px solid #10b981;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px; margin: 22px 0;
+        }
+        .info-box .label { font-size: 12px; font-weight: 700; color: #065f46; letter-spacing: .06em; margin-bottom: 6px; }
+        .info-box p { font-size: 15px; color: var(--text); margin: 0; line-height: 1.7; }
+
+        .warning-box {
+            background: #fffbeb; border-left: 4px solid #f59e0b;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px; margin: 22px 0;
+        }
+        .warning-box .label { font-size: 12px; font-weight: 700; color: #92400e; letter-spacing: .06em; margin-bottom: 6px; }
+        .warning-box p { font-size: 15px; color: #78350f; margin: 0; line-height: 1.7; }
+
+        .twist-box {
+            background: linear-gradient(135deg, #fef9c3, #fef3c7);
+            border: 2px solid #fde68a; border-radius: var(--radius-lg);
+            padding: 24px 24px; margin: 28px 0;
+        }
+        .twist-box .twist-label { font-size: 13px; font-weight: 800; color: #92400e; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 10px; }
+        .twist-box h3 { font-size: 20px; font-weight: 800; color: #78350f; margin-bottom: 10px; }
+        .twist-box p { font-size: 15px; color: #92400e; margin: 0; line-height: 1.7; }
+
+        .verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns: 1fr; } }
+        .verdict-card {
+            border-radius: var(--radius-md); padding: 16px 18px;
+            display: flex; gap: 10px; align-items: flex-start;
+        }
+        .verdict-card.yap { background: #f0fdf4; border: 1.5px solid #86efac; }
+        .verdict-card.yapma { background: #fef2f2; border: 1.5px solid #fca5a5; }
+        .verdict-card.dikkat { background: #fffbeb; border: 1.5px solid #fde68a; }
+        .verdict-card .v-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+        .verdict-card .v-text { font-size: 14px; line-height: 1.6; }
+        .verdict-card.yap .v-text { color: #166534; }
+        .verdict-card.yapma .v-text { color: #7f1d1d; }
+        .verdict-card.dikkat .v-text { color: #78350f; }
+        .verdict-card .v-label { font-weight: 800; font-size: 12px; display: block; margin-bottom: 3px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        .damage-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+        .damage-num {
+            width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+            background: linear-gradient(135deg, #10b981, #059669); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 800;
+        }
+        .damage-header h2 { margin: 0; }
+
+        .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+        .pill {
+            font-size: 13px; font-weight: 600; padding: 4px 13px; border-radius: 99px;
+            border: 1px solid rgba(16,185,129,0.3); background: rgba(16,185,129,0.07); color: #065f46;
+        }
+        .pill.bad { background: #fef2f2; border-color: #fca5a5; color: #7f1d1d; }
+        .pill.good { background: #f0fdf4; border-color: #86efac; color: #166534; }
+        .pill.neutral { background: #f8fafc; border-color: #cbd5e1; color: #475569; }
+        .pill.gold { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+        .comparison-table th { background: rgba(16,185,129,0.1); color: #065f46; font-weight: 700; padding: 10px 14px; text-align: left; border-bottom: 2px solid rgba(16,185,129,0.2); }
+        .comparison-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-s); vertical-align: top; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table .highlight { color: #065f46; font-weight: 600; }
+
+        .section-divider { border: none; border-top: 1px dashed var(--border); margin: 56px 0; }
+
+        .science-note {
+            font-size: 13px; color: var(--text-t); font-style: italic;
+            border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 14px;
+        }
+
+        .author-strip {
+            display: flex; align-items: center; gap: 14px;
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-md); padding: 16px 20px; margin: 48px 0 32px;
+        }
+        .author-strip .author-info .name { font-weight: 700; color: var(--text); }
+        .author-strip .author-info .title { font-size: 13px; color: var(--text-s); }
+        .author-badge {
+            margin-left: auto; background: rgba(16,185,129,0.08);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: #065f46; font-size: 12px; font-weight: 700;
+            padding: 4px 12px; border-radius: 99px; white-space: nowrap;
+        }
+
+        .references {
+            background: var(--bg-alt); border: 1px solid var(--border);
+            border-radius: var(--radius-md); padding: 24px;
+        }
+        .references h3 { font-size: 15px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+        .references ol { padding-left: 20px; }
+        .references li { font-size: 13px; color: var(--text-s); margin-bottom: 8px; line-height: 1.6; }
+        .references li em { font-style: italic; }
+
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        footer {
+            background: #1e293b; color: rgba(255,255,255,0.7);
+            text-align: center; padding: 40px 24px; font-size: 14px;
+        }
+        footer .brand { font-size: 22px; font-weight: 800; color: white; margin-bottom: 8px; }
+        footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="96" fill="#fdf0ea"/>
+                <circle cx="88" cy="88" r="52" stroke="#D95F52" stroke-width="5" fill="none"/>
+                <circle cx="88" cy="88" r="60" stroke="rgba(150,50,30,0.18)" stroke-width="8" fill="none"/>
+                <ellipse cx="88" cy="88" rx="38" ry="38" fill="#fce4cc" opacity="0.9"/>
+                <ellipse cx="88" cy="88" rx="30" ry="30" fill="#e8947a"/>
+                <ellipse cx="88" cy="88" rx="20" ry="20" fill="#c4705a"/>
+                <line x1="127" y1="127" x2="165" y2="165" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="127" y1="127" x2="165" y2="165" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html#blog" class="nav-back">← Blog</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">🔋 Longevity &amp; Cilt Bilimi</div>
+    <span class="hero-icon">⚡</span>
+    <h1>Harvard Profesörü Her Gün Alıyor:<br><span>NAD+/NMN Takviyesi</span> Cilde<br>Gerçekten Yarıyor mu?</h1>
+    <p>David Sinclair etkisiyle milyonlarca insan NMN aldı. 2025'te ilk büyük insan çalışması çıktı. Ama sürpriz bir twist var — cevap belki zaten dolabınızda.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">NAD+</span>
+        <span class="hero-tag">NMN · NR</span>
+        <span class="hero-tag">Longevity</span>
+        <span class="hero-tag">Hücresel Yaşlanma</span>
+        <span class="hero-tag">Niasinamid Bağlantısı</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>NAD+ nedir?</strong>Hücrenin enerji ve DNA onarım molekülü — 40'lı yaşlarda %50 azalıyor.</div>
+            <div class="qs-item"><strong>NMN / NR nedir?</strong>NAD+'nın öncüsü — takviye ile alındığında vücutta NAD+'ya dönüşüyor.</div>
+            <div class="qs-item"><strong>Kanıt durumu?</strong>2025'te ilk insan klinik çalışması. Umut verici ama örneklem hâlâ küçük.</div>
+            <div class="qs-item"><strong>Twist?</strong>Niasinamid (B3 vit.) de bir NAD+ öncüsü — topikal, ucuz, çok daha kanıtlı.</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- BÖLÜM 1 -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">1</div>
+            <div>
+                <div class="section-label">Temelden Başlayalım</div>
+                <h2>NAD+ Nedir? Neden Bu Kadar Önemli?</h2>
+            </div>
+        </div>
+
+        <p>Telefonunuzu düşünün. Pil doluyken her şey mükemmel çalışıyor — uygulamalar hızlı, kamera net, ses güçlü. Pil bittikçe her şey yavaşlıyor, işler aksıyor. NAD+ (nikotinamid adenin dinükleotid), hücrelerinizin pili gibi.</p>
+
+        <p>Mitokondri (hücrenin enerji üretim merkezi) enerji üretmek için NAD+'ya muhtaç. DNA onarım enzimleri çalışmak için NAD+'ya muhtaç. SIRT1 ve SIRT3 gibi "longevity proteinleri" aktive olmak için NAD+'ya muhtaç. Kısacası: NAD+ olmadan hücre düzgün çalışamıyor.</p>
+
+        <p>Sorun şu: NAD+ seviyeleri 20'li yaşlardan itibaren düşmeye başlıyor. 40 yaşına geldiğimizde yaklaşık yarıya iniyor. 60'larda ise 20'li yaşlardaki seviyenin dörtte birine kadar gerileyebiliyor. Ve bu düşüş, hücresel yaşlanmanın hızlanmasıyla birebir örtüşüyor.</p>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>NAD+ hücrenin hem enerji parası hem de onarım anahtarı — 40 yaşında yüzde ellisi gitmiş oluyor, bu da yaşlanma sürecinin önemli bir parçası.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 2 -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">2</div>
+            <div>
+                <div class="section-label">David Sinclair Etkisi</div>
+                <h2>"Harvard Profesörü Alıyorsa Ben de Alayım"</h2>
+            </div>
+        </div>
+
+        <p>2019'da Harvard genetik profesörü David Sinclair, "Lifespan" adlı kitabında şunu yazdı: "Ben her gün NMN alıyorum, resveratrol alıyorum, metformin alıyorum." Bunları söyleyen sıradan bir influencer değil, Science ve Cell dergilerinde 100'den fazla makalesi olan bir bilim insanıydı.</p>
+
+        <p>İnternet bu haberi kapıp aldı. NMN araması Google'da patladı. Ürünler Amazon'da tükendi. Küçük şirketler bir gecede büyük cirolar yakaladı. 2023'te NMN piyasasının büyüklüğü 300 milyon doları geçti.</p>
+
+        <p>Peki bilim ne diyor? Sinclair'in araştırmaları ağırlıklı olarak fare çalışmalarıydı — ve fareler üzerindeki sonuçlar gerçekten etkileyiciydi. Ama fareler insan değil. İnsan çalışmalarına ihtiyaç vardı.</p>
+
+        <div class="warning-box">
+            <div class="label">⚠️ Dikkat</div>
+            <p>Sinclair'in kendi NMN kullanımı bir klinik çalışma değil, kişisel tercihi. Bir bilim insanının bir şeyi alması, o şeyin işe yaradığını kanıtlamaz — sadece riski kabul ettiğini gösterir.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 3 -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">3</div>
+            <div>
+                <div class="section-label">Bilim Güncellemesi 2025</div>
+                <h2>İlk Büyük İnsan Çalışması Sonunda Çıktı</h2>
+            </div>
+        </div>
+
+        <p>Haziran 2025'te ScienceDaily'de duyurulan Chiba Üniversitesi araştırması, NR (nikotinamid ribozid — NMN'nin kardeş molekülü) ile yapılan ilk kontrollü insan klinik çalışmasıydı. Sonuç? Umut verici: erken yaşlanma belirtileri olan katılımcılarda bazı biyomarkerlarda iyileşme gözlemlendi.</p>
+
+        <p>Kasım 2025'te MDPI'da yayımlanan bir fare çalışması ise oral NMN'nin 10 haftalık uygulamasında kırışık oluşumunu azalttığını, nem ve elastikiyeti artırdığını, güneş hasarına karşı koruma sağladığını gösterdi.</p>
+
+        <p>Sizi heyecanlandırmak istemiyorum ama hayal kırıklığına da uğratmak istemiyorum. Gerçek şu: her iki çalışma da önemli sinyaller veriyor, ama insan çalışmaları hâlâ az sayıda ve küçük örneklemli. Büyük, uzun vadeli RCT'lere ihtiyaç var.</p>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Çalışma</th>
+                <th>Bulgu</th>
+                <th>Sınırlılık</th>
+            </tr>
+            <tr>
+                <td>Chiba Üniv. / ScienceDaily, Haz 2025</td>
+                <td class="highlight">NR → yaşlanma biyomarkerlarında iyileşme</td>
+                <td>Küçük örneklem, kısa süre</td>
+            </tr>
+            <tr>
+                <td>MDPI, Kas 2025 (fare)</td>
+                <td class="highlight">Oral NMN → daha az kırışık, daha iyi elastikiyet</td>
+                <td>Fare çalışması — insana doğrudan geçişi belirsiz</td>
+            </tr>
+            <tr>
+                <td>ScienceDirect Meta-analiz, 2023</td>
+                <td class="highlight">NMN güvenli, NAD+ seviyelerini artırıyor</td>
+                <td>Etkinlik için daha fazla veri gerekiyor</td>
+            </tr>
+        </table>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>NAD+/NMN'nin mekanizması güçlü, güvenlik profili iyi — ama ciltte somut etki için insan kanıtı hâlâ yetersiz. Henüz "kanıtlanmış" değil, "umut verici" aşamasında.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 4 -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">4</div>
+            <div>
+                <div class="section-label">Kafa Karıştıran Detay</div>
+                <h2>NMN mi Almalı, NR mi? Fark Var mı?</h2>
+            </div>
+        </div>
+
+        <p>Piyasada iki ana NAD+ öncüsü var: NMN (nikotinamid mononükleotid) ve NR (nikotinamid ribozid). İkisi de vücutta NAD+'ya dönüşüyor — ama hangi yoldan, hangi hızda, hangi dokuya daha iyi ulaşıyor? Bu sorular hâlâ tartışmalı.</p>
+
+        <p>Bazı araştırmacılar NMN'nin bağırsaktan emilmesinin sorgulanabilir olduğunu öne sürüyor. Bazıları NR'nin daha iyi emildiğini savunuyor. Sinclair NMN'den yana. Diğer longevity araştırmacıları NR'den yana. Yani bu konuda dünyanın en iyi bilim insanları bile anlaşamıyor.</p>
+
+        <div class="pill-row">
+            <span class="pill good">NMN — Sinclair'in tercihi</span>
+            <span class="pill good">NR — Chiba 2025 çalışması</span>
+            <span class="pill neutral">İkisi de NAD+'ya dönüşüyor</span>
+            <span class="pill neutral">Hangisi daha iyi? Belirsiz</span>
+        </div>
+
+        <p>Tüketici için pratik sonuç: hangisini alacağınız konusunda bilimin net bir yönlendirmesi yok. Bu, bilinçli bir tercih değil — bir şans oyunu.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 5 — TWIST -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">5</div>
+            <div>
+                <div class="section-label">🎯 Sürpriz Twist</div>
+                <h2>Cevap Belki Zaten Dolabınızda</h2>
+            </div>
+        </div>
+
+        <div class="twist-box">
+            <div class="twist-label">💡 Beklenmedik Bağlantı</div>
+            <h3>Niasinamid de bir NAD+ öncüsü</h3>
+            <p>B3 vitamini olan niasinamid (nikotinamid), vücutta NAD+'ya dönüşen en temel öncü moleküldür. Ve büyük ihtimalle zaten kullandığınız bir serumda var — çünkü niasinamid gözenek görünümünü azaltmak, ton eşitleme ve bariyer onarımı için onlarca yıldır kullanılan, çok sayıda RCT ile desteklenmiş bir aktif.</p>
+        </div>
+
+        <p>Şimdi fiyat karşılaştırmasına bakalım: Kaliteli bir NMN takviyesi aylık 500-2000 TL aralığında. Kaliteli bir %10 niasinamid serumu 100-300 TL. Ve niasinamid, NMN'den çok daha fazla insan klinik çalışmasına sahip.</p>
+
+        <p>Tabii ki oral NMN farklı bir yoldan (sistemik, tüm vücut) etki ediyor — niasinamid ise topikal. Ama cildiniz söz konusu olduğunda, topikal niasinamid zaten doğrudan cilde ulaşıyor. NMN kapsülünün deriye ne kadar yansıdığı ise henüz bilinmiyor.</p>
+
+        <div class="info-box">
+            <div class="label">💊 Tek Cümleyle</div>
+            <p>Niasinamid hem kanıtlı hem ucuz hem de erişilebilir bir NAD+ öncüsü — NMN/NR takviyeleri bu mekanizma için binlerce lira harcarken, niasinamid serumu aynı yolu topikal olarak daha az riskle destekliyor.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BÖLÜM 6 -->
+    <div class="section fade-in">
+        <div class="damage-header">
+            <div class="damage-num">6</div>
+            <div>
+                <div class="section-label">Ne Yapmalı?</div>
+                <h2>NAD+ Stratejisi: Pahalı mı, Akıllı mı?</h2>
+            </div>
+        </div>
+
+        <p>Eğer NMN veya NR takviyesi almayı düşünüyorsanız, önce şunu sorun: "Bu paramı SPF'e, retinole ve niasinamide harcasam ne kadar daha fazla kanıtlı etki alırdım?" Çoğu zaman cevap "çok daha fazla" oluyor.</p>
+
+        <p>Bu, NMN'nin işe yaramadığı anlamına gelmiyor. Mekanizma bilimi güçlü. Gelecek yıllarda daha büyük çalışmalar geldikçe tablo netleşecek. Ama şu an için "kanıtlanmış cilt aktifi" kategorisine girmediğini bilmek önemli.</p>
+
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Mantıklı</span>Önce temel aktifler: %10 niasinamid serumu, retinol, C vitamini, SPF. Bunların kanıtı çok daha sağlam ve çok daha ucuz.</div>
+            </div>
+            <div class="verdict-card dikkat">
+                <div class="v-icon">🤔</div>
+                <div class="v-text"><span class="v-label">Düşün</span>NMN/NR almak istiyorsanız, güvenlik profili iyi — ama "işe yaradığı" kanıtlanmış değil. Bütçenize göre karar verin.</div>
+            </div>
+        </div>
+        <div class="verdict-grid" style="margin-top:0">
+            <div class="verdict-card yapma">
+                <div class="v-icon">❌</div>
+                <div class="v-text"><span class="v-label">Kaçının</span>Temel cilt bakımı yapmadan pahalı longevity takviyeleri almak. Sıra önemli — temel önce.</div>
+            </div>
+            <div class="verdict-card yap">
+                <div class="v-icon">✅</div>
+                <div class="v-text"><span class="v-label">Takip Edin</span>Bu alan hızla gelişiyor. 2026-2027'de daha büyük RCT'ler bekleniyor. Birkaç yıl içinde tablo çok farklı olabilir.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-strip fade-in">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🔬 Kanıta Dayalı</span>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Chiba University / ScienceDaily. <em>Common supplement reverses premature aging in landmark human trial.</em> Jun 2025.</li>
+            <li>MDPI Antioxidants. <em>β-Nicotinamide Mononucleotide Enhances Skin Barrier Function and Attenuates UV-B-Induced Photoaging in Mice.</em> Nov 2025;14(12):1424.</li>
+            <li>Liao B, Zhao Y, Wang D, et al. <em>Nicotinamide mononucleotide supplementation enhances aerobic capacity in amateur runners: a randomized, double-blind study.</em> J Int Soc Sports Nutr. 2021;18(1):54.</li>
+            <li>Yoshino M, Yoshino J, et al. <em>Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women.</em> Science. 2021;372(6547):1224–1229.</li>
+            <li>Braidy N, et al. <em>The Safety and Antiaging Effects of Nicotinamide Mononucleotide in Human Clinical Trials: an Update.</em> ScienceDirect. 2023.</li>
+            <li>Gehring W. <em>Nicotinic acid/niacinamide and the skin.</em> J Cosmet Dermatol. 2004;3(2):88–93.</li>
+        </ol>
+    </div>
+</div>
+
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="../index.html#gorsel-rehberler">Görsel Rehberler</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:0.6">Bu içerik tıbbi tavsiye değildir. Cilt sağlığınız için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
