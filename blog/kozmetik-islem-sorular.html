@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kozmetik İşlem Yaptırmadan Sorman Gereken 3 Soru | Derindenbilgi</title>
+    <meta name="description" content="Botoks, dolgu, lazer, PRP — herhangi bir kozmetik işlem yaptırmadan önce sormanız gereken 3 kritik soru. Kendinizi korumanın en basit yolu.">
+    <meta name="keywords" content="kozmetik işlem soru, botoks öncesi, dolgu öncesi, kozmetik işlem güvenlik, estetik işlem soru, dermatolog, kozmetik hekim yetkinlik, komplikasyon, derindenbilgi">
+    <meta property="og:title" content="Kozmetik İşlem Yaptırmadan Sorman Gereken 3 Soru">
+    <meta property="og:description" content="Botoks mu, dolgu mu, lazer mi? Herhangi bir işlem öncesi bu 3 soruyu sormak sizi büyük hata ve riskten koruyabilir.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #FA8072; --accent-dark: #D95F52; --accent-light: #FCBDB7;
+            --primary: #D95F52; --primary-bg: rgba(217,95,82,0.07); --primary-border: rgba(217,95,82,0.22);
+            --text: #1e293b; --text-s: #64748b; --text-t: #94a3b8;
+            --bg: #fff; --bg-alt: #f8fafc; --border: #e2e8f0;
+            --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+        nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 24px; }
+        .nav-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; gap:16px; height:60px; }
+        .nav-logo { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); font-weight:700; font-size:18px; }
+        .nav-logo svg { width:36px; height:36px; flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto; display:flex; align-items:center; gap:6px; text-decoration:none; color:var(--text-s); font-size:14px; padding:6px 14px; border:1px solid var(--border); border-radius:8px; transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt); }
+
+        /* HERO */
+        .hero { background:linear-gradient(160deg,#fff1f0 0%,#fde8e6 50%,#fff8f8 100%); padding:56px 24px 44px; text-align:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(217,95,82,.14) 0%,transparent 65%); pointer-events:none; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:var(--primary-bg); border:1px solid var(--primary-border); color:var(--primary); font-size:13px; font-weight:600; padding:6px 16px; border-radius:99px; margin-bottom:20px; }
+        .hero-icon { font-size:72px; display:block; margin-bottom:18px; animation:float 3.5s ease-in-out infinite; }
+        .hero h1 { font-size:clamp(28px,5vw,44px); font-weight:800; line-height:1.18; color:var(--text); margin-bottom:16px; max-width:680px; margin-left:auto; margin-right:auto; }
+        .hero h1 span { color:var(--primary); }
+        .hero p { font-size:17px; color:var(--text-s); max-width:560px; margin:0 auto 28px; }
+        .hero-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+        .hero-tag { background:white; border:1px solid var(--primary-border); color:var(--primary); font-size:13px; font-weight:500; padding:5px 14px; border-radius:99px; }
+
+        /* QUICK SUMMARY */
+        .quick-summary { background:linear-gradient(135deg,#D95F52,#b84a3e); color:white; padding:28px 24px; }
+        .quick-summary-inner { max-width:760px; margin:0 auto; }
+        .quick-summary h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
+        .qs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+        .qs-item { background:rgba(255,255,255,.16); border-radius:var(--r-sm); padding:14px 16px; font-size:14px; line-height:1.55; }
+        .qs-item strong { display:block; font-weight:700; margin-bottom:4px; font-size:15px; }
+
+        /* CONTENT */
+        .content { max-width:780px; margin:0 auto; padding:52px 24px 88px; }
+
+        /* QUESTION CARDS — büyük ve çarpıcı */
+        .question-card { border-radius:var(--r-xl); overflow:hidden; margin-bottom:48px; box-shadow:0 4px 24px rgba(0,0,0,.07); }
+        .qcard-header { padding:28px 32px 22px; display:flex; align-items:flex-start; gap:20px; }
+        .qcard-num { font-size:72px; font-weight:800; line-height:1; opacity:.22; flex-shrink:0; margin-top:-6px; font-family:'Inter',sans-serif; }
+        .qcard-title-wrap { flex:1; }
+        .qcard-label { font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; opacity:.75; margin-bottom:6px; }
+        .qcard-title { font-size:clamp(20px,3vw,26px); font-weight:800; line-height:1.25; }
+        .qcard-body { background:white; padding:28px 32px 32px; }
+        .qcard-body p { color:var(--text-s); margin-bottom:14px; line-height:1.8; font-size:16px; }
+        .qcard-body p:last-child { margin-bottom:0; }
+        .qcard-body h3 { font-size:16px; font-weight:700; color:var(--text); margin:20px 0 8px; }
+
+        /* Soru kutucuğu */
+        .ask-box { border-radius:var(--r-md); padding:18px 22px; margin:20px 0; }
+        .ask-box .ask-label { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .ask-box .ask-q { font-size:16px; font-weight:700; line-height:1.5; font-style:italic; }
+
+        /* Red flag / green flag */
+        .flag-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:18px 0; }
+        @media(max-width:480px){ .flag-grid { grid-template-columns:1fr; } }
+        .flag-card { border-radius:var(--r-md); padding:14px 16px; }
+        .flag-card.red { background:#fef2f2; border:1.5px solid #fca5a5; }
+        .flag-card.green { background:#f0fdf4; border:1.5px solid #86efac; }
+        .flag-card .flag-label { font-size:11px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; margin-bottom:6px; }
+        .flag-card.red .flag-label { color:#991b1b; }
+        .flag-card.green .flag-label { color:#166534; }
+        .flag-card .flag-text { font-size:13px; line-height:1.6; }
+        .flag-card.red .flag-text { color:#7f1d1d; }
+        .flag-card.green .flag-text { color:#166534; }
+
+        .info-box { background:var(--primary-bg); border-left:4px solid var(--primary); border-radius:0 var(--r-md) var(--r-md) 0; padding:16px 20px; margin:20px 0; }
+        .info-box .label { font-size:12px; font-weight:700; color:var(--primary); letter-spacing:.06em; margin-bottom:6px; }
+        .info-box p { font-size:15px; color:var(--text); margin:0; line-height:1.7; }
+
+        /* Colours per question */
+        .q1 .qcard-header { background:linear-gradient(135deg,#D95F52,#b84a3e); color:white; }
+        .q2 .qcard-header { background:linear-gradient(135deg,#6366f1,#4338ca); color:white; }
+        .q3 .qcard-header { background:linear-gradient(135deg,#f59e0b,#d97706); color:white; }
+
+        .section-divider { border:none; border-top:1px dashed var(--border); margin:20px 0 44px; }
+
+        /* Final CTA block */
+        .cta-block { background:linear-gradient(135deg,#fff1f0,#fde8e6); border:1.5px solid var(--primary-border); border-radius:var(--r-xl); padding:32px 28px; margin:48px 0 40px; text-align:center; }
+        .cta-block h3 { font-size:22px; font-weight:800; color:var(--text); margin-bottom:12px; }
+        .cta-block p { font-size:16px; color:var(--text-s); max-width:520px; margin:0 auto; line-height:1.7; }
+
+        /* Author */
+        .author-strip { display:flex; align-items:center; gap:14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--r-md); padding:16px 20px; margin:0 0 32px; }
+        .author-strip .name { font-weight:700; color:var(--text); }
+        .author-strip .title { font-size:13px; color:var(--text-s); }
+        .author-badge { margin-left:auto; background:var(--primary-bg); border:1px solid var(--primary-border); color:var(--primary); font-size:12px; font-weight:700; padding:4px 12px; border-radius:99px; white-space:nowrap; }
+
+        .references { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--r-md); padding:24px; }
+        .references h3 { font-size:15px; font-weight:700; margin-bottom:14px; }
+        .references ol { padding-left:20px; }
+        .references li { font-size:13px; color:var(--text-s); margin-bottom:8px; line-height:1.6; }
+
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity .55s ease,transform .55s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+
+        footer { background:#1e293b; color:rgba(255,255,255,.7); text-align:center; padding:40px 24px; font-size:14px; }
+        footer .brand { font-size:22px; font-weight:800; color:white; margin-bottom:8px; }
+        footer a { color:rgba(255,255,255,.6); text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="96" fill="#fdf0ea"/>
+                <circle cx="88" cy="88" r="52" stroke="#D95F52" stroke-width="5" fill="none"/>
+                <circle cx="88" cy="88" r="60" stroke="rgba(150,50,30,0.18)" stroke-width="8" fill="none"/>
+                <ellipse cx="88" cy="88" rx="38" ry="38" fill="#fce4cc" opacity="0.9"/>
+                <ellipse cx="88" cy="88" rx="30" ry="30" fill="#e8947a"/>
+                <ellipse cx="88" cy="88" rx="20" ry="20" fill="#c4705a"/>
+                <line x1="127" y1="127" x2="165" y2="165" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="127" y1="127" x2="165" y2="165" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html#blog" class="nav-back">← Blog</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-badge">💉 Kozmetik İşlemler · Hasta Rehberi</div>
+    <span class="hero-icon">🛡️</span>
+    <h1>Kozmetik İşlem Yaptırmadan<br><span>Sorman Gereken 3 Soru</span></h1>
+    <p>Botoks, dolgu, lazer, PRP — herhangi bir işlem sandalyesine oturmadan önce bu 3 soruyu sormak sizi büyük riskten koruyabilir.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">💉 Botoks</span>
+        <span class="hero-tag">✨ Dolgu</span>
+        <span class="hero-tag">🔦 Lazer</span>
+        <span class="hero-tag">🩸 PRP</span>
+        <span class="hero-tag">⚡ Elektroporasyon</span>
+    </div>
+</div>
+
+<!-- QUICK SUMMARY -->
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Soru 1</strong>Bu işlemi yapacak kişinin uzmanlığı ne? Belgesi var mı?</div>
+            <div class="qs-item"><strong>Soru 2</strong>Bu işlem için gerçekten bilimsel kanıt var mı?</div>
+            <div class="qs-item"><strong>Soru 3</strong>Bir komplikasyon olursa plan ne? Ürün ve ekipman hazır mı?</div>
+            <div class="qs-item"><strong>Neden önemli?</strong>Türkiye'de kozmetik işlem denetimi zayıf. Bilgili hasta, en iyi savunma.</div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <p class="fade-in" style="color:var(--text-s);font-size:16px;line-height:1.8;margin-bottom:40px">
+        Sosyal medyada her gün yüzlerce "işlem sonucu" videosu akıyor. Klinik estetiğin pazarı büyüdükçe, bu alanda yetkinliği tartışmalı uygulayıcı sayısı da artıyor. Aşağıdaki üç soruyu sormak bir dakika alıyor — ama yıllarca sürebilecek bir hatadan sizi kurtarabilir.
+    </p>
+
+    <!-- SORU 1 -->
+    <div class="question-card q1 fade-in">
+        <div class="qcard-header">
+            <div class="qcard-num">1</div>
+            <div class="qcard-title-wrap">
+                <div class="qcard-label">Uzmanlık & Yetkinlik</div>
+                <div class="qcard-title">"Bu işlemi kim yapıyor — ve hangi uzmanlıkla?"</div>
+            </div>
+        </div>
+        <div class="qcard-body">
+            <p>Türkiye'de kozmetik işlem uygulayabilecek kişilerin sınırı hukuki olarak net değil. Bu belirsizlik, iki günlük sertifika programı alan estetisyenden plastik cerrahına kadar geniş bir yelpazede uygulayıcılar üretiyor.</p>
+
+            <p>Botoks ve dolgu gibi invazif işlemler iğne içeriyor, damar anatomisi biliyor olmayı gerektiriyor ve ciddi komplikasyon riski taşıyor. Yanlış yerleştirilen bir dolgu iğnesi damarı tıkayabilir — körlük dahil kalıcı hasara yol açabilen nadir ama gerçek bir komplikasyon.</p>
+
+            <div class="ask-box" style="background:#fff1f0;border:1.5px solid var(--primary-border)">
+                <div class="ask-label" style="color:var(--primary)">🎯 Tam olarak şunu sorun:</div>
+                <div class="ask-q" style="color:var(--text)">"Hangi branşta uzmanlaşmışsınız? Bu işlem için özel eğitiminiz var mı? Belgenizi görebilir miyim?"</div>
+            </div>
+
+            <div class="flag-grid">
+                <div class="flag-card green">
+                    <div class="flag-label">✅ İyi İşaret</div>
+                    <div class="flag-text">Dermatoloji veya plastik cerrahi uzmanı. Anatomiye hakim, komplikasyon yönetimi biliyor. Soruyu şeffaf yanıtlıyor.</div>
+                </div>
+                <div class="flag-card red">
+                    <div class="flag-label">🚩 Kırmızı Bayrak</div>
+                    <div class="flag-text">Soruyu geçiştiriyor veya "ben çok deneyimliyim" ile bırakıyor. Belge gösteremiyor. Tıbbi geçmişi belirsiz.</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="label">💊 Tek Cümleyle</div>
+                <p>İşlemi kimin yaptığı, hangi işlemin yapıldığından çoğu zaman daha önemli. Doğru ellerdeki orta bir ürün, yanlış ellerdeki premium üründen çok daha güvenli.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SORU 2 -->
+    <div class="question-card q2 fade-in">
+        <div class="qcard-header">
+            <div class="qcard-num">2</div>
+            <div class="qcard-title-wrap">
+                <div class="qcard-label">Bilimsel Kanıt</div>
+                <div class="qcard-title">"Bu işlem için gerçek bir kanıt var mı — yoksa sadece trend mi?"</div>
+            </div>
+        </div>
+        <div class="qcard-body">
+            <p>Kozmetik tıp dünyası son 5 yılda inanılmaz hızda büyüdü. Her altı ayda bir yeni bir "devrim" geliyor: eksozom, PDRN, longevity enjeksiyonları, kök hücre serumları... Hepsinin arkasında bir pazarlama makinesi var.</p>
+
+            <p>Kanıt düzeyleri çok farklı. Botulinum toksin ve hyaluronik asit dolgu gibi işlemlerin arkasında onlarca yıllık, binlerce hastadan oluşan klinik çalışmalar var. Öte yandan bazı "trend" işlemlerin yalnızca tek bir in vitro çalışması var — hücre ortamında, insan üzerinde değil.</p>
+
+            <div class="ask-box" style="background:#eff6ff;border:1.5px solid #93c5fd">
+                <div class="ask-label" style="color:#1d4ed8">🎯 Tam olarak şunu sorun:</div>
+                <div class="ask-q" style="color:var(--text)">"Bu işlem için bağımsız klinik çalışmalar var mı? Bana kanıt gösterebilir misiniz?"</div>
+            </div>
+
+            <h3>Hızlı Kanıt Rehberi</h3>
+            <div class="flag-grid">
+                <div class="flag-card green">
+                    <div class="flag-label">✅ Güçlü Kanıt</div>
+                    <div class="flag-text">Botulinum toksin, HA dolgu, fraksiyonel lazer, karbondioksit lazer, IPL — onlarca randomize kontrollü çalışma mevcut.</div>
+                </div>
+                <div class="flag-card red">
+                    <div class="flag-label">⚠️ Zayıf/Yetersiz Kanıt</div>
+                    <div class="flag-text">Birçok eksozom ürünü, "longevity kokteyller", bazı mezoterapi karışımları, ev tipi enerji cihazları — pazarlama bağımsız klinik veriyi geçmiş.</div>
+                </div>
+            </div>
+
+            <p>Deneyimli bir uygulayıcı bu soruyu memnuniyetle yanıtlar. "Arkadaşlar çok iyi sonuç aldı" veya "sosyal medyada viral oldu" — bunlar kanıt değil.</p>
+
+            <div class="info-box">
+                <div class="label">💊 Tek Cümleyle</div>
+                <p>Trend olmak ve kanıtlı olmak aynı şey değil. Sormak sizin hakkınız — cevap vermek uygulayıcının yükümlülüğü.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SORU 3 -->
+    <div class="question-card q3 fade-in">
+        <div class="qcard-header">
+            <div class="qcard-num">3</div>
+            <div class="qcard-title-wrap">
+                <div class="qcard-label">Komplikasyon Yönetimi</div>
+                <div class="qcard-title">"Bir şey ters giderse planınız ne?"</div>
+            </div>
+        </div>
+        <div class="qcard-body">
+            <p>Bu soru çoğu zaman sorulmaz — çünkü "kötü ihtimali" düşünmek istemiyoruz. Ama kozmetik işlemlerde komplikasyonlar nadir de olsa gerçek. Ve gerçek tehlike genellikle komplikasyonun kendisinden değil, o komplikasyona hazırsız yakalanmaktan kaynaklanıyor.</p>
+
+            <p>En çarpıcı örnek: hyaluronik asit dolgu uygulamaları sırasında nadiren damar tıkanması (vasküler oklüzyon) yaşanabiliyor. Bu durumda yapılması gereken <strong>hemen hyaluronidaz enjeksiyonu</strong>. Eğer klinikteki elde bu enzim yoksa, ciddi doku hasarı oluşabilir. "Yakın hastaneye gönderiyoruz" — bu yeterli değil. Zaman kritik.</p>
+
+            <div class="ask-box" style="background:#fffbeb;border:1.5px solid #fde68a">
+                <div class="ask-label" style="color:#92400e">🎯 Tam olarak şunu sorun:</div>
+                <div class="ask-q" style="color:var(--text)">"Komplikasyon olursa ne yaparsınız? Hyaluronidaz veya gerekli antidotlar elinizde var mı?"</div>
+            </div>
+
+            <div class="flag-grid">
+                <div class="flag-card green">
+                    <div class="flag-label">✅ Hazır Klinik</div>
+                    <div class="flag-text">Hyaluronidaz stokta var. Komplikasyon protokolü açıkça tanımlanmış. Uygulayıcı acil müdahaleyi biliyor ve yapabilir.</div>
+                </div>
+                <div class="flag-card red">
+                    <div class="flag-label">🚩 Kırmızı Bayrak</div>
+                    <div class="flag-text">"Hiç olmaz" veya "biz bunu daha önce yaşamadık" yanıtı. Hyaluronidaz'ın ne olduğunu bilmiyor görünüyor. Acil planı yok.</div>
+                </div>
+            </div>
+
+            <h3>İşleme Göre Kritik Hazırlıklar</h3>
+            <p><strong>Dolgu (HA):</strong> Hyaluronidaz — damar tıkanmasında anında çözüm için şart.<br>
+            <strong>Botoks:</strong> Aşırı doz veya yanlış yer şüphesinde takip protokolü.<br>
+            <strong>Lazer / kimyasal peeling:</strong> Yanık ve pigment değişikliği yönetimi için aktif ilaç stoku.<br>
+            <strong>PRP / mezoterapi:</strong> Steril koşullar, enfeksiyon protokolü.</p>
+
+            <div class="info-box">
+                <div class="label">💊 Tek Cümleyle</div>
+                <p>İyi bir klinisyen, "bu olmaz" demiyor — "olursa şunu yaparım" diyor. Komplikasyon hazırlığı güvensizliğin değil, profesyonelliğin işareti.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA BLOCK -->
+    <div class="cta-block fade-in">
+        <h3>🛡️ Bu 3 Soruyu Sormaktan Çekinmeyin</h3>
+        <p>İyi bir uygulayıcı bu sorulardan rahatsız olmaz — aksine memnun olur. Rahatsız olan biri varsa, bu zaten size bir cevap vermiş demektir.</p>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-strip fade-in">
+        <div>
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">🔬 Kanıta Dayalı</span>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references fade-in">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>DeLorenzi C. <em>Complications of injectable fillers, part 2: vascular complications.</em> Aesthet Surg J. 2014;34(4):584–600.</li>
+            <li>Beleznay K, et al. <em>Avoiding and treating blindness from fillers: a review of the world literature.</em> Dermatol Surg. 2015;41(10):1097–1117.</li>
+            <li>Ozturk CN, et al. <em>Complications following injection of soft-tissue fillers.</em> Aesthet Surg J. 2013;33(6):862–877.</li>
+            <li>Rohrich RJ, et al. <em>The role of hyaluronidase in the management of complications from hyaluronic acid fillers.</em> Plast Reconstr Surg. 2009;123(6):1893–1902.</li>
+            <li>American Society for Dermatologic Surgery (ASDS). <em>Consumer survey on cosmetic dermatologic procedures.</em> 2023.</li>
+            <li>Carruthers J, et al. <em>Consensus recommendations for combined aesthetic interventions.</em> Dermatol Surg. 2016;42(S1):S102–S108.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <div class="brand"><span style="color:#FCBDB7">Deri</span>ndenbilgi</div>
+    <p>Tıp biliminin ışığında, herkes için cilt sağlığı.</p>
+    <p style="margin-top:8px"><a href="../index.html">Ana Sayfa</a> · <a href="../index.html#blog">Blog</a> · <a href="kozmetik-islemler-rehberi.html">Kozmetik İşlemler Rehberi</a></p>
+    <p style="margin-top:12px;font-size:13px;opacity:.6">Bu içerik tıbbi tavsiye değildir. Kozmetik işlemler için dermatoloji doktorunuza danışın.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
