@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neden Bu Kadar Kötü Kokarım? Ter Kokusu Hakkında Bilmediğiniz Her Şey | Derindenbilgi</title>
+    <meta name="description" content="Ter aslında kokusuz. Peki o kötü koku nereden geliyor? Bakteri mı, deodorant mı, diyet mi? Bromhidroz nedir, deodorant-antiperspirant farkı neden önemli? Dermatoloji perspektifinden ter kokusu rehberi.">
+    <meta name="keywords" content="ter kokusu, bromhidroz, deodorant, antiperspirant, koltuk altı kokusu, aşırı terleme, hiperhidroz, ter kokusu nedenleri, ter kokusu çözüm, kötü ter kokusu">
+    <meta property="og:title" content="Neden Bu Kadar Kötü Kokarım? Ter Kokusu Rehberi">
+    <meta property="og:description" content="Ter aslında kokusuz — koku bakterilerden geliyor. Deodorant mı antiperspirant mı? Hangi durumlarda doktora gitmalı? Cevaplar burada.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #FA8072;
+            --accent-dark: #D95F52;
+            --primary: #14b8a6;
+            --primary-dark: #0f766e;
+            --primary-bg: rgba(20,184,166,0.07);
+            --primary-border: rgba(20,184,166,0.22);
+            --primary-gradient: linear-gradient(135deg, #14b8a6, #0f766e);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+        nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 24px; }
+        .nav-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; gap:16px; height:60px; }
+        .nav-logo { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); font-weight:700; font-size:18px; }
+        .nav-logo svg { width:36px; height:36px; flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto; display:flex; align-items:center; gap:6px; text-decoration:none; color:var(--text-s); font-size:14px; padding:6px 14px; border:1px solid var(--border); border-radius:8px; transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt); color:var(--text); }
+
+        .hero { background:linear-gradient(160deg,#ccfbf1 0%,#99f6e4 40%,#f0fdfa 100%); padding:60px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%,rgba(20,184,166,0.12) 0%,transparent 70%); pointer-events:none; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(20,184,166,0.12); border:1px solid rgba(20,184,166,0.3); color:#0f766e; font-size:13px; font-weight:600; padding:6px 16px; border-radius:99px; margin-bottom:20px; }
+        .hero-icon { font-size:68px; line-height:1; animation:float 4s ease-in-out infinite; display:block; margin-bottom:16px; }
+        .hero h1 { font-size:clamp(26px,5vw,40px); font-weight:800; line-height:1.2; color:var(--text); margin-bottom:14px; }
+        .hero h1 span { color:var(--primary-dark); }
+        .hero p { font-size:17px; color:var(--text-s); max-width:580px; margin:0 auto 28px; }
+        .hero-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+        .hero-tag { background:white; border:1px solid rgba(20,184,166,0.3); color:#0f766e; font-size:13px; font-weight:500; padding:5px 14px; border-radius:99px; }
+
+        .quick-summary { background:var(--primary-gradient); color:white; padding:28px 24px; }
+        .quick-summary-inner { max-width:760px; margin:0 auto; }
+        .quick-summary h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
+        .qs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+        .qs-item { background:rgba(255,255,255,.15); border-radius:var(--radius-sm); padding:12px 16px; font-size:14px; line-height:1.5; }
+        .qs-item strong { display:block; font-weight:700; margin-bottom:3px; }
+
+        .content { max-width:800px; margin:0 auto; padding:48px 24px 80px; }
+        .section { margin-bottom:60px; }
+        .section-label { display:inline-flex; align-items:center; gap:8px; background:var(--primary-bg); color:var(--primary-dark); font-size:12px; font-weight:700; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; text-transform:uppercase; }
+        .section h2 { font-size:clamp(20px,3.5vw,26px); font-weight:800; color:var(--text); margin-bottom:16px; line-height:1.3; }
+        .section p { color:var(--text-s); margin-bottom:14px; line-height:1.8; }
+
+        .info-box { background:var(--primary-bg); border-left:4px solid var(--primary); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .info-box .label { font-size:12px; font-weight:700; color:var(--primary-dark); letter-spacing:.06em; margin-bottom:6px; }
+        .info-box p { font-size:15px; color:var(--text); margin:0; line-height:1.7; }
+
+        .warning-box { background:#fffbeb; border-left:4px solid #f59e0b; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .warning-box .label { font-size:12px; font-weight:700; color:#92400e; letter-spacing:.06em; margin-bottom:6px; }
+        .warning-box p { font-size:15px; color:#78350f; margin:0; line-height:1.7; }
+
+        .danger-box { background:#fef2f2; border-left:4px solid #ef4444; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .danger-box .label { font-size:12px; font-weight:700; color:#991b1b; letter-spacing:.06em; margin-bottom:6px; }
+        .danger-box p { font-size:15px; color:#7f1d1d; margin:0; line-height:1.7; }
+
+        .tip-box { background:#f0fdf4; border-left:4px solid #22c55e; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .tip-box .label { font-size:12px; font-weight:700; color:#166534; letter-spacing:.06em; margin-bottom:6px; }
+        .tip-box p { font-size:15px; color:#14532d; margin:0; line-height:1.7; }
+
+        .badge-inline { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; vertical-align:middle; }
+        .badge-inline.green { background:#dcfce7; color:#166534; }
+        .badge-inline.blue { background:#dbeafe; color:#1d4ed8; }
+        .badge-inline.yellow { background:#fef9c3; color:#92400e; }
+        .badge-inline.red { background:#fee2e2; color:#991b1b; }
+        .badge-inline.teal { background:#ccfbf1; color:#0f766e; }
+
+        /* Gland comparison */
+        .gland-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+        @media(max-width:540px){ .gland-grid { grid-template-columns:1fr; } }
+        .gland-card { border-radius:var(--radius-md); padding:18px 20px; border:1.5px solid; }
+        .gland-card.eccrine { background:#eff6ff; border-color:#93c5fd; }
+        .gland-card.eccrine .g-title { color:#1d4ed8; }
+        .gland-card.apocrine { background:#faf5ff; border-color:#d8b4fe; }
+        .gland-card.apocrine .g-title { color:#6b21a8; }
+        .g-title { font-weight:800; font-size:15px; margin-bottom:6px; }
+        .g-emoji { font-size:24px; margin-bottom:8px; display:block; }
+        .gland-card p { font-size:14px; line-height:1.6; margin:0; color:var(--text-s); }
+
+        /* Deo vs Antiperspirant */
+        .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+        @media(max-width:540px){ .compare-grid { grid-template-columns:1fr; } }
+        .compare-card { border-radius:var(--radius-md); padding:18px 20px; border:1.5px solid; }
+        .compare-card.deo { background:#fdf4ff; border-color:#e879f9; }
+        .compare-card.deo .c-title { color:#86198f; }
+        .compare-card.anti { background:#f0fdf4; border-color:#86efac; }
+        .compare-card.anti .c-title { color:#166534; }
+        .c-title { font-weight:800; font-size:16px; margin-bottom:4px; }
+        .c-sub { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; margin-bottom:10px; }
+        .compare-card.deo .c-sub { color:#a21caf; }
+        .compare-card.anti .c-sub { color:#15803d; }
+        .compare-card p { font-size:14px; line-height:1.6; color:var(--text-s); margin:0; }
+        .c-verdict { margin-top:10px; font-size:13px; font-weight:700; }
+        .compare-card.deo .c-verdict { color:#86198f; }
+        .compare-card.anti .c-verdict { color:#15803d; }
+
+        /* Causes list */
+        .cause-list { list-style:none; padding:0; margin:20px 0; }
+        .cause-list li { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--border); align-items:flex-start; }
+        .cause-list li:last-child { border-bottom:none; }
+        .cause-emoji { font-size:22px; flex-shrink:0; width:36px; text-align:center; }
+        .cause-text strong { color:var(--text); display:block; font-size:15px; margin-bottom:3px; }
+        .cause-text span { font-size:14px; color:var(--text-s); line-height:1.6; }
+
+        /* Ingredient table */
+        .ing-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; overflow:hidden; border-radius:var(--radius-md); border:1px solid var(--border); }
+        .ing-table th { background:var(--primary-bg); color:var(--primary-dark); font-weight:700; padding:10px 14px; text-align:left; border-bottom:2px solid var(--primary-border); }
+        .ing-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:var(--text-s); vertical-align:top; }
+        .ing-table tr:last-child td { border-bottom:none; }
+
+        /* Verdict cards */
+        .verdict-section { background:var(--bg-alt); border-radius:var(--radius-lg); padding:28px 24px; margin:40px 0; }
+        .verdict-section h3 { font-size:18px; font-weight:800; margin-bottom:18px; }
+        .verdict-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns:1fr; } }
+        .verdict-card { border-radius:var(--radius-md); padding:16px 18px; display:flex; gap:10px; align-items:flex-start; }
+        .verdict-card.yap { background:#f0fdf4; border:1.5px solid #86efac; }
+        .verdict-card.yapma { background:#fef2f2; border:1.5px solid #fca5a5; }
+        .verdict-card.dikkat { background:#fffbeb; border:1.5px solid #fde68a; }
+        .verdict-card.bilgi { background:#eff6ff; border:1.5px solid #93c5fd; }
+        .verdict-card .v-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+        .verdict-card .v-text { font-size:14px; line-height:1.6; }
+        .verdict-card.yap .v-text { color:#166534; }
+        .verdict-card.yapma .v-text { color:#7f1d1d; }
+        .verdict-card.dikkat .v-text { color:#78350f; }
+        .verdict-card.bilgi .v-text { color:#1e40af; }
+        .verdict-card .v-label { font-weight:800; font-size:12px; display:block; margin-bottom:3px; letter-spacing:.05em; text-transform:uppercase; }
+
+        .section-divider { border:none; border-top:1px dashed var(--border); margin:52px 0; }
+
+        .tek-cumle { background:var(--primary-gradient); color:white; border-radius:var(--radius-md); padding:16px 20px; margin:22px 0; font-size:15px; line-height:1.7; }
+        .tek-cumle .tc-label { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; opacity:.8; margin-bottom:6px; display:block; }
+
+        .number-stat { text-align:center; padding:24px 16px; }
+        .number-stat .num { font-size:56px; font-weight:800; color:var(--primary-dark); line-height:1; }
+        .number-stat .num-desc { font-size:14px; color:var(--text-s); margin-top:8px; }
+
+        .stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; margin:22px 0; }
+        .stat-grid .stat-item { padding:20px 14px; text-align:center; border-right:1px solid var(--border); }
+        .stat-grid .stat-item:last-child { border-right:none; }
+        .stat-grid .s-num { font-size:28px; font-weight:800; color:var(--primary-dark); }
+        .stat-grid .s-desc { font-size:12px; color:var(--text-s); margin-top:4px; line-height:1.4; }
+
+        .author-strip { display:flex; align-items:center; gap:14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px 20px; margin:48px 0 32px; }
+        .author-strip .author-info .name { font-weight:700; color:var(--text); }
+        .author-strip .author-info .title { font-size:13px; color:var(--text-s); }
+        .author-badge { margin-left:auto; background:var(--primary-bg); border:1px solid var(--primary-border); color:var(--primary-dark); font-size:12px; font-weight:700; padding:4px 12px; border-radius:99px; white-space:nowrap; }
+
+        .references { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px; }
+        .references h3 { font-size:15px; font-weight:700; margin-bottom:14px; }
+        .references ol { padding-left:20px; }
+        .references li { font-size:13px; color:var(--text-s); margin-bottom:8px; line-height:1.6; }
+
+        footer { text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--text-t); font-size:13px; }
+        footer a { color:var(--primary-dark); text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" fill="#fdf0ea"/>
+                <circle cx="34" cy="34" r="20" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <circle cx="34" cy="34" r="24" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <ellipse cx="34" cy="26" rx="14" ry="4" fill="#fce4cc" opacity="0.6"/>
+                <ellipse cx="34" cy="31" rx="14" ry="3.5" fill="#FA8072" opacity="0.4"/>
+                <ellipse cx="34" cy="36" rx="13" ry="3" fill="#c4705a" opacity="0.35"/>
+                <ellipse cx="34" cy="41" rx="11" ry="3" fill="#f0d888" opacity="0.4"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">🧬 Cilt Bilimi</div>
+    <span class="hero-icon">💧</span>
+    <h1>Neden Bu Kadar <span>Kötü Kokarım?</span></h1>
+    <p>Ter aslında kokusuz. Peki o tanıdık koku nereden geliyor? Bakteri, diyet, deodorant — ter kokusu hakkında bilmediğiniz her şey burada.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">Bromhidroz</span>
+        <span class="hero-tag">Deodorant vs Antiperspirant</span>
+        <span class="hero-tag">Hiperhidroz</span>
+        <span class="hero-tag">Diyet & Koku</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Koku kimden?</strong>Terden değil — teri yiyen bakterilerden</div>
+            <div class="qs-item"><strong>İki farklı bez</strong>Ekrin (su bazlı, kokusuz) vs apokrin (protein bazlı, asıl suçlu)</div>
+            <div class="qs-item"><strong>Deodorant ≠ Antiperspirant</strong>Biri kokuyu maskeler, diğeri teri durdurur</div>
+            <div class="qs-item"><strong>Dikkat sinyali</strong>Ani koku değişikliği bazen iç organ sorunlarının habercisi olabilir</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- BÖLÜM 1 -->
+    <div class="section">
+        <div class="section-label">🔬 Temel Biyoloji</div>
+        <h2>Ter Neden Kokar? (Spoiler: Siz Değil, Bakteriler Suçlu)</h2>
+
+        <p>Terin kendisi aslında neredeyse kokusuz. Vücudunuzdan çıkan sıvı temiz su, tuz ve küçük miktarda mineral içeriyor. Sorun, bu sıvının derinizdeki bakterilerle buluşmasında başlıyor.</p>
+
+        <p>Cilt yüzeyindeki milyarlarca bakteri, terin içindeki protein ve yağ asitlerini bir güzel "yiyor" — ve bu sindirim sonucunda uçucu kokusu bileşikleri açığa çıkıyor. Kısacası: ter kokusu aslında bakteri dışkısı.</p>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            Kokusuz bir sıvı + deri bakterisi = koltuk altı dramı.
+        </div>
+
+        <p>Bunun için de sadece duş almak çoğu zaman yeterli gelmiyor. Bakteriler sizi <em>bekliyorlar</em>.</p>
+    </div>
+
+    <!-- İKİ BEZ -->
+    <div class="section">
+        <div class="section-label">🧪 İki Farklı Bez</div>
+        <h2>Ekrin mi, Apokrin mi? Asıl Suçluyu Bulmak</h2>
+
+        <p>Vücudunuzda iki tip ter bezi var. Ve bunların birbirinden çok farklı işleri var.</p>
+
+        <div class="gland-grid">
+            <div class="gland-card eccrine">
+                <span class="g-emoji">💧</span>
+                <div class="g-title">Ekrin Bezler</div>
+                <p>Tüm vücutta bulunur. Su ve tuz bazlı ter üretir. Temel görevi vücut ısısını düzenlemek. Kokuyu çok az etkiler — ter neredeyse saf su gibi.</p>
+            </div>
+            <div class="gland-card apocrine">
+                <span class="g-emoji">⚠️</span>
+                <div class="g-title">Apokrin Bezler</div>
+                <p>Koltuk altı, kasık, meme başı çevresinde bulunur. Protein ve yağ asidi içeren yoğun bir sıvı üretir. Bakteriler bunu büyük iştahla tüketir — asıl koku buradan gelir.</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">📌 İlginç Detay</div>
+            <p>Apokrin bezler ergenliğe kadar neredeyse hiç çalışmaz. Bu yüzden küçük çocuklar "ter kokusu" yaşamaz. Büyüyünce apokrin bezler devreye girer — ve işler karışır.</p>
+        </div>
+
+        <p>Ayrıca apokrin bezler strese, kaygıya ve cinsel uyarıma yanıt verirler. Sınav günleri veya gergin toplantılarda özellikle aktifleşmeleri bu yüzden. Evrimsel açıdan bakıldığında tehlike sinyali gönderme amaçlılar.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- NEDEN BAZILARI DAHA ÇOK KOKAR -->
+    <div class="section">
+        <div class="section-label">🔍 Neden Ben?</div>
+        <h2>Bazı İnsanlar Neden Daha Çok Kokar?</h2>
+
+        <p>Koku şiddeti kişiden kişiye inanılmaz farklılık gösterir. Bazı insanlar saatlerce spor yapar, duş almaz — kimse bir şey hissetmez. Diğerleri 20 dakika sonra kendileri bile farkeder. Bu fark rastgele değil.</p>
+
+        <ul class="cause-list">
+            <li>
+                <span class="cause-emoji">🧬</span>
+                <div class="cause-text">
+                    <strong>Genetik — ABCC11 Geni</strong>
+                    <span>Islak kulak kiri ile doğrudan bağlantılı bir gen. Bu gende belirli bir varyant taşıyorsanız, apokrin bezleriniz çok daha az kokusu bileşiği üretiyor. Doğu Asyalı nüfusun büyük çoğunluğunda bu "şanslı" varyant var.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">🥩</span>
+                <div class="cause-text">
+                    <strong>Diyet — Yediğiniz Size Kokar</strong>
+                    <span>Sarımsak, soğan, kırmızı et, alkol, baharatlı yiyecekler ter yoluyla dışarı atılır. Özellikle kırmızı ette bulunan karnitin, bağırsak bakterileri tarafından TMA (trimetilamin) adlı kokuşmuş bir bileşiğe dönüştürülür.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">🦠</span>
+                <div class="cause-text">
+                    <strong>Deri Mikrobiyomu — Hangi Bakteri Ev Sahibi?</strong>
+                    <span>Corynebacterium ve Staphylococcus türleri en fazla koku üreten bakteriler. Bunların cilt yüzeyindeki oranı kişiden kişiye değişir — ve bu dağılımı büyük ölçüde genetiğiniz ve yaşam alışkanlıklarınız belirler.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">⚖️</span>
+                <div class="cause-text">
+                    <strong>Kilo & Deri Kıvrımları</strong>
+                    <span>Deri kıvrımları nemli ve oksijensiz ortam yaratır — bakteriler için ideal yaşam koşulları. Nem ne kadar uzun süre kalırsa, bakteri aktivitesi o kadar artar.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">💊</span>
+                <div class="cause-text">
+                    <strong>İlaçlar</strong>
+                    <span>Bazı antidepresanlar, antipsikotikler ve diyabet ilaçları terlemeyi artırır. Bazı vitaminler (özellikle yüksek doz B vitamini) de terde değişikliğe yol açabilir.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">🩺</span>
+                <div class="cause-text">
+                    <strong>Sağlık Durumları</strong>
+                    <span>Diyabet (meyve/aseton kokusu), böbrek yetmezliği (balık/amonyak kokusu), hipertiroidi (aşırı terleme), enfeksiyonlar (mantar/bakteri kaynaklı lokal koku) ter kokusunu belirgin değiştirebilir.</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            Koku sorunu çoğunlukla mikrobiyom + genetik + diyet üçgeninin bir sonucu — sadece "hijyen sorunu" diye geçiştirilemez.
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- DEO VS ANTIPERSPIRANT -->
+    <div class="section">
+        <div class="section-label">🛒 Ürün Seçimi</div>
+        <h2>Deodorant mı, Antiperspirant mı? Bu Ayrım Hayat Kurtarır</h2>
+
+        <p>Markette onlarca seçenek var ama çoğu insan ikisini birbirine karıştırıyor. Oysa mekanizmaları tamamen farklı.</p>
+
+        <div class="compare-grid">
+            <div class="compare-card deo">
+                <div class="c-title">🌸 Deodorant</div>
+                <div class="c-sub">Kokuyu gizler</div>
+                <p>Kokuyu maskelemek için parfüm, ve/veya anti-bakteriyel bileşenler içerir. Terlemeyi durdurmaz. Sadece bakteriyi baskılar veya kokuyu örter.</p>
+                <div class="c-verdict">→ Hafif terleyen için yeterli</div>
+            </div>
+            <div class="compare-card anti">
+                <div class="c-title">🛡️ Antiperspirant</div>
+                <div class="c-sub">Terlemeyi durdurur</div>
+                <p>İçeriğindeki alüminyum tuzları (aluminum chlorohydrate/zirconium) ter kanallarını geçici olarak tıkar. Hem terlemeyi hem de kokuyu azaltır.</p>
+                <div class="c-verdict">→ Belirgin ter/koku sorunu için</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="label">⚠️ Yaygın Yanlış Anlama</div>
+            <p>Pek çok ürün "deodorant + antiperspirant" kombinasyonu sunar. Etiket dikkatli okuyun: "24h antiperspirant" yazıyorsa alüminyum var demek. "Deodorant only" yazıyorsa terlemeyi durdurmaz.</p>
+        </div>
+
+        <p><strong>Alüminyum güvenli mi?</strong> Yıllardır süregelen tartışma için net cevap: Mevcut bilimsel kanıtlar alüminyum içeren antiperspirantların meme kanseri veya Alzheimer ile bağlantısını desteklemiyor. Amerikan Dermatoloji Akademisi (AAD) ve FDA bu ürünleri güvenli kabul ediyor.</p>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            Deodorant parfümcü, antiperspirant tamirci — hangisine ihtiyacınız var?
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- BROMHIDROZ -->
+    <div class="section">
+        <div class="section-label">🏥 Tıbbi Boyut</div>
+        <h2>Bromhidroz: Koku Sorunu Ciddi Bir Hastalık Olduğunda</h2>
+
+        <p><strong>Bromhidroz</strong> (bromidroz) — tıbbi dilde aşırı ve rahatsız edici vücut kokusu için kullanılan terim. Sadece "biraz fazla ter" değil, günlük yaşamı, sosyal ilişkileri ve özgüveni ciddi şekilde etkileyen bir durum.</p>
+
+        <p>İki tipi var:</p>
+        <ul style="padding-left:20px;color:var(--text-s);font-size:15px;line-height:2;">
+            <li><strong style="color:var(--text);">Apokrin bromhidroz</strong> — Koltuk altı, kasık bölgesi. En yaygın tip. Bakteri-ter etkileşiminden kaynaklanır.</li>
+            <li><strong style="color:var(--text);">Ekrin bromhidroz</strong> — Daha az yaygın. Diyetle alınan kokusu bileşikler (sarımsak, köri, alkol) ekrin ter yoluyla atılır.</li>
+        </ul>
+
+        <div class="info-box">
+            <div class="label">📌 Trimetilaminüri (Balık Kokusu Sendromu)</div>
+            <p>Nadir görülen genetik bir durum. Vücut TMA (trimetilamin) adlı bileşiği parçalayamıyor ve bu madde ter, nefes ve idrar yoluyla dışarı atılıyor — balık kokusu olarak algılanıyor. Dermatolojist + genetik uzmanı ile yönetilmesi gerekiyor.</p>
+        </div>
+
+        <p>Ciddi bromhidroz için tedavi seçenekleri: güçlü antiperspirantlar (reçeteli alüminyum klorid %20), botoks enjeksiyonu (koltuk altı ter bezlerini geçici felç eder), antibiyotik kremler (bakteri yükünü azaltır) ve son çare olarak cerrahi (bez dokusu uzaklaştırma veya lazer).</p>
+    </div>
+
+    <!-- KOKU DEĞİŞİMİ UYARISI -->
+    <div class="section">
+        <div class="section-label">🚨 Ne Zaman Endişelenilmeli?</div>
+        <h2>Ter Kokusu Bazen Bir Uyarı Sinyali</h2>
+
+        <p>Uzun süredir alıştığınız koku birden değiştiyse — özellikle herhangi bir açıklama yoksa — bu bir işaret olabilir.</p>
+
+        <div class="danger-box">
+            <div class="label">🚨 Doktora Gidin</div>
+            <p><strong>Aseton/meyve kokusu</strong> → Diyabetik ketoasidoz (acil olabilir) · <strong>Amonyak/balık kokusu</strong> → Böbrek yetmezliği · <strong>Küf kokusu</strong> → Karaciğer hastalığı · <strong>Ekşi/mantar kokusu</strong> (belirli bir bölgede) → Mantar enfeksiyonu · <strong>Ani, açıklanamayan koku değişikliği</strong> → Tiroid, şeker hastalığı veya ilaç yan etkisi</p>
+        </div>
+
+        <p>Bunların dışında, aşırı terleme (hiperhidroz) de ter kokusuyla sıklıkla birlikte seyreder ve tedavi edilebilir bir durumdur. Günlük yaşamınızı etkiliyorsa dermatoloji kliniğine başvurun.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- PRATİK ÇÖZÜMLER -->
+    <div class="section">
+        <div class="section-label">✅ Ne İşe Yarar?</div>
+        <h2>Gerçekten Fark Yaratan Alışkanlıklar</h2>
+
+        <p>İnternet ter kokusu için onlarca tüyo doluyor. Hangisi gerçekten işe yarıyor, hangisi efsane?</p>
+
+        <table class="ing-table">
+            <thead>
+                <tr>
+                    <th>Yöntem</th>
+                    <th>Mekanizma</th>
+                    <th>Etki</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gece antiperspirant uygulaması</strong></td>
+                    <td>Alüminyum tuzları kuru cilde daha iyi penetre eder</td>
+                    <td><span class="badge-inline green">Yüksek</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Kıl temizliği (koltuk altı)</strong></td>
+                    <td>Kıl = bakteri yuva alanı; temizleme bakteri yükünü düşürür</td>
+                    <td><span class="badge-inline green">Yüksek</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Doğal fiber giysi (pamuk, merinos)</strong></td>
+                    <td>Nem emilimi artırır, bakteri üremesi azalır</td>
+                    <td><span class="badge-inline teal">Orta</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Sarımsak/soğan azaltmak</strong></td>
+                    <td>Ekrin yoluyla atılan kokusu bileşikler azalır</td>
+                    <td><span class="badge-inline teal">Orta</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Probiyotik takviyesi</strong></td>
+                    <td>Deri mikrobiyomunu dengeleyebilir (araştırmalar erken aşamada)</td>
+                    <td><span class="badge-inline yellow">Sınırlı</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Limon sürmek</strong></td>
+                    <td>Asit pH geçici olarak bakteriyi baskılar</td>
+                    <td><span class="badge-inline yellow">Çok kısa süreli</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Kristal (doğal taş) deodorant</strong></td>
+                    <td>Mineral tuzlar (alüminyum potasyum sülfat) antibakteriyeldir</td>
+                    <td><span class="badge-inline yellow">Hafif-orta</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Alkol bazlı mendil</strong></td>
+                    <td>Geçici bakteri temizliği — uzun süre etkili değil</td>
+                    <td><span class="badge-inline yellow">Geçici</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="label">💡 Pro Tip</div>
+            <p>Antiperspirantı sabah değil, gece yatarken kuru cilde uygulayın. Uyku sırasında ter bezleri daha az çalışır, alüminyum tuzları kanalları daha etkili tıkar. Sabah çıktığı için etkinliği azalmaz — tam tersi.</p>
+        </div>
+    </div>
+
+    <!-- MİTLER -->
+    <div class="section">
+        <div class="section-label">❌ Efsaneler</div>
+        <h2>Ter Kokusu Hakkında Yanlış Bilinen 4 Şey</h2>
+
+        <ul class="cause-list">
+            <li>
+                <span class="cause-emoji">❌</span>
+                <div class="cause-text">
+                    <strong>"Çok terlemek, çok kokmak demek"</strong>
+                    <span>Yanlış. Ekrin ter (büyük miktarda salınan ter) neredeyse kokusuzdur. Çok az salınan apokrin ter çok daha fazla koku üretebilir. Miktarla koku doğru orantılı değil.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">❌</span>
+                <div class="cause-text">
+                    <strong>"Antİperspirant kanser yapar"</strong>
+                    <span>Kanıtlanmış bir bağlantı yok. 2002'den itibaren yapılan büyük epidemiyolojik çalışmalar alüminyum içeren antiperspirantlarla meme kanseri arasında anlamlı bir ilişki saptamamış. AAD ve WHO kullanımını güvenli kabul ediyor.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">❌</span>
+                <div class="cause-text">
+                    <strong>"Deodorant kullanmayı kesersem vücudum 'alışır'"</strong>
+                    <span>Kısmen doğru, kısmen efsane. Deri mikrobiyomu değişebilir — bazı insanlar baskın koku üreten bakteri türlerini kaybeder. Ama bu herkeste olmaz ve süreci haftalar/aylar alabilir. Garantili değil.</span>
+                </div>
+            </li>
+            <li>
+                <span class="cause-emoji">❌</span>
+                <div class="cause-text">
+                    <strong>"Soda ile koltuk altına sürmek etkili"</strong>
+                    <span>Kısmen işe yarayabilir — pH'ı yükseltir, bakteriyi geçici olarak baskılar. Ama pH 8.3 olan soda koltuk altı derisini tahriş edebilir. Özellikle hassas ya da epilasyonlu deride kızarıklık ve yanmaya yol açar.</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="verdict-section">
+        <h3>⚖️ Kısa Karar Rehberi</h3>
+        <div class="verdict-grid">
+            <div class="verdict-card yap">
+                <span class="v-icon">✅</span>
+                <div class="v-text">
+                    <span class="v-label">Yap</span>
+                    Antiperspirantı gece kuru cilde uygula, koltuk altı kıllarını düzenle, nefes alan kumaş giy
+                </div>
+            </div>
+            <div class="verdict-card yapma">
+                <span class="v-icon">❌</span>
+                <div class="v-text">
+                    <span class="v-label">Yapma</span>
+                    Soda veya limon sürerek irritasyona davet çıkarma — özellikle epilasyon sonrası
+                </div>
+            </div>
+            <div class="verdict-card dikkat">
+                <span class="v-icon">⚠️</span>
+                <div class="v-text">
+                    <span class="v-label">Dikkat</span>
+                    Ani ve açıklanamayan koku değişikliği varsa ertelemeden doktora git — iç organ habercisi olabilir
+                </div>
+            </div>
+            <div class="verdict-card bilgi">
+                <span class="v-icon">💡</span>
+                <div class="v-text">
+                    <span class="v-label">Bilgi</span>
+                    Hiperhidroz + ciddi bromhidroz → dermatoloji kliniğine git, botoks veya reçeteli antiperspirant seçenekleri var
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">Uzman Görüşü</span>
+    </div>
+
+    <div class="references">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Boni R. "Sweat glands." In: Goldsmith LA, et al. <em>Fitzpatrick's Dermatology</em>, 8th ed. McGraw-Hill; 2012.</li>
+            <li>Natsch A, et al. "Isolation of a bacterial enzyme releasing axillary malodor and its use as a screening target for novel deodorant formulations." <em>Int J Cosmet Sci.</em> 2006;28(5):391-9.</li>
+            <li>Martin A, et al. "A functional ABCC11 allele is essential in the biochemical formation of human axillary odor." <em>J Invest Dermatol.</em> 2010;130(2):529-40.</li>
+            <li>McGrath KG. "An earlier age of breast cancer diagnosis related to more frequent use of antiperspirants/deodorants and underarm shaving." <em>Eur J Cancer Prev.</em> 2003;12(6):479-85. [refüte edildi]</li>
+            <li>Fakri S, et al. "Antiperspirant use and the risk of breast cancer in Canada." <em>J Epidemiol Community Health.</em> 2006;60(2):163.</li>
+            <li>Leyden JJ, McGinley KJ, Holzle E, et al. "The microbiology of the human axilla and its relationship to axillary odor." <em>J Invest Dermatol.</em> 1981;77(5):413-6.</li>
+            <li>Callewaert C, et al. "Deodorants and antiperspirants affect the axillary bacterial community." <em>Arch Dermatol Res.</em> 2014;306(8):701-10.</li>
+            <li>American Academy of Dermatology. "How to control excessive sweating." aad.org, 2023.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 <a href="../index.html"><span class="brand-deri">Deri</span>ndenbilgi</a> · Dr. Gözde Şimşek · Kanıta Dayalı Dermatoloji</p>
+    <p style="margin-top:8px;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</p>
+</footer>
+
+</body>
+</html>
