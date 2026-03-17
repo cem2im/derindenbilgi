@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellerim Sürekli Terlıyor: Palmar Hiperhidroz Rehberi | Derindenbilgi</title>
+    <meta name="description" content="El terleme (palmar hiperhidroz) neden olur, nasıl tedavi edilir? İyontoforez, botoks, antikolinerjikler ve ETS cerrahi — her aşama için kanıta dayalı, adım adım rehber.">
+    <meta name="keywords" content="el terleme, palmar hiperhidroz, aşırı el terleme tedavi, iyontoforez, el terleme botoks, el terleme ETS, hiperhidroz şiddet skoru, el terleme nedeni, el terleme çözüm">
+    <meta property="og:title" content="Ellerim Sürekli Terlıyor: Palmar Hiperhidroz Tam Rehberi">
+    <meta property="og:description" content="HDSS skorundan iyontoforeze, botokstan ETS cerrahisine — el terleme için her şiddet düzeyine uygun kanıta dayalı tedavi rehberi.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #FA8072;
+            --accent-dark: #D95F52;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-bg: rgba(37,99,235,0.07);
+            --primary-border: rgba(37,99,235,0.22);
+            --primary-gradient: linear-gradient(135deg, #2563eb, #1d4ed8);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 24px; }
+        .nav-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; gap:16px; height:60px; }
+        .nav-logo { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); font-weight:700; font-size:18px; }
+        .nav-logo svg { width:36px; height:36px; flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto; display:flex; align-items:center; gap:6px; text-decoration:none; color:var(--text-s); font-size:14px; padding:6px 14px; border:1px solid var(--border); border-radius:8px; transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt); }
+
+        .hero { background:linear-gradient(160deg,#eff6ff 0%,#dbeafe 50%,#eff6ff 100%); padding:60px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%,rgba(37,99,235,0.1) 0%,transparent 70%); pointer-events:none; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(37,99,235,0.1); border:1px solid rgba(37,99,235,0.28); color:var(--primary-dark); font-size:13px; font-weight:600; padding:6px 16px; border-radius:99px; margin-bottom:20px; }
+        .hero-icon { font-size:68px; line-height:1; animation:float 4s ease-in-out infinite; display:block; margin-bottom:16px; }
+        .hero h1 { font-size:clamp(26px,5vw,40px); font-weight:800; line-height:1.2; color:var(--text); margin-bottom:14px; }
+        .hero h1 span { color:var(--primary-dark); }
+        .hero p { font-size:17px; color:var(--text-s); max-width:580px; margin:0 auto 24px; }
+        .hero-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+        .hero-tag { background:white; border:1px solid rgba(37,99,235,0.28); color:var(--primary-dark); font-size:13px; font-weight:500; padding:5px 14px; border-radius:99px; }
+
+        .quick-summary { background:var(--primary-gradient); color:white; padding:28px 24px; }
+        .quick-summary-inner { max-width:760px; margin:0 auto; }
+        .quick-summary h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
+        .qs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+        .qs-item { background:rgba(255,255,255,.15); border-radius:var(--radius-sm); padding:12px 16px; font-size:14px; line-height:1.5; }
+        .qs-item strong { display:block; font-weight:700; margin-bottom:3px; }
+
+        .content { max-width:800px; margin:0 auto; padding:48px 24px 80px; }
+        .section { margin-bottom:60px; }
+        .section-label { display:inline-flex; align-items:center; gap:8px; background:var(--primary-bg); color:var(--primary-dark); font-size:12px; font-weight:700; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; text-transform:uppercase; }
+        .section h2 { font-size:clamp(20px,3.5vw,26px); font-weight:800; color:var(--text); margin-bottom:16px; line-height:1.3; }
+        .section p { color:var(--text-s); margin-bottom:14px; line-height:1.8; }
+        .section p strong { color:var(--text); }
+
+        .info-box { background:var(--primary-bg); border-left:4px solid var(--primary); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .info-box .label { font-size:12px; font-weight:700; color:var(--primary-dark); letter-spacing:.06em; margin-bottom:6px; }
+        .info-box p { font-size:15px; color:var(--text); margin:0; line-height:1.7; }
+
+        .warning-box { background:#fffbeb; border-left:4px solid #f59e0b; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .warning-box .label { font-size:12px; font-weight:700; color:#92400e; letter-spacing:.06em; margin-bottom:6px; }
+        .warning-box p { font-size:15px; color:#78350f; margin:0; line-height:1.7; }
+
+        .danger-box { background:#fef2f2; border-left:4px solid #ef4444; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .danger-box .label { font-size:12px; font-weight:700; color:#991b1b; letter-spacing:.06em; margin-bottom:6px; }
+        .danger-box p { font-size:15px; color:#7f1d1d; margin:0; line-height:1.7; }
+
+        .tip-box { background:#f0fdf4; border-left:4px solid #22c55e; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .tip-box .label { font-size:12px; font-weight:700; color:#166534; letter-spacing:.06em; margin-bottom:6px; }
+        .tip-box p { font-size:15px; color:#14532d; margin:0; line-height:1.7; }
+
+        .tek-cumle { background:var(--primary-gradient); color:white; border-radius:var(--radius-md); padding:16px 20px; margin:22px 0; font-size:15px; line-height:1.7; }
+        .tek-cumle .tc-label { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; opacity:.8; margin-bottom:6px; display:block; }
+
+        /* HDSS Skala */
+        .hdss-grid { display:grid; gap:10px; margin:22px 0; }
+        .hdss-card { display:flex; gap:0; border-radius:var(--radius-md); overflow:hidden; border:1.5px solid; }
+        .hdss-score { width:56px; min-width:56px; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:800; color:white; }
+        .hdss-body { padding:12px 16px; flex:1; }
+        .hdss-body strong { display:block; font-size:15px; margin-bottom:3px; }
+        .hdss-body span { font-size:13px; line-height:1.6; }
+        .hdss-card.s1 { border-color:#bbf7d0; }
+        .hdss-card.s1 .hdss-score { background:#16a34a; }
+        .hdss-card.s1 .hdss-body { background:#f0fdf4; }
+        .hdss-card.s1 .hdss-body strong { color:#166534; }
+        .hdss-card.s1 .hdss-body span { color:#15803d; }
+        .hdss-card.s2 { border-color:#fde68a; }
+        .hdss-card.s2 .hdss-score { background:#d97706; }
+        .hdss-card.s2 .hdss-body { background:#fffbeb; }
+        .hdss-card.s2 .hdss-body strong { color:#92400e; }
+        .hdss-card.s2 .hdss-body span { color:#78350f; }
+        .hdss-card.s3 { border-color:#fca5a5; }
+        .hdss-card.s3 .hdss-score { background:#dc2626; }
+        .hdss-card.s3 .hdss-body { background:#fef2f2; }
+        .hdss-card.s3 .hdss-body strong { color:#991b1b; }
+        .hdss-card.s3 .hdss-body span { color:#7f1d1d; }
+        .hdss-card.s4 { border-color:#e9d5ff; }
+        .hdss-card.s4 .hdss-score { background:#7c3aed; }
+        .hdss-card.s4 .hdss-body { background:#faf5ff; }
+        .hdss-card.s4 .hdss-body strong { color:#5b21b6; }
+        .hdss-card.s4 .hdss-body span { color:#6d28d9; }
+
+        /* Treatment ladder */
+        .tx-ladder { list-style:none; padding:0; margin:22px 0; }
+        .tx-ladder li { display:flex; gap:0; margin-bottom:14px; }
+        .tx-num { width:48px; min-width:48px; border-radius:12px 0 0 12px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:18px; color:white; background:var(--primary-gradient); }
+        .tx-body { flex:1; border-radius:0 12px 12px 0; padding:14px 18px; border:1.5px solid var(--primary-border); background:var(--primary-bg); }
+        .tx-body h3 { font-size:16px; font-weight:800; color:var(--text); margin-bottom:5px; }
+        .tx-body p { font-size:14px; color:var(--text-s); line-height:1.7; margin:0 0 8px; }
+        .tx-body .tx-meta { font-size:12px; color:var(--text-t); border-top:1px solid var(--border); padding-top:8px; margin-top:4px; }
+
+        /* Evidence */
+        .evidence-bar { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px 24px; margin:22px 0; }
+        .evidence-bar h4 { font-size:14px; font-weight:700; margin-bottom:12px; }
+        .ev-row { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+        .ev-row:last-child { margin-bottom:0; }
+        .ev-label { font-size:13px; color:var(--text-s); min-width:170px; }
+        .ev-track { flex:1; height:8px; background:var(--border); border-radius:99px; overflow:hidden; }
+        .ev-fill { height:100%; border-radius:99px; }
+        .ev-fill.high { background:linear-gradient(90deg,#22c55e,#16a34a); }
+        .ev-fill.mid { background:linear-gradient(90deg,#f59e0b,#d97706); }
+        .ev-fill.low { background:linear-gradient(90deg,#ef4444,#dc2626); }
+        .ev-score { font-size:12px; font-weight:700; min-width:46px; text-align:right; }
+        .ev-score.high { color:#166534; }
+        .ev-score.mid { color:#92400e; }
+        .ev-score.low { color:#991b1b; }
+
+        /* Trigger list */
+        .trigger-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:20px 0; }
+        @media(max-width:520px){ .trigger-grid { grid-template-columns:1fr; } }
+        .trigger-item { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:14px 16px; display:flex; gap:10px; align-items:center; }
+        .trigger-item .t-icon { font-size:22px; flex-shrink:0; }
+        .trigger-item .t-text { font-size:14px; color:var(--text-s); line-height:1.5; }
+        .trigger-item .t-text strong { color:var(--text); display:block; font-size:13px; }
+
+        /* Comparison */
+        .comp-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; overflow:hidden; border-radius:var(--radius-md); border:1px solid var(--border); }
+        .comp-table th { background:var(--primary-bg); color:var(--primary-dark); font-weight:700; padding:10px 14px; text-align:left; border-bottom:2px solid var(--primary-border); }
+        .comp-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:var(--text-s); vertical-align:top; }
+        .comp-table tr:last-child td { border-bottom:none; }
+        .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; }
+        .badge.green { background:#dcfce7; color:#166534; }
+        .badge.yellow { background:#fef9c3; color:#92400e; }
+        .badge.red { background:#fee2e2; color:#991b1b; }
+        .badge.blue { background:#dbeafe; color:#1d4ed8; }
+        .badge.purple { background:#f3e8ff; color:#6d28d9; }
+
+        /* Verdict */
+        .verdict-section { background:var(--bg-alt); border-radius:var(--radius-lg); padding:28px 24px; margin:40px 0; }
+        .verdict-section h3 { font-size:18px; font-weight:800; margin-bottom:18px; }
+        .verdict-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns:1fr; } }
+        .verdict-card { border-radius:var(--radius-md); padding:16px 18px; display:flex; gap:10px; align-items:flex-start; }
+        .verdict-card.adim1 { background:#eff6ff; border:1.5px solid #bfdbfe; }
+        .verdict-card.adim2 { background:#f0fdf4; border:1.5px solid #86efac; }
+        .verdict-card.adim3 { background:#faf5ff; border:1.5px solid #e9d5ff; }
+        .verdict-card.dikkat { background:#fffbeb; border:1.5px solid #fde68a; }
+        .v-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+        .v-text { font-size:14px; line-height:1.6; }
+        .verdict-card.adim1 .v-text { color:#1e40af; }
+        .verdict-card.adim2 .v-text { color:#166534; }
+        .verdict-card.adim3 .v-text { color:#5b21b6; }
+        .verdict-card.dikkat .v-text { color:#78350f; }
+        .v-label { font-weight:800; font-size:12px; display:block; margin-bottom:3px; letter-spacing:.05em; text-transform:uppercase; }
+
+        .section-divider { border:none; border-top:1px dashed var(--border); margin:52px 0; }
+
+        .author-strip { display:flex; align-items:center; gap:14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px 20px; margin:48px 0 32px; }
+        .author-strip .name { font-weight:700; }
+        .author-strip .title { font-size:13px; color:var(--text-s); }
+        .author-badge { margin-left:auto; background:var(--primary-bg); border:1px solid var(--primary-border); color:var(--primary-dark); font-size:12px; font-weight:700; padding:4px 12px; border-radius:99px; white-space:nowrap; }
+
+        .references { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px; }
+        .references h3 { font-size:15px; font-weight:700; margin-bottom:14px; }
+        .references ol { padding-left:20px; }
+        .references li { font-size:13px; color:var(--text-s); margin-bottom:8px; line-height:1.6; }
+
+        footer { text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--text-t); font-size:13px; }
+        footer a { color:var(--primary-dark); text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" fill="#fdf0ea"/>
+                <circle cx="34" cy="34" r="20" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <circle cx="34" cy="34" r="24" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <ellipse cx="34" cy="26" rx="14" ry="4" fill="#fce4cc" opacity="0.6"/>
+                <ellipse cx="34" cy="31" rx="14" ry="3.5" fill="#FA8072" opacity="0.4"/>
+                <ellipse cx="34" cy="36" rx="13" ry="3" fill="#c4705a" opacity="0.35"/>
+                <ellipse cx="34" cy="41" rx="11" ry="3" fill="#f0d888" opacity="0.4"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">💧 Hiperhidroz Serisi</div>
+    <span class="hero-icon">🤝</span>
+    <h1>Ellerim Sürekli Terlıyor: <span>Palmar Hiperhidroz</span></h1>
+    <p>El sıkışmaktan çekiniyor, dokunmatik ekranlara elleriniz yapışıyor, kağıt ıslanıyor musunuz? Bu bir "gerginlik meselesi" değil — tedavi edilebilir bir durum.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">HDSS Skoru</span>
+        <span class="hero-tag">İyontoforez</span>
+        <span class="hero-tag">Botoks</span>
+        <span class="hero-tag">ETS Cerrahi</span>
+        <span class="hero-tag">Antikolinerjik</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Neden olur?</strong>Ekrin ter bezlerini kontrol eden sinir sisteminin aşırı aktif çalışması — genetik zemin güçlü</div>
+            <div class="qs-item"><strong>İlk adım</strong>Yüksek konsantrasyonlu antiperspirant + iyontoforez — ev uygulamalı, en iyi etkinlik/maliyet dengesi</div>
+            <div class="qs-item"><strong>Kalıcı olmak istersen</strong>Palmar botoks (EMLA ile ağrı kontrolü) → 6–9 ay etki, tekrarlanabilir</div>
+            <div class="qs-item"><strong>Son seçenek</strong>ETS cerrahi — kalıcı ama kompensatuar hiperhidroz riski; dikkatli değerlendirme şart</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- NEDIR -->
+    <div class="section">
+        <div class="section-label">🔬 Temel Bilgi</div>
+        <h2>Bu "Sadece Gerginlik" Değil</h2>
+
+        <p>Palmar hiperhidroz — el ayasında ısı veya duygusal uyaran olmaksızın, günlük yaşamı bozan düzeyde aşırı terleme. Türkiye'de nüfusun yaklaşık <strong>%1–3'ü</strong> primer hiperhidrozdan etkileniyor; bunların büyük çoğunluğunda eller de dahil.</p>
+
+        <p>Asıl sorun şu: hastalar yıllarca "gergin birisin" veya "kafana takma" gibi yanıtlar alıyor. Oysa palmar hiperhidrozun fizyolojik bir nedeni var — <strong>sempatik sinir sisteminin ekrin ter bezlerini aşırı uyarması</strong>. Stres tetikleyebilir ama neden değildir.</p>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            Palmar hiperhidroz, ter bezlerinin değil, o bezleri yöneten sinir sisteminin sorunudur.
+        </div>
+
+        <p><strong>Primer</strong> (birincil) hiperhidroz: altta yatan hastalık yok, genellikle ergenlikte başlar, aile öyküsü sık. <strong>Sekonder</strong> (ikincil) hiperhidroz: hipertiroidi, diyabet, obezite, lenfoma, ilaç yan etkisi gibi bir nedene bağlıdır — önce bu ekarte edilmeli.</p>
+
+        <div class="warning-box">
+            <div class="label">⚠️ Sekonder Hiperhidroz Belirtileri</div>
+            <p>Ellerin yanı sıra <strong>gece terlemesi</strong>, kilo kaybı, çarpıntı veya ilaç başlangıcıyla eş zamanlı terleme varsa önce dahiliye/endokrinoloji değerlendirmesi yapılmalı. Primer hiperhidroz genellikle gece terlemez.</p>
+        </div>
+    </div>
+
+    <!-- HDSS SKORU -->
+    <div class="section">
+        <div class="section-label">📊 Şiddet Ölçümü</div>
+        <h2>HDSS: Kendinizi Hangi Basamakta Görüyorsunuz?</h2>
+
+        <p>Hiperhidroz Hastalık Şiddet Ölçeği (HDSS — Hyperhidrosis Disease Severity Scale) hem klinik değerlendirmede hem de tedavi kararında kullanılan standart araç. Tek soru, dört yanıt.</p>
+
+        <div class="hdss-grid">
+            <div class="hdss-card s1">
+                <div class="hdss-score">1</div>
+                <div class="hdss-body">
+                    <strong>Terleme fark edilmiyor, günlük yaşamı etkilemiyor</strong>
+                    <span>Hafif düzey. Genellikle tedavi gerekmez — yaşam tarzı düzenlemeleri yeterli.</span>
+                </div>
+            </div>
+            <div class="hdss-card s2">
+                <div class="hdss-score">2</div>
+                <div class="hdss-body">
+                    <strong>Terleme katlanılabilir ama bazen günlük aktiviteleri etkiliyor</strong>
+                    <span>Orta düzey. Antiperspirant ve iyontoforez başlanmalı.</span>
+                </div>
+            </div>
+            <div class="hdss-card s3">
+                <div class="hdss-score">3</div>
+                <div class="hdss-body">
+                    <strong>Terleme zor katlanılıyor, günlük aktiviteleri sık etkiliyor</strong>
+                    <span>Belirgin düzey. Botoks veya oral antikolinerjik gündeme giriyor.</span>
+                </div>
+            </div>
+            <div class="hdss-card s4">
+                <div class="hdss-score">4</div>
+                <div class="hdss-body">
+                    <strong>Terleme dayanılmaz, günlük aktiviteleri sürekli engelliyor</strong>
+                    <span>Ciddi düzey. Tüm seçenekler değerlendirilebilir, ETS dahil.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">📌 Klinik Not</div>
+            <p>Botoks tedavisi için genellikle HDSS ≥ 3 referans alınıyor. ETS cerrahi için ise HDSS 4 + en az iki farklı tedaviye yanıtsızlık kriterleri aranıyor. Kendi skorunuzu dermatoloji muayenesinde bildirmek tedavi planını hızlandırır.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- TETİKLEYİCİLER -->
+    <div class="section">
+        <div class="section-label">⚡ Tetikleyiciler</div>
+        <h2>Neler Tetikliyor, Neler Artırıyor?</h2>
+
+        <p>Palmar hiperhidroz belirli koşullarda belirgin biçimde kötüleşir. Tetikleyicileri bilmek hem tanı sürecini kolaylaştırır hem de kısa vadeli yönetimi sağlar.</p>
+
+        <div class="trigger-grid">
+            <div class="trigger-item">
+                <span class="t-icon">😰</span>
+                <div class="t-text"><strong>Kaygı / Stres</strong>Sempatik sistem aktivasyonu doğrudan ter bezlerini uyarır. Primer hiperhidrozun ana tetikleyicisi.</div>
+            </div>
+            <div class="trigger-item">
+                <span class="t-icon">🌡️</span>
+                <div class="t-text"><strong>Sıcak Ortam</strong>Termoregülatuvar ter refleksi, hiperhidrozda çok daha abartılı yanıt üretir.</div>
+            </div>
+            <div class="trigger-item">
+                <span class="t-icon">☕</span>
+                <div class="t-text"><strong>Kafein</strong>Sempatik sistemi uyararak terlemeyi artırır. Günlük 1–2 fincanın üstü belirgin fark yaratabilir.</div>
+            </div>
+            <div class="trigger-item">
+                <span class="t-icon">🌶️</span>
+                <div class="t-text"><strong>Baharatlı Yiyecekler</strong>Kapsaisin ter refleksini tetikler — yüz ve avuç içi bu reflekse özellikle duyarlı.</div>
+            </div>
+            <div class="trigger-item">
+                <span class="t-icon">💊</span>
+                <div class="t-text"><strong>Bazı İlaçlar</strong>SSRI/SNRI antidepresanlar, opioidler, bazı diyabet ilaçları terlemeyi artırabilir.</div>
+            </div>
+            <div class="trigger-item">
+                <span class="t-icon">🧬</span>
+                <div class="t-text"><strong>Genetik</strong>Palmar hiperhidrozluların %30–65'inde aile öyküsü var. Gen geçişi otozomal dominant pattern izleri taşıyor.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- TEDAVİ BASAMAKLARI -->
+    <div class="section">
+        <div class="section-label">🏥 Tedavi Basamakları</div>
+        <h2>Adım Adım Tedavi: Hangisinden Başlamalı?</h2>
+
+        <p>Tedavi her zaman en az invazif seçenekten başlamalı. Eğer sonuç alınamazsa bir üst basamağa geçilir. El terleme için basamak sırası koltuk altından farklı — özellikle antiperspirantın ellerde etkinliği daha sınırlı.</p>
+
+        <ul class="tx-ladder">
+            <li>
+                <div class="tx-num">1</div>
+                <div class="tx-body">
+                    <h3>Yüksek Konsantrasyonlu Antiperspirant (%20+)</h3>
+                    <p>Ellere gece, kuru deriye uygulanır — eldiven veya sargıyla örtmek penetrasyonu artırır. Koltuk altına göre etkinliği daha düşük: avuç içinin kalın deri tabakası alüminyum iyonlarının gözeneklere ulaşmasını zorlaştırır. Denemeye değer ilk adım.</p>
+                    <div class="tx-meta">Türkiye'de: Driclor, Perspirex, Odaban · Süre: 2–4 hafta denemesi şart · Yan etki: tahriş, kaşıntı</div>
+                </div>
+            </li>
+            <li>
+                <div class="tx-num">2</div>
+                <div class="tx-body">
+                    <h3>İyontoforez — En İyi İlk Seçenek</h3>
+                    <p>Elleri suya daldırıp düşük voltajlı elektrik akımı vermek. Akım ekrin ter kanallarını geçici olarak bloke ediyor — mekanizmanın tam biyokimyası hâlâ tartışmalı ama etkinliği güçlü kanıtlanmış. Haftada 2–3 seans, 6–10 seans başlangıç; ardından idame seansları.</p>
+                    <p><strong>Ev cihazları mevcut</strong> (Hidrex, Iontoderma, Fischer MD-1a) — uzun vadede çok ekonomik. Pil veya AC adaptörlü modeller var; AC modeller genellikle daha etkili.</p>
+                    <div class="tx-meta">Etki süresi: 3–4 hafta / seans bloğu · FDA onaylı · Gebelikte kontrendike (kalp pili, metal implant dikkat) · Maliyet: cihaz 150–400 USD, sonra sıfır</div>
+                </div>
+            </li>
+            <li>
+                <div class="tx-num">3</div>
+                <div class="tx-body">
+                    <h3>Oral Antikolinerjikler</h3>
+                    <p>Glikopirolat (<strong>Robinul — off-label</strong>) veya oksibutinin, ter bezlerini uyaran kolinerjik sinyali sistemik olarak bloke eder. Tüm vücut terlemesini azaltır — hem eller hem koltuk altı aynı anda. İyontoforeze yanıt yetersiz veya zaman kısıtlıysa (sınav dönemi, özel gün) tercih edilebilir.</p>
+                    <div class="tx-meta">Yan etki: ağız kuruluğu, görme bulanıklığı, kabızlık, taşikardi · Reçeteli, dermatoloji/dahiliye takibi · Glokoma dikkat</div>
+                </div>
+            </li>
+            <li>
+                <div class="tx-num">4</div>
+                <div class="tx-body">
+                    <h3>Palmar Botoks Enjeksiyonu</h3>
+                    <p>Ter bezlerini uyaran sinir uçlarına botulinum toksin enjeksiyonu. Koltuk altında ağrısız olan bu işlem ellerde ağrılı — avuç içi çok innerve bir bölge. Ancak <strong>EMLA kremi</strong> (topikal anestezi, 45–60 dk) veya soğuk blokaj ile ağrı yönetimi çok iyi sağlanabiliyor. Sonuç dramatik.</p>
+                    <div class="tx-meta">Etki: 4–6 ay (koltuk altından kısa) · EMLA kremi öncesi şart · İnce iğne protokolü önemli · Kas zayıflığı riski (küçük el kasları) — deneyimli uygulayıcı seçin</div>
+                </div>
+            </li>
+            <li>
+                <div class="tx-num">5</div>
+                <div class="tx-body">
+                    <h3>ETS — Endoskopik Torasik Sempatektomi</h3>
+                    <p>T2–T3 seviyesindeki sempatik gangliyonların cerrahi kesimi veya klipslenmesi. Palmar hiperhidrozda %95+ başarı oranı — kalıcı çözüm. Ancak kritik dezavantajı var: <strong>kompensatuar hiperhidroz</strong> (sırt, göğüs, karın bölgesinde telafi terlemesi) hastaların %30–70'inde gelişiyor ve geri döndürülemez olabiliyor.</p>
+                    <div class="tx-meta">Son basamak — diğer tüm tedaviler denenmeli önce · Göğüs cerrahi + dermatoloji konsültasyonu · Klipsleme (kesmeye kıyasla kısmen geri alınabilir) tercih edilebilir</div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="danger-box">
+            <div class="label">🚨 ETS Öncesinde Mutlaka Bilin</div>
+            <p>ETS sonrası kompensatuar hiperhidroz (sırt-gövde terlemesi) bazı hastalarda ellerdeki terlemeyi geçecek kadar şiddetli olabiliyor ve bu yeni sorun geri döndürülemiyor. Klip yöntemi klip alınabilse de her zaman mümkün değil. Karardan önce en az 2 farklı uzman görüşü alın.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- KANIT -->
+    <div class="section">
+        <div class="section-label">📊 Kanıt Düzeyleri</div>
+        <h2>Tedavilerin Kanıt Profili</h2>
+
+        <div class="evidence-bar">
+            <h4>Palmar Hiperhidroz Tedavilerinde Kanıt Gücü</h4>
+            <div class="ev-row">
+                <div class="ev-label">İyontoforez</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:86%"></div></div>
+                <div class="ev-score high">Güçlü</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">ETS Cerrahi</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:88%"></div></div>
+                <div class="ev-score high">Güçlü*</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Botoks (palmar)</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:80%"></div></div>
+                <div class="ev-score high">İyi</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Oral antikolinerjik</div>
+                <div class="ev-track"><div class="ev-fill mid" style="width:60%"></div></div>
+                <div class="ev-score mid">Orta</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Antiperspirant (palmar)</div>
+                <div class="ev-track"><div class="ev-fill mid" style="width:42%"></div></div>
+                <div class="ev-score mid">Sınırlı</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Biofeedback / Stres yönetimi</div>
+                <div class="ev-track"><div class="ev-fill low" style="width:28%"></div></div>
+                <div class="ev-score low">Yetersiz</div>
+            </div>
+        </div>
+
+        <p style="font-size:13px; color:var(--text-t);">*ETS yüksek etkinlik kanıtına sahip ancak kompensatuar hiperhidroz riski nedeniyle son basamak tedavi olarak değerlendiriliyor.</p>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            İyontoforez, palmar hiperhidroz için en iyi etkinlik/yan etki/maliyet dengesini sunan birinci basamak tedavidir.
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- İYONTOFOREZ NASIL -->
+    <div class="section">
+        <div class="section-label">⚡ Derinlemesine</div>
+        <h2>İyontoforez Nasıl Yapılır?</h2>
+
+        <p>İyontoforez için klinik şart değil — ev cihazları hem güvenli hem etkili. Ama doğru protokol kritik.</p>
+
+        <table class="comp-table">
+            <thead>
+                <tr><th>Aşama</th><th>Detay</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Hazırlık</strong></td>
+                    <td>Kaplara ılık musluk suyu doldurun. Kesik, yara veya egzama varsa o bölgeyi vazelin ile kapatın. Metal takı çıkarın.</td>
+                </tr>
+                <tr>
+                    <td><strong>Süre</strong></td>
+                    <td>Seans başına 20–30 dakika. Polarite yarıda değiştirilir (cihaza göre otomatik veya manuel).</td>
+                </tr>
+                <tr>
+                    <td><strong>Yoğunluk</strong></td>
+                    <td>Karıncalanma hissi olmalı ama ağrı veya yanma olmamalı. Kademeli artış — ilk seansta düşük başlayın.</td>
+                </tr>
+                <tr>
+                    <td><strong>Başlangıç kür</strong></td>
+                    <td>Haftada 3–4 seans, 2–3 hafta boyunca (6–10 seans). İlk fark genellikle 4.–6. seansta belirginleşir.</td>
+                </tr>
+                <tr>
+                    <td><strong>İdame</strong></td>
+                    <td>Kür tamamlandıktan sonra haftada 1 seans ile etki sürdürülebilir. Bazı kişiler 10–14 günde bir yeterli bulur.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sodyum bikarbonat ekleme</strong></td>
+                    <td>Suya çay kaşığı sodyum bikarbonat eklemek iletkenliği artırır ve etkinliği iyileştirebilir — deneyin.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="label">💡 Cihaz Seçimi</div>
+            <p>Türkiye'de ulaşılabilen cihazlar: <strong>Hidrex PS500</strong> (Alman, pulse akım), <strong>Fischer MD-1a</strong> (ABD, altın standart referans cihazı), çeşitli Çin yapımı DC cihazlar. AC (alternatif akım) cihazlar DC'ye kıyasla daha etkili bulunuyor bazı çalışmalarda. Fiyat: 150–400 USD aralığı.</p>
+        </div>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="verdict-section">
+        <h3>⚖️ Hangi Adımdan Başlamalısın?</h3>
+        <div class="verdict-grid">
+            <div class="verdict-card adim1">
+                <span class="v-icon">1️⃣</span>
+                <div class="v-text">
+                    <span class="v-label">HDSS 2 — İlk Adım</span>
+                    Driclor / Perspirex gece uygulaması + iyontoforez cihazı al. 4 hafta dene — çoğu hasta burada yanıt alır.
+                </div>
+            </div>
+            <div class="verdict-card adim2">
+                <span class="v-icon">2️⃣</span>
+                <div class="v-text">
+                    <span class="v-label">HDSS 3 — Klinik</span>
+                    Dermatoloji polikliniğine git. Palmar botoks (EMLA ile) veya oral antikolinerjik planlanır.
+                </div>
+            </div>
+            <div class="verdict-card adim3">
+                <span class="v-icon">3️⃣</span>
+                <div class="v-text">
+                    <span class="v-label">HDSS 4 — Multidisipliner</span>
+                    Dermatoloji + göğüs cerrahisi konsültasyonu. ETS öncesi tüm seçenekler tükenmeli. Klip tercih edin, kesmeyin.
+                </div>
+            </div>
+            <div class="verdict-card dikkat">
+                <span class="v-icon">⚠️</span>
+                <div class="v-text">
+                    <span class="v-label">Önce Ekarte Et</span>
+                    Gece terlemesi, kilo kaybı, çarpıntı varsa önce dahiliye — sekonder hiperhidrozu ekarte etmeden tedaviye başlama.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div>
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">Uzman Görüşü</span>
+    </div>
+
+    <div class="references">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Nawrocki S, Cha J. "The etiology, diagnosis, and management of hyperhidrosis: a comprehensive review." <em>J Am Acad Dermatol.</em> 2019;81(3):657-666.</li>
+            <li>Grabell DA, Hebert AA. "Current treatments and therapeutic pipeline in hyperhidrosis." <em>Dermatol Clin.</em> 2014;32(4):485-90.</li>
+            <li>Solish N, et al. "A comprehensive approach to the recognition, diagnosis, and severity-based treatment of focal hyperhidrosis." <em>Dermatol Surg.</em> 2007.</li>
+            <li>Doft MA, et al. "Treatment of hyperhidrosis with botulinum toxin." <em>Aesthet Surg J.</em> 2012;32(2):238-44.</li>
+            <li>Baumgartner FJ. "Surgical approaches for focal hyperhidrosis." <em>Thorac Surg Clin.</em> 2008;18(2):167-81.</li>
+            <li>Strutton DR, et al. "US prevalence of hyperhidrosis and impact on individuals with axillary hyperhidrosis." <em>J Am Acad Dermatol.</em> 2004.</li>
+            <li>American Academy of Dermatology. "Hyperhidrosis: Diagnosis and treatment." aad.org, 2024.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 <a href="../index.html"><span class="brand-deri">Deri</span>ndenbilgi</a> · Dr. Gözde Şimşek · Kanıta Dayalı Dermatoloji</p>
+    <p style="margin-top:8px;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</p>
+</footer>
+
+</body>
+</html>
