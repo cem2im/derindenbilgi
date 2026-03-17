@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilt Bakımının Az Bilinen Yıldızı: Sülfür | Derindenbilgi</title>
+    <meta name="description" content="Sülfür neden bu kadar güçlü? Akne, rozasea, seboreik dermatit ve uyuz tedavisinde yüzyıllık aktif madde. Hangi konsantrasyon, nasıl kullanılır, kimler kullanmamalı? Kanıta dayalı rehber.">
+    <meta name="keywords" content="sülfür cilt bakımı, sülfür akne, sülfür rozasea, sülfür seboreik dermatit, sulfur skincare, sülfür krem, sülfür sabun, sülfür konsantrasyon, benzoil peroksit sülfür fark">
+    <meta property="og:title" content="Cilt Bakımının Az Bilinen Yıldızı: Sülfür Rehberi">
+    <meta property="og:description" content="Antibakteriyel, anti-inflamatuvar, sebum düzenleyici — sülfürün cilt bakımındaki yeri hiç küçümsenmemeli.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #FA8072;
+            --accent-dark: #D95F52;
+            --primary: #ca8a04;
+            --primary-dark: #a16207;
+            --primary-bg: rgba(202,138,4,0.07);
+            --primary-border: rgba(202,138,4,0.22);
+            --primary-gradient: linear-gradient(135deg, #ca8a04, #a16207);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 24px; }
+        .nav-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; gap:16px; height:60px; }
+        .nav-logo { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); font-weight:700; font-size:18px; }
+        .nav-logo svg { width:36px; height:36px; flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto; display:flex; align-items:center; gap:6px; text-decoration:none; color:var(--text-s); font-size:14px; padding:6px 14px; border:1px solid var(--border); border-radius:8px; transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt); }
+
+        .hero { background:linear-gradient(160deg,#fefce8 0%,#fef9c3 50%,#fefce8 100%); padding:60px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%,rgba(202,138,4,0.12) 0%,transparent 70%); pointer-events:none; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(202,138,4,0.1); border:1px solid rgba(202,138,4,0.3); color:var(--primary-dark); font-size:13px; font-weight:600; padding:6px 16px; border-radius:99px; margin-bottom:20px; }
+        .hero-icon { font-size:68px; line-height:1; animation:float 4s ease-in-out infinite; display:block; margin-bottom:16px; }
+        .hero h1 { font-size:clamp(26px,5vw,40px); font-weight:800; line-height:1.2; color:var(--text); margin-bottom:14px; }
+        .hero h1 span { color:var(--primary-dark); }
+        .hero p { font-size:17px; color:var(--text-s); max-width:580px; margin:0 auto 24px; }
+        .hero-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+        .hero-tag { background:white; border:1px solid rgba(202,138,4,0.3); color:var(--primary-dark); font-size:13px; font-weight:500; padding:5px 14px; border-radius:99px; }
+
+        .quick-summary { background:var(--primary-gradient); color:white; padding:28px 24px; }
+        .quick-summary-inner { max-width:760px; margin:0 auto; }
+        .quick-summary h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
+        .qs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+        .qs-item { background:rgba(255,255,255,.15); border-radius:var(--radius-sm); padding:12px 16px; font-size:14px; line-height:1.5; }
+        .qs-item strong { display:block; font-weight:700; margin-bottom:3px; }
+
+        .content { max-width:800px; margin:0 auto; padding:48px 24px 80px; }
+        .section { margin-bottom:60px; }
+        .section-label { display:inline-flex; align-items:center; gap:8px; background:var(--primary-bg); color:var(--primary-dark); font-size:12px; font-weight:700; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; text-transform:uppercase; }
+        .section h2 { font-size:clamp(20px,3.5vw,26px); font-weight:800; color:var(--text); margin-bottom:16px; line-height:1.3; }
+        .section p { color:var(--text-s); margin-bottom:14px; line-height:1.8; }
+        .section p strong { color:var(--text); }
+
+        .info-box { background:var(--primary-bg); border-left:4px solid var(--primary); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .info-box .label { font-size:12px; font-weight:700; color:var(--primary-dark); letter-spacing:.06em; margin-bottom:6px; }
+        .info-box p { font-size:15px; color:var(--text); margin:0; line-height:1.7; }
+
+        .warning-box { background:#fffbeb; border-left:4px solid #f59e0b; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .warning-box .label { font-size:12px; font-weight:700; color:#92400e; letter-spacing:.06em; margin-bottom:6px; }
+        .warning-box p { font-size:15px; color:#78350f; margin:0; line-height:1.7; }
+
+        .tip-box { background:#f0fdf4; border-left:4px solid #22c55e; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .tip-box .label { font-size:12px; font-weight:700; color:#166534; letter-spacing:.06em; margin-bottom:6px; }
+        .tip-box p { font-size:15px; color:#14532d; margin:0; line-height:1.7; }
+
+        .tek-cumle { background:var(--primary-gradient); color:white; border-radius:var(--radius-md); padding:16px 20px; margin:22px 0; font-size:15px; line-height:1.7; }
+        .tek-cumle .tc-label { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; opacity:.8; margin-bottom:6px; display:block; }
+
+        /* Mechanism cards */
+        .mech-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0; }
+        @media(max-width:540px){ .mech-grid { grid-template-columns:1fr; } }
+        .mech-card { border-radius:var(--radius-md); padding:18px 20px; border:1.5px solid; }
+        .mech-card .mc-icon { font-size:28px; margin-bottom:10px; display:block; }
+        .mech-card .mc-title { font-weight:800; font-size:15px; margin-bottom:6px; }
+        .mech-card .mc-desc { font-size:13px; line-height:1.6; color:var(--text-s); }
+        .mech-card.antibak { background:#fefce8; border-color:#fde68a; }
+        .mech-card.antibak .mc-title { color:#92400e; }
+        .mech-card.antiinf { background:#fff7ed; border-color:#fed7aa; }
+        .mech-card.antiinf .mc-title { color:#c2410c; }
+        .mech-card.kerat { background:#fdf4ff; border-color:#e9d5ff; }
+        .mech-card.kerat .mc-title { color:#6d28d9; }
+        .mech-card.sebum { background:#f0fdf4; border-color:#bbf7d0; }
+        .mech-card.sebum .mc-title { color:#166534; }
+
+        /* Indication list */
+        .ind-list { list-style:none; padding:0; margin:22px 0; }
+        .ind-list li { display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--border); align-items:flex-start; }
+        .ind-list li:last-child { border-bottom:none; }
+        .ind-icon { font-size:22px; flex-shrink:0; width:36px; text-align:center; }
+        .ind-body strong { color:var(--text); font-size:15px; display:block; margin-bottom:4px; }
+        .ind-body span { font-size:14px; color:var(--text-s); line-height:1.7; }
+        .ind-badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; margin-top:6px; }
+        .ind-badge.strong { background:#dcfce7; color:#166534; }
+        .ind-badge.mid { background:#fef9c3; color:#92400e; }
+        .ind-badge.low { background:#fee2e2; color:#991b1b; }
+
+        /* Conc table */
+        .comp-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; overflow:hidden; border-radius:var(--radius-md); border:1px solid var(--border); }
+        .comp-table th { background:var(--primary-bg); color:var(--primary-dark); font-weight:700; padding:10px 14px; text-align:left; border-bottom:2px solid var(--primary-border); }
+        .comp-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:var(--text-s); vertical-align:top; }
+        .comp-table tr:last-child td { border-bottom:none; }
+        .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; }
+        .badge.green { background:#dcfce7; color:#166534; }
+        .badge.yellow { background:#fef9c3; color:#92400e; }
+        .badge.red { background:#fee2e2; color:#991b1b; }
+        .badge.gold { background:#fef9c3; color:#a16207; }
+        .badge.blue { background:#dbeafe; color:#1d4ed8; }
+
+        /* Evidence bar */
+        .evidence-bar { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px 24px; margin:22px 0; }
+        .evidence-bar h4 { font-size:14px; font-weight:700; margin-bottom:12px; }
+        .ev-row { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+        .ev-row:last-child { margin-bottom:0; }
+        .ev-label { font-size:13px; color:var(--text-s); min-width:160px; }
+        .ev-track { flex:1; height:8px; background:var(--border); border-radius:99px; overflow:hidden; }
+        .ev-fill { height:100%; border-radius:99px; }
+        .ev-fill.high { background:linear-gradient(90deg,#22c55e,#16a34a); }
+        .ev-fill.mid { background:linear-gradient(90deg,#f59e0b,#d97706); }
+        .ev-fill.low { background:linear-gradient(90deg,#ef4444,#dc2626); }
+        .ev-score { font-size:12px; font-weight:700; min-width:42px; text-align:right; }
+        .ev-score.high { color:#166534; }
+        .ev-score.mid { color:#92400e; }
+        .ev-score.low { color:#991b1b; }
+
+        /* Myth list */
+        .myth-list { list-style:none; padding:0; margin:22px 0; }
+        .myth-list li { display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--border); align-items:flex-start; }
+        .myth-list li:last-child { border-bottom:none; }
+        .myth-icon { font-size:20px; flex-shrink:0; width:32px; text-align:center; margin-top:2px; }
+        .myth-body strong { color:var(--text); font-size:15px; display:block; margin-bottom:4px; }
+        .myth-body span { font-size:14px; color:var(--text-s); line-height:1.7; }
+
+        /* Verdict */
+        .verdict-section { background:var(--bg-alt); border-radius:var(--radius-lg); padding:28px 24px; margin:40px 0; }
+        .verdict-section h3 { font-size:18px; font-weight:800; margin-bottom:18px; }
+        .verdict-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns:1fr; } }
+        .verdict-card { border-radius:var(--radius-md); padding:16px 18px; display:flex; gap:10px; align-items:flex-start; }
+        .verdict-card.al { background:#f0fdf4; border:1.5px solid #86efac; }
+        .verdict-card.dikkat { background:#fffbeb; border:1.5px solid #fde68a; }
+        .verdict-card.gec { background:#fef2f2; border:1.5px solid #fca5a5; }
+        .verdict-card.bilgi { background:#fefce8; border:1.5px solid #fde68a; }
+        .v-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+        .v-text { font-size:14px; line-height:1.6; }
+        .verdict-card.al .v-text { color:#166534; }
+        .verdict-card.dikkat .v-text { color:#78350f; }
+        .verdict-card.gec .v-text { color:#7f1d1d; }
+        .verdict-card.bilgi .v-text { color:#92400e; }
+        .v-label { font-weight:800; font-size:12px; display:block; margin-bottom:3px; letter-spacing:.05em; text-transform:uppercase; }
+
+        .section-divider { border:none; border-top:1px dashed var(--border); margin:52px 0; }
+
+        .author-strip { display:flex; align-items:center; gap:14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px 20px; margin:48px 0 32px; }
+        .author-strip .author-info .name { font-weight:700; color:var(--text); }
+        .author-strip .author-info .title { font-size:13px; color:var(--text-s); }
+        .author-badge { margin-left:auto; background:var(--primary-bg); border:1px solid var(--primary-border); color:var(--primary-dark); font-size:12px; font-weight:700; padding:4px 12px; border-radius:99px; white-space:nowrap; }
+
+        .references { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px; }
+        .references h3 { font-size:15px; font-weight:700; margin-bottom:14px; }
+        .references ol { padding-left:20px; }
+        .references li { font-size:13px; color:var(--text-s); margin-bottom:8px; line-height:1.6; }
+
+        footer { text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--text-t); font-size:13px; }
+        footer a { color:var(--primary-dark); text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" fill="#fdf0ea"/>
+                <circle cx="34" cy="34" r="20" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <circle cx="34" cy="34" r="24" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <ellipse cx="34" cy="26" rx="14" ry="4" fill="#fce4cc" opacity="0.6"/>
+                <ellipse cx="34" cy="31" rx="14" ry="3.5" fill="#FA8072" opacity="0.4"/>
+                <ellipse cx="34" cy="36" rx="13" ry="3" fill="#c4705a" opacity="0.35"/>
+                <ellipse cx="34" cy="41" rx="11" ry="3" fill="#f0d888" opacity="0.4"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">⭐ Derinlemesine Gündem</div>
+    <span class="hero-icon">🌟</span>
+    <h1>Cilt Bakımının <span>Az Bilinen Yıldızı:</span> Sülfür</h1>
+    <p>Binlerce yıllık geçmişi, dört farklı mekanizması, beş ayrı endikasyonu — ama sosyal medyada neredeyse hiç adı geçmiyor. Sülfürü tanıma vakti.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">Akne</span>
+        <span class="hero-tag">Rozasea</span>
+        <span class="hero-tag">Seboreik Dermatit</span>
+        <span class="hero-tag">Antibakteriyel</span>
+        <span class="hero-tag">Keratoliz</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Ne işe yarar?</strong>Antibakteriyel + anti-inflamatuvar + keratolik + sebum düzenleyici — dört etki aynı anda</div>
+            <div class="qs-item"><strong>En iyi endikasyon</strong>Komedonlu akne, papülopüstüler rozasea, seboreik dermatit, Malassezia aknesi</div>
+            <div class="qs-item"><strong>Konsantrasyon</strong>OTC: %3–10 · Uyuz: %6–10 (hamile + çocuk için altın standart)</div>
+            <div class="qs-item"><strong>Kimlerle karıştırma</strong>Salisilik asit ile tamamlayıcı · Benzoil peroksit ile birlikte kullanma</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- NEDIR -->
+    <div class="section">
+        <div class="section-label">📖 Temel Bilgi</div>
+        <h2>Sülfür Tam Olarak Nedir?</h2>
+
+        <p>Sülfür periyodik tablonun 16. elementidir — ama cilt bakımında kullanılan "elementel sülfür" formudur. Sarı renkli, hafif kükürt kokusu olan bu madde Hipokrat'tan bu yana cilt hastalıklarında kullanılıyor.</p>
+
+        <p>Ciltte uygulanan elementel sülfür bir dizi kimyasal reaksiyona giriyor: bakteri ve mantar hücrelerini öldüren <strong>pentatiyon asiti</strong> ve <strong>hidrojen sülfür</strong>'e dönüşüyor. Aynı zamanda keratin bağlarını gevşeterek hafif eksfoliasyon sağlıyor.</p>
+
+        <p>Neden sosyal medyada az konuşuluyor? Çünkü patenti yok, ucuz, eski — marka çıkarı yok. Ama etkinliği, modern aktif maddelerin büyük bölümüyle yarışacak düzeyde.</p>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            Sülfür; antibiyotik, peeling ve sebum baskılayıcıyı tek bir molekülde birleştiren, underrated bir aktif madde.
+        </div>
+    </div>
+
+    <!-- MEKANİZMA -->
+    <div class="section">
+        <div class="section-label">⚙️ Nasıl Çalışır?</div>
+        <h2>Dört Farklı Etki Mekanizması</h2>
+
+        <p>Sülfürü özel kılan şey, tek bir yolak üzerinden değil dört paralel mekanizma üzerinden çalışması. Bu yüzden hem akne hem rozasea hem mantar hem de sebum sorunlarında aynı anda faydalı olabiliyor.</p>
+
+        <div class="mech-grid">
+            <div class="mech-card antibak">
+                <span class="mc-icon">🦠</span>
+                <div class="mc-title">Antibakteriyel</div>
+                <div class="mc-desc">Deriye uygulandığında dönüşen pentatiyon asiti ve H₂S, <em>C. acnes</em> ve <em>Staphylococcus epidermidis</em>'e karşı etkili. Antibiyotik direnci geliştirme riski neredeyse yok.</div>
+            </div>
+            <div class="mech-card antiinf">
+                <span class="mc-icon">🔥</span>
+                <div class="mc-title">Anti-inflamatuvar</div>
+                <div class="mc-desc">Prostaglandin sentezini inhibe ederek kızarıklık ve şişliği azaltır. Bu etki sayesinde rozasea'nın papülopüstüler tipinde de kullanılabiliyor.</div>
+            </div>
+            <div class="mech-card kerat">
+                <span class="mc-icon">✨</span>
+                <div class="mc-title">Keratolik</div>
+                <div class="mc-desc">Keratin zincirindeki disülfid bağlarını kırarak ölü hücre birikimini önler. Bu hafif eksfoliasyon etkisi komedonların oluşumunu engeller ve gözenek açıklığını azaltır.</div>
+            </div>
+            <div class="mech-card sebum">
+                <span class="mc-icon">💧</span>
+                <div class="mc-title">Sebum Düzenleyici</div>
+                <div class="mc-desc">Sebum üretimini doğrudan azaltır — hem akne hem yağlı cilt için anlamlı. Salisilik asitten farklı olarak sadece "temizlemez", kaynağı da hedefler.</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="label">📌 Sarımsak-Soğan Bağlantısı</div>
+            <p>Sarımsak ve soğanın "doğal antibiyotik" olarak bilinmesinin arkasında tam olarak bu mekanizma var: her ikisi de organik sülfür bileşikleri içeriyor — allicin (sarımsak) ve çeşitli tiosülfünatlar (soğan). Bunlar ciltte de aynı antibakteriyel yola giriyor.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ENDİKASYONLAR -->
+    <div class="section">
+        <div class="section-label">🎯 Hangi Sorunlarda?</div>
+        <h2>Beş Endikasyon, Farklı Kanıt Güçleri</h2>
+
+        <ul class="ind-list">
+            <li>
+                <span class="ind-icon">🫧</span>
+                <div class="ind-body">
+                    <strong>Akne Vulgaris (özellikle komedonlu)</strong>
+                    <span>Sülfür, FDA'nın OTC akne tedavisi monografında resmi olarak yer alıyor — benzoil peroksit ve salisilik asit ile aynı listede. Komedonları çözdürür, <em>C. acnes</em>'i baskılar, sebumu azaltır. Özellikle komedonal ve hafif-orta inflamatuvar aknede etkili.</span>
+                    <div><span class="ind-badge strong">Güçlü Kanıt</span></div>
+                </div>
+            </li>
+            <li>
+                <span class="ind-icon">🌹</span>
+                <div class="ind-body">
+                    <strong>Papülopüstüler Rozasea</strong>
+                    <span>Sodyum sülfasetamid + sülfür kombinasyonu (%10 sulfasetamid + %5 sülfür) rozasea tedavisinde onaylı bir ilaçtır (Klaron, Sulfacet-R). Kızarıklık ve papüllerde belirgin azalma sağlıyor. Eritematotelajiektazi tipi rozaseada etkisi sınırlı.</span>
+                    <div><span class="ind-badge strong">İyi Kanıt</span></div>
+                </div>
+            </li>
+            <li>
+                <span class="ind-icon">🍂</span>
+                <div class="ind-body">
+                    <strong>Seboreik Dermatit</strong>
+                    <span><em>Malassezia</em> mayasına karşı antifungal etkisiyle seboreik dermatit ve kepekte kullanılıyor. Çinko piritiyon veya selenyum sülfür ile kombine edildiğinde etki artar. Saçlı deri uygulamaları için sülfür içerikli şampuanlar mevcut.</span>
+                    <div><span class="ind-badge strong">İyi Kanıt</span></div>
+                </div>
+            </li>
+            <li>
+                <span class="ind-icon">🍄</span>
+                <div class="ind-body">
+                    <strong>Pitiriazis Versikolor (Malassezia Aknesi)</strong>
+                    <span>Gövde veya alnda sık görülen, standart akne tedavilerine yanıtsız, foliküler papüller — sıklıkla <em>Malassezia</em> kaynaklıdır. Sülfürün antifungal etkisi bu vakalarda kurtarıcı olabiliyor.</span>
+                    <div><span class="ind-badge mid">Orta Kanıt</span></div>
+                </div>
+            </li>
+            <li>
+                <span class="ind-icon">🩺</span>
+                <div class="ind-body">
+                    <strong>Uyuz (Scabies)</strong>
+                    <span>%6–10 sülfür merhemi, hamilelik ve iki yaş altı çocuklarda skabies tedavisinde <strong>altın standart</strong>. Permetrin ve ivermektin kullanılamadığında birincil seçenek. Gece uygulanır, 3 gece art arda — sonra duş alınır.</span>
+                    <div><span class="ind-badge strong">Güçlü Kanıt</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- KONSANTRASYON -->
+    <div class="section">
+        <div class="section-label">📏 Dozaj</div>
+        <h2>Hangi Konsantrasyon, Hangi Durum?</h2>
+
+        <table class="comp-table">
+            <thead>
+                <tr><th>Konsantrasyon</th><th>Endikasyon</th><th>Form</th><th>Durum</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>%3–5</strong></td>
+                    <td>Hafif akne, yağlı cilt bakımı</td>
+                    <td>Krem, losyon, sabun</td>
+                    <td><span class="badge green">OTC — reçetesiz</span></td>
+                </tr>
+                <tr>
+                    <td><strong>%5–10</strong></td>
+                    <td>Orta akne, seboreik dermatit, rozasea</td>
+                    <td>Krem, jel, maske</td>
+                    <td><span class="badge green">OTC — reçetesiz</span></td>
+                </tr>
+                <tr>
+                    <td><strong>%10 sülfasetamid + %5 sülfür</strong></td>
+                    <td>Rozasea, akne</td>
+                    <td>Losyon, krem (Klaron)</td>
+                    <td><span class="badge yellow">Reçeteli</span></td>
+                </tr>
+                <tr>
+                    <td><strong>%6–10</strong></td>
+                    <td>Uyuz (hamile/çocuk)</td>
+                    <td>Merhem, pomad</td>
+                    <td><span class="badge yellow">Reçeteli — 3 gece protokol</span></td>
+                </tr>
+                <tr>
+                    <td><strong>>%10</strong></td>
+                    <td>Dirençli uyuz, özel protokoller</td>
+                    <td>Kompound eczane</td>
+                    <td><span class="badge yellow">Reçeteli — dermatoloji</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <div class="label">⚠️ Konsantrasyon Arttıkça Tahriş Riski Artar</div>
+            <p>%10 üzeri sülfür formülasyonları hassas veya kuru ciltte kızarıklık, soyulma ve kuruluğa yol açabilir. Hassas cilt sahipleri nemlendiriciyle başlamalı, düşük konsantrasyonla kademeli geçiş yapmalı.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- KANIT -->
+    <div class="section">
+        <div class="section-label">📊 Kanıt Özeti</div>
+        <h2>Bilim Sülfür Hakkında Ne Diyor?</h2>
+
+        <div class="evidence-bar">
+            <h4>Endikasyona Göre Kanıt Gücü</h4>
+            <div class="ev-row">
+                <div class="ev-label">Uyuz tedavisi</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:90%"></div></div>
+                <div class="ev-score high">Güçlü</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Komedonlu akne</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:82%"></div></div>
+                <div class="ev-score high">Güçlü</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Seboreik dermatit</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:78%"></div></div>
+                <div class="ev-score high">İyi</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Papülopüstüler rozasea</div>
+                <div class="ev-track"><div class="ev-fill high" style="width:74%"></div></div>
+                <div class="ev-score high">İyi</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Malassezia folikülit</div>
+                <div class="ev-track"><div class="ev-fill mid" style="width:58%"></div></div>
+                <div class="ev-score mid">Orta</div>
+            </div>
+            <div class="ev-row">
+                <div class="ev-label">Keratosis pilaris</div>
+                <div class="ev-track"><div class="ev-fill mid" style="width:44%"></div></div>
+                <div class="ev-score mid">Sınırlı</div>
+            </div>
+        </div>
+
+        <p>2019'da yayımlanan bir sistematik derleme (Gupta & Bhatt, <em>J Clin Aesthet Dermatol</em>), sülfür içeren formülasyonların akne vulgaris tedavisinde plaseboya kıyasla anlamlı üstünlük gösterdiğini doğruladı. Aynı derleme, sülfür + sodyum sülfasetamid kombinasyonunun rozasea için FDA sınıf III kanıta sahip olduğunu not etti.</p>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            Sülfür, eski olmasına rağmen modern dermatologların rafından eksik etmediği, kanıt profili son derece güçlü bir aktif madde.
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- DİĞER AKTİFLERLE -->
+    <div class="section">
+        <div class="section-label">🤝 Kombinasyonlar</div>
+        <h2>Sülfür Kiminle İyi Geçiniyor, Kimle Geçinmiyor?</h2>
+
+        <table class="comp-table">
+            <thead>
+                <tr><th>Aktif</th><th>Kombinasyon</th><th>Neden?</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Salisilik Asit</strong></td>
+                    <td><span class="badge green">Tamamlayıcı ✅</span></td>
+                    <td>SA komedon çözer + sülfür bakteriyi öldürür ve sebumu azaltır. Birlikte güçlü akne kombinasyonu — özellikle yağlı, akneli cilt.</td>
+                </tr>
+                <tr>
+                    <td><strong>Niasinamid</strong></td>
+                    <td><span class="badge green">Uyumlu ✅</span></td>
+                    <td>Niasinamid bariyer destekler, sülfürün potansiyel tahriş etkisini dengeler. Sebum düzenleme etkilerinde sinerjik.</td>
+                </tr>
+                <tr>
+                    <td><strong>Çinko</strong></td>
+                    <td><span class="badge green">Sinerjik ✅</span></td>
+                    <td>Çinko + sülfür kombinasyonu seboreik dermatit ve akne için klasik formülasyon. Birbirini güçlendiriyor.</td>
+                </tr>
+                <tr>
+                    <td><strong>Benzoil Peroksit</strong></td>
+                    <td><span class="badge yellow">Dikkatli ⚠️</span></td>
+                    <td>Her ikisi de oksidatif mekanizmayı kullanıyor; birlikte aşırı tahriş, soyulma ve kuruluk riski yüksek. Ayrı seanslarda kullanılmalı.</td>
+                </tr>
+                <tr>
+                    <td><strong>AHA / Glikolik Asit</strong></td>
+                    <td><span class="badge yellow">Dikkatli ⚠️</span></td>
+                    <td>İkisi birden güçlü asit yükü yaratır. Hassas ciltte bariyer hasarı riski. Farklı günlere bölmek daha güvenli.</td>
+                </tr>
+                <tr>
+                    <td><strong>Retinoid</strong></td>
+                    <td><span class="badge yellow">Ayrı seanslarda ⚠️</span></td>
+                    <td>Her ikisi de irritan — kombine kullanım tahriş birikimini artırır. Retinoid gece, sülfür gündüz veya gün aşırı.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="label">💡 Pratik Rutin Önerisi</div>
+            <p><strong>Sabah:</strong> Sülfür içerikli temizleyici veya tonik → niasinamid → nemlendirici → SPF<br>
+            <strong>Akşam:</strong> Çift temizleme → sülfür krem (%5–10, nokta uygulama veya ince tabaka) → nemlendirici<br>
+            Retinoid kullanıyorsanız: sülfür olmayan gecelerde retinoid.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- KİM KULLANMAMALI -->
+    <div class="section">
+        <div class="section-label">⛔ Kısıtlamalar</div>
+        <h2>Sülfür Her Ciltte Olmaz</h2>
+
+        <p><strong>Özellikle dikkatli olunması gereken durumlar:</strong></p>
+        <ul style="padding-left:22px; color:var(--text-s); font-size:15px; line-height:2.2;">
+            <li><strong style="color:var(--text);">Kuru ve hassas cilt</strong> — sülfür keratolik etkiyle kuruluk ve soyulmayı artırır; mutlaka yüksek SPF ve nemlendirici desteği şart</li>
+            <li><strong style="color:var(--text);">Aktif egzama / atopik dermatit</strong> — bozulmuş bariyer üzerine sülfür ciddi tahriş yaratabilir</li>
+            <li><strong style="color:var(--text);">Sülfür alerjisi</strong> — nadir ama mevcut; patch test önerilebilir</li>
+            <li><strong style="color:var(--text);">Eritematotelajiektazik rozasea</strong> — kızarıklık ağırlıklı rozasea tipinde sülfür etkisiz, hatta tahriş edebilir</li>
+        </ul>
+
+        <div class="warning-box">
+            <div class="label">⚠️ Koku Uyarısı</div>
+            <p>Sülfürün hafif bir kükürt/yumurta kokusu var. Bu tamamen normaldir — zamanla fark edilmez hale gelir. Yüksek konsantrasyonlarda daha belirgin. Gece uygulaması bu nedenle de pratik bir çözüm.</p>
+        </div>
+    </div>
+
+    <!-- MİTLER -->
+    <div class="section">
+        <div class="section-label">❌ Yanlış Bilinenler</div>
+        <h2>Sülfür Hakkında 3 Yaygın Yanlış</h2>
+        <ul class="myth-list">
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"Sülfür eski moda, artık daha iyi şeyler var"</strong>
+                    <span>Yanlış. Sülfürün çok mekanizmalı etkisi, antibiyotik direnci riski taşımaması ve geniş endikasyon profili, onu hâlâ modern dermatoloji rehberlerinde aktif bir madde olarak tutuyor. "Eski" olması değerini düşürmüyor — aspirin de eski, aspirini kimse bırakmıyor.</span>
+                </div>
+            </li>
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"Sadece akne için kullanılır"</strong>
+                    <span>Yanlış. Rozasea, seboreik dermatit, pitiriazis versikolor, Malassezia folikülit ve uyuz — beş farklı endikasyon, farklı mekanizmalarla. Sülfür dermatolojinin çok amaçlı aracı.</span>
+                </div>
+            </li>
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"Benzoil peroksitle birlikte daha etkili olur"</strong>
+                    <span>Tam tersi. İkisi de oksidatif mekanizma kullanıyor ve tahriş etkileri birbirini katlamasa da ciddi ölçüde artırıyor. Birlikte kullanım bariyer hasarı, soyulma ve kızarıklık riskini yükseltiyor — kombinasyondan kaçının.</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="verdict-section">
+        <h3>⚖️ Sülfür: Al mı, Düşün mü, Geç mi?</h3>
+        <div class="verdict-grid">
+            <div class="verdict-card al">
+                <span class="v-icon">✅</span>
+                <div class="v-text">
+                    <span class="v-label">Al</span>
+                    Yağlı/akne eğilimli cilt, komedon sorunu, seboreik dermatit, papülopüstüler rozasea — sülfür birinci sıra tercihin olabilir
+                </div>
+            </div>
+            <div class="verdict-card bilgi">
+                <span class="v-icon">💡</span>
+                <div class="v-text">
+                    <span class="v-label">Kombinasyon</span>
+                    Salisilik asit veya niasinamid ile birlikte kullan — etki artar, tahriş riski düşük kalır
+                </div>
+            </div>
+            <div class="verdict-card dikkat">
+                <span class="v-icon">⚠️</span>
+                <div class="v-text">
+                    <span class="v-label">Dikkat</span>
+                    Kuru veya hassas ciltte düşük konsantrasyonla (%3–5) başla, yoğun nemlendirici ve SPF ile destekle
+                </div>
+            </div>
+            <div class="verdict-card gec">
+                <span class="v-icon">❌</span>
+                <div class="v-text">
+                    <span class="v-label">Geç</span>
+                    Aktif egzama, bozulmuş bariyer veya eritematotelajiektazik rozasea varsa sülfür uygun değil
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-info">
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">Uzman Görüşü</span>
+    </div>
+
+    <div class="references">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Gupta AK, Bhatt PR. "Sulfur: an age-old dermatological therapy." <em>J Clin Aesthet Dermatol.</em> 2019.</li>
+            <li>Arora S, et al. "Topical sulfur-containing formulations in dermatology." <em>Indian Dermatol Online J.</em> 2021.</li>
+            <li>Del Rosso JQ. "Topical sodium sulfacetamide/sulfur in the treatment of rosacea and acne." <em>J Drugs Dermatol.</em> 2009.</li>
+            <li>FDA. "Acne OTC Monograph: Sulfur 3-10%." fda.gov, 1991 (updated 2023).</li>
+            <li>Hicks MI, Elston DM. "Scabies." <em>Dermatol Ther.</em> 2009;22(4):279-92.</li>
+            <li>Zaenglein AL, et al. "Guidelines of care for the management of acne vulgaris." <em>J Am Acad Dermatol.</em> 2016;74(5):945-73.</li>
+            <li>Thiboutot D, et al. "Standard management options for rosacea: the role of topical azelaic acid, ivermectin, metronidazole, and sodium sulfacetamide/sulfur." <em>J Drugs Dermatol.</em> 2019.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 <a href="../index.html"><span class="brand-deri">Deri</span>ndenbilgi</a> · Dr. Gözde Şimşek · Kanıta Dayalı Dermatoloji</p>
+    <p style="margin-top:8px;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</p>
+</footer>
+
+</body>
+</html>
