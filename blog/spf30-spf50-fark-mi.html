@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPF 30 ile SPF 50 Arasında Gerçekten Fark Var mı? | Derindenbilgi</title>
+    <meta name="description" content="SPF 30 mü SPF 50 mi? Matematiksel fark ne kadar, gerçek hayatta önemi var mı, az sürdüğünüzde ne oluyor? Güneş kreminde SPF seçimi hakkında bilmek istediğiniz her şey.">
+    <meta name="keywords" content="SPF 30 SPF 50 fark, güneş kremi SPF seçimi, SPF koruma farkı, güneş kremi ne kadar sürülmeli, UVB UVA fark, SPF 50 gerekli mi, güneş kremi doğru kullanım">
+    <meta property="og:title" content="SPF 30 ile SPF 50 Arasında Fark Var mı? Matematiği Çözüyoruz">
+    <meta property="og:description" content="SPF 30: %96.7 UVB koruması. SPF 50: %98. Kağıtta küçük fark — ama az sürdüğünüzde hikaye değişiyor.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --accent: #FA8072;
+            --accent-dark: #D95F52;
+            --primary: #f97316;
+            --primary-dark: #ea580c;
+            --primary-bg: rgba(249,115,22,0.07);
+            --primary-border: rgba(249,115,22,0.22);
+            --primary-gradient: linear-gradient(135deg, #f97316, #ea580c);
+            --text: #1e293b;
+            --text-s: #64748b;
+            --text-t: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 17px; -webkit-font-smoothing: antialiased; }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+        nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 24px; }
+        .nav-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; gap:16px; height:60px; }
+        .nav-logo { display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); font-weight:700; font-size:18px; }
+        .nav-logo svg { width:36px; height:36px; flex-shrink:0; }
+        .brand-deri { color:#D95F52; }
+        .nav-back { margin-left:auto; display:flex; align-items:center; gap:6px; text-decoration:none; color:var(--text-s); font-size:14px; padding:6px 14px; border:1px solid var(--border); border-radius:8px; transition:all .2s; }
+        .nav-back:hover { background:var(--bg-alt); }
+
+        .hero { background:linear-gradient(160deg,#fff7ed 0%,#ffedd5 50%,#fff7ed 100%); padding:60px 24px 40px; text-align:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%,rgba(249,115,22,0.12) 0%,transparent 70%); pointer-events:none; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.3); color:var(--primary-dark); font-size:13px; font-weight:600; padding:6px 16px; border-radius:99px; margin-bottom:20px; }
+        .hero-icon { font-size:68px; line-height:1; animation:float 4s ease-in-out infinite; display:block; margin-bottom:16px; }
+        .hero h1 { font-size:clamp(26px,5vw,40px); font-weight:800; line-height:1.2; color:var(--text); margin-bottom:14px; }
+        .hero h1 span { color:var(--primary-dark); }
+        .hero p { font-size:17px; color:var(--text-s); max-width:580px; margin:0 auto 24px; }
+        .hero-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+        .hero-tag { background:white; border:1px solid rgba(249,115,22,0.3); color:var(--primary-dark); font-size:13px; font-weight:500; padding:5px 14px; border-radius:99px; }
+
+        .quick-summary { background:var(--primary-gradient); color:white; padding:28px 24px; }
+        .quick-summary-inner { max-width:760px; margin:0 auto; }
+        .quick-summary h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
+        .qs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+        .qs-item { background:rgba(255,255,255,.15); border-radius:var(--radius-sm); padding:12px 16px; font-size:14px; line-height:1.5; }
+        .qs-item strong { display:block; font-weight:700; margin-bottom:3px; }
+
+        .content { max-width:800px; margin:0 auto; padding:48px 24px 80px; }
+        .section { margin-bottom:60px; }
+        .section-label { display:inline-flex; align-items:center; gap:8px; background:var(--primary-bg); color:var(--primary-dark); font-size:12px; font-weight:700; letter-spacing:.06em; padding:4px 12px; border-radius:99px; margin-bottom:14px; text-transform:uppercase; }
+        .section h2 { font-size:clamp(20px,3.5vw,26px); font-weight:800; color:var(--text); margin-bottom:16px; line-height:1.3; }
+        .section p { color:var(--text-s); margin-bottom:14px; line-height:1.8; }
+        .section p strong { color:var(--text); }
+
+        .info-box { background:var(--primary-bg); border-left:4px solid var(--primary); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .info-box .label { font-size:12px; font-weight:700; color:var(--primary-dark); letter-spacing:.06em; margin-bottom:6px; }
+        .info-box p { font-size:15px; color:var(--text); margin:0; line-height:1.7; }
+
+        .warning-box { background:#fffbeb; border-left:4px solid #f59e0b; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .warning-box .label { font-size:12px; font-weight:700; color:#92400e; letter-spacing:.06em; margin-bottom:6px; }
+        .warning-box p { font-size:15px; color:#78350f; margin:0; line-height:1.7; }
+
+        .tip-box { background:#f0fdf4; border-left:4px solid #22c55e; border-radius:0 var(--radius-md) var(--radius-md) 0; padding:16px 20px; margin:22px 0; }
+        .tip-box .label { font-size:12px; font-weight:700; color:#166534; letter-spacing:.06em; margin-bottom:6px; }
+        .tip-box p { font-size:15px; color:#14532d; margin:0; line-height:1.7; }
+
+        .tek-cumle { background:var(--primary-gradient); color:white; border-radius:var(--radius-md); padding:16px 20px; margin:22px 0; font-size:15px; line-height:1.7; }
+        .tek-cumle .tc-label { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; opacity:.8; margin-bottom:6px; display:block; }
+
+        /* SPF math visual */
+        .spf-compare { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0; }
+        @media(max-width:520px){ .spf-compare { grid-template-columns:1fr; } }
+        .spf-card { border-radius:var(--radius-lg); padding:24px 20px; text-align:center; border:2px solid; position:relative; overflow:hidden; }
+        .spf-card.s30 { background:#fff7ed; border-color:#fed7aa; }
+        .spf-card.s50 { background:#fff7ed; border-color:#f97316; }
+        .spf-card .spf-label { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--primary-dark); margin-bottom:6px; }
+        .spf-card .spf-num { font-size:72px; font-weight:800; line-height:1; margin-bottom:4px; }
+        .spf-card.s30 .spf-num { color:#ea580c; }
+        .spf-card.s50 .spf-num { color:#c2410c; }
+        .spf-card .spf-pct { font-size:22px; font-weight:800; margin-bottom:8px; }
+        .spf-card.s30 .spf-pct { color:#ea580c; }
+        .spf-card.s50 .spf-pct { color:#c2410c; }
+        .spf-card .spf-pass { font-size:13px; color:var(--text-s); line-height:1.5; }
+        .spf-card .spf-pass strong { color:var(--text); }
+        .spf-best { position:absolute; top:12px; right:12px; background:var(--primary-gradient); color:white; font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px; }
+
+        /* UV bar visualization */
+        .uv-bar-wrap { margin:24px 0; }
+        .uv-row { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+        .uv-row-label { font-size:13px; font-weight:700; color:var(--text); min-width:60px; }
+        .uv-track { flex:1; height:22px; background:#fee2e2; border-radius:99px; overflow:hidden; position:relative; }
+        .uv-blocked { height:100%; border-radius:99px; display:flex; align-items:center; padding-left:10px; font-size:11px; font-weight:700; color:white; }
+        .uv-pass-label { font-size:12px; color:var(--text-s); min-width:60px; text-align:right; }
+
+        /* Dose table */
+        .comp-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; overflow:hidden; border-radius:var(--radius-md); border:1px solid var(--border); }
+        .comp-table th { background:var(--primary-bg); color:var(--primary-dark); font-weight:700; padding:10px 14px; text-align:left; border-bottom:2px solid var(--primary-border); }
+        .comp-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:var(--text-s); vertical-align:top; }
+        .comp-table tr:last-child td { border-bottom:none; }
+        .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; }
+        .badge.green { background:#dcfce7; color:#166534; }
+        .badge.yellow { background:#fef9c3; color:#92400e; }
+        .badge.red { background:#fee2e2; color:#991b1b; }
+        .badge.orange { background:#ffedd5; color:#c2410c; }
+
+        /* Who grid */
+        .who-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0; }
+        @media(max-width:520px){ .who-grid { grid-template-columns:1fr; } }
+        .who-card { border-radius:var(--radius-md); padding:14px 16px; display:flex; gap:10px; }
+        .who-card.s50 { background:#fff7ed; border:1.5px solid #fed7aa; }
+        .who-card.s30 { background:#f8fafc; border:1.5px solid var(--border); }
+        .who-card .w-icon { font-size:20px; flex-shrink:0; }
+        .who-card .w-text { font-size:14px; line-height:1.6; }
+        .who-card.s50 .w-text { color:#92400e; }
+        .who-card.s30 .w-text { color:var(--text-s); }
+        .who-card .w-label { font-weight:800; font-size:12px; display:block; margin-bottom:3px; text-transform:uppercase; letter-spacing:.05em; }
+
+        /* Myth list */
+        .myth-list { list-style:none; padding:0; margin:22px 0; }
+        .myth-list li { display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--border); }
+        .myth-list li:last-child { border-bottom:none; }
+        .myth-icon { font-size:20px; flex-shrink:0; width:32px; text-align:center; margin-top:2px; }
+        .myth-body strong { color:var(--text); font-size:15px; display:block; margin-bottom:4px; }
+        .myth-body span { font-size:14px; color:var(--text-s); line-height:1.7; }
+
+        /* Verdict */
+        .verdict-section { background:#fff7ed; border:1.5px solid #fed7aa; border-radius:var(--radius-lg); padding:28px 24px; margin:40px 0; }
+        .verdict-section h3 { font-size:18px; font-weight:800; margin-bottom:18px; }
+        .verdict-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        @media(max-width:520px){ .verdict-grid { grid-template-columns:1fr; } }
+        .verdict-card { border-radius:var(--radius-md); padding:16px 18px; display:flex; gap:10px; align-items:flex-start; }
+        .verdict-card.al { background:#f0fdf4; border:1.5px solid #86efac; }
+        .verdict-card.dikkat { background:#fffbeb; border:1.5px solid #fde68a; }
+        .verdict-card.bilgi { background:#fff7ed; border:1.5px solid #fed7aa; }
+        .verdict-card.sart { background:#eff6ff; border:1.5px solid #bfdbfe; }
+        .v-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+        .v-text { font-size:14px; line-height:1.6; }
+        .verdict-card.al .v-text { color:#166534; }
+        .verdict-card.dikkat .v-text { color:#78350f; }
+        .verdict-card.bilgi .v-text { color:#92400e; }
+        .verdict-card.sart .v-text { color:#1e40af; }
+        .v-label { font-weight:800; font-size:12px; display:block; margin-bottom:3px; letter-spacing:.05em; text-transform:uppercase; }
+
+        .section-divider { border:none; border-top:1px dashed var(--border); margin:52px 0; }
+
+        .author-strip { display:flex; align-items:center; gap:14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:16px 20px; margin:48px 0 32px; }
+        .author-strip .name { font-weight:700; }
+        .author-strip .title { font-size:13px; color:var(--text-s); }
+        .author-badge { margin-left:auto; background:var(--primary-bg); border:1px solid var(--primary-border); color:var(--primary-dark); font-size:12px; font-weight:700; padding:4px 12px; border-radius:99px; white-space:nowrap; }
+
+        .references { background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px; }
+        .references h3 { font-size:15px; font-weight:700; margin-bottom:14px; }
+        .references ol { padding-left:20px; }
+        .references li { font-size:13px; color:var(--text-s); margin-bottom:8px; line-height:1.6; }
+
+        footer { text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--text-t); font-size:13px; }
+        footer a { color:var(--primary-dark); text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="38" fill="#fdf0ea"/>
+                <circle cx="34" cy="34" r="20" fill="none" stroke="#D95F52" stroke-width="5"/>
+                <circle cx="34" cy="34" r="24" fill="none" stroke="rgba(150,50,30,0.18)" stroke-width="8"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#7c3420" stroke-width="14" stroke-linecap="round"/>
+                <line x1="49" y1="49" x2="66" y2="66" stroke="#FA8072" stroke-width="7" stroke-linecap="round"/>
+                <ellipse cx="34" cy="26" rx="14" ry="4" fill="#fce4cc" opacity="0.6"/>
+                <ellipse cx="34" cy="31" rx="14" ry="3.5" fill="#FA8072" opacity="0.4"/>
+                <ellipse cx="34" cy="36" rx="13" ry="3" fill="#c4705a" opacity="0.35"/>
+                <ellipse cx="34" cy="41" rx="11" ry="3" fill="#f0d888" opacity="0.4"/>
+            </svg>
+            <span><span class="brand-deri">Deri</span>ndenbilgi</span>
+        </a>
+        <a href="../index.html" class="nav-back">← Ana Sayfa</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-badge">☀️ Güneş Korunma</div>
+    <span class="hero-icon">🌞</span>
+    <h1>SPF 30 ile SPF 50 Arasında <span>Gerçekten Fark Var mı?</span></h1>
+    <p>Kağıtta bakarsanız fark küçük görünüyor. Ama az sürdüğünüzde, çok güneşe çıktığınızda veya hassas cildiniz varsa — hesap değişiyor.</p>
+    <div class="hero-tags">
+        <span class="hero-tag">UVB Matematiği</span>
+        <span class="hero-tag">Uygulama Dozu</span>
+        <span class="hero-tag">UVA Koruması</span>
+        <span class="hero-tag">Kim SPF 50 Almalı?</span>
+    </div>
+</div>
+
+<div class="quick-summary">
+    <div class="quick-summary-inner">
+        <h2>⚡ Hızlı Özet</h2>
+        <div class="qs-grid">
+            <div class="qs-item"><strong>Kağıtta fark</strong>SPF 30: %96.7 UVB bloke · SPF 50: %98 UVB bloke — sadece 1.3 puan</div>
+            <div class="qs-item"><strong>Gerçek hayatta</strong>Az sürdüğünüzde SPF 50, SPF 30'un çok üstüne çıkıyor — "hata payı" daha geniş</div>
+            <div class="qs-item"><strong>UVA unutma</strong>SPF sadece UVB ölçüyor — PA/PPD ratingleri UVA korumasını belirliyor</div>
+            <div class="qs-item"><strong>Sonuç</strong>Günlük kullanım için SPF 30 yeterli ama SPF 50+ daha akıllı seçim — özellikle yaz/dış mekan</div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- MATEMATİK -->
+    <div class="section">
+        <div class="section-label">🔢 Matematik</div>
+        <h2>SPF Sayıları Ne Anlama Geliyor?</h2>
+
+        <p>SPF (Sun Protection Factor), güneş kreminin UVB ışınlarını ne ölçüde engellediğini gösteriyor. Ama bu sayı doğrusal değil — logaritmik bir ilişki.</p>
+
+        <div class="spf-compare">
+            <div class="spf-card s30">
+                <div class="spf-label">Güneş Kremi</div>
+                <div class="spf-num">30</div>
+                <div class="spf-pct">%96.7</div>
+                <div class="spf-pass">UVB bloke ediyor<br><strong>%3.3 geçiyor</strong></div>
+            </div>
+            <div class="spf-card s50">
+                <span class="spf-best">Önerilen</span>
+                <div class="spf-label">Güneş Kremi</div>
+                <div class="spf-num">50</div>
+                <div class="spf-pct">%98</div>
+                <div class="spf-pass">UVB bloke ediyor<br><strong>%2 geçiyor</strong></div>
+            </div>
+        </div>
+
+        <p>Görünüşe göre fark sadece 1.3 puan. Ama başka bir açıdan bakın: <strong>SPF 50, SPF 30'a kıyasla %40 daha az UV ışını geçiriyor.</strong> 3.3'ten 2'ye inmek, mutlak sayıda küçük ama rölatif olarak ciddi bir fark.</p>
+
+        <div class="uv-bar-wrap">
+            <div class="uv-row">
+                <div class="uv-row-label">SPF 15</div>
+                <div class="uv-track">
+                    <div class="uv-blocked" style="width:93.3%;background:linear-gradient(90deg,#16a34a,#15803d);">%93.3 bloke</div>
+                </div>
+                <div class="uv-pass-label">%6.7 geçer</div>
+            </div>
+            <div class="uv-row">
+                <div class="uv-row-label">SPF 30</div>
+                <div class="uv-track">
+                    <div class="uv-blocked" style="width:96.7%;background:linear-gradient(90deg,#f97316,#ea580c);">%96.7 bloke</div>
+                </div>
+                <div class="uv-pass-label">%3.3 geçer</div>
+            </div>
+            <div class="uv-row">
+                <div class="uv-row-label">SPF 50</div>
+                <div class="uv-track">
+                    <div class="uv-blocked" style="width:98%;background:linear-gradient(90deg,#dc2626,#b91c1c);">%98 bloke</div>
+                </div>
+                <div class="uv-pass-label">%2 geçer</div>
+            </div>
+            <div class="uv-row">
+                <div class="uv-row-label">SPF 100</div>
+                <div class="uv-track">
+                    <div class="uv-blocked" style="width:99%;background:linear-gradient(90deg,#7c3aed,#6d28d9);">%99 bloke</div>
+                </div>
+                <div class="uv-pass-label">%1 geçer</div>
+            </div>
+        </div>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            SPF 30'dan SPF 100'e geçmek UVB korumasını %96.7'den %99'a taşıyor — yani en güçlü kremden geçen UV miktarını %70 azaltıyor. Ama SPF 100 ile SPF 50 arasındaki fark gerçek hayatta neredeyse sıfır.
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- AZ SÜRMEK -->
+    <div class="section">
+        <div class="section-label">⚠️ Asıl Sorun</div>
+        <h2>Kimse Yeterince Sürmüyor — İşte Burada Fark Açılıyor</h2>
+
+        <p>SPF testleri <strong>2 mg/cm²</strong> uygulamayla yapılıyor. Bu, yüz için yaklaşık yarım çay kaşığı — çoğu insan bunun dörtte birini ila yarısını sürüyor.</p>
+
+        <p>Doz azaldıkça koruma <strong>orantısal değil, dramatik biçimde</strong> düşüyor. Ve burada SPF 50 ile SPF 30 arasındaki fark önemli hale geliyor.</p>
+
+        <table class="comp-table">
+            <thead>
+                <tr><th>Uygulama Dozu</th><th>SPF 30'un Gerçek Koruma</th><th>SPF 50'nin Gerçek Koruma</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>2 mg/cm² (test dozu)</strong></td>
+                    <td><span class="badge green">SPF 30</span></td>
+                    <td><span class="badge green">SPF 50</span></td>
+                </tr>
+                <tr>
+                    <td><strong>1.5 mg/cm² (ortalama kullanıcı)</strong></td>
+                    <td><span class="badge yellow">~SPF 17</span></td>
+                    <td><span class="badge yellow">~SPF 27</span></td>
+                </tr>
+                <tr>
+                    <td><strong>1 mg/cm² (az süren)</strong></td>
+                    <td><span class="badge red">~SPF 8</span></td>
+                    <td><span class="badge orange">~SPF 13</span></td>
+                </tr>
+                <tr>
+                    <td><strong>0.5 mg/cm² (çok az süren)</strong></td>
+                    <td><span class="badge red">~SPF 4</span></td>
+                    <td><span class="badge red">~SPF 7</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Yani her ikisi de az sürüldüğünde koruma belirgin düşüyor — ama SPF 50, düşük dozda bile SPF 30'dan yaklaşık iki kat daha iyi çalışıyor. <strong>SPF 50 daha fazla "hata payı" sunuyor.</strong></p>
+
+        <div class="warning-box">
+            <div class="label">⚠️ Yenileme Kritik</div>
+            <p>2 saatte bir yenileme yapmıyorsanız SPF değeri teorik. Ter, yüz yıkama, temas — bunlar her biri korumayı düşürüyor. SPF 50 sürmek, yenilemeyi ihmal etmek için lisans değil.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- UVA -->
+    <div class="section">
+        <div class="section-label">🌐 UVA Unutulmasın</div>
+        <h2>SPF Sadece UVB'yi Ölçüyor — Ya UVA?</h2>
+
+        <p>Güneş kremi seçerken tek SPF değerine bakmak büyük bir hata. SPF rakamı yalnızca <strong>UVB</strong> (kısa dalga boyu, yanma) korumasını ifade ediyor.</p>
+
+        <p><strong>UVA</strong> ışınları (uzun dalga boyu) yaşlanma, hiperpigmentasyon ve deri kanseri riskini artırıyor — ama yanmaya neden olmuyor. Pencere camından, bulutlu günde bile geçiyor.</p>
+
+        <div class="info-box">
+            <div class="label">📌 UVA Korumasını Nasıl Okursunuz?</div>
+            <p>
+                <strong>PA+++ / PA++++</strong> — Japonya ve Asya sistemi (her + daha fazla koruma)<br>
+                <strong>PPD değeri</strong> — UVA koruma dozu; 8+ iyi, 16+ mükemmel<br>
+                <strong>"Broad Spectrum"</strong> — ABD FDA etiketi: UVA/UVB ikisini de kapsıyor<br>
+                <strong>UVA logosu (daire içinde)</strong> — AB standardı<br><br>
+                SPF 50 ama PA+ olan bir krem, SPF 30 ama PA++++ olandan daha kötü UVA koruması verir.
+            </p>
+        </div>
+
+        <div class="tek-cumle">
+            <span class="tc-label">💊 Tek Cümleyle</span>
+            İdeal güneş kremi: SPF 50+ ve PA++++ — ikisini birden arayan kazanır.
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- KİM SPF 50 ALMALI -->
+    <div class="section">
+        <div class="section-label">👤 Kim Ne Kullanmalı?</div>
+        <h2>SPF 50 Herkes İçin Şart mı?</h2>
+
+        <p>AAD ve Türk Dermatoloji Derneği günlük kullanım için minimum SPF 30 öneriyor. Ama belirli profiller için SPF 50+ net üstünlük sağlıyor.</p>
+
+        <div class="who-grid">
+            <div class="who-card s50">
+                <span class="w-icon">🔴</span>
+                <div class="w-text"><span class="w-label">SPF 50+ Tercih Edin</span>Açık tenli, kolay yanan cilt (Fitzpatrick tip I–II)</div>
+            </div>
+            <div class="who-card s50">
+                <span class="w-icon">🌊</span>
+                <div class="w-text"><span class="w-label">SPF 50+ Tercih Edin</span>Plaj, kayak, açık hava sporu — yoğun UV maruziyeti</div>
+            </div>
+            <div class="who-card s50">
+                <span class="w-icon">💊</span>
+                <div class="w-text"><span class="w-label">SPF 50+ Tercih Edin</span>Fotosensitizan ilaç kullananlar (retinoid, antibiyotik, diüretik)</div>
+            </div>
+            <div class="who-card s50">
+                <span class="w-icon">🔬</span>
+                <div class="w-text"><span class="w-label">SPF 50+ Tercih Edin</span>Lazer, peeling, mikroneedling sonrası — yeni cilt çok hassas</div>
+            </div>
+            <div class="who-card s50">
+                <span class="w-icon">🧬</span>
+                <div class="w-text"><span class="w-label">SPF 50+ Tercih Edin</span>Melanom/deri kanseri öyküsü veya aile hikayesi olan</div>
+            </div>
+            <div class="who-card s50">
+                <span class="w-icon">🌸</span>
+                <div class="w-text"><span class="w-label">SPF 50+ Tercih Edin</span>Melazma, leke sorunu — UV maruziyeti lekeleri hızla artırır</div>
+            </div>
+            <div class="who-card s30">
+                <span class="w-icon">🏠</span>
+                <div class="w-text"><span class="w-label">SPF 30 Yeterli Olabilir</span>Çoğunlukla iç mekanda, kısa dış mekan maruziyeti, esmer cilt tipleri (Fitzpatrick IV–VI) — doğru ve yeterli dozda uygulamak şartıyla</div>
+            </div>
+            <div class="who-card s30">
+                <span class="w-icon">🌥️</span>
+                <div class="w-text"><span class="w-label">SPF 30 Yeterli Olabilir</span>Kapalı hava, kış ayları, kuzey enlemleri — UV indeksi düşükse SPF 30 pratik tercih</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- MİTLER -->
+    <div class="section">
+        <div class="section-label">❌ Yanlış Bilinenler</div>
+        <h2>SPF Hakkında 4 Yaygın Yanlış</h2>
+        <ul class="myth-list">
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"SPF 100, SPF 50'nin iki katı koruma sağlar"</strong>
+                    <span>Yanlış. SPF 50 UVB'nin %98'ini engelliyor, SPF 100 ise %99'unu. Mutlak fark sadece 1 puan. Ama pazarlama değeri çok büyük — bu yüzden SPF 100'ler SPF 50'den genellikle çok daha pahalı. Fiyat farkını haklı çıkarmıyor.</span>
+                </div>
+            </li>
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"Yüksek SPF'i bir kez sürdüm, gün boyu korundum"</strong>
+                    <span>Yanlış. SPF değeri zamana değil, doza bağlı. Ter ve temas ile krem aşınır — 2 saatte bir yenileme şart. SPF 50 sürdükten sonra sahilde 6 saat geçirmek, son 4 saat korumasız gezmek anlamına gelebilir.</span>
+                </div>
+            </li>
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"Esmer tenli biri güneş kreminden muaf"</strong>
+                    <span>Yanlış. Fitzpatrick IV–VI tipleri yanma riski düşük ama UVA hasarından, hiperpigmentasyondan ve deri kanserinden korunmuyor. Melazma gibi leke sorunları esmer tenlerde çok daha sık görülüyor — güneş kremi herkese şart.</span>
+                </div>
+            </li>
+            <li>
+                <span class="myth-icon">❌</span>
+                <div class="myth-body">
+                    <strong>"Makyaj altında SPF olduğu için ayrıca krem sürmem gerekmez"</strong>
+                    <span>Yanlış. Fondöten veya BB krem içindeki SPF genellikle %50 altında doz sürülüyor — test dozunun çok altında. Güneş kremi ayrıca, cömertçe uygulanmalı. Makyaj ürünlerindeki SPF bonus — birincil koruma değil.</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="verdict-section">
+        <h3>☀️ Karar: Hangisi?</h3>
+        <div class="verdict-grid">
+            <div class="verdict-card al">
+                <span class="v-icon">✅</span>
+                <div class="v-text">
+                    <span class="v-label">SPF 50+ Al</span>
+                    Yaz ayları, açık hava, hassas cilt, leke eğilimi, ilaç kullanımı, prosedür sonrası — tereddüt etme
+                </div>
+            </div>
+            <div class="verdict-card sart">
+                <span class="v-icon">💡</span>
+                <div class="v-text">
+                    <span class="v-label">PA'ya Bak</span>
+                    Hangi SPF'i seçersen seç — PA++++ veya "broad spectrum" olmadan UVA'dan korunmuyorsun
+                </div>
+            </div>
+            <div class="verdict-card dikkat">
+                <span class="v-icon">⚠️</span>
+                <div class="v-text">
+                    <span class="v-label">Yenile</span>
+                    2 saatte bir yenileme yapmıyorsan SPF sayısının önemi kalmıyor — bu kuralı atlama
+                </div>
+            </div>
+            <div class="verdict-card bilgi">
+                <span class="v-icon">🍊</span>
+                <div class="v-text">
+                    <span class="v-label">En İyi Krem</span>
+                    Cömertçe sürülen ve yenilenen SPF 30, kıt sürülen SPF 100'den her zaman daha iyi korur
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div>
+            <div class="name">Dr. Gözde Şimşek</div>
+            <div class="title">Tıp Doktoru · Dermatoloji</div>
+        </div>
+        <span class="author-badge">Uzman Görüşü</span>
+    </div>
+
+    <div class="references">
+        <h3>📚 Kaynaklar</h3>
+        <ol>
+            <li>Diffey BL. "When should sunscreen be reapplied?" <em>J Am Acad Dermatol.</em> 2001;45(6):882-5.</li>
+            <li>Autier P, et al. "Sunscreen use and duration of sun exposure: a double-blind, randomized trial." <em>J Natl Cancer Inst.</em> 1999.</li>
+            <li>Williams JD, et al. "SPF 100+ sunscreen is more protective against sunburn than SPF 50+ in actual-use conditions." <em>J Am Acad Dermatol.</em> 2018;78(5):902-910.</li>
+            <li>Lautenschlager S, Wulf HC, Pittelkow MR. "Photoprotection." <em>Lancet.</em> 2007;370(9586):528-37.</li>
+            <li>American Academy of Dermatology. "Sunscreen FAQs." aad.org, 2024.</li>
+            <li>Schalka S, et al. "Influence of the amount of sunscreen applied and its sun protection factor (SPF)." <em>Photodermatol Photoimmunol Photomed.</em> 2009.</li>
+        </ol>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2025 <a href="../index.html"><span class="brand-deri">Deri</span>ndenbilgi</a> · Dr. Gözde Şimşek · Kanıta Dayalı Dermatoloji</p>
+    <p style="margin-top:8px;">Bu içerik bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</p>
+</footer>
+
+</body>
+</html>
